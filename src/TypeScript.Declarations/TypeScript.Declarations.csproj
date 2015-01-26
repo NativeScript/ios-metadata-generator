@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A95BCC66-65F2-4CE0-A1D7-E4CE515AC4DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TypeScript.Declarations</RootNamespace>
+    <AssemblyName>TypeScript.Declarations</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="CollectionExtensions.cs" />
+    <Compile Include="ModelExtensions.cs" />
+    <Compile Include="Model\ArrayType.cs" />
+    <Compile Include="Model\ClassDeclaration.cs" />
+    <Compile Include="Model\ConstructSignature.cs" />
+    <Compile Include="Model\EnumDeclaration.cs" />
+    <Compile Include="Model\EnumElement.cs" />
+    <Compile Include="Model\FunctionDeclaration.cs" />
+    <Compile Include="Model\FunctionType.cs" />
+    <Compile Include="Model\IndexerSignature.cs" />
+    <Compile Include="Model\InterfaceDeclaration.cs" />
+    <Compile Include="Model\ObjectType.cs" />
+    <Compile Include="Model\SourceUnit.cs" />
+    <Compile Include="Model\IType.cs" />
+    <Compile Include="Model\MethodSignature.cs" />
+    <Compile Include="Model\Node.cs" />
+    <Compile Include="Model\Parameter.cs" />
+    <Compile Include="Model\PrimitiveTypes.cs" />
+    <Compile Include="Model\PropertySignature.cs" />
+    <Compile Include="Model\TypeScriptObject.cs" />
+    <Compile Include="Model\TypeVisitor.cs" />
+    <Compile Include="Model\VariableStatement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DeclarationWriter.cs" />
+    <Compile Include="Writers\DeclarationWriter.Tokens.cs" />
+    <Compile Include="Writers\DeclarationWriter.DeclarationVisitor.cs" />
+    <Compile Include="Writers\DocumentationProvider.cs" />
+    <Compile Include="Writers\TypeWriter.Tokens.cs" />
+    <Compile Include="Writers\TypeWriter.TypeVisitor.cs" />
+    <Compile Include="Writers\DeclarationWriter.IDeclarationWriter.cs" />
+    <Compile Include="Writers\IDeclarationWriter.cs" />
+    <Compile Include="Writers\IIndentWriter.cs" />
+    <Compile Include="Writers\Indent.cs" />
+    <Compile Include="Model\DeclarationVisitor.cs" />
+    <Compile Include="Writers\ISourceUnitWriter.cs" />
+    <Compile Include="Writers\ITextWriter.cs" />
+    <Compile Include="Writers\ITypeWriter.cs" />
+    <Compile Include="Writers\CompositeWriter.cs" />
+    <Compile Include="Writers\TypeWriter.ITypeWriter.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
