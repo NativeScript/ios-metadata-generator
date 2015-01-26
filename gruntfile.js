@@ -41,7 +41,6 @@ module.exports = function (grunt) {
             packageGenerator: {
                 command: function() {
                     generatorLocation = path.resolve("build/MetadataGenerator");
-                    var mconfigPath = path.join(path.dirname(which('mkbundle')), '..//etc/mono/mconfig/config.xml');
                     return util.format('mkbundle -o %s Libclang.exe Libclang.Core.dll Libclang.DocsetParser.dll NClang.dll Newtonsoft.Json.dll TypeScript.Factory.dll TypeScript.Declarations.dll System.Data.SQLite.dll --deps --static -z --config Libclang.exe.config --machine-config "%s"', generatorLocation, mconfigPath);
                 },
                 options: {
