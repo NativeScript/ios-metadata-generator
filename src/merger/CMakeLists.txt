@@ -1,0 +1,51 @@
+#
+# Project Properties
+#
+CMAKE_MINIMUM_REQUIRED (VERSION 2.8.4)
+PROJECT (MetaMerge)
+SET (APPLICATION_NAME "MetaMerge")
+SET (APPLICATION_CODENAME "${PROJECT_NAME}")
+SET (APPLICATION_COPYRIGHT_YEARS "2015")
+SET (APPLICATION_VERSION_MAJOR 1)
+SET (APPLICATION_VERSION_MINOR 0)
+SET (APPLICATION_VERSION_PATCH 0)
+SET (APPLICATION_VERSION_TYPE SNAPSHOT)
+SET (APPLICATION_VERSION_STRING "${APPLICATION_VERSION_MAJOR}.${APPLICATION_VERSION_MINOR}.${APPLICATION_VERSION_PATCH}-${APPLICATION_VERSION_TYPE}")
+SET (APPLICATION_VENDOR_ID "com.telerik")
+SET (APPLICATION_VENDOR_NAME "Telerik")
+SET (APPLICATION_VENDOR_URL "telerik.com")
+SET (APPLICATION_ID "${APPLICATION_VENDOR_ID}.${PROJECT_NAME}")
+SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+#
+# Locate Project Prerequisites
+#
+set(Boost_USE_STATIC_LIBS ON)
+set(Boost_USE_STATIC_RUNTIME ON)
+FIND_PACKAGE (Boost COMPONENTS system filesystem REQUIRED)
+
+# yaml-cpp
+include(ExternalProject)
+ExternalProject_Add(yaml-cpp
+  URL http://yaml-cpp.googlecode.com/files/yaml-cpp-0.5.1.tar.gz
+  PREFIX ${CMAKE_CURRENT_BINARY_DIR}/yaml-cpp
+  CMAKE_GENERATOR ${CMAKE_GENERATOR}
+)
+
+ExternalProject_Get_Property(yaml-cpp source_dir)
+include_directories(${source_dir}/include)
+
+ExternalProject_Get_Property(yaml-cpp binary_dir)
+link_directories(${binary_dir})
+
+#
+# Project Output Paths
+#
+SET (MAINFOLDER ${PROJECT_SOURCE_DIR})
+SET (EXECUTABLE_OUTPUT_PATH "${MAINFOLDER}/bin")
+
+#
+# Add Build Targets
+#
+ADD_SUBDIRECTORY(src)
+ADD_SUBDIRECTORY(test)

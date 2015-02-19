@@ -14,36 +14,37 @@ module.exports = function (grunt) {
     grunt.log.subhead('IPHONEOS_SDK_PATH: ' + IPHONEOS_SDK_PATH);
 
     var srcDir = ".";
-    var outFolder = srcDir + "/build";
-    var libclangExecutablePath = srcDir + "/src/Libclang/bin/Release/";
+    var generatorSrcDir = srcDir + "/src/generator";
+    var mergerSrcDir = srcDir + "/src/merger";
+    var outGeneratorDir = generatorSrcDir + "/build";
+    var libclangExecutablePath = generatorSrcDir + "/Libclang/bin/Release/";
+    var mergerBuildProductPath = mergerSrcDir + "/bin";
 
     grunt.initConfig({
         pkg: grunt.file.readJSON(srcDir + "/package.json"),
-        clean: {
-            outFolder: {
-                src: [outFolder]
-            }
-        },
-        mkdir: {
-            outFolder: {
-                options: {
-                    create: [outFolder]
-                }
-            }
-        },
         shell: {
-            buildVSSolution: {
-                command: function (solutionFile) {
-                    return util.format('xbuild /t:clean %s && xbuild /p:Configuration=Release %s', solutionFile, solutionFile);
+            buildGenerator: {
+                command: 'xbuild /t:clean src/generator/Libclang.sln && xbuild /p:Configuration=Release src/generator/Libclang.sln'
+            },
+
+            buildMerger: {
+                command: 'rm -rf build && mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=MinSizeRel .. && cmake --build . --target MetaMerge --use-stderr',
+                options: {
+                    execOptions: {
+                        cwd: mergerSrcDir,
+                    }
                 }
             },
 
             packageGenerator: {
-                command: function() {
-                    generatorLocation = path.resolve("build/MetadataGenerator");
-                    var mconfigPath = path.join(path.dirname(which('mkbundle')), '..//etc/mono/mconfig/config.xml');
-                    //mconfigPath = "/usr/local/Cellar/mono/3.6.0/etc/mono/mconfig/config.xml";
-                    return util.format('mkbundle -o %s Libclang.exe Libclang.Core.dll Libclang.DocsetParser.dll NClang.dll Newtonsoft.Json.dll TypeScript.Factory.dll TypeScript.Declarations.dll System.Data.SQLite.dll --deps --static -z --config Libclang.exe.config --machine-config "%s"', generatorLocation, mconfigPath);
+                command: function(outputPath) {
+                    return [
+                        util.format('mkdir -p %s', outputPath),
+                        util.format('mkbundle -o %s Libclang.exe *.dll -z --config Libclang.exe.config', path.join(outputPath, "MetadataGenerator")),
+                        util.format('cd %s', outputPath),
+                        'LIBMONO_PATH=`otool -L MetadataGenerator | grep \'libmonoboehm\' | awk \'{ print $1 }\'`',
+                        'install_name_tool -change "$LIBMONO_PATH" "/usr/local/lib/`basename $LIBMONO_PATH`" MetadataGenerator',
+                    ].join(' && ');
                 },
                 options: {
                     execOptions: {
@@ -55,57 +56,37 @@ module.exports = function (grunt) {
                 }
             },
 
-            generateMetadata: {
-                command: function (umbrellaHeader, outputPath, clangArgs) {
-                    if (path.resolve(umbrellaHeader) !== path.normalize(umbrellaHeader)) {
-                        umbrellaHeader = path.join('../../../../', umbrellaHeader);
-                    }
-
-                    if (path.resolve(outputPath) !== path.normalize(outputPath)) {
-                        outputPath = path.join('../../../../', outputPath);
-                    }
-
-                    return util.format('mono Libclang.exe -s "%s" -u "%s" -o "%s" -cflags="%s" &&', IPHONEOS_SDK_PATH, umbrellaHeader, outputPath, clangArgs) +
-                        util.format('echo "TNS_METADATA_SIZE:" $(du -k %s | awk \'{print $1}\')KB', outputPath);
+            packageMerger: {
+                command: function(outputPath) {
+                    outputPath = path.resolve(outputPath);
+                    return util.format("mkdir -p %s && cp MetaMerge %s", outputPath, path.join(outputPath,  "MetaMerge"));
                 },
                 options: {
                     execOptions: {
-                        cwd: libclangExecutablePath,
-                        env: {
-                            'DYLD_LIBRARY_PATH': path.join(XCODE_PATH, 'Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib')
-                        }
+                        cwd: mergerBuildProductPath,
                     }
                 }
             }
         }
     });
 
-    grunt.loadNpmTasks("grunt-contrib-clean");
-    grunt.loadNpmTasks("grunt-contrib-copy");
-    grunt.loadNpmTasks("grunt-mkdir");
     grunt.loadNpmTasks("grunt-shell");
 
     grunt.registerTask("default", [
-        "package"
+        "packageGenerator",
+        "packageMerger"
     ]);
 
-    grunt.registerTask("build", [
-        "shell:buildVSSolution:src/Libclang.sln"
-    ]);
+    grunt.registerTask("packageGenerator", function(outputPath){
+        outputPath = path.resolve(outputPath || outGeneratorDir);
+        grunt.task.run('shell:buildGenerator');
+        grunt.task.run(util.format('shell:packageGenerator:%s', path.resolve(outputPath)));
+    });
 
-    grunt.registerTask("package", [
-        "build",
-        "clean:outFolder",
-        "mkdir:outFolder",
-        "shell:packageGenerator"
-    ]);
-
-    grunt.registerTask("generate", function (umbrellaHeader, outDirectoryLocation, clangArgs) {
-        umbrellaHeader = umbrellaHeader || grunt.option('header');
-        outDirectoryLocation = outDirectoryLocation || grunt.option('output');
-        clangArgs = clangArgs || grunt.option('cflags') || '';
-
-        grunt.task.run('build');
-        grunt.task.run(util.format('shell:generateMetadata:%s:%s:%s', umbrellaHeader, outDirectoryLocation, clangArgs));
+    grunt.registerTask("packageMerger", function(outputPath){
+        grunt.task.run('shell:buildMerger');
+        if (outputPath) {
+            grunt.task.run(util.format('shell:packageMerger:%s', path.resolve(outputPath)));
+        }
     });
 };
