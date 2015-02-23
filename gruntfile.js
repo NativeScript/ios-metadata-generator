@@ -1,34 +1,30 @@
+var util = require('util');
+var path = require('path');
+var shell = require('shelljs/global');
+
 module.exports = function (grunt) {
 
-    var util = require('util');
-    var path = require('path');
-    var shell = require('shelljs/global');
-
-    var XCODE_PATH = path.dirname(path.dirname(exec('xcode-select -print-path').output.trim()));
-    grunt.log.subhead('XCODE_PATH: ' + XCODE_PATH);
-
-    var IPHONEOS_VERSION = exec('xcodebuild -showsdks | grep iphoneos | sort -r | tail -1 | awk \'{print $2}\'').output.trim();
-    grunt.log.subhead('IPHONEOS_VERSION: ' + IPHONEOS_VERSION);
-
-    var IPHONEOS_SDK_PATH = path.join(XCODE_PATH, util.format('Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS%s.sdk', IPHONEOS_VERSION));
-    grunt.log.subhead('IPHONEOS_SDK_PATH: ' + IPHONEOS_SDK_PATH);
-
-    var srcDir = ".";
-    var generatorSrcDir = srcDir + "/src/generator";
-    var mergerSrcDir = srcDir + "/src/merger";
-    var outGeneratorDir = generatorSrcDir + "/build";
-    var libclangExecutablePath = generatorSrcDir + "/Libclang/bin/Release/";
-    var mergerBuildProductPath = mergerSrcDir + "/bin";
+    var srcDir = path.resolve(process.cwd());
+    var generatorSrcDir =  path.join(srcDir, "src", "generator");
+    var mergerSrcDir = path.join(srcDir, "src", "merger");
+    var outGeneratorDir = path.join(generatorSrcDir, "build");
+    var libclangExecutablePath = path.join(generatorSrcDir, "Libclang", "bin", "Release");
+    var mergerBuildProductPath = path.join(mergerSrcDir, "bin");
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON(srcDir + "/package.json"),
+        pkg: grunt.file.readJSON(path.join(srcDir, "/package.json")),
         shell: {
             buildGenerator: {
-                command: 'xbuild /t:clean src/generator/Libclang.sln && xbuild /p:Configuration=Release src/generator/Libclang.sln'
+                command: 'xbuild /p:Configuration=Release src/generator/Libclang.sln'
             },
 
             buildMerger: {
-                command: 'rm -rf build && mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=MinSizeRel .. && cmake --build . --target MetaMerge --use-stderr',
+                command: [
+                    //"rm -rf build",
+                    "mkdir -p build",
+                    "cd build",
+                    "cmake -DCMAKE_BUILD_TYPE=MinSizeRel ..",
+                    "cmake --build . --target MetaMerge --use-stderr"].join(" && "),
                 options: {
                     execOptions: {
                         cwd: mergerSrcDir,
