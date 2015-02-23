@@ -1,5 +1,5 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Types;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Types;
 using NClang;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace Libclang.Core.Parser
+namespace MetadataGenerator.Core.Parser
 {
     public class ObjCDeclarationVisitor : DeclarationVisitor
     {

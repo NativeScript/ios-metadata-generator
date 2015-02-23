@@ -1,8 +1,8 @@
 ﻿using System;
-using Libclang.Core.Ast;
-using Libclang.Core.Meta.Utils;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Meta.Utils;
 
-namespace Libclang.Core.Meta.Visitors
+namespace MetadataGenerator.Core.Meta.Visitors
 {
     public class JSNameVisitor : IDeclarationVisitor
     {

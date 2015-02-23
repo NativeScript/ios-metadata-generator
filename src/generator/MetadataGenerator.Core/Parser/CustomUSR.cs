@@ -2,7 +2,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Libclang.Core.Parser
+namespace MetadataGenerator.Core.Parser
 {
     internal static class CustomUSR
     {

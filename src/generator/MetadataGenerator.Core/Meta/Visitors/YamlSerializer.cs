@@ -1,9 +1,9 @@
-﻿using Libclang.Core;
-using Libclang.Core.Ast;
-using Libclang.Core.Common;
-using Libclang.Core.Generator;
-using Libclang.Core.Meta.Utils;
-using Libclang.Core.Meta.Visitors;
+﻿using MetadataGenerator.Core;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Common;
+using MetadataGenerator.Core.Generator;
+using MetadataGenerator.Core.Meta.Utils;
+using MetadataGenerator.Core.Meta.Visitors;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,7 +11,7 @@ using System.Linq;
 using YamlDotNet.RepresentationModel;
 using System.Diagnostics;
 
-namespace Libclang.Core.Meta.Visitors
+namespace MetadataGenerator.Core.Meta.Visitors
 {
     internal class YamlSerializer : IMetaContainerDeclarationVisitor
     {

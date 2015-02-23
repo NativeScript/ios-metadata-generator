@@ -1,10 +1,10 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Parser;
-using Libclang.Core.Types;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Parser;
+using MetadataGenerator.Core.Types;
 using NUnit.Framework;
 using System.Linq;
 
-namespace Libclang.Tests
+namespace MetadataGenerator.Tests
 {
     [TestFixture]
     public class FrameworkParserTests
@@ -25,7 +25,7 @@ namespace Libclang.Tests
 
                 FrameworkParser.ParserContext context = new FrameworkParser.ParserContext(tempFolder);
                 ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(context);
-                LibclangHelper.ParseFileWithVisitor(filename1, visitor);
+                MetadataGeneratorHelper.ParseFileWithVisitor(filename1, visitor);
 
                 Assert.AreEqual(1, context.modules.Count);
                 Assert.AreEqual("SimpleFramework", context.modules[0].Name);
@@ -58,7 +58,7 @@ namespace Libclang.Tests
 
                 FrameworkParser.ParserContext context = new FrameworkParser.ParserContext(tempFolder);
                 ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(context);
-                LibclangHelper.ParseFileWithVisitor(filename2, visitor);
+                MetadataGeneratorHelper.ParseFileWithVisitor(filename2, visitor);
 
                 Assert.AreEqual(2, context.modules.Count);
 

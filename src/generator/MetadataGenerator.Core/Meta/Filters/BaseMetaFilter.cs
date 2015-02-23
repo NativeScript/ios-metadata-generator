@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Libclang.Core.Meta.Utils;
-using Libclang.Core.Ast;
+using MetadataGenerator.Core.Meta.Utils;
+using MetadataGenerator.Core.Ast;
 
-namespace Libclang.Core.Meta.Filters
+namespace MetadataGenerator.Core.Meta.Filters
 {
     internal class BaseMetaFilter : IMetaFilter
     {

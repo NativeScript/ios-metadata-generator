@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace Libclang.Core.Meta.Utils
+namespace MetadataGenerator.Core.Meta.Utils
 {
     public class JscStringHasher
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Libclang.Core.Ast;
-using Libclang.Core.Generator;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Generator;
 
-namespace Libclang.Core.Types
+namespace MetadataGenerator.Core.Types
 {
     public class FunctionPointerType : TypeDefinition, IFunction
     {

@@ -1,9 +1,9 @@
-﻿using Libclang.Core.Ast;
+﻿using MetadataGenerator.Core.Ast;
 using System;
 using System.Linq;
 using System.Text;
 
-namespace Libclang.Core.Meta.Utils
+namespace MetadataGenerator.Core.Meta.Utils
 {
     public interface IJsNameGenerator
     {

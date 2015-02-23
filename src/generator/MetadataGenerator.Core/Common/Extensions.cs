@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Libclang.Core.Ast;
+using MetadataGenerator.Core.Ast;
 
-namespace Libclang.Core.Common
+namespace MetadataGenerator.Core.Common
 {
     public static class Extensions
     {

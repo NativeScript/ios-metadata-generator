@@ -1,10 +1,10 @@
 using System;
 using System.Linq;
 using System.Text;
-using Libclang.Core.Types;
+using MetadataGenerator.Core.Types;
 using System.Collections.Generic;
 
-namespace Libclang.Core.Ast
+namespace MetadataGenerator.Core.Ast
 {
     public class ParameterDeclaration : BaseDeclaration
     {

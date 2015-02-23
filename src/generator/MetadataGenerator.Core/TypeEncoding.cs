@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Libclang.Core
+namespace MetadataGenerator.Core
 {
     public abstract class TypeEncoding
     {

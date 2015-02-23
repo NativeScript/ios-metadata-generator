@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Libclang.Core.Common
+namespace MetadataGenerator.Core.Common
 {
     public class Location
     {

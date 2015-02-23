@@ -1,10 +1,10 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
-using Libclang.Core.Common;
-using Libclang.Core.Types;
+using MetadataGenerator.Core.Common;
+using MetadataGenerator.Core.Types;
 
-namespace Libclang.Core.Ast
+namespace MetadataGenerator.Core.Ast
 {
     public class InterfaceDeclaration : BaseClass
     {

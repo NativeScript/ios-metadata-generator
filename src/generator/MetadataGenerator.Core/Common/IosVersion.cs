@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Libclang.Core.Common
+namespace MetadataGenerator.Core.Common
 {
     public enum IosVersion
     {

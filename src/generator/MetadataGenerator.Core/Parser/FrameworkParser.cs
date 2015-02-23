@@ -1,11 +1,11 @@
-﻿using Libclang.Core.Ast;
+﻿using MetadataGenerator.Core.Ast;
 using NClang;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Libclang.Core.Parser
+namespace MetadataGenerator.Core.Parser
 {
     public partial class FrameworkParser
     {
@@ -81,9 +81,9 @@ namespace Libclang.Core.Parser
                 }
             }
 
-            foreach (KeyValuePair<string, IList<Libclang.Core.Types.DeclarationReferenceType>> item in context.usrToUnresolvedReferences)
+            foreach (KeyValuePair<string, IList<MetadataGenerator.Core.Types.DeclarationReferenceType>> item in context.usrToUnresolvedReferences)
             {
-                foreach (Libclang.Core.Types.DeclarationReferenceType unresolvedReference in item.Value)
+                foreach (MetadataGenerator.Core.Types.DeclarationReferenceType unresolvedReference in item.Value)
                 {
                     unresolvedReference.Target = new UnresolvedDeclaration(item.Key);
                 }

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Libclang.Core.Ast;
-using Libclang.Core.Common;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Common;
 using System.Data.Common;
 using System.Text.RegularExpressions;
 
-namespace Libclang.DocsetParser
+namespace MetadataGenerator.DocsetParser
 {
     public static class DocsetParser
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Libclang.Core.Meta.Utils
+namespace MetadataGenerator.Core.Meta.Utils
 {
     public interface IBinarySerializable
     {

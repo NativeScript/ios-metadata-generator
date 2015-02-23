@@ -1,13 +1,13 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Generator;
-using Libclang.Core.Meta.Filters;
-using Libclang.Core.Meta.Utils;
-using Libclang.Core.Types;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Generator;
+using MetadataGenerator.Core.Meta.Filters;
+using MetadataGenerator.Core.Meta.Utils;
+using MetadataGenerator.Core.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Libclang.Core.Meta.Visitors
+namespace MetadataGenerator.Core.Meta.Visitors
 {
     internal class TransformationVisitor : IMetaContainerDeclarationVisitor
     {

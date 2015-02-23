@@ -1,10 +1,10 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Parser;
-using Libclang.Core.Types;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Parser;
+using MetadataGenerator.Core.Types;
 using NUnit.Framework;
 using System.Linq;
 
-namespace Libclang.Tests
+namespace MetadataGenerator.Tests
 {
     [TestFixture]
     public class CategoryTests
@@ -21,7 +21,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(2, document.Declarations.Count);
             Assert.IsInstanceOf<CategoryDeclaration>(document.Declarations[1]);
@@ -47,7 +47,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(2, document.Declarations.Count);
             Assert.IsInstanceOf<CategoryDeclaration>(document.Declarations[1]);
@@ -74,7 +74,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(2, document.Declarations.Count);
             CategoryDeclaration categoryDeclaration = document.Declarations[1] as CategoryDeclaration;
@@ -111,7 +111,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(2, document.Declarations.Count);
             CategoryDeclaration categoryDeclaration = document.Declarations[1] as CategoryDeclaration;
@@ -148,7 +148,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(2, document.Declarations.Count);
             CategoryDeclaration categoryDeclaration = document.Declarations[1] as CategoryDeclaration;
@@ -191,7 +191,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(2, document.Declarations.Count);
             CategoryDeclaration categoryDeclaration = document.Declarations[1] as CategoryDeclaration;
@@ -239,7 +239,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(2, document.Declarations.Count);
             CategoryDeclaration categoryDeclaration = document.Declarations[1] as CategoryDeclaration;
@@ -318,7 +318,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(2, document.Declarations.Count);
             CategoryDeclaration categoryDeclaration = document.Declarations[1] as CategoryDeclaration;
@@ -379,7 +379,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(3, document.Declarations.Count);
             Assert.IsInstanceOf<CategoryDeclaration>(document.Declarations[2]);

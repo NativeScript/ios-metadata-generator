@@ -3,7 +3,7 @@ using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace Libclang.Core.Common
+namespace MetadataGenerator.Core.Common
 {
     public class MultiDictionary<TKey, TValue> : IEnumerable<KeyValuePair<TKey, ICollection<TValue>>>
     {

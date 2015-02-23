@@ -1,7 +1,7 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Common;
-using Libclang.Core.Generator;
-using Libclang.Core.Parser;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Common;
+using MetadataGenerator.Core.Generator;
+using MetadataGenerator.Core.Parser;
 using Mono.Options;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Libclang
+namespace MetadataGenerator
 {
     internal static class Program
     {
@@ -104,7 +104,7 @@ namespace Libclang
             {
                 Directory.CreateDirectory(finalOutputPath);
             }
-            var generator = new Libclang.Core.Meta.MetadataGenerator(finalOutputPath);
+            var generator = new MetadataGenerator.Core.Meta.MetadataGenerator(finalOutputPath);
             generator.GenerateMetadata(finalFrameworks);
         }
 
@@ -121,7 +121,7 @@ namespace Libclang
             }
         }
 
-        private static void GenerateTypeScriptDeclarations(Libclang.Core.Meta.Utils.ModuleDeclarationsContainer container)
+        private static void GenerateTypeScriptDeclarations(MetadataGenerator.Core.Meta.Utils.ModuleDeclarationsContainer container)
         {
             CreateTypeScriptDirectory();
 

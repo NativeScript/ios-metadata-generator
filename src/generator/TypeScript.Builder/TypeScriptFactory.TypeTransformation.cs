@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Libclang.Core;
+    using MetadataGenerator.Core;
     using TS = TypeScript.Declarations.Model;
 
     public partial class TypeScriptFactory

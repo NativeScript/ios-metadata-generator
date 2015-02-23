@@ -1,10 +1,10 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Parser;
-using Libclang.Core.Types;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Parser;
+using MetadataGenerator.Core.Types;
 using NUnit.Framework;
 using System.Linq;
 
-namespace Libclang.Tests
+namespace MetadataGenerator.Tests
 {
     [TestFixture]
     public class ClassTests
@@ -18,7 +18,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             Assert.IsInstanceOf<InterfaceDeclaration>(document.Declarations[0]);
@@ -38,7 +38,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             Assert.IsInstanceOf<InterfaceDeclaration>(document.Declarations[0]);
@@ -58,7 +58,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -89,7 +89,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -120,7 +120,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -157,7 +157,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -199,7 +199,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -233,7 +233,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -266,7 +266,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -302,7 +302,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -338,7 +338,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -369,7 +369,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -400,7 +400,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -437,7 +437,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -479,7 +479,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -551,7 +551,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             InterfaceDeclaration classDeclaration = document.Declarations[0] as InterfaceDeclaration;
@@ -603,7 +603,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(0, document.Declarations.Count);
         }
@@ -617,7 +617,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(0, document.Declarations.Count);
         }
@@ -632,7 +632,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             Assert.IsInstanceOf<InterfaceDeclaration>(document.Declarations[0]);
@@ -653,7 +653,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             Assert.IsInstanceOf<InterfaceDeclaration>(document.Declarations[0]);
@@ -677,7 +677,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(2, document.Declarations.Count);
             Assert.IsInstanceOf<InterfaceDeclaration>(document.Declarations[0]);
@@ -740,7 +740,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             ObjCDeclarationVisitor visitor = new ObjCDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(2, document.Declarations.Count);
             Assert.IsInstanceOf<InterfaceDeclaration>(document.Declarations[0]);

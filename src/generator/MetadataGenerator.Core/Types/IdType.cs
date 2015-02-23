@@ -1,10 +1,10 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Meta.Utils;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Meta.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Libclang.Core.Types
+namespace MetadataGenerator.Core.Types
 {
     public class IdType : TypeDefinition, IProtocolImplementer
     {

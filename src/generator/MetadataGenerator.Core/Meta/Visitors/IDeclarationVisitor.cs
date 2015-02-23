@@ -1,8 +1,8 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Meta.Utils;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Meta.Utils;
 using System;
 
-namespace Libclang.Core.Meta.Visitors
+namespace MetadataGenerator.Core.Meta.Visitors
 {
     public interface IDeclarationVisitor
     {

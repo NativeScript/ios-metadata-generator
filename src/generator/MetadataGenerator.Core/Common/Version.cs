@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Libclang.Core.Common
+namespace MetadataGenerator.Core.Common
 {
     public class Version
     {

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Libclang.Core.Ast;
-using Libclang.Core.Parser;
-using Libclang.Core.Types;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Parser;
+using MetadataGenerator.Core.Types;
 using NUnit.Framework;
 using System.Linq;
 
-namespace Libclang.Tests
+namespace MetadataGenerator.Tests
 {
     [TestFixture]
     public class VariableTests
@@ -19,7 +19,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             CDeclarationVisitor visitor = new CDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             VarDeclaration varDeclaration = document.Declarations[0] as VarDeclaration;
@@ -36,7 +36,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             CDeclarationVisitor visitor = new CDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             VarDeclaration varDeclaration = document.Declarations[0] as VarDeclaration;
@@ -57,7 +57,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             CDeclarationVisitor visitor = new CDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             VarDeclaration varDeclaration = document.Declarations[0] as VarDeclaration;
@@ -75,7 +75,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             CDeclarationVisitor visitor = new CDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             VarDeclaration varDeclaration = document.Declarations[0] as VarDeclaration;
@@ -93,7 +93,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             CDeclarationVisitor visitor = new CDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             VarDeclaration varDeclaration = document.Declarations[0] as VarDeclaration;
@@ -111,7 +111,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             CDeclarationVisitor visitor = new CDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             VarDeclaration varDeclaration = document.Declarations[0] as VarDeclaration;
@@ -130,7 +130,7 @@ namespace Libclang.Tests
             ModuleDeclaration document = new ModuleDeclaration("test");
             CDeclarationVisitor visitor = new CDeclarationVisitor(document);
 
-            LibclangHelper.ParseCodeWithVisitor(declaration, visitor);
+            MetadataGeneratorHelper.ParseCodeWithVisitor(declaration, visitor);
 
             Assert.AreEqual(1, document.Declarations.Count);
             VarDeclaration varDeclaration = document.Declarations[0] as VarDeclaration;

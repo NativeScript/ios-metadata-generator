@@ -1,11 +1,11 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Generator;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Generator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Libclang.Core.Parser
+namespace MetadataGenerator.Core.Parser
 {
     public partial class FrameworkParser
     {

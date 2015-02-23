@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Libclang.Core.Meta.Utils;
+using MetadataGenerator.Core.Meta.Utils;
 
-namespace Libclang.Core.Meta.Filters
+namespace MetadataGenerator.Core.Meta.Filters
 {
     public interface IMetaFilter
     {

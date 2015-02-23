@@ -1,11 +1,11 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Parser;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Parser;
 using NClang;
 using System;
 
-namespace Libclang.Tests
+namespace MetadataGenerator.Tests
 {
-    public static class LibclangHelper
+    public static class MetadataGeneratorHelper
     {
         private static string[] clangArgs = new[]
         {

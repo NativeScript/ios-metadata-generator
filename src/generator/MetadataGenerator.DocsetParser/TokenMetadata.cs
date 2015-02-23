@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Libclang.DocsetParser
+namespace MetadataGenerator.DocsetParser
 {
     public class TokenMetadata
     {

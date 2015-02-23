@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Libclang.Core.Types;
+using MetadataGenerator.Core.Types;
 
-namespace Libclang.Core.Ast
+namespace MetadataGenerator.Core.Ast
 {
     public class BitFieldDeclaration : FieldDeclaration
     {

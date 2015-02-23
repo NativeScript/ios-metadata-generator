@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using Libclang.Core.Ast;
-using Libclang.Core.Meta.Visitors;
-using Libclang.Core.Meta.Utils;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Meta.Visitors;
+using MetadataGenerator.Core.Meta.Utils;
 
-namespace Libclang.Core.Meta.Filters
+namespace MetadataGenerator.Core.Meta.Filters
 {
     internal class VisitorFilter : IMetaFilter
     {

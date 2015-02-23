@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Libclang.Core.Meta.Utils
+namespace MetadataGenerator.Core.Meta.Utils
 {
     public interface IBinaryConverter
     {

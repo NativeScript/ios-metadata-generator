@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Libclang.Core.Meta.Utils
+namespace MetadataGenerator.Core.Meta.Utils
 {
     public class MetaFile : IBinarySerializable
     {

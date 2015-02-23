@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Libclang.Core.Ast
+namespace MetadataGenerator.Core.Ast
 {
     public class UnionDeclaration : BaseRecordDeclaration
     {

@@ -1,8 +1,8 @@
-using Libclang.Core.Ast;
+using MetadataGenerator.Core.Ast;
 using System;
 using System.Linq;
 
-namespace Libclang.Core.Types
+namespace MetadataGenerator.Core.Types
 {
     public class PrimitiveType : TypeDefinition
     {

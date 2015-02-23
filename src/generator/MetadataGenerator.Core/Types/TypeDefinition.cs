@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Libclang.Core.Ast;
-using Libclang.Core.Common;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Common;
 
-namespace Libclang.Core.Types
+namespace MetadataGenerator.Core.Types
 {
     public abstract class TypeDefinition
     {

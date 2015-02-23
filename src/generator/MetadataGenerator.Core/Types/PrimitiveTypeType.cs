@@ -1,4 +1,4 @@
-﻿namespace Libclang.Core.Types
+﻿namespace MetadataGenerator.Core.Types
 {
     public enum PrimitiveTypeType
     {

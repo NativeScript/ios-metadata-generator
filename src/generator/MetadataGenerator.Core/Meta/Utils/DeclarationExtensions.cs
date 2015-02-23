@@ -1,8 +1,8 @@
-﻿using Libclang.Core.Ast;
+﻿using MetadataGenerator.Core.Ast;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Libclang.Core.Meta.Utils
+namespace MetadataGenerator.Core.Meta.Utils
 {
     internal static class DeclarationExtensions
     {

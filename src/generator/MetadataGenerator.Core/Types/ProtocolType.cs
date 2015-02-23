@@ -1,7 +1,7 @@
-﻿using Libclang.Core.Ast;
+﻿using MetadataGenerator.Core.Ast;
 using System;
 
-namespace Libclang.Core.Types
+namespace MetadataGenerator.Core.Types
 {
     public class ProtocolType : TypeDefinition
     {

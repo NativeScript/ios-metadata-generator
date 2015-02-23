@@ -1,9 +1,9 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Meta.Visitors;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Meta.Visitors;
 using System;
 using System.IO;
 
-namespace Libclang.Core.Meta.Filters
+namespace MetadataGenerator.Core.Meta.Filters
 {
     internal class SymbolsCounter : IMetaContainerDeclarationVisitor
     {

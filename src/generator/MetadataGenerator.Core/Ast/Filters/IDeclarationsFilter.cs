@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Libclang.Core.Ast.Filters
+namespace MetadataGenerator.Core.Ast.Filters
 {
     public interface IDeclarationsFilter
     {

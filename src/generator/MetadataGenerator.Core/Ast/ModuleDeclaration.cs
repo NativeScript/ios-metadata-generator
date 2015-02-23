@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Libclang.Core.Ast
+namespace MetadataGenerator.Core.Ast
 {
     public class ModuleDeclaration : BaseDeclaration
     {

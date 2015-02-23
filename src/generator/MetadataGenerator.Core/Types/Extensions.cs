@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Libclang.Core.Ast;
-using Libclang.Core.Common;
-using Libclang.Core.Generator;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Common;
+using MetadataGenerator.Core.Generator;
 
-namespace Libclang.Core.Types
+namespace MetadataGenerator.Core.Types
 {
     public static class Extensions
     {

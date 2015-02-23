@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Libclang.Core.Ast;
+using MetadataGenerator.Core.Ast;
 
-namespace Libclang.Core.Types
+namespace MetadataGenerator.Core.Types
 {
     public class InstanceType : TypeDefinition
     {

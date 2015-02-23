@@ -1,6 +1,6 @@
 using System;
 
-namespace Libclang.Core.Ast
+namespace MetadataGenerator.Core.Ast
 {
     public class StructDeclaration : BaseRecordDeclaration
     {

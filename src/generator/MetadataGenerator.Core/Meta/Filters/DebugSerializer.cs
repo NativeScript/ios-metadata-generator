@@ -1,15 +1,15 @@
-using Libclang.Core.Meta.Utils;
+using MetadataGenerator.Core.Meta.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Libclang.Core.Ast;
-using Libclang.Core.Meta;
-using Libclang.Core.Generator;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Meta;
+using MetadataGenerator.Core.Generator;
 
-namespace Libclang.Core.Meta.Filters
+namespace MetadataGenerator.Core.Meta.Filters
 {
     internal class DebugSerializer : BaseMetaFilter
     {

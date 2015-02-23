@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Libclang.Core.Ast;
-using Libclang.Core.Generator;
-using Libclang.Core.Meta.Utils;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Generator;
+using MetadataGenerator.Core.Meta.Utils;
 
-namespace Libclang.Core.Types
+namespace MetadataGenerator.Core.Types
 {
     public class PointerType : TypeDefinition
     {

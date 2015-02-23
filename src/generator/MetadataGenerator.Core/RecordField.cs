@@ -1,4 +1,4 @@
-﻿namespace Libclang.Core
+﻿namespace MetadataGenerator.Core
 {
     public struct RecordField
     {

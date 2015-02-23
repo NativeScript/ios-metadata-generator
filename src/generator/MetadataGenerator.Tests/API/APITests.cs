@@ -1,13 +1,13 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Parser;
-using Libclang.DocsetParser;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Parser;
+using MetadataGenerator.DocsetParser;
 using NUnit.Framework;
 using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Libclang.Tests
+namespace MetadataGenerator.Tests
 {
     [TestFixture]
     public class APITests

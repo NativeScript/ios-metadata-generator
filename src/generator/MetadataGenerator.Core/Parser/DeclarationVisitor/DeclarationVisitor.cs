@@ -1,6 +1,6 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Common;
-using Libclang.Core.Types;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Common;
+using MetadataGenerator.Core.Types;
 using NClang;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 
-namespace Libclang.Core.Parser
+namespace MetadataGenerator.Core.Parser
 {
     public interface IDeclarationVisitor
     {

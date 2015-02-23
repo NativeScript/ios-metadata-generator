@@ -2,9 +2,9 @@
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
-using Libclang.Core.Ast;
+using MetadataGenerator.Core.Ast;
 
-namespace Libclang
+namespace MetadataGenerator
 {
     internal class Statistics
     {

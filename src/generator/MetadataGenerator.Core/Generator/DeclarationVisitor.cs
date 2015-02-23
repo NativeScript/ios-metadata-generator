@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Libclang.Core.Ast;
+using MetadataGenerator.Core.Ast;
 
-namespace Libclang.Core.Generator
+namespace MetadataGenerator.Core.Generator
 {
     public abstract class DeclarationVisitor
     {

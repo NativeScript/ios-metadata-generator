@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Libclang.Core.Ast
+namespace MetadataGenerator.Core.Ast
 {
     public class ProtocolDeclaration : BaseClass
     {

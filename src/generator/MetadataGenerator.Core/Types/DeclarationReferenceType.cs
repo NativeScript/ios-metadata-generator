@@ -1,13 +1,13 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Generator;
-using Libclang.Core.Meta.Utils;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Generator;
+using MetadataGenerator.Core.Meta.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace Libclang.Core.Types
+namespace MetadataGenerator.Core.Types
 {
     public class DeclarationReferenceType : TypeDefinition
     {

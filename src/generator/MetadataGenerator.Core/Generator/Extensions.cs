@@ -4,12 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using Libclang.Core.Ast;
-using Libclang.Core.Common;
-using Libclang.Core.Types;
-using Libclang.Core.Meta.Utils;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Common;
+using MetadataGenerator.Core.Types;
+using MetadataGenerator.Core.Meta.Utils;
 
-namespace Libclang.Core.Generator
+namespace MetadataGenerator.Core.Generator
 {
     public static class Extensions
     {

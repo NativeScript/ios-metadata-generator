@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Libclang.Core.Types
+namespace MetadataGenerator.Core.Types
 {
     public class ComplexType : TypeDefinition
     {

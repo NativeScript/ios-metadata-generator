@@ -3,7 +3,7 @@ using YamlDotNet.RepresentationModel;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace Libclang.Core
+namespace MetadataGenerator.Core
 {
     public class YamlTypeEncodingTransfomation : TypeEncodingTransfomation<YamlNode>
     {

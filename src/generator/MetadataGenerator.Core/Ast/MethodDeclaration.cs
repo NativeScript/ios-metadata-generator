@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using Libclang.Core.Types;
+using MetadataGenerator.Core.Types;
 using System.Text;
 
-namespace Libclang.Core.Ast
+namespace MetadataGenerator.Core.Ast
 {
     public class MethodDeclaration : FunctionDeclaration
     {

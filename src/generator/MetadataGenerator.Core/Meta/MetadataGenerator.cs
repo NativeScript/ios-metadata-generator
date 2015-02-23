@@ -1,14 +1,14 @@
-﻿using Libclang.Core.Ast;
-using Libclang.Core.Ast.Filters;
-using Libclang.Core.Meta.Filters;
-using Libclang.Core.Meta.Utils;
-using Libclang.Core.Meta.Visitors;
+﻿using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Ast.Filters;
+using MetadataGenerator.Core.Meta.Filters;
+using MetadataGenerator.Core.Meta.Utils;
+using MetadataGenerator.Core.Meta.Visitors;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Libclang.Core.Meta
+namespace MetadataGenerator.Core.Meta
 {
     public class MetadataGenerator
     {

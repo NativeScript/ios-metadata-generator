@@ -1,8 +1,8 @@
-﻿using Libclang.Core.Ast;
+﻿using MetadataGenerator.Core.Ast;
 using System;
 using System.Collections.Generic;
 
-namespace Libclang.Core.Meta.Utils
+namespace MetadataGenerator.Core.Meta.Utils
 {
     public static class MetaExtensions
     {

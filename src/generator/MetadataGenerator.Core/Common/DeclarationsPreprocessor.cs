@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Libclang.Core.Ast;
-using Libclang.Core.Generator;
-using Libclang.Core.Types;
-using Libclang.Core.Ast.Filters;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Generator;
+using MetadataGenerator.Core.Types;
+using MetadataGenerator.Core.Ast.Filters;
 
-namespace Libclang.Core.Common
+namespace MetadataGenerator.Core.Common
 {
     public class DeclarationsPreprocessor
     {

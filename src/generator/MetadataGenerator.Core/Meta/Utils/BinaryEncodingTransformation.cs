@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Libclang.Core.Meta.Utils
+namespace MetadataGenerator.Core.Meta.Utils
 {
     class BinaryEncodingTransformation : TypeEncodingTransfomation<BinaryTypeEncoding>
     {

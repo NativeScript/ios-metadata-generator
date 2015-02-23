@@ -4,11 +4,11 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text.RegularExpressions;
-    using Libclang.Core;
-    using Libclang.Core.Types;
-    using Libclang.Core.Meta.Utils;
+    using MetadataGenerator.Core;
+    using MetadataGenerator.Core.Types;
+    using MetadataGenerator.Core.Meta.Utils;
     using TypeScript.Declarations;
-    using MT = Libclang.Core.Ast;
+    using MT = MetadataGenerator.Core.Ast;
     using TS = TypeScript.Declarations.Model;
 
     public partial class TypeScriptFactory

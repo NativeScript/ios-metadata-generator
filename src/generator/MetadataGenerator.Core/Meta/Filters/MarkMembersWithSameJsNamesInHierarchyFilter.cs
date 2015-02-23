@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Libclang.Core.Meta.Utils;
-using Libclang.Core.Ast;
-using Libclang.Core.Generator;
+using MetadataGenerator.Core.Meta.Utils;
+using MetadataGenerator.Core.Ast;
+using MetadataGenerator.Core.Generator;
 
-namespace Libclang.Core.Meta.Filters
+namespace MetadataGenerator.Core.Meta.Filters
 {
     internal class MarkMembersWithSameJsNamesInHierarchyFilter : BaseMetaFilter
     {

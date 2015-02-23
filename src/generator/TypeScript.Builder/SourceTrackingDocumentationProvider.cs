@@ -1,10 +1,10 @@
 ﻿namespace TypeScript.Factory
 {
     using System.Linq;
-    using Libclang.Core.Ast;
-    using Libclang.Core.Generator;
+    using MetadataGenerator.Core.Ast;
+    using MetadataGenerator.Core.Generator;
     using TypeScript.Declarations.Writers;
-    using MT = Libclang.Core.Ast;
+    using MT = MetadataGenerator.Core.Ast;
     using TS = TypeScript.Declarations.Model;
 
     public class SourceTrackingDocumentationProvider : DocumentationProvider
@@ -159,19 +159,19 @@
             var meta = typeScriptObject.Annotations.OfType<MT.BaseDeclaration>().FirstOrDefault();
             if (meta != null)
             {
-                Libclang.Core.Common.PlatformAvailability availability = meta.IosAvailability;
+                MetadataGenerator.Core.Common.PlatformAvailability availability = meta.IosAvailability;
 
-                if (availability != null && Libclang.Core.Common.Version.IsSet(availability.Introduced))
+                if (availability != null && MetadataGenerator.Core.Common.Version.IsSet(availability.Introduced))
                 {
                     doc = Append(doc, string.Format("@introduced {0}", availability.Introduced));
                 }
 
-                if (availability != null && Libclang.Core.Common.Version.IsSet(availability.Obsoleted))
+                if (availability != null && MetadataGenerator.Core.Common.Version.IsSet(availability.Obsoleted))
                 {
                     doc = Append(doc, string.Format("@obsolete {0}", availability.Obsoleted));
                 }
 
-                if (availability != null && Libclang.Core.Common.Version.IsSet(availability.Deprecated))
+                if (availability != null && MetadataGenerator.Core.Common.Version.IsSet(availability.Deprecated))
                 {
                     doc = Append(doc, string.Format("@deprecated {0}", availability.Deprecated));
                 }

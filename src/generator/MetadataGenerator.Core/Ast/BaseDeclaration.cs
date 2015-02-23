@@ -1,10 +1,10 @@
 using System;
 using System.Linq;
-using Libclang.Core.Common;
-using Libclang.Core.Types;
+using MetadataGenerator.Core.Common;
+using MetadataGenerator.Core.Types;
 using System.Collections.Generic;
 
-namespace Libclang.Core.Ast
+namespace MetadataGenerator.Core.Ast
 {
     public abstract class BaseDeclaration : IDeclaration
     {

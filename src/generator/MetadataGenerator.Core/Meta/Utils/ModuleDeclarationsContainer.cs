@@ -1,10 +1,10 @@
 ﻿using System;
-using Libclang.Core.Ast;
+using MetadataGenerator.Core.Ast;
 using System.Collections.ObjectModel;
-using Libclang.Core.Meta.Filters;
+using MetadataGenerator.Core.Meta.Filters;
 using System.Diagnostics;
 
-namespace Libclang.Core.Meta.Utils
+namespace MetadataGenerator.Core.Meta.Utils
 {
     [DebuggerDisplay("{ModuleName} Count: {Count}")]
     public class ModuleDeclarationsContainer : Collection<IDeclaration>
