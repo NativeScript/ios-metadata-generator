@@ -138,6 +138,11 @@ namespace Libclang.Core.Ast
                 return false;
             }
 
+            if (this.Name == "copy:" && this.Parent.Name == "UIResponderStandardEditActions")
+            {
+                return false;
+            }
+
             return null;
         }
 
