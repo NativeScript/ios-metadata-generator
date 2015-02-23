@@ -8,14 +8,14 @@ module.exports = function (grunt) {
     var generatorSrcDir =  path.join(srcDir, "src", "generator");
     var mergerSrcDir = path.join(srcDir, "src", "merger");
     var outGeneratorDir = path.join(generatorSrcDir, "build");
-    var libclangExecutablePath = path.join(generatorSrcDir, "Libclang", "bin", "Release");
+    var generatorExecutablePath = path.join(generatorSrcDir, "MetadataGenerator", "bin", "Release");
     var mergerBuildProductPath = path.join(mergerSrcDir, "bin");
 
     grunt.initConfig({
         pkg: grunt.file.readJSON(path.join(srcDir, "/package.json")),
         shell: {
             buildGenerator: {
-                command: 'xbuild /p:Configuration=Release src/generator/Libclang.sln'
+                command: 'xbuild /p:Configuration=Release src/generator/MetadataGenerator.sln'
             },
 
             buildMerger: {
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
                 command: function(outputPath) {
                     return [
                         util.format('mkdir -p %s', outputPath),
-                        util.format('mkbundle -o %s Libclang.exe *.dll -z --config Libclang.exe.config', path.join(outputPath, "MetadataGenerator")),
+                        util.format('mkbundle -o %s MetadataGenerator.exe *.dll -z --config MetadataGenerator.exe.config', path.join(outputPath, "MetadataGenerator")),
                         util.format('cd %s', outputPath),
                         'LIBMONO_PATH=`otool -L MetadataGenerator | grep \'libmonoboehm\' | awk \'{ print $1 }\'`',
                         'install_name_tool -change "$LIBMONO_PATH" "/usr/local/lib/`basename $LIBMONO_PATH`" MetadataGenerator',
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
                 },
                 options: {
                     execOptions: {
-                        cwd: libclangExecutablePath,
+                        cwd: generatorExecutablePath,
                         env: {
                             'CC': "clang -framework CoreFoundation -liconv -lobjc"
                         }

@@ -8,14 +8,13 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Libclang</RootNamespace>
-    <AssemblyName>Libclang</AssemblyName>
+    <AssemblyName>MetadataGenerator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -68,21 +67,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Libclang.Core\Libclang.Core.csproj">
-      <Project>{69535A02-4E93-457A-A150-D2A2B0B9F93B}</Project>
-      <Name>Libclang.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Libclang.DocsetParser\Libclang.DocsetParser.csproj">
-      <Project>{FF06A2DD-F2DD-4ACD-B5E9-83E1E9DCECD4}</Project>
-      <Name>Libclang.DocsetParser</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TypeScript.Builder\TypeScript.Factory.csproj">
-      <Project>{65eb4fb8-7f85-4370-8dc3-1918c22c29c2}</Project>
+      <Project>{65EB4FB8-7F85-4370-8DC3-1918C22C29C2}</Project>
       <Name>TypeScript.Factory</Name>
     </ProjectReference>
     <ProjectReference Include="..\TypeScript.Declarations\TypeScript.Declarations.csproj">
-      <Project>{a95bcc66-65f2-4ce0-a1d7-e4ce515ac4df}</Project>
+      <Project>{A95BCC66-65F2-4CE0-A1D7-E4CE515AC4DF}</Project>
       <Name>TypeScript.Declarations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetadataGenerator.Core\MetadataGenerator.Core.csproj">
+      <Project>{69535A02-4E93-457A-A150-D2A2B0B9F93B}</Project>
+      <Name>MetadataGenerator.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetadataGenerator.DocsetParser\MetadataGenerator.DocsetParser.csproj">
+      <Project>{FF06A2DD-F2DD-4ACD-B5E9-83E1E9DCECD4}</Project>
+      <Name>MetadataGenerator.DocsetParser</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
