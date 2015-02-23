@@ -21,14 +21,15 @@ namespace binary {
     class MetaFile {
     private:
         std::unique_ptr<BinaryHashtable> _globalTableSymbols;
+        std::vector<MetaFileOffset> _topLevelModulesOffset;
         std::shared_ptr<utils::MemoryStream> _heap;
 
         // file properties
         int pointer_size = 4;
         int array_count_size = 4;
         MetaFileOffset globalTable_offset = 0;
+        MetaFileOffset modules_offset = 0;
         MetaFileOffset heap_offset = 0;
-        MetaFileOffset _offset = 0;
 
     public:
         /*
@@ -60,6 +61,8 @@ namespace binary {
          * \return The offset in the heap
          */
         MetaFileOffset getFromGlobalTable(const std::string& jsName);
+
+        void registerTopLevelModules(std::vector<std::string>& topLevelModules);
 
         /// heap
         /*

@@ -67,6 +67,7 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_FunctionMeta) {
     binary::BinaryReader reader = file->heap_reader();
     reader.baseStream()->set_position(0);
     EXPECT_EQ(0, reader.read_byte()); // marking byte
+    EXPECT_EQ("Foundation", reader.read_string());
     int moduleOffset = reader.baseStream()->position();
     EXPECT_EQ(target->module, reader.read_string());
     int nameOffset = reader.baseStream()->position();
@@ -113,6 +114,7 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_FunctionMetaWithDif
     binary::BinaryReader reader = file->heap_reader();
     reader.baseStream()->set_position(0);
     EXPECT_EQ(0, reader.read_byte()); // marking byte
+    EXPECT_EQ("Foundation", reader.read_string());
     int moduleOffset = reader.baseStream()->position();
     EXPECT_EQ(target->module, reader.read_string());
     int jsNameOffset = reader.baseStream()->position();
@@ -167,6 +169,7 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_StructMeta) {
     binary::BinaryReader reader = file->heap_reader();
     reader.baseStream()->set_position(0);
     EXPECT_EQ(0, reader.read_byte()); // marking byte
+    EXPECT_EQ("Foundation", reader.read_string());
     int moduleOffset = reader.baseStream()->position();
     EXPECT_EQ(target->module, reader.read_string());
     int nameOffset = reader.baseStream()->position();
@@ -229,6 +232,7 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_VarMeta) {
     binary::BinaryReader reader = file->heap_reader();
     reader.baseStream()->set_position(0);
     EXPECT_EQ(0, reader.read_byte()); // marking byte
+    EXPECT_EQ("Foundation", reader.read_string());
     int moduleOffset = reader.baseStream()->position();
     EXPECT_EQ(target->module, reader.read_string());
     int nameOffset = reader.baseStream()->position();
@@ -272,6 +276,7 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_JSCodeMeta) {
     binary::BinaryReader reader = file->heap_reader();
     reader.baseStream()->set_position(0);
     EXPECT_EQ(0, reader.read_byte()); // marking byte
+    EXPECT_EQ("Foundation", reader.read_string());
     int moduleOffset = reader.baseStream()->position();
     EXPECT_EQ(target->module, reader.read_string());
     int nameOffset = reader.baseStream()->position();
@@ -328,6 +333,7 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_Interface) {
     binary::BinaryReader reader = file->heap_reader();
     reader.baseStream()->set_position(0);
     EXPECT_EQ(0, reader.read_byte()); // marking byte
+    EXPECT_EQ("Foundation", reader.read_string());
     int moduleOffset = reader.baseStream()->position();
     EXPECT_EQ(target->module, reader.read_string());
     int nameOffset = reader.baseStream()->position();
@@ -421,6 +427,7 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_InterfaceWithConstr
     binary::BinaryReader reader = file->heap_reader();
     reader.baseStream()->set_position(0);
     EXPECT_EQ(0, reader.read_byte()); // marking byte
+    EXPECT_EQ("Foundation", reader.read_string());
     int moduleOffset = reader.baseStream()->position();
     EXPECT_EQ(target->module, reader.read_string());
     int nameOffset = reader.baseStream()->position();

@@ -1,6 +1,7 @@
 #include "binarySerializer.h"
 #include "binarySerializerPrivate.h"
 #include "../utils/metaContainer.h"
+#include <set>
 
 uint8_t convertVersion(Version version) {
     uint8_t result = 0;
@@ -150,7 +151,26 @@ void binary::BinarySerializer::serializeRecord(meta::RecordMeta *meta, binary::R
     binaryMetaStruct._fieldsEncodings = this->typeEncodingSerializer.serialize(typeEncodings);
 }
 
+struct CaseInsensitiveCompare {
+    bool operator() (const std::string& a, const std::string& b) const {
+        return strcasecmp(a.c_str(), b.c_str()) < 0;
+    }
+};
+
 void binary::BinarySerializer::start(utils::MetaContainer *container) {
+    // get all top level modules and write them down first
+    set<string, CaseInsensitiveCompare> topLevelModules;
+    for (auto moduleIter = container->beginModules(); moduleIter != container->endModules(); ++moduleIter) {
+        int dotPosition = moduleIter->find('.', 0);
+        if (dotPosition == string::npos) {
+            topLevelModules.emplace(*moduleIter);
+        } else {
+            topLevelModules.emplace(moduleIter->substr(0, dotPosition));
+        }
+    }
+    vector<string> modulesVector(topLevelModules.begin(), topLevelModules.end());
+    this->file->registerTopLevelModules(modulesVector);
+
     // write all module names in heap and write down their offsets
     for (auto moduleIter = container->beginModules(); moduleIter != container->endModules(); ++moduleIter) {
         binary::MetaFileOffset offset = this->heapWriter.push_string(*moduleIter);
