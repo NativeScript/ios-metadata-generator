@@ -28,15 +28,14 @@ FIND_PACKAGE (Boost COMPONENTS system filesystem REQUIRED)
 include(ExternalProject)
 ExternalProject_Add(yaml-cpp
   URL http://yaml-cpp.googlecode.com/files/yaml-cpp-0.5.1.tar.gz
-  PREFIX ${CMAKE_CURRENT_BINARY_DIR}/yaml-cpp
+  PREFIX ${CMAKE_BINARY_DIR}/yaml-cpp
   CMAKE_GENERATOR ${CMAKE_GENERATOR}
+  CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=<INSTALL_DIR>
+  BUILD_COMMAND ${CMAKE_COMMAND} --build . --config $<CONFIG>
 )
 
-ExternalProject_Get_Property(yaml-cpp source_dir)
-include_directories(${source_dir}/include)
-
-ExternalProject_Get_Property(yaml-cpp binary_dir)
-link_directories(${binary_dir})
+include_directories(${CMAKE_BINARY_DIR}/yaml-cpp/include)
+link_directories(${CMAKE_BINARY_DIR}/yaml-cpp/lib)
 
 #
 # Project Output Paths
