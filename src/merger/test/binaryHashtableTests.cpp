@@ -30,7 +30,7 @@ TEST (BinaryHashTableTests, TestSerialization_SizeShouldMatch) {
     std::shared_ptr<utils::MemoryStream> stream = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
     binary::BinaryWriter writer = binary::BinaryWriter(stream, 4, 4);
 
-    std::vector<binary::MetaFileOffset> globalTable = target.serialize(writer);
+    std::vector<binary::MetaFileOffset> globalTable = target.serialize(&writer);
     EXPECT_EQ(target.size(), globalTable.size());
 }
 
@@ -63,7 +63,7 @@ TEST (BinaryHashTableTests, TestSerialization_ArraysInHeap_2_1) {
     std::shared_ptr<utils::MemoryStream> stream = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
     binary::BinaryWriter writer = binary::BinaryWriter(stream, pointer_size, array_count_size);
 
-    target.serialize(writer);
+    target.serialize(&writer);
 
     /*
     Used slots:
@@ -94,7 +94,7 @@ TEST (BinaryHashTableTests, TestSerialization_ArraysInHeap_8_4) {
     std::shared_ptr<utils::MemoryStream> stream = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
     binary::BinaryWriter writer = binary::BinaryWriter(stream, pointer_size, array_count_size);
 
-    target.serialize(writer);
+    target.serialize(&writer);
 
     /*
     Used slots:
@@ -125,7 +125,7 @@ TEST (BinaryHashTableTests, TestSerialization_Offsets) {
     std::shared_ptr<utils::MemoryStream> stream = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
     binary::BinaryWriter writer = binary::BinaryWriter(stream, pointer_size, array_count_size);
 
-    std::vector<binary::MetaFileOffset> offsets = target.serialize(writer);
+    std::vector<binary::MetaFileOffset> offsets = target.serialize(&writer);
 
     /*
     Used slots:

@@ -14,18 +14,9 @@ binary::MetaFileOffset binary::MetaFile::getFromGlobalTable(const std::string& j
 }
 
 void binary::MetaFile::registerTopLevelModules(std::vector<std::string> &topLevelModules) {
-    binary::BinaryWriter writer = this->heap_writer();
     for (auto& topLevelModule : topLevelModules) {
-        this->_topLevelModulesOffset.push_back(writer.push_string(topLevelModule));
+        this->_topLevelModulesOffset.push_back(this->_heapWriter->push_string(topLevelModule));
     }
-}
-
-binary::BinaryWriter binary::MetaFile::heap_writer() {
-    return binary::BinaryWriter(this->_heap, this->pointer_size, this->array_count_size);
-}
-
-binary::BinaryReader binary::MetaFile::heap_reader() {
-    return binary::BinaryReader(this->_heap, this->pointer_size, this->array_count_size);
 }
 
 void binary::MetaFile::save(string filename) {
@@ -44,8 +35,7 @@ void binary::MetaFile::save(std::shared_ptr<utils::Stream> stream) {
     this->modules_offset = writer.push_binaryArray(this->_topLevelModulesOffset);
 
     // dump global table
-    BinaryWriter heapWriter = this->heap_writer();
-    std::vector<binary::MetaFileOffset> offsets = this->_globalTableSymbols->serialize(heapWriter);
+    std::vector<binary::MetaFileOffset> offsets = this->_globalTableSymbols->serialize(this->_heapWriter.get());
     this->globalTable_offset = writer.push_binaryArray(offsets);
 
     // dump heap

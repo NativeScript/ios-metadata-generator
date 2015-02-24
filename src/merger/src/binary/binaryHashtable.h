@@ -53,7 +53,7 @@ namespace binary {
          * \param heapWriter Reference to a \c BinaryWriter that will be used for serialization
          * \returns vector of offsets pointing to vectors in the heap
          */
-        std::vector<MetaFileOffset> serialize(BinaryWriter& heapWriter);
+        std::vector<MetaFileOffset> serialize(BinaryWriter* heapWriter);
     };
 }
 

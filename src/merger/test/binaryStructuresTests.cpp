@@ -9,7 +9,7 @@ TEST(BinaryStructuresTests, TestSave1TypeEncoding) {
     binary::BinaryWriter writer(ms, 4, 4);
 
     binary::TypeEncoding target(binary::BinaryTypeEncodingType::Int);
-    target.save(writer);
+    target.save(&writer);
 
     EXPECT_EQ(1, ms->size());
 }
@@ -19,10 +19,10 @@ TEST(BinaryStructuresTests, TestSave2TypeEncodings) {
     binary::BinaryWriter writer(ms, 4, 4);
 
     binary::TypeEncoding target(binary::BinaryTypeEncodingType::Int);
-    target.save(writer);
+    target.save(&writer);
 
     binary::TypeEncoding target2(binary::BinaryTypeEncodingType::LongLong);
-    target2.save(writer);
+    target2.save(&writer);
 
     EXPECT_EQ(2, ms->size());
 }
@@ -35,7 +35,7 @@ TEST(BinaryStructuresTests, TestSave_TypeEncoding_IncompleteArray) {
     binary::PointerEncoding* p = new binary::PointerEncoding();
     p->_target = std::unique_ptr<binary::TypeEncoding>(new binary::TypeEncoding(binary::BinaryTypeEncodingType::Void));
     target._elementType = std::unique_ptr<binary::TypeEncoding>(p);
-    binary::MetaFileOffset offset = target.save(writer);
+    binary::MetaFileOffset offset = target.save(&writer);
 
     EXPECT_EQ(0, offset);
     EXPECT_EQ(3, ms->size());
@@ -56,7 +56,7 @@ TEST(BinaryStructuresTests, TestSave_TypeEncoding_ConstantArrayEncoding) {
     p->_target = std::unique_ptr<binary::TypeEncoding>(new binary::TypeEncoding(binary::BinaryTypeEncodingType::Void));
     target._elementType = std::unique_ptr<binary::TypeEncoding>(p);
     target._size = 20;
-    binary::MetaFileOffset offset = target.save(writer);
+    binary::MetaFileOffset offset = target.save(&writer);
 
     EXPECT_EQ(0, offset);
     EXPECT_EQ(7, ms->size());
@@ -77,7 +77,7 @@ TEST(BinaryStructuresTests, TestSave_TypeEncoding_DeclarationReferenceEncoding) 
     binary::DeclarationReferenceEncoding target(binary::BinaryTypeEncodingType::StructDeclarationReference);
     std::string testStr = "Hello";
     target._name = writer.push_string(testStr);
-    binary::MetaFileOffset offset = target.save(writer);
+    binary::MetaFileOffset offset = target.save(&writer);
 
     EXPECT_EQ(testStr.size() + 1, offset);
     EXPECT_EQ(offset + pointerSize + 1, ms->size());
@@ -98,7 +98,7 @@ TEST(BinaryStructuresTests, TestSave_TypeEncoding_InterfaceDeclarationEncoding) 
     binary::InterfaceDeclarationEncoding target;
     std::string testStr = "NSArray";
     target._name = writer.push_string(testStr);
-    binary::MetaFileOffset offset = target.save(writer);
+    binary::MetaFileOffset offset = target.save(&writer);
 
     EXPECT_EQ(testStr.size() + 1, offset);
     EXPECT_EQ(offset + pointerSize + 1, ms->size());
@@ -117,7 +117,7 @@ TEST(BinaryStructuresTests, TestSave_TypeEncoding_PointerEncoding) {
 
     binary::PointerEncoding target;
     target._target = std::unique_ptr<binary::TypeEncoding>(new binary::TypeEncoding(binary::BinaryTypeEncodingType::Void));
-    binary::MetaFileOffset offset = target.save(writer);
+    binary::MetaFileOffset offset = target.save(&writer);
 
     EXPECT_EQ(0, offset);
     EXPECT_EQ(2, ms->size());
@@ -138,7 +138,7 @@ TEST(BinaryStructuresTests, TestSave_TypeEncoding_BlockEncoding) {
     target._encodings.push_back(std::unique_ptr<binary::TypeEncoding>(new binary::TypeEncoding(binary::BinaryTypeEncodingType::Int)));
     target._encodings.push_back(std::unique_ptr<binary::TypeEncoding>(new binary::TypeEncoding(binary::BinaryTypeEncodingType::Double)));
 
-    binary::MetaFileOffset offset = target.save(writer);
+    binary::MetaFileOffset offset = target.save(&writer);
 
     EXPECT_EQ(0, offset);
     EXPECT_EQ(5, ms->size());
@@ -166,7 +166,7 @@ TEST(BinaryStructuresTests, TestSave_TypeEncoding_AnonymousRecordEncoding) {
     target._fieldEncodings.push_back(std::unique_ptr<binary::TypeEncoding>(new binary::TypeEncoding(binary::BinaryTypeEncodingType::Int)));
     target._fieldEncodings.push_back(std::unique_ptr<binary::TypeEncoding>(new binary::TypeEncoding(binary::BinaryTypeEncodingType::Double)));
 
-    binary::MetaFileOffset offset = target.save(writer);
+    binary::MetaFileOffset offset = target.save(&writer);
 
     EXPECT_EQ(9, offset);
     EXPECT_EQ(26, ms->size());

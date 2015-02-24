@@ -6,7 +6,7 @@
 
 TEST(BinaryTypeEncodingSerializerTests, TestUnknown) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::UnknownEncoding target;
 
@@ -17,7 +17,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestUnknown) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestVoidEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::VoidEncoding target;
 
@@ -28,7 +28,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestVoidEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestBoolEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::BoolEncoding target;
 
@@ -39,7 +39,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestBoolEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestShortEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::ShortEncoding target;
 
@@ -50,7 +50,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestShortEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestUShortEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::UShortEncoding target;
 
@@ -61,7 +61,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestUShortEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestIntEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::IntEncoding target;
 
@@ -72,7 +72,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestIntEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestUIntEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::UIntEncoding target;
 
@@ -83,7 +83,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestUIntEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestLongEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::LongEncoding target;
 
@@ -94,7 +94,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestLongEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestULongEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::ULongEncoding target;
 
@@ -105,7 +105,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestULongEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestLongLongEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::LongLongEncoding target;
 
@@ -116,7 +116,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestLongLongEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestULongLongEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::ULongLongEncoding target;
 
@@ -127,7 +127,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestULongLongEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestSignedCharEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::SignedCharEncoding target;
 
@@ -138,7 +138,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestSignedCharEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestUnsignedCharEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::UnsignedCharEncoding target;
 
@@ -149,7 +149,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestUnsignedCharEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestUnicharEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::UnicharEncoding target;
 
@@ -160,7 +160,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestUnicharEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestCStringEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::CStringEncoding target;
 
@@ -171,7 +171,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestCStringEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestFloatEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::FloatEncoding target;
 
@@ -182,7 +182,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestFloatEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestDoubleEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::DoubleEncoding target;
 
@@ -193,7 +193,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestDoubleEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestVaListEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::VaListEncoding target;
 
@@ -204,7 +204,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestVaListEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestSelectorEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::SelectorEncoding target;
 
@@ -215,7 +215,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestSelectorEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestInstancetypeEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::InstancetypeEncoding target;
 
@@ -226,7 +226,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestInstancetypeEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestClassEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::ClassEncoding target;
 
@@ -237,7 +237,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestClassEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestProtocolEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::ProtocolEncoding target;
 
@@ -248,7 +248,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestProtocolEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestIdEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::IdEncoding target;
     target.protocols.push_back({ .name = "Test", .module = "TestModule" });
@@ -260,7 +260,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestIdEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestConstantArrayEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::ConstantArrayEncoding target;
     target.elementType = std::unique_ptr<typeEncoding::TypeEncoding>(new typeEncoding::IntEncoding());
@@ -276,7 +276,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestConstantArrayEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestIncompleteArrayEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::IncompleteArrayEncoding target;
     target.elementType = std::unique_ptr<typeEncoding::TypeEncoding>(new typeEncoding::IntEncoding());
@@ -291,7 +291,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestIncompleteArrayEncoding) {
 TEST(BinaryTypeEncodingSerializerTests, TestInterfaceEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
     ms->push_byte(0x10); // change the memory stream
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::InterfaceEncoding target;
     target.name = { .name = "Test", .module = "TestModule" };
@@ -305,7 +305,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestInterfaceEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestPointerEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::PointerEncoding target;
     target.target = std::unique_ptr<typeEncoding::TypeEncoding>(new typeEncoding::VoidEncoding());
@@ -319,7 +319,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestPointerEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestBlockEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::BlockEncoding target;
     target.blockCall.push_back(std::unique_ptr<typeEncoding::TypeEncoding>(new typeEncoding::VoidEncoding()));
@@ -338,7 +338,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestBlockEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestFunctionEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::FunctionEncoding target;
     target.functionCall.push_back(std::unique_ptr<typeEncoding::TypeEncoding>(new typeEncoding::VoidEncoding()));
@@ -358,7 +358,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestFunctionEncoding) {
 TEST(BinaryTypeEncodingSerializerTests, TestStructEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
     ms->push_byte(0x10); // change the memory stream
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::StructEncoding target;
     target.name = { .name = "Test", .module = "TestModule" };
@@ -373,7 +373,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestStructEncoding) {
 TEST(BinaryTypeEncodingSerializerTests, TestUnionEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
     ms->push_byte(0x10); // change the memory stream
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::UnionEncoding target;
     target.name = { .name = "Test", .module = "TestModule" };
@@ -388,7 +388,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestUnionEncoding) {
 TEST(BinaryTypeEncodingSerializerTests, TestInterfaceDeclarationEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
     ms->push_byte(0x10); // change the memory stream
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::InterfaceDeclarationEncoding target;
     target.name = { .name = "Test", .module = "TestModule" };
@@ -402,7 +402,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestInterfaceDeclarationEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestAnonymousStructEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::AnonymousStructEncoding target;
     target.fieldNames.push_back("x1");
@@ -423,7 +423,7 @@ TEST(BinaryTypeEncodingSerializerTests, TestAnonymousStructEncoding) {
 
 TEST(BinaryTypeEncodingSerializerTests, TestAnonymousUnionEncoding) {
     std::shared_ptr<utils::MemoryStream> ms = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
-    binary::BinaryWriter writer(ms, 4, 4);
+    std::shared_ptr<binary::BinaryWriter> writer = std::shared_ptr<binary::BinaryWriter>(new binary::BinaryWriter(ms, 4, 4));
     binary::BinaryTypeEncodingSerializer s(writer);
     typeEncoding::AnonymousUnionEncoding target;
     target.fieldNames.push_back("x1");

@@ -64,31 +64,30 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_FunctionMeta) {
 
     /// Check heap
 
-    binary::BinaryReader reader = file->heap_reader();
-    reader.baseStream()->set_position(0);
-    EXPECT_EQ(0, reader.read_byte()); // marking byte
-    EXPECT_EQ("Foundation", reader.read_string());
-    int moduleOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->module, reader.read_string());
-    int nameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->name, reader.read_string());
+    std::shared_ptr<binary::BinaryReader> reader = file->heap_reader();
+    reader->baseStream()->set_position(0);
+    EXPECT_EQ(0, reader->read_byte()); // marking byte
+    int moduleOffset = reader->baseStream()->position();
+    EXPECT_EQ("Foundation", reader->read_string());
+    int nameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->name, reader->read_string());
 
     // Type encoding
-    int encodingOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->signature.size(), reader.read_arrayCount());
-    EXPECT_EQ(binary::BinaryTypeEncodingType::Void, reader.read_byte());
-    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader.read_byte());
-    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader.read_byte());
+    int encodingOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->signature.size(), reader->read_arrayCount());
+    EXPECT_EQ(binary::BinaryTypeEncodingType::Void, reader->read_byte());
+    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader->read_byte());
+    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader->read_byte());
 
     // FunctionMeta
-    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader.baseStream()->position());
-    EXPECT_EQ(nameOffset, reader.read_pointer());
-    EXPECT_EQ(target->flags | meta::SymbolType::Function, reader.read_byte());
-    EXPECT_EQ(moduleOffset, reader.read_short());
-    EXPECT_EQ(2 << 3, reader.read_byte());
-    EXPECT_EQ(encodingOffset, reader.read_pointer());
+    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader->baseStream()->position());
+    EXPECT_EQ(nameOffset, reader->read_pointer());
+    EXPECT_EQ(target->flags | meta::SymbolType::Function, reader->read_byte());
+    EXPECT_EQ(moduleOffset, reader->read_short());
+    EXPECT_EQ(2 << 3, reader->read_byte());
+    EXPECT_EQ(encodingOffset, reader->read_pointer());
 
-    EXPECT_EQ(reader.baseStream()->size(), reader.baseStream()->position());
+    EXPECT_EQ(reader->baseStream()->size(), reader->baseStream()->position());
 }
 
 TEST (BinarySerializer_SerializationTests, TestSerialization_FunctionMetaWithDifferentNames) {
@@ -111,39 +110,38 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_FunctionMetaWithDif
 
     /// Check heap
 
-    binary::BinaryReader reader = file->heap_reader();
-    reader.baseStream()->set_position(0);
-    EXPECT_EQ(0, reader.read_byte()); // marking byte
-    EXPECT_EQ("Foundation", reader.read_string());
-    int moduleOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->module, reader.read_string());
-    int jsNameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->jsName, reader.read_string());
-    int nameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->name, reader.read_string());
+    std::shared_ptr<binary::BinaryReader> reader = file->heap_reader();
+    reader->baseStream()->set_position(0);
+    EXPECT_EQ(0, reader->read_byte()); // marking byte
+    int moduleOffset = reader->baseStream()->position();
+    EXPECT_EQ("Foundation", reader->read_string());
+    int jsNameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->jsName, reader->read_string());
+    int nameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->name, reader->read_string());
 
-    int nameOffsetBA = reader.baseStream()->position();
-    EXPECT_EQ(jsNameOffset, reader.read_pointer());
-    EXPECT_EQ(nameOffset, reader.read_pointer());
+    int nameOffsetBA = reader->baseStream()->position();
+    EXPECT_EQ(jsNameOffset, reader->read_pointer());
+    EXPECT_EQ(nameOffset, reader->read_pointer());
 
     // Type encoding
-    int encodingOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->signature.size(), reader.read_arrayCount());
-    EXPECT_EQ(binary::BinaryTypeEncodingType::Void, reader.read_byte());
-    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader.read_byte());
-    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader.read_byte());
+    int encodingOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->signature.size(), reader->read_arrayCount());
+    EXPECT_EQ(binary::BinaryTypeEncodingType::Void, reader->read_byte());
+    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader->read_byte());
+    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader->read_byte());
 
     // FunctionMeta
-    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader.baseStream()->position());
-    EXPECT_EQ(nameOffsetBA, reader.read_pointer());
-    uint8_t flags = reader.read_byte();
+    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader->baseStream()->position());
+    EXPECT_EQ(nameOffsetBA, reader->read_pointer());
+    uint8_t flags = reader->read_byte();
     EXPECT_EQ(target->flags | meta::MetaFlags::HasName | meta::SymbolType::Function, flags);
     EXPECT_EQ(meta::SymbolType::Function, flags & 7);
-    EXPECT_EQ(moduleOffset, reader.read_short());
-    EXPECT_EQ(2 << 3, reader.read_byte());
-    EXPECT_EQ(encodingOffset, reader.read_pointer());
+    EXPECT_EQ(moduleOffset, reader->read_short());
+    EXPECT_EQ(2 << 3, reader->read_byte());
+    EXPECT_EQ(encodingOffset, reader->read_pointer());
 
-    EXPECT_EQ(reader.baseStream()->size(), reader.baseStream()->position());
+    EXPECT_EQ(reader->baseStream()->size(), reader->baseStream()->position());
 }
 
 TEST (BinarySerializer_SerializationTests, TestSerialization_StructMeta) {
@@ -166,49 +164,48 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_StructMeta) {
 
     /// Check heap
 
-    binary::BinaryReader reader = file->heap_reader();
-    reader.baseStream()->set_position(0);
-    EXPECT_EQ(0, reader.read_byte()); // marking byte
-    EXPECT_EQ("Foundation", reader.read_string());
-    int moduleOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->module, reader.read_string());
-    int nameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->name, reader.read_string());
+    std::shared_ptr<binary::BinaryReader> reader = file->heap_reader();
+    reader->baseStream()->set_position(0);
+    EXPECT_EQ(0, reader->read_byte()); // marking byte
+    int moduleOffset = reader->baseStream()->position();
+    EXPECT_EQ("Foundation", reader->read_string());
+    int nameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->name, reader->read_string());
 
     // field names
-    int a1Offset = reader.baseStream()->position();
-    EXPECT_EQ(target->fields.at(0).name, reader.read_string());
-    int b1Offset = reader.baseStream()->position();
-    EXPECT_EQ(target->fields.at(1).name, reader.read_string());
-    int c1Offset = reader.baseStream()->position();
-    EXPECT_EQ(target->fields.at(2).name, reader.read_string());
+    int a1Offset = reader->baseStream()->position();
+    EXPECT_EQ(target->fields.at(0).name, reader->read_string());
+    int b1Offset = reader->baseStream()->position();
+    EXPECT_EQ(target->fields.at(1).name, reader->read_string());
+    int c1Offset = reader->baseStream()->position();
+    EXPECT_EQ(target->fields.at(2).name, reader->read_string());
 
     // field names binary array
-    int fieldNamesOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->fields.size(), reader.read_arrayCount());
-    EXPECT_EQ(a1Offset, reader.read_pointer()); // a1
-    EXPECT_EQ(b1Offset, reader.read_pointer()); // b1
-    EXPECT_EQ(c1Offset, reader.read_pointer()); // c1
+    int fieldNamesOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->fields.size(), reader->read_arrayCount());
+    EXPECT_EQ(a1Offset, reader->read_pointer()); // a1
+    EXPECT_EQ(b1Offset, reader->read_pointer()); // b1
+    EXPECT_EQ(c1Offset, reader->read_pointer()); // c1
 
     // field encodings
-    int encodingOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->fields.size(), reader.read_arrayCount());
-    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader.read_byte());
-    EXPECT_EQ(binary::BinaryTypeEncodingType::Double, reader.read_byte());
-    EXPECT_EQ(binary::BinaryTypeEncodingType::Long, reader.read_byte());
+    int encodingOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->fields.size(), reader->read_arrayCount());
+    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader->read_byte());
+    EXPECT_EQ(binary::BinaryTypeEncodingType::Double, reader->read_byte());
+    EXPECT_EQ(binary::BinaryTypeEncodingType::Long, reader->read_byte());
 
     // RecordMeta
-    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader.baseStream()->position());
-    EXPECT_EQ(nameOffset, reader.read_pointer());
-    uint8_t flags = reader.read_byte();
+    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader->baseStream()->position());
+    EXPECT_EQ(nameOffset, reader->read_pointer());
+    uint8_t flags = reader->read_byte();
     EXPECT_EQ(target->flags | meta::SymbolType::Struct, flags);
     EXPECT_EQ(meta::SymbolType::Struct, flags & 7);
-    EXPECT_EQ(moduleOffset, reader.read_short());
-    EXPECT_EQ(2 << 3, reader.read_byte());
-    EXPECT_EQ(fieldNamesOffset, reader.read_pointer());
-    EXPECT_EQ(encodingOffset, reader.read_pointer());
+    EXPECT_EQ(moduleOffset, reader->read_short());
+    EXPECT_EQ(2 << 3, reader->read_byte());
+    EXPECT_EQ(fieldNamesOffset, reader->read_pointer());
+    EXPECT_EQ(encodingOffset, reader->read_pointer());
 
-    EXPECT_EQ(reader.baseStream()->size(), reader.baseStream()->position());
+    EXPECT_EQ(reader->baseStream()->size(), reader->baseStream()->position());
 }
 
 TEST (BinarySerializer_SerializationTests, TestSerialization_VarMeta) {
@@ -229,30 +226,29 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_VarMeta) {
 
     /// Check heap
 
-    binary::BinaryReader reader = file->heap_reader();
-    reader.baseStream()->set_position(0);
-    EXPECT_EQ(0, reader.read_byte()); // marking byte
-    EXPECT_EQ("Foundation", reader.read_string());
-    int moduleOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->module, reader.read_string());
-    int nameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->name, reader.read_string());
+    std::shared_ptr<binary::BinaryReader> reader = file->heap_reader();
+    reader->baseStream()->set_position(0);
+    EXPECT_EQ(0, reader->read_byte()); // marking byte
+    int moduleOffset = reader->baseStream()->position();
+    EXPECT_EQ("Foundation", reader->read_string());
+    int nameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->name, reader->read_string());
 
     // Type encoding
-    int encodingOffset = reader.baseStream()->position();
-    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader.read_byte());
+    int encodingOffset = reader->baseStream()->position();
+    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader->read_byte());
 
     // VarMeta
-    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader.baseStream()->position());
-    EXPECT_EQ(nameOffset, reader.read_pointer());
-    uint8_t flags = reader.read_byte();
+    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader->baseStream()->position());
+    EXPECT_EQ(nameOffset, reader->read_pointer());
+    uint8_t flags = reader->read_byte();
     EXPECT_EQ(target->flags | meta::SymbolType::Var, flags);
     EXPECT_EQ(meta::SymbolType::Var, flags & 7);
-    EXPECT_EQ(moduleOffset, reader.read_short());
-    EXPECT_EQ(2 << 3, reader.read_byte());
-    EXPECT_EQ(encodingOffset, reader.read_pointer());
+    EXPECT_EQ(moduleOffset, reader->read_short());
+    EXPECT_EQ(2 << 3, reader->read_byte());
+    EXPECT_EQ(encodingOffset, reader->read_pointer());
 
-    EXPECT_EQ(reader.baseStream()->size(), reader.baseStream()->position());
+    EXPECT_EQ(reader->baseStream()->size(), reader->baseStream()->position());
 }
 
 TEST (BinarySerializer_SerializationTests, TestSerialization_JSCodeMeta) {
@@ -273,28 +269,27 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_JSCodeMeta) {
 
     /// Check heap
 
-    binary::BinaryReader reader = file->heap_reader();
-    reader.baseStream()->set_position(0);
-    EXPECT_EQ(0, reader.read_byte()); // marking byte
-    EXPECT_EQ("Foundation", reader.read_string());
-    int moduleOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->module, reader.read_string());
-    int nameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->name, reader.read_string());
-    int encodingOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->jsCode, reader.read_string());
+    std::shared_ptr<binary::BinaryReader> reader = file->heap_reader();
+    reader->baseStream()->set_position(0);
+    EXPECT_EQ(0, reader->read_byte()); // marking byte
+    int moduleOffset = reader->baseStream()->position();
+    EXPECT_EQ("Foundation", reader->read_string());
+    int nameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->name, reader->read_string());
+    int encodingOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->jsCode, reader->read_string());
 
     // JsCodeMeta
-    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader.baseStream()->position());
-    EXPECT_EQ(nameOffset, reader.read_pointer());
-    uint8_t flags = reader.read_byte();
+    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader->baseStream()->position());
+    EXPECT_EQ(nameOffset, reader->read_pointer());
+    uint8_t flags = reader->read_byte();
     EXPECT_EQ(target->flags | meta::SymbolType::JsCode, flags);
     EXPECT_EQ(meta::SymbolType::JsCode, flags & 7);
-    EXPECT_EQ(moduleOffset, reader.read_short());
-    EXPECT_EQ(2 << 3, reader.read_byte());
-    EXPECT_EQ(encodingOffset, reader.read_pointer());
+    EXPECT_EQ(moduleOffset, reader->read_short());
+    EXPECT_EQ(2 << 3, reader->read_byte());
+    EXPECT_EQ(encodingOffset, reader->read_pointer());
 
-    EXPECT_EQ(reader.baseStream()->size(), reader.baseStream()->position());
+    EXPECT_EQ(reader->baseStream()->size(), reader->baseStream()->position());
 }
 
 TEST (BinarySerializer_SerializationTests, TestSerialization_Interface) {
@@ -330,72 +325,71 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_Interface) {
 
     /// Check heap
 
-    binary::BinaryReader reader = file->heap_reader();
-    reader.baseStream()->set_position(0);
-    EXPECT_EQ(0, reader.read_byte()); // marking byte
-    EXPECT_EQ("Foundation", reader.read_string());
-    int moduleOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->module, reader.read_string());
-    int nameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->name, reader.read_string());
-    int methodSelectorOffset = reader.baseStream()->position();
-    EXPECT_EQ(method1->selector, reader.read_string());
-    int methodSignatureOffset = reader.baseStream()->position();
-    EXPECT_EQ(method1->signature.size(), reader.read_arrayCount());
-    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader.read_byte());
-    int methodTypeEncodingOffset = reader.baseStream()->position();
-    EXPECT_EQ(method1->typeEncoding, reader.read_string());
+    std::shared_ptr<binary::BinaryReader> reader = file->heap_reader();
+    reader->baseStream()->set_position(0);
+    EXPECT_EQ(0, reader->read_byte()); // marking byte
+    int moduleOffset = reader->baseStream()->position();
+    EXPECT_EQ("Foundation", reader->read_string());
+    int nameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->name, reader->read_string());
+    int methodSelectorOffset = reader->baseStream()->position();
+    EXPECT_EQ(method1->selector, reader->read_string());
+    int methodSignatureOffset = reader->baseStream()->position();
+    EXPECT_EQ(method1->signature.size(), reader->read_arrayCount());
+    EXPECT_EQ(binary::BinaryTypeEncodingType::Int, reader->read_byte());
+    int methodTypeEncodingOffset = reader->baseStream()->position();
+    EXPECT_EQ(method1->typeEncoding, reader->read_string());
 
     // MethodMeta
-    int methodOffset = reader.baseStream()->position();
-    EXPECT_EQ(nameOffset, reader.read_pointer());
-    EXPECT_EQ(method1->flags, reader.read_byte());
-    EXPECT_EQ(0, reader.read_short()); // module id
-    EXPECT_EQ(0, reader.read_byte()); // introduced in
-    EXPECT_EQ(methodSelectorOffset, reader.read_pointer()); // selector
-    EXPECT_EQ(methodSignatureOffset, reader.read_pointer()); // encoding
-    EXPECT_EQ(methodTypeEncodingOffset, reader.read_pointer()); // compiler encoding
+    int methodOffset = reader->baseStream()->position();
+    EXPECT_EQ(nameOffset, reader->read_pointer());
+    EXPECT_EQ(method1->flags, reader->read_byte());
+    EXPECT_EQ(0, reader->read_short()); // module id
+    EXPECT_EQ(0, reader->read_byte()); // introduced in
+    EXPECT_EQ(methodSelectorOffset, reader->read_pointer()); // selector
+    EXPECT_EQ(methodSignatureOffset, reader->read_pointer()); // encoding
+    EXPECT_EQ(methodTypeEncodingOffset, reader->read_pointer()); // compiler encoding
 
     // PropertyMeta
-    int propertyOffset = reader.baseStream()->position();
-    EXPECT_EQ(nameOffset, reader.read_pointer());
-    EXPECT_EQ(property1.flags, reader.read_byte());
-    EXPECT_EQ(0, reader.read_short()); // module id
-    EXPECT_EQ(0, reader.read_byte()); // introduced in
-    EXPECT_EQ(methodOffset, reader.read_pointer());
+    int propertyOffset = reader->baseStream()->position();
+    EXPECT_EQ(nameOffset, reader->read_pointer());
+    EXPECT_EQ(property1.flags, reader->read_byte());
+    EXPECT_EQ(0, reader->read_short()); // module id
+    EXPECT_EQ(0, reader->read_byte()); // introduced in
+    EXPECT_EQ(methodOffset, reader->read_pointer());
 
-    int propertyListOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->properties.size(), reader.read_arrayCount());
-    EXPECT_EQ(propertyOffset, reader.read_pointer());
+    int propertyListOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->properties.size(), reader->read_arrayCount());
+    EXPECT_EQ(propertyOffset, reader->read_pointer());
 
     // protocols
-    int protocolNameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->protocols[0].name, reader.read_string());
+    int protocolNameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->protocols[0].name, reader->read_string());
 
-    int protocolListOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->protocols.size(), reader.read_arrayCount());
-    EXPECT_EQ(protocolNameOffset, reader.read_pointer());
+    int protocolListOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->protocols.size(), reader->read_arrayCount());
+    EXPECT_EQ(protocolNameOffset, reader->read_pointer());
 
     // base name
-    int baseNameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->baseName.name, reader.read_string());
+    int baseNameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->baseName.name, reader->read_string());
 
     // InterfaceMeta
-    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader.baseStream()->position());
-    EXPECT_EQ(nameOffset, reader.read_pointer());
-    uint8_t flags = reader.read_byte();
+    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader->baseStream()->position());
+    EXPECT_EQ(nameOffset, reader->read_pointer());
+    uint8_t flags = reader->read_byte();
     EXPECT_EQ(target->flags | meta::SymbolType::Interface, flags);
     EXPECT_EQ(meta::SymbolType::Interface, flags & 7);
-    EXPECT_EQ(moduleOffset, reader.read_short());
-    EXPECT_EQ(2 << 3, reader.read_byte());
-    EXPECT_EQ(0, reader.read_pointer());
-    EXPECT_EQ(0, reader.read_pointer());
-    EXPECT_EQ(propertyListOffset, reader.read_pointer());
-    EXPECT_EQ(protocolListOffset, reader.read_pointer());
-    EXPECT_EQ(-1, reader.read_short());
-    EXPECT_EQ(baseNameOffset, reader.read_pointer());
+    EXPECT_EQ(moduleOffset, reader->read_short());
+    EXPECT_EQ(2 << 3, reader->read_byte());
+    EXPECT_EQ(0, reader->read_pointer());
+    EXPECT_EQ(0, reader->read_pointer());
+    EXPECT_EQ(propertyListOffset, reader->read_pointer());
+    EXPECT_EQ(protocolListOffset, reader->read_pointer());
+    EXPECT_EQ(-1, reader->read_short());
+    EXPECT_EQ(baseNameOffset, reader->read_pointer());
 
-    EXPECT_EQ(reader.baseStream()->size(), reader.baseStream()->position());
+    EXPECT_EQ(reader->baseStream()->size(), reader->baseStream()->position());
 }
 
 TEST (BinarySerializer_SerializationTests, TestSerialization_InterfaceWithConstructor) {
@@ -424,59 +418,58 @@ TEST (BinarySerializer_SerializationTests, TestSerialization_InterfaceWithConstr
 
     /// Check heap
 
-    binary::BinaryReader reader = file->heap_reader();
-    reader.baseStream()->set_position(0);
-    EXPECT_EQ(0, reader.read_byte()); // marking byte
-    EXPECT_EQ("Foundation", reader.read_string());
-    int moduleOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->module, reader.read_string());
-    int nameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->name, reader.read_string());
-    int methodNameOffset = reader.baseStream()->position();
-    EXPECT_EQ(method1.name, reader.read_string());
-    int methodTypeEncodingOffset = reader.baseStream()->position();
-    EXPECT_EQ(method1.typeEncoding, reader.read_string());
+    std::shared_ptr<binary::BinaryReader> reader = file->heap_reader();
+    reader->baseStream()->set_position(0);
+    EXPECT_EQ(0, reader->read_byte()); // marking byte
+    int moduleOffset = reader->baseStream()->position();
+    EXPECT_EQ("Foundation", reader->read_string());
+    int nameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->name, reader->read_string());
+    int methodNameOffset = reader->baseStream()->position();
+    EXPECT_EQ(method1.name, reader->read_string());
+    int methodTypeEncodingOffset = reader->baseStream()->position();
+    EXPECT_EQ(method1.typeEncoding, reader->read_string());
 
     // MethodMeta
-    int methodOffset = reader.baseStream()->position();
-    EXPECT_EQ(methodNameOffset, reader.read_pointer());
-    EXPECT_EQ(method1.flags, reader.read_byte());
-    EXPECT_EQ(0, reader.read_short()); // module id
-    EXPECT_EQ(0, reader.read_byte()); // introduced in
-    EXPECT_EQ(methodNameOffset, reader.read_pointer()); // selector
-    EXPECT_EQ(0, reader.read_pointer()); // encoding
-    EXPECT_EQ(methodTypeEncodingOffset, reader.read_pointer()); // compiler encoding
+    int methodOffset = reader->baseStream()->position();
+    EXPECT_EQ(methodNameOffset, reader->read_pointer());
+    EXPECT_EQ(method1.flags, reader->read_byte());
+    EXPECT_EQ(0, reader->read_short()); // module id
+    EXPECT_EQ(0, reader->read_byte()); // introduced in
+    EXPECT_EQ(methodNameOffset, reader->read_pointer()); // selector
+    EXPECT_EQ(0, reader->read_pointer()); // encoding
+    EXPECT_EQ(methodTypeEncodingOffset, reader->read_pointer()); // compiler encoding
 
-    int methodListOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->instanceMethods.size(), reader.read_arrayCount());
-    EXPECT_EQ(methodOffset, reader.read_pointer());
+    int methodListOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->instanceMethods.size(), reader->read_arrayCount());
+    EXPECT_EQ(methodOffset, reader->read_pointer());
 
     // protocols
-    int protocolNameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->protocols[0].name, reader.read_string());
+    int protocolNameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->protocols[0].name, reader->read_string());
 
-    int protocolListOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->protocols.size(), reader.read_arrayCount());
-    EXPECT_EQ(protocolNameOffset, reader.read_pointer());
+    int protocolListOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->protocols.size(), reader->read_arrayCount());
+    EXPECT_EQ(protocolNameOffset, reader->read_pointer());
 
     // base name
-    int baseNameOffset = reader.baseStream()->position();
-    EXPECT_EQ(target->baseName.name, reader.read_string());
+    int baseNameOffset = reader->baseStream()->position();
+    EXPECT_EQ(target->baseName.name, reader->read_string());
 
     // InterfaceMeta
-    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader.baseStream()->position());
-    EXPECT_EQ(nameOffset, reader.read_pointer());
-    uint8_t flags = reader.read_byte();
+    EXPECT_EQ(file->getFromGlobalTable(target->jsName), reader->baseStream()->position());
+    EXPECT_EQ(nameOffset, reader->read_pointer());
+    uint8_t flags = reader->read_byte();
     EXPECT_EQ(target->flags | meta::SymbolType::Interface, flags);
     EXPECT_EQ(meta::SymbolType::Interface, flags & 7);
-    EXPECT_EQ(moduleOffset, reader.read_short());
-    EXPECT_EQ(2 << 3, reader.read_byte());
-    EXPECT_EQ(methodListOffset, reader.read_pointer());
-    EXPECT_EQ(0, reader.read_pointer());
-    EXPECT_EQ(0, reader.read_pointer());
-    EXPECT_EQ(protocolListOffset, reader.read_pointer());
-    EXPECT_EQ(0, reader.read_short());
-    EXPECT_EQ(baseNameOffset, reader.read_pointer());
+    EXPECT_EQ(moduleOffset, reader->read_short());
+    EXPECT_EQ(2 << 3, reader->read_byte());
+    EXPECT_EQ(methodListOffset, reader->read_pointer());
+    EXPECT_EQ(0, reader->read_pointer());
+    EXPECT_EQ(0, reader->read_pointer());
+    EXPECT_EQ(protocolListOffset, reader->read_pointer());
+    EXPECT_EQ(0, reader->read_short());
+    EXPECT_EQ(baseNameOffset, reader->read_pointer());
 
-    EXPECT_EQ(reader.baseStream()->size(), reader.baseStream()->position());
+    EXPECT_EQ(reader->baseStream()->size(), reader->baseStream()->position());
 }
