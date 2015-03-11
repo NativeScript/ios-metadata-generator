@@ -1,3 +1,6 @@
+# Contributing to iOS Metadata Generator
+We are currently rewriting major part of the metadata generator for iOS in C++, have that plan in mind when you poke into the C# bits.
+
 # Contributing to NativeScript
 
 ## Before You Start
