@@ -59,7 +59,7 @@ namespace binary {
         uint16_t _frameworkId = 0;
         uint8_t _introduced = 0;
 
-        virtual MetaFileOffset save(BinaryWriter& writer);
+        virtual MetaFileOffset save(BinaryWriter* writer);
     };
 
     struct RecordMeta : Meta {
@@ -67,7 +67,7 @@ namespace binary {
         MetaFileOffset _fieldNames = 0;
         MetaFileOffset _fieldsEncodings = 0;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct StructMeta : RecordMeta {
@@ -80,21 +80,21 @@ namespace binary {
     public:
         MetaFileOffset _encoding = 0;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct JsCodeMeta : Meta {
     public:
         MetaFileOffset _jsCode = 0;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct VarMeta : Meta {
     public:
         MetaFileOffset _encoding = 0;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct MemberMeta : Meta {
@@ -106,14 +106,14 @@ namespace binary {
         MetaFileOffset _encoding = 0;
         MetaFileOffset _compilerEncoding = 0;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct PropertyMeta : MemberMeta {
         MetaFileOffset _getter = 0;
         MetaFileOffset _setter = 0;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct BaseClassMeta : Meta {
@@ -124,7 +124,7 @@ namespace binary {
         MetaFileOffset _protocols = 0;
         int16_t _initializersStartIndex = -1;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct ProtocolMeta : BaseClassMeta {
@@ -134,7 +134,7 @@ namespace binary {
     public:
         MetaFileOffset _baseName = 0;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 #pragma pack(pop)
 
@@ -146,7 +146,7 @@ namespace binary {
 
         BinaryTypeEncodingType _type;
 
-        virtual MetaFileOffset save(BinaryWriter& writer);
+        virtual MetaFileOffset save(BinaryWriter* writer);
     };
 
     struct IncompleteArrayEncoding : public TypeEncoding {
@@ -155,7 +155,7 @@ namespace binary {
 
         std::unique_ptr<TypeEncoding> _elementType;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct ConstantArrayEncoding : public TypeEncoding {
@@ -165,7 +165,7 @@ namespace binary {
         int _size;
         std::unique_ptr<TypeEncoding> _elementType;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct DeclarationReferenceEncoding : public TypeEncoding {
@@ -174,7 +174,7 @@ namespace binary {
 
         MetaFileOffset _name;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct PointerEncoding : public TypeEncoding {
@@ -183,7 +183,7 @@ namespace binary {
 
         std::unique_ptr<TypeEncoding> _target;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct BlockEncoding : public TypeEncoding {
@@ -193,7 +193,7 @@ namespace binary {
         uint8_t _encodingsCount;
         std::vector<std::unique_ptr<TypeEncoding>> _encodings;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct FunctionEncoding : public TypeEncoding {
@@ -203,7 +203,7 @@ namespace binary {
         uint8_t _encodingsCount;
         std::vector<std::unique_ptr<TypeEncoding>> _encodings;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct InterfaceDeclarationEncoding : public TypeEncoding {
@@ -212,7 +212,7 @@ namespace binary {
 
         MetaFileOffset _name;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 
     struct AnonymousRecordEncoding : public TypeEncoding {
@@ -223,7 +223,7 @@ namespace binary {
         std::vector<MetaFileOffset> _fieldNames;
         std::vector<std::unique_ptr<TypeEncoding>> _fieldEncodings;
 
-        virtual MetaFileOffset save(BinaryWriter& writer) override;
+        virtual MetaFileOffset save(BinaryWriter* writer) override;
     };
 }
 

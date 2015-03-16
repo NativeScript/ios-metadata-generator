@@ -21,14 +21,17 @@ namespace binary {
     class MetaFile {
     private:
         std::unique_ptr<BinaryHashtable> _globalTableSymbols;
+        std::vector<MetaFileOffset> _topLevelModulesOffset;
         std::shared_ptr<utils::MemoryStream> _heap;
+        shared_ptr<BinaryWriter> _heapWriter;
+        shared_ptr<BinaryReader> _heapReader;
 
         // file properties
         int pointer_size = 4;
         int array_count_size = 4;
         MetaFileOffset globalTable_offset = 0;
+        MetaFileOffset modules_offset = 0;
         MetaFileOffset heap_offset = 0;
-        MetaFileOffset _offset = 0;
 
     public:
         /*
@@ -39,6 +42,9 @@ namespace binary {
             this->_globalTableSymbols = std::unique_ptr<BinaryHashtable>(new BinaryHashtable(size));
             this->_heap = std::shared_ptr<utils::MemoryStream>(new utils::MemoryStream());
             this->_heap->push_byte(0); // mark heap
+
+            this->_heapReader = unique_ptr<binary::BinaryReader>(new binary::BinaryReader(this->_heap, this->pointer_size, this->array_count_size));
+            this->_heapWriter = unique_ptr<binary::BinaryWriter>(new binary::BinaryWriter(this->_heap, this->pointer_size, this->array_count_size));
         }
         MetaFile() : MetaFile(10) { }
 
@@ -61,15 +67,21 @@ namespace binary {
          */
         MetaFileOffset getFromGlobalTable(const std::string& jsName);
 
+        void registerTopLevelModules(std::vector<std::string>& topLevelModules);
+
         /// heap
         /*
          * \brief Creates a \c BinaryWriter for this file heap
          */
-        BinaryWriter heap_writer();
+        shared_ptr<BinaryWriter> heap_writer() {
+            return this->_heapWriter;
+        }
         /*
          * \brief Creates a \c BinaryReader for this file heap
          */
-        BinaryReader heap_reader();
+        shared_ptr<BinaryReader> heap_reader() {
+            return this->_heapReader;
+        }
 
         /// I/O
         /*

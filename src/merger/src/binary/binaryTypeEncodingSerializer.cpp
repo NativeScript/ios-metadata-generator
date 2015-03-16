@@ -10,9 +10,9 @@ binary::MetaFileOffset binary::BinaryTypeEncodingSerializer::serialize(std::vect
             binaryEncodings.push_back(std::move(binaryEncoding));
         }
 
-        offset = this->_heapWriter.push_arrayCount(encodings.size());
+        offset = this->_heapWriter->push_arrayCount(encodings.size());
         for (unique_ptr<binary::TypeEncoding>& binaryEncoding : binaryEncodings) {
-            binaryEncoding->save(this->_heapWriter);
+            binaryEncoding->save(this->_heapWriter.get());
         }
     }
     return offset;
@@ -125,7 +125,7 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serialize
 
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serialize(typeEncoding::InterfaceEncoding *encoding) {
     binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::InterfaceDeclarationReference);
-    s->_name = this->_heapWriter.push_string(encoding->name.name);
+    s->_name = this->_heapWriter->push_string(encoding->name.name);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
@@ -155,19 +155,19 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serialize
 
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serialize(typeEncoding::StructEncoding *encoding) {
     binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::StructDeclarationReference);
-    s->_name = this->_heapWriter.push_string(encoding->name.name);
+    s->_name = this->_heapWriter->push_string(encoding->name.name);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serialize(typeEncoding::UnionEncoding *encoding) {
     binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::UnionDeclarationReference);
-    s->_name = this->_heapWriter.push_string(encoding->name.name);
+    s->_name = this->_heapWriter->push_string(encoding->name.name);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serialize(typeEncoding::InterfaceDeclarationEncoding *encoding) {
     binary::InterfaceDeclarationEncoding* s = new binary::InterfaceDeclarationEncoding();
-    s->_name = this->_heapWriter.push_string(encoding->name.name);
+    s->_name = this->_heapWriter->push_string(encoding->name.name);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
@@ -184,7 +184,7 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serialize
     s->_fieldsCount = (uint8_t)encoding->fieldNames.size();
 
     for (string& fieldName : encoding->fieldNames) {
-        s->_fieldNames.push_back(this->_heapWriter.push_string(fieldName));
+        s->_fieldNames.push_back(this->_heapWriter->push_string(fieldName));
     }
 
     for (std::unique_ptr<typeEncoding::TypeEncoding>& fieldEncoding : encoding->fieldEncodings) {

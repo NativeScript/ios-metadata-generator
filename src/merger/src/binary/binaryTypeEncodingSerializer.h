@@ -20,12 +20,12 @@ namespace binary {
      */
     class BinaryTypeEncodingSerializer : public utils::TypeEncodingSerializer<unique_ptr<binary::TypeEncoding>> {
     private:
-        BinaryWriter _heapWriter;
+        std::shared_ptr<BinaryWriter> _heapWriter;
 
         unique_ptr<TypeEncoding> serializeRecordEncoding(binary::BinaryTypeEncodingType encodingType, typeEncoding::AnonymousRecordEncoding *encoding);
 
     public:
-        BinaryTypeEncodingSerializer(BinaryWriter& heapWriter) : _heapWriter(heapWriter) { }
+        BinaryTypeEncodingSerializer(std::shared_ptr<BinaryWriter> heapWriter) : _heapWriter(heapWriter) { }
 
         MetaFileOffset serialize(std::vector<typeEncoding::TypeEncoding*>& encodings);
 

@@ -16,7 +16,7 @@ namespace binary {
     class BinarySerializer : public utils::Serializer {
     private:
         MetaFile* file;
-        BinaryWriter heapWriter;
+        std::shared_ptr<BinaryWriter> heapWriter;
         BinaryTypeEncodingSerializer typeEncodingSerializer;
         std::map<std::string, MetaFileOffset> moduleMap;
 

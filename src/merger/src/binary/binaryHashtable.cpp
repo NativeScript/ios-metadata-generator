@@ -29,7 +29,7 @@ unsigned int binary::BinaryHashtable::size() {
     return (unsigned int) this->elements.size();
 }
 
-std::vector<binary::MetaFileOffset> binary::BinaryHashtable::serialize(binary::BinaryWriter& heapWriter) {
+std::vector<binary::MetaFileOffset> binary::BinaryHashtable::serialize(binary::BinaryWriter* heapWriter) {
     std::vector<binary::MetaFileOffset> offsets;
 
     for (std::vector<std::tuple<std::string, MetaFileOffset>> element : this->elements) {
@@ -39,7 +39,7 @@ std::vector<binary::MetaFileOffset> binary::BinaryHashtable::serialize(binary::B
                 elementOffsets.push_back(std::get<1>(tuple));
             }
 
-            offsets.push_back(heapWriter.push_binaryArray(elementOffsets));
+            offsets.push_back(heapWriter->push_binaryArray(elementOffsets));
         } else {
             offsets.push_back(0);
         }
