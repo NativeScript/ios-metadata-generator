@@ -67,7 +67,7 @@ Clone the **ios-runtime** repository.
     git clone git@github.com:NativeScript/ios-runtime.git --recursive
 ```
 
-Make new branch in **ios-runtime** and **ios-metdata-generator** repository and change the new branch in **ios-runtime** to refer to the new branch in **ios-metadata-generator** repository. Create your patch and include appropriate test cases in both repositories.
+Make new branch in **ios-runtime** and **ios-metadata-generator** repository and change the new branch in **ios-runtime** to refer to the new branch in **ios-metadata-generator** repository. Create your patch and include appropriate test cases in both repositories.
 Build your changes locally by running `grunt` in the **ios-runtime** repository root folder.
 Build your changes locally by running `grunt test` in the **ios-runtime** repository root folder.
 
