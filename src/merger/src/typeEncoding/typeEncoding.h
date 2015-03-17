@@ -3,21 +3,20 @@
 
 #include <string>
 #include <vector>
-#include "../binary/binaryTypeEncodingSerializer.h"
 
 using namespace std;
 
-struct FQName {
-public:
-    string name;
-    string module;
+namespace Meta {
+    struct FQName {
+    public:
+        string name;
+        string module;
 
-    bool isEmpty() const {
-        return this->name.empty();
-    }
-};
+        bool isEmpty() const {
+            return this->name.empty();
+        }
+    };
 
-namespace typeEncoding {
     class TypeEncoding {
     public:
         virtual ~TypeEncoding() { }

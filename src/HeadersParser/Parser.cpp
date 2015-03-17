@@ -1,4 +1,4 @@
-#include "ModuleDiscovery.h"
+#include "Parser.h"
 
 #include <clang/Frontend/ASTUnit.h>
 #include <clang/Tooling/Tooling.h>
@@ -10,6 +10,38 @@ using namespace llvm;
 using namespace clang;
 namespace path = llvm::sys::path;
 namespace fs = llvm::sys::fs;
+
+std::unique_ptr<clang::ASTUnit> HeadersParser::Parser::parse(ParserSettings& settings) {
+
+    std::vector<std::string> clangArgs {
+            "-v",
+            "-x", "objective-c",
+            "-arch", settings.getArchitecture(),
+            "-target", "arm-apple-darwin",
+            "-std=gnu99",
+            "-miphoneos-version-min=7.0",
+            "-fmodule-maps",
+            // TODO: remove these lines
+            "-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/6.0/include",
+            //std::string("-fmodule-map-file=") + settings.getSdkPath() + "/usr/include/module.map",
+            //std::string("-fmodule-map-file=") + settings.getSdkPath() + "/usr/include/dispatch/module.map",
+            //std::string("-I") + settings.getSdkPath() + "/usr/include/objc",
+            "-isysroot", settings.getSdkPath()
+    };
+
+    std::string umbrellaHeaderContents;
+    std::vector<std::string> moduleBlacklist;
+
+    // Generate umbrella header for all modules from the sdk
+    CreateUmbrellaHeaderForAmbientModules(clangArgs, &umbrellaHeaderContents, moduleBlacklist);
+
+    // Build and return the AST
+    std::unique_ptr<clang::ASTUnit> ast = clang::tooling::buildASTFromCodeWithArgs(umbrellaHeaderContents, clangArgs, "umbrella.h");
+    SmallVector<Module*, 64> modules;
+    HeaderSearch& headerSearch = ast->getPreprocessor().getHeaderSearchInfo();
+    headerSearch.collectAllModules(modules);
+    return ast;
+}
 
 static SmallVectorImpl<char>& operator+=(SmallVectorImpl<char>& includes, StringRef rhs) {
     includes.append(rhs.begin(), rhs.end());
@@ -88,8 +120,8 @@ collectModuleHeaderIncludes(FileManager& fileMgr, ModuleMap& modMap, const Modul
 
 std::error_code
 CreateUmbrellaHeaderForAmbientModules(const std::vector<std::string>& args,
-                                      std::string* umbrellaHeaderContents,
-                                      const std::vector<std::string>& moduleBlacklist) {
+        std::string* umbrellaHeaderContents,
+        const std::vector<std::string>& moduleBlacklist) {
     std::unique_ptr<clang::ASTUnit> ast = clang::tooling::buildASTFromCodeWithArgs("", args, "umbrella.h");
     if (!ast)
         return std::error_code(-1, std::generic_category());

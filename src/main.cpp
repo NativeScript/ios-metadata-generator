@@ -1,4 +1,5 @@
-#include "ModuleDiscovery.h"
+#include "HeadersParser/Parser.h"
+#include "Meta/DeclarationConverterVisitor.h"
 
 int main(int argc, const char** argv) {
     std::vector<std::string> arguments;
@@ -6,23 +7,13 @@ int main(int argc, const char** argv) {
         arguments.push_back(argv[i]);
     }
 
-    std::string sdkPath = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk";
+    // Parse the AST
+    HeadersParser::ParserSettings settings = HeadersParser::ParserSettings("/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk", "armv7");
+    std::unique_ptr<clang::ASTUnit> ast = HeadersParser::Parser::parse(settings);
 
-    std::vector<std::string> clangArgs {
-            "-v",
-            "-x", "objective-c",
-            "-arch", "armv7",
-            "-target", "arm-apple-darwin",
-            "-std=gnu99",
-            "-fmodule-maps",
-            "-miphoneos-version-min=7.0",
-            "-isysroot", sdkPath
-    };
-
-    std::string headerContents;
-    CreateUmbrellaHeaderForAmbientModules(clangArgs, &headerContents);
-
-    printf("%s\n", headerContents.c_str());
+    // Convert declarations to Meta objects (by visiting the AST from DeclarationConverterVisitor)
+    Meta::DeclarationConverterVisitor visitor(ast.get());
+    std::vector<std::shared_ptr<Meta::Meta>> result = visitor.Traverse();
 
     return 0;
 }

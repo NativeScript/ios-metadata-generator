@@ -1,6 +1,12 @@
 set(GENERATOR_SOURCES
     main.cpp
-    ModuleDiscovery.cpp
+    HeadersParser/Parser.cpp
+    Meta/DeclarationConverterVisitor.cpp
+    Meta/MetaFactory.cpp
+    Meta/MetaEntities.cpp
+    Meta/TypeEncodingFactory.cpp
+    Meta/TypeEncodingEntities.cpp
+    Meta/JsNameGenerator.cpp
 )
 
 add_executable(objc-metadata-generator ${GENERATOR_SOURCES})
