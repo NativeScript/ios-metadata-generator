@@ -2,56 +2,70 @@
 
 #include <clang/AST/RecursiveASTVisitor.h>
 #include "TypeEncodingEntities.h"
+#include "IdentifierGenerator.h"
 
 namespace Meta {
     class TypeEncodingFactory {
     public:
-        TypeEncodingFactory() {}
+        TypeEncodingFactory(clang::ASTUnit *astUnit, IdentifierGenerator identifierGenerator)
+        : _astUnit(astUnit),
+          _identifierGenerator(identifierGenerator) {}
 
-        TypeEncoding createFromType(clang::Type& type);
+        TypeEncoding create(const clang::Type* type);
 
-        TypeEncoding createFromConstantArrayType(clang::ConstantArrayType& type);
+        TypeEncoding create(const clang::QualType& type);
 
-        TypeEncoding createFromDependentSizedArrayType(clang::DependentSizedArrayType& type);
+    private:
+        TypeEncoding createFromConstantArrayType(const clang::ConstantArrayType* type);
 
-        TypeEncoding createFromIncompleteArrayType(clang::IncompleteArrayType& type);
+        TypeEncoding createFromIncompleteArrayType(const clang::IncompleteArrayType* type);
 
-        TypeEncoding createFromVariableArrayType(clang::VariableArrayType& type);
+        TypeEncoding createFromBlockPointerType(const clang::BlockPointerType* type);
 
-        TypeEncoding createFromArrayType(clang::ArrayType& type);
+        TypeEncoding createFromBuiltinType(const clang::BuiltinType* type);
 
-        TypeEncoding createFromAttributedType(clang::AttributedType& type);
+        TypeEncoding createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type);
 
-        TypeEncoding createFromBlockPointerType(clang::BlockPointerType& type);
+        TypeEncoding createFromPointerType(const clang::PointerType* type);
 
-        TypeEncoding createFromBuiltinType(clang::BuiltinType& type);
+        TypeEncoding createFromEnumType(const clang::EnumType* type);
 
-        TypeEncoding createFromComplexType(clang::ComplexType& type);
+        TypeEncoding createFromRecordType(const clang::RecordType* type);
 
-        TypeEncoding createFromFunctionNoProtoType(clang::FunctionNoProtoType& type);
+        TypeEncoding createFromTypedefType(const clang::TypedefType* type);
 
-        TypeEncoding createFromFunctionProtoType(clang::FunctionProtoType& type);
+        TypeEncoding createFromVectorType(const clang::VectorType* type);
 
-        TypeEncoding createFromFunctionType(clang::FunctionType& type);
+        TypeEncoding createFromElaboratedType(const clang::ElaboratedType *type);
 
-        TypeEncoding createFromObjCObjectPointerType(clang::ObjCObjectPointerType& type);
+        // helper methods
+        void getSignatureOfFunctionProtoType(const clang::FunctionProtoType* type, std::vector<TypeEncoding>& signature);
 
-        TypeEncoding createFromObjCInterfaceType(clang::ObjCInterfaceType& type);
+        bool isSpecificTypedefType(const clang::TypedefType* type, const std::string& typedefName);
 
-        TypeEncoding createFromObjCObjectTypeImpl(clang::ObjCObjectTypeImpl& type);
+        bool isSpecificTypedefType(const clang::TypedefType* type, const std::vector<std::string>& typedefNames);
 
-        TypeEncoding createFromObjCObjectType(clang::ObjCObjectType& type);
+        clang::ASTUnit *_astUnit;
+        IdentifierGenerator _identifierGenerator;
+    };
 
-        TypeEncoding createFromPointerType(clang::PointerType& type);
+    class TypeEncodingCreationException : public std::exception
+    {
+    public:
+        TypeEncodingCreationException(std::string typeName, std::string message, bool isError)
+                : _typeName(typeName),
+                  _message(message),
+                  _isError(isError) {}
 
-        TypeEncoding createFromEnumType(clang::EnumType& type);
+        virtual const char* what() const throw() { return this->whatAsString().c_str(); }
+        std::string whatAsString() const { return _message + " Type: \"" + _typeName + "\"" + "(" + (_isError ? "error" : "notice" ) + ")"; }
+        std::string getTypeName() const { return this->_typeName; }
+        std::string getMessage() const { return this-> _message; }
+        bool isError() const { return this-> _isError; }
 
-        TypeEncoding createFromRecordType(clang::RecordType& type);
-
-        TypeEncoding createFromTagType(clang::TagType& type);
-
-        TypeEncoding createFromTypedefType(clang::TypedefType& type);
-
-        TypeEncoding createFromVectorType(clang::VectorType& type);
+    private:
+        std::string _typeName;
+        std::string _message;
+        bool _isError;
     };
 }

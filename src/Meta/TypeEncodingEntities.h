@@ -2,208 +2,159 @@
 
 #include <string>
 #include <vector>
-
-using namespace std;
+#include "IdentifierGenerator.h"
 
 namespace Meta {
 
-    struct FQName {
-    public:
-        string name;
-        string module;
-
-        bool isEmpty() const {
-            return this->name.empty();
-        }
-    };
-
-    class TypeEncoding {
-    public:
-        virtual ~TypeEncoding() { }
-
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer* s) = 0;
-    };
+    class TypeEncoding { };
 
     // primitive types
+    class UnknownEncoding : public TypeEncoding { };
+    class VoidEncoding : public TypeEncoding { };
+    class BoolEncoding : public TypeEncoding { };
+    class ShortEncoding : public TypeEncoding { };
+    class UShortEncoding : public TypeEncoding { };
+    class IntEncoding : public TypeEncoding { };
+    class UIntEncoding : public TypeEncoding { };
+    class LongEncoding : public TypeEncoding { };
+    class ULongEncoding : public TypeEncoding { };
+    class LongLongEncoding : public TypeEncoding { };
+    class ULongLongEncoding : public TypeEncoding { };
+    class SignedCharEncoding : public TypeEncoding { };
+    class UnsignedCharEncoding : public TypeEncoding { };
+    class UnicharEncoding : public TypeEncoding { };
+    class CStringEncoding : public TypeEncoding { };
+    class FloatEncoding : public TypeEncoding { };
+    class DoubleEncoding : public TypeEncoding { };
 
-    class UnknownEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class VoidEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class BoolEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class ShortEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class UShortEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class IntEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class UIntEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class LongEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class ULongEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class LongLongEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class ULongLongEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class SignedCharEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class UnsignedCharEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class UnicharEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class CStringEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class FloatEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class DoubleEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-
-    // objc types
-
-    class VaListEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class SelectorEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class InstancetypeEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class ClassEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
-    class ProtocolEncoding : public TypeEncoding {
-    public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
-    };
+    class VaListEncoding : public TypeEncoding { };
+    class SelectorEncoding : public TypeEncoding { };
+    class InstancetypeEncoding : public TypeEncoding { };
+    class ProtocolEncoding : public TypeEncoding { };
 
     class IdEncoding : public TypeEncoding {
     public:
-        vector<FQName> protocols;
+        IdEncoding() : IdEncoding(std::vector<FQName>()) {}
 
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
+        IdEncoding(const std::vector<FQName>& protocols)
+        : protocols(protocols) {}
+
+        std::vector<FQName> protocols;
+    };
+
+    class ClassEncoding : public TypeEncoding {
+    public:
+        ClassEncoding() : ClassEncoding(std::vector<FQName>()) {}
+
+        ClassEncoding(const std::vector<FQName>& protocols)
+                : protocols(protocols) {}
+
+        std::vector<FQName> protocols;
     };
 
     class ArrayEncoding : public TypeEncoding {
     public:
-        unique_ptr<TypeEncoding> elementType;
+        ArrayEncoding(const TypeEncoding& elementType)
+                : elementType(elementType) {}
+
+        TypeEncoding elementType;
     };
 
     class ConstantArrayEncoding : public ArrayEncoding {
     public:
+        ConstantArrayEncoding(const TypeEncoding& elementType, int size)
+                : ArrayEncoding(elementType),
+                  size(size) {}
         int size;
-
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
     };
 
-    class IncompleteArrayEncoding : public ArrayEncoding{
+    class IncompleteArrayEncoding : public ArrayEncoding {
     public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
+        IncompleteArrayEncoding(const TypeEncoding& elementType)
+                : ArrayEncoding(elementType) {}
     };
 
     class InterfaceEncoding : public TypeEncoding {
     public:
-        FQName name;
+        InterfaceEncoding(const FQName& name)
+                : InterfaceEncoding(name, std::vector<FQName>()) {}
 
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
+        InterfaceEncoding(const FQName& name, const std::vector<FQName>& protocols)
+                : name(name),
+                  protocols(protocols) {}
+
+        FQName name;
+        std::vector<FQName> protocols;
     };
 
     class PointerEncoding : public TypeEncoding {
     public:
-        unique_ptr<TypeEncoding> target;
+        PointerEncoding(const TypeEncoding& target)
+                : target(target) {}
 
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
+        TypeEncoding target;
     };
 
     class BlockEncoding : public TypeEncoding {
     public:
-        vector<unique_ptr<TypeEncoding>> blockCall;
+        BlockEncoding(std::vector<TypeEncoding>& signature)
+                : signature(signature) {}
 
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
+        std::vector<TypeEncoding> signature;
     };
 
-    class FunctionEncoding : public TypeEncoding {
+    class FunctionPointerEncoding : public TypeEncoding {
     public:
-        vector<unique_ptr<TypeEncoding>> functionCall;
+        FunctionPointerEncoding(std::vector<TypeEncoding>& signature)
+                : signature(signature) {}
 
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
+        std::vector<TypeEncoding> signature;
     };
 
     class StructEncoding : public TypeEncoding {
     public:
-        FQName name;
+        StructEncoding(const FQName& name)
+                : name(name) {}
 
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
+        FQName name;
     };
 
     class UnionEncoding : public TypeEncoding {
     public:
-        FQName name;
+        UnionEncoding(const FQName& name)
+                : name(name) {}
 
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
+        FQName name;
     };
 
+    // TODO: Remove this type. It is redundant and is never used.
     class InterfaceDeclarationEncoding : public TypeEncoding {
     public:
-        FQName name;
+        InterfaceDeclarationEncoding(const FQName& name)
+                : name(name) {}
 
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
+        FQName name;
     };
 
     class AnonymousRecordEncoding : public TypeEncoding {
     public:
-        vector<string> fieldNames;
-        vector<unique_ptr<TypeEncoding>> fieldEncodings;
+        AnonymousRecordEncoding(const std::vector<std::string>& fieldNames, const std::vector<TypeEncoding>& fieldEncodings)
+                : fieldNames(fieldNames),
+                  fieldEncodings(fieldEncodings) {}
+
+        std::vector<std::string> fieldNames;
+        std::vector<TypeEncoding> fieldEncodings;
     };
 
     class AnonymousStructEncoding : public AnonymousRecordEncoding {
     public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
+        AnonymousStructEncoding(const std::vector<std::string>& fieldNames, const std::vector<TypeEncoding>& fieldEncodings)
+                : AnonymousRecordEncoding(fieldNames, fieldEncodings) {}
     };
 
     class AnonymousUnionEncoding : public AnonymousRecordEncoding {
     public:
-        //virtual std::unique_ptr<binary::TypeEncoding> serialize(binary::BinaryTypeEncodingSerializer *s) override;
+        AnonymousUnionEncoding(const std::vector<std::string>& fieldNames, const std::vector<TypeEncoding>& fieldEncodings)
+                : AnonymousRecordEncoding(fieldNames, fieldEncodings) {}
     };
 }

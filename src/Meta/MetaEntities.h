@@ -4,8 +4,6 @@
 #include <vector>
 #include "TypeEncodingEntities.h"
 
-using namespace std;
-
 #define UNKNOWN_VERSION { -1, -1, -1 };
 
 namespace Meta {
@@ -54,14 +52,16 @@ namespace Meta {
         MetaType type = MetaType::Undefined;
         MetaFlags flags = MetaFlags::None;
 
-        string name;
-        string jsName;
-        string module;
+        std::string name;
+        std::string jsName;
+        std::string module;
 
         // Availability
         Version introducedIn = UNKNOWN_VERSION;
         Version obsoletedIn = UNKNOWN_VERSION;
         Version deprecatedIn = UNKNOWN_VERSION;
+
+        clang::Decl *declaration;
 
         // visitors
         //virtual void serialize(utils::Serializer* serializer) = 0;
@@ -79,9 +79,9 @@ namespace Meta {
     public:
         MethodMeta() : Meta() { }
 
-        string selector;
-        string typeEncoding;
-        vector<TypeEncoding> signature;
+        std::string selector;
+        std::string typeEncoding;
+        std::vector<TypeEncoding> signature;
 
         //virtual void serialize(utils::Serializer* serializer) override;
     };
@@ -90,18 +90,18 @@ namespace Meta {
     public:
         PropertyMeta() : Meta() { }
 
-        std::unique_ptr<MethodMeta> getter;
-        std::unique_ptr<MethodMeta> setter;
+        std::shared_ptr<MethodMeta> getter;
+        std::shared_ptr<MethodMeta> setter;
 
         //virtual void serialize(utils::Serializer* serializer) override;
     };
 
     class BaseClassMeta : public Meta {
     public:
-        vector<MethodMeta> instanceMethods;
-        vector<MethodMeta> staticMethods;
-        vector<PropertyMeta> properties;
-        vector<FQName> protocols;
+        std::vector<std::shared_ptr<MethodMeta>> instanceMethods;
+        std::vector<std::shared_ptr<MethodMeta>> staticMethods;
+        std::vector<std::shared_ptr<PropertyMeta>> properties;
+        std::vector<FQName> protocols;
     };
 
     class CategoryMeta : public BaseClassMeta {
@@ -143,7 +143,7 @@ namespace Meta {
 
     class RecordMeta : public Meta {
     public:
-        vector<RecordField> fields;
+        std::vector<RecordField> fields;
     };
 
     class StructMeta : public RecordMeta {
@@ -169,7 +169,7 @@ namespace Meta {
         FunctionMeta() {
             this->type = MetaType::Function;
         }
-        vector<TypeEncoding> signature;
+        std::vector<TypeEncoding> signature;
 
         //virtual void serialize(utils::Serializer* serializer) override;
     };
@@ -179,7 +179,7 @@ namespace Meta {
         JsCodeMeta() {
             this->type = MetaType::JsCode;
         }
-        string jsCode;
+        std::string jsCode;
 
         //virtual void serialize(utils::Serializer* serializer) override;
     };

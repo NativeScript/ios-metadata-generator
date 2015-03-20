@@ -8,12 +8,18 @@ int main(int argc, const char** argv) {
     }
 
     // Parse the AST
-    HeadersParser::ParserSettings settings = HeadersParser::ParserSettings("/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk", "armv7");
+    HeadersParser::ParserSettings settings = HeadersParser::ParserSettings(
+            "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk", // sdk path
+            "/Users/buhov/Desktop/NS/ios-runtime/build/ios-sdk-umbrella-headers/ios8.0.h", // umbrella header
+            "armv7" // architecture
+    );
     std::unique_ptr<clang::ASTUnit> ast = HeadersParser::Parser::parse(settings);
 
     // Convert declarations to Meta objects (by visiting the AST from DeclarationConverterVisitor)
     Meta::DeclarationConverterVisitor visitor(ast.get());
-    std::vector<std::shared_ptr<Meta::Meta>> result = visitor.Traverse();
+    std::vector<std::shared_ptr<Meta::Meta>> metaObjects;
+    visitor.Traverse(metaObjects);
+    std::cout << "All declarations: " << metaObjects.size() << std::endl;
 
     return 0;
 }

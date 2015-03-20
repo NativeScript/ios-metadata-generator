@@ -4,10 +4,9 @@
 #include <clang/Lex/Preprocessor.h>
 #include <clang/Lex/HeaderSearch.h>
 #include <clang/AST/RecursiveASTVisitor.h>
-#include <exception>
 #include "MetaEntities.h"
 #include "TypeEncodingFactory.h"
-#include "JsNameGenerator.h"
+#include "IdentifierGenerator.h"
 
 namespace Meta {
 
@@ -15,31 +14,32 @@ namespace Meta {
     public:
         MetaFactory(clang::ASTUnit *astUnit)
                 : _astUnit(astUnit),
-                  _typeEncodingFactory(),
-                  _jsNameGenerator(JsNameGenerator::getIosSdkNamesToRecalculate()) {}
+                  _identifierGenerator(astUnit, IdentifierGenerator::getIosSdkNamesToRecalculate()),
+                  _typeEncodingFactory(_astUnit, _identifierGenerator) {}
 
-        std::shared_ptr<FunctionMeta> createFunctionMeta(clang::FunctionDecl& function);
+        std::shared_ptr<Meta> create(clang::Decl& decl);
 
-        shared_ptr<RecordMeta> createRecordMeta(clang::RecordDecl& record);
+        std::shared_ptr<FunctionMeta> createFromFunction(clang::FunctionDecl &function);
 
-        std::shared_ptr<VarMeta> createVarMeta(clang::VarDecl& var);
+        std::shared_ptr<RecordMeta> createFromRecord(clang::RecordDecl &record);
 
-        std::shared_ptr<JsCodeMeta> createJsCodeMeta(clang::EnumDecl& enumeration);
+        std::shared_ptr<VarMeta> createFromVar(clang::VarDecl &var);
 
-        std::shared_ptr<InterfaceMeta> createInterfaceMeta(clang::ObjCInterfaceDecl& interface);
+        std::shared_ptr<JsCodeMeta> createFromEnum(clang::EnumDecl &enumeration);
 
-        std::shared_ptr<ProtocolMeta> createProtocolMeta(clang::ObjCProtocolDecl& protocol);
+        std::shared_ptr<InterfaceMeta> createFromInterface(clang::ObjCInterfaceDecl &interface);
+
+        std::shared_ptr<ProtocolMeta> createFromProtocol(clang::ObjCProtocolDecl &protocol);
 
     private:
-        MethodMeta createMethodMeta(clang::ObjCMethodDecl& method);
+        std::shared_ptr<MethodMeta> createFromMethod(clang::ObjCMethodDecl &method);
 
-        PropertyMeta createPropertyMeta(clang::ObjCPropertyDecl& property);
+        std::shared_ptr<PropertyMeta> createFromProperty(clang::ObjCPropertyDecl &property);
 
-        clang::Module *getModule(clang::Decl& decl);
         void populateMetaFields(clang::NamedDecl& decl, Meta& meta);
         void populateBaseClassMetaFields(clang::ObjCContainerDecl& decl, BaseClassMeta& meta);
         Version convertVersion(clang::VersionTuple clangVersion);
-
+        llvm::iterator_range<clang::ObjCProtocolList::iterator> getProtocols(clang::ObjCContainerDecl* objCContainer);
         template<class T>
         std::vector<T*> getAttributes(clang::Decl& decl){
             std::vector<T*> attributes;
@@ -52,34 +52,27 @@ namespace Meta {
             return attributes;
         }
 
-        llvm::iterator_range<clang::ObjCProtocolList::iterator> getProtocols(clang::ObjCContainerDecl* objCContainer);
-
         clang::ASTUnit *_astUnit;
+        IdentifierGenerator _identifierGenerator;
         TypeEncodingFactory _typeEncodingFactory;
-        JsNameGenerator _jsNameGenerator;
     };
 
-    class EntityCreationException : public exception
+    class MetaCreationException : public std::exception
     {
     public:
-        EntityCreationException(std::string message, bool isError)
-                : _message(message),
+        MetaCreationException(Identifier id, std::string message, bool isError)
+                : _id(id),
+                  _message(message),
                   _isError(isError) {}
 
-        virtual const char* what() const throw()
-        {
-            return this->_message.c_str();
-        }
-
-        std::string getMessage() {
-            return this->_message;
-        }
-
-        bool isError() {
-            return this->_isError;
-        }
+        virtual const char* what() const throw() { return this->whatAsString().c_str(); }
+        std::string whatAsString() const { return _message + " Decl: " + _id.name + "(" + _id.fileName + ") -> " + (this->isError() ? std::string("error") : std::string("notice")); }
+        Identifier getIdentifier() const { return this->_id; }
+        std::string getMessage() const { return this-> _message; }
+        bool isError() const { return this->_isError; }
 
     private:
+        Identifier _id;
         std::string _message;
         bool _isError;
     };

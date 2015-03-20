@@ -1,38 +1,113 @@
-#include <llvm/Support/Casting.h>
 #include "MetaFactory.h"
+#include <llvm/Support/Casting.h>
+#include <sstream>
 
 using namespace std;
-using namespace Meta;
 
-shared_ptr<FunctionMeta> MetaFactory::createFunctionMeta(clang::FunctionDecl& function) {
-    shared_ptr<FunctionMeta> functionMeta(new FunctionMeta());
+shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl) {
+    try {
+        if (clang::FunctionDecl *function = clang::dyn_cast<clang::FunctionDecl>(&decl))
+            return createFromFunction(*function);
+        else if (clang::RecordDecl *record = clang::dyn_cast<clang::RecordDecl>(&decl))
+            return createFromRecord(*record);
+        else if (clang::VarDecl *var = clang::dyn_cast<clang::VarDecl>(&decl))
+            return createFromVar(*var);
+        else if (clang::EnumDecl *enumDecl = clang::dyn_cast<clang::EnumDecl>(&decl))
+            return createFromEnum(*enumDecl);
+        else if (clang::ObjCInterfaceDecl *ineterface = clang::dyn_cast<clang::ObjCInterfaceDecl>(&decl))
+            return createFromInterface(*ineterface);
+        else if (clang::ObjCProtocolDecl *protocol = clang::dyn_cast<clang::ObjCProtocolDecl>(&decl))
+            return createFromProtocol(*protocol);
+        else if (clang::ObjCMethodDecl *method = clang::dyn_cast<clang::ObjCMethodDecl>(&decl))
+            return createFromMethod(*method);
+        else if (clang::ObjCPropertyDecl *property = clang::dyn_cast<clang::ObjCPropertyDecl>(&decl))
+            return createFromProperty(*property);
+        else
+            throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(decl), "Unknow declaration type.", true);
+    }
+    catch(IdentifierCreationException& e) {
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(decl), string("[") + e.whatAsString() + string("]"), true);
+    }
+    catch(TypeEncodingCreationException& e) {
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(decl), string("[") + e.whatAsString() + string("]"), e.isError());
+    }
+}
+
+shared_ptr<Meta::FunctionMeta> Meta::MetaFactory::createFromFunction(clang::FunctionDecl& function) {
+    // TODO: We don't support variadic functions but we save in metadata flags whether a function is variadic or not.
+    // If we not plan in the future to support variadic functions this redundant flag should be removed.
+    if (function.isVariadic())
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(function), "The function is variadic.", false);
+    if (function.isInlined())
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(function), "The function is inlined.", false);
+
+    shared_ptr<FunctionMeta> functionMeta = make_shared<FunctionMeta>();
     populateMetaFields(function, *(functionMeta.get()));
-    functionMeta->setFlags(MetaFlags::FunctionIsVariadic , function.isVariadic());
-    functionMeta->setFlags(MetaFlags::FunctionOwnsReturnedCocoaObject , this->getAttributes<clang::NSReturnsRetainedAttr>(function).size() > 0);
+    functionMeta->setFlags(MetaFlags::FunctionIsVariadic, function.isVariadic());
+    functionMeta->setFlags(MetaFlags::FunctionOwnsReturnedCocoaObject, this->getAttributes<clang::NSReturnsRetainedAttr>(function).size() > 0);
+    functionMeta->signature.push_back(this->_typeEncodingFactory.create(function.getReturnType()));
+    for (clang::FunctionDecl::param_const_iterator it = function.param_begin(); it != function.param_end(); ++it) {
+        clang::ParmVarDecl *param = *it;
+        functionMeta->signature.push_back(this->_typeEncodingFactory.create(param->getType()));
+    }
     return functionMeta;
 }
 
-shared_ptr<RecordMeta> MetaFactory::createRecordMeta(clang::RecordDecl& record) {
+shared_ptr<Meta::RecordMeta> Meta::MetaFactory::createFromRecord(clang::RecordDecl& record) {
+    if(record.isUnion())
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(record), "The record is union.", false);
+    if(!record.isStruct())
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(record), "The record is not a struct.", false);
     shared_ptr<RecordMeta> recordMeta(record.isStruct() ? (RecordMeta*)(new StructMeta()) : (RecordMeta*)(new UnionMeta()));
     populateMetaFields(record, *(recordMeta.get()));
-    // TODO: Use field_iterator to iterate through all fields of the record
+    for(clang::RecordDecl::field_iterator it = record.field_begin(); it != record.field_end(); ++it) {
+        clang::FieldDecl *field = *it;
+        RecordField recordField;
+        recordField.name = _identifierGenerator.getJsName(*field);
+        recordField.encoding = this->_typeEncodingFactory.create(field->getType());
+        recordMeta->fields.push_back(recordField);
+    }
     return recordMeta;
 }
 
-shared_ptr<InterfaceMeta> MetaFactory::createInterfaceMeta(clang::ObjCInterfaceDecl& interface) {
-    shared_ptr<InterfaceMeta> interfaceMeta(new InterfaceMeta());
+std::shared_ptr<Meta::VarMeta> Meta::MetaFactory::createFromVar(clang::VarDecl& var) {
+    shared_ptr<VarMeta> varMeta = make_shared<VarMeta>();
+    varMeta->signature = this->_typeEncodingFactory.create(var.getType());
+    return varMeta;
+}
+
+std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumDecl& enumeration) {
+    std::ostringstream stringStream;
+    stringStream << "__tsEnum(";
+    bool isFirstField = true;
+    for (clang::EnumDecl::enumerator_iterator it = enumeration.enumerator_begin(); it != enumeration.enumerator_end() ; ++it) {
+        clang::EnumConstantDecl *enumField = *it;
+        llvm::SmallVector<char, 10> value;
+        enumField->getInitVal().toString(value, 10, enumField->getInitVal().isSigned());
+        stringStream << (isFirstField ? "" : ",") << "\"" << _identifierGenerator.getJsName(*enumField) << "\":" << std::string(value.data(), value.size());
+        isFirstField = false;
+    }
+    stringStream << ")";
+    std::string jsCode = stringStream.str();
+    shared_ptr<JsCodeMeta> jsCodeMeta = make_shared<JsCodeMeta>();
+    populateMetaFields(enumeration, *(jsCodeMeta.get()));
+    return jsCodeMeta;
+}
+
+shared_ptr<Meta::InterfaceMeta> Meta::MetaFactory::createFromInterface(clang::ObjCInterfaceDecl& interface) {
+    shared_ptr<InterfaceMeta> interfaceMeta = make_shared<InterfaceMeta>();
     populateMetaFields(interface, *(interfaceMeta.get()));
     populateBaseClassMetaFields(interface, *(interfaceMeta.get()));
 
     // set base interface
     clang::ObjCInterfaceDecl *super = interface.getSuperClass();
-    interfaceMeta->baseName = (super == nullptr) ? FQName { .name = "", .module = "" } : FQName { .name = _jsNameGenerator.getJsName(*super), .module = this->getModule(*super)->getFullModuleName() };
+    interfaceMeta->baseName = (super == nullptr) ? FQName() : _identifierGenerator.getFqName(*super);
 
     return interfaceMeta;
 }
 
-shared_ptr<ProtocolMeta> MetaFactory::createProtocolMeta(clang::ObjCProtocolDecl& protocol) {
-    shared_ptr<ProtocolMeta> protocolMeta(new ProtocolMeta());
+shared_ptr<Meta::ProtocolMeta> Meta::MetaFactory::createFromProtocol(clang::ObjCProtocolDecl& protocol) {
+    shared_ptr<ProtocolMeta> protocolMeta = make_shared<ProtocolMeta>();
     populateMetaFields(protocol, *(protocolMeta.get()));
 //    for (clang::ObjCProtocolDecl::protocol_iterator i = protocol.protocol_begin(); i != protocol.protocol_end(); ++i) {
 //        printf("%s, ", (*i)->getNameAsString().c_str());
@@ -40,39 +115,40 @@ shared_ptr<ProtocolMeta> MetaFactory::createProtocolMeta(clang::ObjCProtocolDecl
     return protocolMeta;
 }
 
-MethodMeta MetaFactory::createMethodMeta(clang::ObjCMethodDecl& method) {
-    MethodMeta methodMeta = MethodMeta();
-    populateMetaFields(method, methodMeta);
+shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMethodDecl& method) {
+    // TODO: Check if method->hasRelatedResultType() is true and replace the return type with instancetype
+    shared_ptr<MethodMeta> methodMeta = make_shared<MethodMeta>();
+    populateMetaFields(method, *(methodMeta.get()));
 
     // set selector
     // TODO: We can use the name property instead of selector and remove the selector propery.
-    methodMeta.selector = method.getSelector().getAsString();
+    methodMeta->selector = method.getSelector().getAsString();
 
     // set type encoding
     // TODO: Remove type encodings. We don't need them any more.
-    this->_astUnit->getASTContext().getObjCEncodingForMethodDecl(&method, methodMeta.typeEncoding, false);
+    this->_astUnit->getASTContext().getObjCEncodingForMethodDecl(&method, methodMeta->typeEncoding, false);
 
     // set IsVariadic flag
-    methodMeta.setFlags(MetaFlags::MethodIsVariadic, method.isVariadic());
+    methodMeta->setFlags(MetaFlags::MethodIsVariadic, method.isVariadic());
 
     // set MethodIsNilTerminatedVariadic
-    methodMeta.setFlags(MetaFlags::MethodIsNullTerminatedVariadic, method.isVariadic() && this->getAttributes<clang::SentinelAttr>(method).size() > 0);
+    methodMeta->setFlags(MetaFlags::MethodIsNullTerminatedVariadic, method.isVariadic() && this->getAttributes<clang::SentinelAttr>(method).size() > 0);
 
     // set MethodOwnsReturnedCocoaObject flag
     bool nsReturnsRetainedAttr = this->getAttributes<clang::NSReturnsRetainedAttr>(method).size() > 0;
     bool nsReturnsNotRetainedAttr = this->getAttributes<clang::NSReturnsNotRetainedAttr>(method).size() > 0;
     if(nsReturnsRetainedAttr && nsReturnsNotRetainedAttr)
-        throw EntityCreationException(string("Method has both NS_Returns_Retained and NS_Returns_Not_Retained attributes."), true);
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(method), "Method has both NS_Returns_Retained and NS_Returns_Not_Retained attributes.", true);
     else if(nsReturnsRetainedAttr)
-        methodMeta.setFlags(MetaFlags::MethodOwnsReturnedCocoaObject ,  true);
+        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject ,  true);
     else if(nsReturnsNotRetainedAttr)
-        methodMeta.setFlags(MetaFlags::MethodOwnsReturnedCocoaObject ,  false);
+        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject ,  false);
     else {
-        methodMeta.setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, false);
+        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, false);
         vector<string> selectorBegins = { "alloc", "new", "copy", "mutableCopy" };
         for (int i = 0; i < selectorBegins.size(); ++i) {
-            if(selectorBegins[i].compare(0, methodMeta.selector.size(), methodMeta.selector)) {
-                methodMeta.setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, true);
+            if(selectorBegins[i].compare(0, methodMeta->selector.size(), methodMeta->selector)) {
+                methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, true);
                 break;
             }
         }
@@ -81,18 +157,20 @@ MethodMeta MetaFactory::createMethodMeta(clang::ObjCMethodDecl& method) {
     return methodMeta;
 }
 
-PropertyMeta MetaFactory::createPropertyMeta(clang::ObjCPropertyDecl& property) {
-    PropertyMeta propertyMeta = PropertyMeta();
-    populateMetaFields(property, propertyMeta);
+shared_ptr<Meta::PropertyMeta> Meta::MetaFactory::createFromProperty(clang::ObjCPropertyDecl& property) {
+    shared_ptr<PropertyMeta> propertyMeta = make_shared<PropertyMeta>();
+    populateMetaFields(property, *(propertyMeta.get()));
     // TODO: populate all property fields
     return propertyMeta;
 }
 
-void MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
+void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
+    meta.declaration = &decl;
     meta.name = decl.getNameAsString();
-    meta.jsName = this->_jsNameGenerator.getJsName(decl);
+    FQName fqName = this->_identifierGenerator.getFqName(decl);
+    meta.jsName = fqName.name;
+    meta.module = fqName.module;
     meta.setFlags(MetaFlags::HasName , meta.name != meta.jsName);
-    meta.module = this->getModule(decl)->getFullModuleName();
 
     clang::AvailabilityAttr *iosAvailability = nullptr;
     clang::AvailabilityAttr *iosExtensionsAvailability = nullptr;
@@ -126,7 +204,7 @@ void MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
      */
     if(iosAvailability) {
         if(iosAvailability->getUnavailable()) {
-            throw EntityCreationException("The declaration is marked unvailable for ios platform (with availability attribute).", false);
+            throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(decl), "The declaration is marked unvailable for ios platform (with availability attribute).", false);
         }
         meta.introducedIn = this->convertVersion(iosAvailability->getIntroduced());
         meta.deprecatedIn = this->convertVersion(iosAvailability->getDeprecated());
@@ -136,52 +214,35 @@ void MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
     meta.setFlags(MetaFlags::IsIosAppExtensionAvailable , isIosExtensionsAvailable);
 }
 
-void MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& decl, BaseClassMeta& baseClass) {
+void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& decl, BaseClassMeta& baseClass) {
     llvm::iterator_range<clang::ObjCProtocolList::iterator> protocols = this->getProtocols(&decl);
     for (clang::ObjCProtocolList::iterator i = protocols.begin(); i != protocols.end() ; ++i) {
         clang::ObjCProtocolDecl *protocol = *i;
-        FQName protocolName = FQName { .name = _jsNameGenerator.getJsName(*protocol), .module = this->getModule(*protocol)->getFullModuleName() };
-        baseClass.protocols.push_back(protocolName);
+        baseClass.protocols.push_back(_identifierGenerator.getFqName(*protocol));
     }
 
     for (clang::ObjCContainerDecl::classmeth_iterator i = decl.classmeth_begin(); i != decl.classmeth_end(); ++i) {
         clang::ObjCMethodDecl& classMethod = **i;
-        MethodMeta method = this->createMethodMeta(classMethod);
-        baseClass.staticMethods.push_back(method);
+        baseClass.staticMethods.push_back(static_pointer_cast<MethodMeta>(this->create(classMethod)));
     }
 
     for (clang::ObjCContainerDecl::instmeth_iterator i = decl.instmeth_begin(); i != decl.instmeth_end(); ++i) {
         clang::ObjCMethodDecl& instanceMethod = **i;
-        MethodMeta method = this->createMethodMeta(instanceMethod);
-        baseClass.instanceMethods.push_back(method);
+        baseClass.instanceMethods.push_back(static_pointer_cast<MethodMeta>(this->create(instanceMethod)));
     }
 }
 
-clang::Module *MetaFactory::getModule(clang::Decl& decl) {
-    clang::FileID id = _astUnit->getSourceManager().getDecomposedLoc(decl.getLocation()).first;
-    const clang::FileEntry *entry = _astUnit->getSourceManager().getFileEntryForID(id);
-    if(!entry) {
-        throw EntityCreationException("The containing file (and respectively the containing module) for declaration is not found.", true);
-    }
-    clang::Module *owningModule = _astUnit->getPreprocessor().getHeaderSearchInfo().findModuleForHeader(entry).getModule();
-    if(!owningModule) {
-        // TODO: research why the full module name is empty and maybe add the declaration to global module
-        throw EntityCreationException(string("There is no module corresponding to file ") + string(entry->getName()) + string("."), true);
-    }
-    return owningModule;
-}
-
-llvm::iterator_range<clang::ObjCProtocolList::iterator> MetaFactory::getProtocols(clang::ObjCContainerDecl* objCContainer) {
+llvm::iterator_range<clang::ObjCProtocolList::iterator> Meta::MetaFactory::getProtocols(clang::ObjCContainerDecl* objCContainer) {
     if(clang::ObjCInterfaceDecl* interface = clang::dyn_cast<clang::ObjCInterfaceDecl>(objCContainer))
         return interface->protocols();
     else if(clang::ObjCProtocolDecl* protocol = clang::dyn_cast<clang::ObjCProtocolDecl>(objCContainer))
         return protocol->protocols();
     else if(clang::ObjCCategoryDecl* category = clang::dyn_cast<clang::ObjCCategoryDecl>(objCContainer))
         return category->protocols();
-    throw EntityCreationException(string("Unable to extract protocols form this type of ObjC container."), true);
+    throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(*objCContainer), "Unable to extract protocols form this type of ObjC container.", true);
 }
 
-Version MetaFactory::convertVersion(clang::VersionTuple clangVersion) {
+Meta::Version Meta::MetaFactory::convertVersion(clang::VersionTuple clangVersion) {
     Version result = {
             .Major = (int)clangVersion.getMajor(),
             .Minor = (int)(clangVersion.getMinor().hasValue() ? clangVersion.getMinor().getValue() : -1),

@@ -13,11 +13,12 @@ namespace Meta {
         explicit DeclarationConverterVisitor(clang::ASTUnit *astUnit)
                 : _astUnit(astUnit),
                   _metaFactory(astUnit),
-                  _lastTraverseResult() { }
+                  _resultList(nullptr) { }
 
-        std::vector<std::shared_ptr<Meta>> Traverse() {
+        std::vector<std::shared_ptr<Meta>>& Traverse(std::vector<std::shared_ptr<Meta>>& resultList) {
+            this->_resultList = &resultList;
             this->TraverseDecl(this->_astUnit->getASTContext().getTranslationUnitDecl());
-            return this->_lastTraverseResult;
+            return *this->_resultList;
         }
 
         bool VisitFunctionDecl(clang::FunctionDecl *function);
@@ -33,13 +34,25 @@ namespace Meta {
         bool VisitObjCProtocolDecl(clang::ObjCProtocolDecl *protocol);
 
     private:
+        template<class T>
+        bool Visit(T *decl) {
+            if(decl->isThisDeclarationADefinition()) {
+                try {
+                    addToResult(this->_metaFactory.create(*decl));
+                } catch(MetaCreationException& e) {
+                    std::cout << e.whatAsString() << std::endl;
+                }
+            }
+            return true;
+        }
+
         void addToResult(std::shared_ptr<Meta> meta) {
-            _lastTraverseResult.push_back(meta);
             //std::cout << "Type: " << meta->type << " Name: " << meta->name << " JS Name: " << meta->jsName << " Module: " << meta->module << " Flags: " << meta->flags << std::endl;
+            _resultList->push_back(meta);
         }
 
         clang::ASTUnit *_astUnit;
         MetaFactory _metaFactory;
-        std::vector<std::shared_ptr<Meta>> _lastTraverseResult;
+        std::vector<std::shared_ptr<Meta>>* _resultList;
     };
 }

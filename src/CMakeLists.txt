@@ -6,7 +6,7 @@ set(GENERATOR_SOURCES
     Meta/MetaEntities.cpp
     Meta/TypeEncodingFactory.cpp
     Meta/TypeEncodingEntities.cpp
-    Meta/JsNameGenerator.cpp
+    Meta/IdentifierGenerator.cpp
 )
 
 add_executable(objc-metadata-generator ${GENERATOR_SOURCES})
