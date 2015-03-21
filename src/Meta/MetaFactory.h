@@ -19,22 +19,24 @@ namespace Meta {
 
         std::shared_ptr<Meta> create(clang::Decl& decl);
 
-        std::shared_ptr<FunctionMeta> createFromFunction(clang::FunctionDecl &function);
+        std::shared_ptr<FunctionMeta> createFromFunction(clang::FunctionDecl& function);
 
-        std::shared_ptr<RecordMeta> createFromRecord(clang::RecordDecl &record);
+        std::shared_ptr<RecordMeta> createFromRecord(clang::RecordDecl& record);
 
-        std::shared_ptr<VarMeta> createFromVar(clang::VarDecl &var);
+        std::shared_ptr<VarMeta> createFromVar(clang::VarDecl& var);
 
-        std::shared_ptr<JsCodeMeta> createFromEnum(clang::EnumDecl &enumeration);
+        std::shared_ptr<JsCodeMeta> createFromEnum(clang::EnumDecl& enumeration);
 
-        std::shared_ptr<InterfaceMeta> createFromInterface(clang::ObjCInterfaceDecl &interface);
+        std::shared_ptr<InterfaceMeta> createFromInterface(clang::ObjCInterfaceDecl& interface);
 
-        std::shared_ptr<ProtocolMeta> createFromProtocol(clang::ObjCProtocolDecl &protocol);
+        std::shared_ptr<ProtocolMeta> createFromProtocol(clang::ObjCProtocolDecl& protocol);
+
+        std::shared_ptr<CategoryMeta> createFromCategory(clang::ObjCCategoryDecl& category);
 
     private:
-        std::shared_ptr<MethodMeta> createFromMethod(clang::ObjCMethodDecl &method);
+        std::shared_ptr<MethodMeta> createFromMethod(clang::ObjCMethodDecl& method);
 
-        std::shared_ptr<PropertyMeta> createFromProperty(clang::ObjCPropertyDecl &property);
+        std::shared_ptr<PropertyMeta> createFromProperty(clang::ObjCPropertyDecl& property);
 
         void populateMetaFields(clang::NamedDecl& decl, Meta& meta);
         void populateBaseClassMetaFields(clang::ObjCContainerDecl& decl, BaseClassMeta& meta);

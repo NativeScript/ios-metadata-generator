@@ -13,12 +13,11 @@ namespace Meta {
         explicit DeclarationConverterVisitor(clang::ASTUnit *astUnit)
                 : _astUnit(astUnit),
                   _metaFactory(astUnit),
-                  _resultList(nullptr) { }
+                  _resultMap(nullptr) { }
 
-        std::vector<std::shared_ptr<Meta>>& Traverse(std::vector<std::shared_ptr<Meta>>& resultList) {
-            this->_resultList = &resultList;
+        void Traverse(std::map<std::string, std::shared_ptr<Module>>& modules) {
+            this->_resultMap = &modules;
             this->TraverseDecl(this->_astUnit->getASTContext().getTranslationUnitDecl());
-            return *this->_resultList;
         }
 
         bool VisitFunctionDecl(clang::FunctionDecl *function);
@@ -47,12 +46,15 @@ namespace Meta {
         }
 
         void addToResult(std::shared_ptr<Meta> meta) {
-            //std::cout << "Type: " << meta->type << " Name: " << meta->name << " JS Name: " << meta->jsName << " Module: " << meta->module << " Flags: " << meta->flags << std::endl;
-            _resultList->push_back(meta);
+            std::size_t dotIndex = meta->module.find(".");
+            std::string topLevelModuleName = (dotIndex == std::string::npos) ? meta->module : meta->module.substr(0, dotIndex);
+            if(_resultMap->find(topLevelModuleName) == _resultMap->end())
+                _resultMap->insert(std::pair<std::string, std::shared_ptr<Module>>(topLevelModuleName, std::make_shared<Module>(topLevelModuleName)));
+            (*_resultMap)[topLevelModuleName]->push_back(meta);
         }
 
         clang::ASTUnit *_astUnit;
         MetaFactory _metaFactory;
-        std::vector<std::shared_ptr<Meta>>* _resultList;
+        std::map<std::string, std::shared_ptr<Module>>* _resultMap;
     };
 }

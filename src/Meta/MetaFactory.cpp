@@ -18,6 +18,8 @@ shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl) {
             return createFromInterface(*ineterface);
         else if (clang::ObjCProtocolDecl *protocol = clang::dyn_cast<clang::ObjCProtocolDecl>(&decl))
             return createFromProtocol(*protocol);
+        else if (clang::ObjCCategoryDecl *category = clang::dyn_cast<clang::ObjCCategoryDecl>(&decl))
+            return createFromCategory(*category);
         else if (clang::ObjCMethodDecl *method = clang::dyn_cast<clang::ObjCMethodDecl>(&decl))
             return createFromMethod(*method);
         else if (clang::ObjCPropertyDecl *property = clang::dyn_cast<clang::ObjCPropertyDecl>(&decl))
@@ -72,6 +74,7 @@ shared_ptr<Meta::RecordMeta> Meta::MetaFactory::createFromRecord(clang::RecordDe
 
 std::shared_ptr<Meta::VarMeta> Meta::MetaFactory::createFromVar(clang::VarDecl& var) {
     shared_ptr<VarMeta> varMeta = make_shared<VarMeta>();
+    populateMetaFields(var, *(varMeta.get()));
     varMeta->signature = this->_typeEncodingFactory.create(var.getType());
     return varMeta;
 }
@@ -109,10 +112,15 @@ shared_ptr<Meta::InterfaceMeta> Meta::MetaFactory::createFromInterface(clang::Ob
 shared_ptr<Meta::ProtocolMeta> Meta::MetaFactory::createFromProtocol(clang::ObjCProtocolDecl& protocol) {
     shared_ptr<ProtocolMeta> protocolMeta = make_shared<ProtocolMeta>();
     populateMetaFields(protocol, *(protocolMeta.get()));
-//    for (clang::ObjCProtocolDecl::protocol_iterator i = protocol.protocol_begin(); i != protocol.protocol_end(); ++i) {
-//        printf("%s, ", (*i)->getNameAsString().c_str());
-//    }
+    populateBaseClassMetaFields(protocol, *(protocolMeta.get()));
     return protocolMeta;
+}
+
+shared_ptr<Meta::CategoryMeta> Meta::MetaFactory::createFromCategory(clang::ObjCCategoryDecl& category) {
+    shared_ptr<CategoryMeta> categoryMeta = make_shared<CategoryMeta>();
+    populateMetaFields(category, *(categoryMeta.get()));
+    populateBaseClassMetaFields(category, *(categoryMeta.get()));
+    return categoryMeta;
 }
 
 shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMethodDecl& method) {
@@ -121,7 +129,7 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
     populateMetaFields(method, *(methodMeta.get()));
 
     // set selector
-    // TODO: We can use the name property instead of selector and remove the selector propery.
+    // TODO: We can use the name property instead of selector and remove the selector property.
     methodMeta->selector = method.getSelector().getAsString();
 
     // set type encoding
@@ -160,7 +168,15 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
 shared_ptr<Meta::PropertyMeta> Meta::MetaFactory::createFromProperty(clang::ObjCPropertyDecl& property) {
     shared_ptr<PropertyMeta> propertyMeta = make_shared<PropertyMeta>();
     populateMetaFields(property, *(propertyMeta.get()));
-    // TODO: populate all property fields
+
+    clang::ObjCMethodDecl *getter = property.getGetterMethodDecl();
+    propertyMeta->setFlags(MetaFlags::PropertyHasGetter, getter);
+    propertyMeta->getter = getter ? static_pointer_cast<MethodMeta>(create(*getter)) : nullptr;
+
+    clang::ObjCMethodDecl *setter = property.getSetterMethodDecl();
+    propertyMeta->setFlags(MetaFlags::PropertyHasSetter, setter);
+    propertyMeta->setter = setter ? static_pointer_cast<MethodMeta>(create(*setter)) : nullptr;
+
     return propertyMeta;
 }
 
@@ -229,6 +245,11 @@ void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& de
     for (clang::ObjCContainerDecl::instmeth_iterator i = decl.instmeth_begin(); i != decl.instmeth_end(); ++i) {
         clang::ObjCMethodDecl& instanceMethod = **i;
         baseClass.instanceMethods.push_back(static_pointer_cast<MethodMeta>(this->create(instanceMethod)));
+    }
+
+    for (clang::ObjCContainerDecl::prop_iterator i = decl.prop_begin(); i != decl.prop_end(); ++i) {
+        clang::ObjCPropertyDecl& property = **i;
+        baseClass.properties.push_back(static_pointer_cast<PropertyMeta>(this->create(property)));
     }
 }
 

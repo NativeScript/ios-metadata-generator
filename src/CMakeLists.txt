@@ -7,6 +7,7 @@ set(GENERATOR_SOURCES
     Meta/TypeEncodingFactory.cpp
     Meta/TypeEncodingEntities.cpp
     Meta/IdentifierGenerator.cpp
+    Yaml/YamlSerializer.cpp
 )
 
 add_executable(objc-metadata-generator ${GENERATOR_SOURCES})

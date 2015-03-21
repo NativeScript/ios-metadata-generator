@@ -23,7 +23,7 @@ namespace Meta {
 
         FunctionIsVariadic = 1 << 5,
         FunctionOwnsReturnedCocoaObject = 1 << 4,
-
+        // TODO: remove these flags
         MemberIsLocalJsNameDuplicate = 1 << 0,
         MemberHasJsNameDuplicateInHierarchy = 1 << 1,
 
@@ -192,5 +192,28 @@ namespace Meta {
         TypeEncoding signature;
 
         //virtual void serialize(utils::Serializer* serializer) override;
+    };
+
+    class Module {
+    public:
+        typedef std::vector<std::shared_ptr<Meta>>::iterator iterator;
+        typedef std::vector<std::shared_ptr<Meta>>::const_iterator const_iterator;
+        typedef std::vector<std::shared_ptr<Meta>>::size_type size_type;
+
+        Module(std::string name)
+                : _name(name) {}
+
+        Module::iterator begin() { return _declarations.begin(); }
+        Module::const_iterator begin() const { return _declarations.begin(); }
+        Module::iterator end() { return _declarations.end(); }
+        Module::const_iterator end() const { return _declarations.end(); }
+
+        std::string getName() { return _name; }
+        Module::size_type size() { return _declarations.size(); }
+        void push_back(std::shared_ptr<Meta> meta) { _declarations.push_back(meta); }
+
+    private:
+        std::string _name;
+        std::vector<std::shared_ptr<Meta>> _declarations;
     };
 }
