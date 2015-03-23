@@ -4,29 +4,44 @@
 using namespace std;
 
 bool Meta::DeclarationConverterVisitor::VisitFunctionDecl(clang::FunctionDecl *function) {
-    return Visit<clang::FunctionDecl>(function);
+    if(!function->isThisDeclarationADefinition()) {
+        return Visit<clang::FunctionDecl>(function);
+    }
+    return true;
 }
 
 bool Meta::DeclarationConverterVisitor::VisitVarDecl(clang::VarDecl *var) {
     // If the var declaration is exactly VarDecl but not an inheritor of VarDecl (e.g. ParmVarDecl)
-    if(var->getKind() == clang::Decl::Var) {
+    if(var->isThisDeclarationADefinition() && var->getKind() == clang::Decl::Var) {
         return Visit<clang::VarDecl>(var);
     }
     return true;
 }
 
 bool Meta::DeclarationConverterVisitor::VisitEnumDecl(clang::EnumDecl *enumDecl) {
-    return Visit<clang::EnumDecl>(enumDecl);
+    if(enumDecl->isThisDeclarationADefinition()) {
+        return Visit<clang::EnumDecl>(enumDecl);
+    }
+    return true;
 }
 
 bool Meta::DeclarationConverterVisitor::VisitRecordDecl(clang::RecordDecl *record) {
-    return Visit<clang::RecordDecl>(record);
+    if(record->isThisDeclarationADefinition()) {
+        return Visit<clang::RecordDecl>(record);
+    }
+    return true;
 }
 
 bool Meta::DeclarationConverterVisitor::VisitObjCInterfaceDecl(clang::ObjCInterfaceDecl *interface) {
-    return Visit<clang::ObjCInterfaceDecl>(interface);
+    if(interface->isThisDeclarationADefinition()) {
+        return Visit<clang::ObjCInterfaceDecl>(interface);
+    }
+    return true;
 }
 
 bool Meta::DeclarationConverterVisitor::VisitObjCProtocolDecl(clang::ObjCProtocolDecl *protocol) {
-    return Visit<clang::ObjCProtocolDecl>(protocol);
+    if(protocol->isThisDeclarationADefinition()) {
+        return Visit<clang::ObjCProtocolDecl>(protocol);
+    }
+    return true;
 }

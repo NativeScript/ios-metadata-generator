@@ -4,7 +4,7 @@
 #include <vector>
 #include "TypeEncodingEntities.h"
 
-#define UNKNOWN_VERSION { -1, -1, -1 };
+#define UNKNOWN_VERSION { -1, -1, -1 }
 
 namespace Meta {
 
@@ -203,12 +203,17 @@ namespace Meta {
         Module(std::string name)
                 : _name(name) {}
 
+        Module(std::string name, std::vector<std::shared_ptr<Meta>>& declarations)
+                : _name(name),
+                  _declarations(declarations) {}
+
         Module::iterator begin() { return _declarations.begin(); }
         Module::const_iterator begin() const { return _declarations.begin(); }
         Module::iterator end() { return _declarations.end(); }
         Module::const_iterator end() const { return _declarations.end(); }
 
         std::string getName() { return _name; }
+        std::vector<std::shared_ptr<Meta>> getDeclarations() { return _declarations; }
         Module::size_type size() { return _declarations.size(); }
         void push_back(std::shared_ptr<Meta> meta) { _declarations.push_back(meta); }
 

@@ -35,12 +35,10 @@ namespace Meta {
     private:
         template<class T>
         bool Visit(T *decl) {
-            if(decl->isThisDeclarationADefinition()) {
-                try {
-                    addToResult(this->_metaFactory.create(*decl));
-                } catch(MetaCreationException& e) {
-                    std::cout << e.whatAsString() << std::endl;
-                }
+            try {
+                addToResult(this->_metaFactory.create(*decl));
+            } catch(MetaCreationException& e) {
+                std::cout << e.whatAsString() << std::endl;
             }
             return true;
         }

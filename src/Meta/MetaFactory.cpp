@@ -4,6 +4,12 @@
 
 using namespace std;
 
+bool protocolsComparerByJsName(Meta::FQName& protocol1, Meta::FQName& protocol2) { return (protocol1.jsName < protocol2.jsName); }
+
+bool methodsComparerByJsName(std::shared_ptr<Meta::MethodMeta>& method1, std::shared_ptr<Meta::MethodMeta>& method2) { return (method1->jsName < method2->jsName); }
+
+bool propertiesComparerByJsName(std::shared_ptr<Meta::PropertyMeta>& property1, std::shared_ptr<Meta::PropertyMeta>& property2) { return (property1->jsName < property2->jsName); }
+
 shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl) {
     try {
         if (clang::FunctionDecl *function = clang::dyn_cast<clang::FunctionDecl>(&decl))
@@ -40,8 +46,6 @@ shared_ptr<Meta::FunctionMeta> Meta::MetaFactory::createFromFunction(clang::Func
     // If we not plan in the future to support variadic functions this redundant flag should be removed.
     if (function.isVariadic())
         throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(function), "The function is variadic.", false);
-    if (function.isInlined())
-        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(function), "The function is inlined.", false);
 
     shared_ptr<FunctionMeta> functionMeta = make_shared<FunctionMeta>();
     populateMetaFields(function, *(functionMeta.get()));
@@ -184,7 +188,7 @@ void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
     meta.declaration = &decl;
     meta.name = decl.getNameAsString();
     FQName fqName = this->_identifierGenerator.getFqName(decl);
-    meta.jsName = fqName.name;
+    meta.jsName = fqName.jsName;
     meta.module = fqName.module;
     meta.setFlags(MetaFlags::HasName , meta.name != meta.jsName);
 
@@ -236,21 +240,25 @@ void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& de
         clang::ObjCProtocolDecl *protocol = *i;
         baseClass.protocols.push_back(_identifierGenerator.getFqName(*protocol));
     }
+    std::sort(baseClass.protocols.begin(), baseClass.protocols.end(), protocolsComparerByJsName); // order by jsName
 
     for (clang::ObjCContainerDecl::classmeth_iterator i = decl.classmeth_begin(); i != decl.classmeth_end(); ++i) {
         clang::ObjCMethodDecl& classMethod = **i;
         baseClass.staticMethods.push_back(static_pointer_cast<MethodMeta>(this->create(classMethod)));
     }
+    std::sort(baseClass.staticMethods.begin(), baseClass.staticMethods.end(), methodsComparerByJsName); // order by jsName
 
     for (clang::ObjCContainerDecl::instmeth_iterator i = decl.instmeth_begin(); i != decl.instmeth_end(); ++i) {
         clang::ObjCMethodDecl& instanceMethod = **i;
         baseClass.instanceMethods.push_back(static_pointer_cast<MethodMeta>(this->create(instanceMethod)));
     }
+    std::sort(baseClass.instanceMethods.begin(), baseClass.instanceMethods.end(), methodsComparerByJsName); // order by jsName
 
     for (clang::ObjCContainerDecl::prop_iterator i = decl.prop_begin(); i != decl.prop_end(); ++i) {
         clang::ObjCPropertyDecl& property = **i;
         baseClass.properties.push_back(static_pointer_cast<PropertyMeta>(this->create(property)));
     }
+    std::sort(baseClass.properties.begin(), baseClass.properties.end(), propertiesComparerByJsName); // order by jsName
 }
 
 llvm::iterator_range<clang::ObjCProtocolList::iterator> Meta::MetaFactory::getProtocols(clang::ObjCContainerDecl* objCContainer) {

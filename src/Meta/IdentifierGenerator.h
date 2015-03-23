@@ -14,10 +14,10 @@ namespace Meta {
 
     struct FQName {
     public:
-        std::string name;
+        std::string jsName;
         std::string module;
 
-        bool isEmpty() const { return this->name.empty(); }
+        bool isEmpty() const { return this->jsName.empty(); }
     };
 
     struct Identifier {

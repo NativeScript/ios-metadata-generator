@@ -91,14 +91,14 @@ const clang::FileEntry *Meta::IdentifierGenerator::getFileEntryOrNull(clang::Dec
 
 Meta::FQName Meta::IdentifierGenerator::getFqName(clang::Decl& decl) {
     FQName fqName;
-    fqName.name = getJsName(decl);
+    fqName.jsName = getJsName(decl);
     fqName.module = getModuleName(decl);
     return fqName;
 }
 
 Meta::FQName Meta::IdentifierGenerator::getFqNameOrEmpty(clang::Decl& decl) {
     FQName fqName;
-    fqName.name = getJsNameOrEmpty(decl);
+    fqName.jsName = getJsNameOrEmpty(decl);
     fqName.module = getModuleNameOrEmpty(decl);
     return fqName;
 }
