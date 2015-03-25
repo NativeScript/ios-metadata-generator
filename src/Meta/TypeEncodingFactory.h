@@ -11,35 +11,35 @@ namespace Meta {
         : _astUnit(astUnit),
           _identifierGenerator(identifierGenerator) {}
 
-        TypeEncoding create(const clang::Type* type);
+        Type create(const clang::Type* type);
 
-        TypeEncoding create(const clang::QualType& type);
+        Type create(const clang::QualType& type);
 
     private:
-        TypeEncoding createFromConstantArrayType(const clang::ConstantArrayType* type);
+        Type createFromConstantArrayType(const clang::ConstantArrayType* type);
 
-        TypeEncoding createFromIncompleteArrayType(const clang::IncompleteArrayType* type);
+        Type createFromIncompleteArrayType(const clang::IncompleteArrayType* type);
 
-        TypeEncoding createFromBlockPointerType(const clang::BlockPointerType* type);
+        Type createFromBlockPointerType(const clang::BlockPointerType* type);
 
-        TypeEncoding createFromBuiltinType(const clang::BuiltinType* type);
+        Type createFromBuiltinType(const clang::BuiltinType* type);
 
-        TypeEncoding createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type);
+        Type createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type);
 
-        TypeEncoding createFromPointerType(const clang::PointerType* type);
+        Type createFromPointerType(const clang::PointerType* type);
 
-        TypeEncoding createFromEnumType(const clang::EnumType* type);
+        Type createFromEnumType(const clang::EnumType* type);
 
-        TypeEncoding createFromRecordType(const clang::RecordType* type);
+        Type createFromRecordType(const clang::RecordType* type);
 
-        TypeEncoding createFromTypedefType(const clang::TypedefType* type);
+        Type createFromTypedefType(const clang::TypedefType* type);
 
-        TypeEncoding createFromVectorType(const clang::VectorType* type);
+        Type createFromVectorType(const clang::VectorType* type);
 
-        TypeEncoding createFromElaboratedType(const clang::ElaboratedType *type);
+        Type createFromElaboratedType(const clang::ElaboratedType *type);
 
         // helper methods
-        void getSignatureOfFunctionProtoType(const clang::FunctionProtoType* type, std::vector<TypeEncoding>& signature);
+        void getSignatureOfFunctionProtoType(const clang::FunctionProtoType* type, std::vector<Type>& signature);
 
         bool isSpecificTypedefType(const clang::TypedefType* type, const std::string& typedefName);
 

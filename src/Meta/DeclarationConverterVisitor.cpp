@@ -11,8 +11,10 @@ bool Meta::DeclarationConverterVisitor::VisitFunctionDecl(clang::FunctionDecl *f
 }
 
 bool Meta::DeclarationConverterVisitor::VisitVarDecl(clang::VarDecl *var) {
+    // TODO: We don't check var->isThisDeclarationADefinition() which includes all extern variable declarations.
+    // Some variables may be added more than once (once for the actual declaration and once for each extern declaration). We can unique them by name.
     // If the var declaration is exactly VarDecl but not an inheritor of VarDecl (e.g. ParmVarDecl)
-    if(var->isThisDeclarationADefinition() && var->getKind() == clang::Decl::Var) {
+    if(var->getKind() == clang::Decl::Kind::Var) {
         return Visit<clang::VarDecl>(var);
     }
     return true;

@@ -81,7 +81,7 @@ namespace Meta {
 
         std::string selector;
         std::string typeEncoding;
-        std::vector<TypeEncoding> signature;
+        std::vector<Type> signature;
 
         //virtual void serialize(utils::Serializer* serializer) override;
     };
@@ -135,12 +135,6 @@ namespace Meta {
         //virtual void serialize(utils::Serializer* serializer) override;
     };
 
-    struct RecordField {
-    public:
-        std::string name;
-        TypeEncoding encoding;
-    };
-
     class RecordMeta : public Meta {
     public:
         std::vector<RecordField> fields;
@@ -169,7 +163,7 @@ namespace Meta {
         FunctionMeta() {
             this->type = MetaType::Function;
         }
-        std::vector<TypeEncoding> signature;
+        std::vector<Type> signature;
 
         //virtual void serialize(utils::Serializer* serializer) override;
     };
@@ -189,7 +183,7 @@ namespace Meta {
         VarMeta() {
             this->type = MetaType::Var;
         }
-        TypeEncoding signature;
+        Type signature;
 
         //virtual void serialize(utils::Serializer* serializer) override;
     };

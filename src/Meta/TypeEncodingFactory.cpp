@@ -1,33 +1,31 @@
-#include <Tcl/tcl.h>
 #include "TypeEncodingFactory.h"
 
-using namespace clang;
 using namespace std;
 using namespace Meta;
 
-TypeEncoding TypeEncodingFactory::create(const Type* type) {
+Type TypeEncodingFactory::create(const clang::Type* type) {
     try {
-        if (const ConstantArrayType *concreteType = dyn_cast<ConstantArrayType>(type))
+        if (const clang::ConstantArrayType *concreteType = clang::dyn_cast<clang::ConstantArrayType>(type))
             return createFromConstantArrayType(concreteType);
-        if (const IncompleteArrayType *concreteType = dyn_cast<IncompleteArrayType>(type))
+        if (const clang::IncompleteArrayType *concreteType = clang::dyn_cast<clang::IncompleteArrayType>(type))
             return createFromIncompleteArrayType(concreteType);
-        if (const PointerType *concreteType = dyn_cast<PointerType>(type))
+        if (const clang::PointerType *concreteType = clang::dyn_cast<clang::PointerType>(type))
             return createFromPointerType(concreteType);
-        if (const BlockPointerType *concreteType = dyn_cast<BlockPointerType>(type))
+        if (const clang::BlockPointerType *concreteType = clang::dyn_cast<clang::BlockPointerType>(type))
             return createFromBlockPointerType(concreteType);
-        if (const BuiltinType *concreteType = dyn_cast<BuiltinType>(type))
+        if (const clang::BuiltinType *concreteType = clang::dyn_cast<clang::BuiltinType>(type))
             return createFromBuiltinType(concreteType);
-        if (const ObjCObjectPointerType *concreteType = dyn_cast<ObjCObjectPointerType>(type))
+        if (const clang::ObjCObjectPointerType *concreteType = clang::dyn_cast<clang::ObjCObjectPointerType>(type))
             return createFromObjCObjectPointerType(concreteType);
-        if (const RecordType *concreteType = dyn_cast<RecordType>(type))
+        if (const clang::RecordType *concreteType = clang::dyn_cast<clang::RecordType>(type))
             return createFromRecordType(concreteType);
-        if (const EnumType *concreteType = dyn_cast<EnumType>(type))
+        if (const clang::EnumType *concreteType = clang::dyn_cast<clang::EnumType>(type))
             return createFromEnumType(concreteType);
-        if (const VectorType *concreteType = dyn_cast<VectorType>(type))
+        if (const clang::VectorType *concreteType = clang::dyn_cast<clang::VectorType>(type))
             return createFromVectorType(concreteType);
-        if (const TypedefType *concreteType = dyn_cast<TypedefType>(type))
+        if (const clang::TypedefType *concreteType = clang::dyn_cast<clang::TypedefType>(type))
             return createFromTypedefType(concreteType);
-        if (const ElaboratedType *concreteType = dyn_cast<ElaboratedType>(type))
+        if (const clang::ElaboratedType *concreteType = clang::dyn_cast<clang::ElaboratedType>(type))
             return createFromElaboratedType(concreteType);
         throw TypeEncodingCreationException(type->getTypeClassName(), "Unable to create encoding for this type.", true);
     }
@@ -36,158 +34,158 @@ TypeEncoding TypeEncodingFactory::create(const Type* type) {
     }
 }
 
-TypeEncoding TypeEncodingFactory::create(const QualType& type) {
-    const Type *typePtr = type.getTypePtrOrNull();
+Type TypeEncodingFactory::create(const clang::QualType& type) {
+    const clang::Type *typePtr = type.getTypePtrOrNull();
     if(typePtr)
         return this->create(typePtr);
     throw TypeEncodingCreationException(type->getTypeClassName(), "Unable to get the inner type of qualified type.", true);
 }
 
-TypeEncoding TypeEncodingFactory::createFromConstantArrayType(const ConstantArrayType* type) {
-    return ConstantArrayEncoding(this->create(type->getElementType()), (int)type->getSize().roundToDouble());
+Type TypeEncodingFactory::createFromConstantArrayType(const clang::ConstantArrayType* type) {
+    return Type::ConstantArray(this->create(type->getElementType()), (int)type->getSize().roundToDouble());
 }
 
-TypeEncoding TypeEncodingFactory::createFromIncompleteArrayType(const IncompleteArrayType* type) {
-    return IncompleteArrayEncoding(this->create(type->getElementType()));
+Type TypeEncodingFactory::createFromIncompleteArrayType(const clang::IncompleteArrayType* type) {
+    return Type::IncompleteArray(this->create(type->getElementType()));
 }
 
-TypeEncoding TypeEncodingFactory::createFromBlockPointerType(const BlockPointerType* type) {
-    const Type *canonicalPointee = type->getPointeeType().getTypePtr()->getCanonicalTypeUnqualified().getTypePtr();
-    if(const FunctionProtoType *functionType = dyn_cast<FunctionProtoType>(canonicalPointee)) {
-        std::vector<TypeEncoding> signature;
+Type TypeEncodingFactory::createFromBlockPointerType(const clang::BlockPointerType* type) {
+    const clang::Type *canonicalPointee = type->getPointeeType().getTypePtr()->getCanonicalTypeUnqualified().getTypePtr();
+    if(const clang::FunctionProtoType *functionType = clang::dyn_cast<clang::FunctionProtoType>(canonicalPointee)) {
+        std::vector<Type> signature;
         this->getSignatureOfFunctionProtoType(functionType, signature);
-        return BlockEncoding(signature);
+        return Type::Block(signature);
     }
     throw TypeEncodingCreationException(type->getTypeClassName(), "Unable to parse a block type.", true);
 }
 
-TypeEncoding TypeEncodingFactory::createFromBuiltinType(const BuiltinType* type) {
+Type TypeEncodingFactory::createFromBuiltinType(const clang::BuiltinType* type) {
     switch (type->getKind()) {
-        case BuiltinType::Kind::Void:
-            return VoidEncoding();
-        case BuiltinType::Kind::Bool:
-            return BoolEncoding();
-        case BuiltinType::Kind::Char_S:
-            return SignedCharEncoding();
-        case BuiltinType::Kind::Char_U:
-            return UnsignedCharEncoding();
-        case BuiltinType::Kind::SChar:
-            return SignedCharEncoding();
-        case BuiltinType::Kind::Short:
-            return ShortEncoding();
-        case BuiltinType::Kind::Int:
-            return IntEncoding();
-        case BuiltinType::Kind::Long:
-            return LongEncoding();
-        case BuiltinType::Kind::LongLong:
-            return LongLongEncoding();
-        case BuiltinType::Kind::UChar:
-            return UnsignedCharEncoding();
-        case BuiltinType::Kind::UShort:
-            return UShortEncoding();
-        case BuiltinType::Kind::UInt:
-            return UIntEncoding();
-        case BuiltinType::Kind::ULong:
-            return ULongEncoding();
-        case BuiltinType::Kind::ULongLong:
-            return ULongLongEncoding();
-        case BuiltinType::Kind::Float:
-            return FloatEncoding();
-        case BuiltinType::Kind::Double:
-            return DoubleEncoding();
+        case clang::BuiltinType::Kind::Void:
+            return Type::Void();
+        case clang::BuiltinType::Kind::Bool:
+            return Type::Bool();
+        case clang::BuiltinType::Kind::Char_S:
+            return Type::SignedChar();
+        case clang::BuiltinType::Kind::Char_U:
+            return Type::UnsignedChar();
+        case clang::BuiltinType::Kind::SChar:
+            return Type::SignedChar();
+        case clang::BuiltinType::Kind::Short:
+            return Type::Short();
+        case clang::BuiltinType::Kind::Int:
+            return Type::Int();
+        case clang::BuiltinType::Kind::Long:
+            return Type::Long();
+        case clang::BuiltinType::Kind::LongLong:
+            return Type::LongLong();
+        case clang::BuiltinType::Kind::UChar:
+            return Type::UnsignedChar();
+        case clang::BuiltinType::Kind::UShort:
+            return Type::UShort();
+        case clang::BuiltinType::Kind::UInt:
+            return Type::UInt();
+        case clang::BuiltinType::Kind::ULong:
+            return Type::ULong();
+        case clang::BuiltinType::Kind::ULongLong:
+            return Type::ULongLong();
+        case clang::BuiltinType::Kind::Float:
+            return Type::Float();
+        case clang::BuiltinType::Kind::Double:
+            return Type::Double();
             // Objective-C does not support the long double type. @encode(long double) returns d, which is the same encoding as for double.
-        case BuiltinType::Kind::LongDouble:
-            return DoubleEncoding();
-        case BuiltinType::Kind::ObjCSel:
-            return SelectorEncoding();
+        case clang::BuiltinType::Kind::LongDouble:
+            return Type::Double();
+        case clang::BuiltinType::Kind::ObjCSel:
+            return Type::Selector();
 
         // ObjCId and ObjCClass builtin types should never enter in this method because these types should be handled on upper level.
         // The 'id' type is actually represented by clang as TypedefType to ObjCObjectPointerType whose pointee is an ObjCObjectType with base BuiltinType::ObjCIdType.
         // This is also valid for ObjCClass type.
-        case BuiltinType::Kind::ObjCId:
-        case BuiltinType::Kind::ObjCClass:
+        case clang::BuiltinType::Kind::ObjCId:
+        case clang::BuiltinType::Kind::ObjCClass:
 
         // Not supported types
-        case BuiltinType::Kind::Int128:
-        case BuiltinType::Kind::UInt128:
-        case BuiltinType::Kind::Half:
-        case BuiltinType::Kind::WChar_S:
-        case BuiltinType::Kind::WChar_U:
-        case BuiltinType::Kind::Char16:
-        case BuiltinType::Kind::Char32:
-        case BuiltinType::Kind::NullPtr:
-        case BuiltinType::Kind::Overload:
-        case BuiltinType::Kind::BoundMember:
-        case BuiltinType::Kind::PseudoObject:
-        case BuiltinType::Kind::Dependent:
-        case BuiltinType::Kind::UnknownAny:
-        case BuiltinType::Kind::ARCUnbridgedCast:
-        case BuiltinType::Kind::BuiltinFn:
-        case BuiltinType::Kind::OCLImage1d:
-        case BuiltinType::Kind::OCLImage1dArray:
-        case BuiltinType::Kind::OCLImage1dBuffer:
-        case BuiltinType::Kind::OCLImage2d:
-        case BuiltinType::Kind::OCLImage2dArray:
-        case BuiltinType::Kind::OCLImage3d:
-        case BuiltinType::Kind::OCLSampler:
-        case BuiltinType::Kind::OCLEvent:
-            throw TypeEncodingCreationException(type->getName(PrintingPolicy(LangOptions())).str(), string("Not supported builtin type."), true);
+        case clang::BuiltinType::Kind::Int128:
+        case clang::BuiltinType::Kind::UInt128:
+        case clang::BuiltinType::Kind::Half:
+        case clang::BuiltinType::Kind::WChar_S:
+        case clang::BuiltinType::Kind::WChar_U:
+        case clang::BuiltinType::Kind::Char16:
+        case clang::BuiltinType::Kind::Char32:
+        case clang::BuiltinType::Kind::NullPtr:
+        case clang::BuiltinType::Kind::Overload:
+        case clang::BuiltinType::Kind::BoundMember:
+        case clang::BuiltinType::Kind::PseudoObject:
+        case clang::BuiltinType::Kind::Dependent:
+        case clang::BuiltinType::Kind::UnknownAny:
+        case clang::BuiltinType::Kind::ARCUnbridgedCast:
+        case clang::BuiltinType::Kind::BuiltinFn:
+        case clang::BuiltinType::Kind::OCLImage1d:
+        case clang::BuiltinType::Kind::OCLImage1dArray:
+        case clang::BuiltinType::Kind::OCLImage1dBuffer:
+        case clang::BuiltinType::Kind::OCLImage2d:
+        case clang::BuiltinType::Kind::OCLImage2dArray:
+        case clang::BuiltinType::Kind::OCLImage3d:
+        case clang::BuiltinType::Kind::OCLSampler:
+        case clang::BuiltinType::Kind::OCLEvent:
+            throw TypeEncodingCreationException(type->getName(clang::PrintingPolicy(clang::LangOptions())).str(), string("Not supported builtin type."), true);
         default:
             llvm_unreachable("Invalid builtin type.");
     }
 }
 
-TypeEncoding TypeEncodingFactory::createFromObjCObjectPointerType(const ObjCObjectPointerType* type) {
+Type TypeEncodingFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type) {
     vector<FQName> protocols;
-    for (ObjCObjectPointerType::qual_iterator it = type->qual_begin(); it != type->qual_end(); ++it) {
+    for (clang::ObjCObjectPointerType::qual_iterator it = type->qual_begin(); it != type->qual_end(); ++it) {
         protocols.push_back(_identifierGenerator.getFqName(**it));
     }
     if(type->isObjCIdType() || type->isObjCQualifiedIdType()) {
-        return IdEncoding(protocols);
+        return Type::Id(protocols);
     }
     if(type->isObjCClassType() || type->isObjCQualifiedClassType()) {
-        return ClassEncoding(protocols);
+        return Type::ClassType(protocols);
     }
-    if(const ObjCInterfaceType *interfaceType = dyn_cast<ObjCInterfaceType>(type->getObjectType())) {
-        ObjCInterfaceDecl *interface = interfaceType->getDecl();
+    if(const clang::ObjCInterfaceType *interfaceType = clang::dyn_cast<clang::ObjCInterfaceType>(type->getObjectType())) {
+        clang::ObjCInterfaceDecl *interface = interfaceType->getDecl();
         // TODO: Make the check for Protocol more precise (e. g. check the module of interface if is equal to the
         // module of Protocol interface (and maybe file in which is defined, but it may be different in future SDK))
         if(interface->getNameAsString() == "Protocol")
-            return ProtocolEncoding();
+            return Type::ProtocolType();
 
-        return InterfaceEncoding(_identifierGenerator.getFqName(*interface), protocols);
+        return Type::Interface(_identifierGenerator.getFqName(*interface), protocols);
     }
 
     throw TypeEncodingCreationException(type->getTypeClassName(), "Invalid interface pointer type.", true);
 }
 
-TypeEncoding TypeEncodingFactory::createFromPointerType(const PointerType* type) {
-    QualType qualPointee = type->getPointeeType();
-    const Type *pointee = qualPointee.getTypePtr();
-    const Type *canonicalPointee = pointee->getCanonicalTypeUnqualified().getTypePtr();
+Type TypeEncodingFactory::createFromPointerType(const clang::PointerType* type) {
+    clang::QualType qualPointee = type->getPointeeType();
+    const clang::Type *pointee = qualPointee.getTypePtr();
+    const clang::Type *canonicalPointee = pointee->getCanonicalTypeUnqualified().getTypePtr();
 
-    if(const FunctionProtoType *functionType = dyn_cast<FunctionProtoType>(canonicalPointee)) {
-        std::vector<TypeEncoding> signature;
+    if(const clang::FunctionProtoType *functionType = clang::dyn_cast<clang::FunctionProtoType>(canonicalPointee)) {
+        std::vector<Type> signature;
         this->getSignatureOfFunctionProtoType(functionType, signature);
-        return FunctionPointerEncoding(signature);
+        return Type::FunctionPointer(signature);
     }
     // TODO: Maybe we can cast canonicalPointee instead of pointee
-    if(const BuiltinType *builtinType = dyn_cast<BuiltinType>(pointee)) {
-        if(builtinType->getKind() == BuiltinType::Kind::Char_S || builtinType->getKind() == BuiltinType::Kind::UChar)
-            return CStringEncoding();
+    if(const clang::BuiltinType *builtinType = clang::dyn_cast<clang::BuiltinType>(pointee)) {
+        if(builtinType->getKind() == clang::BuiltinType::Kind::Char_S || builtinType->getKind() == clang::BuiltinType::Kind::UChar)
+            return Type::CString();
     }
 
-    return PointerEncoding(this->create(type->getPointeeType()));
+    return Type::Pointer(this->create(type->getPointeeType()));
 }
 
-TypeEncoding TypeEncodingFactory::createFromEnumType(const EnumType* type) {
+Type TypeEncodingFactory::createFromEnumType(const clang::EnumType* type) {
     return this->create(type->getDecl()->getIntegerType());
 }
 
-TypeEncoding TypeEncodingFactory::createFromRecordType(const RecordType* type) {
-    RecordDecl *record = type->getDecl()->getDefinition();
+Type TypeEncodingFactory::createFromRecordType(const clang::RecordType* type) {
+    clang::RecordDecl *record = type->getDecl()->getDefinition();
     if(!record) // The record is opaque
-        return VoidEncoding();
+        return Type::Void();
     if(record->isUnion())
         throw TypeEncodingCreationException(type->getTypeClassName(), "The record is union.", true);
     if(!record->isStruct())
@@ -195,17 +193,16 @@ TypeEncoding TypeEncodingFactory::createFromRecordType(const RecordType* type) {
 
     try {
         FQName recordName = this->_identifierGenerator.getFqName(*record);
-        return StructEncoding(recordName);
+        return Type::Struct(recordName);
     } catch(IdentifierCreationException& e) {
         // The record is anonymous
-        std::vector<std::string> fieldNames;
-        std::vector<TypeEncoding> fieldEncodings;
-        for(RecordDecl::field_iterator it = record->field_begin(); it != record->field_end(); ++it) {
-            FieldDecl *field = *it;
-            fieldNames.push_back(field->getNameAsString());
-            fieldEncodings.push_back(this->create(field->getType()));
+        std::vector<Meta::RecordField> fields;
+        for(clang::RecordDecl::field_iterator it = record->field_begin(); it != record->field_end(); ++it) {
+            clang::FieldDecl *field = *it;
+            RecordField fieldMeta(_identifierGenerator.getJsName(*field), this->create(field->getType()));
+            fields.push_back(fieldMeta);
         }
-        return AnonymousStructEncoding(fieldNames, fieldEncodings);
+        return Type::AnonymousStruct(fields);
     }
 }
 
@@ -213,14 +210,14 @@ static std::vector<std::string> tollFreeBridgedTypes = { "CFArrayRef", "CFAttrib
         "CFErrorRef", "CFLocaleRef", "CFMutableArrayRef", "CFMutableAttributedStringRef", "CFMutableCharacterSetRef", "CFMutableDataRef", "CFMutableDictionaryRef", "CFMutableSetRef",
         "CFMutableStringRef", "CFNumberRef", "CFReadStreamRef", "CFRunLoopTimerRef", "CFSetRef", "CFStringRef", "CFTimeZoneRef", "CFURLRef", "CFWriteStreamRef" };
 
-TypeEncoding TypeEncodingFactory::createFromTypedefType(const TypedefType* type) {
+Type TypeEncodingFactory::createFromTypedefType(const clang::TypedefType* type) {
     std::vector<string> boolTypedefs { "BOOL", "Boolean" };
     if(isSpecificTypedefType(type, boolTypedefs))
-        return BoolEncoding();
+        return Type::Bool();
     if(isSpecificTypedefType(type, "unichar"))
-        return UnicharEncoding();
-    if(const PointerType *pointerType = type->getCanonicalTypeUnqualified().getTypePtr()->getAs<PointerType>()) {
-        if(const RecordType *record = pointerType->getPointeeType().getTypePtr()->getAs<RecordType>()) {
+        return Type::Unichar();
+    if(const clang::PointerType *pointerType = type->getCanonicalTypeUnqualified().getTypePtr()->getAs<clang::PointerType>()) {
+        if(const clang::RecordType *record = pointerType->getPointeeType().getTypePtr()->getAs<clang::RecordType>()) {
             string recordName = record->getDecl()->getNameAsString();
             if(std::find(tollFreeBridgedTypes.begin(), tollFreeBridgedTypes.end(), recordName) != tollFreeBridgedTypes.end()) {
                 // We have found a toll free bridged structure. For now do nothing here.
@@ -234,34 +231,34 @@ TypeEncoding TypeEncodingFactory::createFromTypedefType(const TypedefType* type)
     return this->create(type->getDecl()->getUnderlyingType());
 }
 
-TypeEncoding TypeEncodingFactory::createFromVectorType(const VectorType* type) {
+Type TypeEncodingFactory::createFromVectorType(const clang::VectorType* type) {
     throw TypeEncodingCreationException(type->getTypeClassName(), "Vector type is not supported.", true);
 }
 
-TypeEncoding TypeEncodingFactory::createFromElaboratedType(const clang::ElaboratedType *type) {
+Type TypeEncodingFactory::createFromElaboratedType(const clang::ElaboratedType *type) {
     return this->create(type->getNamedType());
 }
 
-void TypeEncodingFactory::getSignatureOfFunctionProtoType(const FunctionProtoType* type, vector<TypeEncoding>& signature) {
+void TypeEncodingFactory::getSignatureOfFunctionProtoType(const clang::FunctionProtoType* type, vector<Type>& signature) {
     signature.push_back(this->create(type->getReturnType()));
-    for (FunctionProtoType::param_type_iterator it = type->param_type_begin(); it != type->param_type_end(); ++it)
+    for (clang::FunctionProtoType::param_type_iterator it = type->param_type_begin(); it != type->param_type_end(); ++it)
         signature.push_back(this->create(*it));
 }
 
-bool TypeEncodingFactory::isSpecificTypedefType(const TypedefType* type, const std::string& typedefName) {
+bool TypeEncodingFactory::isSpecificTypedefType(const clang::TypedefType* type, const std::string& typedefName) {
     const std::vector<std::string> typedefNames { typedefName };
     return this->isSpecificTypedefType(type, typedefNames);
 }
 
-bool TypeEncodingFactory::isSpecificTypedefType(const TypedefType* type, const std::vector<std::string>& typedefNames) {
-    TypedefNameDecl *decl = type->getDecl();
+bool TypeEncodingFactory::isSpecificTypedefType(const clang::TypedefType* type, const std::vector<std::string>& typedefNames) {
+    clang::TypedefNameDecl *decl = type->getDecl();
     while(decl) {
         if (std::find(typedefNames.begin(), typedefNames.end(), decl->getNameAsString()) != typedefNames.end()) {
             return true;
         }
 
-        Type const *innerType = decl->getUnderlyingType().getTypePtr();
-        if (const TypedefType *innerTypedef = dyn_cast<TypedefType>(innerType)) {
+        clang::Type const *innerType = decl->getUnderlyingType().getTypePtr();
+        if (const clang::TypedefType *innerTypedef = clang::dyn_cast<clang::TypedefType>(innerType)) {
             decl = innerTypedef->getDecl();
         }
         else {

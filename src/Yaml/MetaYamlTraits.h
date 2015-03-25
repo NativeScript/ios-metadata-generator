@@ -23,9 +23,8 @@ LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::RecordField)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::Meta>)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::MethodMeta>)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::PropertyMeta>)
-LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::TypeEncoding)
+LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::Type)
 LLVM_YAML_STRONG_TYPEDEF(std::shared_ptr<Meta::Meta>, BaseMeta)
-LLVM_YAML_STRONG_TYPEDEF(std::shared_ptr<Meta::TypeEncoding>, BaseTypeEncoding)
 
 namespace llvm {
     namespace yaml {
@@ -102,7 +101,7 @@ namespace llvm {
 
             static void bitset(IO& io, Meta::MetaFlags& value) {
 
-                io.bitSetCase(value, "HasName",  Meta::MetaFlags::HasName);
+                //io.bitSetCase(value, "HasName",  Meta::MetaFlags::HasName);
                 io.bitSetCase(value, "IsIosAppExtensionAvailable",    Meta::MetaFlags::IsIosAppExtensionAvailable);
 
                 io.bitSetCase(value, "FunctionIsVariadic", Meta::MetaFlags::FunctionIsVariadic);
@@ -133,6 +132,47 @@ namespace llvm {
             }
         };
 
+        // TypeType
+        template <>
+        struct ScalarEnumerationTraits<Meta::TypeType> {
+            static void enumeration(IO &io, Meta::TypeType& value) {
+                io.enumCase(value, "Void", Meta::TypeType::TypeVoid);
+                io.enumCase(value, "Bool", Meta::TypeType::TypeBool);
+                io.enumCase(value, "Short", Meta::TypeType::TypeShort);
+                io.enumCase(value, "UShort", Meta::TypeType::TypeUShort);
+                io.enumCase(value, "Int", Meta::TypeType::TypeInt);
+                io.enumCase(value, "UInt", Meta::TypeType::TypeUInt);
+                io.enumCase(value, "Long", Meta::TypeType::TypeLong);
+                io.enumCase(value, "ULong", Meta::TypeType::TypeULong);
+                io.enumCase(value, "LongLong", Meta::TypeType::TypeLongLong);
+                io.enumCase(value, "ULongLong", Meta::TypeType::TypeULongLong);
+                io.enumCase(value, "CharS", Meta::TypeType::TypeSignedChar);
+                io.enumCase(value, "UChar", Meta::TypeType::TypeUnsignedChar);
+                io.enumCase(value, "Unichar", Meta::TypeType::TypeUnichar);
+                io.enumCase(value, "CString", Meta::TypeType::TypeCString);
+                io.enumCase(value, "Float", Meta::TypeType::TypeFloat);
+                io.enumCase(value, "Double", Meta::TypeType::TypeDouble);
+                io.enumCase(value, "Selector", Meta::TypeType::TypeSelector);
+                io.enumCase(value, "Class", Meta::TypeType::TypeClass);
+                io.enumCase(value, "Instancetype", Meta::TypeType::TypeInstancetype);
+                io.enumCase(value, "Id", Meta::TypeType::TypeId);
+                io.enumCase(value, "ConstantArray", Meta::TypeType::TypeConstantArray);
+                io.enumCase(value, "IncompleteArray", Meta::TypeType::TypeIncompleteArray);
+                io.enumCase(value, "Interface", Meta::TypeType::TypeInterface);
+                io.enumCase(value, "Pointer", Meta::TypeType::TypePointer);
+                io.enumCase(value, "FunctionPointer", Meta::TypeType::TypeFunctionPointer);
+                io.enumCase(value, "Block", Meta::TypeType::TypeBlock);
+                io.enumCase(value, "Struct", Meta::TypeType::TypeStruct);
+                io.enumCase(value, "Union", Meta::TypeType::TypeUnion);
+                io.enumCase(value, "PureInterface", Meta::TypeType::TypePureInterface);
+                io.enumCase(value, "AnonymousStruct", Meta::TypeType::TypeAnonymousStruct);
+                io.enumCase(value, "AnonymousUnion", Meta::TypeType::TypeAnonymousUnion);
+                io.enumCase(value, "VaList", Meta::TypeType::TypeVaList);
+                io.enumCase(value, "Protocol", Meta::TypeType::TypeProtocol);
+                io.enumCase(value, "Unknown", Meta::TypeType::TypeUnknown);
+            }
+        };
+
         // FQName
         template <>
         struct MappingTraits<Meta::FQName> {
@@ -143,72 +183,83 @@ namespace llvm {
             }
         };
 
-        // shared_ptr<TypeEncoding>
-        template <>
-        struct MappingTraits<std::shared_ptr<Meta::TypeEncoding>> {
-
-            static void mapping(IO &io, std::shared_ptr<Meta::TypeEncoding>& type) {
-                std::string test = "[type]";
-                io.mapRequired("Type", test);
-            }
-        };
-
         // TypeEncoding
         template <>
-        struct MappingTraits<Meta::TypeEncoding> {
+        struct MappingTraits<Meta::Type> {
 
-            static void mapping(IO &io, Meta::TypeEncoding& type) {
-                Meta::TypeEncoding *typePtr = &type;
-                std::string typeName = "[type]";
-                io.mapRequired("Type", typeName);
-//                if(Meta::UnknownEncoding *encoding = dynamic_cast<Meta::UnknownEncoding*>(typePtr))
-//                    typeName = "Unknown";
-//                if(Meta::VaListEncoding *encoding = dynamic_cast<Meta::VaListEncoding*>(typePtr))
-//                    typeName = "VaList";
-//                if(Meta::ProtocolEncoding *encoding = dynamic_cast<Meta::ProtocolEncoding*>(typePtr))
-//                    typeName = "Protocol";
-//                if(Meta::VoidEncoding *encoding = dynamic_cast<Meta::VoidEncoding*>(typePtr))
-//                    typeName = "Void";
-//                if(Meta::BoolEncoding *encoding = dynamic_cast<Meta::BoolEncoding*>(typePtr))
-//                    typeName = "Bool";
-//                if(Meta::ShortEncoding *encoding = dynamic_cast<Meta::ShortEncoding*>(typePtr))
-//                    typeName = "Short";
-//                if(Meta::UShortEncoding *encoding = dynamic_cast<Meta::UShortEncoding*>(typePtr))
-//                    typeName = "Ushort";
-//                if(Meta::IntEncoding *encoding = dynamic_cast<Meta::IntEncoding*>(typePtr))
-//                    typeName = "Int";
-//                if(Meta::UIntEncoding *encoding = dynamic_cast<Meta::UIntEncoding*>(typePtr))
-//                    typeName = "UInt";
-//                if(Meta::LongEncoding *encoding = dynamic_cast<Meta::LongEncoding*>(typePtr))
-//                    typeName = "Long";
-//                if(Meta::ULongEncoding *encoding = dynamic_cast<Meta::ULongEncoding*>(typePtr))
-//                    typeName = "ULong";
-//                if(Meta::LongLongEncoding *encoding = dynamic_cast<Meta::LongLongEncoding*>(typePtr))
-//                    typeName = "LongLong";
-//                if(Meta::ULongLongEncoding *encoding = dynamic_cast<Meta::ULongLongEncoding*>(typePtr))
-//                    typeName = "ULongLong";
-//                if(Meta::UnsignedCharEncoding *encoding = dynamic_cast<Meta::UnsignedCharEncoding*>(typePtr))
-//                    typeName = "UChar";
-//                if(Meta::UnicharEncoding *encoding = dynamic_cast<Meta::UnicharEncoding*>(typePtr))
-//                    typeName = "Unichar";
-//                if(Meta::SignedCharEncoding *encoding = dynamic_cast<Meta::SignedCharEncoding*>(typePtr))
-//                    typeName = "CharS";
-//                if(Meta::CStringEncoding *encoding = dynamic_cast<Meta::CStringEncoding*>(typePtr))
-//                    typeName = "CString";
-//                if(Meta::FloatEncoding *encoding = dynamic_cast<Meta::FloatEncoding*>(typePtr))
-//                    typeName = "Float";
-//                if(Meta::DoubleEncoding *encoding = dynamic_cast<Meta::DoubleEncoding*>(typePtr))
-//                    typeName = "Double";
-//                if(Meta::SelectorEncoding *encoding = dynamic_cast<Meta::SelectorEncoding*>(typePtr))
-//                    typeName = "Selector";
-//                if(Meta::ClassEncoding *encoding = dynamic_cast<Meta::ClassEncoding*>(typePtr))
-//                    typeName = "Class";
-//                if(Meta::InstancetypeEncoding *encoding = dynamic_cast<Meta::InstancetypeEncoding*>(typePtr))
-//                    typeName = "Instancetype";
-//                if(Meta::IdEncoding *encoding = dynamic_cast<Meta::IdEncoding*>(typePtr)) {
-//                    typeName = "Id";
-//                }
-//                io.mapRequired("Type", typeName);
+            static void mapping(IO &io, Meta::Type &type) {
+                Meta::TypeType typeType = type.getType();
+                io.mapRequired("Type", typeType);
+
+                switch (typeType) {
+                    case Meta::TypeType::TypeId : {
+                        Meta::IdTypeDetails &details = type.getDetailsAs<Meta::IdTypeDetails>();
+                        io.mapRequired("WithProtocols", details.protocols);
+                        break;
+                    }
+                    case Meta::TypeType::TypeConstantArray : {
+                        Meta::ConstantArrayTypeDetails &details = type.getDetailsAs<Meta::ConstantArrayTypeDetails>();
+                        io.mapRequired("ArrayType", details.innerType);
+                        io.mapRequired("Size", details.size);
+                        break;
+                    }
+                    case Meta::TypeType::TypeIncompleteArray : {
+                        Meta::IncompleteArrayTypeDetails &details = type.getDetailsAs<Meta::IncompleteArrayTypeDetails>();
+                        io.mapRequired("ArrayType", details.innerType);
+                        break;
+                    }
+                    case Meta::TypeType::TypeInterface : {
+                        Meta::InterfaceTypeDetails &details = type.getDetailsAs<Meta::InterfaceTypeDetails>();
+                        // TODO: every FQName to be yamlized consistently (e.g. Name: { Module: "[value]", JsName: "[value]"} )
+                        io.mapRequired("Module", details.name.module);
+                        io.mapRequired("Name", details.name.jsName);
+                        break;
+                    }
+                    case Meta::TypeType::TypePointer : {
+                        Meta::PointerTypeDetails &details = type.getDetailsAs<Meta::PointerTypeDetails>();
+                        io.mapRequired("PointerType", details.innerType);
+                        break;
+                    }
+                    case Meta::TypeType::TypeFunctionPointer : {
+                        Meta::FunctionPointerTypeDetails &details = type.getDetailsAs<Meta::FunctionPointerTypeDetails>();
+                        io.mapRequired("Signature", details.signature);
+                        break;
+                    }
+                    case Meta::TypeType::TypeBlock : {
+                        Meta::BlockTypeDetails &details = type.getDetailsAs<Meta::BlockTypeDetails>();
+                        io.mapRequired("Signature", details.signature);
+                        break;
+                    }
+                    case Meta::TypeType::TypeStruct : {
+                        Meta::StructTypeDetails &details = type.getDetailsAs<Meta::StructTypeDetails>();
+                        io.mapRequired("Module", details.name.module);
+                        io.mapRequired("Name", details.name.jsName);
+                        break;
+                    }
+                    case Meta::TypeType::TypeUnion : {
+                        Meta::UnionTypeDetails &details = type.getDetailsAs<Meta::UnionTypeDetails>();
+                        io.mapRequired("Module", details.name.module);
+                        io.mapRequired("Name", details.name.jsName);
+                        break;
+                    }
+                    case Meta::TypeType::TypePureInterface : {
+                        Meta::PureInterfaceTypeDetails &details = type.getDetailsAs<Meta::PureInterfaceTypeDetails>();
+                        io.mapRequired("Module", details.name.module);
+                        io.mapRequired("Name", details.name.jsName);
+                        break;
+                    }
+                    case Meta::TypeType::TypeAnonymousStruct : {
+                        Meta::AnonymousStructTypeDetails &details = type.getDetailsAs<Meta::AnonymousStructTypeDetails>();
+                        io.mapRequired("Fields", details.fields);
+                        break;
+                    }
+                    case Meta::TypeType::TypeAnonymousUnion : {
+                        Meta::AnonymousUnionTypeDetails &details = type.getDetailsAs<Meta::AnonymousUnionTypeDetails>();
+                        io.mapRequired("Fields", details.fields);
+                        break;
+                    }
+                    default: { }
+                }
             }
         };
 

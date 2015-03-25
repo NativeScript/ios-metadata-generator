@@ -68,9 +68,7 @@ shared_ptr<Meta::RecordMeta> Meta::MetaFactory::createFromRecord(clang::RecordDe
     populateMetaFields(record, *(recordMeta.get()));
     for(clang::RecordDecl::field_iterator it = record.field_begin(); it != record.field_end(); ++it) {
         clang::FieldDecl *field = *it;
-        RecordField recordField;
-        recordField.name = _identifierGenerator.getJsName(*field);
-        recordField.encoding = this->_typeEncodingFactory.create(field->getType());
+        RecordField recordField(_identifierGenerator.getJsName(*field), this->_typeEncodingFactory.create(field->getType()));
         recordMeta->fields.push_back(recordField);
     }
     return recordMeta;

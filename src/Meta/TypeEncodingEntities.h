@@ -6,80 +6,131 @@
 
 namespace Meta {
 
-    class TypeEncoding { };
+    struct RecordField;
+    struct TypeDetails;
 
-    // primitive types
-    class UnknownEncoding : public TypeEncoding { };
-    class VoidEncoding : public TypeEncoding { };
-    class BoolEncoding : public TypeEncoding { };
-    class ShortEncoding : public TypeEncoding { };
-    class UShortEncoding : public TypeEncoding { };
-    class IntEncoding : public TypeEncoding { };
-    class UIntEncoding : public TypeEncoding { };
-    class LongEncoding : public TypeEncoding { };
-    class ULongEncoding : public TypeEncoding { };
-    class LongLongEncoding : public TypeEncoding { };
-    class ULongLongEncoding : public TypeEncoding { };
-    class SignedCharEncoding : public TypeEncoding { };
-    class UnsignedCharEncoding : public TypeEncoding { };
-    class UnicharEncoding : public TypeEncoding { };
-    class CStringEncoding : public TypeEncoding { };
-    class FloatEncoding : public TypeEncoding { };
-    class DoubleEncoding : public TypeEncoding { };
-
-    class VaListEncoding : public TypeEncoding { };
-    class SelectorEncoding : public TypeEncoding { };
-    class InstancetypeEncoding : public TypeEncoding { };
-    class ProtocolEncoding : public TypeEncoding { };
-
-    class IdEncoding : public TypeEncoding {
-    public:
-        IdEncoding() : IdEncoding(std::vector<FQName>()) {}
-
-        IdEncoding(const std::vector<FQName>& protocols)
-        : protocols(protocols) {}
-
-        std::vector<FQName> protocols;
+    enum TypeType {
+        TypeUnknown,
+        TypeVoid,
+        TypeBool,
+        TypeShort,
+        TypeUShort,
+        TypeInt,
+        TypeUInt,
+        TypeLong,
+        TypeULong,
+        TypeLongLong,
+        TypeULongLong,
+        TypeSignedChar,
+        TypeUnsignedChar,
+        TypeUnichar,
+        TypeCString,
+        TypeFloat,
+        TypeDouble,
+        TypeVaList,
+        TypeSelector,
+        TypeInstancetype,
+        TypeProtocol,
+        TypeClass,
+        TypeId,
+        TypeConstantArray,
+        TypeIncompleteArray,
+        TypePointer,
+        TypeBlock,
+        TypeFunctionPointer,
+        TypeInterface,
+        TypeStruct,
+        TypeUnion,
+        TypePureInterface, // TODO: Remove this type. It is redundant and is never used.
+        TypeAnonymousStruct,
+        TypeAnonymousUnion
     };
 
-    class ClassEncoding : public TypeEncoding {
+    class Type {
     public:
-        ClassEncoding() : ClassEncoding(std::vector<FQName>()) {}
+        Type() : Type(TypeType::TypeUnknown , nullptr) {}
 
-        ClassEncoding(const std::vector<FQName>& protocols)
+        Type(TypeType type)
+                : Type(type, nullptr) {}
+
+        Type(TypeType type, TypeDetails *details)
+                : type(type), details(details) {}
+
+        static Type Unknown() { return Type(TypeType::TypeUnknown); }
+        static Type Void() { return Type(TypeType::TypeVoid); }
+        static Type Bool() { return Type(TypeType::TypeBool); }
+        static Type Short() { return Type(TypeType::TypeShort); }
+        static Type UShort() { return Type(TypeType::TypeUShort); }
+        static Type Int() { return Type(TypeType::TypeInt); }
+        static Type UInt() { return Type(TypeType::TypeUInt); }
+        static Type Long() { return Type(TypeType::TypeLong); }
+        static Type ULong() { return Type(TypeType::TypeULong); }
+        static Type LongLong() { return Type(TypeType::TypeLongLong); }
+        static Type ULongLong() { return Type(TypeType::TypeULongLong); }
+        static Type SignedChar() { return Type(TypeType::TypeSignedChar); }
+        static Type UnsignedChar() { return Type(TypeType::TypeUnsignedChar); }
+        static Type Unichar() { return Type(TypeType::TypeUnichar); }
+        static Type CString() { return Type(TypeType::TypeCString); }
+        static Type Float() { return Type(TypeType::TypeFloat); }
+        static Type Double() { return Type(TypeType::TypeDouble); }
+        static Type VaList() { return Type(TypeType::TypeVaList); }
+        static Type Selector() { return Type(TypeType::TypeSelector); }
+        static Type Instancetype() { return Type(TypeType::TypeInstancetype); }
+        static Type ProtocolType() { return Type(TypeType::TypeProtocol); }
+
+        static Type ClassType(std::vector<FQName> protocols);
+        static Type Id(std::vector<FQName> protocols);
+        static Type ConstantArray(Type innerType, int size);
+        static Type IncompleteArray(Type innerType);
+        static Type Interface(FQName name, std::vector<FQName> protocols);
+        static Type Pointer(Type innerType);
+        static Type Block(std::vector<Type>& signature);
+        static Type FunctionPointer(std::vector<Type>& signature);
+        static Type Struct(FQName name);
+        static Type Union(FQName name);
+        static Type PureInterface(FQName name); // TODO: Remove this method
+        static Type AnonymousStruct(std::vector<RecordField> fields);
+        static Type AnonymousUnion(std::vector<RecordField> fields);
+
+        TypeType getType() const { return type; }
+
+        template<class T>
+        T& getDetailsAs() const { return *std::static_pointer_cast<T>(details).get(); }
+
+    private:
+        TypeType type;
+        std::shared_ptr<TypeDetails> details;
+    };
+
+    struct RecordField {
+        RecordField() : RecordField("", Type()) {}
+
+        RecordField(std::string name, Type encoding)
+                : name(name),
+                  encoding(encoding) {}
+
+        std::string name;
+        Type encoding;
+    };
+
+    struct TypeDetails {};
+
+    struct IdTypeDetails : TypeDetails {
+        IdTypeDetails(std::vector<FQName>& protocols)
                 : protocols(protocols) {}
 
         std::vector<FQName> protocols;
     };
 
-    class ArrayEncoding : public TypeEncoding {
-    public:
-        ArrayEncoding(const TypeEncoding& elementType)
-                : elementType(elementType) {}
+    struct ClassTypeDetails : TypeDetails {
+        ClassTypeDetails(std::vector<FQName>& protocols)
+                : protocols(protocols) {}
 
-        TypeEncoding elementType;
+        std::vector<FQName> protocols;
     };
 
-    class ConstantArrayEncoding : public ArrayEncoding {
-    public:
-        ConstantArrayEncoding(const TypeEncoding& elementType, int size)
-                : ArrayEncoding(elementType),
-                  size(size) {}
-        int size;
-    };
-
-    class IncompleteArrayEncoding : public ArrayEncoding {
-    public:
-        IncompleteArrayEncoding(const TypeEncoding& elementType)
-                : ArrayEncoding(elementType) {}
-    };
-
-    class InterfaceEncoding : public TypeEncoding {
-    public:
-        InterfaceEncoding(const FQName& name)
-                : InterfaceEncoding(name, std::vector<FQName>()) {}
-
-        InterfaceEncoding(const FQName& name, const std::vector<FQName>& protocols)
+    struct InterfaceTypeDetails : TypeDetails {
+        InterfaceTypeDetails(FQName name, std::vector<FQName>& protocols)
                 : name(name),
                   protocols(protocols) {}
 
@@ -87,74 +138,76 @@ namespace Meta {
         std::vector<FQName> protocols;
     };
 
-    class PointerEncoding : public TypeEncoding {
-    public:
-        PointerEncoding(const TypeEncoding& target)
-                : target(target) {}
+    struct IncompleteArrayTypeDetails : TypeDetails {
+        IncompleteArrayTypeDetails(Type innerType)
+                : innerType(innerType) {}
 
-        TypeEncoding target;
+        Type innerType;
     };
 
-    class BlockEncoding : public TypeEncoding {
-    public:
-        BlockEncoding(std::vector<TypeEncoding>& signature)
+    struct ConstantArrayTypeDetails : TypeDetails {
+        ConstantArrayTypeDetails(Type innerType, int size)
+                : innerType(innerType),
+                  size(size) {}
+
+        Type innerType;
+        int size;
+    };
+
+    struct PointerTypeDetails : TypeDetails {
+        PointerTypeDetails(Type innerType)
+                : innerType(innerType) {}
+
+        Type innerType;
+    };
+
+    struct BlockTypeDetails : TypeDetails {
+        BlockTypeDetails(std::vector<Type> signature)
                 : signature(signature) {}
 
-        std::vector<TypeEncoding> signature;
+        std::vector<Type> signature;
     };
 
-    class FunctionPointerEncoding : public TypeEncoding {
-    public:
-        FunctionPointerEncoding(std::vector<TypeEncoding>& signature)
+    struct FunctionPointerTypeDetails : TypeDetails {
+        FunctionPointerTypeDetails(std::vector<Type> signature)
                 : signature(signature) {}
 
-        std::vector<TypeEncoding> signature;
+        std::vector<Type> signature;
     };
 
-    class StructEncoding : public TypeEncoding {
-    public:
-        StructEncoding(const FQName& name)
+    struct StructTypeDetails : TypeDetails {
+        StructTypeDetails(FQName name)
                 : name(name) {}
 
         FQName name;
     };
 
-    class UnionEncoding : public TypeEncoding {
-    public:
-        UnionEncoding(const FQName& name)
+    struct UnionTypeDetails : TypeDetails {
+        UnionTypeDetails(FQName name)
                 : name(name) {}
 
         FQName name;
     };
 
     // TODO: Remove this type. It is redundant and is never used.
-    class InterfaceDeclarationEncoding : public TypeEncoding {
-    public:
-        InterfaceDeclarationEncoding(const FQName& name)
+    struct PureInterfaceTypeDetails : TypeDetails {
+        PureInterfaceTypeDetails(FQName name)
                 : name(name) {}
 
         FQName name;
     };
 
-    class AnonymousRecordEncoding : public TypeEncoding {
-    public:
-        AnonymousRecordEncoding(const std::vector<std::string>& fieldNames, const std::vector<TypeEncoding>& fieldEncodings)
-                : fieldNames(fieldNames),
-                  fieldEncodings(fieldEncodings) {}
+    struct AnonymousStructTypeDetails : TypeDetails {
+        AnonymousStructTypeDetails(std::vector<RecordField>& fields)
+                : fields(fields) {}
 
-        std::vector<std::string> fieldNames;
-        std::vector<TypeEncoding> fieldEncodings;
+        std::vector<RecordField> fields;
     };
 
-    class AnonymousStructEncoding : public AnonymousRecordEncoding {
-    public:
-        AnonymousStructEncoding(const std::vector<std::string>& fieldNames, const std::vector<TypeEncoding>& fieldEncodings)
-                : AnonymousRecordEncoding(fieldNames, fieldEncodings) {}
-    };
+    struct AnonymousUnionTypeDetails : TypeDetails {
+        AnonymousUnionTypeDetails(std::vector<RecordField>& fields)
+                : fields(fields) {}
 
-    class AnonymousUnionEncoding : public AnonymousRecordEncoding {
-    public:
-        AnonymousUnionEncoding(const std::vector<std::string>& fieldNames, const std::vector<TypeEncoding>& fieldEncodings)
-                : AnonymousRecordEncoding(fieldNames, fieldEncodings) {}
+        std::vector<RecordField> fields;
     };
 }
