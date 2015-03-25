@@ -1,13 +1,13 @@
 #pragma once
 
 #include <clang/AST/RecursiveASTVisitor.h>
-#include "TypeEncodingEntities.h"
+#include "TypeEntities.h"
 #include "IdentifierGenerator.h"
 
 namespace Meta {
-    class TypeEncodingFactory {
+    class TypeFactory {
     public:
-        TypeEncodingFactory(clang::ASTUnit *astUnit, IdentifierGenerator identifierGenerator)
+        TypeFactory(clang::ASTUnit *astUnit, IdentifierGenerator identifierGenerator)
         : _astUnit(astUnit),
           _identifierGenerator(identifierGenerator) {}
 
@@ -49,10 +49,10 @@ namespace Meta {
         IdentifierGenerator _identifierGenerator;
     };
 
-    class TypeEncodingCreationException : public std::exception
+    class TypeCreationException : public std::exception
     {
     public:
-        TypeEncodingCreationException(std::string typeName, std::string message, bool isError)
+        TypeCreationException(std::string typeName, std::string message, bool isError)
                 : _typeName(typeName),
                   _message(message),
                   _isError(isError) {}

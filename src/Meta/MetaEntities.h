@@ -2,7 +2,7 @@
 
 #include <string>
 #include <vector>
-#include "TypeEncodingEntities.h"
+#include "TypeEntities.h"
 
 #define UNKNOWN_VERSION { -1, -1, -1 }
 

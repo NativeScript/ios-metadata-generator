@@ -36,7 +36,7 @@ shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl) {
     catch(IdentifierCreationException& e) {
         throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(decl), string("[") + e.whatAsString() + string("]"), true);
     }
-    catch(TypeEncodingCreationException& e) {
+    catch(TypeCreationException & e) {
         throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(decl), string("[") + e.whatAsString() + string("]"), e.isError());
     }
 }

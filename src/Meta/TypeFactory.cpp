@@ -1,9 +1,9 @@
-#include "TypeEncodingFactory.h"
+#include "TypeFactory.h"
 
 using namespace std;
 using namespace Meta;
 
-Type TypeEncodingFactory::create(const clang::Type* type) {
+Type TypeFactory::create(const clang::Type* type) {
     try {
         if (const clang::ConstantArrayType *concreteType = clang::dyn_cast<clang::ConstantArrayType>(type))
             return createFromConstantArrayType(concreteType);
@@ -27,39 +27,39 @@ Type TypeEncodingFactory::create(const clang::Type* type) {
             return createFromTypedefType(concreteType);
         if (const clang::ElaboratedType *concreteType = clang::dyn_cast<clang::ElaboratedType>(type))
             return createFromElaboratedType(concreteType);
-        throw TypeEncodingCreationException(type->getTypeClassName(), "Unable to create encoding for this type.", true);
+        throw TypeCreationException(type->getTypeClassName(), "Unable to create encoding for this type.", true);
     }
     catch(IdentifierCreationException& e) {
-        throw TypeEncodingCreationException(type->getTypeClassName(), string("Identifier Error [") + e.whatAsString() + "]", true);
+        throw TypeCreationException(type->getTypeClassName(), string("Identifier Error [") + e.whatAsString() + "]", true);
     }
 }
 
-Type TypeEncodingFactory::create(const clang::QualType& type) {
+Type TypeFactory::create(const clang::QualType& type) {
     const clang::Type *typePtr = type.getTypePtrOrNull();
     if(typePtr)
         return this->create(typePtr);
-    throw TypeEncodingCreationException(type->getTypeClassName(), "Unable to get the inner type of qualified type.", true);
+    throw TypeCreationException(type->getTypeClassName(), "Unable to get the inner type of qualified type.", true);
 }
 
-Type TypeEncodingFactory::createFromConstantArrayType(const clang::ConstantArrayType* type) {
+Type TypeFactory::createFromConstantArrayType(const clang::ConstantArrayType* type) {
     return Type::ConstantArray(this->create(type->getElementType()), (int)type->getSize().roundToDouble());
 }
 
-Type TypeEncodingFactory::createFromIncompleteArrayType(const clang::IncompleteArrayType* type) {
+Type TypeFactory::createFromIncompleteArrayType(const clang::IncompleteArrayType* type) {
     return Type::IncompleteArray(this->create(type->getElementType()));
 }
 
-Type TypeEncodingFactory::createFromBlockPointerType(const clang::BlockPointerType* type) {
+Type TypeFactory::createFromBlockPointerType(const clang::BlockPointerType* type) {
     const clang::Type *canonicalPointee = type->getPointeeType().getTypePtr()->getCanonicalTypeUnqualified().getTypePtr();
     if(const clang::FunctionProtoType *functionType = clang::dyn_cast<clang::FunctionProtoType>(canonicalPointee)) {
         std::vector<Type> signature;
         this->getSignatureOfFunctionProtoType(functionType, signature);
         return Type::Block(signature);
     }
-    throw TypeEncodingCreationException(type->getTypeClassName(), "Unable to parse a block type.", true);
+    throw TypeCreationException(type->getTypeClassName(), "Unable to parse a block type.", true);
 }
 
-Type TypeEncodingFactory::createFromBuiltinType(const clang::BuiltinType* type) {
+Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type) {
     switch (type->getKind()) {
         case clang::BuiltinType::Kind::Void:
             return Type::Void();
@@ -129,13 +129,13 @@ Type TypeEncodingFactory::createFromBuiltinType(const clang::BuiltinType* type) 
         case clang::BuiltinType::Kind::OCLImage3d:
         case clang::BuiltinType::Kind::OCLSampler:
         case clang::BuiltinType::Kind::OCLEvent:
-            throw TypeEncodingCreationException(type->getName(clang::PrintingPolicy(clang::LangOptions())).str(), string("Not supported builtin type."), true);
+            throw TypeCreationException(type->getName(clang::PrintingPolicy(clang::LangOptions())).str(), string("Not supported builtin type."), true);
         default:
             llvm_unreachable("Invalid builtin type.");
     }
 }
 
-Type TypeEncodingFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type) {
+Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type) {
     vector<FQName> protocols;
     for (clang::ObjCObjectPointerType::qual_iterator it = type->qual_begin(); it != type->qual_end(); ++it) {
         protocols.push_back(_identifierGenerator.getFqName(**it));
@@ -156,10 +156,10 @@ Type TypeEncodingFactory::createFromObjCObjectPointerType(const clang::ObjCObjec
         return Type::Interface(_identifierGenerator.getFqName(*interface), protocols);
     }
 
-    throw TypeEncodingCreationException(type->getTypeClassName(), "Invalid interface pointer type.", true);
+    throw TypeCreationException(type->getTypeClassName(), "Invalid interface pointer type.", true);
 }
 
-Type TypeEncodingFactory::createFromPointerType(const clang::PointerType* type) {
+Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
     clang::QualType qualPointee = type->getPointeeType();
     const clang::Type *pointee = qualPointee.getTypePtr();
     const clang::Type *canonicalPointee = pointee->getCanonicalTypeUnqualified().getTypePtr();
@@ -178,18 +178,18 @@ Type TypeEncodingFactory::createFromPointerType(const clang::PointerType* type) 
     return Type::Pointer(this->create(type->getPointeeType()));
 }
 
-Type TypeEncodingFactory::createFromEnumType(const clang::EnumType* type) {
+Type TypeFactory::createFromEnumType(const clang::EnumType* type) {
     return this->create(type->getDecl()->getIntegerType());
 }
 
-Type TypeEncodingFactory::createFromRecordType(const clang::RecordType* type) {
+Type TypeFactory::createFromRecordType(const clang::RecordType* type) {
     clang::RecordDecl *record = type->getDecl()->getDefinition();
     if(!record) // The record is opaque
         return Type::Void();
     if(record->isUnion())
-        throw TypeEncodingCreationException(type->getTypeClassName(), "The record is union.", true);
+        throw TypeCreationException(type->getTypeClassName(), "The record is union.", true);
     if(!record->isStruct())
-        throw TypeEncodingCreationException(type->getTypeClassName(), "The record is not a struct.", true);
+        throw TypeCreationException(type->getTypeClassName(), "The record is not a struct.", true);
 
     try {
         FQName recordName = this->_identifierGenerator.getFqName(*record);
@@ -210,7 +210,7 @@ static std::vector<std::string> tollFreeBridgedTypes = { "CFArrayRef", "CFAttrib
         "CFErrorRef", "CFLocaleRef", "CFMutableArrayRef", "CFMutableAttributedStringRef", "CFMutableCharacterSetRef", "CFMutableDataRef", "CFMutableDictionaryRef", "CFMutableSetRef",
         "CFMutableStringRef", "CFNumberRef", "CFReadStreamRef", "CFRunLoopTimerRef", "CFSetRef", "CFStringRef", "CFTimeZoneRef", "CFURLRef", "CFWriteStreamRef" };
 
-Type TypeEncodingFactory::createFromTypedefType(const clang::TypedefType* type) {
+Type TypeFactory::createFromTypedefType(const clang::TypedefType* type) {
     std::vector<string> boolTypedefs { "BOOL", "Boolean" };
     if(isSpecificTypedefType(type, boolTypedefs))
         return Type::Bool();
@@ -231,26 +231,26 @@ Type TypeEncodingFactory::createFromTypedefType(const clang::TypedefType* type) 
     return this->create(type->getDecl()->getUnderlyingType());
 }
 
-Type TypeEncodingFactory::createFromVectorType(const clang::VectorType* type) {
-    throw TypeEncodingCreationException(type->getTypeClassName(), "Vector type is not supported.", true);
+Type TypeFactory::createFromVectorType(const clang::VectorType* type) {
+    throw TypeCreationException(type->getTypeClassName(), "Vector type is not supported.", true);
 }
 
-Type TypeEncodingFactory::createFromElaboratedType(const clang::ElaboratedType *type) {
+Type TypeFactory::createFromElaboratedType(const clang::ElaboratedType *type) {
     return this->create(type->getNamedType());
 }
 
-void TypeEncodingFactory::getSignatureOfFunctionProtoType(const clang::FunctionProtoType* type, vector<Type>& signature) {
+void TypeFactory::getSignatureOfFunctionProtoType(const clang::FunctionProtoType* type, vector<Type>& signature) {
     signature.push_back(this->create(type->getReturnType()));
     for (clang::FunctionProtoType::param_type_iterator it = type->param_type_begin(); it != type->param_type_end(); ++it)
         signature.push_back(this->create(*it));
 }
 
-bool TypeEncodingFactory::isSpecificTypedefType(const clang::TypedefType* type, const std::string& typedefName) {
+bool TypeFactory::isSpecificTypedefType(const clang::TypedefType* type, const std::string& typedefName) {
     const std::vector<std::string> typedefNames { typedefName };
     return this->isSpecificTypedefType(type, typedefNames);
 }
 
-bool TypeEncodingFactory::isSpecificTypedefType(const clang::TypedefType* type, const std::vector<std::string>& typedefNames) {
+bool TypeFactory::isSpecificTypedefType(const clang::TypedefType* type, const std::vector<std::string>& typedefNames) {
     clang::TypedefNameDecl *decl = type->getDecl();
     while(decl) {
         if (std::find(typedefNames.begin(), typedefNames.end(), decl->getNameAsString()) != typedefNames.end()) {

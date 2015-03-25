@@ -1,4 +1,4 @@
-#include "TypeEncodingEntities.h"
+#include "TypeEntities.h"
 
 using namespace Meta;
 

@@ -5,7 +5,7 @@
 #include <clang/Lex/HeaderSearch.h>
 #include <clang/AST/RecursiveASTVisitor.h>
 #include "MetaEntities.h"
-#include "TypeEncodingFactory.h"
+#include "TypeFactory.h"
 #include "IdentifierGenerator.h"
 
 namespace Meta {
@@ -56,7 +56,7 @@ namespace Meta {
 
         clang::ASTUnit *_astUnit;
         IdentifierGenerator _identifierGenerator;
-        TypeEncodingFactory _typeEncodingFactory;
+        TypeFactory _typeEncodingFactory;
     };
 
     class MetaCreationException : public std::exception

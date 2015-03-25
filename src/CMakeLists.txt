@@ -4,8 +4,8 @@ set(GENERATOR_SOURCES
     Meta/DeclarationConverterVisitor.cpp
     Meta/MetaFactory.cpp
     Meta/MetaEntities.cpp
-    Meta/TypeEncodingFactory.cpp
-    Meta/TypeEncodingEntities.cpp
+    Meta/TypeFactory.cpp
+    Meta/TypeEntities.cpp
     Meta/IdentifierGenerator.cpp
 )
 
