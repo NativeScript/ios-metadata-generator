@@ -38,8 +38,18 @@ namespace Meta {
 
         Type createFromElaboratedType(const clang::ElaboratedType *type);
 
+        Type createFromAdjustedType(const clang::AdjustedType *type);
+
+        Type createFromFunctionProtoType(const clang::FunctionProtoType *type);
+
+        Type createFromFunctionNoProtoType(const clang::FunctionNoProtoType *type);
+
+        Type createFromParenType(const clang::ParenType *type);
+
         // helper methods
         void getSignatureOfFunctionProtoType(const clang::FunctionProtoType* type, std::vector<Type>& signature);
+
+        void getSignatureOfParenType(const clang::ParenType* type, std::vector<Type>& signature);
 
         bool isSpecificTypedefType(const clang::TypedefType* type, const std::string& typedefName);
 

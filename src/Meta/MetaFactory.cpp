@@ -1,14 +1,40 @@
 #include "MetaFactory.h"
 #include <llvm/Support/Casting.h>
 #include <sstream>
+#include <algorithm>
+#include <AddressBook/AddressBook.h>
 
 using namespace std;
 
-bool protocolsComparerByJsName(Meta::FQName& protocol1, Meta::FQName& protocol2) { return (protocol1.jsName < protocol2.jsName); }
+bool protocolsComparerByJsName(Meta::FQName& protocol1, Meta::FQName& protocol2) {
+    string name1 = protocol1.jsName;
+    string name2 = protocol2.jsName;
+    std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower) < std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
+    return name1 < name2;
+}
 
-bool methodsComparerByJsName(std::shared_ptr<Meta::MethodMeta>& method1, std::shared_ptr<Meta::MethodMeta>& method2) { return (method1->jsName < method2->jsName); }
+bool methodsComparerByJsName(std::shared_ptr<Meta::MethodMeta>& method1, std::shared_ptr<Meta::MethodMeta>& method2) {
+    string name1 = method1->jsName;
+    string name2 = method2->jsName;
+    std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower) < std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
+    return name1 < name2;
+}
 
-bool propertiesComparerByJsName(std::shared_ptr<Meta::PropertyMeta>& property1, std::shared_ptr<Meta::PropertyMeta>& property2) { return (property1->jsName < property2->jsName); }
+bool propertiesComparerByJsName(std::shared_ptr<Meta::PropertyMeta>& property1, std::shared_ptr<Meta::PropertyMeta>& property2) {
+    string name1 = property1->jsName;
+    string name2 = property2->jsName;
+    std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower) < std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
+    return name1 < name2;
+}
+
+bool stringBeginsWith(std::string& str, std::vector<std::string>& possibleBegins) {
+    for (int i = 0; i < possibleBegins.size(); ++i) {
+        if(possibleBegins[i].length() <= str.length() && str.compare(0, possibleBegins[i].size(), possibleBegins[i]) == 0) {
+            return true;
+        }
+    }
+    return false;
+}
 
 shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl) {
     try {
@@ -20,6 +46,8 @@ shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl) {
             return createFromVar(*var);
         else if (clang::EnumDecl *enumDecl = clang::dyn_cast<clang::EnumDecl>(&decl))
             return createFromEnum(*enumDecl);
+        else if (clang::EnumConstantDecl *enumConstantDecl = clang::dyn_cast<clang::EnumConstantDecl>(&decl))
+            return createFromEnumConstant(*enumConstantDecl);
         else if (clang::ObjCInterfaceDecl *ineterface = clang::dyn_cast<clang::ObjCInterfaceDecl>(&decl))
             return createFromInterface(*ineterface);
         else if (clang::ObjCProtocolDecl *protocol = clang::dyn_cast<clang::ObjCProtocolDecl>(&decl))
@@ -42,6 +70,11 @@ shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl) {
 }
 
 shared_ptr<Meta::FunctionMeta> Meta::MetaFactory::createFromFunction(clang::FunctionDecl& function) {
+    if(function.isThisDeclarationADefinition()) {
+        // The function is defined in headers
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(function), "The function is defined in headers.", false);
+    }
+
     // TODO: We don't support variadic functions but we save in metadata flags whether a function is variadic or not.
     // If we not plan in the future to support variadic functions this redundant flag should be removed.
     if (function.isVariadic())
@@ -49,41 +82,74 @@ shared_ptr<Meta::FunctionMeta> Meta::MetaFactory::createFromFunction(clang::Func
 
     shared_ptr<FunctionMeta> functionMeta = make_shared<FunctionMeta>();
     populateMetaFields(function, *(functionMeta.get()));
+
+    // set IsVariadic
     functionMeta->setFlags(MetaFlags::FunctionIsVariadic, function.isVariadic());
+
+    // set OwnsReturnedCocoaObjects
     functionMeta->setFlags(MetaFlags::FunctionOwnsReturnedCocoaObject, this->getAttributes<clang::NSReturnsRetainedAttr>(function).size() > 0);
-    functionMeta->signature.push_back(this->_typeEncodingFactory.create(function.getReturnType()));
+
+    // set signature
+    functionMeta->signature.push_back(this->_typeFactory.create(function.getReturnType()));
     for (clang::FunctionDecl::param_const_iterator it = function.param_begin(); it != function.param_end(); ++it) {
         clang::ParmVarDecl *param = *it;
-        functionMeta->signature.push_back(this->_typeEncodingFactory.create(param->getType()));
+        functionMeta->signature.push_back(this->_typeFactory.create(param->getType()));
     }
+
     return functionMeta;
 }
 
 shared_ptr<Meta::RecordMeta> Meta::MetaFactory::createFromRecord(clang::RecordDecl& record) {
+    if(!record.isThisDeclarationADefinition()) {
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(record), "A formard declaration of record.", false);
+    }
+
     if(record.isUnion())
         throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(record), "The record is union.", false);
     if(!record.isStruct())
         throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(record), "The record is not a struct.", false);
+
     shared_ptr<RecordMeta> recordMeta(record.isStruct() ? (RecordMeta*)(new StructMeta()) : (RecordMeta*)(new UnionMeta()));
     populateMetaFields(record, *(recordMeta.get()));
+
+    // set fields
     for(clang::RecordDecl::field_iterator it = record.field_begin(); it != record.field_end(); ++it) {
         clang::FieldDecl *field = *it;
-        RecordField recordField(_identifierGenerator.getJsName(*field), this->_typeEncodingFactory.create(field->getType()));
+        RecordField recordField(_identifierGenerator.getJsName(*field), this->_typeFactory.create(field->getType()));
         recordMeta->fields.push_back(recordField);
     }
+
     return recordMeta;
 }
 
 std::shared_ptr<Meta::VarMeta> Meta::MetaFactory::createFromVar(clang::VarDecl& var) {
+    // TODO: We don't check var->isThisDeclarationADefinition() which includes all extern variable declarations.
+    // Some variables may be added more than once (once for the actual declaration and once for each extern declaration). We can unique them by name.
+    // Also this assumption may be wrong, it is not tested.
+
+    if(var.getKind() != clang::Decl::Kind::Var) {
+        // It is not exactly a VarDecl but an inheritor of VarDecl (e.g. ParmVarDecl)
+        throw MetaCreationException(Identifier(var.getNameAsString(), "", ""), "Not a var declaration.", false);
+    }
+    if(var.getLexicalDeclContext() != var.getASTContext().getTranslationUnitDecl()) {
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(var), "A nested var.", false);
+    }
+
     shared_ptr<VarMeta> varMeta = make_shared<VarMeta>();
     populateMetaFields(var, *(varMeta.get()));
-    varMeta->signature = this->_typeEncodingFactory.create(var.getType());
+
+    //set type
+    varMeta->signature = this->_typeFactory.create(var.getType());
     return varMeta;
 }
 
 std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumDecl& enumeration) {
+    if(!enumeration.isThisDeclarationADefinition()) {
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(enumeration), "Froward declaration of enum.", false);
+    }
+
     std::ostringstream stringStream;
-    stringStream << "__tsEnum(";
+    stringStream << "__tsEnum({";
     bool isFirstField = true;
     for (clang::EnumDecl::enumerator_iterator it = enumeration.enumerator_begin(); it != enumeration.enumerator_end() ; ++it) {
         clang::EnumConstantDecl *enumField = *it;
@@ -92,14 +158,33 @@ std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumD
         stringStream << (isFirstField ? "" : ",") << "\"" << _identifierGenerator.getJsName(*enumField) << "\":" << std::string(value.data(), value.size());
         isFirstField = false;
     }
-    stringStream << ")";
+    stringStream << "})";
     std::string jsCode = stringStream.str();
     shared_ptr<JsCodeMeta> jsCodeMeta = make_shared<JsCodeMeta>();
     populateMetaFields(enumeration, *(jsCodeMeta.get()));
     return jsCodeMeta;
 }
 
+std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnumConstant(clang::EnumConstantDecl& enumConstant) {
+    if(clang::EnumDecl *parentEnum = clang::dyn_cast<clang::EnumDecl>(enumConstant.getLexicalDeclContext())) {
+        if(!parentEnum->hasNameForLinkage()) {
+            shared_ptr<JsCodeMeta> jsCodeMeta = make_shared<JsCodeMeta>();
+            populateMetaFields(enumConstant, *(jsCodeMeta.get()));
+            llvm::SmallVector<char, 10> value;
+            enumConstant.getInitVal().toString(value, 10, enumConstant.getInitVal().isSigned());
+            jsCodeMeta->jsCode = std::string(value.data(), value.size());
+            return jsCodeMeta;
+        }
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(enumConstant), "The containing enum is not anonymous.", false);
+    }
+    throw std::runtime_error("Invalid enum constant declaration.");
+}
+
 shared_ptr<Meta::InterfaceMeta> Meta::MetaFactory::createFromInterface(clang::ObjCInterfaceDecl& interface) {
+    if(!interface.isThisDeclarationADefinition()) {
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(interface), "A forward declaration of interface.", false);
+    }
+
     shared_ptr<InterfaceMeta> interfaceMeta = make_shared<InterfaceMeta>();
     populateMetaFields(interface, *(interfaceMeta.get()));
     populateBaseClassMetaFields(interface, *(interfaceMeta.get()));
@@ -112,6 +197,10 @@ shared_ptr<Meta::InterfaceMeta> Meta::MetaFactory::createFromInterface(clang::Ob
 }
 
 shared_ptr<Meta::ProtocolMeta> Meta::MetaFactory::createFromProtocol(clang::ObjCProtocolDecl& protocol) {
+    if(!protocol.isThisDeclarationADefinition()) {
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(protocol), "A forward declaration of protocol.", false);
+    }
+
     shared_ptr<ProtocolMeta> protocolMeta = make_shared<ProtocolMeta>();
     populateMetaFields(protocol, *(protocolMeta.get()));
     populateBaseClassMetaFields(protocol, *(protocolMeta.get()));
@@ -122,11 +211,11 @@ shared_ptr<Meta::CategoryMeta> Meta::MetaFactory::createFromCategory(clang::ObjC
     shared_ptr<CategoryMeta> categoryMeta = make_shared<CategoryMeta>();
     populateMetaFields(category, *(categoryMeta.get()));
     populateBaseClassMetaFields(category, *(categoryMeta.get()));
+    categoryMeta->extendedInterface = _identifierGenerator.getFqName(*category.getClassInterface());
     return categoryMeta;
 }
 
 shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMethodDecl& method) {
-    // TODO: Check if method->hasRelatedResultType() is true and replace the return type with instancetype
     shared_ptr<MethodMeta> methodMeta = make_shared<MethodMeta>();
     populateMetaFields(method, *(methodMeta.get()));
 
@@ -142,7 +231,11 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
     methodMeta->setFlags(MetaFlags::MethodIsVariadic, method.isVariadic());
 
     // set MethodIsNilTerminatedVariadic
-    methodMeta->setFlags(MetaFlags::MethodIsNullTerminatedVariadic, method.isVariadic() && this->getAttributes<clang::SentinelAttr>(method).size() > 0);
+    bool isNullTerminatedVariadic = method.isVariadic() && this->getAttributes<clang::SentinelAttr>(method).size() > 0;
+    methodMeta->setFlags(MetaFlags::MethodIsNullTerminatedVariadic, isNullTerminatedVariadic);
+
+    if(method.isVariadic() && !isNullTerminatedVariadic)
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(method), "Method is variadic (and is not marked as nil terminated.).", false);
 
     // set MethodOwnsReturnedCocoaObject flag
     bool nsReturnsRetainedAttr = this->getAttributes<clang::NSReturnsRetainedAttr>(method).size() > 0;
@@ -154,14 +247,15 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
     else if(nsReturnsNotRetainedAttr)
         methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject ,  false);
     else {
-        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, false);
         vector<string> selectorBegins = { "alloc", "new", "copy", "mutableCopy" };
-        for (int i = 0; i < selectorBegins.size(); ++i) {
-            if(selectorBegins[i].compare(0, methodMeta->selector.size(), methodMeta->selector)) {
-                methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, true);
-                break;
-            }
-        }
+        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, stringBeginsWith(methodMeta->selector, selectorBegins));
+    }
+
+    // set signature
+    methodMeta->signature.push_back(method.hasRelatedResultType() ? Type::Instancetype() : this->_typeFactory.create(method.getReturnType()));
+    for (clang::FunctionDecl::param_const_iterator it = method.param_begin(); it != method.param_end(); ++it) {
+        clang::ParmVarDecl *param = *it;
+        methodMeta->signature.push_back(this->_typeFactory.create(param->getType()));
     }
 
     return methodMeta;
@@ -194,6 +288,10 @@ void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
     clang::AvailabilityAttr *iosExtensionsAvailability = nullptr;
 
     // Traverse attributes
+    bool hasUnavailableAttr = this->getAttributes<clang::UnavailableAttr>(decl).size() > 0;
+    if(hasUnavailableAttr) {
+        throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(decl), "The declaration is marked unvailable (with unavailable attribute).", false);
+    }
     vector<clang::AvailabilityAttr*> availabilityAttr = this->getAttributes<clang::AvailabilityAttr>(decl);
     for (vector<clang::AvailabilityAttr*>::iterator i = availabilityAttr.begin(); i != availabilityAttr.end(); ++i) {
         clang::AvailabilityAttr *availability = *i;
@@ -236,25 +334,45 @@ void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& de
     llvm::iterator_range<clang::ObjCProtocolList::iterator> protocols = this->getProtocols(&decl);
     for (clang::ObjCProtocolList::iterator i = protocols.begin(); i != protocols.end() ; ++i) {
         clang::ObjCProtocolDecl *protocol = *i;
-        baseClass.protocols.push_back(_identifierGenerator.getFqName(*protocol));
+        try {
+            baseClass.protocols.push_back(_identifierGenerator.getFqName(*protocol));
+        } catch(IdentifierCreationException& e) {
+            continue;
+        }
     }
     std::sort(baseClass.protocols.begin(), baseClass.protocols.end(), protocolsComparerByJsName); // order by jsName
 
     for (clang::ObjCContainerDecl::classmeth_iterator i = decl.classmeth_begin(); i != decl.classmeth_end(); ++i) {
         clang::ObjCMethodDecl& classMethod = **i;
-        baseClass.staticMethods.push_back(static_pointer_cast<MethodMeta>(this->create(classMethod)));
+        if(!classMethod.isImplicit()) {
+            try {
+                baseClass.staticMethods.push_back(static_pointer_cast<MethodMeta>(this->create(classMethod)));
+            } catch (MetaCreationException& e) {
+                continue;
+            }
+        }
     }
     std::sort(baseClass.staticMethods.begin(), baseClass.staticMethods.end(), methodsComparerByJsName); // order by jsName
 
     for (clang::ObjCContainerDecl::instmeth_iterator i = decl.instmeth_begin(); i != decl.instmeth_end(); ++i) {
         clang::ObjCMethodDecl& instanceMethod = **i;
-        baseClass.instanceMethods.push_back(static_pointer_cast<MethodMeta>(this->create(instanceMethod)));
+        if(!instanceMethod.isImplicit()) {
+            try {
+                baseClass.instanceMethods.push_back(static_pointer_cast<MethodMeta>(this->create(instanceMethod)));
+            } catch(MetaCreationException& e) {
+                continue;
+            }
+        }
     }
     std::sort(baseClass.instanceMethods.begin(), baseClass.instanceMethods.end(), methodsComparerByJsName); // order by jsName
 
     for (clang::ObjCContainerDecl::prop_iterator i = decl.prop_begin(); i != decl.prop_end(); ++i) {
         clang::ObjCPropertyDecl& property = **i;
-        baseClass.properties.push_back(static_pointer_cast<PropertyMeta>(this->create(property)));
+        try {
+            baseClass.properties.push_back(static_pointer_cast<PropertyMeta>(this->create(property)));
+        } catch(MetaCreationException& e) {
+            continue;
+        }
     }
     std::sort(baseClass.properties.begin(), baseClass.properties.end(), propertiesComparerByJsName); // order by jsName
 }

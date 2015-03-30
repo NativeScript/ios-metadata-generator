@@ -26,11 +26,15 @@ namespace Meta {
 
         bool VisitEnumDecl(clang::EnumDecl *enumDecl);
 
+        bool VisitEnumConstantDecl(clang::EnumConstantDecl *enumConstant);
+
         bool VisitRecordDecl(clang::RecordDecl *record);
 
         bool VisitObjCInterfaceDecl(clang::ObjCInterfaceDecl *interface);
 
         bool VisitObjCProtocolDecl(clang::ObjCProtocolDecl *protocol);
+
+        bool VisitObjCCategoryDecl(clang::ObjCCategoryDecl *protocol);
 
     private:
         template<class T>
@@ -38,7 +42,8 @@ namespace Meta {
             try {
                 addToResult(this->_metaFactory.create(*decl));
             } catch(MetaCreationException& e) {
-                std::cout << e.whatAsString() << std::endl;
+                if(e.isError())
+                    std::cout << e.whatAsString() << std::endl;
             }
             return true;
         }

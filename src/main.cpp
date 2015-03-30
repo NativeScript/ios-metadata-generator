@@ -1,8 +1,11 @@
 #include "HeadersParser/Parser.h"
 #include "Meta/DeclarationConverterVisitor.h"
 #include "Yaml/YamlSerializer.h"
+#include <ctime>
 
 int main(int argc, const char** argv) {
+    std::clock_t begin = clock();
+
     std::vector<std::string> arguments;
     for (int i = 1; i < argc; i++) {
         arguments.push_back(argv[i]);
@@ -39,8 +42,12 @@ int main(int argc, const char** argv) {
     // Serialize Meta objects to Yaml
     for (std::map<std::string, std::shared_ptr<Meta::Module>>::const_iterator it = topLevelModules.begin(); it != topLevelModules.end(); ++it) {
         std::string topLevelModuleName = it->second->getName();
-        Yaml::YamlSerializer::serialize<Meta::Module>(std::string("/Users/buhov/Desktop/Yaml/") + topLevelModuleName + ".yaml", *it->second.get());
+        Yaml::YamlSerializer::serialize<Meta::Module>(std::string("/Users/buhov/Desktop/new-generator-yaml/") + topLevelModuleName + ".yaml", *it->second.get());
     }
+
+    std::clock_t end = clock();
+    double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+    printf("Running time: %f sec", elapsed_secs);
 
     return 0;
 }

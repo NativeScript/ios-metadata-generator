@@ -14,6 +14,7 @@ std::unique_ptr<clang::ASTUnit> HeadersParser::Parser::parse(ParserSettings& set
             "-arch", settings.getArchitecture(),
             "-target", "arm-apple-darwin",
             "-std=gnu99",
+            "-fno-objc-arc",
             "-miphoneos-version-min=7.0",
             "-fmodule-maps",
             // TODO: remove these lines

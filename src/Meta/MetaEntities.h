@@ -15,24 +15,26 @@ namespace Meta {
     };
 
     // TODO: Change values (and maybe rename) some of the flag values
-    enum MetaFlags : uint8_t {
-        None = 0,
+    // TODO: Change binary conversation of the flags not to depend on the actual integral value of the flags.
+    enum MetaFlags : uint16_t {
+        // Common
+        None                                  = 0,
+        HasName                               = 1 << 1,
+        IsIosAppExtensionAvailable            = 1 << 2,
+        // Function
+        FunctionIsVariadic                    = 1 << 3,
+        FunctionOwnsReturnedCocoaObject       = 1 << 4,
+        // Method
+        MethodIsVariadic                      = 1 << 5,
+        MethodIsNullTerminatedVariadic        = 1 << 6,
+        MethodOwnsReturnedCocoaObject         = 1 << 7,
+        // Property
+        PropertyHasGetter                     = 1 << 8,
+        PropertyHasSetter                     = 1 << 9,
 
-        HasName = 1 << 7,
-        IsIosAppExtensionAvailable = 1 << 6,
-
-        FunctionIsVariadic = 1 << 5,
-        FunctionOwnsReturnedCocoaObject = 1 << 4,
         // TODO: remove these flags
-        MemberIsLocalJsNameDuplicate = 1 << 0,
-        MemberHasJsNameDuplicateInHierarchy = 1 << 1,
-
-        MethodIsVariadic = 1 << 2,
-        MethodIsNullTerminatedVariadic = 1 << 3,
-        MethodOwnsReturnedCocoaObject = 1 << 4,
-
-        PropertyHasGetter = 1 << 2,
-        PropertyHasSetter = 1 << 3
+        MemberIsLocalJsNameDuplicate          = 1 << 10,
+        MemberHasJsNameDuplicateInHierarchy   = 1 << 11,
     };
 
     enum MetaType {
@@ -44,7 +46,9 @@ namespace Meta {
         Var,
         Interface,
         Protocol,
-        Category
+        Category,
+        Method,
+        Property
     };
 
     class Meta {
@@ -77,7 +81,9 @@ namespace Meta {
 
     class MethodMeta : public Meta {
     public:
-        MethodMeta() : Meta() { }
+        MethodMeta() : Meta() {
+            this->type = MetaType::Method;
+        }
 
         std::string selector;
         std::string typeEncoding;
@@ -88,7 +94,9 @@ namespace Meta {
 
     class PropertyMeta : public Meta {
     public:
-        PropertyMeta() : Meta() { }
+        PropertyMeta() : Meta() {
+            this->type = MetaType::Property;
+        }
 
         std::shared_ptr<MethodMeta> getter;
         std::shared_ptr<MethodMeta> setter;

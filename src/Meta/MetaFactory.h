@@ -15,7 +15,7 @@ namespace Meta {
         MetaFactory(clang::ASTUnit *astUnit)
                 : _astUnit(astUnit),
                   _identifierGenerator(astUnit, IdentifierGenerator::getIosSdkNamesToRecalculate()),
-                  _typeEncodingFactory(_astUnit, _identifierGenerator) {}
+                  _typeFactory(_astUnit, _identifierGenerator) {}
 
         std::shared_ptr<Meta> create(clang::Decl& decl);
 
@@ -26,6 +26,8 @@ namespace Meta {
         std::shared_ptr<VarMeta> createFromVar(clang::VarDecl& var);
 
         std::shared_ptr<JsCodeMeta> createFromEnum(clang::EnumDecl& enumeration);
+
+        std::shared_ptr<JsCodeMeta> createFromEnumConstant(clang::EnumConstantDecl& enumConstant);
 
         std::shared_ptr<InterfaceMeta> createFromInterface(clang::ObjCInterfaceDecl& interface);
 
@@ -56,7 +58,7 @@ namespace Meta {
 
         clang::ASTUnit *_astUnit;
         IdentifierGenerator _identifierGenerator;
-        TypeFactory _typeEncodingFactory;
+        TypeFactory _typeFactory;
     };
 
     class MetaCreationException : public std::exception

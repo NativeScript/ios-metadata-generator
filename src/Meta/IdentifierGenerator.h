@@ -22,6 +22,14 @@ namespace Meta {
 
     struct Identifier {
     public:
+        Identifier()
+                : Identifier("", "", "") {}
+
+        Identifier(std::string name, std::string module, std::string fileName)
+                : name(name),
+                  module(module),
+                  fileName(fileName) {}
+
         std::string name;
         std::string module;
         std::string fileName;

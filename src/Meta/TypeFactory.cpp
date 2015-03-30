@@ -1,7 +1,12 @@
 #include "TypeFactory.h"
+#include <iostream>
 
 using namespace std;
 using namespace Meta;
+
+static std::vector<std::string> tollFreeBridgedTypes = { "CFArrayRef", "CFAttributedStringRef", "CFCalendarRef", "CFCharacterSetRef", "CFDataRef", "CFDateRef", "CFDictionaryRef",
+        "CFErrorRef", "CFLocaleRef", "CFMutableArrayRef", "CFMutableAttributedStringRef", "CFMutableCharacterSetRef", "CFMutableDataRef", "CFMutableDictionaryRef", "CFMutableSetRef",
+        "CFMutableStringRef", "CFNumberRef", "CFReadStreamRef", "CFRunLoopTimerRef", "CFSetRef", "CFStringRef", "CFTimeZoneRef", "CFURLRef", "CFWriteStreamRef" };
 
 Type TypeFactory::create(const clang::Type* type) {
     try {
@@ -27,6 +32,14 @@ Type TypeFactory::create(const clang::Type* type) {
             return createFromTypedefType(concreteType);
         if (const clang::ElaboratedType *concreteType = clang::dyn_cast<clang::ElaboratedType>(type))
             return createFromElaboratedType(concreteType);
+        if (const clang::AdjustedType *concreteType = clang::dyn_cast<clang::AdjustedType>(type))
+            return createFromAdjustedType(concreteType);
+        if(const clang::FunctionProtoType *concreteType = clang::dyn_cast<clang::FunctionProtoType>(type))
+            return createFromFunctionProtoType(concreteType);
+        if(const clang::FunctionNoProtoType *concreteType = clang::dyn_cast<clang::FunctionNoProtoType>(type))
+            return createFromFunctionNoProtoType(concreteType);
+        if(const clang::ParenType *concreteType = clang::dyn_cast<clang::ParenType>(type))
+            return createFromParenType(concreteType);
         throw TypeCreationException(type->getTypeClassName(), "Unable to create encoding for this type.", true);
     }
     catch(IdentifierCreationException& e) {
@@ -50,12 +63,12 @@ Type TypeFactory::createFromIncompleteArrayType(const clang::IncompleteArrayType
 }
 
 Type TypeFactory::createFromBlockPointerType(const clang::BlockPointerType* type) {
-    const clang::Type *canonicalPointee = type->getPointeeType().getTypePtr()->getCanonicalTypeUnqualified().getTypePtr();
-    if(const clang::FunctionProtoType *functionType = clang::dyn_cast<clang::FunctionProtoType>(canonicalPointee)) {
-        std::vector<Type> signature;
-        this->getSignatureOfFunctionProtoType(functionType, signature);
-        return Type::Block(signature);
+    const clang::Type *pointee = type->getPointeeType().getTypePtr();
+    Type pointeeType = this->create(pointee);
+    if(pointeeType.getType() == TypeType::TypeFunctionPointer) {
+        return Type::Block(pointeeType.getDetailsAs<FunctionPointerTypeDetails>().signature);
     }
+
     throw TypeCreationException(type->getTypeClassName(), "Unable to parse a block type.", true);
 }
 
@@ -66,9 +79,7 @@ Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type) {
         case clang::BuiltinType::Kind::Bool:
             return Type::Bool();
         case clang::BuiltinType::Kind::Char_S:
-            return Type::SignedChar();
         case clang::BuiltinType::Kind::Char_U:
-            return Type::UnsignedChar();
         case clang::BuiltinType::Kind::SChar:
             return Type::SignedChar();
         case clang::BuiltinType::Kind::Short:
@@ -96,12 +107,13 @@ Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type) {
             // Objective-C does not support the long double type. @encode(long double) returns d, which is the same encoding as for double.
         case clang::BuiltinType::Kind::LongDouble:
             return Type::Double();
-        case clang::BuiltinType::Kind::ObjCSel:
             return Type::Selector();
 
-        // ObjCId and ObjCClass builtin types should never enter in this method because these types should be handled on upper level.
+        // ObjCSel, ObjCId and ObjCClass builtin types should never enter in this method because these types should be handled on upper level.
+        // The 'SEL' type is represented as pointer to BuiltinType of kind ObjCSel.
         // The 'id' type is actually represented by clang as TypedefType to ObjCObjectPointerType whose pointee is an ObjCObjectType with base BuiltinType::ObjCIdType.
         // This is also valid for ObjCClass type.
+        case clang::BuiltinType::Kind::ObjCSel:
         case clang::BuiltinType::Kind::ObjCId:
         case clang::BuiltinType::Kind::ObjCClass:
 
@@ -146,36 +158,37 @@ Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointer
     if(type->isObjCClassType() || type->isObjCQualifiedClassType()) {
         return Type::ClassType(protocols);
     }
-    if(const clang::ObjCInterfaceType *interfaceType = clang::dyn_cast<clang::ObjCInterfaceType>(type->getObjectType())) {
-        clang::ObjCInterfaceDecl *interface = interfaceType->getDecl();
+
+
+    if(clang::ObjCInterfaceDecl *interface = type->getObjectType()->getInterface()) {
         // TODO: Make the check for Protocol more precise (e. g. check the module of interface if is equal to the
         // module of Protocol interface (and maybe file in which is defined, but it may be different in future SDK))
-        if(interface->getNameAsString() == "Protocol")
+        if (interface->getNameAsString() == "Protocol")
             return Type::ProtocolType();
 
         return Type::Interface(_identifierGenerator.getFqName(*interface), protocols);
     }
 
-    throw TypeCreationException(type->getTypeClassName(), "Invalid interface pointer type.", true);
+    throw TypeCreationException(type->getObjectType()->getTypeClassName(), "Invalid interface pointer type.", true);
 }
 
 Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
     clang::QualType qualPointee = type->getPointeeType();
     const clang::Type *pointee = qualPointee.getTypePtr();
-    const clang::Type *canonicalPointee = pointee->getCanonicalTypeUnqualified().getTypePtr();
 
-    if(const clang::FunctionProtoType *functionType = clang::dyn_cast<clang::FunctionProtoType>(canonicalPointee)) {
-        std::vector<Type> signature;
-        this->getSignatureOfFunctionProtoType(functionType, signature);
-        return Type::FunctionPointer(signature);
-    }
-    // TODO: Maybe we can cast canonicalPointee instead of pointee
-    if(const clang::BuiltinType *builtinType = clang::dyn_cast<clang::BuiltinType>(pointee)) {
+    const clang::Type *canonicalPointee = pointee->getCanonicalTypeInternal().getTypePtr();
+    if(const clang::BuiltinType *builtinType = clang::dyn_cast<clang::BuiltinType>(canonicalPointee)) {
+        if(builtinType->getKind() == clang::BuiltinType::Kind::ObjCSel)
+            return Type::Selector();
         if(builtinType->getKind() == clang::BuiltinType::Kind::Char_S || builtinType->getKind() == clang::BuiltinType::Kind::UChar)
             return Type::CString();
     }
 
-    return Type::Pointer(this->create(type->getPointeeType()));
+    if(clang::isa<clang::ParenType>(pointee)) {
+        // if is a FunctionPointerType don't wrap the type in another pointer type
+        return this->create(qualPointee);
+    }
+    return Type::Pointer(this->create(qualPointee));
 }
 
 Type TypeFactory::createFromEnumType(const clang::EnumType* type) {
@@ -206,16 +219,14 @@ Type TypeFactory::createFromRecordType(const clang::RecordType* type) {
     }
 }
 
-static std::vector<std::string> tollFreeBridgedTypes = { "CFArrayRef", "CFAttributedStringRef", "CFCalendarRef", "CFCharacterSetRef", "CFDataRef", "CFDateRef", "CFDictionaryRef",
-        "CFErrorRef", "CFLocaleRef", "CFMutableArrayRef", "CFMutableAttributedStringRef", "CFMutableCharacterSetRef", "CFMutableDataRef", "CFMutableDictionaryRef", "CFMutableSetRef",
-        "CFMutableStringRef", "CFNumberRef", "CFReadStreamRef", "CFRunLoopTimerRef", "CFSetRef", "CFStringRef", "CFTimeZoneRef", "CFURLRef", "CFWriteStreamRef" };
-
 Type TypeFactory::createFromTypedefType(const clang::TypedefType* type) {
     std::vector<string> boolTypedefs { "BOOL", "Boolean" };
     if(isSpecificTypedefType(type, boolTypedefs))
         return Type::Bool();
     if(isSpecificTypedefType(type, "unichar"))
         return Type::Unichar();
+    if(isSpecificTypedefType(type, "__builtin_va_list"))
+        throw TypeCreationException(type->getTypeClassName(), "VaList type is not supported.", true);
     if(const clang::PointerType *pointerType = type->getCanonicalTypeUnqualified().getTypePtr()->getAs<clang::PointerType>()) {
         if(const clang::RecordType *record = pointerType->getPointeeType().getTypePtr()->getAs<clang::RecordType>()) {
             string recordName = record->getDecl()->getNameAsString();
@@ -239,10 +250,26 @@ Type TypeFactory::createFromElaboratedType(const clang::ElaboratedType *type) {
     return this->create(type->getNamedType());
 }
 
-void TypeFactory::getSignatureOfFunctionProtoType(const clang::FunctionProtoType* type, vector<Type>& signature) {
+Type TypeFactory::createFromAdjustedType(const clang::AdjustedType *type) {
+    return this->create(type->getOriginalType());
+}
+
+Type TypeFactory::createFromFunctionProtoType(const clang::FunctionProtoType *type) {
+    std::vector<Type> signature;
     signature.push_back(this->create(type->getReturnType()));
     for (clang::FunctionProtoType::param_type_iterator it = type->param_type_begin(); it != type->param_type_end(); ++it)
         signature.push_back(this->create(*it));
+    return Type::FunctionPointer(signature);
+}
+
+Type TypeFactory::createFromFunctionNoProtoType(const clang::FunctionNoProtoType *type) {
+    std::vector<Type> signature;
+    signature.push_back(this->create(type->getReturnType()));
+    return Type::FunctionPointer(signature);
+}
+
+Type TypeFactory::createFromParenType(const clang::ParenType *type) {
+    return this->create(type->desugar().getTypePtr());
 }
 
 bool TypeFactory::isSpecificTypedefType(const clang::TypedefType* type, const std::string& typedefName) {

@@ -100,19 +100,18 @@ namespace llvm {
         struct ScalarBitSetTraits<Meta::MetaFlags> {
 
             static void bitset(IO& io, Meta::MetaFlags& value) {
-
-                //io.bitSetCase(value, "HasName",  Meta::MetaFlags::HasName);
                 io.bitSetCase(value, "IsIosAppExtensionAvailable",    Meta::MetaFlags::IsIosAppExtensionAvailable);
+                //io.bitSetCase(value, "HasName",  Meta::MetaFlags::HasName);
 
                 io.bitSetCase(value, "FunctionIsVariadic", Meta::MetaFlags::FunctionIsVariadic);
-                io.bitSetCase(value, "FunctionOwnsReturnedCocoaObject",  Meta::MetaFlags::FunctionOwnsReturnedCocoaObject);
+                io.bitSetCase(value, "FunctionOwnsReturnedCocoaObject", Meta::MetaFlags::FunctionOwnsReturnedCocoaObject);
 
-                io.bitSetCase(value, "MethodIsVariadic",  Meta::MetaFlags::MethodIsVariadic);
-                io.bitSetCase(value, "MethodIsNullTerminatedVariadic",  Meta::MetaFlags::MethodIsNullTerminatedVariadic);
-                io.bitSetCase(value, "MethodOwnsReturnedCocoaObject",  Meta::MetaFlags::MethodOwnsReturnedCocoaObject);
+                io.bitSetCase(value, "MethodIsVariadic", Meta::MetaFlags::MethodIsVariadic);
+                io.bitSetCase(value, "MethodIsNullTerminatedVariadic", Meta::MetaFlags::MethodIsNullTerminatedVariadic);
+                io.bitSetCase(value, "MethodOwnsReturnedCocoaObject", Meta::MetaFlags::MethodOwnsReturnedCocoaObject);
 
-                io.bitSetCase(value, "PropertyHasGetter",  Meta::MetaFlags::PropertyHasGetter);
-                io.bitSetCase(value, "PropertyHasSetter",  Meta::MetaFlags::PropertyHasSetter);
+                io.bitSetCase(value, "PropertyHasGetter", Meta::MetaFlags::PropertyHasGetter);
+                io.bitSetCase(value, "PropertyHasSetter", Meta::MetaFlags::PropertyHasSetter);
             }
         };
 
@@ -139,14 +138,14 @@ namespace llvm {
                 io.enumCase(value, "Void", Meta::TypeType::TypeVoid);
                 io.enumCase(value, "Bool", Meta::TypeType::TypeBool);
                 io.enumCase(value, "Short", Meta::TypeType::TypeShort);
-                io.enumCase(value, "UShort", Meta::TypeType::TypeUShort);
+                io.enumCase(value, "Ushort", Meta::TypeType::TypeUShort);
                 io.enumCase(value, "Int", Meta::TypeType::TypeInt);
                 io.enumCase(value, "UInt", Meta::TypeType::TypeUInt);
                 io.enumCase(value, "Long", Meta::TypeType::TypeLong);
                 io.enumCase(value, "ULong", Meta::TypeType::TypeULong);
                 io.enumCase(value, "LongLong", Meta::TypeType::TypeLongLong);
                 io.enumCase(value, "ULongLong", Meta::TypeType::TypeULongLong);
-                io.enumCase(value, "CharS", Meta::TypeType::TypeSignedChar);
+                io.enumCase(value, "Char", Meta::TypeType::TypeSignedChar);
                 io.enumCase(value, "UChar", Meta::TypeType::TypeUnsignedChar);
                 io.enumCase(value, "Unichar", Meta::TypeType::TypeUnichar);
                 io.enumCase(value, "CString", Meta::TypeType::TypeCString);
@@ -178,8 +177,8 @@ namespace llvm {
         struct MappingTraits<Meta::FQName> {
 
             static void mapping(IO &io, Meta::FQName& name) {
-                io.mapRequired("Module", name.module);
-                io.mapOptional("Name", name.jsName);
+                io.mapOptional("Module", name.module, std::string(""));
+                io.mapOptional("Name", name.jsName, std::string(""));
             }
         };
 
@@ -213,6 +212,7 @@ namespace llvm {
                         // TODO: every FQName to be yamlized consistently (e.g. Name: { Module: "[value]", JsName: "[value]"} )
                         io.mapRequired("Module", details.name.module);
                         io.mapRequired("Name", details.name.jsName);
+                        //io.mapRequired("WithProtocols", details.protocols);
                         break;
                     }
                     case Meta::TypeType::TypePointer : {
@@ -266,14 +266,17 @@ namespace llvm {
         // BaseMeta
         template <>
         struct MappingTraits<BaseMeta> {
-
             static void mapping(IO &io, std::shared_ptr<Meta::Meta>& meta) {
                 io.mapRequired("Name", meta->name);
                 io.mapRequired("JsName", meta->jsName);
                 io.mapOptional("Module", meta->module, std::string(""));
-                io.mapOptional("IntroducedIn", meta->introducedIn, UNKNOWN_VERSION);
+                // TODO: Uncomment it. It is commented for consistency with old yaml format
+                //io.mapOptional("IntroducedIn", meta->introducedIn, UNKNOWN_VERSION);
                 io.mapRequired("Flags", meta->flags);
-                io.mapRequired("Type", meta->type);
+                // TODO: Remove this check. For now, it exist to be consistent with the old yaml format. In the future it will be better if methods and properties also dump their types
+                if(meta->type != Meta::MetaType::Method && meta->type != Meta::MetaType::Property) {
+                    io.mapRequired("Type", meta->type);
+                }
             }
         };
 
@@ -284,7 +287,7 @@ namespace llvm {
             static void mapping(IO &io, std::shared_ptr<Meta::MethodMeta>& meta) {
                 std::shared_ptr<Meta::Meta> baseMeta = std::static_pointer_cast<Meta::MethodMeta>(meta);
                 MappingTraits<BaseMeta>::mapping(io, baseMeta);
-                io.mapRequired("Selctor", meta->selector);
+                io.mapRequired("Selector", meta->selector);
                 io.mapRequired("Signature", meta->signature);
                 io.mapRequired("TypeEncoding", meta->typeEncoding);
             }
@@ -421,6 +424,7 @@ namespace llvm {
             static void mapping(IO &io, std::shared_ptr<Meta::CategoryMeta>& meta) {
                 std::shared_ptr<Meta::BaseClassMeta> baseClassMeta = std::static_pointer_cast<Meta::CategoryMeta>(meta);
                 MappingTraits<std::shared_ptr<Meta::BaseClassMeta>>::mapping(io, baseClassMeta);
+                io.mapRequired("ExtendedInterface", meta->extendedInterface);
             }
         };
 
@@ -469,6 +473,16 @@ namespace llvm {
                     case Meta::MetaType::Category : {
                         std::shared_ptr<Meta::CategoryMeta> category = std::static_pointer_cast<Meta::CategoryMeta>(meta);
                         MappingTraits<std::shared_ptr<Meta::CategoryMeta>>::mapping(io, category);
+                        break;
+                    }
+                    case Meta::MetaType::Method : {
+                        std::shared_ptr<Meta::MethodMeta> method = std::static_pointer_cast<Meta::MethodMeta>(meta);
+                        MappingTraits<std::shared_ptr<Meta::MethodMeta>>::mapping(io, method);
+                        break;
+                    }
+                    case Meta::MetaType::Property : {
+                        std::shared_ptr<Meta::PropertyMeta> property = std::static_pointer_cast<Meta::PropertyMeta>(meta);
+                        MappingTraits<std::shared_ptr<Meta::PropertyMeta>>::mapping(io, property);
                         break;
                     }
                     case Meta::MetaType::Undefined :

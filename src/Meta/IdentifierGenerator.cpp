@@ -84,7 +84,8 @@ const clang::FileEntry *Meta::IdentifierGenerator::getFileEntry(clang::Decl& dec
 }
 
 const clang::FileEntry *Meta::IdentifierGenerator::getFileEntryOrNull(clang::Decl& decl) {
-    clang::FileID id = _astUnit->getSourceManager().getDecomposedLoc(decl.getLocation()).first;
+    clang::SourceLocation sourceLocation = decl.getLocation();
+    clang::FileID id = _astUnit->getSourceManager().getDecomposedLoc(sourceLocation).first;
     const clang::FileEntry *entry = _astUnit->getSourceManager().getFileEntryForID(id);
     return entry ? entry : nullptr;
 }
@@ -141,12 +142,28 @@ string Meta::IdentifierGenerator::calculateOriginalName(clang::Decl& decl) {
         case clang::Decl::Kind::Record : {
             if(clang::RecordDecl *record = clang::dyn_cast<clang::RecordDecl>(&decl)) {
                 if(!record->hasNameForLinkage()) {
-                    // record->hasNameForLinkage() - http://clang.llvm.org/doxygen/classclang_1_1TagDecl.html#aa0c620992e6aca248368dc5c7c463687 (description what this method does)
+                    // It is absolutely anonymous record. It has neither name nor typedef name.
                     throw IdentifierCreationException("[anonymous_record]", getFileNameOrEmpty(decl), "Anonymous record declared outside typedef. There is no suitable name for this declarations.");
                 }
-                if(clang::TypedefNameDecl *typedefDecl = record->getTypedefNameForAnonDecl()) {
-                    return typedefDecl->getNameAsString();
+
+                // TODO: check the correctness of the name in scenarios like this:
+                // struct a { int field; }
+                // typedef a b;
+                // It should return 'a' but I am not sure if this will be the result.
+
+                // First we check if have a typedef name, and get it if exists
+                if(record->getNextDeclInContext() != nullptr) {
+                    if (clang::TypedefDecl *nextDecl = clang::dyn_cast<clang::TypedefDecl>(record->getNextDeclInContext())) {
+                        if (const clang::ElaboratedType *innerElaboratedType = clang::dyn_cast<clang::ElaboratedType>(nextDecl->getUnderlyingType().getTypePtr())) {
+                            if (const clang::RecordType *recordType = clang::dyn_cast<clang::RecordType>(innerElaboratedType->desugar().getTypePtr())) {
+                                if (recordType->getDecl() == record) {
+                                    return nextDecl->getFirstDecl()->getNameAsString();
+                                }
+                            }
+                        }
+                    }
                 }
+                // The record has no typedef name, so we return its name.
                 return record->getNameAsString();
             }
             throw logic_error("Invalid declaration.");
