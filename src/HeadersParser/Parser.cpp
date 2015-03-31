@@ -17,8 +17,9 @@ std::unique_ptr<clang::ASTUnit> HeadersParser::Parser::parse(ParserSettings& set
             "-fno-objc-arc",
             "-miphoneos-version-min=7.0",
             "-fmodule-maps",
+            "-resource-dir", "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/6.0",
             // TODO: remove these lines
-            "-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/6.0/include",
+            //"-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/6.0/include",
             //std::string("-fmodule-map-file=") + settings.getSdkPath() + "/usr/include/module.map",
             //std::string("-fmodule-map-file=") + settings.getSdkPath() + "/usr/include/dispatch/module.map",
             //std::string("-I") + settings.getSdkPath() + "/usr/include/objc",

@@ -2,7 +2,7 @@
 #include <llvm/Support/Casting.h>
 #include <sstream>
 #include <algorithm>
-#include <AddressBook/AddressBook.h>
+#include "Utils.h"
 
 using namespace std;
 
@@ -75,6 +75,10 @@ shared_ptr<Meta::FunctionMeta> Meta::MetaFactory::createFromFunction(clang::Func
         throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(function), "The function is defined in headers.", false);
     }
 
+    if(function.getNameAsString() == "CFDictionaryCreateMutable") {
+        int breakpoint = 4;
+    }
+
     // TODO: We don't support variadic functions but we save in metadata flags whether a function is variadic or not.
     // If we not plan in the future to support variadic functions this redundant flag should be removed.
     if (function.isVariadic())
@@ -87,7 +91,7 @@ shared_ptr<Meta::FunctionMeta> Meta::MetaFactory::createFromFunction(clang::Func
     functionMeta->setFlags(MetaFlags::FunctionIsVariadic, function.isVariadic());
 
     // set OwnsReturnedCocoaObjects
-    functionMeta->setFlags(MetaFlags::FunctionOwnsReturnedCocoaObject, this->getAttributes<clang::NSReturnsRetainedAttr>(function).size() > 0);
+    functionMeta->setFlags(MetaFlags::FunctionOwnsReturnedCocoaObject, Utils::getAttributes<clang::NSReturnsRetainedAttr>(function).size() > 0);
 
     // set signature
     functionMeta->signature.push_back(this->_typeFactory.create(function.getReturnType()));
@@ -148,20 +152,20 @@ std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumD
         throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(enumeration), "Froward declaration of enum.", false);
     }
 
-    std::ostringstream stringStream;
-    stringStream << "__tsEnum({";
+    std::ostringstream jsCodeStream;
+    jsCodeStream << "__tsEnum({";
     bool isFirstField = true;
     for (clang::EnumDecl::enumerator_iterator it = enumeration.enumerator_begin(); it != enumeration.enumerator_end() ; ++it) {
         clang::EnumConstantDecl *enumField = *it;
         llvm::SmallVector<char, 10> value;
         enumField->getInitVal().toString(value, 10, enumField->getInitVal().isSigned());
-        stringStream << (isFirstField ? "" : ",") << "\"" << _identifierGenerator.getJsName(*enumField) << "\":" << std::string(value.data(), value.size());
+        jsCodeStream << (isFirstField ? "" : ",") << "\"" << _identifierGenerator.getJsName(*enumField) << "\":" << std::string(value.data(), value.size());
         isFirstField = false;
     }
-    stringStream << "})";
-    std::string jsCode = stringStream.str();
+    jsCodeStream << "})";
     shared_ptr<JsCodeMeta> jsCodeMeta = make_shared<JsCodeMeta>();
     populateMetaFields(enumeration, *(jsCodeMeta.get()));
+    jsCodeMeta->jsCode = jsCodeStream.str();
     return jsCodeMeta;
 }
 
@@ -231,15 +235,15 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
     methodMeta->setFlags(MetaFlags::MethodIsVariadic, method.isVariadic());
 
     // set MethodIsNilTerminatedVariadic
-    bool isNullTerminatedVariadic = method.isVariadic() && this->getAttributes<clang::SentinelAttr>(method).size() > 0;
+    bool isNullTerminatedVariadic = method.isVariadic() && Utils::getAttributes<clang::SentinelAttr>(method).size() > 0;
     methodMeta->setFlags(MetaFlags::MethodIsNullTerminatedVariadic, isNullTerminatedVariadic);
 
     if(method.isVariadic() && !isNullTerminatedVariadic)
         throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(method), "Method is variadic (and is not marked as nil terminated.).", false);
 
     // set MethodOwnsReturnedCocoaObject flag
-    bool nsReturnsRetainedAttr = this->getAttributes<clang::NSReturnsRetainedAttr>(method).size() > 0;
-    bool nsReturnsNotRetainedAttr = this->getAttributes<clang::NSReturnsNotRetainedAttr>(method).size() > 0;
+    bool nsReturnsRetainedAttr = Utils::getAttributes<clang::NSReturnsRetainedAttr>(method).size() > 0;
+    bool nsReturnsNotRetainedAttr = Utils::getAttributes<clang::NSReturnsNotRetainedAttr>(method).size() > 0;
     if(nsReturnsRetainedAttr && nsReturnsNotRetainedAttr)
         throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(method), "Method has both NS_Returns_Retained and NS_Returns_Not_Retained attributes.", true);
     else if(nsReturnsRetainedAttr)
@@ -288,11 +292,11 @@ void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
     clang::AvailabilityAttr *iosExtensionsAvailability = nullptr;
 
     // Traverse attributes
-    bool hasUnavailableAttr = this->getAttributes<clang::UnavailableAttr>(decl).size() > 0;
+    bool hasUnavailableAttr = Utils::getAttributes<clang::UnavailableAttr>(decl).size() > 0;
     if(hasUnavailableAttr) {
         throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(decl), "The declaration is marked unvailable (with unavailable attribute).", false);
     }
-    vector<clang::AvailabilityAttr*> availabilityAttr = this->getAttributes<clang::AvailabilityAttr>(decl);
+    vector<clang::AvailabilityAttr*> availabilityAttr = Utils::getAttributes<clang::AvailabilityAttr>(decl);
     for (vector<clang::AvailabilityAttr*>::iterator i = availabilityAttr.begin(); i != availabilityAttr.end(); ++i) {
         clang::AvailabilityAttr *availability = *i;
         string platform = availability->getPlatform()->getName().str();

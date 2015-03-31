@@ -14,7 +14,7 @@ namespace Meta {
     public:
         MetaFactory(clang::ASTUnit *astUnit)
                 : _astUnit(astUnit),
-                  _identifierGenerator(astUnit, IdentifierGenerator::getIosSdkNamesToRecalculate()),
+                  _identifierGenerator(astUnit->getSourceManager(), astUnit->getPreprocessor().getHeaderSearchInfo(), IdentifierGenerator::getIosSdkNamesToRecalculate()),
                   _typeFactory(_astUnit, _identifierGenerator) {}
 
         std::shared_ptr<Meta> create(clang::Decl& decl);
@@ -44,25 +44,13 @@ namespace Meta {
         void populateBaseClassMetaFields(clang::ObjCContainerDecl& decl, BaseClassMeta& meta);
         Version convertVersion(clang::VersionTuple clangVersion);
         llvm::iterator_range<clang::ObjCProtocolList::iterator> getProtocols(clang::ObjCContainerDecl* objCContainer);
-        template<class T>
-        std::vector<T*> getAttributes(clang::Decl& decl){
-            std::vector<T*> attributes;
-            for (clang::Decl::attr_iterator i = decl.attr_begin(); i != decl.attr_end(); ++i) {
-                clang::Attr *attribute = *i;
-                if(T *typedAttribute = clang::dyn_cast<T>(attribute)) {
-                    attributes.push_back(typedAttribute);
-                }
-            }
-            return attributes;
-        }
 
         clang::ASTUnit *_astUnit;
         IdentifierGenerator _identifierGenerator;
         TypeFactory _typeFactory;
     };
 
-    class MetaCreationException : public std::exception
-    {
+    class MetaCreationException : public std::exception {
     public:
         MetaCreationException(Identifier id, std::string message, bool isError)
                 : _id(id),

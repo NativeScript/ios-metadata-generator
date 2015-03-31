@@ -1,9 +1,11 @@
 #include "TypeFactory.h"
 #include <iostream>
+#include "Utils.h"
 
 using namespace std;
 using namespace Meta;
 
+// TODO: the vector of toll-free bridged type names should be redundant. We get this information from attributes in headers.
 static std::vector<std::string> tollFreeBridgedTypes = { "CFArrayRef", "CFAttributedStringRef", "CFCalendarRef", "CFCharacterSetRef", "CFDataRef", "CFDateRef", "CFDictionaryRef",
         "CFErrorRef", "CFLocaleRef", "CFMutableArrayRef", "CFMutableAttributedStringRef", "CFMutableCharacterSetRef", "CFMutableDataRef", "CFMutableDictionaryRef", "CFMutableSetRef",
         "CFMutableStringRef", "CFNumberRef", "CFReadStreamRef", "CFRunLoopTimerRef", "CFSetRef", "CFStringRef", "CFTimeZoneRef", "CFURLRef", "CFWriteStreamRef" };
@@ -175,8 +177,8 @@ Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointer
 Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
     clang::QualType qualPointee = type->getPointeeType();
     const clang::Type *pointee = qualPointee.getTypePtr();
-
     const clang::Type *canonicalPointee = pointee->getCanonicalTypeInternal().getTypePtr();
+
     if(const clang::BuiltinType *builtinType = clang::dyn_cast<clang::BuiltinType>(canonicalPointee)) {
         if(builtinType->getKind() == clang::BuiltinType::Kind::ObjCSel)
             return Type::Selector();
@@ -184,10 +186,36 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
             return Type::CString();
     }
 
+    // Check for pointer to toll-free bridged types
+    if(const clang::ElaboratedType *elaboratedType = clang::dyn_cast<clang::ElaboratedType>(pointee)) {
+        if (const clang::TagType *tagType = clang::dyn_cast<clang::TagType>(elaboratedType->desugar().getTypePtr())) {
+            const clang::TagDecl *tagDecl = tagType->getDecl();
+
+            vector<clang::ObjCBridgeMutableAttr *> bridgeMutableAttrs = Utils::getAttributes<clang::ObjCBridgeMutableAttr>(*tagDecl);
+            if (bridgeMutableAttrs.size() > 0) {
+                clang::ObjCBridgeMutableAttr *bridgeAttr = bridgeMutableAttrs[0];
+                string name = bridgeAttr->getBridgedType()->getName().str();
+                // TODO: change the module of the interface type to be the original module of the bridged type
+                FQName fqName = FQName { .module = _identifierGenerator.getModuleName(*tagDecl), .jsName = name};
+                return Type::Interface(fqName, vector<FQName>());
+            }
+
+            vector<clang::ObjCBridgeAttr *> bridgeAttrs = Utils::getAttributes<clang::ObjCBridgeAttr>(*tagDecl);
+            if (bridgeAttrs.size() > 0) {
+                clang::ObjCBridgeAttr *bridgeAttr = bridgeAttrs[0];
+                string name = bridgeAttr->getBridgedType()->getName().str();
+                // TODO: change the module of the interface type to be the original module of the bridged type
+                FQName fqName = FQName { .module = _identifierGenerator.getModuleName(*tagDecl), .jsName = name};
+                return Type::Interface(fqName, vector<FQName>());
+            }
+        }
+    }
+
+    // if is a FunctionPointerType don't wrap the type in another pointer type
     if(clang::isa<clang::ParenType>(pointee)) {
-        // if is a FunctionPointerType don't wrap the type in another pointer type
         return this->create(qualPointee);
     }
+
     return Type::Pointer(this->create(qualPointee));
 }
 
@@ -196,21 +224,24 @@ Type TypeFactory::createFromEnumType(const clang::EnumType* type) {
 }
 
 Type TypeFactory::createFromRecordType(const clang::RecordType* type) {
-    clang::RecordDecl *record = type->getDecl()->getDefinition();
-    if(!record) // The record is opaque
+    clang::RecordDecl *recordDef = type->getDecl()->getDefinition();
+    if(!recordDef) {
+        // the record is opaque
+        // TODO: Which is more correct? To return void or to throw exception (and ignore all the symbols related to this opaque record).
         return Type::Void();
-    if(record->isUnion())
-        throw TypeCreationException(type->getTypeClassName(), "The record is union.", true);
-    if(!record->isStruct())
+    }
+    if(recordDef->isUnion())
+        throw TypeCreationException(type->getTypeClassName(), "The record is an union.", true);
+    if(!recordDef->isStruct())
         throw TypeCreationException(type->getTypeClassName(), "The record is not a struct.", true);
 
     try {
-        FQName recordName = this->_identifierGenerator.getFqName(*record);
+        FQName recordName = this->_identifierGenerator.getFqName(*recordDef);
         return Type::Struct(recordName);
     } catch(IdentifierCreationException& e) {
         // The record is anonymous
         std::vector<Meta::RecordField> fields;
-        for(clang::RecordDecl::field_iterator it = record->field_begin(); it != record->field_end(); ++it) {
+        for(clang::RecordDecl::field_iterator it = recordDef->field_begin(); it != recordDef->field_end(); ++it) {
             clang::FieldDecl *field = *it;
             RecordField fieldMeta(_identifierGenerator.getJsName(*field), this->create(field->getType()));
             fields.push_back(fieldMeta);
@@ -227,17 +258,19 @@ Type TypeFactory::createFromTypedefType(const clang::TypedefType* type) {
         return Type::Unichar();
     if(isSpecificTypedefType(type, "__builtin_va_list"))
         throw TypeCreationException(type->getTypeClassName(), "VaList type is not supported.", true);
-    if(const clang::PointerType *pointerType = type->getCanonicalTypeUnqualified().getTypePtr()->getAs<clang::PointerType>()) {
-        if(const clang::RecordType *record = pointerType->getPointeeType().getTypePtr()->getAs<clang::RecordType>()) {
-            string recordName = record->getDecl()->getNameAsString();
-            if(std::find(tollFreeBridgedTypes.begin(), tollFreeBridgedTypes.end(), recordName) != tollFreeBridgedTypes.end()) {
-                // We have found a toll free bridged structure. For now do nothing here.
 
-                // TODO: Maybe there is better way to recognize toll free bridged types (e.g. type->isObjCARCBridgableType()) and get the corresponding type object.
-                // Don't forget to change not only the name of the type but its module.
-            }
-        }
-    }
+
+//    if(const clang::PointerType *pointerType = type->getCanonicalTypeUnqualified().getTypePtr()->getAs<clang::PointerType>()) {
+//        if(const clang::RecordType *record = pointerType->getPointeeType().getTypePtr()->getAs<clang::RecordType>()) {
+//            string recordName = record->getDecl()->getNameAsString();
+//            if(std::find(tollFreeBridgedTypes.begin(), tollFreeBridgedTypes.end(), recordName) != tollFreeBridgedTypes.end()) {
+//                // We have found a toll free bridged structure. For now do nothing here.
+//
+//                // TODO: Maybe there is better way to recognize toll free bridged types (e.g. type->isObjCARCBridgableType()) and get the corresponding type object.
+//                // Don't forget to change not only the name of the type but its module.
+//            }
+//        }
+//    }
 
     return this->create(type->getDecl()->getUnderlyingType());
 }

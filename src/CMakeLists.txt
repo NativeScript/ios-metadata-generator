@@ -9,7 +9,7 @@ set(GENERATOR_SOURCES
     Meta/IdentifierGenerator.cpp
 )
 
-add_executable(objc-metadata-generator ${GENERATOR_SOURCES} Yaml/MetaYamlTraits.h Yaml/MetaYamlTraits.cpp)
+add_executable(objc-metadata-generator ${GENERATOR_SOURCES})
 target_link_libraries(objc-metadata-generator ${LLVM_LINKER_FLAGS})
 target_link_libraries(objc-metadata-generator
     clangFrontend

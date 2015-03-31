@@ -6,6 +6,7 @@
 int main(int argc, const char** argv) {
     std::clock_t begin = clock();
 
+    // TODO: Use the command line arguments
     std::vector<std::string> arguments;
     for (int i = 1; i < argc; i++) {
         arguments.push_back(argv[i]);

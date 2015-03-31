@@ -39,46 +39,48 @@ namespace Meta {
     public:
         static std::map<clang::Decl::Kind, std::vector<std::string>>& getIosSdkNamesToRecalculate();
 
-        IdentifierGenerator(clang::ASTUnit *astUnit, std::map<clang::Decl::Kind, std::vector<std::string>>& namesToRecalculate)
-            : _astUnit(astUnit),
+        IdentifierGenerator(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch, std::map<clang::Decl::Kind, std::vector<std::string>>& namesToRecalculate)
+            : _sourceManager(sourceManager),
+              _headerSearch(headerSearch),
               _namesToRecalculate(namesToRecalculate) {}
 
-        std::string getJsName(clang::Decl& decl);
+        std::string getJsName(const clang::Decl& decl);
 
-        std::string getJsNameOrEmpty(clang::Decl& decl);
+        std::string getJsNameOrEmpty(const clang::Decl& decl);
 
-        std::string getModuleName(clang::Decl& decl);
+        std::string getModuleName(const clang::Decl& decl);
 
-        std::string getModuleNameOrEmpty(clang::Decl& decl);
+        std::string getModuleNameOrEmpty(const clang::Decl& decl);
 
-        clang::Module *getModule(clang::Decl& decl);
+        clang::Module *getModule(const clang::Decl& decl);
 
-        clang::Module *getModuleOrNull(clang::Decl& decl);
+        clang::Module *getModuleOrNull(const clang::Decl& decl);
 
-        const clang::FileEntry *getFileEntry(clang::Decl& decl);
+        const clang::FileEntry *getFileEntry(const clang::Decl& decl);
 
-        const clang::FileEntry *getFileEntryOrNull(clang::Decl& decl);
+        const clang::FileEntry *getFileEntryOrNull(const clang::Decl& decl);
 
-        std::string getFileName(clang::Decl& decl);
+        std::string getFileName(const clang::Decl& decl);
 
-        std::string getFileNameOrEmpty(clang::Decl& decl);
+        std::string getFileNameOrEmpty(const clang::Decl& decl);
 
-        FQName getFqName(clang::Decl& decl);
+        FQName getFqName(const clang::Decl& decl);
 
-        FQName getFqNameOrEmpty(clang::Decl& decl);
+        FQName getFqNameOrEmpty(const clang::Decl& decl);
 
-        Identifier getIdentifier(clang::Decl& decl);
+        Identifier getIdentifier(const clang::Decl& decl);
 
-        Identifier getIdentifierOrEmpty(clang::Decl& decl);
+        Identifier getIdentifierOrEmpty(const clang::Decl& decl);
 
     private:
-        std::string calculateOriginalName(clang::Decl& decl);
+        std::string calculateOriginalName(const clang::Decl& decl);
 
-        std::string calculateJsName(clang::Decl& decl, std::string originalName);
+        std::string calculateJsName(const clang::Decl& decl, std::string originalName);
 
-        std::string recalculateJsName(clang::Decl& decl, std::string calculatedJsName);
+        std::string recalculateJsName(const clang::Decl& decl, std::string calculatedJsName);
 
-        clang::ASTUnit *_astUnit;
+        clang::SourceManager& _sourceManager;
+        clang::HeaderSearch& _headerSearch;
         std::map<clang::Decl::Kind, std::vector<std::string>> _namesToRecalculate;
     };
 

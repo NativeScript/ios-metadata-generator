@@ -27,7 +27,7 @@ void splitString(const std::string &s, char delim, vector<string> &elems) {
     }
 }
 
-std::string Meta::IdentifierGenerator::getJsName(clang::Decl& decl) {
+std::string Meta::IdentifierGenerator::getJsName(const clang::Decl& decl) {
     std::string originalName = calculateOriginalName(decl);
     std::string jsName = calculateJsName(decl, originalName);
     std::vector<std::string> namesToCheck = _namesToRecalculate[decl.getKind()];
@@ -37,7 +37,7 @@ std::string Meta::IdentifierGenerator::getJsName(clang::Decl& decl) {
     return jsName;
 }
 
-std::string Meta::IdentifierGenerator::getJsNameOrEmpty(clang::Decl& decl) {
+std::string Meta::IdentifierGenerator::getJsNameOrEmpty(const clang::Decl& decl) {
     try {
         return getJsName(decl);
     }
@@ -46,65 +46,69 @@ std::string Meta::IdentifierGenerator::getJsNameOrEmpty(clang::Decl& decl) {
     }
 }
 
-std::string Meta::IdentifierGenerator::getModuleName(clang::Decl& decl) {
+std::string Meta::IdentifierGenerator::getModuleName(const clang::Decl& decl) {
     return getModule(decl)->getFullModuleName();
 }
 
-std::string Meta::IdentifierGenerator::getModuleNameOrEmpty(clang::Decl& decl) {
+std::string Meta::IdentifierGenerator::getModuleNameOrEmpty(const clang::Decl& decl) {
     clang::Module *module = getModuleOrNull(decl);
     return module ? module->getFullModuleName() : "";
 }
 
-clang::Module *Meta::IdentifierGenerator::getModule(clang::Decl& decl) {
-    clang::Module *owningModule = _astUnit->getPreprocessor().getHeaderSearchInfo().findModuleForHeader(getFileEntry(decl)).getModule();
+clang::Module *Meta::IdentifierGenerator::getModule(const clang::Decl& decl) {
+    clang::SourceLocation location = _sourceManager.getFileLoc(decl.getLocation());
+    clang::FileID id = _sourceManager.getDecomposedLoc(location).first;
+    const clang::FileEntry *entry = _sourceManager.getFileEntryForID(id);
+
+    clang::Module *owningModule = _headerSearch.findModuleForHeader(entry).getModule();
     if(!owningModule)
         throw IdentifierCreationException(getJsNameOrEmpty(decl), getFileNameOrEmpty(decl), "Can't find module for this file name.");
     return owningModule;
 }
 
-clang::Module *Meta::IdentifierGenerator::getModuleOrNull(clang::Decl& decl) {
+clang::Module *Meta::IdentifierGenerator::getModuleOrNull(const clang::Decl& decl) {
     const clang::FileEntry *entry = getFileEntryOrNull(decl);
-    return entry ? _astUnit->getPreprocessor().getHeaderSearchInfo().findModuleForHeader(entry).getModule() : nullptr;
+    return entry ? _headerSearch.findModuleForHeader(entry).getModule() : nullptr;
 }
 
-std::string Meta::IdentifierGenerator::getFileName(clang::Decl& decl) {
+std::string Meta::IdentifierGenerator::getFileName(const clang::Decl& decl) {
     return getFileEntry(decl)->getName();
 }
 
-std::string Meta::IdentifierGenerator::getFileNameOrEmpty(clang::Decl& decl) {
+std::string Meta::IdentifierGenerator::getFileNameOrEmpty(const clang::Decl& decl) {
     if(const clang::FileEntry *entry = getFileEntryOrNull(decl))
         return entry->getName();
     return "";
 }
 
-const clang::FileEntry *Meta::IdentifierGenerator::getFileEntry(clang::Decl& decl) {
+const clang::FileEntry *Meta::IdentifierGenerator::getFileEntry(const clang::Decl& decl) {
     if(const clang::FileEntry *entry = getFileEntryOrNull(decl))
         return entry;
     throw IdentifierCreationException(getJsNameOrEmpty(decl), "", "The containing file of declaration was not found.");
 }
 
-const clang::FileEntry *Meta::IdentifierGenerator::getFileEntryOrNull(clang::Decl& decl) {
+const clang::FileEntry *Meta::IdentifierGenerator::getFileEntryOrNull(const clang::Decl& decl) {
     clang::SourceLocation sourceLocation = decl.getLocation();
-    clang::FileID id = _astUnit->getSourceManager().getDecomposedLoc(sourceLocation).first;
-    const clang::FileEntry *entry = _astUnit->getSourceManager().getFileEntryForID(id);
+    clang::FileID id = _sourceManager.getDecomposedLoc(sourceLocation).first;
+    const clang::FileEntry *entry = _sourceManager.getFileEntryForID(id);
     return entry ? entry : nullptr;
 }
 
-Meta::FQName Meta::IdentifierGenerator::getFqName(clang::Decl& decl) {
+Meta::FQName Meta::IdentifierGenerator::getFqName(const clang::Decl& decl) {
     FQName fqName;
     fqName.jsName = getJsName(decl);
     fqName.module = getModuleName(decl);
     return fqName;
 }
 
-Meta::FQName Meta::IdentifierGenerator::getFqNameOrEmpty(clang::Decl& decl) {
+Meta::FQName Meta::IdentifierGenerator::getFqNameOrEmpty(const clang::Decl& decl) {
     FQName fqName;
     fqName.jsName = getJsNameOrEmpty(decl);
     fqName.module = getModuleNameOrEmpty(decl);
     return fqName;
 }
 
-Meta::Identifier Meta::IdentifierGenerator::getIdentifier(clang::Decl& decl) {
+Meta::Identifier Meta::IdentifierGenerator::getIdentifier(const clang::Decl& decl) {
     Identifier id;
     id.name = getJsName(decl);
     id.module = getModuleName(decl);
@@ -112,7 +116,7 @@ Meta::Identifier Meta::IdentifierGenerator::getIdentifier(clang::Decl& decl) {
     return id;
 }
 
-Meta::Identifier Meta::IdentifierGenerator::getIdentifierOrEmpty(clang::Decl& decl) {
+Meta::Identifier Meta::IdentifierGenerator::getIdentifierOrEmpty(const clang::Decl& decl) {
     Identifier id;
     id.name = getJsNameOrEmpty(decl);
     id.module = getModuleNameOrEmpty(decl);
@@ -121,7 +125,7 @@ Meta::Identifier Meta::IdentifierGenerator::getIdentifierOrEmpty(clang::Decl& de
 }
 
 
-string Meta::IdentifierGenerator::calculateOriginalName(clang::Decl& decl) {
+string Meta::IdentifierGenerator::calculateOriginalName(const clang::Decl& decl) {
 
     switch(decl.getKind()) {
         case clang::Decl::Kind::Function :
@@ -134,13 +138,13 @@ string Meta::IdentifierGenerator::calculateOriginalName(clang::Decl& decl) {
         case clang::Decl::Kind::Var :
             return clang::dyn_cast<clang::NamedDecl>(&decl)->getNameAsString();
         case clang::Decl::Kind::ObjCMethod : {
-            if(clang::ObjCMethodDecl *method = clang::dyn_cast<clang::ObjCMethodDecl>(&decl)) {
+            if(const clang::ObjCMethodDecl *method = clang::dyn_cast<clang::ObjCMethodDecl>(&decl)) {
                 return method->getSelector().getAsString();
             }
             throw logic_error("Invalid declaration.");
         }
         case clang::Decl::Kind::Record : {
-            if(clang::RecordDecl *record = clang::dyn_cast<clang::RecordDecl>(&decl)) {
+            if(const clang::RecordDecl *record = clang::dyn_cast<clang::RecordDecl>(&decl)) {
                 if(!record->hasNameForLinkage()) {
                     // It is absolutely anonymous record. It has neither name nor typedef name.
                     throw IdentifierCreationException("[anonymous_record]", getFileNameOrEmpty(decl), "Anonymous record declared outside typedef. There is no suitable name for this declarations.");
@@ -152,8 +156,9 @@ string Meta::IdentifierGenerator::calculateOriginalName(clang::Decl& decl) {
                 // It should return 'a' but I am not sure if this will be the result.
 
                 // First we check if have a typedef name, and get it if exists
+                // TODO: Do this check for enums, too
                 if(record->getNextDeclInContext() != nullptr) {
-                    if (clang::TypedefDecl *nextDecl = clang::dyn_cast<clang::TypedefDecl>(record->getNextDeclInContext())) {
+                    if (const clang::TypedefDecl *nextDecl = clang::dyn_cast<clang::TypedefDecl>(record->getNextDeclInContext())) {
                         if (const clang::ElaboratedType *innerElaboratedType = clang::dyn_cast<clang::ElaboratedType>(nextDecl->getUnderlyingType().getTypePtr())) {
                             if (const clang::RecordType *recordType = clang::dyn_cast<clang::RecordType>(innerElaboratedType->desugar().getTypePtr())) {
                                 if (recordType->getDecl() == record) {
@@ -169,12 +174,12 @@ string Meta::IdentifierGenerator::calculateOriginalName(clang::Decl& decl) {
             throw logic_error("Invalid declaration.");
         }
         case clang::Decl::Kind::Enum : {
-            if(clang::EnumDecl *enumDecl = clang::dyn_cast<clang::EnumDecl>(&decl)) {
+            if(const clang::EnumDecl *enumDecl = clang::dyn_cast<clang::EnumDecl>(&decl)) {
                 if(!enumDecl->hasNameForLinkage()) {
-                    // record->hasNameForLinkage() - http://clang.llvm.org/doxygen/classclang_1_1TagDecl.html#aa0c620992e6aca248368dc5c7c463687 (description what this method does)
+                    // enumDecl->hasNameForLinkage() - http://clang.llvm.org/doxygen/classclang_1_1TagDecl.html#aa0c620992e6aca248368dc5c7c463687 (description what this method does)
                     throw IdentifierCreationException("[anonymous_enum]", getFileNameOrEmpty(decl) , "Anonymous enum declared outside typedef. There is no suitable name for this declarations.");
                 }
-                if(clang::TypedefNameDecl *typedefDecl = enumDecl->getTypedefNameForAnonDecl()) {
+                if(const clang::TypedefNameDecl *typedefDecl = enumDecl->getTypedefNameForAnonDecl()) {
                     return typedefDecl->getNameAsString();
                 }
                 return enumDecl->getNameAsString();
@@ -186,7 +191,7 @@ string Meta::IdentifierGenerator::calculateOriginalName(clang::Decl& decl) {
     }
 }
 
-string Meta::IdentifierGenerator::calculateJsName(clang::Decl& decl, std::string originalName) {
+string Meta::IdentifierGenerator::calculateJsName(const clang::Decl& decl, std::string originalName) {
     switch(decl.getKind()) {
         case clang::Decl::Kind::Record :
         case clang::Decl::Kind::Enum :
@@ -213,10 +218,10 @@ string Meta::IdentifierGenerator::calculateJsName(clang::Decl& decl, std::string
     }
 }
 
-string Meta::IdentifierGenerator::recalculateJsName(clang::Decl& decl, std::string calculatedJsName) {
+string Meta::IdentifierGenerator::recalculateJsName(const clang::Decl& decl, std::string calculatedJsName) {
     switch(decl.getKind()) {
         case clang::Decl::Kind::Record : {
-            clang::RecordDecl *record = llvm::dyn_cast<clang::RecordDecl>(&decl);
+            const clang::RecordDecl *record = llvm::dyn_cast<clang::RecordDecl>(&decl);
             return calculatedJsName + (record->isStruct() ? "Struct" : "Union");
         }
         case clang::Decl::Kind::Function :
