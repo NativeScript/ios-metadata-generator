@@ -30,11 +30,7 @@ namespace Meta {
         MethodOwnsReturnedCocoaObject         = 1 << 7,
         // Property
         PropertyHasGetter                     = 1 << 8,
-        PropertyHasSetter                     = 1 << 9,
-
-        // TODO: remove these flags
-        MemberIsLocalJsNameDuplicate          = 1 << 10,
-        MemberHasJsNameDuplicateInHierarchy   = 1 << 11,
+        PropertyHasSetter                     = 1 << 9
     };
 
     enum MetaType {

@@ -5,11 +5,6 @@
 using namespace std;
 using namespace Meta;
 
-// TODO: the vector of toll-free bridged type names should be redundant. We get this information from attributes in headers.
-static std::vector<std::string> tollFreeBridgedTypes = { "CFArrayRef", "CFAttributedStringRef", "CFCalendarRef", "CFCharacterSetRef", "CFDataRef", "CFDateRef", "CFDictionaryRef",
-        "CFErrorRef", "CFLocaleRef", "CFMutableArrayRef", "CFMutableAttributedStringRef", "CFMutableCharacterSetRef", "CFMutableDataRef", "CFMutableDictionaryRef", "CFMutableSetRef",
-        "CFMutableStringRef", "CFNumberRef", "CFReadStreamRef", "CFRunLoopTimerRef", "CFSetRef", "CFStringRef", "CFTimeZoneRef", "CFURLRef", "CFWriteStreamRef" };
-
 Type TypeFactory::create(const clang::Type* type) {
     try {
         if (const clang::ConstantArrayType *concreteType = clang::dyn_cast<clang::ConstantArrayType>(type))
@@ -163,8 +158,6 @@ Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointer
 
 
     if(clang::ObjCInterfaceDecl *interface = type->getObjectType()->getInterface()) {
-        // TODO: Make the check for Protocol more precise (e. g. check the module of interface if is equal to the
-        // module of Protocol interface (and maybe file in which is defined, but it may be different in future SDK))
         if (interface->getNameAsString() == "Protocol")
             return Type::ProtocolType();
 
@@ -196,7 +189,7 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
                 clang::ObjCBridgeMutableAttr *bridgeAttr = bridgeMutableAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
                 // TODO: change the module of the interface type to be the original module of the bridged type
-                FQName fqName = FQName { .module = _identifierGenerator.getModuleName(*tagDecl), .jsName = name};
+                FQName fqName = FQName { .module = "Foundation", .jsName = name};
                 return Type::Interface(fqName, vector<FQName>());
             }
 
@@ -205,7 +198,7 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
                 clang::ObjCBridgeAttr *bridgeAttr = bridgeAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
                 // TODO: change the module of the interface type to be the original module of the bridged type
-                FQName fqName = FQName { .module = _identifierGenerator.getModuleName(*tagDecl), .jsName = name};
+                FQName fqName = FQName { .module = "Foundation", .jsName = name};
                 return Type::Interface(fqName, vector<FQName>());
             }
         }
@@ -226,9 +219,7 @@ Type TypeFactory::createFromEnumType(const clang::EnumType* type) {
 Type TypeFactory::createFromRecordType(const clang::RecordType* type) {
     clang::RecordDecl *recordDef = type->getDecl()->getDefinition();
     if(!recordDef) {
-        // the record is opaque
-        // TODO: Which is more correct? To return void or to throw exception (and ignore all the symbols related to this opaque record).
-        return Type::Void();
+        return Type::Void(); // the record is opaque
     }
     if(recordDef->isUnion())
         throw TypeCreationException(type->getTypeClassName(), "The record is an union.", true);

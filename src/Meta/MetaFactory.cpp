@@ -123,10 +123,6 @@ shared_ptr<Meta::RecordMeta> Meta::MetaFactory::createFromRecord(clang::RecordDe
 }
 
 std::shared_ptr<Meta::VarMeta> Meta::MetaFactory::createFromVar(clang::VarDecl& var) {
-    // TODO: We don't check var->isThisDeclarationADefinition() which includes all extern variable declarations.
-    // Some variables may be added more than once (once for the actual declaration and once for each extern declaration). We can unique them by name.
-    // Also this assumption may be wrong, it is not tested.
-
     if(var.getKind() != clang::Decl::Kind::Var) {
         // It is not exactly a VarDecl but an inheritor of VarDecl (e.g. ParmVarDecl)
         throw MetaCreationException(Identifier(var.getNameAsString(), "", ""), "Not a var declaration.", false);
