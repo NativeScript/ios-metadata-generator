@@ -75,10 +75,6 @@ shared_ptr<Meta::FunctionMeta> Meta::MetaFactory::createFromFunction(clang::Func
         throw MetaCreationException(_identifierGenerator.getIdentifierOrEmpty(function), "The function is defined in headers.", false);
     }
 
-    if(function.getNameAsString() == "CFDictionaryCreateMutable") {
-        int breakpoint = 4;
-    }
-
     // TODO: We don't support variadic functions but we save in metadata flags whether a function is variadic or not.
     // If we not plan in the future to support variadic functions this redundant flag should be removed.
     if (function.isVariadic())
