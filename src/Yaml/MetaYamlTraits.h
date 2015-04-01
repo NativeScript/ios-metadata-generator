@@ -39,10 +39,19 @@ namespace llvm {
                         : name(), declarations() { }
 
                 NormalizedModule(IO& io, Meta::Module& module)
-                        : name(module.getName()),
-                          declarations(module.getDeclarations()) {}
+                        : name(module.getName()) {
+                    for(auto &pair : module) {
+                        declarations.push_back(pair.second);
+                    }
+                }
 
-                Meta::Module denormalize(IO &io) { return Meta::Module(name, this->declarations); }
+                Meta::Module denormalize(IO &io) {
+                    Meta::Module module(name);
+                    for(auto &meta : declarations) {
+                        module.add(meta);
+                    }
+                    return module;
+                }
 
                 std::string name;
                 std::vector<std::shared_ptr<Meta::Meta>> declarations;

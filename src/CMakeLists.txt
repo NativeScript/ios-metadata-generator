@@ -7,6 +7,16 @@ set(GENERATOR_SOURCES
     Meta/TypeFactory.cpp
     Meta/TypeEntities.cpp
     Meta/IdentifierGenerator.cpp
+    Yaml/MetaYamlTraits.cpp
+    Utils/fileStream.cpp
+    Utils/memoryStream.cpp
+    Binary/binaryHashtable.cpp
+    Binary/binaryReader.cpp
+    Binary/binarySerializer.cpp
+    Binary/binaryStructures.cpp
+    Binary/binaryTypeEncodingSerializer.cpp
+    Binary/binaryWriter.cpp
+    Binary/metaFile.cpp
 )
 
 add_executable(objc-metadata-generator ${GENERATOR_SOURCES})

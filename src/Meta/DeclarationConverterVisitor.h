@@ -12,12 +12,12 @@ namespace Meta {
     public:
         explicit DeclarationConverterVisitor(clang::ASTUnit *astUnit)
                 : _astUnit(astUnit),
-                  _metaFactory(astUnit),
-                  _resultMap(nullptr) { }
+                  _metaFactory(astUnit)  { }
 
-        void Traverse(std::map<std::string, std::shared_ptr<Module>>& modules) {
-            this->_resultMap = &modules;
+        MetaContainer& Traverse() {
+            this->_result.clear();
             this->TraverseDecl(this->_astUnit->getASTContext().getTranslationUnitDecl());
+            return this->_result;
         }
 
         bool VisitFunctionDecl(clang::FunctionDecl *function);
@@ -49,15 +49,11 @@ namespace Meta {
         }
 
         void addToResult(std::shared_ptr<Meta> meta) {
-            std::size_t dotIndex = meta->module.find(".");
-            std::string topLevelModuleName = (dotIndex == std::string::npos) ? meta->module : meta->module.substr(0, dotIndex);
-            if(_resultMap->find(topLevelModuleName) == _resultMap->end())
-                _resultMap->insert(std::pair<std::string, std::shared_ptr<Module>>(topLevelModuleName, std::make_shared<Module>(topLevelModuleName)));
-            (*_resultMap)[topLevelModuleName]->push_back(meta);
+            _result.add(meta);
         }
 
         clang::ASTUnit *_astUnit;
         MetaFactory _metaFactory;
-        std::map<std::string, std::shared_ptr<Module>>* _resultMap;
+        MetaContainer _result;
     };
 }

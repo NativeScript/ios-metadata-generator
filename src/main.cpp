@@ -1,6 +1,7 @@
 #include "HeadersParser/Parser.h"
 #include "Meta/DeclarationConverterVisitor.h"
 #include "Yaml/YamlSerializer.h"
+#include "Binary/binarySerializer.h"
 #include <ctime>
 
 int main(int argc, const char** argv) {
@@ -22,29 +23,37 @@ int main(int argc, const char** argv) {
 
     // Convert declarations to Meta objects (by visiting the AST from DeclarationConverterVisitor)
     Meta::DeclarationConverterVisitor visitor(ast.get());
-    std::map<std::string, std::shared_ptr<Meta::Module>> topLevelModules;
-    visitor.Traverse(topLevelModules);
+    Meta::MetaContainer& metaContainer = visitor.Traverse();
+    metaContainer.mergeCategoriesInInterfaces();
 
     // Log statistic for parsed Meta objects
     int totalCount = 0;
     std::map<Meta::MetaType, int> countByTypes;
-    for (std::map<std::string, std::shared_ptr<Meta::Module>>::const_iterator it = topLevelModules.begin(); it != topLevelModules.end(); ++it) {
-        std::cout << it->second->getName() << " -> " << it->second->size() << std::endl;
-        totalCount += it->second->size();
-        for(Meta::Module::iterator i = it->second->begin(); i != it->second->end(); ++i) {
-            countByTypes[(*i)->type] += 1;
+    for (Meta::MetaContainer::const_iterator it = metaContainer.begin(); it != metaContainer.end(); ++it) {
+        std::cout << it->getName() << " -> " << it->size() << std::endl;
+        totalCount += it->size();
+        for(Meta::Module::const_iterator i = it->begin(); i != it->end(); ++i) {
+            countByTypes[i->second->type] += 1;
         }
     }
     for (std::map<Meta::MetaType, int>::const_iterator it = countByTypes.begin(); it != countByTypes.end(); ++it) {
         std::cout << it->first << " -> " <<it->second << std::endl;
     }
-    std::cout << "All declarations: " << totalCount << " from " << topLevelModules.size() << " modules" << std::endl;
+    std::cout << "All declarations: " << metaContainer.size() << " from " << metaContainer.modulesCount() << " modules" << std::endl;
 
     // Serialize Meta objects to Yaml
-    for (std::map<std::string, std::shared_ptr<Meta::Module>>::const_iterator it = topLevelModules.begin(); it != topLevelModules.end(); ++it) {
-        std::string topLevelModuleName = it->second->getName();
-        Yaml::YamlSerializer::serialize<Meta::Module>(std::string("/Users/buhov/Desktop/new-generator-yaml/") + topLevelModuleName + ".yaml", *it->second.get());
+    for (Meta::MetaContainer::iterator it = metaContainer.begin(); it != metaContainer.end(); ++it) {
+        Yaml::YamlSerializer::serialize<Meta::Module>(std::string("/Users/buhov/Desktop/new-generator-yaml/") + it->getName() + ".yaml", *it);
     }
+
+    // Serialize Meta objects to binary metadata
+    binary::MetaFile file(metaContainer.size());
+    binary::BinarySerializer serializer(&file);
+    serializer.serializeContainer(metaContainer);
+    std::string output = "/Users/buhov/Desktop/binMetadata/metadata.bin";
+    file.save(output);
+    std::cout << "Done!" << std::endl;
+
 
     std::clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;

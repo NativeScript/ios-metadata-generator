@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "IdentifierGenerator.h"
+#include "TypeVisitor.h"
 
 namespace Meta {
 
@@ -96,6 +97,82 @@ namespace Meta {
 
         template<class T>
         T& getDetailsAs() const { return *std::static_pointer_cast<T>(details).get(); }
+
+        bool is(TypeType type) { return this->type == type; }
+
+        template<class T>
+        T visit(TypeVisitor<T>& visitor) {
+            switch(this->type) {
+                case TypeUnknown :
+                    return visitor.visitUnknown();
+                case TypeVoid :
+                    return visitor.visitVoid();
+                case TypeBool :
+                    return visitor.visitBool();
+                case TypeShort :
+                    return visitor.visitShort();
+                case TypeUShort :
+                    return visitor.visitUShort();
+                case TypeInt :
+                    return visitor.visitInt();
+                case TypeUInt :
+                    return visitor.visitUInt();
+                case TypeLong :
+                    return visitor.visitLong();
+                case TypeULong :
+                    return visitor.visitUlong();
+                case TypeLongLong :
+                    return visitor.visitLongLong();
+                case TypeULongLong :
+                    return visitor.visitULongLong();
+                case TypeSignedChar :
+                    return visitor.visitSignedChar();
+                case TypeUnsignedChar :
+                    return visitor.visitUnsignedChar();
+                case TypeUnichar :
+                    return visitor.visitUnichar();
+                case TypeCString :
+                    return visitor.visitCString();
+                case TypeFloat :
+                    return visitor.visitFloat();
+                case TypeDouble :
+                    return visitor.visitDouble();
+                case TypeVaList :
+                    return visitor.visitVaList();
+                case TypeSelector :
+                    return visitor.visitSelector();
+                case TypeInstancetype :
+                    return visitor.visitInstancetype();
+                case TypeProtocol :
+                    return visitor.visitProtocol();
+                case TypeClass :
+                    return visitor.visitClass(getDetailsAs<ClassTypeDetails>());
+                case TypeId :
+                    return visitor.visitId(getDetailsAs<IdTypeDetails>());
+                case TypeConstantArray :
+                    return visitor.visitConstantArray(getDetailsAs<ConstantArrayTypeDetails>());
+                case TypeIncompleteArray :
+                    return visitor.visitIncompleteArray(getDetailsAs<IncompleteArrayTypeDetails>());
+                case TypePointer :
+                    return visitor.visitPointer(getDetailsAs<PointerTypeDetails>());
+                case TypeBlock :
+                    return visitor.visitBlock(getDetailsAs<BlockTypeDetails>());
+                case TypeFunctionPointer :
+                    return visitor.visitFunctionPointer(getDetailsAs<FunctionPointerTypeDetails>());
+                case TypeInterface :
+                    return visitor.visitInterface(getDetailsAs<InterfaceTypeDetails>());
+                case TypeStruct :
+                    return visitor.visitStruct(getDetailsAs<StructTypeDetails>());
+                case TypeUnion :
+                    return visitor.visitUnion(getDetailsAs<UnionTypeDetails>());
+                case TypePureInterface : // TODO: Remove this type. It is redundant and is never used.
+                    return visitor.visitPureInterface(getDetailsAs<PureInterfaceTypeDetails>());
+                case TypeAnonymousStruct :
+                    return visitor.visitAnonymousStruct(getDetailsAs<AnonymousStructTypeDetails>());
+                case TypeAnonymousUnion :
+                    return visitor.visitAnonymousUnion(getDetailsAs<AnonymousUnionTypeDetails>());
+            }
+        }
 
     private:
         TypeType type;

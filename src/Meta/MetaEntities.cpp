@@ -1,41 +1,44 @@
 #include "MetaEntities.h"
 
-/*
-void meta::MethodMeta::serialize(utils::Serializer* serializer) {
+std::string Meta::topLevelModuleOf(const std::string& fullModuleName) {
+    std::size_t dotIndex = fullModuleName.find(".");
+    return (dotIndex == std::string::npos) ? fullModuleName : fullModuleName.substr(0, dotIndex);
 }
 
-void meta::PropertyMeta::serialize(utils::Serializer* serializer) {
+void Meta::MethodMeta::visit(MetaVisitor* visitor) {
 }
 
-void meta::CategoryMeta::serialize(utils::Serializer* serializer) {
-    serializer->serialize(this);
+void Meta::PropertyMeta::visit(MetaVisitor* visitor) {
 }
 
-void meta::InterfaceMeta::serialize(utils::Serializer* serializer) {
-    serializer->serialize(this);
+void Meta::CategoryMeta::visit(MetaVisitor* visitor) {
+    visitor->visit(this);
 }
 
-void meta::ProtocolMeta::serialize(utils::Serializer* serializer) {
-    serializer->serialize(this);
+void Meta::InterfaceMeta::visit(MetaVisitor* visitor) {
+    visitor->visit(this);
 }
 
-void meta::StructMeta::serialize(utils::Serializer* serializer) {
-    serializer->serialize(this);
+void Meta::ProtocolMeta::visit(MetaVisitor* visitor) {
+    visitor->visit(this);
 }
 
-void meta::UnionMeta::serialize(utils::Serializer* serializer) {
-    serializer->serialize(this);
+void Meta::StructMeta::visit(MetaVisitor* visitor) {
+    visitor->visit(this);
 }
 
-void meta::FunctionMeta::serialize(utils::Serializer* serializer) {
-    serializer->serialize(this);
+void Meta::UnionMeta::visit(MetaVisitor* visitor) {
+    visitor->visit(this);
 }
 
-void meta::JsCodeMeta::serialize(utils::Serializer* serializer) {
-    serializer->serialize(this);
+void Meta::FunctionMeta::visit(MetaVisitor* visitor) {
+    visitor->visit(this);
 }
 
-void meta::VarMeta::serialize(utils::Serializer* serializer) {
-    serializer->serialize(this);
+void Meta::JsCodeMeta::visit(MetaVisitor* visitor) {
+    visitor->visit(this);
 }
-*/
+
+void Meta::VarMeta::visit(MetaVisitor* visitor) {
+    visitor->visit(this);
+}
