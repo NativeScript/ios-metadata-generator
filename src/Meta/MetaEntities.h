@@ -379,6 +379,9 @@ namespace Meta {
         categories_iterator categories_end() { return _categories.end(); }
         categories_const_iterator categories_end() const { return _categories.end(); }
 
+        template<class T>
+        void filter(T filter) { filter.filter(*this); }
+
     private:
         int getModuleIndex(const std::string& moduleName, bool addIfNotExists = false) {
             for(int i = 0; i < _modules.size(); i++) {
@@ -392,7 +395,6 @@ namespace Meta {
             return -1;
         }
 
-    private:
         std::vector<Module> _modules;
         std::vector<std::shared_ptr<CategoryMeta>> _categories;
         std::vector<bool> _categoryIsMerged;

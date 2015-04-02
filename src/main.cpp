@@ -1,5 +1,6 @@
 #include "HeadersParser/Parser.h"
 #include "Meta/DeclarationConverterVisitor.h"
+#include "Meta/Filters/RemoveDuplicateMembersFilter.h"
 #include "Yaml/YamlSerializer.h"
 #include "Binary/binarySerializer.h"
 #include <ctime>
@@ -16,8 +17,9 @@ int main(int argc, const char** argv) {
     // Parse the AST
     HeadersParser::ParserSettings settings = HeadersParser::ParserSettings(
             "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk", // sdk path
+            //"/Users/buhov/Desktop/NS/ios-runtime/tests/NativeScriptTests/NativeScriptTests/TNSTestCases.h", // umbrella header
             "/Users/buhov/Desktop/NS/ios-runtime/build/ios-sdk-umbrella-headers/ios8.0.h", // umbrella header
-            "armv7" // architecture
+            "arm64" // architecture
     );
     std::unique_ptr<clang::ASTUnit> ast = HeadersParser::Parser::parse(settings);
 
@@ -25,6 +27,9 @@ int main(int argc, const char** argv) {
     Meta::DeclarationConverterVisitor visitor(ast.get());
     Meta::MetaContainer& metaContainer = visitor.Traverse();
     metaContainer.mergeCategoriesInInterfaces();
+
+    // Filter
+    metaContainer.filter(Meta::RemoveDuplicateMembersFilter());
 
     // Log statistic for parsed Meta objects
     int totalCount = 0;

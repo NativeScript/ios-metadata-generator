@@ -42,8 +42,8 @@ namespace Meta {
             try {
                 addToResult(this->_metaFactory.create(*decl));
             } catch(MetaCreationException& e) {
-                if(e.isError())
-                    std::cout << e.whatAsString() << std::endl;
+//                if(e.isError())
+//                    std::cout << e.whatAsString() << std::endl;
             }
             return true;
         }

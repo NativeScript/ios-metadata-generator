@@ -18,6 +18,14 @@ namespace Meta {
         std::string module;
 
         bool isEmpty() const { return this->jsName.empty(); }
+
+        bool operator==(const FQName& other) const {
+            return (jsName == other.jsName && module == other.module);
+        }
+
+        bool operator!=(const FQName& other) const {
+            return !(*this == other);
+        }
     };
 
     struct Identifier {

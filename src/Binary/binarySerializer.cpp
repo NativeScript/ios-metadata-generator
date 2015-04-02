@@ -49,7 +49,7 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
     if (hasName) {
         flags = (uint8_t)(flags | BinaryFlags::HasName);
     }
-    flags = (uint8_t)(flags | meta->type); // add type
+    flags = (uint8_t)(flags | (meta->type & 7)); // add type; 7 = 111 -> get only the first 3 bits of the type
     if(meta->getFlags(::Meta::MetaFlags::IsIosAppExtensionAvailable))
         flags |= BinaryFlags::IsIosAppExtensionAvailable;
     binaryMetaStruct._flags = flags;
@@ -114,7 +114,9 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
 }
 
 void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta *meta, binary::MethodMeta &binaryMetaStruct) {
+
     this->serializeBase(meta, binaryMetaStruct);
+    binaryMetaStruct._flags &= 248; // 248 = 11111000; this clears the type information writen in the lower 3 bits
 
     if(meta->getFlags(::Meta::MetaFlags::MethodIsVariadic))
         binaryMetaStruct._flags |= BinaryFlags::MethodIsVariadic;
@@ -133,7 +135,9 @@ void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta *meta, binary:
 }
 
 void binary::BinarySerializer::serializeProperty(::Meta::PropertyMeta *meta, binary::PropertyMeta &binaryMetaStruct) {
+
     this->serializeBase(meta, binaryMetaStruct);
+    binaryMetaStruct._flags &= 248; // 248 = 11111000; this clears the type information writen in the lower 3 bits
 
     if(meta->getFlags(::Meta::MetaFlags::PropertyHasGetter)) {
         binaryMetaStruct._flags |= BinaryFlags::PropertyHasGetter;

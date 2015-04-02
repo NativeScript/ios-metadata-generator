@@ -3,6 +3,8 @@
 #include <clang/AST/Decl.h>
 
 namespace Meta {
+    class Type;
+
     class Utils {
     public:
         template<class T>
@@ -16,5 +18,9 @@ namespace Meta {
             }
             return attributes;
         }
+
+        static bool areTypesEqual(const Type& type1, const Type& type2);
+
+        static bool areTypesEqual(const std::vector<Type>& types1, const std::vector<Type>& types2);
     };
 }
