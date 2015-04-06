@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <map>
+#include <unordered_map>
 #include <vector>
 #include <exception>
 #include <clang/AST/DeclBase.h>
@@ -34,11 +34,16 @@ namespace Meta {
                 : Identifier("", "", "") {}
 
         Identifier(std::string name, std::string module, std::string fileName)
-                : name(name),
+                : jsName(name),
                   module(module),
                   fileName(fileName) {}
 
-        std::string name;
+        FQName toFQName() {
+            FQName fqName = FQName { .jsName = jsName, .module = module };
+            return fqName;
+        }
+
+        std::string jsName;
         std::string module;
         std::string fileName;
     };
@@ -52,33 +57,13 @@ namespace Meta {
               _headerSearch(headerSearch),
               _namesToRecalculate(namesToRecalculate) {}
 
-        std::string getJsName(const clang::Decl& decl);
+        std::string getJsName(const clang::Decl& decl, bool throwIfEmpty);
 
-        std::string getJsNameOrEmpty(const clang::Decl& decl);
+        std::string getModule(const clang::Decl& decl, bool throwIfEmpty);
 
-        std::string getModuleName(const clang::Decl& decl);
+        std::string getFileName(const clang::Decl& decl, bool throwIfEmpty);
 
-        std::string getModuleNameOrEmpty(const clang::Decl& decl);
-
-        clang::Module *getModule(const clang::Decl& decl);
-
-        clang::Module *getModuleOrNull(const clang::Decl& decl);
-
-        const clang::FileEntry *getFileEntry(const clang::Decl& decl);
-
-        const clang::FileEntry *getFileEntryOrNull(const clang::Decl& decl);
-
-        std::string getFileName(const clang::Decl& decl);
-
-        std::string getFileNameOrEmpty(const clang::Decl& decl);
-
-        FQName getFqName(const clang::Decl& decl);
-
-        FQName getFqNameOrEmpty(const clang::Decl& decl);
-
-        Identifier getIdentifier(const clang::Decl& decl);
-
-        Identifier getIdentifierOrEmpty(const clang::Decl& decl);
+        Identifier getIdentifier(const clang::Decl& decl, bool throwIfEmpty);
 
     private:
         std::string calculateOriginalName(const clang::Decl& decl);
@@ -90,25 +75,23 @@ namespace Meta {
         clang::SourceManager& _sourceManager;
         clang::HeaderSearch& _headerSearch;
         std::map<clang::Decl::Kind, std::vector<std::string>> _namesToRecalculate;
+        std::unordered_map<const clang::Decl*, Meta::Identifier> _cache;
     };
 
     class IdentifierCreationException : public std::exception
     {
     public:
-        IdentifierCreationException(std::string name, std::string fileName, std::string message)
-                : _name(name),
-                  _fileName(fileName),
+        IdentifierCreationException(Identifier id, std::string message)
+                : _id(id),
                   _message(message) {}
 
         virtual const char* what() const throw() { return this->whatAsString().c_str(); }
-        std::string whatAsString() const { return _message + " Decl: \"" + _name + "\"" + "(" + _fileName + ")"; }
-        std::string getName() const { return this->_name; }
-        std::string getFilename() const { return this->_fileName; }
+        std::string whatAsString() const { return _message + " Decl: \"" + _id.jsName + "\"" + " Module: " + _id.module + " File: " +  _id.fileName; }
+        Identifier getId() const { return this->_id; }
         std::string getMessage() const { return this-> _message; }
 
     private:
-        std::string _name;
-        std::string _fileName;
+        Identifier _id;
         std::string _message;
     };
 }

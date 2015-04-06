@@ -19,7 +19,7 @@ int main(int argc, const char** argv) {
             "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk", // sdk path
             //"/Users/buhov/Desktop/NS/ios-runtime/tests/NativeScriptTests/NativeScriptTests/TNSTestCases.h", // umbrella header
             "/Users/buhov/Desktop/NS/ios-runtime/build/ios-sdk-umbrella-headers/ios8.0.h", // umbrella header
-            "arm64" // architecture
+            "armv7" // architecture
     );
     std::unique_ptr<clang::ASTUnit> ast = HeadersParser::Parser::parse(settings);
 

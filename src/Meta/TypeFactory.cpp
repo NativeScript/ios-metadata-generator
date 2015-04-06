@@ -1,6 +1,7 @@
 #include "TypeFactory.h"
 #include <iostream>
 #include "Utils.h"
+#include "MetaFactory.h"
 
 using namespace std;
 using namespace Meta;
@@ -147,7 +148,8 @@ Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type) {
 Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type) {
     vector<FQName> protocols;
     for (clang::ObjCObjectPointerType::qual_iterator it = type->qual_begin(); it != type->qual_end(); ++it) {
-        protocols.push_back(_identifierGenerator.getFqName(**it));
+        clang::ObjCProtocolDecl *protocol = *it;
+        protocols.push_back(_idGenerator.getIdentifier(**it, true).toFQName());
     }
     if(type->isObjCIdType() || type->isObjCQualifiedIdType()) {
         return Type::Id(protocols);
@@ -156,12 +158,11 @@ Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointer
         return Type::ClassType(protocols);
     }
 
-
     if(clang::ObjCInterfaceDecl *interface = type->getObjectType()->getInterface()) {
         if (interface->getNameAsString() == "Protocol")
             return Type::ProtocolType();
 
-        return Type::Interface(_identifierGenerator.getFqName(*interface), protocols);
+        return Type::Interface(_idGenerator.getIdentifier(*interface, true).toFQName(), protocols);
     }
 
     throw TypeCreationException(type->getObjectType()->getTypeClassName(), "Invalid interface pointer type.", true);
@@ -227,14 +228,14 @@ Type TypeFactory::createFromRecordType(const clang::RecordType* type) {
         throw TypeCreationException(type->getTypeClassName(), "The record is not a struct.", true);
 
     try {
-        FQName recordName = this->_identifierGenerator.getFqName(*recordDef);
+        FQName recordName = this->_idGenerator.getIdentifier(*recordDef, true).toFQName();
         return Type::Struct(recordName);
     } catch(IdentifierCreationException& e) {
         // The record is anonymous
-        std::vector<Meta::RecordField> fields;
+        std::vector<RecordField> fields;
         for(clang::RecordDecl::field_iterator it = recordDef->field_begin(); it != recordDef->field_end(); ++it) {
             clang::FieldDecl *field = *it;
-            RecordField fieldMeta(_identifierGenerator.getJsName(*field), this->create(field->getType()));
+            RecordField fieldMeta(_idGenerator.getJsName(*field, true), this->create(field->getType()));
             fields.push_back(fieldMeta);
         }
         return Type::AnonymousStruct(fields);

@@ -27,103 +27,83 @@ void splitString(const std::string &s, char delim, vector<string> &elems) {
     }
 }
 
-std::string Meta::IdentifierGenerator::getJsName(const clang::Decl& decl) {
+std::string Meta::IdentifierGenerator::getJsName(const clang::Decl& decl, bool throwIfEmpty) {
+    Identifier id = getIdentifier(decl, false);
+    if(id.jsName.empty())
+        throw IdentifierCreationException(id, "Unknown js name for declaration.");
+    return id.jsName;
+}
+
+std::string Meta::IdentifierGenerator::getModule(const clang::Decl& decl, bool throwIfEmpty) {
+    Identifier id = getIdentifier(decl, false);
+    if(id.module.empty())
+        throw IdentifierCreationException(id, "Unknown module name for declaration.");
+    return id.module;
+}
+
+std::string Meta::IdentifierGenerator::getFileName(const clang::Decl& decl, bool throwIfEmpty) {
+    Identifier id = getIdentifier(decl, false);
+    if(id.fileName.empty())
+        throw IdentifierCreationException(id, "Unknown file name for declaration.");
+    return id.fileName;
+}
+
+Meta::Identifier Meta::IdentifierGenerator::getIdentifier(const clang::Decl& decl, bool throwIfEmpty) {
+    // check for cached Identifier
+    std::unordered_map<const clang::Decl*, Identifier>::const_iterator cachedId = _cache.find(&decl);
+    if(cachedId != _cache.end()) {
+        return cachedId->second;
+    }
+
+    Identifier id;
+    // calculate file name
+    clang::SourceLocation location = _sourceManager.getFileLoc(decl.getLocation());
+    clang::FileID fileId = _sourceManager.getDecomposedLoc(location).first;
+    const clang::FileEntry *entry = _sourceManager.getFileEntryForID(fileId);
+    id.fileName = entry->getName();
+
+    // calculate module name
+    clang::Module *owningModule = _headerSearch.findModuleForHeader(entry).getModule();
+    if(owningModule)
+        id.module = owningModule->getFullModuleName();
+    else if(!_sourceManager.isInSystemHeader(decl.getLocation())) {
+        // If is not a system header get the header file name and use it as module name.
+        // This is the case for third-party headers with no module map.
+        long dirLength = std::string(entry->getDir()->getName()).length();
+        std::size_t lastDotIndex = id.fileName.find_last_of(".");
+        id.module = (lastDotIndex == std::string::npos) ? "" : id.fileName.substr(dirLength + 1, lastDotIndex - dirLength - 1);
+    }
+    else {
+        // It is a system header without a module (this is the case for some headers in usr/include).
+        // We don't try to figure out a module name for these headers.
+        id.module = "";
+    }
+
+    // calculate js name
     std::string originalName = calculateOriginalName(decl);
     std::string jsName = calculateJsName(decl, originalName);
-    std::vector<std::string> namesToCheck = _namesToRecalculate[decl.getKind()];
-    if(std::find(namesToCheck.begin(), namesToCheck.end(), originalName) != namesToCheck.end()) {
-        jsName = recalculateJsName(decl, jsName);
+    if(!jsName.empty()) {
+        std::vector<std::string> namesToCheck = _namesToRecalculate[decl.getKind()];
+        if (std::find(namesToCheck.begin(), namesToCheck.end(), originalName) != namesToCheck.end()) {
+            jsName = recalculateJsName(decl, jsName);
+        }
     }
-    return jsName;
-}
+    id.jsName = jsName;
 
-std::string Meta::IdentifierGenerator::getJsNameOrEmpty(const clang::Decl& decl) {
-    try {
-        return getJsName(decl);
+    // add to cache
+    _cache.insert(std::pair<const clang::Decl*, Identifier>(&decl, id));
+
+    if(throwIfEmpty) {
+        if (id.jsName.empty())
+            throw IdentifierCreationException(id, "Unknown js name for declaration.");
+        if (id.fileName.empty())
+            throw IdentifierCreationException(id, "Unknown file name for declaration.");
+        if (id.module.empty())
+            throw IdentifierCreationException(id, "Unknown module for declaration.");
     }
-    catch(IdentifierCreationException& e) {
-        return "";
-    }
-}
 
-std::string Meta::IdentifierGenerator::getModuleName(const clang::Decl& decl) {
-    return getModule(decl)->getFullModuleName();
-}
-
-std::string Meta::IdentifierGenerator::getModuleNameOrEmpty(const clang::Decl& decl) {
-    clang::Module *module = getModuleOrNull(decl);
-    return module ? module->getFullModuleName() : "";
-}
-
-clang::Module *Meta::IdentifierGenerator::getModule(const clang::Decl& decl) {
-    clang::SourceLocation location = _sourceManager.getFileLoc(decl.getLocation());
-    clang::FileID id = _sourceManager.getDecomposedLoc(location).first;
-    const clang::FileEntry *entry = _sourceManager.getFileEntryForID(id);
-
-    clang::Module *owningModule = _headerSearch.findModuleForHeader(entry).getModule();
-    if(!owningModule)
-        throw IdentifierCreationException(getJsNameOrEmpty(decl), getFileNameOrEmpty(decl), "Can't find module for this file name.");
-    return owningModule;
-}
-
-clang::Module *Meta::IdentifierGenerator::getModuleOrNull(const clang::Decl& decl) {
-    const clang::FileEntry *entry = getFileEntryOrNull(decl);
-    return entry ? _headerSearch.findModuleForHeader(entry).getModule() : nullptr;
-}
-
-std::string Meta::IdentifierGenerator::getFileName(const clang::Decl& decl) {
-    return getFileEntry(decl)->getName();
-}
-
-std::string Meta::IdentifierGenerator::getFileNameOrEmpty(const clang::Decl& decl) {
-    if(const clang::FileEntry *entry = getFileEntryOrNull(decl))
-        return entry->getName();
-    return "";
-}
-
-const clang::FileEntry *Meta::IdentifierGenerator::getFileEntry(const clang::Decl& decl) {
-    if(const clang::FileEntry *entry = getFileEntryOrNull(decl))
-        return entry;
-    throw IdentifierCreationException(getJsNameOrEmpty(decl), "", "The containing file of declaration was not found.");
-}
-
-const clang::FileEntry *Meta::IdentifierGenerator::getFileEntryOrNull(const clang::Decl& decl) {
-    clang::SourceLocation sourceLocation = decl.getLocation();
-    clang::FileID id = _sourceManager.getDecomposedLoc(sourceLocation).first;
-    const clang::FileEntry *entry = _sourceManager.getFileEntryForID(id);
-    return entry ? entry : nullptr;
-}
-
-Meta::FQName Meta::IdentifierGenerator::getFqName(const clang::Decl& decl) {
-    FQName fqName;
-    fqName.jsName = getJsName(decl);
-    fqName.module = getModuleName(decl);
-    return fqName;
-}
-
-Meta::FQName Meta::IdentifierGenerator::getFqNameOrEmpty(const clang::Decl& decl) {
-    FQName fqName;
-    fqName.jsName = getJsNameOrEmpty(decl);
-    fqName.module = getModuleNameOrEmpty(decl);
-    return fqName;
-}
-
-Meta::Identifier Meta::IdentifierGenerator::getIdentifier(const clang::Decl& decl) {
-    Identifier id;
-    id.name = getJsName(decl);
-    id.module = getModuleName(decl);
-    id.fileName = getFileName(decl);
     return id;
 }
-
-Meta::Identifier Meta::IdentifierGenerator::getIdentifierOrEmpty(const clang::Decl& decl) {
-    Identifier id;
-    id.name = getJsNameOrEmpty(decl);
-    id.module = getModuleNameOrEmpty(decl);
-    id.fileName = getFileNameOrEmpty(decl);
-    return id;
-}
-
 
 string Meta::IdentifierGenerator::calculateOriginalName(const clang::Decl& decl) {
 
@@ -141,13 +121,13 @@ string Meta::IdentifierGenerator::calculateOriginalName(const clang::Decl& decl)
             if(const clang::ObjCMethodDecl *method = clang::dyn_cast<clang::ObjCMethodDecl>(&decl)) {
                 return method->getSelector().getAsString();
             }
-            throw logic_error("Invalid declaration.");
+            return "";
         }
         case clang::Decl::Kind::Record : {
             if(const clang::RecordDecl *record = clang::dyn_cast<clang::RecordDecl>(&decl)) {
                 if(!record->hasNameForLinkage()) {
                     // It is absolutely anonymous record. It has neither name nor typedef name.
-                    throw IdentifierCreationException("[anonymous_record]", getFileNameOrEmpty(decl), "Anonymous record declared outside typedef. There is no suitable name for this declarations.");
+                    return "";
                 }
 
                 // TODO: check the correctness of the name in scenarios like this:
@@ -171,20 +151,20 @@ string Meta::IdentifierGenerator::calculateOriginalName(const clang::Decl& decl)
                 // The record has no typedef name, so we return its name.
                 return record->getNameAsString();
             }
-            throw logic_error("Invalid declaration.");
+            return "";
         }
         case clang::Decl::Kind::Enum : {
             if(const clang::EnumDecl *enumDecl = clang::dyn_cast<clang::EnumDecl>(&decl)) {
                 if(!enumDecl->hasNameForLinkage()) {
                     // enumDecl->hasNameForLinkage() - http://clang.llvm.org/doxygen/classclang_1_1TagDecl.html#aa0c620992e6aca248368dc5c7c463687 (description what this method does)
-                    throw IdentifierCreationException("[anonymous_enum]", getFileNameOrEmpty(decl) , "Anonymous enum declared outside typedef. There is no suitable name for this declarations.");
+                    return "";
                 }
                 if(const clang::TypedefNameDecl *typedefDecl = enumDecl->getTypedefNameForAnonDecl()) {
                     return typedefDecl->getNameAsString();
                 }
                 return enumDecl->getNameAsString();
             }
-            throw logic_error("Invalid declaration.");
+            return "";
         }
         default:
             throw logic_error(string("Can't generate original name for ") + decl.getDeclKindName() + " type of declaration.");
@@ -214,7 +194,7 @@ string Meta::IdentifierGenerator::calculateJsName(const clang::Decl& decl, std::
             return tokens[0];
         }
         default:
-            throw logic_error("Can't generate JS name for that type of declaration.");
+            throw logic_error(string("Can't calculate js name for ") + decl.getDeclKindName() + " type of declaration.");
     }
 }
 
@@ -245,7 +225,7 @@ string Meta::IdentifierGenerator::recalculateJsName(const clang::Decl& decl, std
         case clang::Decl::Kind::EnumConstant :
             return calculatedJsName + "Field";
         default:
-            throw logic_error("Can't recalculate JS name for that type of declaration.");
+            throw logic_error(string("Can't recalculate js name for ") + decl.getDeclKindName() + " type of declaration.");
 
     }
 }

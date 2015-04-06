@@ -13,12 +13,12 @@ namespace Meta {
     class MetaFactory {
     public:
         MetaFactory(clang::ASTUnit *astUnit)
-                : _astUnit(astUnit),
-                  _identifierGenerator(astUnit->getSourceManager(), astUnit->getPreprocessor().getHeaderSearchInfo(), IdentifierGenerator::getIosSdkNamesToRecalculate()),
-                  _typeFactory(_astUnit, _identifierGenerator) {}
+                : _idGenerator(astUnit->getSourceManager(), astUnit->getPreprocessor().getHeaderSearchInfo(), IdentifierGenerator::getIosSdkNamesToRecalculate()),
+                  _typeFactory(*this, _idGenerator) {}
 
         std::shared_ptr<Meta> create(clang::Decl& decl);
 
+    private:
         std::shared_ptr<FunctionMeta> createFromFunction(clang::FunctionDecl& function);
 
         std::shared_ptr<RecordMeta> createFromRecord(clang::RecordDecl& record);
@@ -35,7 +35,6 @@ namespace Meta {
 
         std::shared_ptr<CategoryMeta> createFromCategory(clang::ObjCCategoryDecl& category);
 
-    private:
         std::shared_ptr<MethodMeta> createFromMethod(clang::ObjCMethodDecl& method);
 
         std::shared_ptr<PropertyMeta> createFromProperty(clang::ObjCPropertyDecl& property);
@@ -45,9 +44,9 @@ namespace Meta {
         Version convertVersion(clang::VersionTuple clangVersion);
         llvm::iterator_range<clang::ObjCProtocolList::iterator> getProtocols(clang::ObjCContainerDecl* objCContainer);
 
-        clang::ASTUnit *_astUnit;
-        IdentifierGenerator _identifierGenerator;
+        IdentifierGenerator _idGenerator;
         TypeFactory _typeFactory;
+        std::unordered_map<const clang::Decl*, std::shared_ptr<Meta>> _cache;
     };
 
     class MetaCreationException : public std::exception {
@@ -58,7 +57,7 @@ namespace Meta {
                   _isError(isError) {}
 
         virtual const char* what() const throw() { return this->whatAsString().c_str(); }
-        std::string whatAsString() const { return _message + " Decl: " + _id.name + "(" + _id.fileName + ") -> " + (this->isError() ? std::string("error") : std::string("notice")); }
+        std::string whatAsString() const { return _message + " Decl: " + _id.jsName + "(" + _id.fileName + ") -> " + (this->isError() ? std::string("error") : std::string("notice")); }
         Identifier getIdentifier() const { return this->_id; }
         std::string getMessage() const { return this-> _message; }
         bool isError() const { return this->_isError; }

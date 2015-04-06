@@ -5,11 +5,14 @@
 #include "IdentifierGenerator.h"
 
 namespace Meta {
+
+    class MetaFactory;
+
     class TypeFactory {
     public:
-        TypeFactory(clang::ASTUnit *astUnit, IdentifierGenerator identifierGenerator)
-        : _astUnit(astUnit),
-          _identifierGenerator(identifierGenerator) {}
+        TypeFactory(MetaFactory& metaFactory, IdentifierGenerator& idGenerator)
+        : _metaFactory(metaFactory),
+          _idGenerator(idGenerator) {}
 
         Type create(const clang::Type* type);
 
@@ -47,16 +50,12 @@ namespace Meta {
         Type createFromParenType(const clang::ParenType *type);
 
         // helper methods
-        void getSignatureOfFunctionProtoType(const clang::FunctionProtoType* type, std::vector<Type>& signature);
-
-        void getSignatureOfParenType(const clang::ParenType* type, std::vector<Type>& signature);
-
         bool isSpecificTypedefType(const clang::TypedefType* type, const std::string& typedefName);
 
         bool isSpecificTypedefType(const clang::TypedefType* type, const std::vector<std::string>& typedefNames);
 
-        clang::ASTUnit *_astUnit;
-        IdentifierGenerator _identifierGenerator;
+        MetaFactory& _metaFactory;
+        IdentifierGenerator _idGenerator;
     };
 
     class TypeCreationException : public std::exception
