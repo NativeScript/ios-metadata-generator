@@ -18,6 +18,8 @@ namespace Meta {
 
         std::shared_ptr<Meta> create(clang::Decl& decl);
 
+        clang::Decl& ensureCanBeCreated(clang::Decl& decl);
+
     private:
         std::shared_ptr<FunctionMeta> createFromFunction(clang::FunctionDecl& function);
 
@@ -47,6 +49,7 @@ namespace Meta {
         IdentifierGenerator _idGenerator;
         TypeFactory _typeFactory;
         std::unordered_map<const clang::Decl*, std::shared_ptr<Meta>> _cache;
+        std::vector<const clang::Decl*> _metaCreationStack;
     };
 
     class MetaCreationException : public std::exception {

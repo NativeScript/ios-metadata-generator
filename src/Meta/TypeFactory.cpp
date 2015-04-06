@@ -40,6 +40,9 @@ Type TypeFactory::create(const clang::Type* type) {
             return createFromParenType(concreteType);
         throw TypeCreationException(type->getTypeClassName(), "Unable to create encoding for this type.", true);
     }
+    catch(MetaCreationException& e) {
+        throw TypeCreationException(type->getTypeClassName(), string("Type is referencing not supported declaration [") + e.whatAsString() + "]", true);
+    }
     catch(IdentifierCreationException& e) {
         throw TypeCreationException(type->getTypeClassName(), string("Identifier Error [") + e.whatAsString() + "]", true);
     }
@@ -148,8 +151,14 @@ Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type) {
 Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type) {
     vector<FQName> protocols;
     for (clang::ObjCObjectPointerType::qual_iterator it = type->qual_begin(); it != type->qual_end(); ++it) {
-        clang::ObjCProtocolDecl *protocol = *it;
-        protocols.push_back(_idGenerator.getIdentifier(**it, true).toFQName());
+        clang::ObjCProtocolDecl *protocolDef = (*it)->getDefinition();
+        if(protocolDef) {
+            try {
+                protocols.push_back(_idGenerator.getIdentifier(_metaFactory.ensureCanBeCreated(*protocolDef), true).toFQName());
+            } catch (MetaCreationException &e) {
+                continue;
+            }
+        }
     }
     if(type->isObjCIdType() || type->isObjCQualifiedIdType()) {
         return Type::Id(protocols);
@@ -161,8 +170,8 @@ Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointer
     if(clang::ObjCInterfaceDecl *interface = type->getObjectType()->getInterface()) {
         if (interface->getNameAsString() == "Protocol")
             return Type::ProtocolType();
-
-        return Type::Interface(_idGenerator.getIdentifier(*interface, true).toFQName(), protocols);
+        if(clang::ObjCInterfaceDecl *interfaceDef = interface->getDefinition())
+            return Type::Interface(_idGenerator.getIdentifier(_metaFactory.ensureCanBeCreated(*interfaceDef), true).toFQName(), protocols);
     }
 
     throw TypeCreationException(type->getObjectType()->getTypeClassName(), "Invalid interface pointer type.", true);
@@ -189,7 +198,7 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
             if (bridgeMutableAttrs.size() > 0) {
                 clang::ObjCBridgeMutableAttr *bridgeAttr = bridgeMutableAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                // TODO: change the module of the interface type to be the original module of the bridged type
+                // TODO: change the module of the interface type to be the original module of the bridged type. The fqName generation should be done in the IdentifierGenerator
                 FQName fqName = FQName { .module = "Foundation", .jsName = name};
                 return Type::Interface(fqName, vector<FQName>());
             }
@@ -198,7 +207,7 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
             if (bridgeAttrs.size() > 0) {
                 clang::ObjCBridgeAttr *bridgeAttr = bridgeAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                // TODO: change the module of the interface type to be the original module of the bridged type
+                // TODO: change the module of the interface type to be the original module of the bridged type. The fqName generation should be done in the IdentifierGenerator
                 FQName fqName = FQName { .module = "Foundation", .jsName = name};
                 return Type::Interface(fqName, vector<FQName>());
             }
@@ -226,20 +235,19 @@ Type TypeFactory::createFromRecordType(const clang::RecordType* type) {
         throw TypeCreationException(type->getTypeClassName(), "The record is an union.", true);
     if(!recordDef->isStruct())
         throw TypeCreationException(type->getTypeClassName(), "The record is not a struct.", true);
-
-    try {
-        FQName recordName = this->_idGenerator.getIdentifier(*recordDef, true).toFQName();
-        return Type::Struct(recordName);
-    } catch(IdentifierCreationException& e) {
+    if(!recordDef->hasNameForLinkage()) {
         // The record is anonymous
         std::vector<RecordField> fields;
-        for(clang::RecordDecl::field_iterator it = recordDef->field_begin(); it != recordDef->field_end(); ++it) {
+        for (clang::RecordDecl::field_iterator it = recordDef->field_begin(); it != recordDef->field_end(); ++it) {
             clang::FieldDecl *field = *it;
             RecordField fieldMeta(_idGenerator.getJsName(*field, true), this->create(field->getType()));
             fields.push_back(fieldMeta);
         }
         return Type::AnonymousStruct(fields);
     }
+
+    FQName recordName = this->_idGenerator.getIdentifier(_metaFactory.ensureCanBeCreated(*recordDef), true).toFQName();
+    return Type::Struct(recordName);
 }
 
 Type TypeFactory::createFromTypedefType(const clang::TypedefType* type) {
@@ -250,20 +258,6 @@ Type TypeFactory::createFromTypedefType(const clang::TypedefType* type) {
         return Type::Unichar();
     if(isSpecificTypedefType(type, "__builtin_va_list"))
         throw TypeCreationException(type->getTypeClassName(), "VaList type is not supported.", true);
-
-
-//    if(const clang::PointerType *pointerType = type->getCanonicalTypeUnqualified().getTypePtr()->getAs<clang::PointerType>()) {
-//        if(const clang::RecordType *record = pointerType->getPointeeType().getTypePtr()->getAs<clang::RecordType>()) {
-//            string recordName = record->getDecl()->getNameAsString();
-//            if(std::find(tollFreeBridgedTypes.begin(), tollFreeBridgedTypes.end(), recordName) != tollFreeBridgedTypes.end()) {
-//                // We have found a toll free bridged structure. For now do nothing here.
-//
-//                // TODO: Maybe there is better way to recognize toll free bridged types (e.g. type->isObjCARCBridgableType()) and get the corresponding type object.
-//                // Don't forget to change not only the name of the type but its module.
-//            }
-//        }
-//    }
-
     return this->create(type->getDecl()->getUnderlyingType());
 }
 

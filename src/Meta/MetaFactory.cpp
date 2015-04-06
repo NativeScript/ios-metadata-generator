@@ -43,9 +43,13 @@ shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl) {
         std::shared_ptr<Meta> result = cachedId->second;
         if(result)
             return result;
-        throw MetaCreationException(_idGenerator.getIdentifier(decl, false), "Unable to create metadata.", false);
+        throw MetaCreationException(_idGenerator.getIdentifier(decl, false), "Unable to create metadata.", false); // The meta object cannot be created
+    }
+    else if(std::find(_metaCreationStack.begin(), _metaCreationStack.end(), &decl) != _metaCreationStack.end()) {
+        throw runtime_error(std::string("Attempt to create the same meta object recursively(") + _idGenerator.getJsName(decl, false) + ").");
     }
 
+    _metaCreationStack.push_back(&decl); // add to creation stack
     std::shared_ptr<Meta> result(nullptr);
     try {
         if (clang::FunctionDecl *function = clang::dyn_cast<clang::FunctionDecl>(&decl))
@@ -71,21 +75,32 @@ shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl) {
         else
             throw MetaCreationException(_idGenerator.getIdentifier(decl, false), "Unknow declaration type.", true);
 
-        // add to cache
-        _cache.insert(std::pair<const clang::Decl*, std::shared_ptr<Meta>>(&decl, result));
+        _metaCreationStack.pop_back(); // remove from creation stack
+        _cache.insert(std::pair<const clang::Decl*, std::shared_ptr<Meta>>(&decl, result)); // add to cache
         return result;
     }
     catch(IdentifierCreationException& e) {
+        _metaCreationStack.pop_back(); // remove from creation stack
+        _cache.insert(std::pair<const clang::Decl*, std::shared_ptr<Meta>>(&decl, result)); // add to cache
         throw MetaCreationException(_idGenerator.getIdentifier(decl, false), string("[") + e.whatAsString() + string("]"), true);
     }
     catch(TypeCreationException & e) {
+        _metaCreationStack.pop_back(); // remove from creation stack
+        _cache.insert(std::pair<const clang::Decl*, std::shared_ptr<Meta>>(&decl, result)); // add to cache
         throw MetaCreationException(_idGenerator.getIdentifier(decl, false), string("[") + e.whatAsString() + string("]"), e.isError());
     }
     catch(MetaCreationException & e) {
-        // add to cache
-        _cache.insert(std::pair<const clang::Decl*, std::shared_ptr<Meta>>(&decl, result));
+        _metaCreationStack.pop_back(); // remove from creation stack
+        _cache.insert(std::pair<const clang::Decl*, std::shared_ptr<Meta>>(&decl, result)); // add to cache
         throw;
     }
+}
+
+clang::Decl& Meta::MetaFactory::ensureCanBeCreated(clang::Decl& decl) {
+    if(std::find(_metaCreationStack.begin(), _metaCreationStack.end(), &decl) == _metaCreationStack.end()) {
+        create(decl);
+    }
+    return decl;
 }
 
 shared_ptr<Meta::FunctionMeta> Meta::MetaFactory::createFromFunction(clang::FunctionDecl& function) {
@@ -205,7 +220,7 @@ shared_ptr<Meta::InterfaceMeta> Meta::MetaFactory::createFromInterface(clang::Ob
 
     // set base interface
     clang::ObjCInterfaceDecl *super = interface.getSuperClass();
-    interfaceMeta->baseName = (super == nullptr) ? FQName() : _idGenerator.getIdentifier(*super, true).toFQName();
+    interfaceMeta->baseName = (super == nullptr) ? FQName() : _idGenerator.getIdentifier(ensureCanBeCreated(*super->getDefinition()), true).toFQName();
 
     return interfaceMeta;
 }
@@ -225,7 +240,7 @@ shared_ptr<Meta::CategoryMeta> Meta::MetaFactory::createFromCategory(clang::ObjC
     shared_ptr<CategoryMeta> categoryMeta = make_shared<CategoryMeta>();
     populateMetaFields(category, *(categoryMeta.get()));
     populateBaseClassMetaFields(category, *(categoryMeta.get()));
-    categoryMeta->extendedInterface = _idGenerator.getIdentifier(*category.getClassInterface(), true).toFQName();
+    categoryMeta->extendedInterface = _idGenerator.getIdentifier(ensureCanBeCreated(*category.getClassInterface()->getDefinition()), true).toFQName();
     return categoryMeta;
 }
 
@@ -291,6 +306,7 @@ shared_ptr<Meta::PropertyMeta> Meta::MetaFactory::createFromProperty(clang::ObjC
 }
 
 void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
+    // TODO: add identifier in meta object
     meta.declaration = &decl;
     meta.name = decl.getNameAsString();
     // We allow  anonymous categories to be created. There is no need for categories to be named
@@ -351,8 +367,8 @@ void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& de
     for (clang::ObjCProtocolList::iterator i = protocols.begin(); i != protocols.end() ; ++i) {
         clang::ObjCProtocolDecl *protocol = *i;
         try {
-            baseClass.protocols.push_back(_idGenerator.getIdentifier(*protocol, true).toFQName());
-        } catch(IdentifierCreationException& e) {
+            baseClass.protocols.push_back(_idGenerator.getIdentifier(ensureCanBeCreated(*protocol->getDefinition()), true).toFQName());
+        } catch(MetaCreationException& e) {
             continue;
         }
     }
