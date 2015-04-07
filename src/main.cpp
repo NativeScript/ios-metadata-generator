@@ -1,6 +1,7 @@
 #include "HeadersParser/Parser.h"
 #include "Meta/DeclarationConverterVisitor.h"
 #include "Meta/Filters/RemoveDuplicateMembersFilter.h"
+#include "Meta/Filters/HandleExceptionalMetasFilter.h"
 #include "Yaml/YamlSerializer.h"
 #include "Binary/binarySerializer.h"
 #include <ctime>
@@ -30,6 +31,7 @@ int main(int argc, const char** argv) {
 
     // Filter
     metaContainer.filter(Meta::RemoveDuplicateMembersFilter());
+    metaContainer.filter(Meta::HandleExceptionalMetasFilter());
 
     // Log statistic for parsed Meta objects
     int totalCount = 0;
