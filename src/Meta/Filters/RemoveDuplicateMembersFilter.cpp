@@ -64,7 +64,7 @@ void processBaseClassAndHierarchyOf(std::shared_ptr<Meta::BaseClassMeta> child, 
 }
 
 void Meta::RemoveDuplicateMembersFilter::filter(MetaContainer& container) {
-    for(MetaContainer::iterator modIt = container.begin(); modIt != container.end(); modIt++) {
+    for(MetaContainer::top_level_modules_iterator modIt = container.top_level_modules_begin(); modIt != container.top_level_modules_end(); modIt++) {
         Module& module = *modIt;
         for(Module::iterator metaIt = module.begin(); metaIt != module.end(); metaIt++) {
             std::shared_ptr<Meta> meta = metaIt->second;

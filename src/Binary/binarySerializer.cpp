@@ -170,7 +170,7 @@ void binary::BinarySerializer::serializeRecord(::Meta::RecordMeta *meta, binary:
 
 void binary::BinarySerializer::serializeContainer(::Meta::MetaContainer& container) {
     this->start(&container);
-    for (::Meta::MetaContainer::iterator moduleIt = container.begin(); moduleIt != container.end(); ++moduleIt) {
+    for (::Meta::MetaContainer::top_level_modules_iterator moduleIt = container.top_level_modules_begin(); moduleIt != container.top_level_modules_end(); ++moduleIt) {
         ::Meta::Module& module = *moduleIt;
         for(::Meta::Module::iterator metaIt = module.begin(); metaIt != module.end(); ++metaIt) {
             std::pair<std::string, std::shared_ptr<::Meta::Meta>> metaPair = *metaIt;
@@ -182,9 +182,9 @@ void binary::BinarySerializer::serializeContainer(::Meta::MetaContainer& contain
 
 void binary::BinarySerializer::start(::Meta::MetaContainer *container) {
     // write all module names in heap and write down their offsets
-    for (auto moduleIter = container->begin(); moduleIter != container->end(); ++moduleIter) {
-        binary::MetaFileOffset offset = this->heapWriter.push_string(moduleIter->getName());
-        this->moduleMap.emplace(moduleIter->getName(), offset);
+    for (auto moduleIter = container->all_modules_begin(); moduleIter != container->all_modules_end(); ++moduleIter) {
+        binary::MetaFileOffset offset = this->heapWriter.push_string(*moduleIter);
+        this->moduleMap.emplace(*moduleIter, offset);
     }
 }
 

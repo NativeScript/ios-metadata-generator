@@ -12,7 +12,8 @@ using namespace std;
 static map<clang::Decl::Kind, vector<string>> IosSdkNamesToRecalculate = {
         { clang::Decl::Kind::Record, { "kevent", "flock", "sigvec", "sigaction", "wait" } },
         { clang::Decl::Kind::Var, { "timezone" } },
-        { clang::Decl::Kind::ObjCProtocol, { "NSObject", "AVVideoCompositionInstruction", "OS_dispatch_data" } }
+        { clang::Decl::Kind::ObjCProtocol, { "NSObject", "AVVideoCompositionInstruction", "OS_dispatch_data" } },
+        { clang::Decl::Kind::ObjCProperty, { "MKTileOverlay.canReplaceMapContent" } }
 };
 
 map<clang::Decl::Kind, vector<string>>& Meta::IdentifierGenerator::getIosSdkNamesToRecalculate() {
@@ -81,10 +82,15 @@ Meta::Identifier Meta::IdentifierGenerator::getIdentifier(const clang::Decl& dec
 
     // calculate js name
     std::string originalName = calculateOriginalName(decl);
+    std::string recalculationMapName = originalName;
+    if(decl.getKind() == clang::Decl::Kind::ObjCProperty || decl.getKind() == clang::Decl::Kind::ObjCMethod) {
+        if(const clang::ObjCContainerDecl *containerDecl = clang::dyn_cast<clang::ObjCContainerDecl>(decl.getDeclContext()))
+            recalculationMapName = calculateOriginalName(*containerDecl) + "." + originalName;
+    }
     std::string jsName = calculateJsName(decl, originalName);
     if(!jsName.empty()) {
         std::vector<std::string> namesToCheck = _namesToRecalculate[decl.getKind()];
-        if (std::find(namesToCheck.begin(), namesToCheck.end(), originalName) != namesToCheck.end()) {
+        if (std::find(namesToCheck.begin(), namesToCheck.end(), recalculationMapName) != namesToCheck.end()) {
             jsName = recalculateJsName(decl, jsName);
         }
     }

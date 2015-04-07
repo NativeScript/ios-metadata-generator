@@ -263,13 +263,18 @@ namespace Meta {
     class MetaContainer {
 
     public:
-        typedef std::vector<Module>::iterator iterator;
-        typedef std::vector<Module>::const_iterator const_iterator;
+        typedef std::vector<Module>::iterator top_level_modules_iterator;
+        typedef std::vector<Module>::const_iterator const_top_level_modules_iterator;
+
+        typedef std::set<std::string>::iterator all_modules_iterator;
+        typedef std::set<std::string>::const_iterator const_all_modules_iterator;
+
         typedef std::vector<std::shared_ptr<CategoryMeta>>::iterator categories_iterator;
         typedef std::vector<std::shared_ptr<CategoryMeta>>::const_iterator categories_const_iterator;
         typedef std::vector<Module>::size_type size_type;
 
         void add(std::shared_ptr<Meta> meta) {
+            _allModules.insert(meta->module);
             if(meta->is(MetaType::Category)) {
                 std::shared_ptr<CategoryMeta> category = std::static_pointer_cast<CategoryMeta>(meta);
                 this->_categories.push_back(category);
@@ -281,18 +286,18 @@ namespace Meta {
             }
         }
 
-        size_type size() const {
+        size_type topLevelMetasCount() const {
             size_type size = 0;
-            for(std::vector<Module>::const_iterator it = _modules.begin(); it != _modules.end(); ++it)
+            for(std::vector<Module>::const_iterator it = _topLevelModules.begin(); it != _topLevelModules.end(); ++it)
                 size += it->size();
             return size + _categories.size();
         }
 
-        int modulesCount() { return _modules.size(); }
+        int topLevelModulesCount() { return _topLevelModules.size(); }
+
+        int allModulesCount() { return _allModules.size(); }
 
         int categoriesCount() { return _categories.size(); }
-
-        void clear() { _modules.clear(); }
 
         bool contains(const std::string& moduleName) {
             return getModuleIndex(moduleName, false) != -1;
@@ -302,11 +307,18 @@ namespace Meta {
             return getMetaAs<Meta>(moduleName, jsName) != nullptr;
         }
 
+        void clear() {
+            _topLevelModules.clear();
+            _allModules.clear();
+            _categories.clear();
+            _categoryIsMerged.clear();
+        }
+
         Module *getModule(const std::string& moduleName, bool addIfNotExists = false) {
             int index = getModuleIndex(moduleName, addIfNotExists);
             if(index == -1)
                 return nullptr;
-            return &_modules[index];
+            return &_topLevelModules[index];
         }
 
         std::shared_ptr<Meta> getMeta(const std::string& module, const std::string& jsName) {
@@ -369,10 +381,15 @@ namespace Meta {
             return mergedCategories;
         }
 
-        iterator begin() { return _modules.begin(); }
-        const_iterator begin() const { return _modules.begin(); }
-        iterator end() { return _modules.end(); }
-        const_iterator end() const { return _modules.end(); }
+        top_level_modules_iterator top_level_modules_begin() { return _topLevelModules.begin(); }
+        const_top_level_modules_iterator top_level_modules_begin() const { return _topLevelModules.begin(); }
+        top_level_modules_iterator top_level_modules_end() { return _topLevelModules.end(); }
+        const_top_level_modules_iterator top_level_modules_end() const { return _topLevelModules.end(); }
+
+        all_modules_iterator all_modules_begin() { return _allModules.begin(); }
+        const_all_modules_iterator all_modules_begin() const { return _allModules.begin(); }
+        all_modules_iterator all_modules_end() { return _allModules.end(); }
+        const_all_modules_iterator all_modules_end() const { return _allModules.end(); }
 
         categories_iterator categories_begin() { return _categories.begin(); }
         categories_const_iterator categories_begin() const { return _categories.begin(); }
@@ -384,18 +401,19 @@ namespace Meta {
 
     private:
         int getModuleIndex(const std::string& moduleName, bool addIfNotExists = false) {
-            for(int i = 0; i < _modules.size(); i++) {
-                if(_modules[i].getName() == moduleName)
+            for(int i = 0; i < _topLevelModules.size(); i++) {
+                if(_topLevelModules[i].getName() == moduleName)
                     return i;
             }
             if(addIfNotExists) {
-                _modules.push_back(Module(moduleName));
-                return (_modules.size() - 1);
+                _topLevelModules.push_back(Module(moduleName));
+                return (_topLevelModules.size() - 1);
             }
             return -1;
         }
 
-        std::vector<Module> _modules;
+        std::vector<Module> _topLevelModules;
+        std::set<std::string> _allModules;
         std::vector<std::shared_ptr<CategoryMeta>> _categories;
         std::vector<bool> _categoryIsMerged;
     };

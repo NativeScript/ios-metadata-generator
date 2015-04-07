@@ -36,7 +36,7 @@ int main(int argc, const char** argv) {
     // Log statistic for parsed Meta objects
     int totalCount = 0;
     std::map<Meta::MetaType, int> countByTypes;
-    for (Meta::MetaContainer::const_iterator it = metaContainer.begin(); it != metaContainer.end(); ++it) {
+    for (Meta::MetaContainer::const_top_level_modules_iterator it = metaContainer.top_level_modules_begin(); it != metaContainer.top_level_modules_end(); ++it) {
         std::cout << it->getName() << " -> " << it->size() << std::endl;
         totalCount += it->size();
         for(Meta::Module::const_iterator i = it->begin(); i != it->end(); ++i) {
@@ -46,15 +46,15 @@ int main(int argc, const char** argv) {
     for (std::map<Meta::MetaType, int>::const_iterator it = countByTypes.begin(); it != countByTypes.end(); ++it) {
         std::cout << it->first << " -> " <<it->second << std::endl;
     }
-    std::cout << "All declarations: " << metaContainer.size() << " from " << metaContainer.modulesCount() << " modules" << std::endl;
+    std::cout << "All declarations: " << metaContainer.topLevelMetasCount() << " from " << metaContainer.topLevelModulesCount() << " modules" << std::endl;
 
     // Serialize Meta objects to Yaml
-    for (Meta::MetaContainer::iterator it = metaContainer.begin(); it != metaContainer.end(); ++it) {
+    for (Meta::MetaContainer::top_level_modules_iterator it = metaContainer.top_level_modules_begin(); it != metaContainer.top_level_modules_end(); ++it) {
         Yaml::YamlSerializer::serialize<Meta::Module>(std::string("/Users/buhov/Desktop/new-generator-yaml/") + it->getName() + ".yaml", *it);
     }
 
     // Serialize Meta objects to binary metadata
-    binary::MetaFile file(metaContainer.size());
+    binary::MetaFile file(metaContainer.topLevelMetasCount());
     binary::BinarySerializer serializer(&file);
     serializer.serializeContainer(metaContainer);
     std::string output = "/Users/buhov/Desktop/binMetadata/metadata.bin";
