@@ -18,10 +18,13 @@ int main(int argc, const char** argv) {
     // Parse the AST
     HeadersParser::ParserSettings settings = HeadersParser::ParserSettings(
             "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk", // sdk path
-            //"/Users/buhov/Desktop/NS/ios-runtime/tests/NativeScriptTests/NativeScriptTests/TNSTestCases.h", // umbrella header
-            "/Users/buhov/Desktop/NS/ios-runtime/build/ios-sdk-umbrella-headers/ios8.0.h", // umbrella header
-            "armv7" // architecture
+            {
+                    // include header paths
+                    "/Users/buhov/Desktop/NS/ios-runtime/tests/NativeScriptTests/NativeScriptTests", // TNSTestCases.h
+            },
+            "armv7"
     );
+
     std::unique_ptr<clang::ASTUnit> ast = HeadersParser::Parser::parse(settings);
 
     // Convert declarations to Meta objects (by visiting the AST from DeclarationConverterVisitor)
