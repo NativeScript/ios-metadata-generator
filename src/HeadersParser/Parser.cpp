@@ -116,14 +116,14 @@ std::unique_ptr<ASTUnit> HeadersParser::Parser::parse(ParserSettings& settings) 
     std::vector<std::string> clangArgs {
             "-v",
             "-x", "objective-c",
-            "-arch", settings.getArchitecture(),
-            "-target", "arm-apple-darwin",
-            "-std=gnu99",
             "-fno-objc-arc",
-            "-miphoneos-version-min=7.0",
             "-fmodule-maps",
-            "-resource-dir", "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/6.0", // TODO: distribute the folder with metadata generator
-            "-isysroot", settings.getSdkPath()
+            "-resource-dir", "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/6.0", // TODO: distribute the folder with metadata generator and remove the option
+            "-isysroot", settings.getSysRoot(),
+            "-arch", settings.getArch(),
+            "-target", settings.getTarget(),
+            std::string("-std=") + settings.getStd(),
+            std::string("-miphoneos-version-min=") + settings.getIPhoneOsVersionMin(),
     };
 
     // add header search paths
