@@ -239,8 +239,8 @@ namespace Meta {
         void add(std::shared_ptr<Meta> meta) {
             if(_declarations.find(meta->jsName) == _declarations.end())
                 _declarations.insert(std::pair<std::string, std::shared_ptr<Meta>>(meta->jsName, meta));
-            else
-                std::cerr << "The declaration with name '" << meta->jsName << "' already exists in module '" << _name << "'." <<  std::endl; // TODO: research why there are conflicts
+            //else
+            //    std::cerr << "The declaration with name '" << meta->jsName << "' already exists in module '" << _name << "'." <<  std::endl; // TODO: research why there are conflicts
         }
 
         bool remove(std::string& jsName) {

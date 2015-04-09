@@ -38,6 +38,7 @@ int main(int argc, const char** argv) {
     metaContainer.filter(Meta::HandleExceptionalMetasFilter());
 
     // Log statistic for parsed Meta objects
+    std::cout << "Declarations by modules: " << std::endl;
     int totalCount = 0;
     std::map<Meta::MetaType, int> countByTypes;
     for (Meta::MetaContainer::const_top_level_modules_iterator it = metaContainer.top_level_modules_begin(); it != metaContainer.top_level_modules_end(); ++it) {
@@ -46,9 +47,6 @@ int main(int argc, const char** argv) {
         for(Meta::Module::const_iterator i = it->begin(); i != it->end(); ++i) {
             countByTypes[i->second->type] += 1;
         }
-    }
-    for (std::map<Meta::MetaType, int>::const_iterator it = countByTypes.begin(); it != countByTypes.end(); ++it) {
-        std::cout << it->first << " -> " <<it->second << std::endl;
     }
     std::cout << "All declarations: " << metaContainer.topLevelMetasCount() << " from " << metaContainer.topLevelModulesCount() << " modules" << std::endl;
 
@@ -71,7 +69,8 @@ int main(int argc, const char** argv) {
 
     std::clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    printf("Running time: %f sec", elapsed_secs);
+    std::cout << "Running time: " << elapsed_secs << " sec " << std::endl;
+    std::cout << "Done!" << std::endl;
 
     return 0;
 }
