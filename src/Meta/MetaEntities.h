@@ -286,6 +286,17 @@ namespace Meta {
             }
         }
 
+        void removeCategory(FQName category, FQName interface) {
+            for(std::vector<std::shared_ptr<CategoryMeta>>::size_type i = 0; i < _categories.size(); i++) {
+                std::shared_ptr<CategoryMeta> cat = _categories[i];
+                if(cat->jsName == category.jsName && cat->module == category.module && cat->extendedInterface == interface) {
+                    _categories.erase(_categories.begin() + i);
+                    _categoryIsMerged.erase(_categoryIsMerged.begin() + i);
+                    i--;
+                }
+            }
+        }
+
         size_type topLevelMetasCount() const {
             size_type size = 0;
             for(std::vector<Module>::const_iterator it = _topLevelModules.begin(); it != _topLevelModules.end(); ++it)

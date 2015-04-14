@@ -42,7 +42,7 @@ namespace Meta {
             try {
                 std::shared_ptr<Meta> meta = this->_metaFactory.create(*decl);
                 addToResult(meta);
-                //std::cout << "Included: " << meta->jsName << std::endl;
+                //std::cout << "Included: " << meta->jsName << " from " << meta->module << std::endl;
             } catch(MetaCreationException& e) {
                 //if(e.isError())
                 //    std::cout << e.whatAsString() << std::endl;

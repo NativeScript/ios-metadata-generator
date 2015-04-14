@@ -34,24 +34,15 @@ int main(int argc, const char** argv) {
     // Convert declarations to Meta objects (by visiting the AST from DeclarationConverterVisitor)
     Meta::DeclarationConverterVisitor visitor(ast.get());
     Meta::MetaContainer& metaContainer = visitor.Traverse();
-    metaContainer.mergeCategoriesInInterfaces();
 
     // Filter
-    metaContainer.filter(Meta::RemoveDuplicateMembersFilter());
     metaContainer.filter(Meta::HandleExceptionalMetasFilter());
+    metaContainer.mergeCategoriesInInterfaces();
+    metaContainer.filter(Meta::RemoveDuplicateMembersFilter());
 
     // Log statistic for parsed Meta objects
-    std::cout << "Declarations by modules: " << std::endl;
-    int totalCount = 0;
-    std::map<Meta::MetaType, int> countByTypes;
-    for (Meta::MetaContainer::const_top_level_modules_iterator it = metaContainer.top_level_modules_begin(); it != metaContainer.top_level_modules_end(); ++it) {
-        std::cout << it->getName() << " -> " << it->size() << std::endl;
-        totalCount += it->size();
-        for(Meta::Module::const_iterator i = it->begin(); i != it->end(); ++i) {
-            countByTypes[i->second->type] += 1;
-        }
-    }
-    std::cout << "All declarations: " << metaContainer.topLevelMetasCount() << " from " << metaContainer.topLevelModulesCount() << " modules" << std::endl;
+    std::cout << "Result: " << metaContainer.topLevelMetasCount() << " declarations from " << metaContainer.allModulesCount()
+    << " (and " << metaContainer.topLevelModulesCount() << " top level)" << " modules" << std::endl;
 
     // Serialize Meta objects to Yaml
     if(!cla_outputYamlFolder.empty()) {
@@ -72,8 +63,7 @@ int main(int argc, const char** argv) {
 
     std::clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    std::cout << "Running time: " << elapsed_secs << " sec " << std::endl;
-    std::cout << "Done!" << std::endl;
+    std::cout << "Done! Running time: " << elapsed_secs << " sec " << std::endl;
 
     return 0;
 }

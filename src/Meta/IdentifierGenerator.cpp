@@ -12,8 +12,7 @@ using namespace std;
 static map<clang::Decl::Kind, vector<string>> IosSdkNamesToRecalculate = {
         { clang::Decl::Kind::Record, { "kevent", "flock", "sigvec", "sigaction", "wait" } },
         { clang::Decl::Kind::Var, { "timezone" } },
-        { clang::Decl::Kind::ObjCProtocol, { "NSObject", "AVVideoCompositionInstruction", "OS_dispatch_data" } },
-        { clang::Decl::Kind::ObjCProperty, { "MKTileOverlay.canReplaceMapContent" } }
+        { clang::Decl::Kind::ObjCProtocol, { "NSObject", "AVVideoCompositionInstruction", "OS_dispatch_data" } }
 };
 
 map<clang::Decl::Kind, vector<string>>& Meta::IdentifierGenerator::getIosSdkNamesToRecalculate() {
