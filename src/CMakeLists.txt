@@ -36,3 +36,12 @@ target_link_libraries(objc-metadata-generator
     clangLex
     clangTooling
 )
+
+add_custom_command(TARGET objc-metadata-generator
+                    POST_BUILD
+                    COMMAND ${CMAKE_COMMAND} -E copy_directory ${LLVM_LIBDIR}/clang ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang)
+
+install(TARGETS objc-metadata-generator
+        RUNTIME DESTINATION bin)
+
+install(DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang DESTINATION lib)

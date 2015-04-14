@@ -27,6 +27,9 @@ int main(int argc, const char** argv) {
             cla_target.getValue(), cla_std.getValue(), cla_headerSearchPaths);
 
     std::unique_ptr<clang::ASTUnit> ast = HeadersParser::Parser::parse(settings);
+    if(!ast) {
+        return -1;
+    }
 
     // Convert declarations to Meta objects (by visiting the AST from DeclarationConverterVisitor)
     Meta::DeclarationConverterVisitor visitor(ast.get());

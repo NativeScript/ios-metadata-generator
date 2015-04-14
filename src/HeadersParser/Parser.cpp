@@ -114,11 +114,10 @@ std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::str
 std::unique_ptr<ASTUnit> HeadersParser::Parser::parse(ParserSettings& settings) {
 
     std::vector<std::string> clangArgs {
-            "-v",
+            //"-v",
             "-x", "objective-c",
             "-fno-objc-arc",
             "-fmodule-maps",
-            "-resource-dir", "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/6.0", // TODO: distribute the folder with metadata generator and remove the option
             "-isysroot", settings.getSysRoot(),
             "-arch", settings.getArch(),
             "-target", settings.getTarget(),
@@ -140,6 +139,9 @@ std::unique_ptr<ASTUnit> HeadersParser::Parser::parse(ParserSettings& settings) 
 
     // Build and return the AST
     std::unique_ptr<clang::ASTUnit> ast = clang::tooling::buildASTFromCodeWithArgs(umbrellaHeaderContents, clangArgs, "umbrella.h");
+    if(!ast) {
+        return nullptr;
+    }
     SmallVector<Module*, 64> modules;
     ast->getPreprocessor().getHeaderSearchInfo().collectAllModules(modules);
     return ast;
