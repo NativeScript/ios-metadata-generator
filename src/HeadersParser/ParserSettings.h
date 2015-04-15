@@ -8,13 +8,15 @@ namespace HeadersParser {
     class ParserSettings {
 
     public:
-        ParserSettings(std::string sysroot, std::string arch, std::string iPhoneOsVersionMin, std::string target, std::string std, std::vector<std::string> headerSearchPaths)
+        ParserSettings(std::string sysroot, std::string arch, std::string iPhoneOsVersionMin, std::string target,
+                       std::string std, std::vector<std::string> headerSearchPaths, std::vector<std::string> frameworkSearchPaths)
                 : _sysroot(sysroot),
                   _arch(arch),
                   _iPhoneOsVersionMin(iPhoneOsVersionMin),
                   _target(target),
                   _std(std),
-                  _headerSearchPaths(headerSearchPaths) {}
+                  _headerSearchPaths(headerSearchPaths),
+                  _frameworkSearchPaths(frameworkSearchPaths) {}
 
         std::string getSysRoot() {
             return this->_sysroot;
@@ -40,7 +42,9 @@ namespace HeadersParser {
             return this->_headerSearchPaths;
         }
 
-
+        std::vector<std::string> getFrameworkSearchPaths() {
+            return this->_frameworkSearchPaths;
+        }
 
     private:
         std::string _sysroot;
@@ -49,5 +53,6 @@ namespace HeadersParser {
         std::string _target;
         std::string _std;
         std::vector<std::string> _headerSearchPaths;
+        std::vector<std::string> _frameworkSearchPaths;
     };
 }

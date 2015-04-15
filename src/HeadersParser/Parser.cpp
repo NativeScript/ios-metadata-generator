@@ -5,6 +5,7 @@
 #include <clang/Lex/Preprocessor.h>
 #include <clang/Lex/HeaderSearch.h>
 #include <llvm/ADT/StringSwitch.h>
+#include <iostream>
 
 using namespace clang;
 namespace path = llvm::sys::path;
@@ -130,6 +131,20 @@ std::unique_ptr<ASTUnit> HeadersParser::Parser::parse(ParserSettings& settings) 
     for(auto it = headersSearchPaths.begin(); it != headersSearchPaths.end(); ++it) {
         clangArgs.push_back(std::string("-I") + *it);
     }
+
+    // add framework search paths
+    std::vector<std::string> frameworksSearchPaths = settings.getFrameworkSearchPaths();
+    for(auto it = frameworksSearchPaths.begin(); it != frameworksSearchPaths.end(); ++it) {
+        clangArgs.push_back(std::string("-F") + *it);
+    }
+
+    // log clang parameters
+    std::cout << "Clang parameters: ";
+    for(std::vector<std::string>::iterator it = clangArgs.begin(); it != clangArgs.end(); ++it) {
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
+
 
     std::string umbrellaHeaderContents;
     std::vector<std::string> moduleBlacklist;

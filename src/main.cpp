@@ -14,6 +14,7 @@ llvm::cl::opt<string> cla_iphoneOSVersionMin("iphoneos-version-min", llvm::cl::R
 llvm::cl::opt<string> cla_target("target", llvm::cl::init("arm-apple-darwin"), llvm::cl::desc("Specify the target triple to the clang compiler instance"), llvm::cl::value_desc("triple"));
 llvm::cl::opt<string> cla_std("std", llvm::cl::init("gnu99"), llvm::cl::desc("Specify the language mode to the clang compiler instance"), llvm::cl::value_desc("std-name"));
 llvm::cl::list<std::string> cla_headerSearchPaths("header-search-paths", llvm::cl::ZeroOrMore, llvm::cl::Positional, llvm::cl::desc("The paths in which clag searches for header files"));
+llvm::cl::list<std::string> cla_frameworkSearchPaths("framework-search-paths", llvm::cl::ZeroOrMore, llvm::cl::Positional, llvm::cl::desc("The paths in which clag searches for frameworks"));
 llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("dir"));
 llvm::cl::opt<string> cla_outputBinFile("output-bin", llvm::cl::desc("Specify the output binary metadata file"), llvm::cl::value_desc("file_path"));
 
@@ -23,8 +24,10 @@ int main(int argc, const char** argv) {
 
     // Parse the AST
     HeadersParser::ParserSettings settings = HeadersParser::ParserSettings(
-            cla_isysroot.getValue(), cla_arch.getValue(), cla_iphoneOSVersionMin.getValue(),
-            cla_target.getValue(), cla_std.getValue(), cla_headerSearchPaths);
+            cla_isysroot.getValue(), cla_arch.getValue(),
+            cla_iphoneOSVersionMin.getValue(),
+            cla_target.getValue(), cla_std.getValue(),
+            cla_headerSearchPaths, cla_frameworkSearchPaths);
 
     std::unique_ptr<clang::ASTUnit> ast = HeadersParser::Parser::parse(settings);
     if(!ast) {
