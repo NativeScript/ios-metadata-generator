@@ -64,20 +64,9 @@ Meta::Identifier Meta::IdentifierGenerator::getIdentifier(const clang::Decl& dec
 
     // calculate module name
     clang::Module *owningModule = _headerSearch.findModuleForHeader(entry).getModule();
-    if(owningModule)
-        id.module = owningModule->getFullModuleName();
-    else if(!_sourceManager.isInSystemHeader(decl.getLocation())) {
-        // If is not a system header get the header file name and use it as module name.
-        // This is the case for third-party headers with no module map.
-        long dirLength = std::string(entry->getDir()->getName()).length();
-        std::size_t lastDotIndex = id.fileName.find_last_of(".");
-        id.module = (lastDotIndex == std::string::npos) ? "" : id.fileName.substr(dirLength + 1, lastDotIndex - dirLength - 1);
-    }
-    else {
-        // It is a system header without a module (this is the case for some headers in usr/include).
-        // We don't try to figure out a module name for these headers.
-        id.module = "";
-    }
+    // If the declaration is in header which is not included in modulemap file, we don't try to figure out a module name for these headers.
+    // This is the case for some headers in usr/include (e.g. sqlite) and third-party headers without modulemap.
+    id.module = owningModule ? owningModule->getFullModuleName() : "";
 
     // calculate js name
     std::string originalName = calculateOriginalName(decl);
