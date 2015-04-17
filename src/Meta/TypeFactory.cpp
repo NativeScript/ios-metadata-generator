@@ -154,7 +154,7 @@ Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointer
         clang::ObjCProtocolDecl *protocolDef = (*it)->getDefinition();
         if(protocolDef) {
             try {
-                protocols.push_back(_idGenerator.getIdentifier(_metaFactory.ensureCanBeCreated(*protocolDef), true).toFQName());
+                protocols.push_back(_delegate->getDeclId(_delegate->validate(*protocolDef), true).toFQName());
             } catch (MetaCreationException &e) {
                 continue;
             }
@@ -171,7 +171,7 @@ Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointer
         if (interface->getNameAsString() == "Protocol")
             return Type::ProtocolType();
         if(clang::ObjCInterfaceDecl *interfaceDef = interface->getDefinition())
-            return Type::Interface(_idGenerator.getIdentifier(_metaFactory.ensureCanBeCreated(*interfaceDef), true).toFQName(), protocols);
+            return Type::Interface(_delegate->getDeclId(_delegate->validate(*interfaceDef), true).toFQName(), protocols);
     }
 
     throw TypeCreationException(type->getObjectType()->getTypeClassName(), "Invalid interface pointer type.", true);
@@ -240,13 +240,13 @@ Type TypeFactory::createFromRecordType(const clang::RecordType* type) {
         std::vector<RecordField> fields;
         for (clang::RecordDecl::field_iterator it = recordDef->field_begin(); it != recordDef->field_end(); ++it) {
             clang::FieldDecl *field = *it;
-            RecordField fieldMeta(_idGenerator.getJsName(*field, true), this->create(field->getType()));
+            RecordField fieldMeta(_delegate->getDeclId(*field, true).jsName, this->create(field->getType()));
             fields.push_back(fieldMeta);
         }
         return Type::AnonymousStruct(fields);
     }
 
-    FQName recordName = this->_idGenerator.getIdentifier(_metaFactory.ensureCanBeCreated(*recordDef), true).toFQName();
+    FQName recordName = this->_delegate->getDeclId(_delegate->validate(*recordDef), true).toFQName();
     return Type::Struct(recordName);
 }
 

@@ -6,15 +6,24 @@
 #include <clang/AST/RecursiveASTVisitor.h>
 #include "MetaEntities.h"
 #include "TypeFactory.h"
-#include "IdentifierGenerator.h"
+#include "IdentifierFactory.h"
 
 namespace Meta {
 
+    class MetaFactoryDelegate
+    {
+    public:
+        virtual Identifier getId(const clang::Decl& decl, bool throwIfEmpty) = 0;
+
+        virtual Type getType(const clang::Type* type) = 0;
+
+        virtual Type getType(const clang::QualType& type) = 0;
+    };
+
     class MetaFactory {
     public:
-        MetaFactory(clang::ASTUnit *astUnit)
-                : _idGenerator(astUnit->getSourceManager(), astUnit->getPreprocessor().getHeaderSearchInfo(), IdentifierGenerator::getIosSdkNamesToRecalculate()),
-                  _typeFactory(*this, _idGenerator) {}
+        MetaFactory(MetaFactoryDelegate *delegate)
+                : _delegate(delegate) {}
 
         std::shared_ptr<Meta> create(clang::Decl& decl);
 
@@ -46,10 +55,9 @@ namespace Meta {
         Version convertVersion(clang::VersionTuple clangVersion);
         llvm::iterator_range<clang::ObjCProtocolList::iterator> getProtocols(clang::ObjCContainerDecl* objCContainer);
 
-        IdentifierGenerator _idGenerator;
-        TypeFactory _typeFactory;
         std::unordered_map<const clang::Decl*, std::shared_ptr<Meta>> _cache;
         std::vector<const clang::Decl*> _metaCreationStack;
+        MetaFactoryDelegate *_delegate;
     };
 
     class MetaCreationException : public std::exception {

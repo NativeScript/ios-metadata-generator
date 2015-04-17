@@ -2,7 +2,7 @@
 #include <sstream>
 #include <clang/AST/DeclObjC.h>
 #include <iostream>
-#include "IdentifierGenerator.h"
+#include "IdentifierFactory.h"
 
 using namespace std;
 
@@ -15,7 +15,7 @@ static map<clang::Decl::Kind, vector<string>> IosSdkNamesToRecalculate = {
         { clang::Decl::Kind::ObjCProtocol, { "NSObject", "AVVideoCompositionInstruction", "OS_dispatch_data" } }
 };
 
-map<clang::Decl::Kind, vector<string>>& Meta::IdentifierGenerator::getIosSdkNamesToRecalculate() {
+map<clang::Decl::Kind, vector<string>>& Meta::IdentifierFactory::getIosSdkNamesToRecalculate() {
     return IosSdkNamesToRecalculate;
 }
 
@@ -27,28 +27,28 @@ void splitString(const std::string &s, char delim, vector<string> &elems) {
     }
 }
 
-std::string Meta::IdentifierGenerator::getJsName(const clang::Decl& decl, bool throwIfEmpty) {
+std::string Meta::IdentifierFactory::getJsName(const clang::Decl& decl, bool throwIfEmpty) {
     Identifier id = getIdentifier(decl, false);
     if(id.jsName.empty())
         throw IdentifierCreationException(id, "Unknown js name for declaration.");
     return id.jsName;
 }
 
-std::string Meta::IdentifierGenerator::getModule(const clang::Decl& decl, bool throwIfEmpty) {
+std::string Meta::IdentifierFactory::getModule(const clang::Decl& decl, bool throwIfEmpty) {
     Identifier id = getIdentifier(decl, false);
     if(id.module.empty())
         throw IdentifierCreationException(id, "Unknown module name for declaration.");
     return id.module;
 }
 
-std::string Meta::IdentifierGenerator::getFileName(const clang::Decl& decl, bool throwIfEmpty) {
+std::string Meta::IdentifierFactory::getFileName(const clang::Decl& decl, bool throwIfEmpty) {
     Identifier id = getIdentifier(decl, false);
     if(id.fileName.empty())
         throw IdentifierCreationException(id, "Unknown file name for declaration.");
     return id.fileName;
 }
 
-Meta::Identifier Meta::IdentifierGenerator::getIdentifier(const clang::Decl& decl, bool throwIfEmpty) {
+Meta::Identifier Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, bool throwIfEmpty) {
     // check for cached Identifier
     std::unordered_map<const clang::Decl*, Identifier>::const_iterator cachedId = _cache.find(&decl);
     if(cachedId != _cache.end()) {
@@ -99,7 +99,7 @@ Meta::Identifier Meta::IdentifierGenerator::getIdentifier(const clang::Decl& dec
     return id;
 }
 
-string Meta::IdentifierGenerator::calculateOriginalName(const clang::Decl& decl) {
+string Meta::IdentifierFactory::calculateOriginalName(const clang::Decl& decl) {
 
     switch(decl.getKind()) {
         case clang::Decl::Kind::Function :
@@ -165,7 +165,7 @@ string Meta::IdentifierGenerator::calculateOriginalName(const clang::Decl& decl)
     }
 }
 
-string Meta::IdentifierGenerator::calculateJsName(const clang::Decl& decl, std::string originalName) {
+string Meta::IdentifierFactory::calculateJsName(const clang::Decl& decl, std::string originalName) {
     switch(decl.getKind()) {
         case clang::Decl::Kind::Record :
         case clang::Decl::Kind::Enum :
@@ -192,7 +192,7 @@ string Meta::IdentifierGenerator::calculateJsName(const clang::Decl& decl, std::
     }
 }
 
-string Meta::IdentifierGenerator::recalculateJsName(const clang::Decl& decl, std::string calculatedJsName) {
+string Meta::IdentifierFactory::recalculateJsName(const clang::Decl& decl, std::string calculatedJsName) {
     switch(decl.getKind()) {
         case clang::Decl::Kind::Record : {
             const clang::RecordDecl *record = llvm::dyn_cast<clang::RecordDecl>(&decl);

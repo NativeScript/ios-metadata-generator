@@ -48,11 +48,11 @@ namespace Meta {
         std::string fileName;
     };
 
-    class IdentifierGenerator {
+    class IdentifierFactory {
     public:
         static std::map<clang::Decl::Kind, std::vector<std::string>>& getIosSdkNamesToRecalculate();
 
-        IdentifierGenerator(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch, std::map<clang::Decl::Kind, std::vector<std::string>>& namesToRecalculate)
+        IdentifierFactory(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch, std::map<clang::Decl::Kind, std::vector<std::string>>& namesToRecalculate)
             : _sourceManager(sourceManager),
               _headerSearch(headerSearch),
               _namesToRecalculate(namesToRecalculate) {}

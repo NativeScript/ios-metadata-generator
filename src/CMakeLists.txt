@@ -6,7 +6,7 @@ set(GENERATOR_SOURCES
     Meta/MetaEntities.cpp
     Meta/TypeFactory.cpp
     Meta/TypeEntities.cpp
-    Meta/IdentifierGenerator.cpp
+    Meta/IdentifierFactory.cpp
     Meta/Utils.cpp
     Meta/Filters/RemoveDuplicateMembersFilter.cpp
     Yaml/MetaYamlTraits.cpp

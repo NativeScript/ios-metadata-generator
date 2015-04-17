@@ -8,11 +8,13 @@
 #include <iostream>
 
 namespace Meta {
-    class DeclarationConverterVisitor : public clang::RecursiveASTVisitor<DeclarationConverterVisitor> {
+    class DeclarationConverterVisitor : public clang::RecursiveASTVisitor<DeclarationConverterVisitor>, public MetaFactoryDelegate, public TypeFactoryDelegate {
     public:
         explicit DeclarationConverterVisitor(clang::ASTUnit *astUnit)
                 : _astUnit(astUnit),
-                  _metaFactory(astUnit)  { }
+                  _idFactory(astUnit->getSourceManager(), astUnit->getPreprocessor().getHeaderSearchInfo(), IdentifierFactory::getIosSdkNamesToRecalculate()),
+                  _metaFactory(this),
+                  _typeFactory(this) { }
 
         MetaContainer& Traverse() {
             this->_result.clear();
@@ -20,6 +22,7 @@ namespace Meta {
             return this->_result;
         }
 
+        // RecursiveASTVisitor methods
         bool VisitFunctionDecl(clang::FunctionDecl *function);
 
         bool VisitVarDecl(clang::VarDecl *var);
@@ -36,6 +39,17 @@ namespace Meta {
 
         bool VisitObjCCategoryDecl(clang::ObjCCategoryDecl *protocol);
 
+        // MetaFactoryDelegate methods
+        Identifier getId(const clang::Decl& decl, bool throwIfEmpty) override { return _idFactory.getIdentifier(decl, throwIfEmpty); }
+
+        Type getType(const clang::Type* type) override { return _typeFactory.create(type); }
+
+        Type getType(const clang::QualType& type) override { return _typeFactory.create(type); }
+
+        // TypeFactoryDelegate methods
+        virtual Identifier getDeclId(const clang::Decl& decl, bool throwIfEmpty) override { return _idFactory.getIdentifier(decl, throwIfEmpty); }
+
+        virtual clang::Decl& validate(clang::Decl& decl) override { _metaFactory.ensureCanBeCreated(decl); return decl; }
     private:
         template<class T>
         bool Visit(T *decl) {
@@ -55,7 +69,9 @@ namespace Meta {
         }
 
         clang::ASTUnit *_astUnit;
-        MetaFactory _metaFactory;
         MetaContainer _result;
+        IdentifierFactory _idFactory;
+        MetaFactory _metaFactory;
+        TypeFactory _typeFactory;
     };
 }

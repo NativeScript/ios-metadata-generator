@@ -2,17 +2,20 @@
 
 #include <clang/AST/RecursiveASTVisitor.h>
 #include "TypeEntities.h"
-#include "IdentifierGenerator.h"
+#include "IdentifierFactory.h"
 
 namespace Meta {
+    class TypeFactoryDelegate {
+    public:
+        virtual Identifier getDeclId(const clang::Decl& decl, bool throwIfEmpty) = 0;
 
-    class MetaFactory;
+        virtual clang::Decl& validate(clang::Decl& decl) = 0;
+    };
 
     class TypeFactory {
     public:
-        TypeFactory(MetaFactory& metaFactory, IdentifierGenerator& idGenerator)
-        : _metaFactory(metaFactory),
-          _idGenerator(idGenerator) {}
+        TypeFactory(TypeFactoryDelegate *delegate)
+                : _delegate(delegate) {}
 
         Type create(const clang::Type* type);
 
@@ -49,13 +52,12 @@ namespace Meta {
 
         Type createFromParenType(const clang::ParenType *type);
 
-        // helper methods
+        // helpers
         bool isSpecificTypedefType(const clang::TypedefType* type, const std::string& typedefName);
 
         bool isSpecificTypedefType(const clang::TypedefType* type, const std::vector<std::string>& typedefNames);
 
-        MetaFactory& _metaFactory;
-        IdentifierGenerator _idGenerator;
+        TypeFactoryDelegate *_delegate;
     };
 
     class TypeCreationException : public std::exception
