@@ -9,6 +9,8 @@ namespace Meta {
     public:
         virtual Identifier getDeclId(const clang::Decl& decl, bool throwIfEmpty) = 0;
 
+        virtual void registerUnresolvedBridgedType(Type& type) = 0;
+
         virtual clang::Decl& validate(clang::Decl& decl) = 0;
     };
 

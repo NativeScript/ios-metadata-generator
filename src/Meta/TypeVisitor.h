@@ -7,6 +7,7 @@ namespace Meta {
     struct ConstantArrayTypeDetails;
     struct IncompleteArrayTypeDetails;
     struct InterfaceTypeDetails;
+    struct BridgedInterfaceTypeDetails;
     struct PointerTypeDetails;
     struct BlockTypeDetails;
     struct FunctionPointerTypeDetails;
@@ -76,6 +77,8 @@ namespace Meta {
         virtual T_RESULT visitIncompleteArray(IncompleteArrayTypeDetails& typeDetails) = 0;
 
         virtual T_RESULT visitInterface(InterfaceTypeDetails& typeDetails) = 0;
+
+        virtual T_RESULT visitBridgedInterface(BridgedInterfaceTypeDetails& typeDetails) = 0;
 
         virtual T_RESULT visitPointer(PointerTypeDetails& typeDetails) = 0;
 

@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <unordered_map>
 #include <iostream>
 #include "TypeEntities.h"
 #include "MetaVisitor.h"
@@ -282,7 +283,12 @@ namespace Meta {
             }
             else {
                 std::string moduleName = meta->getTopLevelModule();
-                getModule(moduleName, true)->add(meta);
+                getTopLevelModule(moduleName, true)->add(meta);
+            }
+
+            if(meta->is(MetaType::Interface)) {
+                std::shared_ptr<InterfaceMeta> interface = std::static_pointer_cast<InterfaceMeta>(meta);
+                this->_interfaces.insert(std::pair<std::string, std::shared_ptr<InterfaceMeta>>(meta->name, interface));
             }
         }
 
@@ -322,10 +328,11 @@ namespace Meta {
             _topLevelModules.clear();
             _allModules.clear();
             _categories.clear();
+            _interfaces.clear();
             _categoryIsMerged.clear();
         }
 
-        Module *getModule(const std::string& moduleName, bool addIfNotExists = false) {
+        Module *getTopLevelModule(const std::string &moduleName, bool addIfNotExists = false) {
             int index = getModuleIndex(moduleName, addIfNotExists);
             if(index == -1)
                 return nullptr;
@@ -334,7 +341,7 @@ namespace Meta {
 
         std::shared_ptr<Meta> getMeta(const std::string& module, const std::string& jsName) {
             std::string topLevelModule = topLevelModuleOf(module);
-            Module *theModule = getModule(topLevelModule, false);
+            Module *theModule = getTopLevelModule(topLevelModule, false);
             if(theModule != nullptr) {
                 return theModule->getMeta(jsName);
             }
@@ -351,8 +358,13 @@ namespace Meta {
             return getMetaAs<T>(name.module, name.jsName);
         }
 
+        std::shared_ptr<InterfaceMeta> getInterface(std::string name) {
+            std::unordered_map<std::string, std::shared_ptr<InterfaceMeta>>::iterator interface = _interfaces.find(name);
+            return interface == _interfaces.end() ? nullptr : interface->second;
+        }
+
         Module *operator[](std::string module) {
-            return getModule(module, false);
+            return getTopLevelModule(module, false);
         }
 
         int mergeCategoriesInInterfaces() {
@@ -425,6 +437,7 @@ namespace Meta {
 
         std::vector<Module> _topLevelModules;
         std::set<std::string> _allModules;
+        std::unordered_map<std::string, std::shared_ptr<InterfaceMeta>> _interfaces;
         std::vector<std::shared_ptr<CategoryMeta>> _categories;
         std::vector<bool> _categoryIsMerged;
     };

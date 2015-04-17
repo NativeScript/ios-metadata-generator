@@ -19,6 +19,12 @@ namespace Meta {
         MetaContainer& Traverse() {
             this->_result.clear();
             this->TraverseDecl(this->_astUnit->getASTContext().getTranslationUnitDecl());
+            for(std::vector<Type>::iterator it = _unresolvedBridgedInterfaces.begin(); it != _unresolvedBridgedInterfaces.end(); ++it) {
+                Type type = *it;
+                std::shared_ptr<InterfaceMeta> interface = _result.getInterface(type.getDetailsAs<BridgedInterfaceTypeDetails>().name.jsName);
+                // TODO: Instead of setting "Foundation", handle the case when there is no interface found
+                type.getDetailsAs<BridgedInterfaceTypeDetails>().name.module = (interface ? interface->module : "Foundation");
+            }
             return this->_result;
         }
 
@@ -50,6 +56,9 @@ namespace Meta {
         virtual Identifier getDeclId(const clang::Decl& decl, bool throwIfEmpty) override { return _idFactory.getIdentifier(decl, throwIfEmpty); }
 
         virtual clang::Decl& validate(clang::Decl& decl) override { _metaFactory.ensureCanBeCreated(decl); return decl; }
+
+        virtual void registerUnresolvedBridgedType(Type& type) override { _unresolvedBridgedInterfaces.push_back(type); }
+
     private:
         template<class T>
         bool Visit(T *decl) {
@@ -73,5 +82,7 @@ namespace Meta {
         IdentifierFactory _idFactory;
         MetaFactory _metaFactory;
         TypeFactory _typeFactory;
+
+        std::vector<Type> _unresolvedBridgedInterfaces;
     };
 }

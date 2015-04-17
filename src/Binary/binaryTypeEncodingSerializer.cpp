@@ -128,6 +128,12 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitInte
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitBridgedInterface(::Meta::BridgedInterfaceTypeDetails& typeDetails){
+    binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::InterfaceDeclarationReference);
+    s->_name = this->_heapWriter.push_string(typeDetails.name.jsName);
+    return unique_ptr<binary::TypeEncoding>(s);
+}
+
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitPointer(::Meta::PointerTypeDetails& typeDetails){
         binary::PointerEncoding* s = new binary::PointerEncoding();
         s->_target = typeDetails.innerType.visit(*this);

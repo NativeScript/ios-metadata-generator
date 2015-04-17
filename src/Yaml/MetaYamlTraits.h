@@ -167,6 +167,7 @@ namespace llvm {
                 io.enumCase(value, "ConstantArray", Meta::TypeType::TypeConstantArray);
                 io.enumCase(value, "IncompleteArray", Meta::TypeType::TypeIncompleteArray);
                 io.enumCase(value, "Interface", Meta::TypeType::TypeInterface);
+                io.enumCase(value, "Interface", Meta::TypeType::TypeBridgedInterface);
                 io.enumCase(value, "Pointer", Meta::TypeType::TypePointer);
                 io.enumCase(value, "FunctionPointer", Meta::TypeType::TypeFunctionPointer);
                 io.enumCase(value, "Block", Meta::TypeType::TypeBlock);
@@ -221,6 +222,15 @@ namespace llvm {
                         // TODO: every FQName to be yamlized consistently (e.g. Name: { Module: "[value]", JsName: "[value]"} )
                         io.mapRequired("Module", details.name.module);
                         io.mapRequired("Name", details.name.jsName);
+                        //io.mapRequired("WithProtocols", details.protocols);
+                        break;
+                    }
+                    case Meta::TypeType::TypeBridgedInterface : {
+                        Meta::BridgedInterfaceTypeDetails &details = type.getDetailsAs<Meta::BridgedInterfaceTypeDetails>();
+                        // TODO: every FQName to be yamlized consistently (e.g. Name: { Module: "[value]", JsName: "[value]"} )
+                        io.mapRequired("Module", details.name.module);
+                        io.mapRequired("Name", details.name.jsName);
+                        // TODO: dump protocols too
                         //io.mapRequired("WithProtocols", details.protocols);
                         break;
                     }

@@ -22,6 +22,10 @@ Type Meta::Type::Interface(FQName name, std::vector<FQName> protocols) {
     return Type(TypeType::TypeInterface, new InterfaceTypeDetails(name, protocols));
 }
 
+Type Meta::Type::BridgedInterface(FQName name) {
+    return Type(TypeType::TypeBridgedInterface, new BridgedInterfaceTypeDetails(name));
+}
+
 Type Meta::Type::Pointer(Type innerType) {
     return Type(TypeType::TypePointer, new PointerTypeDetails(innerType));
 }

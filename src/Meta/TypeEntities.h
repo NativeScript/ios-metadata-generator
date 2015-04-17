@@ -40,6 +40,7 @@ namespace Meta {
         TypeBlock,
         TypeFunctionPointer,
         TypeInterface,
+        TypeBridgedInterface,
         TypeStruct,
         TypeUnion,
         TypePureInterface, // TODO: Remove this type. It is redundant and is never used.
@@ -84,6 +85,7 @@ namespace Meta {
         static Type ConstantArray(Type innerType, int size);
         static Type IncompleteArray(Type innerType);
         static Type Interface(FQName name, std::vector<FQName> protocols);
+        static Type BridgedInterface(FQName name);
         static Type Pointer(Type innerType);
         static Type Block(std::vector<Type>& signature);
         static Type FunctionPointer(std::vector<Type>& signature);
@@ -161,6 +163,8 @@ namespace Meta {
                     return visitor.visitFunctionPointer(getDetailsAs<FunctionPointerTypeDetails>());
                 case TypeInterface :
                     return visitor.visitInterface(getDetailsAs<InterfaceTypeDetails>());
+                case TypeBridgedInterface :
+                    return visitor.visitBridgedInterface(getDetailsAs<BridgedInterfaceTypeDetails>());
                 case TypeStruct :
                     return visitor.visitStruct(getDetailsAs<StructTypeDetails>());
                 case TypeUnion :
@@ -213,6 +217,15 @@ namespace Meta {
 
         FQName name;
         std::vector<FQName> protocols;
+    };
+
+    struct BridgedInterfaceTypeDetails : TypeDetails {
+        BridgedInterfaceTypeDetails(FQName name)
+                : name(name) {}
+
+        FQName name;
+
+        bool isResolved() { return name.module != ""; }
     };
 
     struct IncompleteArrayTypeDetails : TypeDetails {

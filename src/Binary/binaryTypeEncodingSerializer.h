@@ -75,6 +75,8 @@ namespace binary {
 
         virtual unique_ptr<TypeEncoding> visitInterface(::Meta::InterfaceTypeDetails& typeDetails) override;
 
+        virtual unique_ptr<TypeEncoding> visitBridgedInterface(::Meta::BridgedInterfaceTypeDetails& typeDetails) override;
+
         virtual unique_ptr<TypeEncoding> visitPointer(::Meta::PointerTypeDetails& typeDetails) override;
 
         virtual unique_ptr<TypeEncoding> visitBlock(::Meta::BlockTypeDetails& typeDetails) override;
