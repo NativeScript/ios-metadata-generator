@@ -9,21 +9,24 @@ using namespace std;
 bool protocolsComparerByJsName(Meta::FQName& protocol1, Meta::FQName& protocol2) {
     string name1 = protocol1.jsName;
     string name2 = protocol2.jsName;
-    std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower) < std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
+    std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower);
+    std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
     return name1 < name2;
 }
 
 bool methodsComparerByJsName(std::shared_ptr<Meta::MethodMeta>& method1, std::shared_ptr<Meta::MethodMeta>& method2) {
     string name1 = method1->jsName;
     string name2 = method2->jsName;
-    std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower) < std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
+    std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower);
+    std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
     return name1 < name2;
 }
 
 bool propertiesComparerByJsName(std::shared_ptr<Meta::PropertyMeta>& property1, std::shared_ptr<Meta::PropertyMeta>& property2) {
     string name1 = property1->jsName;
     string name2 = property2->jsName;
-    std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower) < std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
+    std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower);
+    std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
     return name1 < name2;
 }
 
