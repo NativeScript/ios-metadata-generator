@@ -177,6 +177,11 @@ std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumD
         throw MetaCreationException(_delegate->getId(enumeration, false), "Froward declaration of enum.", false);
     }
 
+    std::vector<std::string> fieldNames;
+    for (clang::EnumDecl::enumerator_iterator it = enumeration.enumerator_begin(); it != enumeration.enumerator_end() ; ++it)
+        fieldNames.push_back((*it)->getNameAsString());
+    size_t fieldNamePrefixLength = Utils::getCommonWordPrefix(fieldNames).length();
+
     std::ostringstream jsCodeStream;
     jsCodeStream << "__tsEnum({";
     bool isFirstField = true;
@@ -184,7 +189,10 @@ std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumD
         clang::EnumConstantDecl *enumField = *it;
         llvm::SmallVector<char, 10> value;
         enumField->getInitVal().toString(value, 10, enumField->getInitVal().isSigned());
-        jsCodeStream << (isFirstField ? "" : ",") << "\"" << _delegate->getId(*enumField, true).jsName << "\":" << std::string(value.data(), value.size());
+        std::string valueStr = std::string(value.data(), value.size());
+        if(fieldNamePrefixLength > 0)
+            jsCodeStream << (isFirstField ? "" : ",") << "\"" << enumField->getNameAsString().substr(fieldNamePrefixLength, std::string::npos) << "\":" << valueStr;
+        jsCodeStream << "," << "\"" << enumField->getNameAsString() << "\":" << valueStr;
         isFirstField = false;
     }
     jsCodeStream << "})";
@@ -195,18 +203,12 @@ std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumD
 }
 
 std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnumConstant(clang::EnumConstantDecl& enumConstant) {
-    if(clang::EnumDecl *parentEnum = clang::dyn_cast<clang::EnumDecl>(enumConstant.getLexicalDeclContext())) {
-        if(!parentEnum->hasNameForLinkage()) {
-            shared_ptr<JsCodeMeta> jsCodeMeta = make_shared<JsCodeMeta>();
-            populateMetaFields(enumConstant, *(jsCodeMeta.get()));
-            llvm::SmallVector<char, 10> value;
-            enumConstant.getInitVal().toString(value, 10, enumConstant.getInitVal().isSigned());
-            jsCodeMeta->jsCode = std::string(value.data(), value.size());
-            return jsCodeMeta;
-        }
-        throw MetaCreationException(_delegate->getId(enumConstant, false), "The containing enum is not anonymous.", false);
-    }
-    throw std::runtime_error("Invalid enum constant declaration.");
+    shared_ptr<JsCodeMeta> jsCodeMeta = make_shared<JsCodeMeta>();
+    populateMetaFields(enumConstant, *(jsCodeMeta.get()));
+    llvm::SmallVector<char, 10> value;
+    enumConstant.getInitVal().toString(value, 10, enumConstant.getInitVal().isSigned());
+    jsCodeMeta->jsCode = std::string(value.data(), value.size());
+    return jsCodeMeta;
 }
 
 shared_ptr<Meta::InterfaceMeta> Meta::MetaFactory::createFromInterface(clang::ObjCInterfaceDecl& interface) {

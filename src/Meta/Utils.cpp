@@ -115,3 +115,28 @@ bool Meta::Utils::areTypesEqual(const std::vector<Meta::Type>& vector1, const st
     }
     return true;
 }
+
+bool isAlpha(const std::vector<std::string>& strings, size_t index) {
+    for (auto& str : strings) {
+        if (!std::isalpha(str[index])) {
+            return false;
+        }
+    }
+    return true;
+}
+
+std::string Meta::Utils::getCommonWordPrefix(const std::vector<std::string>& strings) {
+    for (size_t prefixLength = 0; prefixLength < strings[0].size(); prefixLength++) {
+        char c = strings[0][prefixLength];
+        for (size_t i = 1; i < strings.size(); i++) {
+            if (prefixLength >= strings[i].size() || strings[i][prefixLength] != c) {
+                while (prefixLength > 0 && (!std::isupper(strings[i][prefixLength]) || !isAlpha(strings, prefixLength))) {
+                    prefixLength--;
+                }
+                return strings[i].substr(0, prefixLength);
+            }
+        }
+    }
+
+    return std::string();
+}
