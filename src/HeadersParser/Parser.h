@@ -6,6 +6,6 @@
 namespace HeadersParser {
     class Parser {
     public:
-        static std::unique_ptr<clang::ASTUnit> parse(ParserSettings& settings);
+        static std::unique_ptr<clang::ASTUnit> parse(ParserSettings& settings, std::string umbrellaFile);
     };
 }

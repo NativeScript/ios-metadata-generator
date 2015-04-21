@@ -112,10 +112,10 @@ std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::str
     return std::error_code();
 }
 
-std::unique_ptr<ASTUnit> HeadersParser::Parser::parse(ParserSettings& settings) {
+std::unique_ptr<ASTUnit> HeadersParser::Parser::parse(ParserSettings& settings, std::string umbrellaFile) {
 
     std::vector<std::string> clangArgs {
-            //"-v",
+            "-v",
             "-x", "objective-c",
             "-fno-objc-arc",
             "-fmodule-maps",
@@ -145,12 +145,20 @@ std::unique_ptr<ASTUnit> HeadersParser::Parser::parse(ParserSettings& settings) 
     }
     std::cout << std::endl;
 
-
     std::string umbrellaHeaderContents;
     std::vector<std::string> moduleBlacklist;
 
     // Generate umbrella header for all modules from the sdk
     CreateUmbrellaHeaderForAmbientModules(clangArgs, &umbrellaHeaderContents, moduleBlacklist);
+
+    if(!umbrellaFile.empty()) {
+        std::error_code errorCode;
+        llvm::raw_fd_ostream umbrellaFileStream(umbrellaFile, errorCode, llvm::sys::fs::OpenFlags::F_None);
+        if (!errorCode) {
+            umbrellaFileStream << umbrellaHeaderContents;
+            umbrellaFileStream.close();
+        }
+    }
 
     // Build and return the AST
     std::unique_ptr<clang::ASTUnit> ast = clang::tooling::buildASTFromCodeWithArgs(umbrellaHeaderContents, clangArgs, "umbrella.h");

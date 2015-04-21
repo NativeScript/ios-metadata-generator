@@ -15,6 +15,7 @@ namespace Yaml {
                 throw std::runtime_error(std::string("Unable to open file ") + outputFilePath + ".");
             llvm::yaml::Output output(fileStream);
             output << object;
+            fileStream.close();
         }
     };
 }
