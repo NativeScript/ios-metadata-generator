@@ -1,10 +1,5 @@
 #include "MetaEntities.h"
 
-std::string Meta::topLevelModuleOf(const std::string& fullModuleName) {
-    std::size_t dotIndex = fullModuleName.find(".");
-    return (dotIndex == std::string::npos) ? fullModuleName : fullModuleName.substr(0, dotIndex);
-}
-
 void Meta::MethodMeta::visit(MetaVisitor* visitor) {
 }
 

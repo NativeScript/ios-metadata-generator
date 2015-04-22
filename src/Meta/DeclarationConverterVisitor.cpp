@@ -8,7 +8,8 @@ bool Meta::DeclarationConverterVisitor::VisitFunctionDecl(clang::FunctionDecl *f
 }
 
 bool Meta::DeclarationConverterVisitor::VisitVarDecl(clang::VarDecl *var) {
-    return Visit<clang::VarDecl>(var);
+    // It is not exactly a VarDecl but an inheritor of VarDecl (e.g. ParmVarDecl)
+    return (var->getKind() == clang::Decl::Kind::Var) ? Visit<clang::VarDecl>(var) : true;
 }
 
 bool Meta::DeclarationConverterVisitor::VisitEnumDecl(clang::EnumDecl *enumDecl) {

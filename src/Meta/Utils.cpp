@@ -1,12 +1,12 @@
 #include "Utils.h"
 #include "TypeEntities.h"
 
-bool areFQNameListsEqual(const std::vector<Meta::FQName>& vector1, const std::vector<Meta::FQName>& vector2) {
+bool areIdentifierListsEqual(const std::vector<Meta::Identifier>& vector1, const std::vector<Meta::Identifier>& vector2) {
     if(vector1.size() != vector2.size()) {
         return false;
     }
 
-    for(std::vector<Meta::FQName>::size_type i = 0; i < vector1.size(); i++) {
+    for(std::vector<Meta::Identifier>::size_type i = 0; i < vector1.size(); i++) {
         if(vector1[i] != vector2[i]) {
             return false;
         }
@@ -35,12 +35,12 @@ bool Meta::Utils::areTypesEqual(const Type &type1, const Type &type2) {
         case TypeType::TypeClass : {
             ClassTypeDetails& details1 = type1.getDetailsAs<ClassTypeDetails>();
             ClassTypeDetails& details2 = type2.getDetailsAs<ClassTypeDetails>();
-            return areFQNameListsEqual(details1.protocols, details2.protocols);
+            return areIdentifierListsEqual(details1.protocols, details2.protocols);
         }
         case TypeType::TypeId : {
             IdTypeDetails& details1 = type1.getDetailsAs<IdTypeDetails>();
             IdTypeDetails& details2 = type2.getDetailsAs<IdTypeDetails>();
-            return areFQNameListsEqual(details1.protocols, details2.protocols);
+            return areIdentifierListsEqual(details1.protocols, details2.protocols);
         };
         case TypeType::TypeConstantArray : {
             ConstantArrayTypeDetails& details1 = type1.getDetailsAs<ConstantArrayTypeDetails>();
@@ -70,22 +70,22 @@ bool Meta::Utils::areTypesEqual(const Type &type1, const Type &type2) {
         case TypeType::TypeInterface : {
             InterfaceTypeDetails& details1 = type1.getDetailsAs<InterfaceTypeDetails>();
             InterfaceTypeDetails& details2 = type2.getDetailsAs<InterfaceTypeDetails>();
-            return details1.name == details2.name && areFQNameListsEqual(details1.protocols, details2.protocols);
+            return details1.id == details2.id && areIdentifierListsEqual(details1.protocols, details2.protocols);
         };
         case TypeType::TypeStruct : {
             StructTypeDetails& details1 = type1.getDetailsAs<StructTypeDetails>();
             StructTypeDetails& details2 = type2.getDetailsAs<StructTypeDetails>();
-            return details1.name == details2.name;
+            return details1.id == details2.id;
         };
         case TypeType::TypeUnion : {
             UnionTypeDetails& details1 = type1.getDetailsAs<UnionTypeDetails>();
             UnionTypeDetails& details2 = type2.getDetailsAs<UnionTypeDetails>();
-            return details1.name == details2.name;
+            return details1.id == details2.id;
         };
         case TypeType::TypePureInterface : { // TODO: Remove this type. It is redundant and is never used.
             PureInterfaceTypeDetails& details1 = type1.getDetailsAs<PureInterfaceTypeDetails>();
             PureInterfaceTypeDetails& details2 = type2.getDetailsAs<PureInterfaceTypeDetails>();
-            return details1.name == details2.name;
+            return details1.id == details2.id;
         };
         case TypeType::TypeAnonymousStruct : {
             AnonymousStructTypeDetails& details1 = type1.getDetailsAs<AnonymousStructTypeDetails>();

@@ -80,18 +80,18 @@ namespace Meta {
         static Type Instancetype() { return Type(TypeType::TypeInstancetype); }
         static Type ProtocolType() { return Type(TypeType::TypeProtocol); }
 
-        static Type ClassType(std::vector<FQName> protocols);
-        static Type Id(std::vector<FQName> protocols);
+        static Type ClassType(std::vector<Identifier> protocols);
+        static Type Id(std::vector<Identifier> protocols);
         static Type ConstantArray(Type innerType, int size);
         static Type IncompleteArray(Type innerType);
-        static Type Interface(FQName name, std::vector<FQName> protocols);
-        static Type BridgedInterface(FQName name);
+        static Type Interface(Identifier name, std::vector<Identifier> protocols);
+        static Type BridgedInterface(Identifier id);
         static Type Pointer(Type innerType);
         static Type Block(std::vector<Type>& signature);
         static Type FunctionPointer(std::vector<Type>& signature);
-        static Type Struct(FQName name);
-        static Type Union(FQName name);
-        static Type PureInterface(FQName name); // TODO: Remove this method
+        static Type Struct(Identifier id);
+        static Type Union(Identifier id);
+        static Type PureInterface(Identifier id); // TODO: Remove this method
         static Type AnonymousStruct(std::vector<RecordField> fields);
         static Type AnonymousUnion(std::vector<RecordField> fields);
 
@@ -197,35 +197,35 @@ namespace Meta {
     struct TypeDetails {};
 
     struct IdTypeDetails : TypeDetails {
-        IdTypeDetails(std::vector<FQName>& protocols)
+        IdTypeDetails(std::vector<Identifier>& protocols)
                 : protocols(protocols) {}
 
-        std::vector<FQName> protocols;
+        std::vector<Identifier> protocols;
     };
 
     struct ClassTypeDetails : TypeDetails {
-        ClassTypeDetails(std::vector<FQName>& protocols)
+        ClassTypeDetails(std::vector<Identifier>& protocols)
                 : protocols(protocols) {}
 
-        std::vector<FQName> protocols;
+        std::vector<Identifier> protocols;
     };
 
     struct InterfaceTypeDetails : TypeDetails {
-        InterfaceTypeDetails(FQName name, std::vector<FQName>& protocols)
-                : name(name),
+        InterfaceTypeDetails(Identifier id, std::vector<Identifier>& protocols)
+                : id(id),
                   protocols(protocols) {}
 
-        FQName name;
-        std::vector<FQName> protocols;
+        Identifier id;
+        std::vector<Identifier> protocols;
     };
 
     struct BridgedInterfaceTypeDetails : TypeDetails {
-        BridgedInterfaceTypeDetails(FQName name)
-                : name(name) {}
+        BridgedInterfaceTypeDetails(Identifier id)
+                : id(id) {}
 
-        FQName name;
+        Identifier id;
 
-        bool isResolved() { return name.module != ""; }
+        bool isResolved() { return id.fullModule != ""; }
     };
 
     struct IncompleteArrayTypeDetails : TypeDetails {
@@ -266,25 +266,25 @@ namespace Meta {
     };
 
     struct StructTypeDetails : TypeDetails {
-        StructTypeDetails(FQName name)
-                : name(name) {}
+        StructTypeDetails(Identifier id)
+                : id(id) {}
 
-        FQName name;
+        Identifier id;
     };
 
     struct UnionTypeDetails : TypeDetails {
-        UnionTypeDetails(FQName name)
-                : name(name) {}
+        UnionTypeDetails(Identifier id)
+                : id(id) {}
 
-        FQName name;
+        Identifier id;
     };
 
     // TODO: Remove this type. It is redundant and is never used.
     struct PureInterfaceTypeDetails : TypeDetails {
-        PureInterfaceTypeDetails(FQName name)
-                : name(name) {}
+        PureInterfaceTypeDetails(Identifier id)
+                : id(id) {}
 
-        FQName name;
+        Identifier id;
     };
 
     struct AnonymousStructTypeDetails : TypeDetails {

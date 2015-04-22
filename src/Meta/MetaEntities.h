@@ -11,9 +11,6 @@
 #define UNKNOWN_VERSION { -1, -1, -1 }
 
 namespace Meta {
-
-    std::string topLevelModuleOf(const std::string& fullModuleName);
-
     struct Version {
         int Major;
         int Minor;
@@ -57,10 +54,7 @@ namespace Meta {
     public:
         MetaType type = MetaType::Undefined;
         MetaFlags flags = MetaFlags::None;
-
-        std::string name;
-        std::string jsName;
-        std::string module;
+        Identifier id;
 
         // Availability
         Version introducedIn = UNKNOWN_VERSION;
@@ -80,10 +74,6 @@ namespace Meta {
 
         void setFlags(MetaFlags flags, bool value) {
             value ? this->flags = (MetaFlags)(this->flags | flags) : this->flags = (MetaFlags)(this->flags & ~flags);
-        }
-
-        std::string getTopLevelModule() {
-            return topLevelModuleOf(module);
         }
     };
 
@@ -117,7 +107,7 @@ namespace Meta {
         std::vector<std::shared_ptr<MethodMeta>> instanceMethods;
         std::vector<std::shared_ptr<MethodMeta>> staticMethods;
         std::vector<std::shared_ptr<PropertyMeta>> properties;
-        std::vector<FQName> protocols;
+        std::vector<Identifier> protocols;
     };
 
     class CategoryMeta : public BaseClassMeta {
@@ -126,7 +116,7 @@ namespace Meta {
             this->type = MetaType::Category;
         }
 
-        FQName extendedInterface;
+        Identifier extendedInterface;
 
         virtual void visit(MetaVisitor* visitor) override;
     };
@@ -137,7 +127,7 @@ namespace Meta {
             this->type = MetaType::Interface;
         }
 
-        FQName baseName;
+        Identifier base;
 
         virtual void visit(MetaVisitor* visitor) override;
     };
@@ -221,7 +211,7 @@ namespace Meta {
         }
 
         bool isTopLevelModule() const {
-            return topLevelModuleOf(this->_name) == _name;
+            return this->_name.find(".") == std::string::npos;
         }
 
         std::shared_ptr<Meta> getMeta(const std::string& jsName) {
@@ -238,8 +228,8 @@ namespace Meta {
         }
 
         void add(std::shared_ptr<Meta> meta) {
-            if(_declarations.find(meta->jsName) == _declarations.end())
-                _declarations.insert(std::pair<std::string, std::shared_ptr<Meta>>(meta->jsName, meta));
+            if(_declarations.find(meta->id.jsName) == _declarations.end())
+                _declarations.insert(std::pair<std::string, std::shared_ptr<Meta>>(meta->id.jsName, meta));
             //else
             //    std::cerr << "The declaration with name '" << meta->jsName << "' already exists in module '" << _name << "'." <<  std::endl; // TODO: research why there are conflicts
         }
@@ -275,27 +265,27 @@ namespace Meta {
         typedef std::vector<Module>::size_type size_type;
 
         void add(std::shared_ptr<Meta> meta) {
-            _allModules.insert(meta->module);
+            _allModules.insert(meta->id.fullModule);
             if(meta->is(MetaType::Category)) {
                 std::shared_ptr<CategoryMeta> category = std::static_pointer_cast<CategoryMeta>(meta);
                 this->_categories.push_back(category);
                 this->_categoryIsMerged.push_back(false);
             }
             else {
-                std::string moduleName = meta->getTopLevelModule();
+                std::string moduleName = meta->id.topLevelModule;
                 getTopLevelModule(moduleName, true)->add(meta);
             }
 
             if(meta->is(MetaType::Interface)) {
                 std::shared_ptr<InterfaceMeta> interface = std::static_pointer_cast<InterfaceMeta>(meta);
-                this->_interfaces.insert(std::pair<std::string, std::shared_ptr<InterfaceMeta>>(meta->name, interface));
+                this->_interfaces.insert(std::pair<std::string, std::shared_ptr<InterfaceMeta>>(meta->id.name, interface));
             }
         }
 
-        void removeCategory(FQName category, FQName interface) {
+        void removeCategories(bool(*predicate)(std::shared_ptr<CategoryMeta>&)) {
             for(std::vector<std::shared_ptr<CategoryMeta>>::size_type i = 0; i < _categories.size(); i++) {
                 std::shared_ptr<CategoryMeta> cat = _categories[i];
-                if(cat->jsName == category.jsName && cat->module == category.module && cat->extendedInterface == interface) {
+                if(predicate(cat)) {
                     _categories.erase(_categories.begin() + i);
                     _categoryIsMerged.erase(_categoryIsMerged.begin() + i);
                     i--;
@@ -339,8 +329,7 @@ namespace Meta {
             return &_topLevelModules[index];
         }
 
-        std::shared_ptr<Meta> getMeta(const std::string& module, const std::string& jsName) {
-            std::string topLevelModule = topLevelModuleOf(module);
+        std::shared_ptr<Meta> getMeta(const std::string& topLevelModule, const std::string& jsName) {
             Module *theModule = getTopLevelModule(topLevelModule, false);
             if(theModule != nullptr) {
                 return theModule->getMeta(jsName);
@@ -349,13 +338,13 @@ namespace Meta {
         }
 
         template<class T>
-        std::shared_ptr<T> getMetaAs(const std::string& module, const std::string& jsName) {
-            return std::static_pointer_cast<T>(getMeta(module, jsName));
+        std::shared_ptr<T> getMetaAs(const std::string& topLevelModule, const std::string& jsName) {
+            return std::static_pointer_cast<T>(getMeta(topLevelModule, jsName));
         }
 
         template<class T>
-        std::shared_ptr<T> getMetaAs(const FQName& name) {
-            return getMetaAs<T>(name.module, name.jsName);
+        std::shared_ptr<T> getMetaAs(const Identifier& id) {
+            return getMetaAs<T>(id.topLevelModule, id.jsName);
         }
 
         std::shared_ptr<InterfaceMeta> getInterface(std::string name) {
@@ -375,7 +364,7 @@ namespace Meta {
                     std::shared_ptr<CategoryMeta> category = _categories[i];
                     std::shared_ptr<InterfaceMeta> extendedInterface = this->getMetaAs<InterfaceMeta>(category->extendedInterface);
                     if (!extendedInterface) {
-                        std::cerr << "Extended interface for category '" << category->name << "' not found." << std::endl;
+                        std::cerr << "Extended interface for category '" << category->id.name << "' not found." << std::endl;
                         continue;
                     }
 

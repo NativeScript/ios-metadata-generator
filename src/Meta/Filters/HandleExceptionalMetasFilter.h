@@ -1,15 +1,20 @@
 #pragma once
 #include "../MetaEntities.h"
 
+bool isSpecialCategory(std::shared_ptr<Meta::CategoryMeta>& category) {
+    Meta::Identifier& id = category->id;
+    Meta::Identifier& intId = category->extendedInterface;
+    return id.name == "UIResponderStandardEditActions" && id.jsName == "UIResponderStandardEditActions" && id.fullModule == "UIKit.UIResponder" &&
+           intId.name == "NSObject" && intId.jsName == "NSObject" && intId.fullModule == "ObjectiveC.NSObject";
+}
+
 namespace Meta {
     class HandleExceptionalMetasFilter {
     public:
         void filter(MetaContainer& container) {
 
             // Remove UIResponderStandardEditActions category
-            FQName category = FQName { .jsName = "UIResponderStandardEditActions", .module = "UIKit.UIResponder" };
-            FQName interface = FQName { .jsName = "NSObject", .module = "ObjectiveC.NSObject" };
-            container.removeCategory(category, interface);
+            container.removeCategories(isSpecialCategory);
 
             // Change the return type of [NSNull null] to instancetype
             // TODO: remove the special handling of [NSNull null] from metadata generator and handle it in the runtime

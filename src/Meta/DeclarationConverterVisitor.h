@@ -21,9 +21,9 @@ namespace Meta {
             this->TraverseDecl(this->_astUnit->getASTContext().getTranslationUnitDecl());
             for(std::vector<Type>::iterator it = _unresolvedBridgedInterfaces.begin(); it != _unresolvedBridgedInterfaces.end(); ++it) {
                 Type type = *it;
-                std::shared_ptr<InterfaceMeta> interface = _result.getInterface(type.getDetailsAs<BridgedInterfaceTypeDetails>().name.jsName);
-                // TODO: Instead of setting "Foundation", handle the case when there is no interface found
-                type.getDetailsAs<BridgedInterfaceTypeDetails>().name.module = (interface ? interface->module : "Foundation");
+                std::shared_ptr<InterfaceMeta> interface = _result.getInterface(type.getDetailsAs<BridgedInterfaceTypeDetails>().id.name);
+                // TODO: Instead of setting empty identifier, handle the case when there is no interface found
+                type.getDetailsAs<BridgedInterfaceTypeDetails>().id = (interface ? interface->id : Identifier());
             }
             return this->_result;
         }

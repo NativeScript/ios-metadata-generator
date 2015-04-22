@@ -149,12 +149,12 @@ Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type) {
 }
 
 Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type) {
-    vector<FQName> protocols;
+    vector<Identifier> protocols;
     for (clang::ObjCObjectPointerType::qual_iterator it = type->qual_begin(); it != type->qual_end(); ++it) {
         clang::ObjCProtocolDecl *protocolDef = (*it)->getDefinition();
         if(protocolDef) {
             try {
-                protocols.push_back(_delegate->getDeclId(_delegate->validate(*protocolDef), true).toFQName());
+                protocols.push_back(_delegate->getDeclId(_delegate->validate(*protocolDef), true));
             } catch (MetaCreationException &e) {
                 continue;
             }
@@ -171,7 +171,7 @@ Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointer
         if (interface->getNameAsString() == "Protocol")
             return Type::ProtocolType();
         if(clang::ObjCInterfaceDecl *interfaceDef = interface->getDefinition())
-            return Type::Interface(_delegate->getDeclId(_delegate->validate(*interfaceDef), true).toFQName(), protocols);
+            return Type::Interface(_delegate->getDeclId(_delegate->validate(*interfaceDef), true), protocols);
     }
 
     throw TypeCreationException(type->getObjectType()->getTypeClassName(), "Invalid interface pointer type.", true);
@@ -199,8 +199,8 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
                 clang::ObjCBridgeMutableAttr *bridgeAttr = bridgeMutableAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
                 // TODO: change the module of the interface type to be the original module of the bridged type. The fqName generation should be done in the IdentifierGenerator
-                FQName fqName = FQName { .module = "Unresolved module name for bridged interface", .jsName = name}; // The module name should be resolved after parsing all declarations
-                Type interface = Type::BridgedInterface(fqName);
+                Identifier id = Identifier(name, "", "", ""); // The module name should be resolved after parsing all declarations
+                Type interface = Type::BridgedInterface(id);
                 _delegate->registerUnresolvedBridgedType(interface);
                 return interface;
             }
@@ -210,8 +210,8 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
                 clang::ObjCBridgeAttr *bridgeAttr = bridgeAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
                 // TODO: change the module of the interface type to be the original module of the bridged type. The fqName generation should be done in the IdentifierGenerator
-                FQName fqName = FQName { .module = "Unresolved module name for bridged interface", .jsName = name}; // The module name should be resolved after parsing all declarations
-                Type interface = Type::BridgedInterface(fqName);
+                Identifier id = Identifier(name, "", "", ""); // The module name should be resolved after parsing all declarations
+                Type interface = Type::BridgedInterface(id);
                 _delegate->registerUnresolvedBridgedType(interface);
                 return interface;
             }
@@ -250,8 +250,8 @@ Type TypeFactory::createFromRecordType(const clang::RecordType* type) {
         return Type::AnonymousStruct(fields);
     }
 
-    FQName recordName = this->_delegate->getDeclId(_delegate->validate(*recordDef), true).toFQName();
-    return Type::Struct(recordName);
+    Identifier recordId = this->_delegate->getDeclId(_delegate->validate(*recordDef), true);
+    return Type::Struct(recordId);
 }
 
 Type TypeFactory::createFromTypedefType(const clang::TypedefType* type) {

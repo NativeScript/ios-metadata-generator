@@ -18,7 +18,7 @@ namespace llvm {
 #include <llvm/Support/YAMLTraits.h>
 
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::string)
-LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::FQName)
+LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::Identifier)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::RecordField)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::Meta>)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::MethodMeta>)
@@ -182,13 +182,13 @@ namespace llvm {
             }
         };
 
-        // FQName
+        // Identifier
         template <>
-        struct MappingTraits<Meta::FQName> {
+        struct MappingTraits<Meta::Identifier> {
 
-            static void mapping(IO &io, Meta::FQName& name) {
-                io.mapOptional("Module", name.module, std::string(""));
-                io.mapOptional("Name", name.jsName, std::string(""));
+            static void mapping(IO &io, Meta::Identifier& id) {
+                io.mapOptional("Module", id.fullModule, std::string(""));
+                io.mapOptional("Name", id.jsName, std::string(""));
             }
         };
 
@@ -220,16 +220,16 @@ namespace llvm {
                     case Meta::TypeType::TypeInterface : {
                         Meta::InterfaceTypeDetails &details = type.getDetailsAs<Meta::InterfaceTypeDetails>();
                         // TODO: every FQName to be yamlized consistently (e.g. Name: { Module: "[value]", JsName: "[value]"} )
-                        io.mapRequired("Module", details.name.module);
-                        io.mapRequired("Name", details.name.jsName);
+                        io.mapRequired("Module", details.id.fullModule);
+                        io.mapRequired("Name", details.id.jsName);
                         //io.mapRequired("WithProtocols", details.protocols);
                         break;
                     }
                     case Meta::TypeType::TypeBridgedInterface : {
                         Meta::BridgedInterfaceTypeDetails &details = type.getDetailsAs<Meta::BridgedInterfaceTypeDetails>();
                         // TODO: every FQName to be yamlized consistently (e.g. Name: { Module: "[value]", JsName: "[value]"} )
-                        io.mapRequired("Module", details.name.module);
-                        io.mapRequired("Name", details.name.jsName);
+                        io.mapRequired("Module", details.id.fullModule);
+                        io.mapRequired("Name", details.id.jsName);
                         // TODO: dump protocols too
                         //io.mapRequired("WithProtocols", details.protocols);
                         break;
@@ -251,20 +251,20 @@ namespace llvm {
                     }
                     case Meta::TypeType::TypeStruct : {
                         Meta::StructTypeDetails &details = type.getDetailsAs<Meta::StructTypeDetails>();
-                        io.mapRequired("Module", details.name.module);
-                        io.mapRequired("Name", details.name.jsName);
+                        io.mapRequired("Module", details.id.fullModule);
+                        io.mapRequired("Name", details.id.jsName);
                         break;
                     }
                     case Meta::TypeType::TypeUnion : {
                         Meta::UnionTypeDetails &details = type.getDetailsAs<Meta::UnionTypeDetails>();
-                        io.mapRequired("Module", details.name.module);
-                        io.mapRequired("Name", details.name.jsName);
+                        io.mapRequired("Module", details.id.fullModule);
+                        io.mapRequired("Name", details.id.jsName);
                         break;
                     }
                     case Meta::TypeType::TypePureInterface : {
                         Meta::PureInterfaceTypeDetails &details = type.getDetailsAs<Meta::PureInterfaceTypeDetails>();
-                        io.mapRequired("Module", details.name.module);
-                        io.mapRequired("Name", details.name.jsName);
+                        io.mapRequired("Module", details.id.fullModule);
+                        io.mapRequired("Name", details.id.jsName);
                         break;
                     }
                     case Meta::TypeType::TypeAnonymousStruct : {
@@ -286,9 +286,9 @@ namespace llvm {
         template <>
         struct MappingTraits<BaseMeta> {
             static void mapping(IO &io, std::shared_ptr<Meta::Meta>& meta) {
-                io.mapRequired("Name", meta->name);
-                io.mapRequired("JsName", meta->jsName);
-                io.mapOptional("Module", meta->module, std::string(""));
+                io.mapRequired("Name", meta->id.name);
+                io.mapRequired("JsName", meta->id.jsName);
+                io.mapOptional("Module", meta->id.fullModule, std::string(""));
                 // TODO: Uncomment it. It is commented for consistency with old yaml format
                 //io.mapOptional("IntroducedIn", meta->introducedIn, UNKNOWN_VERSION);
                 io.mapRequired("Flags", meta->flags);
@@ -422,7 +422,7 @@ namespace llvm {
             static void mapping(IO &io, std::shared_ptr<Meta::InterfaceMeta>& meta) {
                 std::shared_ptr<Meta::BaseClassMeta> baseClassMeta = std::static_pointer_cast<Meta::InterfaceMeta>(meta);
                 MappingTraits<std::shared_ptr<Meta::BaseClassMeta>>::mapping(io, baseClassMeta);
-                io.mapRequired("Base", meta->baseName);
+                io.mapRequired("Base", meta->base);
             }
         };
 

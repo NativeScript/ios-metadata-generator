@@ -124,13 +124,13 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitInco
 
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitInterface(::Meta::InterfaceTypeDetails& typeDetails){
     binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::InterfaceDeclarationReference);
-    s->_name = this->_heapWriter.push_string(typeDetails.name.jsName);
+    s->_name = this->_heapWriter.push_string(typeDetails.id.jsName);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitBridgedInterface(::Meta::BridgedInterfaceTypeDetails& typeDetails){
     binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::InterfaceDeclarationReference);
-    s->_name = this->_heapWriter.push_string(typeDetails.name.jsName);
+    s->_name = this->_heapWriter.push_string(typeDetails.id.jsName);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
@@ -160,20 +160,20 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitFunc
 
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitStruct(::Meta::StructTypeDetails& typeDetails){
     binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::StructDeclarationReference);
-    s->_name = this->_heapWriter.push_string(typeDetails.name.jsName);
+    s->_name = this->_heapWriter.push_string(typeDetails.id.jsName);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitUnion(::Meta::UnionTypeDetails& typeDetails){
         binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::UnionDeclarationReference);
-        s->_name = this->_heapWriter.push_string(typeDetails.name.jsName);
+        s->_name = this->_heapWriter.push_string(typeDetails.id.jsName);
         return unique_ptr<binary::TypeEncoding>(s);
 }
 
 // TODO: Remove it
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitPureInterface(::Meta::PureInterfaceTypeDetails& typeDetails){
         binary::InterfaceDeclarationEncoding* s = new binary::InterfaceDeclarationEncoding();
-        s->_name = this->_heapWriter.push_string(typeDetails.name.jsName);
+        s->_name = this->_heapWriter.push_string(typeDetails.id.jsName);
         return unique_ptr<binary::TypeEncoding>(s);
 }
 

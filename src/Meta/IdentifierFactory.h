@@ -11,40 +11,32 @@
 
 
 namespace Meta {
-
-    struct FQName {
-    public:
-        std::string jsName;
-        std::string module;
-
-        bool isEmpty() const { return this->jsName.empty(); }
-
-        bool operator==(const FQName& other) const {
-            return (jsName == other.jsName && module == other.module);
-        }
-
-        bool operator!=(const FQName& other) const {
-            return !(*this == other);
-        }
-    };
-
     struct Identifier {
     public:
         Identifier()
-                : Identifier("", "", "") {}
+                : Identifier("", "", "", "") {}
 
-        Identifier(std::string name, std::string module, std::string fileName)
-                : jsName(name),
-                  module(module),
-                  fileName(fileName) {}
-
-        FQName toFQName() {
-            FQName fqName = FQName { .jsName = jsName, .module = module };
-            return fqName;
+        Identifier(std::string name, std::string jsName, std::string fullModule, std::string fileName)
+                : name(name),
+                  jsName(jsName),
+                  fullModule(fullModule),
+                  fileName(fileName) {
+            std::size_t dotIndex = fullModule.find(".");
+            this->topLevelModule = (dotIndex == std::string::npos) ? fullModule : fullModule.substr(0, dotIndex);
         }
 
+        bool operator==(const Identifier& other) const {
+            return (name == other.name && jsName == other.jsName && fullModule == other.fullModule && topLevelModule == other.topLevelModule && fileName == other.fileName);
+        }
+
+        bool operator!=(const Identifier& other) const {
+            return !(*this == other);
+        }
+
+        std::string name;
         std::string jsName;
-        std::string module;
+        std::string fullModule;
+        std::string topLevelModule;
         std::string fileName;
     };
 
@@ -56,12 +48,6 @@ namespace Meta {
             : _sourceManager(sourceManager),
               _headerSearch(headerSearch),
               _namesToRecalculate(namesToRecalculate) {}
-
-        std::string getJsName(const clang::Decl& decl, bool throwIfEmpty);
-
-        std::string getModule(const clang::Decl& decl, bool throwIfEmpty);
-
-        std::string getFileName(const clang::Decl& decl, bool throwIfEmpty);
 
         Identifier getIdentifier(const clang::Decl& decl, bool throwIfEmpty);
 
@@ -86,7 +72,7 @@ namespace Meta {
                   _message(message) {}
 
         virtual const char* what() const throw() { return this->whatAsString().c_str(); }
-        std::string whatAsString() const { return _message + " Decl: \"" + _id.jsName + "\"" + " Module: " + _id.module + " File: " +  _id.fileName; }
+        std::string whatAsString() const { return _message + " Decl: \"" + _id.jsName + "\"" + " Module: " + _id.fullModule + " File: " +  _id.fileName; }
         Identifier getId() const { return this->_id; }
         std::string getMessage() const { return this-> _message; }
 

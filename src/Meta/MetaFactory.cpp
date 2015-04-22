@@ -6,7 +6,7 @@
 
 using namespace std;
 
-bool protocolsComparerByJsName(Meta::FQName& protocol1, Meta::FQName& protocol2) {
+bool protocolsComparerByJsName(Meta::Identifier& protocol1, Meta::Identifier& protocol2) {
     string name1 = protocol1.jsName;
     string name2 = protocol2.jsName;
     std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower);
@@ -15,16 +15,16 @@ bool protocolsComparerByJsName(Meta::FQName& protocol1, Meta::FQName& protocol2)
 }
 
 bool methodsComparerByJsName(std::shared_ptr<Meta::MethodMeta>& method1, std::shared_ptr<Meta::MethodMeta>& method2) {
-    string name1 = method1->jsName;
-    string name2 = method2->jsName;
+    string name1 = method1->id.jsName;
+    string name2 = method2->id.jsName;
     std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower);
     std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
     return name1 < name2;
 }
 
 bool propertiesComparerByJsName(std::shared_ptr<Meta::PropertyMeta>& property1, std::shared_ptr<Meta::PropertyMeta>& property2) {
-    string name1 = property1->jsName;
-    string name2 = property2->jsName;
+    string name1 = property1->id.jsName;
+    string name2 = property2->id.jsName;
     std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower);
     std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
     return name1 < name2;
@@ -159,10 +159,6 @@ shared_ptr<Meta::RecordMeta> Meta::MetaFactory::createFromRecord(clang::RecordDe
 }
 
 std::shared_ptr<Meta::VarMeta> Meta::MetaFactory::createFromVar(clang::VarDecl& var) {
-    if(var.getKind() != clang::Decl::Kind::Var) {
-        // It is not exactly a VarDecl but an inheritor of VarDecl (e.g. ParmVarDecl)
-        throw MetaCreationException(Identifier(var.getNameAsString(), "", ""), "Not a var declaration.", false);
-    }
     if(var.getLexicalDeclContext() != var.getASTContext().getTranslationUnitDecl()) {
         throw MetaCreationException(_delegate->getId(var, false), "A nested var.", false);
     }
@@ -225,7 +221,7 @@ shared_ptr<Meta::InterfaceMeta> Meta::MetaFactory::createFromInterface(clang::Ob
 
     // set base interface
     clang::ObjCInterfaceDecl *super = interface.getSuperClass();
-    interfaceMeta->baseName = (super == nullptr) ? FQName() : _delegate->getId(ensureCanBeCreated(*super->getDefinition()), true).toFQName();
+    interfaceMeta->base = (super == nullptr) ? Identifier() : _delegate->getId(ensureCanBeCreated(*super->getDefinition()), true);
 
     return interfaceMeta;
 }
@@ -245,7 +241,7 @@ shared_ptr<Meta::CategoryMeta> Meta::MetaFactory::createFromCategory(clang::ObjC
     shared_ptr<CategoryMeta> categoryMeta = make_shared<CategoryMeta>();
     populateMetaFields(category, *(categoryMeta.get()));
     populateBaseClassMetaFields(category, *(categoryMeta.get()));
-    categoryMeta->extendedInterface = _delegate->getId(ensureCanBeCreated(*category.getClassInterface()->getDefinition()), true).toFQName();
+    categoryMeta->extendedInterface = _delegate->getId(ensureCanBeCreated(*category.getClassInterface()->getDefinition()), true);
     return categoryMeta;
 }
 
@@ -313,13 +309,10 @@ shared_ptr<Meta::PropertyMeta> Meta::MetaFactory::createFromProperty(clang::ObjC
 void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
     // TODO: add identifier in meta object
     meta.declaration = &decl;
-    meta.name = decl.getNameAsString();
     // We allow  anonymous categories to be created. There is no need for categories to be named
     // because we don't keep them as separate entity in metadata. They are merged in their interfaces
-    FQName fqName = this->_delegate->getId(decl, !meta.is(MetaType::Category)).toFQName();
-    meta.jsName = fqName.jsName;
-    meta.module = fqName.module;
-    meta.setFlags(MetaFlags::HasName , meta.name != meta.jsName);
+    meta.id = this->_delegate->getId(decl, !meta.is(MetaType::Category));
+    meta.setFlags(MetaFlags::HasName , meta.id.name != meta.id.jsName);
 
     clang::AvailabilityAttr *iosAvailability = nullptr;
     clang::AvailabilityAttr *iosExtensionsAvailability = nullptr;
@@ -372,7 +365,7 @@ void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& de
     for (clang::ObjCProtocolList::iterator i = protocols.begin(); i != protocols.end() ; ++i) {
         clang::ObjCProtocolDecl *protocol = *i;
         try {
-            baseClass.protocols.push_back(_delegate->getId(ensureCanBeCreated(*protocol->getDefinition()), true).toFQName());
+            baseClass.protocols.push_back(_delegate->getId(ensureCanBeCreated(*protocol->getDefinition()), true));
         } catch(MetaCreationException& e) {
             continue;
         }
