@@ -77,8 +77,9 @@ namespace Meta {
             this->type = MetaType::Method;
         }
 
-        std::string selector;
-        std::string typeEncoding;
+        // just a more convenient way to get the selector of method
+        std::string& getSelector() { return this->id.name; }
+
         std::vector<Type> signature;
 
         virtual void visit(MetaVisitor* visitor) override;

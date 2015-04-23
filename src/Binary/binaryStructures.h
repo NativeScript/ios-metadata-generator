@@ -117,9 +117,7 @@ namespace binary {
 
     struct MethodMeta : MemberMeta {
     public:
-        MetaFileOffset _selector = 0;
         MetaFileOffset _encoding = 0;
-        MetaFileOffset _compilerEncoding = 0;
 
         virtual MetaFileOffset save(BinaryWriter& writer) override;
     };

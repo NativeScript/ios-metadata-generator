@@ -22,7 +22,7 @@ namespace Meta {
 
                 std::vector<std::shared_ptr<MethodMeta>>::iterator method = std::find_if(nsNullMeta->staticMethods.begin(), nsNullMeta->staticMethods.end(),
                         [&](const std::shared_ptr<MethodMeta>& method) {
-                            return method->selector == "null";
+                            return method->getSelector() == "null";
                         });
 
                 if(method != nsNullMeta->instanceMethods.end()) {

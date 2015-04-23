@@ -295,9 +295,7 @@ namespace llvm {
             static void mapping(IO &io, std::shared_ptr<Meta::MethodMeta>& meta) {
                 std::shared_ptr<Meta::Meta> baseMeta = std::static_pointer_cast<Meta::MethodMeta>(meta);
                 MappingTraits<BaseMeta>::mapping(io, baseMeta);
-                io.mapRequired("Selector", meta->selector);
                 io.mapRequired("Signature", meta->signature);
-                io.mapRequired("TypeEncoding", meta->typeEncoding);
             }
         };
 

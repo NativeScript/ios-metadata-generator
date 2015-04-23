@@ -116,7 +116,7 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
 void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta *meta, binary::MethodMeta &binaryMetaStruct) {
 
     this->serializeBase(meta, binaryMetaStruct);
-    binaryMetaStruct._flags &= 248; // 248 = 11111000; this clears the type information writen in the lower 3 bits
+    binaryMetaStruct._flags &= 248; // 248 = 11111000; this clears the type information written in the lower 3 bits
 
     if(meta->getFlags(::Meta::MetaFlags::MethodIsVariadic))
         binaryMetaStruct._flags |= BinaryFlags::MethodIsVariadic;
@@ -125,13 +125,11 @@ void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta *meta, binary:
     if(meta->getFlags(::Meta::MetaFlags::MethodOwnsReturnedCocoaObject))
         binaryMetaStruct._flags |= BinaryFlags::MethodOwnsReturnedCocoaObject;
 
-    binaryMetaStruct._selector = this->heapWriter.push_string(meta->selector);
     vector<::Meta::Type> typeEncodings;
     for (auto& encoding : meta->signature) {
         typeEncodings.push_back(encoding);
     }
     binaryMetaStruct._encoding = this->typeEncodingSerializer.visit(typeEncodings);
-    binaryMetaStruct._compilerEncoding = this->heapWriter.push_string(meta->typeEncoding);
 }
 
 void binary::BinarySerializer::serializeProperty(::Meta::PropertyMeta *meta, binary::PropertyMeta &binaryMetaStruct) {

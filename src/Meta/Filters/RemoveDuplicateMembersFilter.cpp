@@ -2,7 +2,7 @@
 #include "../Utils.h"
 
 bool areMethodsEqual(Meta::MethodMeta& method1, Meta::MethodMeta& method2) {
-    return (method1.selector == method2.selector) && Meta::Utils::areTypesEqual(method1.signature, method2.signature);
+    return (method1.getSelector() == method2.getSelector()) && Meta::Utils::areTypesEqual(method1.signature, method2.signature);
 }
 
 bool arePropertiesEqual(Meta::PropertyMeta& prop1, Meta::PropertyMeta& prop2) {

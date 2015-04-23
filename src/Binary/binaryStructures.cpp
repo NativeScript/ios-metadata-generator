@@ -36,9 +36,7 @@ binary::MetaFileOffset binary::VarMeta::save(BinaryWriter& writer) {
 
 binary::MetaFileOffset binary::MethodMeta::save(BinaryWriter& writer) {
     binary::MetaFileOffset offset = MemberMeta::save(writer);
-    writer.push_pointer(this->_selector);
     writer.push_pointer(this->_encoding);
-    writer.push_pointer(this->_compilerEncoding);
     return offset;
 }
 

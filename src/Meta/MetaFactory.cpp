@@ -249,14 +249,6 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
     shared_ptr<MethodMeta> methodMeta = make_shared<MethodMeta>();
     populateMetaFields(method, *(methodMeta.get()));
 
-    // set selector
-    // TODO: We can use the name property instead of selector and remove the selector property.
-    methodMeta->selector = method.getSelector().getAsString();
-
-    // set type encoding
-    // TODO: Remove type encodings. We don't need them any more.
-    methodMeta->typeEncoding = "";
-
     // set IsVariadic flag
     methodMeta->setFlags(MetaFlags::MethodIsVariadic, method.isVariadic());
 
@@ -278,7 +270,7 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
         methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject ,  false);
     else {
         vector<string> selectorBegins = { "alloc", "new", "copy", "mutableCopy" };
-        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, stringBeginsWith(methodMeta->selector, selectorBegins));
+        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, stringBeginsWith(methodMeta->getSelector(), selectorBegins));
     }
 
     // set signature
