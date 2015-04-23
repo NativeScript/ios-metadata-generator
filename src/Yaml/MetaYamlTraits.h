@@ -137,6 +137,8 @@ namespace llvm {
                 io.enumCase(value, "Interface", Meta::MetaType::Interface);
                 io.enumCase(value, "Protocol", Meta::MetaType::Protocol);
                 io.enumCase(value, "Category", Meta::MetaType::Category);
+                io.enumCase(value, "Method", Meta::MetaType::Method);
+                io.enumCase(value, "Property", Meta::MetaType::Property);
             }
         };
 
@@ -187,12 +189,14 @@ namespace llvm {
         struct MappingTraits<Meta::Identifier> {
 
             static void mapping(IO &io, Meta::Identifier& id) {
+                io.mapOptional("Name", id.name, std::string(""));
+                io.mapOptional("JsName", id.jsName, std::string(""));
                 io.mapOptional("Module", id.fullModule, std::string(""));
-                io.mapOptional("Name", id.jsName, std::string(""));
+                io.mapOptional("Filename", id.fileName, std::string(""));
             }
         };
 
-        // TypeEncoding
+        // Type
         template <>
         struct MappingTraits<Meta::Type> {
 
@@ -219,19 +223,13 @@ namespace llvm {
                     }
                     case Meta::TypeType::TypeInterface : {
                         Meta::InterfaceTypeDetails &details = type.getDetailsAs<Meta::InterfaceTypeDetails>();
-                        // TODO: every FQName to be yamlized consistently (e.g. Name: { Module: "[value]", JsName: "[value]"} )
-                        io.mapRequired("Module", details.id.fullModule);
-                        io.mapRequired("Name", details.id.jsName);
-                        //io.mapRequired("WithProtocols", details.protocols);
+                        io.mapRequired("Id", details.id);
+                        io.mapRequired("WithProtocols", details.protocols);
                         break;
                     }
                     case Meta::TypeType::TypeBridgedInterface : {
                         Meta::BridgedInterfaceTypeDetails &details = type.getDetailsAs<Meta::BridgedInterfaceTypeDetails>();
-                        // TODO: every FQName to be yamlized consistently (e.g. Name: { Module: "[value]", JsName: "[value]"} )
-                        io.mapRequired("Module", details.id.fullModule);
-                        io.mapRequired("Name", details.id.jsName);
-                        // TODO: dump protocols too
-                        //io.mapRequired("WithProtocols", details.protocols);
+                        io.mapRequired("Id", details.id);
                         break;
                     }
                     case Meta::TypeType::TypePointer : {
@@ -286,16 +284,10 @@ namespace llvm {
         template <>
         struct MappingTraits<BaseMeta> {
             static void mapping(IO &io, std::shared_ptr<Meta::Meta>& meta) {
-                io.mapRequired("Name", meta->id.name);
-                io.mapRequired("JsName", meta->id.jsName);
-                io.mapOptional("Module", meta->id.fullModule, std::string(""));
-                // TODO: Uncomment it. It is commented for consistency with old yaml format
-                //io.mapOptional("IntroducedIn", meta->introducedIn, UNKNOWN_VERSION);
+                io.mapRequired("Id", meta->id);
+                io.mapOptional("IntroducedIn", meta->introducedIn, UNKNOWN_VERSION);
                 io.mapRequired("Flags", meta->flags);
-                // TODO: Remove this check. For now, it exist to be consistent with the old yaml format. In the future it will be better if methods and properties also dump their types
-                if(meta->type != Meta::MetaType::Method && meta->type != Meta::MetaType::Property) {
-                    io.mapRequired("Type", meta->type);
-                }
+                io.mapRequired("Type", meta->type);
             }
         };
 

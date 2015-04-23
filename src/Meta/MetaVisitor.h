@@ -2,14 +2,14 @@
 
 namespace Meta {
 
-    struct InterfaceMeta;
-    struct ProtocolMeta;
-    struct CategoryMeta;
-    struct FunctionMeta;
-    struct StructMeta;
-    struct UnionMeta;
-    struct JsCodeMeta;
-    struct VarMeta;
+    class InterfaceMeta;
+    class ProtocolMeta;
+    class CategoryMeta;
+    class FunctionMeta;
+    class StructMeta;
+    class UnionMeta;
+    class JsCodeMeta;
+    class VarMeta;
 
     class MetaVisitor {
     public:
