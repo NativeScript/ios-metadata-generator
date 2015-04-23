@@ -7,9 +7,9 @@ bool areMethodsEqual(Meta::MethodMeta& method1, Meta::MethodMeta& method2) {
 
 bool arePropertiesEqual(Meta::PropertyMeta& prop1, Meta::PropertyMeta& prop2) {
     if(prop1.id.name == prop2.id.name) {
-        if(prop1.getFlags(Meta::MetaFlags::PropertyHasGetter) == prop2.getFlags(Meta::MetaFlags::PropertyHasGetter) &&
-           prop1.getFlags(Meta::MetaFlags::PropertyHasSetter) == prop2.getFlags(Meta::MetaFlags::PropertyHasSetter)) {
-            if(prop1.getFlags(Meta::MetaFlags::PropertyHasGetter))
+        if((bool)prop1.getter == (bool)prop2.getter &&
+           (bool)prop1.setter == (bool)prop2.setter) {
+            if(prop1.getter)
                 return areMethodsEqual(*prop1.getter.get(), *prop2.getter.get());
             else
                 return areMethodsEqual(*prop1.setter.get(), *prop2.setter.get());

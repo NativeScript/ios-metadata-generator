@@ -17,23 +17,17 @@ namespace Meta {
         int SubMinor;
     };
 
-    // TODO: Change values (and maybe rename) some of the flag values
-    // TODO: Change binary conversation of the flags not to depend on the actual integral value of the flags.
-    enum MetaFlags : uint16_t {
+    enum MetaFlags : uint8_t {
         // Common
         None                                  = 0,
-        HasName                               = 1 << 1, // TODO: this should be determined when serializing to binary format and this flag should be removed from here
-        IsIosAppExtensionAvailable            = 1 << 2,
+        IsIosAppExtensionAvailable            = 1 << 0,
         // Function
-        FunctionIsVariadic                    = 1 << 3,
-        FunctionOwnsReturnedCocoaObject       = 1 << 4,
+        FunctionIsVariadic                    = 1 << 1,
+        FunctionOwnsReturnedCocoaObject       = 1 << 2,
         // Method
-        MethodIsVariadic                      = 1 << 5,
-        MethodIsNullTerminatedVariadic        = 1 << 6,
-        MethodOwnsReturnedCocoaObject         = 1 << 7,
-        // Property
-        PropertyHasGetter                     = 1 << 8, // TODO: this should be determined when serializing to binary format and this flag should be removed from here
-        PropertyHasSetter                     = 1 << 9 // TODO: this should be determined when serializing to binary format and this flag should be removed from here
+        MethodIsVariadic                      = 1 << 3,
+        MethodIsNullTerminatedVariadic        = 1 << 4,
+        MethodOwnsReturnedCocoaObject         = 1 << 5
     };
 
     enum MetaType {

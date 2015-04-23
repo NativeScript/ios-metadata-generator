@@ -296,11 +296,9 @@ shared_ptr<Meta::PropertyMeta> Meta::MetaFactory::createFromProperty(clang::ObjC
     populateMetaFields(property, *(propertyMeta.get()));
 
     clang::ObjCMethodDecl *getter = property.getGetterMethodDecl();
-    propertyMeta->setFlags(MetaFlags::PropertyHasGetter, getter);
     propertyMeta->getter = getter ? static_pointer_cast<MethodMeta>(create(*getter)) : nullptr;
 
     clang::ObjCMethodDecl *setter = property.getSetterMethodDecl();
-    propertyMeta->setFlags(MetaFlags::PropertyHasSetter, setter);
     propertyMeta->setter = setter ? static_pointer_cast<MethodMeta>(create(*setter)) : nullptr;
 
     return propertyMeta;
@@ -312,7 +310,6 @@ void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
     // We allow  anonymous categories to be created. There is no need for categories to be named
     // because we don't keep them as separate entity in metadata. They are merged in their interfaces
     meta.id = this->_delegate->getId(decl, !meta.is(MetaType::Category));
-    meta.setFlags(MetaFlags::HasName , meta.id.name != meta.id.jsName);
 
     clang::AvailabilityAttr *iosAvailability = nullptr;
     clang::AvailabilityAttr *iosExtensionsAvailability = nullptr;

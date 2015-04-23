@@ -33,8 +33,8 @@ bool isInitMethod(std::shared_ptr<Meta::MethodMeta>& meta) {
 
 void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& binaryMetaStruct) {
     // name
-    bool hasName = meta->getFlags(::Meta::MetaFlags::HasName);
-    if (meta->getFlags(::Meta::MetaFlags::HasName)) {
+    bool hasName = meta->id.name != meta->id.jsName;
+    if (hasName) {
         MetaFileOffset offset1 = this->heapWriter.push_string(meta->id.jsName);
         MetaFileOffset offset2 = this->heapWriter.push_string(meta->id.name);
         binaryMetaStruct._names = this->heapWriter.push_pointer(offset1);
@@ -139,13 +139,13 @@ void binary::BinarySerializer::serializeProperty(::Meta::PropertyMeta *meta, bin
     this->serializeBase(meta, binaryMetaStruct);
     binaryMetaStruct._flags &= 248; // 248 = 11111000; this clears the type information writen in the lower 3 bits
 
-    if(meta->getFlags(::Meta::MetaFlags::PropertyHasGetter)) {
+    if(meta->getter) {
         binaryMetaStruct._flags |= BinaryFlags::PropertyHasGetter;
         binary::MethodMeta binaryMeta;
         this->serializeMethod(meta->getter.get(), binaryMeta);
         binaryMetaStruct._getter = binaryMeta.save(this->heapWriter);
     }
-    if(meta->getFlags(::Meta::MetaFlags::PropertyHasSetter)) {
+    if(meta->setter) {
         binaryMetaStruct._flags |= BinaryFlags::PropertyHasSetter;
         binary::MethodMeta binaryMeta;
         this->serializeMethod(meta->setter.get(), binaryMeta);
