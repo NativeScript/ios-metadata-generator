@@ -46,11 +46,6 @@ Type Meta::Type::Union(Identifier id) {
     return Type(TypeType::TypeUnion, new UnionTypeDetails(id));
 }
 
-// TODO: Remove this method
-Type Meta::Type::PureInterface(Identifier id) {
-    return Type(TypeType::TypePureInterface, new PureInterfaceTypeDetails(id));
-}
-
 Type Meta::Type::AnonymousStruct(std::vector<RecordField> fields) {
     return Type(TypeType::TypeAnonymousStruct, new AnonymousStructTypeDetails(fields));
 }

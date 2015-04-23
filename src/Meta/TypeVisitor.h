@@ -13,7 +13,6 @@ namespace Meta {
     struct FunctionPointerTypeDetails;
     struct StructTypeDetails;
     struct UnionTypeDetails;
-    struct PureInterfaceTypeDetails;
     struct AnonymousStructTypeDetails;
     struct AnonymousUnionTypeDetails;
 
@@ -89,8 +88,6 @@ namespace Meta {
         virtual T_RESULT visitStruct(StructTypeDetails& typeDetails) = 0;
 
         virtual T_RESULT visitUnion(UnionTypeDetails& typeDetails) = 0;
-
-        virtual T_RESULT visitPureInterface(PureInterfaceTypeDetails& typeDetails) = 0; // TODO: Remove it
 
         virtual T_RESULT visitAnonymousStruct(AnonymousStructTypeDetails& typeDetails) = 0;
 

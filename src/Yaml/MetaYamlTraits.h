@@ -2,7 +2,6 @@
 
 #include "../Meta/MetaEntities.h"
 
-//TODO: Move these definitions (and others) in the .cpp file
 namespace llvm {
     namespace yaml {
         bool operator ==(Meta::Version& x, const Meta::Version& y) {
@@ -172,7 +171,6 @@ namespace llvm {
                 io.enumCase(value, "Block", Meta::TypeType::TypeBlock);
                 io.enumCase(value, "Struct", Meta::TypeType::TypeStruct);
                 io.enumCase(value, "Union", Meta::TypeType::TypeUnion);
-                io.enumCase(value, "PureInterface", Meta::TypeType::TypePureInterface);
                 io.enumCase(value, "AnonymousStruct", Meta::TypeType::TypeAnonymousStruct);
                 io.enumCase(value, "AnonymousUnion", Meta::TypeType::TypeAnonymousUnion);
                 io.enumCase(value, "VaList", Meta::TypeType::TypeVaList);
@@ -252,12 +250,6 @@ namespace llvm {
                     }
                     case Meta::TypeType::TypeUnion : {
                         Meta::UnionTypeDetails &details = type.getDetailsAs<Meta::UnionTypeDetails>();
-                        io.mapRequired("Module", details.id.fullModule);
-                        io.mapRequired("Name", details.id.jsName);
-                        break;
-                    }
-                    case Meta::TypeType::TypePureInterface : {
-                        Meta::PureInterfaceTypeDetails &details = type.getDetailsAs<Meta::PureInterfaceTypeDetails>();
                         io.mapRequired("Module", details.id.fullModule);
                         io.mapRequired("Name", details.id.jsName);
                         break;

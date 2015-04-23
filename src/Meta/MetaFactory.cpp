@@ -297,7 +297,6 @@ shared_ptr<Meta::PropertyMeta> Meta::MetaFactory::createFromProperty(clang::ObjC
 }
 
 void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
-    // TODO: add identifier in meta object
     meta.declaration = &decl;
     // We allow  anonymous categories to be created. There is no need for categories to be named
     // because we don't keep them as separate entity in metadata. They are merged in their interfaces

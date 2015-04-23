@@ -82,11 +82,6 @@ bool Meta::Utils::areTypesEqual(const Type &type1, const Type &type2) {
             UnionTypeDetails& details2 = type2.getDetailsAs<UnionTypeDetails>();
             return details1.id == details2.id;
         };
-        case TypeType::TypePureInterface : { // TODO: Remove this type. It is redundant and is never used.
-            PureInterfaceTypeDetails& details1 = type1.getDetailsAs<PureInterfaceTypeDetails>();
-            PureInterfaceTypeDetails& details2 = type2.getDetailsAs<PureInterfaceTypeDetails>();
-            return details1.id == details2.id;
-        };
         case TypeType::TypeAnonymousStruct : {
             AnonymousStructTypeDetails& details1 = type1.getDetailsAs<AnonymousStructTypeDetails>();
             AnonymousStructTypeDetails& details2 = type2.getDetailsAs<AnonymousStructTypeDetails>();

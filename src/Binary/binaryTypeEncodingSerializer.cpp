@@ -170,13 +170,6 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitUnio
         return unique_ptr<binary::TypeEncoding>(s);
 }
 
-// TODO: Remove it
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitPureInterface(::Meta::PureInterfaceTypeDetails& typeDetails){
-        binary::InterfaceDeclarationEncoding* s = new binary::InterfaceDeclarationEncoding();
-        s->_name = this->_heapWriter.push_string(typeDetails.id.jsName);
-        return unique_ptr<binary::TypeEncoding>(s);
-}
-
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitAnonymousStruct(::Meta::AnonymousStructTypeDetails& typeDetails){
     return this->serializeRecordEncoding(binary::BinaryTypeEncodingType::AnonymousStruct, typeDetails.fields);
 }

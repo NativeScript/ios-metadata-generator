@@ -87,8 +87,6 @@ namespace binary {
 
         virtual unique_ptr<TypeEncoding> visitUnion(::Meta::UnionTypeDetails& typeDetails) override;
 
-        virtual unique_ptr<TypeEncoding> visitPureInterface(::Meta::PureInterfaceTypeDetails& typeDetails) override; // TODO: Remove it
-
         virtual unique_ptr<TypeEncoding> visitAnonymousStruct(::Meta::AnonymousStructTypeDetails& typeDetails) override;
 
         virtual unique_ptr<TypeEncoding> visitAnonymousUnion(::Meta::AnonymousUnionTypeDetails& typeDetails) override;

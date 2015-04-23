@@ -43,7 +43,6 @@ namespace Meta {
         TypeBridgedInterface,
         TypeStruct,
         TypeUnion,
-        TypePureInterface, // TODO: Remove this type. It is redundant and is never used.
         TypeAnonymousStruct,
         TypeAnonymousUnion
     };
@@ -91,7 +90,6 @@ namespace Meta {
         static Type FunctionPointer(std::vector<Type>& signature);
         static Type Struct(Identifier id);
         static Type Union(Identifier id);
-        static Type PureInterface(Identifier id); // TODO: Remove this method
         static Type AnonymousStruct(std::vector<RecordField> fields);
         static Type AnonymousUnion(std::vector<RecordField> fields);
 
@@ -169,8 +167,6 @@ namespace Meta {
                     return visitor.visitStruct(getDetailsAs<StructTypeDetails>());
                 case TypeUnion :
                     return visitor.visitUnion(getDetailsAs<UnionTypeDetails>());
-                case TypePureInterface : // TODO: Remove this type. It is redundant and is never used.
-                    return visitor.visitPureInterface(getDetailsAs<PureInterfaceTypeDetails>());
                 case TypeAnonymousStruct :
                     return visitor.visitAnonymousStruct(getDetailsAs<AnonymousStructTypeDetails>());
                 case TypeAnonymousUnion :
@@ -274,14 +270,6 @@ namespace Meta {
 
     struct UnionTypeDetails : TypeDetails {
         UnionTypeDetails(Identifier id)
-                : id(id) {}
-
-        Identifier id;
-    };
-
-    // TODO: Remove this type. It is redundant and is never used.
-    struct PureInterfaceTypeDetails : TypeDetails {
-        PureInterfaceTypeDetails(Identifier id)
                 : id(id) {}
 
         Identifier id;
