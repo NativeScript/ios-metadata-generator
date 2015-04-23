@@ -110,17 +110,24 @@ string Meta::IdentifierFactory::calculateOriginalName(const clang::Decl& decl) {
         case clang::Decl::Kind::Record : {
             if(const clang::RecordDecl *record = clang::dyn_cast<clang::RecordDecl>(&decl)) {
                 if(!record->hasNameForLinkage()) {
-                    // It is absolutely anonymous record. It has neither name nor typedef name.
-                    return "";
+                    return ""; // It is absolutely anonymous record. It has neither name nor typedef name.
                 }
 
-                // TODO: check the correctness of the name in scenarios like this:
-                // struct a { int field; }
-                // typedef a b;
-                // It should return 'a' but I am not sure if this will be the result.
-
-                // First we check if have a typedef name, and get it if exists
-                // TODO: Do this check for enums, too
+                /*
+                 * Check if the next declaration in the context is typedef declaration to the given record and if true - use the name of the typedef.
+                 * Example:
+                 *          typedef struct _ugly_name {
+                 *              int field;
+                 *          } NiceName;
+                 * The algorithm should detect the typedef and use NiceName instead of  _ugly_name.
+                 * Example:
+                 *          struct _ugly_name {
+                 *              int field;
+                 *          }
+                 *          typedef struct _ugly_name NiceName;
+                 * Here, the algorithm will also detect the typedef and use NiceName instead of  _ugly_name,
+                 * because the typedef declaration is still the next declaration in context.
+                 */
                 if(record->getNextDeclInContext() != nullptr) {
                     if (const clang::TypedefDecl *nextDecl = clang::dyn_cast<clang::TypedefDecl>(record->getNextDeclInContext())) {
                         if (const clang::ElaboratedType *innerElaboratedType = clang::dyn_cast<clang::ElaboratedType>(nextDecl->getUnderlyingType().getTypePtr())) {
@@ -140,11 +147,34 @@ string Meta::IdentifierFactory::calculateOriginalName(const clang::Decl& decl) {
         case clang::Decl::Kind::Enum : {
             if(const clang::EnumDecl *enumDecl = clang::dyn_cast<clang::EnumDecl>(&decl)) {
                 if(!enumDecl->hasNameForLinkage()) {
-                    // enumDecl->hasNameForLinkage() - http://clang.llvm.org/doxygen/classclang_1_1TagDecl.html#aa0c620992e6aca248368dc5c7c463687 (description what this method does)
-                    return "";
+                    return ""; // It is absolutely anonymous record. It has neither name nor typedef name.
                 }
-                if(const clang::TypedefNameDecl *typedefDecl = enumDecl->getTypedefNameForAnonDecl()) {
-                    return typedefDecl->getNameAsString();
+
+                /*
+                 * Check if the next declaration in the context is typedef declaration to the given enum and if true - use the name of the typedef.
+                 * Example:
+                 *          typedef enum _ugly_name {
+                 *              field1, field2
+                 *          } NiceName;
+                 * The algorithm should detect the typedef and use NiceName instead of  _ugly_name.
+                 * Example:
+                 *          enum _ugly_name {
+                 *              field1, field2
+                 *          }
+                 *          typedef enum _ugly_name NiceName;
+                 * Here, the algorithm will also detect the typedef and use NiceName instead of  _ugly_name,
+                 * because the typedef declaration is still the next declaration in context.
+                 */
+                if(enumDecl->getNextDeclInContext() != nullptr) {
+                    if (const clang::TypedefDecl *nextDecl = clang::dyn_cast<clang::TypedefDecl>(enumDecl->getNextDeclInContext())) {
+                        if (const clang::ElaboratedType *innerElaboratedType = clang::dyn_cast<clang::ElaboratedType>(nextDecl->getUnderlyingType().getTypePtr())) {
+                            if (const clang::EnumType *enumType = clang::dyn_cast<clang::EnumType>(innerElaboratedType->desugar().getTypePtr())) {
+                                if (enumType->getDecl() == enumDecl) {
+                                    return nextDecl->getFirstDecl()->getNameAsString();
+                                }
+                            }
+                        }
+                    }
                 }
                 return enumDecl->getNameAsString();
             }
