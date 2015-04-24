@@ -198,7 +198,6 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
             if (bridgeMutableAttrs.size() > 0) {
                 clang::ObjCBridgeMutableAttr *bridgeAttr = bridgeMutableAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                // TODO: change the module of the interface type to be the original module of the bridged type. The fqName generation should be done in the IdentifierGenerator
                 Identifier id = Identifier(name, "", "", ""); // The module name should be resolved after parsing all declarations
                 Type interface = Type::BridgedInterface(id);
                 _delegate->registerUnresolvedBridgedType(interface);
@@ -209,7 +208,6 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
             if (bridgeAttrs.size() > 0) {
                 clang::ObjCBridgeAttr *bridgeAttr = bridgeAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                // TODO: change the module of the interface type to be the original module of the bridged type. The fqName generation should be done in the IdentifierGenerator
                 Identifier id = Identifier(name, "", "", ""); // The module name should be resolved after parsing all declarations
                 Type interface = Type::BridgedInterface(id);
                 _delegate->registerUnresolvedBridgedType(interface);
