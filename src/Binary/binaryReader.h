@@ -27,13 +27,9 @@ namespace binary {
         /*
          * \brief Constructs \c BinaryReader for a given stream.
          * \param stream The stream from which data will be read
-         * \param pointer_size The size of \c MetaFileOffset in bytes
-         * \param array_count_size The size of \c MetaArrayCount in bytes
          */
-        BinaryReader(std::shared_ptr<utils::Stream> stream, int pointer_size, int array_count_size)
-            : BinaryOperation(stream, pointer_size, array_count_size) { }
-
-        BinaryReader(std::shared_ptr<utils::Stream> stream) : BinaryReader(stream, 4, 4) { }
+        BinaryReader(std::shared_ptr<utils::Stream> stream)
+            : BinaryOperation(stream) { }
 
         /*
          * \brief Reads a nil terminated string.
