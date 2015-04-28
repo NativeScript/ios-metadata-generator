@@ -260,14 +260,14 @@ namespace Meta {
         typedef std::vector<Module>::size_type size_type;
 
         void add(std::shared_ptr<Meta> meta) {
-            _allModules.insert(meta->id.file->module->fullName);
+            _allModules.insert(meta->id.module->fullName);
             if(meta->is(MetaType::Category)) {
                 std::shared_ptr<CategoryMeta> category = std::static_pointer_cast<CategoryMeta>(meta);
                 this->_categories.push_back(category);
                 this->_categoryIsMerged.push_back(false);
             }
             else {
-                std::string moduleName = meta->id.file->module->topLevelModuleName();
+                std::string moduleName = meta->id.module->topLevelModuleName();
                 getTopLevelModule(moduleName, true)->add(meta);
             }
 
@@ -339,7 +339,7 @@ namespace Meta {
 
         template<class T>
         std::shared_ptr<T> getMetaAs(const DeclId & id) {
-            return getMetaAs<T>(id.file->module->topLevelModuleName(), id.jsName);
+            return getMetaAs<T>(id.module->topLevelModuleName(), id.jsName);
         }
 
         std::shared_ptr<InterfaceMeta> getInterface(std::string name) {

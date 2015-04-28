@@ -41,21 +41,6 @@ std::shared_ptr<Meta::ModuleId> Meta::IdentifierFactory::getModule(const clang::
     return metaModule;
 }
 
-std::shared_ptr<Meta::HeaderFileId> Meta::IdentifierFactory::getHeaderFile(const clang::FileEntry *entry) {
-    // check for cached HeaderFile
-    std::unordered_map<const clang::FileEntry*, std::shared_ptr<HeaderFileId>>::const_iterator cachedFile = _fileCache.find(entry);
-    if(cachedFile != _fileCache.end())
-        return cachedFile->second;
-
-    // create HeaderFile
-    std::shared_ptr<HeaderFileId> headerFile = (entry == nullptr) ? nullptr : std::make_shared<HeaderFileId>(entry->getName(),
-                                                                          getModule(_headerSearch.findModuleForHeader(entry).getModule()));
-
-    // insert it in cache
-    _fileCache.insert(std::pair<const clang::FileEntry*, std::shared_ptr<HeaderFileId>>(entry, headerFile));
-    return headerFile;
-}
-
 Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, bool throwIfEmpty) {
     // check for cached Identifier
     std::unordered_map<const clang::Decl*, DeclId>::const_iterator cachedId = _declCache.find(&decl);
@@ -65,7 +50,8 @@ Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, boo
 
     std::string name;
     std::string jsName;
-    std::shared_ptr<HeaderFileId> file;
+    std::string fileName;
+    std::shared_ptr<ModuleId> module;
 
     // calculate name
     if(const clang::NamedDecl* namedDecl = clang::dyn_cast<clang::NamedDecl>(&decl))
@@ -86,13 +72,16 @@ Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, boo
         }
     }
 
-    // calculate file entry
+    // calculate file name and module
     clang::SourceLocation location = _sourceManager.getFileLoc(decl.getLocation());
     clang::FileID fileId = _sourceManager.getDecomposedLoc(location).first;
     const clang::FileEntry *entry = _sourceManager.getFileEntryForID(fileId);
-    file = getHeaderFile(entry);
+    if(entry != nullptr) {
+        fileName = entry->getName();
+        module = this->getModule(_headerSearch.findModuleForHeader(entry).getModule());
+    }
 
-    DeclId id(name, jsName, file);
+    DeclId id(name, jsName, fileName, module);
 
     // add to cache
     _declCache.insert(std::pair<const clang::Decl*, DeclId>(&decl, id));
@@ -101,9 +90,9 @@ Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, boo
         // if name is empty we don't throw exception, it's OK the declaration to be anonymous
         if (id.jsName.empty())
             throw IdentifierCreationException(id, "Unknown js name for declaration.");
-        if (id.file == nullptr)
+        if (id.fileName.empty())
             throw IdentifierCreationException(id, "Unknown file for declaration.");
-        if (id.file->module == nullptr)
+        if (id.module == nullptr)
             throw IdentifierCreationException(id, "Unknown module for declaration.");
     }
 

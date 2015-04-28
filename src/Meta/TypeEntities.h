@@ -221,7 +221,7 @@ namespace Meta {
 
         DeclId id;
 
-        bool isResolved() { return id.file != nullptr; }
+        bool isResolved() { return id.module != nullptr; }
     };
 
     struct IncompleteArrayTypeDetails : TypeDetails {

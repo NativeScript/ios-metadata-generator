@@ -4,8 +4,8 @@
 bool isSpecialCategory(std::shared_ptr<Meta::CategoryMeta>& category) {
     Meta::DeclId& id = category->id;
     Meta::DeclId& intId = category->extendedInterface;
-    return id.name == "UIResponderStandardEditActions" && id.jsName == "UIResponderStandardEditActions" && id.file->module->fullName == "UIKit.UIResponder" &&
-           intId.name == "NSObject" && intId.jsName == "NSObject" && intId.file->module->fullName == "ObjectiveC.NSObject";
+    return id.name == "UIResponderStandardEditActions" && id.jsName == "UIResponderStandardEditActions" && id.module->fullName == "UIKit.UIResponder" &&
+           intId.name == "NSObject" && intId.jsName == "NSObject" && intId.module->fullName == "ObjectiveC.NSObject";
 }
 
 namespace Meta {

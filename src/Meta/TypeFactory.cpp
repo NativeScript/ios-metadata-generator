@@ -198,7 +198,7 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
             if (bridgeMutableAttrs.size() > 0) {
                 clang::ObjCBridgeMutableAttr *bridgeAttr = bridgeMutableAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                DeclId id = DeclId(name, "", nullptr); // The module name should be resolved after parsing all declarations
+                DeclId id = DeclId(name, "", "", nullptr); // The module name should be resolved after parsing all declarations
                 Type interface = Type::BridgedInterface(id);
                 _delegate->registerUnresolvedBridgedType(interface);
                 return interface;
@@ -208,7 +208,7 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
             if (bridgeAttrs.size() > 0) {
                 clang::ObjCBridgeAttr *bridgeAttr = bridgeAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                DeclId id = DeclId(name, "", nullptr); // The module name should be resolved after parsing all declarations
+                DeclId id = DeclId(name, "", "", nullptr); // The module name should be resolved after parsing all declarations
                 Type interface = Type::BridgedInterface(id);
                 _delegate->registerUnresolvedBridgedType(interface);
                 return interface;

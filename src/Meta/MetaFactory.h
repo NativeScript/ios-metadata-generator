@@ -68,7 +68,7 @@ namespace Meta {
                   _isError(isError) {}
 
         virtual const char* what() const throw() { return this->whatAsString().c_str(); }
-        std::string whatAsString() const { return _message + " Decl: " + _id.jsName + "(" + _id.file->fullPath + ") -> " + (this->isError() ? std::string("error") : std::string("notice")); }
+        std::string whatAsString() const { return _message + " Decl: " + _id.jsName + "(" + _id.fileName + ") -> " + (this->isError() ? std::string("error") : std::string("notice")); }
         DeclId getIdentifier() const { return this->_id; }
         std::string getMessage() const { return this-> _message; }
         bool isError() const { return this->_isError; }

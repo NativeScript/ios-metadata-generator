@@ -179,17 +179,27 @@ namespace llvm {
             }
         };
 
-        // Identifier
+        // ModuleId
+        template <>
+        struct MappingTraits<std::shared_ptr<Meta::ModuleId>> {
+
+            static void mapping(IO &io, std::shared_ptr<Meta::ModuleId>& moduleId) {
+                io.mapRequired("FullName", moduleId->fullName);
+                io.mapRequired("IsPartOfFramework", moduleId->isPartOfFramework);
+                io.mapRequired("IsSystemModule", moduleId->isSystemModule);
+            }
+        };
+
+        // DeclId
         template <>
         struct MappingTraits<Meta::DeclId> {
 
             static void mapping(IO &io, Meta::DeclId & id) {
-                io.mapOptional("Name", id.name, std::string(""));
-                io.mapOptional("JsName", id.jsName, std::string(""));
-                std::string fullModuleName = id.moduleNameOrEmpty();
-                std::string filePath = id.filePathOrEmpty();
-                io.mapOptional("Module", fullModuleName, std::string(""));
-                io.mapOptional("Filename", filePath, std::string(""));
+                io.mapRequired("Name", id.name);
+                io.mapRequired("JsName", id.jsName);
+                io.mapRequired("Filename", id.fileName);
+                if(id.module != nullptr)
+                    io.mapRequired("Module", id.module);
             }
         };
 
@@ -246,13 +256,13 @@ namespace llvm {
                     }
                     case Meta::TypeType::TypeStruct : {
                         Meta::StructTypeDetails &details = type.getDetailsAs<Meta::StructTypeDetails>();
-                        io.mapRequired("Module", details.id.file->module->fullName);
+                        io.mapRequired("Module", details.id.module->fullName);
                         io.mapRequired("Name", details.id.jsName);
                         break;
                     }
                     case Meta::TypeType::TypeUnion : {
                         Meta::UnionTypeDetails &details = type.getDetailsAs<Meta::UnionTypeDetails>();
-                        io.mapRequired("Module", details.id.file->module->fullName);
+                        io.mapRequired("Module", details.id.module->fullName);
                         io.mapRequired("Name", details.id.jsName);
                         break;
                     }

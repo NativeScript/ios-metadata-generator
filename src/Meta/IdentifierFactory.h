@@ -33,41 +33,28 @@ namespace Meta {
         bool operator!=(const ModuleId& other) const { return !(*this == other); }
     };
 
-    struct HeaderFileId {
-        std::string fullPath;
-        std::shared_ptr<ModuleId> module;
-
-        HeaderFileId(std::string fullPath, std::shared_ptr<ModuleId> module)
-                : fullPath(fullPath),
-                  module(module) {}
-
-        bool operator==(const HeaderFileId & other) const { return fullPath == other.fullPath && (*module) == (*other.module); }
-
-        bool operator!=(const HeaderFileId & other) const { return !(*this == other); }
-    };
-
     struct DeclId {
     public:
-        DeclId() : DeclId("", "", nullptr) {}
+        DeclId() : DeclId("", "", "", nullptr) {}
 
-        DeclId(std::string name, std::string jsName, std::shared_ptr<HeaderFileId> file)
+        DeclId(std::string name, std::string jsName, std::string fileName, std::shared_ptr<ModuleId> moduleId)
                 : name(name),
                   jsName(jsName),
-                  file(file) { }
+                  fileName(fileName),
+                  module(moduleId) { }
 
-        std::string filePathOrEmpty() const { return this->file == nullptr ? "" : this->file->fullPath; }
+        std::string moduleNameOrEmpty() const { return this->module == nullptr ? "" : this->module->fullName; }
 
-        std::string moduleNameOrEmpty() const { return this->file == nullptr ? "" : (this->file->module == nullptr ? "" : this->file->module->fullName ); }
+        std::string topLevelModuleNameOrEmpty() const { return this->module == nullptr ? "" : this->module->topLevelModuleName(); }
 
-        std::string topLevelModuleNameOrEmpty() const { return this->file == nullptr ? "" : (this->file->module == nullptr ? "" : this->file->module->topLevelModuleName() ); }
-
-        bool operator==(const DeclId & other) const { return (name == other.name && jsName == other.jsName && (*file) == (*other.file)); }
+        bool operator==(const DeclId & other) const { return (name == other.name && jsName == other.jsName && fileName == other.fileName && (*module) == (*other.module)); }
 
         bool operator!=(const DeclId & other) const { return !(*this == other); }
 
         std::string name;
         std::string jsName;
-        std::shared_ptr<HeaderFileId> file;
+        std::string fileName;
+        std::shared_ptr<ModuleId> module;
     };
 
     class IdentifierFactory {
@@ -80,8 +67,6 @@ namespace Meta {
               _namesToRecalculate(namesToRecalculate) { }
 
         DeclId getIdentifier(const clang::Decl& decl, bool throwIfEmpty);
-
-        std::shared_ptr<Meta::HeaderFileId> getHeaderFile(const clang::FileEntry* entry);
 
         std::shared_ptr<ModuleId> getModule(const clang::Module* module);
 
@@ -98,19 +83,17 @@ namespace Meta {
 
         // cache
         std::unordered_map<const clang::Decl*, Meta::DeclId> _declCache;
-        std::unordered_map<const clang::FileEntry*, std::shared_ptr<HeaderFileId>> _fileCache;
         std::unordered_map<const clang::Module*, std::shared_ptr<ModuleId>> _moduleCache;
     };
 
-    class IdentifierCreationException : public std::exception
-    {
+    class IdentifierCreationException : public std::exception {
     public:
         IdentifierCreationException(DeclId id, std::string message)
                 : _id(id),
                   _message(message) {}
 
         virtual const char* what() const throw() { return this->whatAsString().c_str(); }
-        std::string whatAsString() const { return _message + " Decl: \"" + _id.jsName + "\"" + " Module: " + _id.moduleNameOrEmpty() + " File: " +  _id.filePathOrEmpty(); }
+        std::string whatAsString() const { return _message + " Decl: \"" + _id.jsName + "\"" + " Module: " + _id.moduleNameOrEmpty() + " File: " +  _id.fileName; }
         DeclId getId() const { return this->_id; }
         std::string getMessage() const { return this-> _message; }
 

@@ -55,7 +55,7 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
     binaryMetaStruct._flags = flags;
 
     // module
-    binaryMetaStruct._frameworkId = (uint16_t)this->moduleMap[meta->id.file->module->fullName];
+    binaryMetaStruct._frameworkId = (uint16_t)this->moduleMap[meta->id.module->fullName];
 
     // introduced in
     binaryMetaStruct._introduced = convertVersion(meta->introducedIn);
