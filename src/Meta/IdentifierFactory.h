@@ -11,15 +11,26 @@
 
 
 namespace Meta {
+    struct LinkLib {
+        LinkLib() : isFramework(false) { }
+        LinkLib(const std::string &library, bool isFramework)
+                : library(library), isFramework(isFramework) { }
+
+        std::string library;
+        bool isFramework;
+    };
+
     struct ModuleId {
         std::string fullName;
         bool isPartOfFramework;
         bool isSystemModule;
+        std::vector<LinkLib> linkLibraries;
 
-        ModuleId(std::string fullName, bool isPartOfFramework, bool isSystemModule)
+        ModuleId(std::string fullName, bool isPartOfFramework, bool isSystemModule, std::vector<LinkLib> linkLibraries)
                 : fullName(fullName),
                   isPartOfFramework(isPartOfFramework),
-                  isSystemModule(isSystemModule) { }
+                  isSystemModule(isSystemModule),
+                  linkLibraries(linkLibraries) { }
 
         std::string topLevelModuleName() {
             std::size_t dotIndex = fullName.find(".");

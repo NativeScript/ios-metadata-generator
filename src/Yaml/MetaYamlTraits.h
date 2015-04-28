@@ -18,6 +18,7 @@ namespace llvm {
 
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::string)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::DeclId)
+LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::LinkLib)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::RecordField)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::Meta>)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::MethodMeta>)
@@ -179,6 +180,16 @@ namespace llvm {
             }
         };
 
+        // LinkLib
+        template <>
+        struct MappingTraits<Meta::LinkLib> {
+
+            static void mapping(IO &io, Meta::LinkLib& lib) {
+                io.mapRequired("Library", lib.library);
+                io.mapRequired("IsFramework", lib.isFramework);
+            }
+        };
+
         // ModuleId
         template <>
         struct MappingTraits<std::shared_ptr<Meta::ModuleId>> {
@@ -187,6 +198,7 @@ namespace llvm {
                 io.mapRequired("FullName", moduleId->fullName);
                 io.mapRequired("IsPartOfFramework", moduleId->isPartOfFramework);
                 io.mapRequired("IsSystemModule", moduleId->isSystemModule);
+                io.mapRequired("Libraries", moduleId->linkLibraries);
             }
         };
 

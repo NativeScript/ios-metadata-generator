@@ -33,12 +33,23 @@ std::shared_ptr<Meta::ModuleId> Meta::IdentifierFactory::getModule(const clang::
     if(cachedModule != _moduleCache.end())
         return cachedModule->second;
 
-    // calculate module name
-    std::shared_ptr<Meta::ModuleId> metaModule = (module == nullptr) ? nullptr : std::make_shared<Meta::ModuleId>(module->getFullModuleName(), module->isPartOfFramework(), module->IsSystem);
+    // calculate ModuleId
+    std::shared_ptr<Meta::ModuleId> moduleId;
+    if(module != nullptr) {
+        std::vector<LinkLib> libraries;
+        const clang::Module *currentModule = module;
+        do {
+            for (clang::Module::LinkLibrary lib : currentModule->LinkLibraries)
+                libraries.push_back(LinkLib(lib.Library, lib.IsFramework));
+            currentModule = currentModule->Parent;
+        } while(currentModule != nullptr);
+
+        moduleId = std::make_shared<Meta::ModuleId>(module->getFullModuleName(), module->isPartOfFramework(), module->IsSystem, libraries);
+    }
 
     // insert it in cache
-    _moduleCache.insert(std::pair<const clang::Module*, std::shared_ptr<ModuleId>>(module, metaModule));
-    return metaModule;
+    _moduleCache.insert(std::pair<const clang::Module*, std::shared_ptr<ModuleId>>(module, moduleId));
+    return moduleId;
 }
 
 Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, bool throwIfEmpty) {
