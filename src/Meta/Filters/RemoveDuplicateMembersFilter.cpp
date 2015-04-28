@@ -46,7 +46,7 @@ void processBaseClassAndHierarchyOf(std::shared_ptr<Meta::BaseClassMeta> child, 
     if(child != parent) {
         removeDuplicateMembersFromChild(child, parent);
     }
-    for(std::vector<Meta::Identifier>::iterator protIt = parent->protocols.begin(); protIt != parent->protocols.end(); protIt++) {
+    for(std::vector<Meta::DeclId>::iterator protIt = parent->protocols.begin(); protIt != parent->protocols.end(); protIt++) {
         std::shared_ptr<Meta::ProtocolMeta> protocol = container.getMetaAs<Meta::ProtocolMeta>(*protIt);
         if(protocol) {
             processBaseClassAndHierarchyOf(child, protocol, container);

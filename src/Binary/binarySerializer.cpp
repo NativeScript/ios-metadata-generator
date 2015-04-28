@@ -22,7 +22,7 @@ bool comparePropertyMetas(std::shared_ptr<Meta::PropertyMeta>& meta1, std::share
     return meta1->id.jsName < meta2->id.jsName;
 }
 
-bool compareIdentifiers(Meta::Identifier& id1, Meta::Identifier& id2) {
+bool compareIdentifiers(Meta::DeclId & id1, Meta::DeclId & id2) {
     return id1.jsName < id2.jsName;
 }
 
@@ -55,7 +55,7 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
     binaryMetaStruct._flags = flags;
 
     // module
-    binaryMetaStruct._frameworkId = (uint16_t)this->moduleMap[meta->id.fullModule];
+    binaryMetaStruct._frameworkId = (uint16_t)this->moduleMap[meta->id.file->module->fullName];
 
     // introduced in
     binaryMetaStruct._introduced = convertVersion(meta->introducedIn);
@@ -98,7 +98,7 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
 
     // protocols
     std::sort(meta->protocols.begin(), meta->protocols.end(), compareIdentifiers);
-    for (::Meta::Identifier& protocolName : meta->protocols) {
+    for (::Meta::DeclId & protocolName : meta->protocols) {
         offsets.push_back(this->heapWriter.push_string(protocolName.jsName));
     }
     binaryMetaStruct._protocols = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;

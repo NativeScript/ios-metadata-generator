@@ -1,12 +1,12 @@
 #include "Utils.h"
 #include "TypeEntities.h"
 
-bool areIdentifierListsEqual(const std::vector<Meta::Identifier>& vector1, const std::vector<Meta::Identifier>& vector2) {
+bool areIdentifierListsEqual(const std::vector<Meta::DeclId>& vector1, const std::vector<Meta::DeclId>& vector2) {
     if(vector1.size() != vector2.size()) {
         return false;
     }
 
-    for(std::vector<Meta::Identifier>::size_type i = 0; i < vector1.size(); i++) {
+    for(std::vector<Meta::DeclId>::size_type i = 0; i < vector1.size(); i++) {
         if(vector1[i] != vector2[i]) {
             return false;
         }

@@ -17,7 +17,7 @@ namespace llvm {
 #include <llvm/Support/YAMLTraits.h>
 
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::string)
-LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::Identifier)
+LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::DeclId)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::RecordField)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::Meta>)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::MethodMeta>)
@@ -181,13 +181,15 @@ namespace llvm {
 
         // Identifier
         template <>
-        struct MappingTraits<Meta::Identifier> {
+        struct MappingTraits<Meta::DeclId> {
 
-            static void mapping(IO &io, Meta::Identifier& id) {
+            static void mapping(IO &io, Meta::DeclId & id) {
                 io.mapOptional("Name", id.name, std::string(""));
                 io.mapOptional("JsName", id.jsName, std::string(""));
-                io.mapOptional("Module", id.fullModule, std::string(""));
-                io.mapOptional("Filename", id.fileName, std::string(""));
+                std::string fullModuleName = id.moduleNameOrEmpty();
+                std::string filePath = id.filePathOrEmpty();
+                io.mapOptional("Module", fullModuleName, std::string(""));
+                io.mapOptional("Filename", filePath, std::string(""));
             }
         };
 
@@ -244,13 +246,13 @@ namespace llvm {
                     }
                     case Meta::TypeType::TypeStruct : {
                         Meta::StructTypeDetails &details = type.getDetailsAs<Meta::StructTypeDetails>();
-                        io.mapRequired("Module", details.id.fullModule);
+                        io.mapRequired("Module", details.id.file->module->fullName);
                         io.mapRequired("Name", details.id.jsName);
                         break;
                     }
                     case Meta::TypeType::TypeUnion : {
                         Meta::UnionTypeDetails &details = type.getDetailsAs<Meta::UnionTypeDetails>();
-                        io.mapRequired("Module", details.id.fullModule);
+                        io.mapRequired("Module", details.id.file->module->fullName);
                         io.mapRequired("Name", details.id.jsName);
                         break;
                     }

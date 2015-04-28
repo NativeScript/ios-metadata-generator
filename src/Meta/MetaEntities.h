@@ -48,7 +48,7 @@ namespace Meta {
     public:
         MetaType type = MetaType::Undefined;
         MetaFlags flags = MetaFlags::None;
-        Identifier id;
+        DeclId id;
 
         // Availability
         Version introducedIn = UNKNOWN_VERSION;
@@ -102,7 +102,7 @@ namespace Meta {
         std::vector<std::shared_ptr<MethodMeta>> instanceMethods;
         std::vector<std::shared_ptr<MethodMeta>> staticMethods;
         std::vector<std::shared_ptr<PropertyMeta>> properties;
-        std::vector<Identifier> protocols;
+        std::vector<DeclId> protocols;
     };
 
     class CategoryMeta : public BaseClassMeta {
@@ -111,7 +111,7 @@ namespace Meta {
             this->type = MetaType::Category;
         }
 
-        Identifier extendedInterface;
+        DeclId extendedInterface;
 
         virtual void visit(MetaVisitor* visitor) override;
     };
@@ -122,7 +122,7 @@ namespace Meta {
             this->type = MetaType::Interface;
         }
 
-        Identifier base;
+        DeclId base;
 
         virtual void visit(MetaVisitor* visitor) override;
     };
@@ -260,14 +260,14 @@ namespace Meta {
         typedef std::vector<Module>::size_type size_type;
 
         void add(std::shared_ptr<Meta> meta) {
-            _allModules.insert(meta->id.fullModule);
+            _allModules.insert(meta->id.file->module->fullName);
             if(meta->is(MetaType::Category)) {
                 std::shared_ptr<CategoryMeta> category = std::static_pointer_cast<CategoryMeta>(meta);
                 this->_categories.push_back(category);
                 this->_categoryIsMerged.push_back(false);
             }
             else {
-                std::string moduleName = meta->id.topLevelModule;
+                std::string moduleName = meta->id.file->module->topLevelModuleName();
                 getTopLevelModule(moduleName, true)->add(meta);
             }
 
@@ -338,8 +338,8 @@ namespace Meta {
         }
 
         template<class T>
-        std::shared_ptr<T> getMetaAs(const Identifier& id) {
-            return getMetaAs<T>(id.topLevelModule, id.jsName);
+        std::shared_ptr<T> getMetaAs(const DeclId & id) {
+            return getMetaAs<T>(id.file->module->topLevelModuleName(), id.jsName);
         }
 
         std::shared_ptr<InterfaceMeta> getInterface(std::string name) {

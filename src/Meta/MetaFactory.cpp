@@ -6,7 +6,7 @@
 
 using namespace std;
 
-bool protocolsComparerByJsName(Meta::Identifier& protocol1, Meta::Identifier& protocol2) {
+bool protocolsComparerByJsName(Meta::DeclId & protocol1, Meta::DeclId & protocol2) {
     string name1 = protocol1.jsName;
     string name2 = protocol2.jsName;
     std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower);
@@ -222,7 +222,7 @@ shared_ptr<Meta::InterfaceMeta> Meta::MetaFactory::createFromInterface(clang::Ob
 
     // set base interface
     clang::ObjCInterfaceDecl *super = interface.getSuperClass();
-    interfaceMeta->base = (super == nullptr) ? Identifier() : _delegate->getId(ensureCanBeCreated(*super->getDefinition()), true);
+    interfaceMeta->base = (super == nullptr) ? DeclId() : _delegate->getId(ensureCanBeCreated(*super->getDefinition()), true);
 
     return interfaceMeta;
 }
