@@ -27,31 +27,6 @@ void splitString(const std::string &s, char delim, vector<string> &elems) {
     }
 }
 
-std::shared_ptr<Meta::ModuleId> Meta::IdentifierFactory::getModule(const clang::Module* module) {
-    // check for cached Module
-    std::unordered_map<const clang::Module*, std::shared_ptr<ModuleId>>::const_iterator cachedModule = _moduleCache.find(module);
-    if(cachedModule != _moduleCache.end())
-        return cachedModule->second;
-
-    // calculate ModuleId
-    std::shared_ptr<Meta::ModuleId> moduleId;
-    if(module != nullptr) {
-        std::vector<LinkLib> libraries;
-        const clang::Module *currentModule = module;
-        do {
-            for (clang::Module::LinkLibrary lib : currentModule->LinkLibraries)
-                libraries.push_back(LinkLib(lib.Library, lib.IsFramework));
-            currentModule = currentModule->Parent;
-        } while(currentModule != nullptr);
-
-        moduleId = std::make_shared<Meta::ModuleId>(module->getFullModuleName(), module->isPartOfFramework(), module->IsSystem, libraries);
-    }
-
-    // insert it in cache
-    _moduleCache.insert(std::pair<const clang::Module*, std::shared_ptr<ModuleId>>(module, moduleId));
-    return moduleId;
-}
-
 Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, bool throwIfEmpty) {
     // check for cached Identifier
     std::unordered_map<const clang::Decl*, DeclId>::const_iterator cachedId = _declCache.find(&decl);
@@ -62,7 +37,7 @@ Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, boo
     std::string name;
     std::string jsName;
     std::string fileName;
-    std::shared_ptr<ModuleId> module;
+    clang::Module* module;
 
     // calculate name
     if(const clang::NamedDecl* namedDecl = clang::dyn_cast<clang::NamedDecl>(&decl))
@@ -89,7 +64,7 @@ Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, boo
     const clang::FileEntry *entry = _sourceManager.getFileEntryForID(fileId);
     if(entry != nullptr) {
         fileName = entry->getName();
-        module = this->getModule(_headerSearch.findModuleForHeader(entry).getModule());
+        module = _headerSearch.findModuleForHeader(entry).getModule();
     }
 
     DeclId id(name, jsName, fileName, module);

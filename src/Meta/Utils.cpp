@@ -135,3 +135,10 @@ std::string Meta::Utils::getCommonWordPrefix(const std::vector<std::string>& str
 
     return std::string();
 }
+
+void Meta::Utils::getAllLinkLibraries(clang::Module *module, std::vector<clang::Module::LinkLibrary>& result) {
+    for(clang::Module::LinkLibrary lib : module->LinkLibraries)
+        result.push_back(lib);
+    for(clang::Module::submodule_const_iterator it = module->submodule_begin(); it != module->submodule_end(); ++it)
+        getAllLinkLibraries(*it, result);
+}

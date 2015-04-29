@@ -65,8 +65,8 @@ void processBaseClassAndHierarchyOf(std::shared_ptr<Meta::BaseClassMeta> child, 
 
 void Meta::RemoveDuplicateMembersFilter::filter(MetaContainer& container) {
     for(MetaContainer::top_level_modules_iterator modIt = container.top_level_modules_begin(); modIt != container.top_level_modules_end(); modIt++) {
-        Module& module = *modIt;
-        for(Module::iterator metaIt = module.begin(); metaIt != module.end(); metaIt++) {
+        ModuleMeta & module = *modIt;
+        for(ModuleMeta::iterator metaIt = module.begin(); metaIt != module.end(); metaIt++) {
             std::shared_ptr<Meta> meta = metaIt->second;
             if(meta->is(MetaType::Interface) || meta->is(MetaType::Protocol)) {
                 std::shared_ptr<BaseClassMeta> baseClass = std::static_pointer_cast<BaseClassMeta>(meta);

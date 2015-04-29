@@ -15,7 +15,6 @@ namespace binary {
         MetaFile* file;
         BinaryWriter heapWriter;
         BinaryTypeEncodingSerializer typeEncodingSerializer;
-        std::map<std::string, MetaFileOffset> moduleMap;
 
         void serializeBase(::Meta::Meta* Meta, binary::Meta& binaryMetaStruct);
 

@@ -20,52 +20,28 @@ namespace Meta {
         bool isFramework;
     };
 
-    struct ModuleId {
-        std::string fullName;
-        bool isPartOfFramework;
-        bool isSystemModule;
-        std::vector<LinkLib> linkLibraries;
-
-        ModuleId(std::string fullName, bool isPartOfFramework, bool isSystemModule, std::vector<LinkLib> linkLibraries)
-                : fullName(fullName),
-                  isPartOfFramework(isPartOfFramework),
-                  isSystemModule(isSystemModule),
-                  linkLibraries(linkLibraries) { }
-
-        std::string topLevelModuleName() {
-            std::size_t dotIndex = fullName.find(".");
-            return (dotIndex == std::string::npos) ? fullName : fullName.substr(0, dotIndex);
-        }
-
-        bool operator==(const ModuleId& other) const {
-            return (fullName == other.fullName && isPartOfFramework == other.isPartOfFramework && isSystemModule == other.isSystemModule);
-        }
-
-        bool operator!=(const ModuleId& other) const { return !(*this == other); }
-    };
-
     struct DeclId {
     public:
         DeclId() : DeclId("", "", "", nullptr) {}
 
-        DeclId(std::string name, std::string jsName, std::string fileName, std::shared_ptr<ModuleId> moduleId)
+        DeclId(std::string name, std::string jsName, std::string fileName, clang::Module* module)
                 : name(name),
                   jsName(jsName),
                   fileName(fileName),
-                  module(moduleId) { }
+                  module(module) { }
 
-        std::string moduleNameOrEmpty() const { return this->module == nullptr ? "" : this->module->fullName; }
+        std::string moduleNameOrEmpty() const { return this->module == nullptr ? "" : this->module->getFullModuleName(); }
 
-        std::string topLevelModuleNameOrEmpty() const { return this->module == nullptr ? "" : this->module->topLevelModuleName(); }
+        std::string topLevelModuleNameOrEmpty() const { return this->module == nullptr ? "" : this->module->getTopLevelModule()->getFullModuleName(); }
 
-        bool operator==(const DeclId & other) const { return (name == other.name && jsName == other.jsName && fileName == other.fileName && (*module) == (*other.module)); }
+        bool operator==(const DeclId & other) const { return (name == other.name && jsName == other.jsName && fileName == other.fileName && module == other.module); }
 
         bool operator!=(const DeclId & other) const { return !(*this == other); }
 
         std::string name;
         std::string jsName;
         std::string fileName;
-        std::shared_ptr<ModuleId> module;
+        clang::Module* module;
     };
 
     class IdentifierFactory {
@@ -78,8 +54,6 @@ namespace Meta {
               _namesToRecalculate(namesToRecalculate) { }
 
         DeclId getIdentifier(const clang::Decl& decl, bool throwIfEmpty);
-
-        std::shared_ptr<ModuleId> getModule(const clang::Module* module);
 
     private:
         std::string calculateOriginalName(const clang::Decl& decl);
@@ -94,7 +68,6 @@ namespace Meta {
 
         // cache
         std::unordered_map<const clang::Decl*, Meta::DeclId> _declCache;
-        std::unordered_map<const clang::Module*, std::shared_ptr<ModuleId>> _moduleCache;
     };
 
     class IdentifierCreationException : public std::exception {
