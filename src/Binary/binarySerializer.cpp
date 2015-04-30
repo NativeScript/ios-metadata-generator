@@ -56,15 +56,16 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
     binaryMetaStruct._flags = flags;
 
     // module
-    clang::Module *topLevelModule = meta->id.module->getTopLevelModule();
-    std::unordered_map<clang::Module*, MetaFileOffset>::iterator it = this->modulesCache.find(topLevelModule);
-    if(it != this->modulesCache.end())
-        binaryMetaStruct._topLevelModule = it->second;
+    clang::Module* topLevelModule = meta->id.module->getTopLevelModule();
+    std::string topLevelModuleName = topLevelModule->getFullModuleName();
+    MetaFileOffset moduleOffset = this->file->getFromTopLevelModulesTable(topLevelModuleName);
+    if(moduleOffset != 0)
+        binaryMetaStruct._topLevelModule = moduleOffset;
     else {
         binary::ModuleMeta moduleMeta;
         serializeModule(topLevelModule, moduleMeta);
         binaryMetaStruct._topLevelModule = moduleMeta.save(this->heapWriter);
-        modulesCache.insert(std::pair<clang::Module*, MetaFileOffset>(topLevelModule, binaryMetaStruct._topLevelModule));
+        this->file->registerInTopLevelModulesTable(topLevelModuleName, binaryMetaStruct._topLevelModule);
     }
 
     // introduced in

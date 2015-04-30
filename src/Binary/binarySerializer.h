@@ -15,7 +15,6 @@ namespace binary {
         MetaFile* file;
         BinaryWriter heapWriter;
         BinaryTypeEncodingSerializer typeEncodingSerializer;
-        std::unordered_map<clang::Module*, MetaFileOffset> modulesCache;
 
         void serializeBase(::Meta::Meta* Meta, binary::Meta& binaryMetaStruct);
 
