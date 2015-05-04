@@ -1,7 +1,18 @@
 #pragma once
 
-#include <string>
 #include <vector>
+
+static void trim(std::string& str, const char *characters) {
+    // trim trailing spaces
+    size_t endpos = str.find_last_not_of(characters);
+    if(std::string::npos != endpos)
+        str = str.substr(0, endpos + 1);
+
+    // trim leading spaces
+    size_t startpos = str.find_first_not_of(characters);
+    if(std::string::npos != startpos)
+        str = str.substr(startpos);
+}
 
 namespace HeadersParser {
 
@@ -14,9 +25,16 @@ namespace HeadersParser {
                   _arch(arch),
                   _iPhoneOsVersionMin(iPhoneOsVersionMin),
                   _target(target),
-                  _std(std),
-                  _headerSearchPaths(headerSearchPaths),
-                  _frameworkSearchPaths(frameworkSearchPaths) {}
+                  _std(std) {
+            for(std::string path : headerSearchPaths) {
+                trim(path, "\"");
+                _headerSearchPaths.push_back(path);
+            }
+            for(std::string path : frameworkSearchPaths) {
+                trim(path, "\"");
+                _frameworkSearchPaths.push_back(path);
+            }
+        }
 
         std::string getSysRoot() {
             return this->_sysroot;
