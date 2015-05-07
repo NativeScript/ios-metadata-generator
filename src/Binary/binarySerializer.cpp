@@ -107,8 +107,10 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
     // first initializer index
     int16_t firstInitializerIndex = -1;
     for(std::vector<std::shared_ptr<::Meta::MethodMeta>>::iterator it =  meta->instanceMethods.begin(); it != meta->instanceMethods.end(); ++it) {
-        if(isInitMethod(*it))
-            firstInitializerIndex = (int16_t)std::distance(meta->instanceMethods.begin(), it);
+        if(isInitMethod(*it)) {
+            firstInitializerIndex = (int16_t) std::distance(meta->instanceMethods.begin(), it);
+            break;
+        }
     }
     binaryMetaStruct._initializersStartIndex = firstInitializerIndex;
 }
