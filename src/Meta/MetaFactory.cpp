@@ -179,8 +179,7 @@ std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumD
     std::vector<std::string> fieldNames;
     for (clang::EnumDecl::enumerator_iterator it = enumeration.enumerator_begin(); it != enumeration.enumerator_end() ; ++it)
         fieldNames.push_back((*it)->getNameAsString());
-    if(fieldNames.size() == 1)
-        fieldNames.push_back(enumeration.getNameAsString());
+    fieldNames.push_back(enumeration.getNameAsString());
     size_t fieldNamePrefixLength = Utils::getCommonWordPrefix(fieldNames).length();
 
     std::ostringstream jsCodeStream;
