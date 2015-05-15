@@ -173,12 +173,14 @@ std::shared_ptr<Meta::VarMeta> Meta::MetaFactory::createFromVar(clang::VarDecl& 
 
 std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumDecl& enumeration) {
     if(!enumeration.isThisDeclarationADefinition()) {
-        throw MetaCreationException(_delegate->getId(enumeration, false), "Froward declaration of enum.", false);
+        throw MetaCreationException(_delegate->getId(enumeration, false), "Forward declaration of enum.", false);
     }
 
     std::vector<std::string> fieldNames;
     for (clang::EnumDecl::enumerator_iterator it = enumeration.enumerator_begin(); it != enumeration.enumerator_end() ; ++it)
         fieldNames.push_back((*it)->getNameAsString());
+    if(fieldNames.size() == 1)
+        fieldNames.push_back(enumeration.getNameAsString());
     size_t fieldNamePrefixLength = Utils::getCommonWordPrefix(fieldNames).length();
 
     std::ostringstream jsCodeStream;
