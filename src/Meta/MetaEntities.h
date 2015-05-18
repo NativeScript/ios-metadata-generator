@@ -17,10 +17,16 @@ namespace Meta {
         int SubMinor;
     };
 
+    struct Availability {
+        bool isUnavailable;
+        Version introduced;
+        Version obsoleted;
+        Version deprecated;
+    };
+
     enum MetaFlags : uint8_t {
         // Common
         None                                  = 0,
-        IsIosAppExtensionAvailable            = 1 << 0,
         // Function
         FunctionIsVariadic                    = 1 << 1,
         FunctionOwnsReturnedCocoaObject       = 1 << 2,
@@ -51,9 +57,8 @@ namespace Meta {
         DeclId id;
 
         // Availability
-        Version introducedIn = UNKNOWN_VERSION;
-        Version obsoletedIn = UNKNOWN_VERSION;
-        Version deprecatedIn = UNKNOWN_VERSION;
+        Availability hostAvailability = Availability { .isUnavailable = false, .introduced = UNKNOWN_VERSION, .obsoleted = UNKNOWN_VERSION, .deprecated = UNKNOWN_VERSION };
+        Availability extensionAvailability = Availability { .isUnavailable = false, .introduced = UNKNOWN_VERSION, .obsoleted = UNKNOWN_VERSION, .deprecated = UNKNOWN_VERSION };
 
         clang::Decl *declaration;
 

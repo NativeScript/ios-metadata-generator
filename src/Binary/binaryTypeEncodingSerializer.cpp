@@ -1,18 +1,15 @@
 #include "binaryTypeEncodingSerializer.h"
 
 binary::MetaFileOffset binary::BinaryTypeEncodingSerializer::visit(std::vector<::Meta::Type>& types) {
-    binary::MetaFileOffset offset = 0;
-    if (types.size() > 0) {
-        vector<unique_ptr<binary::TypeEncoding>> binaryEncodings;
-        for (::Meta::Type &type : types) {
-            unique_ptr<binary::TypeEncoding> binaryEncoding = type.visit(*this);
-            binaryEncodings.push_back(std::move(binaryEncoding));
-        }
+    vector<unique_ptr<binary::TypeEncoding>> binaryEncodings;
+    for (::Meta::Type &type : types) {
+        unique_ptr<binary::TypeEncoding> binaryEncoding = type.visit(*this);
+        binaryEncodings.push_back(std::move(binaryEncoding));
+    }
 
-        offset = this->_heapWriter.push_arrayCount(types.size());
-        for (unique_ptr<binary::TypeEncoding>& binaryEncoding : binaryEncodings) {
-            binaryEncoding->save(this->_heapWriter);
-        }
+    binary::MetaFileOffset offset = this->_heapWriter.push_arrayCount(types.size());
+    for (unique_ptr<binary::TypeEncoding>& binaryEncoding : binaryEncodings) {
+        binaryEncoding->save(this->_heapWriter);
     }
     return offset;
 }

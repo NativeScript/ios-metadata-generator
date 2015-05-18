@@ -102,14 +102,22 @@ namespace llvm {
             static bool mustQuote(StringRef) { return false; }
         };
 
+        // Availability
+        template <>
+        struct MappingTraits<Meta::Availability> {
+            static void mapping(IO &io, Meta::Availability& availability) {
+                io.mapOptional("Unavailable", availability.isUnavailable, false);
+                io.mapOptional("IntroducedIn", availability.introduced, UNKNOWN_VERSION);
+                io.mapOptional("DeprecatedIn", availability.deprecated, UNKNOWN_VERSION);
+                io.mapOptional("ObsoletedIn", availability.obsoleted, UNKNOWN_VERSION);
+            }
+        };
+
         // MetaFlags
         template <>
         struct ScalarBitSetTraits<Meta::MetaFlags> {
 
             static void bitset(IO& io, Meta::MetaFlags& value) {
-                io.bitSetCase(value, "IsIosAppExtensionAvailable",    Meta::MetaFlags::IsIosAppExtensionAvailable);
-                //io.bitSetCase(value, "HasName",  Meta::MetaFlags::HasName);
-
                 io.bitSetCase(value, "FunctionIsVariadic", Meta::MetaFlags::FunctionIsVariadic);
                 io.bitSetCase(value, "FunctionOwnsReturnedCocoaObject", Meta::MetaFlags::FunctionOwnsReturnedCocoaObject);
 
@@ -305,7 +313,8 @@ namespace llvm {
         struct MappingTraits<BaseMeta> {
             static void mapping(IO &io, std::shared_ptr<Meta::Meta>& meta) {
                 io.mapRequired("Id", meta->id);
-                io.mapOptional("IntroducedIn", meta->introducedIn, UNKNOWN_VERSION);
+                io.mapRequired("HostAvailability", meta->hostAvailability);
+                io.mapRequired("ExtensionAvailability", meta->extensionAvailability);
                 io.mapRequired("Flags", meta->flags);
                 io.mapRequired("Type", meta->type);
             }

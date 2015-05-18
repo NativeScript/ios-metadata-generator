@@ -5,7 +5,8 @@ binary::MetaFileOffset binary::Meta::save(BinaryWriter& writer) {
     binary::MetaFileOffset offset = writer.push_pointer(this->_names);
     writer.push_pointer(this->_topLevelModule);
     writer.push_byte(this->_flags);
-    writer.push_byte(this->_introduced);
+    writer.push_byte(this->_introduced_in_host);
+    writer.push_byte(this->_introduced_in_extension);
     return offset;
 }
 

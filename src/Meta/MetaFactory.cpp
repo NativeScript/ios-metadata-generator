@@ -337,16 +337,26 @@ void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
 
         Maybe we can change availability format to some more clever alternative.
      */
-    if(iosAvailability) {
-        if(iosAvailability->getUnavailable()) {
-            throw MetaCreationException(_delegate->getId(decl, false), "The declaration is marked unvailable for ios platform (with availability attribute).", false);
-        }
-        meta.introducedIn = this->convertVersion(iosAvailability->getIntroduced());
-        meta.deprecatedIn = this->convertVersion(iosAvailability->getDeprecated());
-        meta.obsoletedIn = this->convertVersion(iosAvailability->getObsoleted());
+    if(iosAvailability && iosAvailability->getUnavailable() && iosExtensionsAvailability && iosExtensionsAvailability->getUnavailable()) {
+        throw MetaCreationException(_delegate->getId(decl, false), "The declaration is marked unvailable for ios platform and extensions (with availability attribute).", false);
     }
-    bool isIosExtensionsAvailable = iosExtensionsAvailability == nullptr || !iosExtensionsAvailability->getUnavailable();
-    meta.setFlags(MetaFlags::IsIosAppExtensionAvailable , isIosExtensionsAvailable);
+
+    if(iosAvailability) {
+        meta.hostAvailability = {
+                .isUnavailable = iosAvailability->getUnavailable(),
+                .introduced = this->convertVersion(iosAvailability->getIntroduced()),
+                .deprecated = this->convertVersion(iosAvailability->getDeprecated()),
+                .obsoleted = this->convertVersion(iosAvailability->getObsoleted())
+        };
+    }
+    if(iosExtensionsAvailability) {
+        meta.extensionAvailability = {
+                .isUnavailable = iosExtensionsAvailability->getUnavailable(),
+                .introduced = this->convertVersion(iosExtensionsAvailability->getIntroduced()),
+                .deprecated = this->convertVersion(iosExtensionsAvailability->getDeprecated()),
+                .obsoleted = this->convertVersion(iosExtensionsAvailability->getObsoleted())
+        };
+    }
 }
 
 void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& decl, BaseClassMeta& baseClass) {

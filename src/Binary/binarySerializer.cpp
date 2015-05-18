@@ -3,6 +3,7 @@
 #include "../Meta/Utils.h"
 
 uint8_t convertVersion(Meta::Version version) {
+
     uint8_t result = 0;
     if (version.Major != -1)
     {
@@ -51,8 +52,6 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
         flags = (uint8_t)(flags | BinaryFlags::HasName);
     }
     flags = (uint8_t)(flags | (meta->type & 7)); // add type; 7 = 111 -> get only the first 3 bits of the type
-    if(meta->getFlags(::Meta::MetaFlags::IsIosAppExtensionAvailable))
-        flags |= BinaryFlags::IsIosAppExtensionAvailable;
     binaryMetaStruct._flags = flags;
 
     // module
@@ -69,7 +68,8 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
     }
 
     // introduced in
-    binaryMetaStruct._introduced = convertVersion(meta->introducedIn);
+    binaryMetaStruct._introduced_in_host = meta->hostAvailability.isUnavailable ? 255 : convertVersion(meta->hostAvailability.introduced);
+    binaryMetaStruct._introduced_in_extension = meta->extensionAvailability.isUnavailable ? 255 : convertVersion(meta->extensionAvailability.introduced);
 }
 
 void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, binary::BaseClassMeta& binaryMetaStruct) {
@@ -84,7 +84,7 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
         this->serializeMethod(methodMeta.get(), binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
-    binaryMetaStruct._instanceMethods = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._instanceMethods = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // static methods
@@ -94,7 +94,7 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
         this->serializeMethod(methodMeta.get(), binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
-    binaryMetaStruct._staticMethods = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._staticMethods = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // properties
@@ -104,7 +104,7 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
         this->serializeProperty(propertyMeta.get(), binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
-    binaryMetaStruct._properties = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._properties = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // protocols
@@ -112,7 +112,7 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
     for (::Meta::DeclId & protocolName : meta->protocols) {
         offsets.push_back(this->heapWriter.push_string(protocolName.jsName));
     }
-    binaryMetaStruct._protocols = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._protocols = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // first initializer index
