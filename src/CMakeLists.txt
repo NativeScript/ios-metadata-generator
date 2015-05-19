@@ -21,6 +21,7 @@ set(GENERATOR_HEADERS
     Meta/TypeVisitor.h
     Meta/Utils.h
     RemoveUnsupportedSyntaxAction.h
+    TypeScript/DefinitionWriter.h
     Utils/fileStream.h
     Utils/memoryStream.h
     Utils/serializer.h
@@ -51,6 +52,7 @@ set(GENERATOR_SOURCES
     Binary/binaryTypeEncodingSerializer.cpp
     Binary/binaryWriter.cpp
     Binary/metaFile.cpp
+    TypeScript/DefinitionWriter.cpp
 )
 
 add_executable(objc-metadata-generator ${GENERATOR_HEADERS} ${GENERATOR_SOURCES})

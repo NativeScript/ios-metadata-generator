@@ -185,6 +185,7 @@ namespace yaml {
             io.enumCase(value, "Union", Meta::TypeType::TypeUnion);
             io.enumCase(value, "AnonymousStruct", Meta::TypeType::TypeAnonymousStruct);
             io.enumCase(value, "AnonymousUnion", Meta::TypeType::TypeAnonymousUnion);
+            io.enumCase(value, "Enum", Meta::TypeType::TypeEnum);
             io.enumCase(value, "VaList", Meta::TypeType::TypeVaList);
             io.enumCase(value, "Protocol", Meta::TypeType::TypeProtocol);
             io.enumCase(value, "Unknown", Meta::TypeType::TypeUnknown);
@@ -310,6 +311,12 @@ namespace yaml {
             case Meta::TypeType::TypeAnonymousUnion: {
                 Meta::AnonymousUnionTypeDetails& details = type.getDetailsAs<Meta::AnonymousUnionTypeDetails>();
                 io.mapRequired("Fields", details.fields);
+                break;
+            }
+            case Meta::TypeType::TypeEnum: {
+                Meta::EnumTypeDetails& details = type.getDetailsAs<Meta::EnumTypeDetails>();
+                io.mapRequired("UnderlyingType", details.underlyingType);
+                io.mapRequired("Name", details.name.jsName);
                 break;
             }
             default: {
