@@ -15,6 +15,7 @@ struct StructTypeDetails;
 struct UnionTypeDetails;
 struct AnonymousStructTypeDetails;
 struct AnonymousUnionTypeDetails;
+struct EnumTypeDetails;
 
 /*
      * \class TypeVisitor<T>
@@ -92,5 +93,7 @@ public:
     virtual T_RESULT visitAnonymousStruct(AnonymousStructTypeDetails& typeDetails) = 0;
 
     virtual T_RESULT visitAnonymousUnion(AnonymousUnionTypeDetails& typeDetails) = 0;
+
+    virtual T_RESULT visitEnum(EnumTypeDetails& typeDetails) = 0;
 };
 }

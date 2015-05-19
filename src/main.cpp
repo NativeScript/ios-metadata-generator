@@ -1,4 +1,7 @@
-#include "llvm/Support/CommandLine.h"
+#include <llvm/Support/CommandLine.h>
+#include <llvm/Support/CommandLine.h>
+#include <llvm/Support/FileSystem.h>
+#include <llvm/Support/Path.h>
 #include <clang/Tooling/Tooling.h>
 #include <clang/Frontend/CompilerInstance.h>
 #include "RemoveUnsupportedSyntaxAction.h"
@@ -8,8 +11,10 @@
 #include "Meta/Filters/HandleExceptionalMetasFilter.h"
 #include "Yaml/YamlSerializer.h"
 #include "Binary/binarySerializer.h"
+#include "TypeScript/DefinitionWriter.h"
 #include <ctime>
 #include <sstream>
+#include <fstream>
 
 // Command line parameters
 llvm::cl::opt<string> cla_isysroot("isysroot", llvm::cl::Required, llvm::cl::desc("Specify the SDK directory"), llvm::cl::value_desc("dir"));
@@ -24,6 +29,7 @@ llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::
 llvm::cl::opt<string> cla_outputIntermediateHeadersPath("output-intermediate-headers", llvm::cl::desc("Specify the output headers folder"), llvm::cl::value_desc("folder_path"));
 llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("dir"));
 llvm::cl::opt<string> cla_outputBinFile("output-bin", llvm::cl::desc("Specify the output binary metadata file"), llvm::cl::value_desc("file_path"));
+llvm::cl::opt<string> cla_outputDtsFolder("output-typescript", llvm::cl::desc("Specify the output .d.ts folder"), llvm::cl::value_desc("dir"));
 
 class MetaGenerationConsumer : public clang::ASTConsumer {
 public:
@@ -64,6 +70,27 @@ public:
             serializer.serializeContainer(metaContainer);
             std::string output = cla_outputBinFile.getValue();
             file.save(output);
+        }
+
+        // Generate TypeScript definitions
+        if (!cla_outputDtsFolder.empty()) {
+            llvm::sys::fs::create_directories(cla_outputDtsFolder);
+            for (auto& module : metaContainer.top_level_modules()) {
+                TypeScript::DefinitionWriter definitionWriter(&module, metaContainer);
+
+                llvm::SmallString<128> path;
+                llvm::sys::path::append(path, cla_outputDtsFolder, "objc!" + module.getFullName() + ".d.ts");
+
+                std::error_code error;
+                llvm::raw_fd_ostream file(path.str(), error, llvm::sys::fs::F_Text);
+                if (error) {
+                    std::cout << error.message();
+                    return;
+                }
+
+                file << definitionWriter.write();
+                file.close();
+            }
         }
     }
 

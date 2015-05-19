@@ -66,3 +66,8 @@ Type Meta::Type::AnonymousUnion(std::vector<RecordField> fields)
 {
     return Type(TypeType::TypeAnonymousUnion, new AnonymousUnionTypeDetails(fields));
 }
+
+Type Type::Enum(Type underlyingType, DeclId name)
+{
+    return Type(TypeType::TypeEnum, new EnumTypeDetails(underlyingType, name));
+}
