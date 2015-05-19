@@ -1,7 +1,9 @@
 #include "binarySerializer.h"
 #include "binarySerializerPrivate.h"
+#include "../Meta/Utils.h"
 
 uint8_t convertVersion(Meta::Version version) {
+
     uint8_t result = 0;
     if (version.Major != -1)
     {
@@ -22,7 +24,7 @@ bool comparePropertyMetas(std::shared_ptr<Meta::PropertyMeta>& meta1, std::share
     return meta1->id.jsName < meta2->id.jsName;
 }
 
-bool compareIdentifiers(Meta::Identifier& id1, Meta::Identifier& id2) {
+bool compareIdentifiers(Meta::DeclId & id1, Meta::DeclId & id2) {
     return id1.jsName < id2.jsName;
 }
 
@@ -50,15 +52,24 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
         flags = (uint8_t)(flags | BinaryFlags::HasName);
     }
     flags = (uint8_t)(flags | (meta->type & 7)); // add type; 7 = 111 -> get only the first 3 bits of the type
-    if(meta->getFlags(::Meta::MetaFlags::IsIosAppExtensionAvailable))
-        flags |= BinaryFlags::IsIosAppExtensionAvailable;
     binaryMetaStruct._flags = flags;
 
     // module
-    binaryMetaStruct._frameworkId = (uint16_t)this->moduleMap[meta->id.fullModule];
+    clang::Module* topLevelModule = meta->id.module->getTopLevelModule();
+    std::string topLevelModuleName = topLevelModule->getFullModuleName();
+    MetaFileOffset moduleOffset = this->file->getFromTopLevelModulesTable(topLevelModuleName);
+    if(moduleOffset != 0)
+        binaryMetaStruct._topLevelModule = moduleOffset;
+    else {
+        binary::ModuleMeta moduleMeta;
+        serializeModule(topLevelModule, moduleMeta);
+        binaryMetaStruct._topLevelModule = moduleMeta.save(this->heapWriter);
+        this->file->registerInTopLevelModulesTable(topLevelModuleName, binaryMetaStruct._topLevelModule);
+    }
 
     // introduced in
-    binaryMetaStruct._introduced = convertVersion(meta->introducedIn);
+    binaryMetaStruct._introduced_in_host = meta->hostAvailability.isUnavailable ? 255 : convertVersion(meta->hostAvailability.introduced);
+    binaryMetaStruct._introduced_in_extension = meta->extensionAvailability.isUnavailable ? 255 : convertVersion(meta->extensionAvailability.introduced);
 }
 
 void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, binary::BaseClassMeta& binaryMetaStruct) {
@@ -73,7 +84,7 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
         this->serializeMethod(methodMeta.get(), binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
-    binaryMetaStruct._instanceMethods = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._instanceMethods = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // static methods
@@ -83,7 +94,7 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
         this->serializeMethod(methodMeta.get(), binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
-    binaryMetaStruct._staticMethods = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._staticMethods = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // properties
@@ -93,15 +104,15 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
         this->serializeProperty(propertyMeta.get(), binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
-    binaryMetaStruct._properties = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._properties = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // protocols
     std::sort(meta->protocols.begin(), meta->protocols.end(), compareIdentifiers);
-    for (::Meta::Identifier& protocolName : meta->protocols) {
+    for (::Meta::DeclId & protocolName : meta->protocols) {
         offsets.push_back(this->heapWriter.push_string(protocolName.jsName));
     }
-    binaryMetaStruct._protocols = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._protocols = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // first initializer index
@@ -171,8 +182,8 @@ void binary::BinarySerializer::serializeRecord(::Meta::RecordMeta *meta, binary:
 void binary::BinarySerializer::serializeContainer(::Meta::MetaContainer& container) {
     this->start(&container);
     for (::Meta::MetaContainer::top_level_modules_iterator moduleIt = container.top_level_modules_begin(); moduleIt != container.top_level_modules_end(); ++moduleIt) {
-        ::Meta::Module& module = *moduleIt;
-        for(::Meta::Module::iterator metaIt = module.begin(); metaIt != module.end(); ++metaIt) {
+        ::Meta::ModuleMeta & module = *moduleIt;
+        for(::Meta::ModuleMeta::iterator metaIt = module.begin(); metaIt != module.end(); ++metaIt) {
             std::pair<std::string, std::shared_ptr<::Meta::Meta>> metaPair = *metaIt;
             metaPair.second->visit(this);
         }
@@ -180,12 +191,34 @@ void binary::BinarySerializer::serializeContainer(::Meta::MetaContainer& contain
     this->finish(&container);
 }
 
-void binary::BinarySerializer::start(::Meta::MetaContainer *container) {
-    // write all module names in heap and write down their offsets
-    for (auto moduleIter = container->all_modules_begin(); moduleIter != container->all_modules_end(); ++moduleIter) {
-        binary::MetaFileOffset offset = this->heapWriter.push_string(*moduleIter);
-        this->moduleMap.emplace(*moduleIter, offset);
+void binary::BinarySerializer::serializeModule(clang::Module* module, binary::ModuleMeta& binaryModule) {
+    uint8_t flags = 0;
+    if(module->isPartOfFramework())
+        flags |= 1;
+    if(module->IsSystem)
+        flags |= 2;
+    binaryModule._flags |= flags;
+    binaryModule._name = this->heapWriter.push_string(module->getFullModuleName());
+    std::vector<clang::Module::LinkLibrary> libraries;
+    ::Meta::Utils::getAllLinkLibraries(module, libraries);
+    std::vector<MetaFileOffset> librariesOffsets;
+    for(clang::Module::LinkLibrary lib : libraries) {
+        binary::LibraryMeta libMeta;
+        serializeLibrary(&lib, libMeta);
+        librariesOffsets.push_back(libMeta.save(this->heapWriter));
     }
+    binaryModule._libraries = this->heapWriter.push_binaryArray(librariesOffsets);
+}
+
+void binary::BinarySerializer::serializeLibrary(clang::Module::LinkLibrary* library, binary::LibraryMeta& binaryLib) {
+    uint8_t flags = 0;
+    if(library->IsFramework)
+        flags |= 1;
+    binaryLib._flags = flags;
+    binaryLib._name = this->heapWriter.push_string(library->Library);
+}
+
+void binary::BinarySerializer::start(::Meta::MetaContainer *container) {
 }
 
 void binary::BinarySerializer::finish(::Meta::MetaContainer *container) {

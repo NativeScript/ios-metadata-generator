@@ -15,7 +15,6 @@ namespace binary {
         MetaFile* file;
         BinaryWriter heapWriter;
         BinaryTypeEncodingSerializer typeEncodingSerializer;
-        std::map<std::string, MetaFileOffset> moduleMap;
 
         void serializeBase(::Meta::Meta* Meta, binary::Meta& binaryMetaStruct);
 
@@ -26,6 +25,10 @@ namespace binary {
         void serializeProperty(::Meta::PropertyMeta* Meta, binary::PropertyMeta& binaryMetaStruct);
 
         void serializeRecord(::Meta::RecordMeta* Meta, binary::RecordMeta& binaryMetaStruct);
+
+        void serializeModule(clang::Module* module, binary::ModuleMeta& binaryMetaStruct);
+
+        void serializeLibrary(clang::Module::LinkLibrary* library, binary::LibraryMeta& binaryLib);
 
     public:
         BinarySerializer(MetaFile* file) : heapWriter(file->heap_writer()), typeEncodingSerializer(heapWriter) {

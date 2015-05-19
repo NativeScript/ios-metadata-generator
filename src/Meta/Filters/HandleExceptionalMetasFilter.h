@@ -2,10 +2,10 @@
 #include "../MetaEntities.h"
 
 bool isSpecialCategory(std::shared_ptr<Meta::CategoryMeta>& category) {
-    Meta::Identifier& id = category->id;
-    Meta::Identifier& intId = category->extendedInterface;
-    return id.name == "UIResponderStandardEditActions" && id.jsName == "UIResponderStandardEditActions" && id.fullModule == "UIKit.UIResponder" &&
-           intId.name == "NSObject" && intId.jsName == "NSObject" && intId.fullModule == "ObjectiveC.NSObject";
+    Meta::DeclId& id = category->id;
+    Meta::DeclId& intId = category->extendedInterface;
+    return id.name == "UIResponderStandardEditActions" && id.jsName == "UIResponderStandardEditActions" && id.module->getFullModuleName() == "UIKit.UIResponder" &&
+           intId.name == "NSObject" && intId.jsName == "NSObject" && intId.module->getFullModuleName() == "ObjectiveC.NSObject";
 }
 
 namespace Meta {

@@ -17,10 +17,16 @@ namespace Meta {
         int SubMinor;
     };
 
+    struct Availability {
+        bool isUnavailable;
+        Version introduced;
+        Version obsoleted;
+        Version deprecated;
+    };
+
     enum MetaFlags : uint8_t {
         // Common
         None                                  = 0,
-        IsIosAppExtensionAvailable            = 1 << 0,
         // Function
         FunctionIsVariadic                    = 1 << 1,
         FunctionOwnsReturnedCocoaObject       = 1 << 2,
@@ -48,12 +54,11 @@ namespace Meta {
     public:
         MetaType type = MetaType::Undefined;
         MetaFlags flags = MetaFlags::None;
-        Identifier id;
+        DeclId id;
 
         // Availability
-        Version introducedIn = UNKNOWN_VERSION;
-        Version obsoletedIn = UNKNOWN_VERSION;
-        Version deprecatedIn = UNKNOWN_VERSION;
+        Availability hostAvailability = Availability { .isUnavailable = false, .introduced = UNKNOWN_VERSION, .obsoleted = UNKNOWN_VERSION, .deprecated = UNKNOWN_VERSION };
+        Availability extensionAvailability = Availability { .isUnavailable = false, .introduced = UNKNOWN_VERSION, .obsoleted = UNKNOWN_VERSION, .deprecated = UNKNOWN_VERSION };
 
         clang::Decl *declaration;
 
@@ -102,7 +107,7 @@ namespace Meta {
         std::vector<std::shared_ptr<MethodMeta>> instanceMethods;
         std::vector<std::shared_ptr<MethodMeta>> staticMethods;
         std::vector<std::shared_ptr<PropertyMeta>> properties;
-        std::vector<Identifier> protocols;
+        std::vector<DeclId> protocols;
     };
 
     class CategoryMeta : public BaseClassMeta {
@@ -111,7 +116,7 @@ namespace Meta {
             this->type = MetaType::Category;
         }
 
-        Identifier extendedInterface;
+        DeclId extendedInterface;
 
         virtual void visit(MetaVisitor* visitor) override;
     };
@@ -122,7 +127,7 @@ namespace Meta {
             this->type = MetaType::Interface;
         }
 
-        Identifier base;
+        DeclId base;
 
         virtual void visit(MetaVisitor* visitor) override;
     };
@@ -189,24 +194,19 @@ namespace Meta {
         virtual void visit(MetaVisitor* visitor) override;
     };
 
-    class Module {
+    class ModuleMeta {
     public:
         typedef std::map<std::string, std::shared_ptr<Meta>>::iterator iterator;
         typedef std::map<std::string, std::shared_ptr<Meta>>::const_iterator const_iterator;
         typedef std::map<std::string, std::shared_ptr<Meta>>::size_type size_type;
 
-        Module(std::string name)
-                : _name(name) {}
+        ModuleMeta(clang::Module *module)
+                : _module(module) {}
 
-        Module(std::string name, std::vector<std::shared_ptr<Meta>>& declarations)
-                : _name(name) {
-            for(std::vector<std::shared_ptr<Meta>>::iterator it = declarations.begin(); it != declarations.end(); ++it) {
+        ModuleMeta(clang::Module *module, std::vector<std::shared_ptr<Meta>>& declarations)
+                : _module(module) {
+            for(std::vector<std::shared_ptr<Meta>>::iterator it = declarations.begin(); it != declarations.end(); ++it)
                 this->add(*it);
-            }
-        }
-
-        bool isTopLevelModule() const {
-            return this->_name.find(".") == std::string::npos;
         }
 
         std::shared_ptr<Meta> getMeta(const std::string& jsName) {
@@ -229,46 +229,47 @@ namespace Meta {
             //    std::cerr << "The declaration with name '" << meta->jsName << "' already exists in module '" << _name << "'." <<  std::endl; // TODO: research why there are conflicts
         }
 
-        bool remove(std::string& jsName) {
-            return _declarations.erase(jsName) == 1;
-        }
+        ModuleMeta::iterator begin() { return _declarations.begin(); }
+        ModuleMeta::const_iterator begin() const { return _declarations.begin(); }
+        ModuleMeta::iterator end() { return _declarations.end(); }
+        ModuleMeta::const_iterator end() const { return _declarations.end(); }
 
-        Module::iterator begin() { return _declarations.begin(); }
-        Module::const_iterator begin() const { return _declarations.begin(); }
-        Module::iterator end() { return _declarations.end(); }
-        Module::const_iterator end() const { return _declarations.end(); }
-
-        std::string getName() const { return _name; }
-        Module::size_type size() const { return _declarations.size(); }
+        std::string getFullName() const { return _module->getFullModuleName(); }
+        clang::Module *getClangModule() const { return _module; }
+        ModuleMeta::size_type size() const { return _declarations.size(); }
 
     private:
-        std::string _name;
+        clang::Module* _module;
         std::map<std::string, std::shared_ptr<Meta>> _declarations;
     };
 
     class MetaContainer {
 
     public:
-        typedef std::vector<Module>::iterator top_level_modules_iterator;
-        typedef std::vector<Module>::const_iterator const_top_level_modules_iterator;
-
-        typedef std::set<std::string>::iterator all_modules_iterator;
-        typedef std::set<std::string>::const_iterator const_all_modules_iterator;
+        typedef std::vector<ModuleMeta>::iterator top_level_modules_iterator;
+        typedef std::vector<ModuleMeta>::const_iterator const_top_level_modules_iterator;
 
         typedef std::vector<std::shared_ptr<CategoryMeta>>::iterator categories_iterator;
         typedef std::vector<std::shared_ptr<CategoryMeta>>::const_iterator categories_const_iterator;
-        typedef std::vector<Module>::size_type size_type;
+        typedef std::vector<ModuleMeta>::size_type size_type;
 
         void add(std::shared_ptr<Meta> meta) {
-            _allModules.insert(meta->id.fullModule);
             if(meta->is(MetaType::Category)) {
                 std::shared_ptr<CategoryMeta> category = std::static_pointer_cast<CategoryMeta>(meta);
                 this->_categories.push_back(category);
                 this->_categoryIsMerged.push_back(false);
             }
             else {
-                std::string moduleName = meta->id.topLevelModule;
-                getTopLevelModule(moduleName, true)->add(meta);
+                std::string moduleName = meta->id.module->getTopLevelModule()->getFullModuleName();
+                ModuleMeta *module = getTopLevelModule(moduleName);
+                if(module == nullptr) {
+                    ModuleMeta newModule = ModuleMeta(meta->id.module->getTopLevelModule());
+                    newModule.add(meta);
+                    this->_topLevelModules.push_back(newModule);
+                }
+                else {
+                    module->add(meta);
+                }
             }
 
             if(meta->is(MetaType::Interface)) {
@@ -290,46 +291,38 @@ namespace Meta {
 
         size_type topLevelMetasCount() const {
             size_type size = 0;
-            for(std::vector<Module>::const_iterator it = _topLevelModules.begin(); it != _topLevelModules.end(); ++it)
+            for(std::vector<ModuleMeta>::const_iterator it = _topLevelModules.begin(); it != _topLevelModules.end(); ++it)
                 size += it->size();
             return size + _categories.size();
         }
 
         int topLevelModulesCount() { return _topLevelModules.size(); }
 
-        int allModulesCount() { return _allModules.size(); }
-
         int categoriesCount() { return _categories.size(); }
 
-        bool contains(const std::string& moduleName) {
-            return getModuleIndex(moduleName, false) != -1;
+        bool containsModule(const std::string& moduleName) {
+            return getModuleIndex(moduleName) != -1;
         }
 
-        bool contains(const std::string& moduleName, const std::string& jsName) {
+        bool containsMeta(const std::string& moduleName, const std::string& jsName) {
             return getMetaAs<Meta>(moduleName, jsName) != nullptr;
         }
 
         void clear() {
             _topLevelModules.clear();
-            _allModules.clear();
             _categories.clear();
             _interfaces.clear();
             _categoryIsMerged.clear();
         }
 
-        Module *getTopLevelModule(const std::string &moduleName, bool addIfNotExists = false) {
-            int index = getModuleIndex(moduleName, addIfNotExists);
-            if(index == -1)
-                return nullptr;
-            return &_topLevelModules[index];
+        ModuleMeta *getTopLevelModule(const std::string &moduleName) {
+            int index = getModuleIndex(moduleName);
+            return (index == -1 ) ? nullptr : &_topLevelModules[index];
         }
 
         std::shared_ptr<Meta> getMeta(const std::string& topLevelModule, const std::string& jsName) {
-            Module *theModule = getTopLevelModule(topLevelModule, false);
-            if(theModule != nullptr) {
-                return theModule->getMeta(jsName);
-            }
-            return nullptr;
+            ModuleMeta *theModule = getTopLevelModule(topLevelModule);
+            return (theModule == nullptr) ? nullptr : theModule->getMeta(jsName);
         }
 
         template<class T>
@@ -338,8 +331,8 @@ namespace Meta {
         }
 
         template<class T>
-        std::shared_ptr<T> getMetaAs(const Identifier& id) {
-            return getMetaAs<T>(id.topLevelModule, id.jsName);
+        std::shared_ptr<T> getMetaAs(const DeclId & id) {
+            return getMetaAs<T>(id.module->getTopLevelModule()->getFullModuleName(), id.jsName);
         }
 
         std::shared_ptr<InterfaceMeta> getInterface(std::string name) {
@@ -347,8 +340,8 @@ namespace Meta {
             return interface == _interfaces.end() ? nullptr : interface->second;
         }
 
-        Module *operator[](std::string module) {
-            return getTopLevelModule(module, false);
+        ModuleMeta *operator[](std::string module) {
+            return getTopLevelModule(module);
         }
 
         int mergeCategoriesInInterfaces() {
@@ -393,11 +386,6 @@ namespace Meta {
         top_level_modules_iterator top_level_modules_end() { return _topLevelModules.end(); }
         const_top_level_modules_iterator top_level_modules_end() const { return _topLevelModules.end(); }
 
-        all_modules_iterator all_modules_begin() { return _allModules.begin(); }
-        const_all_modules_iterator all_modules_begin() const { return _allModules.begin(); }
-        all_modules_iterator all_modules_end() { return _allModules.end(); }
-        const_all_modules_iterator all_modules_end() const { return _allModules.end(); }
-
         categories_iterator categories_begin() { return _categories.begin(); }
         categories_const_iterator categories_begin() const { return _categories.begin(); }
         categories_iterator categories_end() { return _categories.end(); }
@@ -407,20 +395,15 @@ namespace Meta {
         void filter(T filter) { filter.filter(*this); }
 
     private:
-        int getModuleIndex(const std::string& moduleName, bool addIfNotExists = false) {
+        int getModuleIndex(const std::string& moduleName) {
             for(int i = 0; i < _topLevelModules.size(); i++) {
-                if(_topLevelModules[i].getName() == moduleName)
+                if(_topLevelModules[i].getFullName() == moduleName)
                     return i;
-            }
-            if(addIfNotExists) {
-                _topLevelModules.push_back(Module(moduleName));
-                return (_topLevelModules.size() - 1);
             }
             return -1;
         }
 
-        std::vector<Module> _topLevelModules;
-        std::set<std::string> _allModules;
+        std::vector<ModuleMeta> _topLevelModules;
         std::unordered_map<std::string, std::shared_ptr<InterfaceMeta>> _interfaces;
         std::vector<std::shared_ptr<CategoryMeta>> _categories;
         std::vector<bool> _categoryIsMerged;

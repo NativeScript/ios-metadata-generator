@@ -3,9 +3,10 @@
 
 binary::MetaFileOffset binary::Meta::save(BinaryWriter& writer) {
     binary::MetaFileOffset offset = writer.push_pointer(this->_names);
+    writer.push_pointer(this->_topLevelModule);
     writer.push_byte(this->_flags);
-    writer.push_short(this->_frameworkId);
-    writer.push_byte(this->_introduced);
+    writer.push_byte(this->_introduced_in_host);
+    writer.push_byte(this->_introduced_in_extension);
     return offset;
 }
 
@@ -64,6 +65,19 @@ binary::MetaFileOffset binary::BaseClassMeta::save(BinaryWriter& writer) {
 binary::MetaFileOffset binary::InterfaceMeta::save(BinaryWriter& writer) {
     binary::MetaFileOffset offset = BaseClassMeta::save(writer);
     writer.push_pointer(this->_baseName);
+    return offset;
+}
+
+binary::MetaFileOffset binary::ModuleMeta::save(BinaryWriter &writer) {
+    binary::MetaFileOffset offset = writer.push_byte(this->_flags);
+    writer.push_pointer(this->_name);
+    writer.push_pointer(this->_libraries);
+    return offset;
+}
+
+binary::MetaFileOffset binary::LibraryMeta::save(BinaryWriter &writer) {
+    binary::MetaFileOffset offset = writer.push_byte(this->_flags);
+    writer.push_pointer(this->_name);
     return offset;
 }
 

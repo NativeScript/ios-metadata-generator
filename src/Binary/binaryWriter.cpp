@@ -32,12 +32,12 @@ binary::MetaFileOffset binary::BinaryWriter::push_string(const std::string &str,
     return offset;
 }
 
-binary::MetaFileOffset binary::BinaryWriter::push_pointer(binary::MetaFileOffset offset) {
-    return this->push_number(offset, this->_pointer_size);
+binary::MetaFileOffset binary::BinaryWriter::push_pointer(MetaFileOffset offset) {
+    return this->push_number(offset, sizeof(MetaFileOffset));
 }
 
 binary::MetaFileOffset binary::BinaryWriter::push_arrayCount(MetaArrayCount count) {
-    return this->push_number(count, this->_array_count_size);
+    return this->push_number(count, sizeof(MetaArrayCount));
 }
 
 binary::MetaFileOffset binary::BinaryWriter::push_binaryArray(std::vector<binary::MetaFileOffset> &binaryArray) {

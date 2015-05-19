@@ -149,7 +149,7 @@ Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type) {
 }
 
 Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type) {
-    vector<Identifier> protocols;
+    vector<DeclId> protocols;
     for (clang::ObjCObjectPointerType::qual_iterator it = type->qual_begin(); it != type->qual_end(); ++it) {
         clang::ObjCProtocolDecl *protocolDef = (*it)->getDefinition();
         if(protocolDef) {
@@ -198,7 +198,7 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
             if (bridgeMutableAttrs.size() > 0) {
                 clang::ObjCBridgeMutableAttr *bridgeAttr = bridgeMutableAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                Identifier id = Identifier(name, "", "", ""); // The module name should be resolved after parsing all declarations
+                DeclId id = DeclId(name, "", "", nullptr); // The module name should be resolved after parsing all declarations
                 Type interface = Type::BridgedInterface(id);
                 _delegate->registerUnresolvedBridgedType(interface);
                 return interface;
@@ -208,7 +208,7 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type) {
             if (bridgeAttrs.size() > 0) {
                 clang::ObjCBridgeAttr *bridgeAttr = bridgeAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                Identifier id = Identifier(name, "", "", ""); // The module name should be resolved after parsing all declarations
+                DeclId id = DeclId(name, "", "", nullptr); // The module name should be resolved after parsing all declarations
                 Type interface = Type::BridgedInterface(id);
                 _delegate->registerUnresolvedBridgedType(interface);
                 return interface;
@@ -248,7 +248,7 @@ Type TypeFactory::createFromRecordType(const clang::RecordType* type) {
         return Type::AnonymousStruct(fields);
     }
 
-    Identifier recordId = this->_delegate->getDeclId(_delegate->validate(*recordDef), true);
+    DeclId recordId = this->_delegate->getDeclId(_delegate->validate(*recordDef), true);
     return Type::Struct(recordId);
 }
 

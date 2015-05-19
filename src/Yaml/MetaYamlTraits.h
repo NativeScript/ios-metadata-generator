@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../Meta/MetaEntities.h"
+#include "../Meta/Utils.h"
 
 namespace llvm {
     namespace yaml {
@@ -17,7 +18,8 @@ namespace llvm {
 #include <llvm/Support/YAMLTraits.h>
 
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::string)
-LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::Identifier)
+LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::DeclId)
+LLVM_YAML_IS_SEQUENCE_VECTOR(clang::Module::LinkLibrary)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::RecordField)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::Meta>)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::MethodMeta>)
@@ -28,39 +30,36 @@ LLVM_YAML_STRONG_TYPEDEF(std::shared_ptr<Meta::Meta>, BaseMeta)
 namespace llvm {
     namespace yaml {
 
-        // Module
+        // ModuleMeta
         template <>
-        struct MappingTraits<Meta::Module> {
+        struct MappingTraits<Meta::ModuleMeta> {
 
             class NormalizedModule {
             public:
                 NormalizedModule(IO& io)
-                        : name(), declarations() { }
+                        : clangModule(), declarations() { }
 
-                NormalizedModule(IO& io, Meta::Module& module)
-                        : name(module.getName()) {
+                NormalizedModule(IO& io, Meta::ModuleMeta& module)
+                        : clangModule(module.getClangModule()) {
                     for(auto &pair : module) {
                         declarations.push_back(pair.second);
                     }
                 }
 
-                Meta::Module denormalize(IO &io) {
-                    Meta::Module module(name);
-                    for(auto &meta : declarations) {
-                        module.add(meta);
-                    }
+                Meta::ModuleMeta denormalize(IO &io) {
+                    Meta::ModuleMeta module(clangModule, declarations);
                     return module;
                 }
 
-                std::string name;
+                clang::Module *clangModule;
                 std::vector<std::shared_ptr<Meta::Meta>> declarations;
             };
 
-            static void mapping(IO &io, Meta::Module &module) {
-                MappingNormalization<NormalizedModule, Meta::Module> keys(io, module);
+            static void mapping(IO &io, Meta::ModuleMeta &module) {
+                MappingNormalization<NormalizedModule, Meta::ModuleMeta> keys(io, module);
 
-                io.mapRequired("name", keys->name);
-                io.mapRequired("items", keys->declarations);
+                io.mapRequired("Module", *keys->clangModule);
+                io.mapRequired("Items", keys->declarations);
             }
         };
 
@@ -103,14 +102,22 @@ namespace llvm {
             static bool mustQuote(StringRef) { return false; }
         };
 
+        // Availability
+        template <>
+        struct MappingTraits<Meta::Availability> {
+            static void mapping(IO &io, Meta::Availability& availability) {
+                io.mapOptional("Unavailable", availability.isUnavailable, false);
+                io.mapOptional("IntroducedIn", availability.introduced, UNKNOWN_VERSION);
+                io.mapOptional("DeprecatedIn", availability.deprecated, UNKNOWN_VERSION);
+                io.mapOptional("ObsoletedIn", availability.obsoleted, UNKNOWN_VERSION);
+            }
+        };
+
         // MetaFlags
         template <>
         struct ScalarBitSetTraits<Meta::MetaFlags> {
 
             static void bitset(IO& io, Meta::MetaFlags& value) {
-                io.bitSetCase(value, "IsIosAppExtensionAvailable",    Meta::MetaFlags::IsIosAppExtensionAvailable);
-                //io.bitSetCase(value, "HasName",  Meta::MetaFlags::HasName);
-
                 io.bitSetCase(value, "FunctionIsVariadic", Meta::MetaFlags::FunctionIsVariadic);
                 io.bitSetCase(value, "FunctionOwnsReturnedCocoaObject", Meta::MetaFlags::FunctionOwnsReturnedCocoaObject);
 
@@ -179,15 +186,45 @@ namespace llvm {
             }
         };
 
-        // Identifier
+        // clang::Module::LinkLibrary
         template <>
-        struct MappingTraits<Meta::Identifier> {
+        struct MappingTraits<clang::Module::LinkLibrary> {
 
-            static void mapping(IO &io, Meta::Identifier& id) {
-                io.mapOptional("Name", id.name, std::string(""));
-                io.mapOptional("JsName", id.jsName, std::string(""));
-                io.mapOptional("Module", id.fullModule, std::string(""));
-                io.mapOptional("Filename", id.fileName, std::string(""));
+            static void mapping(IO &io, clang::Module::LinkLibrary& lib) {
+                io.mapRequired("Library", lib.Library);
+                io.mapRequired("IsFramework", lib.IsFramework);
+            }
+        };
+
+        // clang::Module
+        template <>
+        struct MappingTraits<clang::Module> {
+
+            static void mapping(IO &io, clang::Module& module) {
+                std::string fullModuleName = module.getFullModuleName();
+                bool isPartOfFramework = module.isPartOfFramework();
+                bool isSystem = module.IsSystem;
+                std::vector<clang::Module::LinkLibrary> libs;
+
+                Meta::Utils::getAllLinkLibraries(&module, libs);
+
+                io.mapRequired("FullName", fullModuleName);
+                io.mapRequired("IsPartOfFramework", isPartOfFramework);
+                io.mapRequired("IsSystemModule", isSystem);
+                io.mapRequired("Libraries", libs);
+            }
+        };
+
+        // DeclId
+        template <>
+        struct MappingTraits<Meta::DeclId> {
+
+            static void mapping(IO &io, Meta::DeclId & id) {
+                io.mapRequired("Name", id.name);
+                io.mapRequired("JsName", id.jsName);
+                io.mapRequired("Filename", id.fileName);
+                if(id.module != nullptr)
+                    io.mapRequired("Module", *id.module);
             }
         };
 
@@ -244,13 +281,15 @@ namespace llvm {
                     }
                     case Meta::TypeType::TypeStruct : {
                         Meta::StructTypeDetails &details = type.getDetailsAs<Meta::StructTypeDetails>();
-                        io.mapRequired("Module", details.id.fullModule);
+                        std::string fullModuleName = details.id.module->getFullModuleName();
+                        io.mapRequired("Module", fullModuleName);
                         io.mapRequired("Name", details.id.jsName);
                         break;
                     }
                     case Meta::TypeType::TypeUnion : {
                         Meta::UnionTypeDetails &details = type.getDetailsAs<Meta::UnionTypeDetails>();
-                        io.mapRequired("Module", details.id.fullModule);
+                        std::string fullModuleName = details.id.module->getFullModuleName();
+                        io.mapRequired("Module", fullModuleName);
                         io.mapRequired("Name", details.id.jsName);
                         break;
                     }
@@ -274,7 +313,8 @@ namespace llvm {
         struct MappingTraits<BaseMeta> {
             static void mapping(IO &io, std::shared_ptr<Meta::Meta>& meta) {
                 io.mapRequired("Id", meta->id);
-                io.mapOptional("IntroducedIn", meta->introducedIn, UNKNOWN_VERSION);
+                io.mapRequired("HostAvailability", meta->hostAvailability);
+                io.mapRequired("ExtensionAvailability", meta->extensionAvailability);
                 io.mapRequired("Flags", meta->flags);
                 io.mapRequired("Type", meta->type);
             }
