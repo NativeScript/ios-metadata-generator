@@ -79,17 +79,17 @@ namespace Meta {
         static Type Instancetype() { return Type(TypeType::TypeInstancetype); }
         static Type ProtocolType() { return Type(TypeType::TypeProtocol); }
 
-        static Type ClassType(std::vector<DeclId> protocols);
-        static Type Id(std::vector<DeclId> protocols);
+        static Type ClassType(std::vector<Identifier> protocols);
+        static Type Id(std::vector<Identifier> protocols);
         static Type ConstantArray(Type innerType, int size);
         static Type IncompleteArray(Type innerType);
-        static Type Interface(DeclId name, std::vector<DeclId> protocols);
-        static Type BridgedInterface(DeclId id);
+        static Type Interface(Identifier name, std::vector<Identifier> protocols);
+        static Type BridgedInterface(Identifier id);
         static Type Pointer(Type innerType);
         static Type Block(std::vector<Type>& signature);
         static Type FunctionPointer(std::vector<Type>& signature);
-        static Type Struct(DeclId id);
-        static Type Union(DeclId id);
+        static Type Struct(Identifier id);
+        static Type Union(Identifier id);
         static Type AnonymousStruct(std::vector<RecordField> fields);
         static Type AnonymousUnion(std::vector<RecordField> fields);
 
@@ -193,35 +193,35 @@ namespace Meta {
     struct TypeDetails {};
 
     struct IdTypeDetails : TypeDetails {
-        IdTypeDetails(std::vector<DeclId>& protocols)
+        IdTypeDetails(std::vector<Identifier>& protocols)
                 : protocols(protocols) {}
 
-        std::vector<DeclId> protocols;
+        std::vector<Identifier> protocols;
     };
 
     struct ClassTypeDetails : TypeDetails {
-        ClassTypeDetails(std::vector<DeclId>& protocols)
+        ClassTypeDetails(std::vector<Identifier>& protocols)
                 : protocols(protocols) {}
 
-        std::vector<DeclId> protocols;
+        std::vector<Identifier> protocols;
     };
 
     struct InterfaceTypeDetails : TypeDetails {
-        InterfaceTypeDetails(DeclId id, std::vector<DeclId>& protocols)
+        InterfaceTypeDetails(Identifier id, std::vector<Identifier>& protocols)
                 : id(id),
                   protocols(protocols) {}
 
-        DeclId id;
-        std::vector<DeclId> protocols;
+        Identifier id;
+        std::vector<Identifier> protocols;
     };
 
     struct BridgedInterfaceTypeDetails : TypeDetails {
-        BridgedInterfaceTypeDetails(DeclId id)
+        BridgedInterfaceTypeDetails(Identifier id)
                 : id(id) {}
 
-        DeclId id;
+        Identifier id;
 
-        bool isResolved() { return id.module != nullptr; }
+        bool isResolved() { return id.fullModule != ""; }
     };
 
     struct IncompleteArrayTypeDetails : TypeDetails {
@@ -262,17 +262,17 @@ namespace Meta {
     };
 
     struct StructTypeDetails : TypeDetails {
-        StructTypeDetails(DeclId id)
+        StructTypeDetails(Identifier id)
                 : id(id) {}
 
-        DeclId id;
+        Identifier id;
     };
 
     struct UnionTypeDetails : TypeDetails {
-        UnionTypeDetails(DeclId id)
+        UnionTypeDetails(Identifier id)
                 : id(id) {}
 
-        DeclId id;
+        Identifier id;
     };
 
     struct AnonymousStructTypeDetails : TypeDetails {

@@ -13,7 +13,7 @@ namespace Meta {
     class MetaFactoryDelegate
     {
     public:
-        virtual DeclId getId(const clang::Decl& decl, bool throwIfEmpty) = 0;
+        virtual Identifier getId(const clang::Decl& decl, bool throwIfEmpty) = 0;
 
         virtual Type getType(const clang::Type* type) = 0;
 
@@ -62,19 +62,19 @@ namespace Meta {
 
     class MetaCreationException : public std::exception {
     public:
-        MetaCreationException(DeclId id, std::string message, bool isError)
+        MetaCreationException(Identifier id, std::string message, bool isError)
                 : _id(id),
                   _message(message),
                   _isError(isError) {}
 
         virtual const char* what() const throw() { return this->whatAsString().c_str(); }
         std::string whatAsString() const { return _message + " Decl: " + _id.jsName + "(" + _id.fileName + ") -> " + (this->isError() ? std::string("error") : std::string("notice")); }
-        DeclId getIdentifier() const { return this->_id; }
+        Identifier getIdentifier() const { return this->_id; }
         std::string getMessage() const { return this-> _message; }
         bool isError() const { return this->_isError; }
 
     private:
-        DeclId _id;
+        Identifier _id;
         std::string _message;
         bool _isError;
     };

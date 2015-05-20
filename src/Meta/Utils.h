@@ -1,7 +1,6 @@
 #pragma once
 
 #include <clang/AST/Decl.h>
-#include <clang/Basic/Module.h>
 
 namespace Meta {
     class Type;
@@ -25,7 +24,5 @@ namespace Meta {
         static bool areTypesEqual(const std::vector<Type>& types1, const std::vector<Type>& types2);
 
         static std::string getCommonWordPrefix(const std::vector<std::string>& strings);
-
-        static void getAllLinkLibraries(clang::Module *module, std::vector<clang::Module::LinkLibrary>& result);
     };
 }

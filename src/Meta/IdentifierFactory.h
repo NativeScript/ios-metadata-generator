@@ -11,37 +11,33 @@
 
 
 namespace Meta {
-    struct LinkLib {
-        LinkLib() : isFramework(false) { }
-        LinkLib(const std::string &library, bool isFramework)
-                : library(library), isFramework(isFramework) { }
-
-        std::string library;
-        bool isFramework;
-    };
-
-    struct DeclId {
+    struct Identifier {
     public:
-        DeclId() : DeclId("", "", "", nullptr) {}
+        Identifier()
+                : Identifier("", "", "", "") {}
 
-        DeclId(std::string name, std::string jsName, std::string fileName, clang::Module* module)
+        Identifier(std::string name, std::string jsName, std::string fullModule, std::string fileName)
                 : name(name),
                   jsName(jsName),
-                  fileName(fileName),
-                  module(module) { }
+                  fullModule(fullModule),
+                  fileName(fileName) {
+            std::size_t dotIndex = fullModule.find(".");
+            this->topLevelModule = (dotIndex == std::string::npos) ? fullModule : fullModule.substr(0, dotIndex);
+        }
 
-        std::string moduleNameOrEmpty() const { return this->module == nullptr ? "" : this->module->getFullModuleName(); }
+        bool operator==(const Identifier& other) const {
+            return (name == other.name && jsName == other.jsName && fullModule == other.fullModule && topLevelModule == other.topLevelModule && fileName == other.fileName);
+        }
 
-        std::string topLevelModuleNameOrEmpty() const { return this->module == nullptr ? "" : this->module->getTopLevelModule()->getFullModuleName(); }
-
-        bool operator==(const DeclId & other) const { return (name == other.name && jsName == other.jsName && fileName == other.fileName && module == other.module); }
-
-        bool operator!=(const DeclId & other) const { return !(*this == other); }
+        bool operator!=(const Identifier& other) const {
+            return !(*this == other);
+        }
 
         std::string name;
         std::string jsName;
+        std::string fullModule;
+        std::string topLevelModule;
         std::string fileName;
-        clang::Module* module;
     };
 
     class IdentifierFactory {
@@ -51,9 +47,9 @@ namespace Meta {
         IdentifierFactory(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch, std::map<clang::Decl::Kind, std::vector<std::string>>& namesToRecalculate)
             : _sourceManager(sourceManager),
               _headerSearch(headerSearch),
-              _namesToRecalculate(namesToRecalculate) { }
+              _namesToRecalculate(namesToRecalculate) {}
 
-        DeclId getIdentifier(const clang::Decl& decl, bool throwIfEmpty);
+        Identifier getIdentifier(const clang::Decl& decl, bool throwIfEmpty);
 
     private:
         std::string calculateOriginalName(const clang::Decl& decl);
@@ -65,24 +61,23 @@ namespace Meta {
         clang::SourceManager& _sourceManager;
         clang::HeaderSearch& _headerSearch;
         std::map<clang::Decl::Kind, std::vector<std::string>> _namesToRecalculate;
-
-        // cache
-        std::unordered_map<const clang::Decl*, Meta::DeclId> _declCache;
+        std::unordered_map<const clang::Decl*, Meta::Identifier> _cache;
     };
 
-    class IdentifierCreationException : public std::exception {
+    class IdentifierCreationException : public std::exception
+    {
     public:
-        IdentifierCreationException(DeclId id, std::string message)
+        IdentifierCreationException(Identifier id, std::string message)
                 : _id(id),
                   _message(message) {}
 
         virtual const char* what() const throw() { return this->whatAsString().c_str(); }
-        std::string whatAsString() const { return _message + " Decl: \"" + _id.jsName + "\"" + " Module: " + _id.moduleNameOrEmpty() + " File: " +  _id.fileName; }
-        DeclId getId() const { return this->_id; }
+        std::string whatAsString() const { return _message + " Decl: \"" + _id.jsName + "\"" + " Module: " + _id.fullModule + " File: " +  _id.fileName; }
+        Identifier getId() const { return this->_id; }
         std::string getMessage() const { return this-> _message; }
 
     private:
-        DeclId _id;
+        Identifier _id;
         std::string _message;
     };
 }

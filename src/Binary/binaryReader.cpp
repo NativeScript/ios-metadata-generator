@@ -12,11 +12,11 @@ const std::string binary::BinaryReader::read_string() {
 }
 
 binary::MetaFileOffset binary::BinaryReader::read_pointer() {
-    return this->read_number<binary::MetaFileOffset>(sizeof(MetaFileOffset));
+    return this->read_number<binary::MetaFileOffset>(this->_pointer_size);
 }
 
 binary::MetaArrayCount binary::BinaryReader::read_arrayCount() {
-    return this->read_number<binary::MetaArrayCount>(sizeof(MetaArrayCount));
+    return this->read_number<binary::MetaArrayCount>(this->_array_count_size);
 }
 
 std::vector<binary::MetaFileOffset> binary::BinaryReader::read_binaryArray() {

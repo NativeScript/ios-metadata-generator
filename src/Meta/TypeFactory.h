@@ -7,7 +7,7 @@
 namespace Meta {
     class TypeFactoryDelegate {
     public:
-        virtual DeclId getDeclId(const clang::Decl& decl, bool throwIfEmpty) = 0;
+        virtual Identifier getDeclId(const clang::Decl& decl, bool throwIfEmpty) = 0;
 
         virtual void registerUnresolvedBridgedType(Type& type) = 0;
 

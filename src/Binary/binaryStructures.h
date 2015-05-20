@@ -53,6 +53,7 @@ namespace binary {
     enum BinaryFlags : uint8_t {
         // Common
         HasName = 1 << 7,
+        IsIosAppExtensionAvailable = 1 << 6,
         // Function
         FunctionIsVariadic = 1 << 5,
         FunctionOwnsReturnedCocoaObject = 1 << 4,
@@ -69,10 +70,9 @@ namespace binary {
     struct Meta {
     public:
         MetaFileOffset _names = 0;
-        MetaFileOffset _topLevelModule = 0;
         uint8_t _flags = 0;
-        uint8_t _introduced_in_host = 0;
-        uint8_t _introduced_in_extension = 0;
+        uint16_t _frameworkId = 0;
+        uint8_t _introduced = 0;
 
         virtual MetaFileOffset save(BinaryWriter& writer);
     };
@@ -149,24 +149,6 @@ namespace binary {
 
         virtual MetaFileOffset save(BinaryWriter& writer) override;
     };
-
-    struct ModuleMeta {
-    public:
-        int8_t _flags;
-        MetaFileOffset _name;
-        MetaFileOffset _libraries;
-
-        virtual MetaFileOffset save(BinaryWriter& writer);
-    };
-
-    struct LibraryMeta {
-    public:
-        int8_t _flags;
-        MetaFileOffset _name;
-
-        virtual MetaFileOffset save(BinaryWriter& writer);
-    };
-
 #pragma pack(pop)
 
     // type encoding
