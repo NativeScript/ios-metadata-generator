@@ -26,6 +26,10 @@ namespace binary {
 
         void serializeRecord(::Meta::RecordMeta* Meta, binary::RecordMeta& binaryMetaStruct);
 
+        void serializeModule(clang::Module* module, binary::ModuleMeta& binaryMetaStruct);
+
+        void serializeLibrary(clang::Module::LinkLibrary* library, binary::LibraryMeta& binaryLib);
+
     public:
         BinarySerializer(MetaFile* file) : heapWriter(file->heap_writer()), typeEncodingSerializer(heapWriter) {
             this->file = file;

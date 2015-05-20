@@ -70,7 +70,7 @@ namespace binary {
     struct Meta {
     public:
         MetaFileOffset _names = 0;
-        MetaFileOffset _fullModuleName = 0;
+        MetaFileOffset _topLevelModule = 0;
         uint8_t _flags = 0;
         uint8_t _introduced = 0;
 
@@ -149,6 +149,24 @@ namespace binary {
 
         virtual MetaFileOffset save(BinaryWriter& writer) override;
     };
+
+    struct ModuleMeta {
+    public:
+        int8_t _flags;
+        MetaFileOffset _name;
+        MetaFileOffset _libraries;
+
+        virtual MetaFileOffset save(BinaryWriter& writer);
+    };
+
+    struct LibraryMeta {
+    public:
+        int8_t _flags;
+        MetaFileOffset _name;
+
+        virtual MetaFileOffset save(BinaryWriter& writer);
+    };
+
 #pragma pack(pop)
 
     // type encoding
