@@ -2,11 +2,11 @@
 
 using namespace Meta;
 
-Type Type::ClassType(std::vector<DeclId> protocols) {
+Type Type::ClassType(std::vector<Identifier> protocols) {
     return Type(TypeType::TypeClass, new ClassTypeDetails(protocols));
 }
 
-Type Type::Id(std::vector<DeclId> protocols) {
+Type Type::Id(std::vector<Identifier> protocols) {
     return Type(TypeType::TypeId, new IdTypeDetails(protocols));
 }
 
@@ -18,11 +18,11 @@ Type Meta::Type::IncompleteArray(Type innerType) {
     return Type(TypeType::TypeIncompleteArray, new IncompleteArrayTypeDetails(innerType));
 }
 
-Type Meta::Type::Interface(DeclId id, std::vector<DeclId> protocols) {
+Type Meta::Type::Interface(Identifier id, std::vector<Identifier> protocols) {
     return Type(TypeType::TypeInterface, new InterfaceTypeDetails(id, protocols));
 }
 
-Type Meta::Type::BridgedInterface(DeclId id) {
+Type Meta::Type::BridgedInterface(Identifier id) {
     return Type(TypeType::TypeBridgedInterface, new BridgedInterfaceTypeDetails(id));
 }
 
@@ -38,11 +38,11 @@ Type Meta::Type::FunctionPointer(std::vector<Type>& signature) {
     return Type(TypeType::TypeFunctionPointer, new FunctionPointerTypeDetails(signature));
 }
 
-Type Meta::Type::Struct(DeclId id) {
+Type Meta::Type::Struct(Identifier id) {
     return Type(TypeType::TypeStruct, new StructTypeDetails(id));
 }
 
-Type Meta::Type::Union(DeclId id) {
+Type Meta::Type::Union(Identifier id) {
     return Type(TypeType::TypeUnion, new UnionTypeDetails(id));
 }
 

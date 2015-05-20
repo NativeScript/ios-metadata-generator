@@ -6,7 +6,7 @@
 
 using namespace std;
 
-bool protocolsComparerByJsName(Meta::DeclId & protocol1, Meta::DeclId & protocol2) {
+bool protocolsComparerByJsName(Meta::Identifier& protocol1, Meta::Identifier& protocol2) {
     string name1 = protocol1.jsName;
     string name2 = protocol2.jsName;
     std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower);
@@ -222,7 +222,7 @@ shared_ptr<Meta::InterfaceMeta> Meta::MetaFactory::createFromInterface(clang::Ob
 
     // set base interface
     clang::ObjCInterfaceDecl *super = interface.getSuperClass();
-    interfaceMeta->base = (super == nullptr) ? DeclId() : _delegate->getId(ensureCanBeCreated(*super->getDefinition()), true);
+    interfaceMeta->base = (super == nullptr) ? Identifier() : _delegate->getId(ensureCanBeCreated(*super->getDefinition()), true);
 
     return interfaceMeta;
 }
@@ -337,26 +337,16 @@ void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta) {
 
         Maybe we can change availability format to some more clever alternative.
      */
-    if(iosAvailability && iosAvailability->getUnavailable() && iosExtensionsAvailability && iosExtensionsAvailability->getUnavailable()) {
-        throw MetaCreationException(_delegate->getId(decl, false), "The declaration is marked unvailable for ios platform and extensions (with availability attribute).", false);
-    }
-
     if(iosAvailability) {
-        meta.hostAvailability = {
-                .isUnavailable = iosAvailability->getUnavailable(),
-                .introduced = this->convertVersion(iosAvailability->getIntroduced()),
-                .deprecated = this->convertVersion(iosAvailability->getDeprecated()),
-                .obsoleted = this->convertVersion(iosAvailability->getObsoleted())
-        };
+        if(iosAvailability->getUnavailable()) {
+            throw MetaCreationException(_delegate->getId(decl, false), "The declaration is marked unvailable for ios platform (with availability attribute).", false);
+        }
+        meta.introducedIn = this->convertVersion(iosAvailability->getIntroduced());
+        meta.deprecatedIn = this->convertVersion(iosAvailability->getDeprecated());
+        meta.obsoletedIn = this->convertVersion(iosAvailability->getObsoleted());
     }
-    if(iosExtensionsAvailability) {
-        meta.extensionAvailability = {
-                .isUnavailable = iosExtensionsAvailability->getUnavailable(),
-                .introduced = this->convertVersion(iosExtensionsAvailability->getIntroduced()),
-                .deprecated = this->convertVersion(iosExtensionsAvailability->getDeprecated()),
-                .obsoleted = this->convertVersion(iosExtensionsAvailability->getObsoleted())
-        };
-    }
+    bool isIosExtensionsAvailable = iosExtensionsAvailability == nullptr || !iosExtensionsAvailability->getUnavailable();
+    meta.setFlags(MetaFlags::IsIosAppExtensionAvailable , isIosExtensionsAvailable);
 }
 
 void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& decl, BaseClassMeta& baseClass) {

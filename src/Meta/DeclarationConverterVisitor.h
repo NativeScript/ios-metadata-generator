@@ -23,7 +23,7 @@ namespace Meta {
                 Type type = *it;
                 std::shared_ptr<InterfaceMeta> interface = _result.getInterface(type.getDetailsAs<BridgedInterfaceTypeDetails>().id.name);
                 // TODO: Instead of setting empty identifier, handle the case when there is no interface found
-                type.getDetailsAs<BridgedInterfaceTypeDetails>().id = (interface ? interface->id : DeclId());
+                type.getDetailsAs<BridgedInterfaceTypeDetails>().id = (interface ? interface->id : Identifier());
             }
             return this->_result;
         }
@@ -46,14 +46,14 @@ namespace Meta {
         bool VisitObjCCategoryDecl(clang::ObjCCategoryDecl *protocol);
 
         // MetaFactoryDelegate methods
-        DeclId getId(const clang::Decl& decl, bool throwIfEmpty) override { return _idFactory.getIdentifier(decl, throwIfEmpty); }
+        Identifier getId(const clang::Decl& decl, bool throwIfEmpty) override { return _idFactory.getIdentifier(decl, throwIfEmpty); }
 
         Type getType(const clang::Type* type) override { return _typeFactory.create(type); }
 
         Type getType(const clang::QualType& type) override { return _typeFactory.create(type); }
 
         // TypeFactoryDelegate methods
-        virtual DeclId getDeclId(const clang::Decl& decl, bool throwIfEmpty) override { return _idFactory.getIdentifier(decl, throwIfEmpty); }
+        virtual Identifier getDeclId(const clang::Decl& decl, bool throwIfEmpty) override { return _idFactory.getIdentifier(decl, throwIfEmpty); }
 
         virtual clang::Decl& validate(clang::Decl& decl) override { _metaFactory.ensureCanBeCreated(decl); return decl; }
 

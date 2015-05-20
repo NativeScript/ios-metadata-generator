@@ -21,9 +21,13 @@ namespace binary {
         /*
          * \brief Constructs \c BinaryWriter for a given stream.
          * \param stream The stream from which data will be read
+         * \param pointer_size The size of \c MetaFileOffset in bytes
+         * \param array_count_size The size of \c MetaArrayCount in bytes
          */
-        BinaryWriter(std::shared_ptr<utils::Stream> stream)
-            : BinaryOperation(stream) { }
+        BinaryWriter(std::shared_ptr<utils::Stream> stream, int pointer_size, int array_count_size)
+            : BinaryOperation(stream, pointer_size, array_count_size) { }
+
+        BinaryWriter(std::shared_ptr<utils::Stream> stream) : BinaryWriter(stream, 4, 4) { }
 
         /*
          * \brief Writes a nil terminated string.
