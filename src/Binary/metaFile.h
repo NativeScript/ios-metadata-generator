@@ -22,13 +22,6 @@ namespace binary {
         std::unique_ptr<BinaryHashtable> _globalTableSymbols;
         std::shared_ptr<utils::MemoryStream> _heap;
 
-        // file properties
-        int pointer_size = 4;
-        int array_count_size = 4;
-        MetaFileOffset globalTable_offset = 0;
-        MetaFileOffset heap_offset = 0;
-        MetaFileOffset _offset = 0;
-
     public:
         /*
          * \brief Constructs a \c MetaFile with the given size

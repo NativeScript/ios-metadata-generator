@@ -70,8 +70,8 @@ namespace binary {
     struct Meta {
     public:
         MetaFileOffset _names = 0;
+        MetaFileOffset _fullModuleName = 0;
         uint8_t _flags = 0;
-        uint16_t _frameworkId = 0;
         uint8_t _introduced = 0;
 
         virtual MetaFileOffset save(BinaryWriter& writer);

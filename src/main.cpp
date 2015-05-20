@@ -52,13 +52,12 @@ int main(int argc, const char** argv) {
     metaContainer.filter(Meta::RemoveDuplicateMembersFilter());
 
     // Log statistic for parsed Meta objects
-    std::cout << "Result: " << metaContainer.topLevelMetasCount() << " declarations from " << metaContainer.allModulesCount()
-    << " (and " << metaContainer.topLevelModulesCount() << " top level)" << " modules" << std::endl;
+    std::cout << "Result: " << metaContainer.topLevelMetasCount() << " declarations from " << metaContainer.topLevelModulesCount() << " top level modules" << std::endl;
 
     // Serialize Meta objects to Yaml
     if(!cla_outputYamlFolder.empty()) {
         for (Meta::MetaContainer::top_level_modules_iterator it = metaContainer.top_level_modules_begin(); it != metaContainer.top_level_modules_end(); ++it) {
-            Yaml::YamlSerializer::serialize<Meta::Module>(std::string(cla_outputYamlFolder.getValue()) + "/" + it->getName() + ".yaml", *it);
+            Yaml::YamlSerializer::serialize<Meta::ModuleMeta>(std::string(cla_outputYamlFolder.getValue()) + "/" + it->getFullName() + ".yaml", *it);
         }
     }
 

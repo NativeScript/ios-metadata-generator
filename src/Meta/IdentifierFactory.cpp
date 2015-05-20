@@ -27,30 +27,21 @@ void splitString(const std::string &s, char delim, vector<string> &elems) {
     }
 }
 
-Meta::Identifier Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, bool throwIfEmpty) {
-
+Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, bool throwIfEmpty) {
     // check for cached Identifier
-    std::unordered_map<const clang::Decl*, Identifier>::const_iterator cachedId = _cache.find(&decl);
-    if(cachedId != _cache.end()) {
+    std::unordered_map<const clang::Decl*, DeclId>::const_iterator cachedId = _declCache.find(&decl);
+    if(cachedId != _declCache.end()) {
         return cachedId->second;
     }
 
     std::string name;
     std::string jsName;
-    std::string fullModule;
     std::string fileName;
+    clang::Module* module;
 
-    // calculate file name
-    clang::SourceLocation location = _sourceManager.getFileLoc(decl.getLocation());
-    clang::FileID fileId = _sourceManager.getDecomposedLoc(location).first;
-    const clang::FileEntry *entry = _sourceManager.getFileEntryForID(fileId);
-    fileName = entry->getName();
-
-    // calculate module name
-    clang::Module *owningModule = _headerSearch.findModuleForHeader(entry).getModule();
-    // If the declaration is in header which is not included in modulemap file, we don't try to figure out a module name for these headers.
-    // This is the case for some headers in usr/include (e.g. sqlite) and third-party headers without modulemap.
-    fullModule = owningModule ? owningModule->getFullModuleName() : "";
+    // calculate name
+    if(const clang::NamedDecl* namedDecl = clang::dyn_cast<clang::NamedDecl>(&decl))
+        name = namedDecl->getNameAsString();
 
     // calculate js name
     std::string originalName = calculateOriginalName(decl);
@@ -67,22 +58,27 @@ Meta::Identifier Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl,
         }
     }
 
-    // calculate name
-    if(const clang::NamedDecl* namedDecl = clang::dyn_cast<clang::NamedDecl>(&decl))
-        name = namedDecl->getNameAsString();
+    // calculate file name and module
+    clang::SourceLocation location = _sourceManager.getFileLoc(decl.getLocation());
+    clang::FileID fileId = _sourceManager.getDecomposedLoc(location).first;
+    const clang::FileEntry *entry = _sourceManager.getFileEntryForID(fileId);
+    if(entry != nullptr) {
+        fileName = entry->getName();
+        module = _headerSearch.findModuleForHeader(entry).getModule();
+    }
 
-    Identifier id(name, jsName, fullModule, fileName);
+    DeclId id(name, jsName, fileName, module);
 
     // add to cache
-    _cache.insert(std::pair<const clang::Decl*, Identifier>(&decl, id));
+    _declCache.insert(std::pair<const clang::Decl*, DeclId>(&decl, id));
 
     if(throwIfEmpty) {
         // if name is empty we don't throw exception, it's OK the declaration to be anonymous
         if (id.jsName.empty())
             throw IdentifierCreationException(id, "Unknown js name for declaration.");
         if (id.fileName.empty())
-            throw IdentifierCreationException(id, "Unknown file name for declaration.");
-        if (id.fullModule.empty())
+            throw IdentifierCreationException(id, "Unknown file for declaration.");
+        if (id.module == nullptr)
             throw IdentifierCreationException(id, "Unknown module for declaration.");
     }
 

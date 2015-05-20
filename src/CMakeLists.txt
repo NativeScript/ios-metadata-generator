@@ -9,7 +9,6 @@ set(GENERATOR_SOURCES
     Meta/IdentifierFactory.cpp
     Meta/Utils.cpp
     Meta/Filters/RemoveDuplicateMembersFilter.cpp
-    Yaml/MetaYamlTraits.cpp
     Utils/fileStream.cpp
     Utils/memoryStream.cpp
     Binary/binaryHashtable.cpp

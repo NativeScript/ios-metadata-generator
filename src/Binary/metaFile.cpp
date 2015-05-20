@@ -2,7 +2,7 @@
 #include "../utils/fileStream.h"
 
 unsigned int binary::MetaFile::size() {
-    return (unsigned int)this->_heap->size();
+    return this->_globalTableSymbols->size();
 }
 
 void binary::MetaFile::registerInGlobalTable(const std::string& jsName, binary::MetaFileOffset offset) {
@@ -14,11 +14,11 @@ binary::MetaFileOffset binary::MetaFile::getFromGlobalTable(const std::string& j
 }
 
 binary::BinaryWriter binary::MetaFile::heap_writer() {
-    return binary::BinaryWriter(this->_heap, this->pointer_size, this->array_count_size);
+    return binary::BinaryWriter(this->_heap);
 }
 
 binary::BinaryReader binary::MetaFile::heap_reader() {
-    return binary::BinaryReader(this->_heap, this->pointer_size, this->array_count_size);
+    return binary::BinaryReader(this->_heap);
 }
 
 void binary::MetaFile::save(string filename) {
@@ -29,7 +29,7 @@ void binary::MetaFile::save(string filename) {
 
 void binary::MetaFile::save(std::shared_ptr<utils::Stream> stream) {
     // dump global table
-    BinaryWriter globalTableStreamWriter = BinaryWriter(stream, this->pointer_size, this->array_count_size);
+    BinaryWriter globalTableStreamWriter = BinaryWriter(stream);
     BinaryWriter heapWriter = this->heap_writer();
     std::vector<binary::MetaFileOffset> offsets = this->_globalTableSymbols->serialize(heapWriter);
     globalTableStreamWriter.push_binaryArray(offsets);

@@ -22,7 +22,7 @@ bool comparePropertyMetas(std::shared_ptr<Meta::PropertyMeta>& meta1, std::share
     return meta1->id.jsName < meta2->id.jsName;
 }
 
-bool compareIdentifiers(Meta::Identifier& id1, Meta::Identifier& id2) {
+bool compareIdentifiers(Meta::DeclId & id1, Meta::DeclId & id2) {
     return id1.jsName < id2.jsName;
 }
 
@@ -55,7 +55,7 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
     binaryMetaStruct._flags = flags;
 
     // module
-    binaryMetaStruct._frameworkId = (uint16_t)this->moduleMap[meta->id.fullModule];
+    binaryMetaStruct._fullModuleName = this->heapWriter.push_string(meta->id.module->getTopLevelModule()->getFullModuleName());
 
     // introduced in
     binaryMetaStruct._introduced = convertVersion(meta->introducedIn);
@@ -73,7 +73,7 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
         this->serializeMethod(methodMeta.get(), binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
-    binaryMetaStruct._instanceMethods = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._instanceMethods = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // static methods
@@ -83,7 +83,7 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
         this->serializeMethod(methodMeta.get(), binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
-    binaryMetaStruct._staticMethods = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._staticMethods = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // properties
@@ -93,15 +93,15 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta *meta, b
         this->serializeProperty(propertyMeta.get(), binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
-    binaryMetaStruct._properties = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._properties =this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // protocols
     std::sort(meta->protocols.begin(), meta->protocols.end(), compareIdentifiers);
-    for (::Meta::Identifier& protocolName : meta->protocols) {
+    for (::Meta::DeclId & protocolName : meta->protocols) {
         offsets.push_back(this->heapWriter.push_string(protocolName.jsName));
     }
-    binaryMetaStruct._protocols = offsets.size() > 0 ? this->heapWriter.push_binaryArray(offsets) : 0;
+    binaryMetaStruct._protocols = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // first initializer index
@@ -171,8 +171,8 @@ void binary::BinarySerializer::serializeRecord(::Meta::RecordMeta *meta, binary:
 void binary::BinarySerializer::serializeContainer(::Meta::MetaContainer& container) {
     this->start(&container);
     for (::Meta::MetaContainer::top_level_modules_iterator moduleIt = container.top_level_modules_begin(); moduleIt != container.top_level_modules_end(); ++moduleIt) {
-        ::Meta::Module& module = *moduleIt;
-        for(::Meta::Module::iterator metaIt = module.begin(); metaIt != module.end(); ++metaIt) {
+        ::Meta::ModuleMeta & module = *moduleIt;
+        for(::Meta::ModuleMeta::iterator metaIt = module.begin(); metaIt != module.end(); ++metaIt) {
             std::pair<std::string, std::shared_ptr<::Meta::Meta>> metaPair = *metaIt;
             metaPair.second->visit(this);
         }
@@ -181,11 +181,6 @@ void binary::BinarySerializer::serializeContainer(::Meta::MetaContainer& contain
 }
 
 void binary::BinarySerializer::start(::Meta::MetaContainer *container) {
-    // write all module names in heap and write down their offsets
-    for (auto moduleIter = container->all_modules_begin(); moduleIter != container->all_modules_end(); ++moduleIter) {
-        binary::MetaFileOffset offset = this->heapWriter.push_string(*moduleIter);
-        this->moduleMap.emplace(*moduleIter, offset);
-    }
 }
 
 void binary::BinarySerializer::finish(::Meta::MetaContainer *container) {
