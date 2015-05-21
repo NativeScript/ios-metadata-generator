@@ -1,5 +1,6 @@
 #include "binarySerializer.h"
 #include "binarySerializerPrivate.h"
+#include "../Meta/Utils.h"
 
 uint8_t convertVersion(Meta::Version version) {
     uint8_t result = 0;
@@ -55,7 +56,17 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
     binaryMetaStruct._flags = flags;
 
     // module
-    binaryMetaStruct._fullModuleName = this->heapWriter.push_string(meta->id.module->getTopLevelModule()->getFullModuleName());
+    clang::Module* topLevelModule = meta->id.module->getTopLevelModule();
+    std::string topLevelModuleName = topLevelModule->getFullModuleName();
+    MetaFileOffset moduleOffset = this->file->getFromTopLevelModulesTable(topLevelModuleName);
+    if(moduleOffset != 0)
+        binaryMetaStruct._topLevelModule = moduleOffset;
+    else {
+        binary::ModuleMeta moduleMeta;
+        serializeModule(topLevelModule, moduleMeta);
+        binaryMetaStruct._topLevelModule = moduleMeta.save(this->heapWriter);
+        this->file->registerInTopLevelModulesTable(topLevelModuleName, binaryMetaStruct._topLevelModule);
+    }
 
     // introduced in
     binaryMetaStruct._introduced = convertVersion(meta->introducedIn);
@@ -178,6 +189,33 @@ void binary::BinarySerializer::serializeContainer(::Meta::MetaContainer& contain
         }
     }
     this->finish(&container);
+}
+
+void binary::BinarySerializer::serializeModule(clang::Module* module, binary::ModuleMeta& binaryModule) {
+    uint8_t flags = 0;
+    if(module->isPartOfFramework())
+        flags |= 1;
+    if(module->IsSystem)
+        flags |= 2;
+    binaryModule._flags |= flags;
+    binaryModule._name = this->heapWriter.push_string(module->getFullModuleName());
+    std::vector<clang::Module::LinkLibrary> libraries;
+    ::Meta::Utils::getAllLinkLibraries(module, libraries);
+    std::vector<MetaFileOffset> librariesOffsets;
+    for(clang::Module::LinkLibrary lib : libraries) {
+        binary::LibraryMeta libMeta;
+        serializeLibrary(&lib, libMeta);
+        librariesOffsets.push_back(libMeta.save(this->heapWriter));
+    }
+    binaryModule._libraries = this->heapWriter.push_binaryArray(librariesOffsets);
+}
+
+void binary::BinarySerializer::serializeLibrary(clang::Module::LinkLibrary* library, binary::LibraryMeta& binaryLib) {
+    uint8_t flags = 0;
+    if(library->IsFramework)
+        flags |= 1;
+    binaryLib._flags = flags;
+    binaryLib._name = this->heapWriter.push_string(library->Library);
 }
 
 void binary::BinarySerializer::start(::Meta::MetaContainer *container) {
