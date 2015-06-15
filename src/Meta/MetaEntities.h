@@ -248,6 +248,8 @@ namespace Meta {
         typedef std::vector<std::shared_ptr<CategoryMeta>>::const_iterator categories_const_iterator;
         typedef std::vector<ModuleMeta>::size_type size_type;
 
+        MetaContainer() {}
+
         void add(std::shared_ptr<Meta> meta) {
             if(meta->is(MetaType::Category)) {
                 std::shared_ptr<CategoryMeta> category = std::static_pointer_cast<CategoryMeta>(meta);

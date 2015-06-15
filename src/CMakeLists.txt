@@ -1,5 +1,6 @@
 set(GENERATOR_SOURCES
     main.cpp
+    CustomFileSystem.cpp
     HeadersParser/Parser.cpp
     Meta/DeclarationConverterVisitor.cpp
     Meta/MetaFactory.cpp
