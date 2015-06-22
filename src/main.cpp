@@ -1,9 +1,7 @@
 #include "llvm/Support/CommandLine.h"
 #include <clang/Tooling/Tooling.h>
 #include <clang/Frontend/CompilerInstance.h>
-#include <clang/Frontend/FrontendAction.h>
-#include <clang/Tooling/Tooling.h>
-#include "CustomFileSystem.h"
+#include "RemoveUnsupportedSyntaxAction.h"
 #include "HeadersParser/Parser.h"
 #include "Meta/DeclarationConverterVisitor.h"
 #include "Meta/Filters/RemoveDuplicateMembersFilter.h"
@@ -11,6 +9,7 @@
 #include "Yaml/YamlSerializer.h"
 #include "Binary/binarySerializer.h"
 #include <ctime>
+#include <sstream>
 
 // Command line parameters
 llvm::cl::opt<string> cla_isysroot("isysroot", llvm::cl::Required, llvm::cl::desc("Specify the SDK directory"), llvm::cl::value_desc("dir"));
@@ -21,6 +20,7 @@ llvm::cl::opt<string> cla_std("std", llvm::cl::init("gnu99"), llvm::cl::desc("Sp
 llvm::cl::opt<string> cla_headerSearchPaths("header-search-paths", llvm::cl::desc("The paths in which clag searches for header files separated by space. To escape a space in a path, surround the path with quotes."), llvm::cl::value_desc("paths"));
 llvm::cl::opt<string> cla_frameworkSearchPaths("framework-search-paths", llvm::cl::desc("The paths in which clag searches for frameworks separated by space. To escape a space in a path, surround the path with quotes."), llvm::cl::value_desc("paths"));
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));
+llvm::cl::opt<string> cla_outputIntermediateSdkPath("output-intermediate-sdk", llvm::cl::desc("Specify the output sdk folder"), llvm::cl::value_desc("folder_path"));
 llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("dir"));
 llvm::cl::opt<string> cla_outputBinFile("output-bin", llvm::cl::desc("Specify the output binary metadata file"), llvm::cl::value_desc("file_path"));
 
@@ -70,37 +70,24 @@ private:
 };
 
 class MetaGenerationFrontendAction : public clang::ASTFrontendAction {
+private:
+    std::map<std::string, std::stringstream>& virtualFilesMap;
 public:
-    MetaGenerationFrontendAction() {}
+    MetaGenerationFrontendAction(std::map<std::string, std::stringstream>& virtualFilesMap)
+            : virtualFilesMap(virtualFilesMap) {}
 
     virtual std::unique_ptr<clang::ASTConsumer> CreateASTConsumer(clang::CompilerInstance &Compiler, llvm::StringRef InFile) {
         return std::unique_ptr<clang::ASTConsumer>(new MetaGenerationConsumer(Compiler.getASTContext().getSourceManager(), Compiler.getPreprocessor().getHeaderSearchInfo()));
     }
 };
 
-std::vector<std::string> getSyntaxOnlyToolArgs(const std::vector<std::string> &ExtraArgs, clang::StringRef FileName) {
-    std::vector<std::string> Args;
-    Args.push_back("clang-tool");
-    Args.push_back("-fsyntax-only");
-    Args.insert(Args.end(), ExtraArgs.begin(), ExtraArgs.end());
-    Args.push_back(FileName.str());
-    return Args;
-}
-
-bool runToolOnCodeWithArgsCustom(clang::FrontendAction *ToolAction, const clang::Twine &Code,
-                                 const std::vector<std::string> &Args,
-                                 const clang::Twine &FileName,
-                                 const clang::tooling::FileContentMappings &VirtualMappedFiles = clang::tooling::FileContentMappings()) {
-    clang::SmallString <16> FileNameStorage;
-    clang::StringRef FileNameRef = FileName.toNullTerminatedStringRef(FileNameStorage);
-    llvm::IntrusiveRefCntPtr<clang::FileManager> Files(new clang::FileManager(clang::FileSystemOptions(), new CustomFileSystem(clang::vfs::getRealFileSystem().get())));
-    clang::tooling::ToolInvocation Invocation(getSyntaxOnlyToolArgs(Args, FileNameRef), ToolAction, Files.get());
-    clang::SmallString <1024> CodeStorage;
-    Invocation.mapVirtualFile(FileNameRef, Code.toNullTerminatedStringRef(CodeStorage));
-    for (auto &FilenameWithContent : VirtualMappedFiles) {
-        Invocation.mapVirtualFile(FilenameWithContent.first, FilenameWithContent.second);
+std::string replaceString(std::string subject, const std::string& search, const std::string& replace) {
+    size_t pos = 0;
+    while ((pos = subject.find(search, pos)) != std::string::npos) {
+        subject.replace(pos, search.length(), replace);
+        pos += replace.length();
     }
-    return Invocation.run();
+    return subject;
 }
 
 int main(int argc, const char** argv) {
@@ -110,15 +97,16 @@ int main(int argc, const char** argv) {
     llvm::cl::ParseCommandLineOptions(argc, argv);
 
     std::vector<std::string> clangArgs {
-            "-v",
-            "-x", "objective-c",
-            "-fno-objc-arc",
-            "-fmodule-maps",
-            "-isysroot", cla_isysroot.getValue(),
-            "-arch", cla_arch.getValue(),
-            "-target", cla_target.getValue(),
-            std::string("-std=") + cla_std.getValue(),
-            std::string("-miphoneos-version-min=") + cla_iphoneOSVersionMin.getValue(),
+        "-v",
+        "-x", "objective-c",
+        "-fno-objc-arc",
+        "-fmodule-maps",
+        "-isysroot", cla_isysroot.getValue(),
+        "-arch", cla_arch.getValue(),
+        "-target", cla_target.getValue(),
+        std::string("-std=") + cla_std.getValue(),
+        std::string("-miphoneos-version-min=") + cla_iphoneOSVersionMin.getValue(),
+        //"-Wno-typedef-redefinition", "-Wno-ignored-attributes", "-Wno-deprecated-declarations", "-Wno-objc-property-no-attribute"
     };
 
     printf("Parsed header search paths:\n");
@@ -153,8 +141,33 @@ int main(int argc, const char** argv) {
         }
     }
 
-    // Run meta objects generator
-    runToolOnCodeWithArgsCustom(new MetaGenerationFrontendAction, umbrellaContent, clangArgs, "umbrella.h");
+    // Remove not supported syntax in headers
+    std::map<std::string, std::stringstream> filesMap;
+    clang::tooling::runToolOnCodeWithArgs(new RemoveUnsupportedSyntaxAction(filesMap), umbrellaContent, clangArgs, "umbrella.h");
+
+    // save the output header file on the file system (optional)
+    std::string sdkHeaderOutputFolder = cla_outputIntermediateSdkPath.getValue();
+    if(!sdkHeaderOutputFolder.empty()) {
+        for (auto &pair : filesMap) {
+            if (!pair.first.empty()) {
+                std::error_code errorCode;
+                llvm::raw_fd_ostream outputFileStream(sdkHeaderOutputFolder + replaceString(pair.first, "/", "|"), errorCode, llvm::sys::fs::OpenFlags::F_None);
+                if (!errorCode) {
+                    outputFileStream << pair.second.str();
+                    outputFileStream.close();
+                }
+            }
+        }
+    }
+
+    clang::tooling::FileContentMappings filesMappings;
+    for(auto& pair : filesMap) {
+        if(!pair.first.empty())
+            filesMappings.push_back(std::pair<std::string, std::string>(pair.first, pair.second.str()));
+    }
+
+    // generate metadata for the intermediate sdk header
+    clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(filesMap), umbrellaContent, clangArgs, "umbrella.h", filesMappings);
 
     std::clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;

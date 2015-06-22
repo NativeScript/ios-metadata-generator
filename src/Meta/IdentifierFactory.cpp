@@ -110,7 +110,7 @@ string Meta::IdentifierFactory::calculateOriginalName(const clang::Decl& decl) {
                 }
 
                 /*
-                 * Check if the next declaration in the context is typedef declaration to the given record and if true - use the name of the typedef.
+                 * TODO: Check if the next declaration in the context is typedef declaration to the given record and if true - use the name of the typedef.
                  * Example:
                  *          typedef struct _ugly_name {
                  *              int field;
@@ -147,7 +147,7 @@ string Meta::IdentifierFactory::calculateOriginalName(const clang::Decl& decl) {
                 }
 
                 /*
-                 * Check if the next declaration in the context is typedef declaration to the given enum and if true - use the name of the typedef.
+                 * TODO: Check if the next declaration in the context is typedef declaration to the given enum and if true - use the name of the typedef.
                  * Example:
                  *          typedef enum _ugly_name {
                  *              field1, field2
