@@ -21,7 +21,7 @@ set(GENERATOR_SOURCES
     Binary/metaFile.cpp
 )
 
-add_executable(objc-metadata-generator ${GENERATOR_SOURCES} RemoveUnsupportedSyntaxAction.cpp RemoveUnsupportedSyntaxAction.h)
+add_executable(objc-metadata-generator ${GENERATOR_SOURCES})
 target_link_libraries(objc-metadata-generator ${LLVM_LINKER_FLAGS})
 target_link_libraries(objc-metadata-generator
     clangFrontend
