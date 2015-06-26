@@ -68,8 +68,8 @@ namespace Meta {
                 addToResult(meta);
                 //std::cout << "Included: " << meta->id.jsName << " from " << meta->id.fullModule << std::endl;
             } catch(MetaCreationException& e) {
-                if(e.isError())
-                    std::cout << e.whatAsString() << std::endl;
+                //if(e.isError())
+                //    std::cout << e.whatAsString() << std::endl;
             }
             return true;
         }

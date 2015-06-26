@@ -19,8 +19,9 @@ llvm::cl::opt<string> cla_target("target", llvm::cl::init("arm-apple-darwin"), l
 llvm::cl::opt<string> cla_std("std", llvm::cl::init("gnu99"), llvm::cl::desc("Specify the language mode to the clang compiler instance"), llvm::cl::value_desc("std-name"));
 llvm::cl::opt<string> cla_headerSearchPaths("header-search-paths", llvm::cl::desc("The paths in which clag searches for header files separated by space. To escape a space in a path, surround the path with quotes."), llvm::cl::value_desc("paths"));
 llvm::cl::opt<string> cla_frameworkSearchPaths("framework-search-paths", llvm::cl::desc("The paths in which clag searches for frameworks separated by space. To escape a space in a path, surround the path with quotes."), llvm::cl::value_desc("paths"));
+llvm::cl::opt<bool> cla_removeNewObjCFeatures("remove-new-objc-features", llvm::cl::desc("Whether to preprocess and remove all new ObjC features (generics, nullability specifiers etc.)"));
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));
-llvm::cl::opt<string> cla_outputIntermediateSdkPath("output-intermediate-sdk", llvm::cl::desc("Specify the output sdk folder"), llvm::cl::value_desc("folder_path"));
+llvm::cl::opt<string> cla_outputIntermediateHeadersPath("output-intermediate-headers", llvm::cl::desc("Specify the output headers folder"), llvm::cl::value_desc("folder_path"));
 llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("dir"));
 llvm::cl::opt<string> cla_outputBinFile("output-bin", llvm::cl::desc("Specify the output binary metadata file"), llvm::cl::value_desc("file_path"));
 
@@ -70,11 +71,8 @@ private:
 };
 
 class MetaGenerationFrontendAction : public clang::ASTFrontendAction {
-private:
-    std::map<std::string, std::stringstream>& virtualFilesMap;
 public:
-    MetaGenerationFrontendAction(std::map<std::string, std::stringstream>& virtualFilesMap)
-            : virtualFilesMap(virtualFilesMap) {}
+    MetaGenerationFrontendAction()  {}
 
     virtual std::unique_ptr<clang::ASTConsumer> CreateASTConsumer(clang::CompilerInstance &Compiler, llvm::StringRef InFile) {
         return std::unique_ptr<clang::ASTConsumer>(new MetaGenerationConsumer(Compiler.getASTContext().getSourceManager(), Compiler.getPreprocessor().getHeaderSearchInfo()));
@@ -106,7 +104,7 @@ int main(int argc, const char** argv) {
         "-target", cla_target.getValue(),
         std::string("-std=") + cla_std.getValue(),
         std::string("-miphoneos-version-min=") + cla_iphoneOSVersionMin.getValue(),
-        //"-Wno-typedef-redefinition", "-Wno-ignored-attributes", "-Wno-deprecated-declarations", "-Wno-objc-property-no-attribute"
+        "-Wno-unknown-pragmas", "-Wno-ignored-attributes", "-ferror-limit=0"
     };
 
     printf("Parsed header search paths:\n");
@@ -141,33 +139,35 @@ int main(int argc, const char** argv) {
         }
     }
 
+    clang::tooling::FileContentMappings filesMappings;
     // Remove not supported syntax in headers
-    std::map<std::string, std::stringstream> filesMap;
-    clang::tooling::runToolOnCodeWithArgs(new RemoveUnsupportedSyntaxAction(filesMap), umbrellaContent, clangArgs, "umbrella.h");
+    if(cla_removeNewObjCFeatures.getValue()) {
+        std::map<std::string, std::stringstream> filesMap;
+        clang::tooling::runToolOnCodeWithArgs(new RemoveUnsupportedSyntaxAction(filesMap), umbrellaContent, clangArgs, "umbrella.h");
 
-    // save the output header file on the file system (optional)
-    std::string sdkHeaderOutputFolder = cla_outputIntermediateSdkPath.getValue();
-    if(!sdkHeaderOutputFolder.empty()) {
-        for (auto &pair : filesMap) {
-            if (!pair.first.empty()) {
-                std::error_code errorCode;
-                llvm::raw_fd_ostream outputFileStream(sdkHeaderOutputFolder + replaceString(pair.first, "/", "|"), errorCode, llvm::sys::fs::OpenFlags::F_None);
-                if (!errorCode) {
-                    outputFileStream << pair.second.str();
-                    outputFileStream.close();
+        // save the output header file on the file system (optional)
+        std::string sdkHeaderOutputFolder = cla_outputIntermediateHeadersPath.getValue();
+        if(!sdkHeaderOutputFolder.empty()) {
+            for (auto &pair : filesMap) {
+                if (!pair.first.empty()) {
+                    std::error_code errorCode;
+                    llvm::raw_fd_ostream outputFileStream(sdkHeaderOutputFolder + replaceString(pair.first, "/", "|"), errorCode, llvm::sys::fs::OpenFlags::F_None);
+                    if (!errorCode) {
+                        outputFileStream << pair.second.str();
+                        outputFileStream.close();
+                    }
                 }
             }
         }
-    }
 
-    clang::tooling::FileContentMappings filesMappings;
-    for(auto& pair : filesMap) {
-        if(!pair.first.empty())
-            filesMappings.push_back(std::pair<std::string, std::string>(pair.first, pair.second.str()));
+        for(auto& pair : filesMap) {
+            if(!pair.first.empty())
+                filesMappings.push_back(std::pair<std::string, std::string>(pair.first, pair.second.str()));
+        }
     }
 
     // generate metadata for the intermediate sdk header
-    clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(filesMap), umbrellaContent, clangArgs, "umbrella.h", filesMappings);
+    clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", filesMappings);
 
     std::clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;

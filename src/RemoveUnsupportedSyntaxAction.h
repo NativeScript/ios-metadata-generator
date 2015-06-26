@@ -44,25 +44,26 @@ public:
 class GenericDeclarationsProcessor : public TokensProcessor {
     enum State {
         None = 0,
-        RecognitionPhase1, // @ (searching for "@interface identifier<")
-        RecognitionPhase2, // @interface
-        RecognitionPhase3, // @interface identifier
+        ExpectingInterface, // @ (searching for "@interface identifier<")
+        ExpectingIdentifier, // @interface
+        ExpectingLeftAngleBracket, // @interface identifier
         InAngleBrackets, // @interface identifier<
+        InAngleBracketsAfterIdentifier,
         InDeclaration,
-        EndRecognitionPhase1 // @ (searching for "@end")
+        ExpectingEnd // @ (searching for "@end")
     };
 
     struct StateInfo {
         State state = State::None;
         int angleBracketsLevel = 0;
         std::string genericInterfaceName;
-        std::string genericParameterName;
+        std::vector<std::string> genericParametersNames;
 
         void clear() {
             state = State::None;
             angleBracketsLevel = 0;
             genericInterfaceName = "";
-            genericParameterName = "";
+            genericParametersNames.clear();
         }
     };
 
@@ -79,8 +80,7 @@ public:
 class GenericsUsagesProcessor : public TokensProcessor {
     enum State {
         None = 0,
-        AfterColon,
-        RecognitionPhase1, // @ (searching for "identifier<")
+        ExpectingLeftAngleBracket, // identifier (searching for "identifier<")
         InAngleBrackets // identifier<
     };
 
@@ -110,9 +110,9 @@ public:
 class GenericsForwardDeclarationsProcessor : public TokensProcessor {
     enum State {
         None = 0,
-        RecognitionPhase1, // @ (searching for "@class identifier<..>")
-        RecognitionPhase2, // @class (searching for "@class identifier<..>")
-        RecognitionPhase3, // @class identifier (searching for "@class identifier<..>")
+        ExpectingClassDirective, // @ (searching for "@class identifier<..>")
+        ExpectingIdentifier, // @class (searching for "@class identifier<..>")
+        AfterIdentifier, // @class identifier (searching for "@class identifier<..>")
         InAngleBrackets, // @class identifier<...> (searching for "@class identifier<..>")
     };
 
@@ -140,7 +140,10 @@ public:
 class NullabilityModifiersProcessor : public TokensProcessor {
     enum State {
         None = 0,
-        AfterNullabilityModifier
+        AfterNullabilityModifier,
+        AfterAttributeToken,
+        AfterAttributeAndLeftBrace,
+        InAttribute
     };
 
     struct StateInfo {
@@ -155,6 +158,14 @@ private:
     StateInfo stateInfo;
 public:
     NullabilityModifiersProcessor(clang::Preprocessor& preprocessor, std::map<std::string, void*>& context, std::shared_ptr<TokensProcessor> next = nullptr)
+            : TokensProcessor(preprocessor, context, next) { }
+
+    virtual std::string process(clang::Token& token) override;
+};
+
+class KindOfModifierProcessor : public TokensProcessor {
+public:
+    KindOfModifierProcessor(clang::Preprocessor& preprocessor, std::map<std::string, void*>& context, std::shared_ptr<TokensProcessor> next = nullptr)
             : TokensProcessor(preprocessor, context, next) { }
 
     virtual std::string process(clang::Token& token) override;
