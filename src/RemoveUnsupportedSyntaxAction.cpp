@@ -299,8 +299,10 @@ bool RemoveUnsupportedSyntaxAction::BeginSourceFileAction(clang::CompilerInstanc
     this->filesMap["all.h"] = std::stringstream();
     do {
         preprocessor->Lex(token);
-        if(preprocessor->getDiagnostics().hasErrorOccurred())
-            break;
+        //printf("%s\n", preprocessor->getSpelling(token).c_str());
+        if(preprocessor->getDiagnostics().hasErrorOccurred()) {
+            continue;
+        }
         std::string tokenAsString = tokensProcessor.process(token);
         this->filesMap[currentFileName] << tokenAsString;
         this->filesMap["all.h"] << tokenAsString;
