@@ -19,7 +19,7 @@ llvm::cl::opt<string> cla_target("target", llvm::cl::init("arm-apple-darwin"), l
 llvm::cl::opt<string> cla_std("std", llvm::cl::init("gnu99"), llvm::cl::desc("Specify the language mode to the clang compiler instance"), llvm::cl::value_desc("std-name"));
 llvm::cl::opt<string> cla_headerSearchPaths("header-search-paths", llvm::cl::desc("The paths in which clag searches for header files separated by space. To escape a space in a path, surround the path with quotes."), llvm::cl::value_desc("paths"));
 llvm::cl::opt<string> cla_frameworkSearchPaths("framework-search-paths", llvm::cl::desc("The paths in which clag searches for frameworks separated by space. To escape a space in a path, surround the path with quotes."), llvm::cl::value_desc("paths"));
-llvm::cl::opt<bool> cla_removeNewObjCFeatures("remove-new-objc-features", llvm::cl::desc("Whether to preprocess and remove all new ObjC features (generics, nullability specifiers etc.)"));
+llvm::cl::opt<bool> cla_enableHeaderPreprocessingIfNeeded("enable-header-preprocessing-if-needed", llvm::cl::desc("Whether to preprocess and remove all new ObjC features (generics, nullability specifiers etc.) from headers. The preprocessing happens only if a concrete SDK is detected."));
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));
 llvm::cl::opt<string> cla_outputIntermediateHeadersPath("output-intermediate-headers", llvm::cl::desc("Specify the output headers folder"), llvm::cl::value_desc("folder_path"));
 llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("dir"));
@@ -141,28 +141,36 @@ int main(int argc, const char** argv) {
 
     clang::tooling::FileContentMappings filesMappings;
     // Remove not supported syntax in headers
-    if(cla_removeNewObjCFeatures.getValue()) {
-        std::map<std::string, std::stringstream> filesMap;
-        clang::tooling::runToolOnCodeWithArgs(new RemoveUnsupportedSyntaxAction(filesMap), umbrellaContent, clangArgs, "umbrella.h");
+    if(cla_enableHeaderPreprocessingIfNeeded.getValue()) {
+        // Extract SDK version form isysroot path. This depends on specific naming convention of SDK folders.
+        std::string isysroot = cla_isysroot.getValue();
+        std::size_t lastPathComponentIndex = isysroot.find_last_of("/");
+        std::size_t sdkVersionDigit = isysroot.find_first_of("0123456789", lastPathComponentIndex);
+        bool isLowerThaniOS9 = (isysroot[sdkVersionDigit] - '0' < 9 && isysroot[sdkVersionDigit + 1] == '.');
 
-        // save the output header file on the file system (optional)
-        std::string sdkHeaderOutputFolder = cla_outputIntermediateHeadersPath.getValue();
-        if(!sdkHeaderOutputFolder.empty()) {
-            for (auto &pair : filesMap) {
-                if (!pair.first.empty()) {
-                    std::error_code errorCode;
-                    llvm::raw_fd_ostream outputFileStream(sdkHeaderOutputFolder + replaceString(pair.first, "/", "|"), errorCode, llvm::sys::fs::OpenFlags::F_None);
-                    if (!errorCode) {
-                        outputFileStream << pair.second.str();
-                        outputFileStream.close();
+        if(!isLowerThaniOS9) {
+            std::map<std::string, std::stringstream> filesMap;
+            clang::tooling::runToolOnCodeWithArgs(new RemoveUnsupportedSyntaxAction(filesMap), umbrellaContent, clangArgs, "umbrella.h");
+
+            // save the output header file on the file system (optional)
+            std::string sdkHeaderOutputFolder = cla_outputIntermediateHeadersPath.getValue();
+            if (!sdkHeaderOutputFolder.empty()) {
+                for (auto &pair : filesMap) {
+                    if (!pair.first.empty()) {
+                        std::error_code errorCode;
+                        llvm::raw_fd_ostream outputFileStream(sdkHeaderOutputFolder + replaceString(pair.first, "/", "|"), errorCode, llvm::sys::fs::OpenFlags::F_None);
+                        if (!errorCode) {
+                            outputFileStream << pair.second.str();
+                            outputFileStream.close();
+                        }
                     }
                 }
             }
-        }
 
-        for(auto& pair : filesMap) {
-            if(!pair.first.empty())
-                filesMappings.push_back(std::pair<std::string, std::string>(pair.first, pair.second.str()));
+            for (auto &pair : filesMap) {
+                if (!pair.first.empty())
+                    filesMappings.push_back(std::pair<std::string, std::string>(pair.first, pair.second.str()));
+            }
         }
     }
 
