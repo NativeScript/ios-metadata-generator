@@ -176,10 +176,13 @@ std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumD
         throw MetaCreationException(_delegate->getId(enumeration, false), "Forward declaration of enum.", false);
     }
 
+    shared_ptr<JsCodeMeta> jsCodeMeta = make_shared<JsCodeMeta>();
+    populateMetaFields(enumeration, *(jsCodeMeta.get()));
+
     std::vector<std::string> fieldNames;
     for (clang::EnumDecl::enumerator_iterator it = enumeration.enumerator_begin(); it != enumeration.enumerator_end() ; ++it)
         fieldNames.push_back((*it)->getNameAsString());
-    fieldNames.push_back(enumeration.getNameAsString());
+    fieldNames.push_back(jsCodeMeta->id.jsName);
     size_t fieldNamePrefixLength = Utils::getCommonWordPrefix(fieldNames).length();
 
     std::ostringstream jsCodeStream;
@@ -196,8 +199,6 @@ std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumD
         isFirstField = false;
     }
     jsCodeStream << "})";
-    shared_ptr<JsCodeMeta> jsCodeMeta = make_shared<JsCodeMeta>();
-    populateMetaFields(enumeration, *(jsCodeMeta.get()));
     jsCodeMeta->jsCode = jsCodeStream.str();
     return jsCodeMeta;
 }

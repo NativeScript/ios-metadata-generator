@@ -1,11 +1,8 @@
 #pragma once
 
-#include <clang/Frontend/ASTUnit.h>
-#include "ParserSettings.h"
+#include <vector>
+#include <string>
 
-namespace HeadersParser {
-    class Parser {
-    public:
-        static std::unique_ptr<clang::ASTUnit> parse(ParserSettings& settings, std::string umbrellaFile);
-    };
-}
+std::vector<std::string> parsePaths(std::string& paths);
+
+std::string CreateUmbrellaHeader(const std::vector<std::string>& clangArgs);

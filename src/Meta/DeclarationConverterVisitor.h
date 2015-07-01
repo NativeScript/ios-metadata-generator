@@ -10,22 +10,23 @@
 namespace Meta {
     class DeclarationConverterVisitor : public clang::RecursiveASTVisitor<DeclarationConverterVisitor>, public MetaFactoryDelegate, public TypeFactoryDelegate {
     public:
-        explicit DeclarationConverterVisitor(clang::ASTUnit *astUnit)
-                : _astUnit(astUnit),
-                  _idFactory(astUnit->getSourceManager(), astUnit->getPreprocessor().getHeaderSearchInfo(), IdentifierFactory::getIosSdkNamesToRecalculate()),
+        explicit DeclarationConverterVisitor(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch)
+                : _idFactory(sourceManager, headerSearch, IdentifierFactory::getIosSdkNamesToRecalculate()),
                   _metaFactory(this),
-                  _typeFactory(this) { }
+                  _typeFactory(this),
+                  _result() {}
 
-        MetaContainer& Traverse() {
-            this->_result.clear();
-            this->TraverseDecl(this->_astUnit->getASTContext().getTranslationUnitDecl());
+        void resolveUnresolvedBridgedInterfaces() {
             for(std::vector<Type>::iterator it = _unresolvedBridgedInterfaces.begin(); it != _unresolvedBridgedInterfaces.end(); ++it) {
                 Type type = *it;
                 std::shared_ptr<InterfaceMeta> interface = _result.getInterface(type.getDetailsAs<BridgedInterfaceTypeDetails>().id.name);
-                // TODO: Instead of setting empty identifier, handle the case when there is no interface found
+                // TODO: Handle the case when there is no interface found, instead of setting empty DeclId
                 type.getDetailsAs<BridgedInterfaceTypeDetails>().id = (interface ? interface->id : DeclId());
             }
-            return this->_result;
+        }
+
+        MetaContainer& getMetaContainer() {
+            return _result;
         }
 
         // RecursiveASTVisitor methods
@@ -77,7 +78,6 @@ namespace Meta {
             _result.add(meta);
         }
 
-        clang::ASTUnit *_astUnit;
         MetaContainer _result;
         IdentifierFactory _idFactory;
         MetaFactory _metaFactory;

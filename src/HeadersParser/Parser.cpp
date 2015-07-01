@@ -11,6 +11,42 @@ using namespace clang;
 namespace path = llvm::sys::path;
 namespace fs = llvm::sys::fs;
 
+std::vector<std::string> parsePaths(std::string& paths) {
+    std::vector<std::string> result;
+    char buffer[paths.size() + 1];
+    int bufferSize = 0;
+    bool inQuote = false;
+    for(char& c : paths) {
+        if (c == ' ' && !inQuote) {
+            if (bufferSize != 0) {
+                buffer[bufferSize] = '\0';
+                result.push_back(std::string(buffer));
+                bufferSize = 0;
+            }
+            continue;
+        }
+
+        if(c == '\"') {
+            if(inQuote) {
+                buffer[bufferSize] = '\0';
+                result.push_back(std::string(buffer));
+            }
+            inQuote = !inQuote;
+            bufferSize = 0;
+            continue;
+        }
+
+        buffer[bufferSize] = c;
+        bufferSize++;
+    }
+    if (bufferSize != 0) {
+        buffer[bufferSize] = '\0';
+        result.push_back(std::string(buffer));
+        bufferSize = 0;
+    }
+    return result;
+}
+
 static SmallVectorImpl<char>& operator+=(SmallVectorImpl<char>& includes, StringRef rhs) {
     includes.append(rhs.begin(), rhs.end());
     return includes;
@@ -112,60 +148,12 @@ std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::str
     return std::error_code();
 }
 
-std::unique_ptr<ASTUnit> HeadersParser::Parser::parse(ParserSettings& settings, std::string umbrellaFile) {
-
-    std::vector<std::string> clangArgs {
-            "-v",
-            "-x", "objective-c",
-            "-fno-objc-arc",
-            "-fmodule-maps",
-            "-isysroot", settings.getSysRoot(),
-            "-arch", settings.getArch(),
-            "-target", settings.getTarget(),
-            std::string("-std=") + settings.getStd(),
-            std::string("-miphoneos-version-min=") + settings.getIPhoneOsVersionMin(),
-    };
-
-    // add header search paths
-    std::vector<std::string> headersSearchPaths = settings.getHeaderSearchPaths();
-    for(auto it = headersSearchPaths.begin(); it != headersSearchPaths.end(); ++it) {
-        clangArgs.push_back(std::string("-I") + *it);
-    }
-
-    // add framework search paths
-    std::vector<std::string> frameworksSearchPaths = settings.getFrameworkSearchPaths();
-    for(auto it = frameworksSearchPaths.begin(); it != frameworksSearchPaths.end(); ++it) {
-        clangArgs.push_back(std::string("-F") + *it);
-    }
-
-    // log clang parameters
-    std::cout << "Clang parameters: ";
-    for(std::vector<std::string>::iterator it = clangArgs.begin(); it != clangArgs.end(); ++it) {
-        std::cout << *it << " ";
-    }
-    std::cout << std::endl;
+std::string CreateUmbrellaHeader(const std::vector<std::string>& clangArgs) {
 
     std::string umbrellaHeaderContents;
     std::vector<std::string> moduleBlacklist;
 
     // Generate umbrella header for all modules from the sdk
     CreateUmbrellaHeaderForAmbientModules(clangArgs, &umbrellaHeaderContents, moduleBlacklist);
-
-    if(!umbrellaFile.empty()) {
-        std::error_code errorCode;
-        llvm::raw_fd_ostream umbrellaFileStream(umbrellaFile, errorCode, llvm::sys::fs::OpenFlags::F_None);
-        if (!errorCode) {
-            umbrellaFileStream << umbrellaHeaderContents;
-            umbrellaFileStream.close();
-        }
-    }
-
-    // Build and return the AST
-    std::unique_ptr<clang::ASTUnit> ast = clang::tooling::buildASTFromCodeWithArgs(umbrellaHeaderContents, clangArgs, "umbrella.h");
-    if(!ast) {
-        return nullptr;
-    }
-    SmallVector<Module*, 64> modules;
-    ast->getPreprocessor().getHeaderSearchInfo().collectAllModules(modules);
-    return ast;
+    return umbrellaHeaderContents;
 }
