@@ -193,9 +193,11 @@ std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumD
         llvm::SmallVector<char, 10> value;
         enumField->getInitVal().toString(value, 10, enumField->getInitVal().isSigned());
         std::string valueStr = std::string(value.data(), value.size());
-        if(fieldNamePrefixLength > 0)
+        if(fieldNamePrefixLength > 0) {
             jsCodeStream << (isFirstField ? "" : ",") << "\"" << enumField->getNameAsString().substr(fieldNamePrefixLength, std::string::npos) << "\":" << valueStr;
-        jsCodeStream << "," << "\"" << enumField->getNameAsString() << "\":" << valueStr;
+            isFirstField = false;
+        }
+        jsCodeStream << (isFirstField ? "" : ",") << "\"" << enumField->getNameAsString() << "\":" << valueStr;
         isFirstField = false;
     }
     jsCodeStream << "})";
