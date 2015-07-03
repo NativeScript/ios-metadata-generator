@@ -11,10 +11,10 @@ namespace Meta {
 class DeclarationConverterVisitor : public clang::RecursiveASTVisitor<DeclarationConverterVisitor>, public MetaFactoryDelegate, public TypeFactoryDelegate {
 public:
     explicit DeclarationConverterVisitor(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch)
-        : _idFactory(sourceManager, headerSearch, IdentifierFactory::getIosSdkNamesToRecalculate())
+        : _result()
+        , _idFactory(sourceManager, headerSearch, IdentifierFactory::getIosSdkNamesToRecalculate())
         , _metaFactory(this)
         , _typeFactory(this)
-        , _result()
     {
     }
 

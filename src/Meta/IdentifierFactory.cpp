@@ -40,7 +40,7 @@ Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, boo
     std::string name;
     std::string jsName;
     std::string fileName;
-    clang::Module* module;
+    clang::Module* module = nullptr;
 
     // calculate name
     if (const clang::NamedDecl* namedDecl = clang::dyn_cast<clang::NamedDecl>(&decl))

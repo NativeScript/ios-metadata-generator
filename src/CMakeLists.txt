@@ -37,6 +37,10 @@ target_link_libraries(objc-metadata-generator
     clangTooling
 )
 
+set_target_properties(objc-metadata-generator PROPERTIES
+    COMPILE_FLAGS "-Werror -Wall -Wextra -Wno-unused-parameter"
+)
+
 add_custom_command(TARGET objc-metadata-generator
                     POST_BUILD
                     COMMAND ${CMAKE_COMMAND} -E copy_directory ${LLVM_LIBDIR}/clang ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang)

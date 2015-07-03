@@ -380,7 +380,7 @@ public:
     {
         int mergedCategories = 0;
 
-        for (int i = 0; i < _categories.size(); i++) {
+        for (size_t i = 0; i < _categories.size(); i++) {
             if (!_categoryIsMerged[i]) {
                 std::shared_ptr<CategoryMeta> category = _categories[i];
                 std::shared_ptr<InterfaceMeta> extendedInterface = this->getMetaAs<InterfaceMeta>(category->extendedInterface);
@@ -430,7 +430,7 @@ public:
 private:
     int getModuleIndex(const std::string& moduleName)
     {
-        for (int i = 0; i < _topLevelModules.size(); i++) {
+        for (size_t i = 0; i < _topLevelModules.size(); i++) {
             if (_topLevelModules[i].getFullName() == moduleName)
                 return i;
         }

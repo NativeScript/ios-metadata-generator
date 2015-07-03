@@ -35,7 +35,7 @@ bool propertiesComparerByJsName(std::shared_ptr<Meta::PropertyMeta>& property1, 
 
 bool stringBeginsWith(std::string& str, std::vector<std::string>& possibleBegins)
 {
-    for (int i = 0; i < possibleBegins.size(); ++i) {
+    for (size_t i = 0; i < possibleBegins.size(); ++i) {
         if (possibleBegins[i].length() <= str.length() && str.compare(0, possibleBegins[i].size(), possibleBegins[i]) == 0) {
             return true;
         }
@@ -146,7 +146,7 @@ shared_ptr<Meta::FunctionMeta> Meta::MetaFactory::createFromFunction(clang::Func
 shared_ptr<Meta::RecordMeta> Meta::MetaFactory::createFromRecord(clang::RecordDecl& record)
 {
     if (!record.isThisDeclarationADefinition()) {
-        throw MetaCreationException(_delegate->getId(record, false), "A formard declaration of record.", false);
+        throw MetaCreationException(_delegate->getId(record, false), "A forward declaration of record.", false);
     }
 
     if (record.isUnion())

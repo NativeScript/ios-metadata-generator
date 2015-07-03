@@ -26,8 +26,8 @@ protected:
 public:
     TokensProcessor(clang::Preprocessor& preprocessor, std::map<std::string, void*>& context, std::shared_ptr<TokensProcessor> next = nullptr)
         : preprocessor(preprocessor)
-        , context(context)
         , nextProcessor(next)
+        , context(context)
     {
     }
 
