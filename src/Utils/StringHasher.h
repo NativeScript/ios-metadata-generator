@@ -90,7 +90,8 @@ public:
         addCharactersAssumingAligned(a, b);
     }
 
-    template<typename T, UChar Converter(T)> void addCharactersAssumingAligned(const T* data, unsigned length)
+    template <typename T, UChar Converter(T)>
+    void addCharactersAssumingAligned(const T* data, unsigned length)
     {
         ASSERT(!m_hasPendingCharacter);
 
@@ -106,12 +107,14 @@ public:
             addCharacter(Converter(*data));
     }
 
-    template<typename T> void addCharactersAssumingAligned(const T* data, unsigned length)
+    template <typename T>
+    void addCharactersAssumingAligned(const T* data, unsigned length)
     {
         addCharactersAssumingAligned<T, defaultConverter>(data, length);
     }
 
-    template<typename T, UChar Converter(T)> void addCharactersAssumingAligned(const T* data)
+    template <typename T, UChar Converter(T)>
+    void addCharactersAssumingAligned(const T* data)
     {
         ASSERT(!m_hasPendingCharacter);
 
@@ -125,12 +128,14 @@ public:
         }
     }
 
-    template<typename T> void addCharactersAssumingAligned(const T* data)
+    template <typename T>
+    void addCharactersAssumingAligned(const T* data)
     {
         addCharactersAssumingAligned<T, defaultConverter>(data);
     }
 
-    template<typename T, UChar Converter(T)> void addCharacters(const T* data, unsigned length)
+    template <typename T, UChar Converter(T)>
+    void addCharacters(const T* data, unsigned length)
     {
         if (m_hasPendingCharacter && length) {
             m_hasPendingCharacter = false;
@@ -140,12 +145,14 @@ public:
         addCharactersAssumingAligned<T, Converter>(data, length);
     }
 
-    template<typename T> void addCharacters(const T* data, unsigned length)
+    template <typename T>
+    void addCharacters(const T* data, unsigned length)
     {
         addCharacters<T, defaultConverter>(data, length);
     }
 
-    template<typename T, UChar Converter(T)> void addCharacters(const T* data)
+    template <typename T, UChar Converter(T)>
+    void addCharacters(const T* data)
     {
         if (m_hasPendingCharacter && *data) {
             m_hasPendingCharacter = false;
@@ -154,7 +161,8 @@ public:
         addCharactersAssumingAligned<T, Converter>(data);
     }
 
-    template<typename T> void addCharacters(const T* data)
+    template <typename T>
+    void addCharacters(const T* data)
     {
         addCharacters<T, defaultConverter>(data);
     }
@@ -191,50 +199,58 @@ public:
         return result;
     }
 
-    template<typename T, UChar Converter(T)> static unsigned computeHashAndMaskTop8Bits(const T* data, unsigned length)
+    template <typename T, UChar Converter(T)>
+    static unsigned computeHashAndMaskTop8Bits(const T* data, unsigned length)
     {
         StringHasher hasher;
         hasher.addCharactersAssumingAligned<T, Converter>(data, length);
         return hasher.hashWithTop8BitsMasked();
     }
 
-    template<typename T, UChar Converter(T)> static unsigned computeHashAndMaskTop8Bits(const T* data)
+    template <typename T, UChar Converter(T)>
+    static unsigned computeHashAndMaskTop8Bits(const T* data)
     {
         StringHasher hasher;
         hasher.addCharactersAssumingAligned<T, Converter>(data);
         return hasher.hashWithTop8BitsMasked();
     }
 
-    template<typename T> static unsigned computeHashAndMaskTop8Bits(const T* data, unsigned length)
+    template <typename T>
+    static unsigned computeHashAndMaskTop8Bits(const T* data, unsigned length)
     {
         return computeHashAndMaskTop8Bits<T, defaultConverter>(data, length);
     }
 
-    template<typename T> static unsigned computeHashAndMaskTop8Bits(const T* data)
+    template <typename T>
+    static unsigned computeHashAndMaskTop8Bits(const T* data)
     {
         return computeHashAndMaskTop8Bits<T, defaultConverter>(data);
     }
 
-    template<typename T, UChar Converter(T)> static unsigned computeHash(const T* data, unsigned length)
+    template <typename T, UChar Converter(T)>
+    static unsigned computeHash(const T* data, unsigned length)
     {
         StringHasher hasher;
         hasher.addCharactersAssumingAligned<T, Converter>(data, length);
         return hasher.hash();
     }
 
-    template<typename T, UChar Converter(T)> static unsigned computeHash(const T* data)
+    template <typename T, UChar Converter(T)>
+    static unsigned computeHash(const T* data)
     {
         StringHasher hasher;
         hasher.addCharactersAssumingAligned<T, Converter>(data);
         return hasher.hash();
     }
 
-    template<typename T> static unsigned computeHash(const T* data, unsigned length)
+    template <typename T>
+    static unsigned computeHash(const T* data, unsigned length)
     {
         return computeHash<T, defaultConverter>(data, length);
     }
 
-    template<typename T> static unsigned computeHash(const T* data)
+    template <typename T>
+    static unsigned computeHash(const T* data)
     {
         return computeHash<T, defaultConverter>(data);
     }
@@ -248,7 +264,8 @@ public:
         return computeHashAndMaskTop8Bits<UChar>(static_cast<const UChar*>(data), length / sizeof(UChar));
     }
 
-    template<size_t length> static unsigned hashMemory(const void* data)
+    template <size_t length>
+    static unsigned hashMemory(const void* data)
     {
         static_assert(!(length % 2), "length must be a multiple of two!");
         return hashMemory(data, length);

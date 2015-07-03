@@ -18,25 +18,30 @@ protected:
     std::shared_ptr<TokensProcessor> nextProcessor;
     std::map<std::string, void*>& context;
 
-    std::string next(clang::Token& token) {
+    std::string next(clang::Token& token)
+    {
         return nextProcessor ? nextProcessor->process(token) : "";
     }
 
 public:
     TokensProcessor(clang::Preprocessor& preprocessor, std::map<std::string, void*>& context, std::shared_ptr<TokensProcessor> next = nullptr)
-            : preprocessor(preprocessor),
-              context(context),
-              nextProcessor(next) {}
+        : preprocessor(preprocessor)
+        , context(context)
+        , nextProcessor(next)
+    {
+    }
 
     virtual std::string process(clang::Token& token) = 0;
 
-    template<class T>
-    T* getFromContext(std::string key) {
+    template <class T>
+    T* getFromContext(std::string key)
+    {
         auto it = context.find(key);
         return (it == context.end()) ? nullptr : static_cast<T*>(it->second);
     }
 
-    void addToContext(std::string key, void* value) {
+    void addToContext(std::string key, void* value)
+    {
         context[key] = value;
     }
 };
@@ -59,7 +64,8 @@ class GenericDeclarationsProcessor : public TokensProcessor {
         std::string genericInterfaceName;
         std::vector<std::string> genericParametersNames;
 
-        void clear() {
+        void clear()
+        {
             state = State::None;
             angleBracketsLevel = 0;
             genericInterfaceName = "";
@@ -69,10 +75,12 @@ class GenericDeclarationsProcessor : public TokensProcessor {
 
 private:
     StateInfo stateInfo;
-public:
 
+public:
     GenericDeclarationsProcessor(clang::Preprocessor& preprocessor, std::map<std::string, void*>& context, std::shared_ptr<TokensProcessor> next = nullptr)
-            : TokensProcessor(preprocessor, context, next) {}
+        : TokensProcessor(preprocessor, context, next)
+    {
+    }
 
     virtual std::string process(clang::Token& token) override;
 };
@@ -88,7 +96,8 @@ class GenericsUsagesProcessor : public TokensProcessor {
         State state = State::None;
         int angleBracketsLevel = 0;
 
-        void clear() {
+        void clear()
+        {
             state = State::None;
             angleBracketsLevel = 0;
         }
@@ -96,9 +105,11 @@ class GenericsUsagesProcessor : public TokensProcessor {
 
 private:
     StateInfo stateInfo;
+
 public:
     GenericsUsagesProcessor(clang::Preprocessor& preprocessor, std::map<std::string, void*>& context, std::shared_ptr<TokensProcessor> next = nullptr)
-            : TokensProcessor(preprocessor, context, next) {
+        : TokensProcessor(preprocessor, context, next)
+    {
         addToContext(GenericsUsagesProcessor::GenericInterfacesKey, new std::vector<std::string>);
     }
 
@@ -121,7 +132,8 @@ class GenericsForwardDeclarationsProcessor : public TokensProcessor {
         std::string genericInterfaceName;
         int angleBracketsLevel = 0;
 
-        void clear() {
+        void clear()
+        {
             state = State::None;
             genericInterfaceName = "";
             angleBracketsLevel = 0;
@@ -130,9 +142,12 @@ class GenericsForwardDeclarationsProcessor : public TokensProcessor {
 
 private:
     StateInfo stateInfo;
+
 public:
     GenericsForwardDeclarationsProcessor(clang::Preprocessor& preprocessor, std::map<std::string, void*>& context, std::shared_ptr<TokensProcessor> next = nullptr)
-            : TokensProcessor(preprocessor, context, next) { }
+        : TokensProcessor(preprocessor, context, next)
+    {
+    }
 
     virtual std::string process(clang::Token& token) override;
 };
@@ -149,16 +164,20 @@ class NullabilityModifiersProcessor : public TokensProcessor {
     struct StateInfo {
         State state = State::None;
 
-        void clear() {
+        void clear()
+        {
             state = State::None;
         }
     };
 
 private:
     StateInfo stateInfo;
+
 public:
     NullabilityModifiersProcessor(clang::Preprocessor& preprocessor, std::map<std::string, void*>& context, std::shared_ptr<TokensProcessor> next = nullptr)
-            : TokensProcessor(preprocessor, context, next) { }
+        : TokensProcessor(preprocessor, context, next)
+    {
+    }
 
     virtual std::string process(clang::Token& token) override;
 };
@@ -166,7 +185,9 @@ public:
 class KindOfModifierProcessor : public TokensProcessor {
 public:
     KindOfModifierProcessor(clang::Preprocessor& preprocessor, std::map<std::string, void*>& context, std::shared_ptr<TokensProcessor> next = nullptr)
-            : TokensProcessor(preprocessor, context, next) { }
+        : TokensProcessor(preprocessor, context, next)
+    {
+    }
 
     virtual std::string process(clang::Token& token) override;
 };
@@ -174,24 +195,29 @@ public:
 class DefaultProcessor : public TokensProcessor {
 public:
     DefaultProcessor(clang::Preprocessor& preprocessor, std::map<std::string, void*>& context, std::shared_ptr<TokensProcessor> next = nullptr)
-            : TokensProcessor(preprocessor, context, next) {}
+        : TokensProcessor(preprocessor, context, next)
+    {
+    }
 
     virtual std::string process(clang::Token& token) override;
 };
 
 class RemoveUnsupportedSyntaxActionPPCallbacks : public clang::PPCallbacks {
 private:
-    RemoveUnsupportedSyntaxAction *action;
+    RemoveUnsupportedSyntaxAction* action;
     std::vector<std::string> includeDirectives;
+
 public:
-    RemoveUnsupportedSyntaxActionPPCallbacks(RemoveUnsupportedSyntaxAction *action)
-            : action(action),
-              includeDirectives() {}
+    RemoveUnsupportedSyntaxActionPPCallbacks(RemoveUnsupportedSyntaxAction* action)
+        : action(action)
+        , includeDirectives()
+    {
+    }
 
     virtual void FileChanged(clang::SourceLocation Loc, FileChangeReason Reason, clang::SrcMgr::CharacteristicKind FileType, clang::FileID PrevFID) override;
 
-    virtual void InclusionDirective(clang::SourceLocation HashLoc, const clang::Token &IncludeTok, clang::StringRef FileName, bool IsAngled, clang::CharSourceRange FilenameRange,
-                                    const clang::FileEntry *File, clang::StringRef SearchPath, clang::StringRef RelativePath, const clang::Module *Imported) override;
+    virtual void InclusionDirective(clang::SourceLocation HashLoc, const clang::Token& IncludeTok, clang::StringRef FileName, bool IsAngled, clang::CharSourceRange FilenameRange,
+                                    const clang::FileEntry* File, clang::StringRef SearchPath, clang::StringRef RelativePath, const clang::Module* Imported) override;
 
     virtual void EndOfMainFile() override;
 };
@@ -199,17 +225,18 @@ public:
 class RemoveUnsupportedSyntaxAction : public clang::PreprocessorFrontendAction {
 private:
     friend class RemoveUnsupportedSyntaxActionPPCallbacks;
-    clang::Preprocessor *preprocessor;
+    clang::Preprocessor* preprocessor;
     std::map<std::string, std::stringstream>& filesMap;
     std::string currentFileName;
 
 public:
     RemoveUnsupportedSyntaxAction(std::map<std::string, std::stringstream>& filesMap)
-            : preprocessor(nullptr),
-              filesMap(filesMap) {}
+        : preprocessor(nullptr)
+        , filesMap(filesMap)
+    {
+    }
 
     virtual void ExecuteAction() override {}
 
-    virtual bool BeginSourceFileAction(clang::CompilerInstance &CI, clang::StringRef Filename) override;
+    virtual bool BeginSourceFileAction(clang::CompilerInstance& CI, clang::StringRef Filename) override;
 };
-
