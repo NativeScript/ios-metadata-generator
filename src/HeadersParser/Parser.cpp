@@ -11,12 +11,13 @@ using namespace clang;
 namespace path = llvm::sys::path;
 namespace fs = llvm::sys::fs;
 
-std::vector<std::string> parsePaths(std::string& paths) {
+std::vector<std::string> parsePaths(std::string& paths)
+{
     std::vector<std::string> result;
     char buffer[paths.size() + 1];
     int bufferSize = 0;
     bool inQuote = false;
-    for(char& c : paths) {
+    for (char& c : paths) {
         if (c == ' ' && !inQuote) {
             if (bufferSize != 0) {
                 buffer[bufferSize] = '\0';
@@ -26,8 +27,8 @@ std::vector<std::string> parsePaths(std::string& paths) {
             continue;
         }
 
-        if(c == '\"') {
-            if(inQuote) {
+        if (c == '\"') {
+            if (inQuote) {
                 buffer[bufferSize] = '\0';
                 result.push_back(std::string(buffer));
             }
@@ -47,19 +48,22 @@ std::vector<std::string> parsePaths(std::string& paths) {
     return result;
 }
 
-static SmallVectorImpl<char>& operator+=(SmallVectorImpl<char>& includes, StringRef rhs) {
+static SmallVectorImpl<char>& operator+=(SmallVectorImpl<char>& includes, StringRef rhs)
+{
     includes.append(rhs.begin(), rhs.end());
     return includes;
 }
 
-static std::error_code addHeaderInclude(StringRef headerName, SmallVectorImpl<char>& includes) {
+static std::error_code addHeaderInclude(StringRef headerName, SmallVectorImpl<char>& includes)
+{
     includes += "#import \"";
 
     // Use an absolute path for the include; there's no reason to think whether a relative path will
     // work (. might not be on our include path) or that it will find the same file.
     if (path::is_absolute(headerName)) {
         includes += headerName;
-    } else {
+    }
+    else {
         SmallString<256> header = headerName;
         if (std::error_code err = fs::make_absolute(header))
             return err;
@@ -71,11 +75,13 @@ static std::error_code addHeaderInclude(StringRef headerName, SmallVectorImpl<ch
     return std::error_code();
 }
 
-static std::error_code addHeaderInclude(const FileEntry* header, SmallVectorImpl<char>& includes) {
+static std::error_code addHeaderInclude(const FileEntry* header, SmallVectorImpl<char>& includes)
+{
     return addHeaderInclude(header->getName(), includes);
 }
 
-static std::error_code collectModuleHeaderIncludes(FileManager& fileMgr, ModuleMap& modMap, const Module* module, SmallVectorImpl<char>& includes) {
+static std::error_code collectModuleHeaderIncludes(FileManager& fileMgr, ModuleMap& modMap, const Module* module, SmallVectorImpl<char>& includes)
+{
     // Don't collect any headers for unavailable modules.
     if (!module->isAvailable())
         return std::error_code();
@@ -88,7 +94,8 @@ static std::error_code collectModuleHeaderIncludes(FileManager& fileMgr, ModuleM
     if (auto umbrellaHeader = module->getUmbrellaHeader()) {
         if (std::error_code err = addHeaderInclude(umbrellaHeader, includes))
             return err;
-    } else if (const DirectoryEntry* umbrellaDir = module->getUmbrellaDir()) {
+    }
+    else if (const DirectoryEntry* umbrellaDir = module->getUmbrellaDir()) {
         // Add all of the headers we find in this subdirectory.
         std::error_code ec;
         SmallString<128> dirNative;
@@ -96,12 +103,12 @@ static std::error_code collectModuleHeaderIncludes(FileManager& fileMgr, ModuleM
         for (fs::recursive_directory_iterator dir(dirNative.str(), ec), dirEnd; dir != dirEnd && !ec; dir.increment(ec)) {
             // Check whether this entry has an extension typically associated with headers.
             if (!llvm::StringSwitch<bool>(path::extension(dir->path()))
-                    .Cases(".h", ".H", true)
-                    .Default(false))
+                     .Cases(".h", ".H", true)
+                     .Default(false))
                 continue;
 
             // If this header is marked 'unavailable' in this module, don't include it.
-            if (const FileEntry *header = fileMgr.getFile(dir->path())) {
+            if (const FileEntry* header = fileMgr.getFile(dir->path())) {
                 if (modMap.isHeaderUnavailableInModule(header, module))
                     continue;
 
@@ -120,7 +127,8 @@ static std::error_code collectModuleHeaderIncludes(FileManager& fileMgr, ModuleM
     return std::error_code();
 }
 
-std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::string>& args, std::string* umbrellaHeaderContents, const std::vector<std::string>& moduleBlacklist) {
+std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::string>& args, std::string* umbrellaHeaderContents, const std::vector<std::string>& moduleBlacklist)
+{
     std::unique_ptr<clang::ASTUnit> ast = clang::tooling::buildASTFromCodeWithArgs("", args, "umbrella.h");
     if (!ast)
         return std::error_code(-1, std::generic_category());
@@ -133,7 +141,7 @@ std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::str
     FileManager& fileManager = ast->getFileManager();
 
     SmallString<256> headerContents;
-    std::function<void (const Module*)> collector = [&](const Module* module) {
+    std::function<void(const Module*)> collector = [&](const Module* module) {
         if (std::find(moduleBlacklist.begin(), moduleBlacklist.end(), module->getFullModuleName()) != moduleBlacklist.end())
             return;
         collectModuleHeaderIncludes(fileManager, moduleMap, module, headerContents);
@@ -148,7 +156,8 @@ std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::str
     return std::error_code();
 }
 
-std::string CreateUmbrellaHeader(const std::vector<std::string>& clangArgs) {
+std::string CreateUmbrellaHeader(const std::vector<std::string>& clangArgs)
+{
 
     std::string umbrellaHeaderContents;
     std::vector<std::string> moduleBlacklist;

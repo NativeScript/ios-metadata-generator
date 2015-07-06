@@ -1,3 +1,35 @@
+set(GENERATOR_HEADERS
+    Binary/binaryHashtable.h
+    Binary/binaryOperation.h
+    Binary/binaryReader.h
+    Binary/binarySerializer.h
+    Binary/binarySerializerPrivate.h
+    Binary/binaryStructures.h
+    Binary/binaryTypeEncodingSerializer.h
+    Binary/binaryWriter.h
+    Binary/metaFile.h
+    HeadersParser/Parser.h
+    Meta/DeclarationConverterVisitor.h
+    Meta/Filters/HandleExceptionalMetasFilter.h
+    Meta/Filters/RemoveDuplicateMembersFilter.h
+    Meta/IdentifierFactory.h
+    Meta/MetaEntities.h
+    Meta/MetaFactory.h
+    Meta/MetaVisitor.h
+    Meta/TypeEntities.h
+    Meta/TypeFactory.h
+    Meta/TypeVisitor.h
+    Meta/Utils.h
+    RemoveUnsupportedSyntaxAction.h
+    Utils/fileStream.h
+    Utils/memoryStream.h
+    Utils/serializer.h
+    Utils/stream.h
+    Utils/StringHasher.h
+    Yaml/MetaYamlTraits.h
+    Yaml/YamlSerializer.h
+)
+
 set(GENERATOR_SOURCES
     main.cpp
     RemoveUnsupportedSyntaxAction.cpp
@@ -21,7 +53,7 @@ set(GENERATOR_SOURCES
     Binary/metaFile.cpp
 )
 
-add_executable(objc-metadata-generator ${GENERATOR_SOURCES})
+add_executable(objc-metadata-generator ${GENERATOR_HEADERS} ${GENERATOR_SOURCES})
 target_link_libraries(objc-metadata-generator ${LLVM_LINKER_FLAGS})
 target_link_libraries(objc-metadata-generator
     clangFrontend
@@ -37,6 +69,10 @@ target_link_libraries(objc-metadata-generator
     clangTooling
 )
 
+set_target_properties(objc-metadata-generator PROPERTIES
+    COMPILE_FLAGS "-Werror -Wall -Wextra -Wno-unused-parameter"
+)
+
 add_custom_command(TARGET objc-metadata-generator
                     POST_BUILD
                     COMMAND ${CMAKE_COMMAND} -E copy_directory ${LLVM_LIBDIR}/clang ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang)
@@ -45,3 +81,10 @@ install(TARGETS objc-metadata-generator
         RUNTIME DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang DESTINATION lib)
+
+get_target_property(_target_sources objc-metadata-generator SOURCES)
+foreach(child ${_target_sources})
+    get_filename_component(child_directory ${child} DIRECTORY)
+    string(REPLACE "/" "\\" groupName "${child_directory}")
+    source_group("${groupName}" FILES ${child})
+endforeach()
