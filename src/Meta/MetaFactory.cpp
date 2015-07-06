@@ -271,9 +271,21 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
     // set IsVariadic flag
     methodMeta->setFlags(MetaFlags::MethodIsVariadic, method.isVariadic());
 
-    // set MethodIsNilTerminatedVariadic
+    // set MethodIsNilTerminatedVariadic flag
     bool isNullTerminatedVariadic = method.isVariadic() && Utils::getAttributes<clang::SentinelAttr>(method).size() > 0;
     methodMeta->setFlags(MetaFlags::MethodIsNullTerminatedVariadic, isNullTerminatedVariadic);
+
+    // set MethodHasErrorOutParameter flag
+    if (method.parameters().size() > 0) {
+        clang::ParmVarDecl* lastParameter = method.parameters()[method.parameters().size() - 1];
+        Type type = _delegate->getType(lastParameter->getType());
+        if (type.is(TypeType::TypePointer)) {
+            Type innerType = type.getDetailsAs<PointerTypeDetails>().innerType;
+            if (innerType.is(TypeType::TypeInterface) && innerType.getDetailsAs<InterfaceTypeDetails>().id.name == "NSError") {
+                methodMeta->setFlags(MetaFlags::MethodHasErrorOutParameter, true);
+            }
+        }
+    }
 
     if (method.isVariadic() && !isNullTerminatedVariadic)
         throw MetaCreationException(_delegate->getId(method, false), "Method is variadic (and is not marked as nil terminated.).", false);

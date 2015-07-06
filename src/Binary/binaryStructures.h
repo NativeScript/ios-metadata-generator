@@ -60,6 +60,7 @@ enum BinaryFlags : uint8_t {
     MethodIsVariadic = 1 << 2,
     MethodIsNullTerminatedVariadic = 1 << 3,
     MethodOwnsReturnedCocoaObject = 1 << 4,
+    MethodHasErrorOutParameter = 1 << 5,
     // Property
     PropertyHasGetter = 1 << 2,
     PropertyHasSetter = 1 << 3
