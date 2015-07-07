@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <iterator>
 #include "../Meta/Utils.h"
+#include "../Meta/MetaEntities.h"
 
 namespace TypeScript {
 using namespace Meta;
@@ -205,9 +206,10 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
 
     output << "(";
 
-    for (size_t i = 1; i < meta->signature.size(); i++) {
+    size_t lastParamIndex = meta->getFlags(::Meta::MetaFlags::MethodHasErrorOutParameter) ? (meta->signature.size() - 1) : meta->signature.size();
+    for (size_t i = 1; i < lastParamIndex; i++) {
         output << parameterNames[i - 1] << ": " << tsifyType(meta->signature[i]);
-        if (i < meta->signature.size() - 1) {
+        if (i < lastParamIndex - 1) {
             output << ", ";
         }
     }
