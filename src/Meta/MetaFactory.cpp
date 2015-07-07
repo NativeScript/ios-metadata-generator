@@ -291,17 +291,21 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
         throw MetaCreationException(_delegate->getId(method, false), "Method is variadic (and is not marked as nil terminated.).", false);
 
     // set MethodOwnsReturnedCocoaObject flag
-    bool nsReturnsRetainedAttr = Utils::getAttributes<clang::NSReturnsRetainedAttr>(method).size() > 0;
-    bool nsReturnsNotRetainedAttr = Utils::getAttributes<clang::NSReturnsNotRetainedAttr>(method).size() > 0;
-    if (nsReturnsRetainedAttr && nsReturnsNotRetainedAttr)
-        throw MetaCreationException(_delegate->getId(method, false), "Method has both NS_Returns_Retained and NS_Returns_Not_Retained attributes.", true);
-    else if (nsReturnsRetainedAttr)
-        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, true);
-    else if (nsReturnsNotRetainedAttr)
-        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, false);
-    else {
-        vector<string> selectorBegins = { "alloc", "new", "copy", "mutableCopy" };
-        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, stringBeginsWith(methodMeta->getSelector(), selectorBegins));
+    clang::ObjCMethodFamily methodFamily = method.getMethodFamily();
+    switch(methodFamily) {
+        case clang::ObjCMethodFamily::OMF_copy :
+        case clang::ObjCMethodFamily::OMF_init :
+        case clang::ObjCMethodFamily::OMF_mutableCopy :
+        case clang::ObjCMethodFamily::OMF_new : {
+            bool hasNsReturnsNotRetainedAttr = Utils::getAttributes<clang::NSReturnsNotRetainedAttr>(method).size() > 0;
+            methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, !hasNsReturnsNotRetainedAttr);
+            break;
+        }
+        default: {
+            bool hasNsReturnsRetainedAttr = Utils::getAttributes<clang::NSReturnsRetainedAttr>(method).size() > 0;
+            methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, hasNsReturnsRetainedAttr);
+            break;
+        }
     }
 
     // set signature
