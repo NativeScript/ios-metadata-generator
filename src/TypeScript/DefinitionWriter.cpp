@@ -8,7 +8,19 @@
 namespace TypeScript {
 using namespace Meta;
 
-static std::set<std::string> hiddenMethods = { "retain", "release", "autorelease", "allocWithZone" };
+static std::set<std::string> hiddenMethods = { "retain", "release", "autorelease", "allocWithZone", "zone" };
+
+static std::set<std::string> bannedIdentifiers = { "function", "arguments", "in" };
+
+static std::string sanitizeParameterName(const std::string& parameterName)
+{
+    if (bannedIdentifiers.find(parameterName) != bannedIdentifiers.end()) {
+        return "_" + parameterName;
+    }
+    else {
+        return parameterName;
+    }
+}
 
 void DefinitionWriter::visit(InterfaceMeta* meta)
 {
@@ -58,7 +70,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         baseClassId = baseClass->base;
     }
 
-    _buffer << std::endl << "\tclass " << meta->id.jsName;
+    _buffer << std::endl << "\tdeclare class " << meta->id.jsName;
     if (!meta->base.name.empty()) {
         _buffer << " extends " << localizeReference(meta->base);
     }
@@ -176,7 +188,7 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
 
     _buffer << "\t}" << std::endl;
 
-    _buffer << "\tvar " << meta->id.jsName << ": any; /* Protocol */" << std::endl;
+    _buffer << "\tdeclare var " << meta->id.jsName << ": any; /* Protocol */" << std::endl;
 }
 
 std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner)
@@ -208,7 +220,7 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
 
     size_t lastParamIndex = meta->getFlags(::Meta::MetaFlags::MethodHasErrorOutParameter) ? (meta->signature.size() - 1) : meta->signature.size();
     for (size_t i = 1; i < lastParamIndex; i++) {
-        output << parameterNames[i - 1] << ": " << tsifyType(meta->signature[i]);
+        output << sanitizeParameterName(parameterNames[i - 1]) << ": " << tsifyType(meta->signature[i]);
         if (i < lastParamIndex - 1) {
             output << ", ";
         }
@@ -274,7 +286,7 @@ void DefinitionWriter::visit(FunctionMeta* meta)
 
     std::ostringstream params;
     for (size_t i = 1; i < meta->signature.size(); i++) {
-        std::string name = functionDecl.getParamDecl(i - 1)->getNameAsString();
+        std::string name = sanitizeParameterName(functionDecl.getParamDecl(i - 1)->getNameAsString());
         params << (name.size() ? name : "p" + std::to_string(i)) << ": " << tsifyType(meta->signature[i]);
         if (i < meta->signature.size() - 1) {
             params << ", ";
@@ -282,7 +294,7 @@ void DefinitionWriter::visit(FunctionMeta* meta)
     }
 
     _buffer << std::endl;
-    _buffer << "\tfunction " << meta->id.jsName
+    _buffer << "\tdeclare function " << meta->id.jsName
             << "(" << params.str() << "): " << tsifyType(meta->signature[0]) << ";";
     _buffer << std::endl;
 }
@@ -295,7 +307,7 @@ void DefinitionWriter::visit(StructMeta* meta)
     writeMembers(meta->fields);
     _buffer << "\t}" << std::endl;
 
-    _buffer << "\tvar " << meta->id.jsName << ": interop.StructType<" << meta->id.jsName << ">;";
+    _buffer << "\tdeclare var " << meta->id.jsName << ": interop.StructType<" << meta->id.jsName << ">;";
 
     _buffer << std::endl;
 }
@@ -324,7 +336,7 @@ void DefinitionWriter::visit(JsCodeMeta* meta)
         clang::EnumDecl* enumDecl = clang::dyn_cast<clang::EnumDecl>(enumConstantDecl->getLexicalDeclContext());
         if (!enumDecl->hasNameForLinkage()) {
             _buffer << std::endl;
-            _buffer << "\tconst " << meta->id.jsName << ": number;";
+            _buffer << "\t declare const " << meta->id.jsName << ": number;";
             _buffer << std::endl;
         }
     }
@@ -340,7 +352,7 @@ void DefinitionWriter::visit(JsCodeMeta* meta)
             std::string prefix(Utils::getCommonWordPrefix(fieldNames));
 
             _buffer << std::endl;
-            _buffer << "\tconst enum " << meta->id.jsName << " {" << std::endl;
+            _buffer << "\tdeclare const enum " << meta->id.jsName << " {" << std::endl;
 
             for (size_t i = 0; i < fields.size(); i++) {
                 _buffer << "\t\t" << fields[i]->getNameAsString().substr(prefix.size()) << " = " << fields[i]->getInitVal().toString(10);
@@ -359,7 +371,7 @@ void DefinitionWriter::visit(JsCodeMeta* meta)
 void DefinitionWriter::visit(VarMeta* meta)
 {
     _buffer << std::endl;
-    _buffer << "\tvar " << meta->id.jsName << ": " << tsifyType(meta->signature) << ";";
+    _buffer << "\tdeclare var " << meta->id.jsName << ": " << tsifyType(meta->signature) << ";";
     _buffer << std::endl;
 }
 
@@ -381,17 +393,7 @@ std::string DefinitionWriter::writeFunctionProto(const std::vector<Type>& signat
 
 std::string DefinitionWriter::localizeReference(const std::string& jsName, std::string moduleName)
 {
-    auto dotPosition = moduleName.find(".");
-    if (dotPosition != std::string::npos) {
-        moduleName = moduleName.substr(0, dotPosition);
-    }
-
-    if (moduleName == _module->getFullName()) {
-        return jsName;
-    }
-
-    _importedModules.emplace(moduleName);
-    return moduleName + "." + jsName;
+    return jsName;
 }
 
 std::string DefinitionWriter::localizeReference(const DeclId& name)
@@ -507,14 +509,7 @@ std::string DefinitionWriter::write()
 
     std::ostringstream output;
 
-    output << "declare module \"objc!" << _module->getFullName() << "\" {" << std::endl;
-    for (auto& importedModule : _importedModules) {
-        output << "\timport " << importedModule << " = require(\"objc!" << importedModule << "\");" << std::endl;
-    }
-
     output << _buffer.str();
-
-    output << "}";
 
     return output.str();
 }
