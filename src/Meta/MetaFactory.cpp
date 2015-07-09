@@ -294,7 +294,8 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
     clang::ObjCMethodFamily methodFamily = method.getMethodFamily();
     switch(methodFamily) {
         case clang::ObjCMethodFamily::OMF_copy :
-        case clang::ObjCMethodFamily::OMF_init :
+        //case clang::ObjCMethodFamily::OMF_init :
+        //case clang::ObjCMethodFamily::OMF_alloc :
         case clang::ObjCMethodFamily::OMF_mutableCopy :
         case clang::ObjCMethodFamily::OMF_new : {
             bool hasNsReturnsNotRetainedAttr = Utils::getAttributes<clang::NSReturnsNotRetainedAttr>(method).size() > 0;
