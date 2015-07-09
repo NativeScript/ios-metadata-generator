@@ -93,5 +93,7 @@ public:
     virtual unique_ptr<TypeEncoding> visitAnonymousStruct(::Meta::AnonymousStructTypeDetails& typeDetails) override;
 
     virtual unique_ptr<TypeEncoding> visitAnonymousUnion(::Meta::AnonymousUnionTypeDetails& typeDetails) override;
+
+    virtual unique_ptr<TypeEncoding> visitEnum(::Meta::EnumTypeDetails& typeDetails) override;
 };
 }

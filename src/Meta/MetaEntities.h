@@ -7,6 +7,7 @@
 #include <iostream>
 #include "TypeEntities.h"
 #include "MetaVisitor.h"
+#include <llvm/ADT/iterator_range.h>
 
 #define UNKNOWN_VERSION \
     {                   \
@@ -419,6 +420,16 @@ public:
     const_top_level_modules_iterator top_level_modules_begin() const { return _topLevelModules.begin(); }
     top_level_modules_iterator top_level_modules_end() { return _topLevelModules.end(); }
     const_top_level_modules_iterator top_level_modules_end() const { return _topLevelModules.end(); }
+
+    llvm::iterator_range<top_level_modules_iterator> top_level_modules()
+    {
+        return llvm::iterator_range<top_level_modules_iterator>(top_level_modules_begin(), top_level_modules_end());
+    }
+
+    const llvm::iterator_range<const_top_level_modules_iterator> top_level_modules() const
+    {
+        return llvm::iterator_range<const_top_level_modules_iterator>(top_level_modules_begin(), top_level_modules_end());
+    }
 
     categories_iterator categories_begin() { return _categories.begin(); }
     categories_const_iterator categories_begin() const { return _categories.begin(); }

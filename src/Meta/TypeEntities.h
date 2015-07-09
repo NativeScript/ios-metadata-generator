@@ -44,7 +44,8 @@ enum TypeType {
     TypeStruct,
     TypeUnion,
     TypeAnonymousStruct,
-    TypeAnonymousUnion
+    TypeAnonymousUnion,
+    TypeEnum,
 };
 
 class Type {
@@ -100,6 +101,7 @@ public:
     static Type Union(DeclId id);
     static Type AnonymousStruct(std::vector<RecordField> fields);
     static Type AnonymousUnion(std::vector<RecordField> fields);
+    static Type Enum(Type underlyingType, DeclId name);
 
     TypeType getType() const { return type; }
 
@@ -180,6 +182,8 @@ public:
             return visitor.visitAnonymousStruct(getDetailsAs<AnonymousStructTypeDetails>());
         case TypeAnonymousUnion:
             return visitor.visitAnonymousUnion(getDetailsAs<AnonymousUnionTypeDetails>());
+        case TypeEnum:
+            return visitor.visitEnum(getDetailsAs<EnumTypeDetails>());
         }
     }
 
@@ -328,5 +332,16 @@ struct AnonymousUnionTypeDetails : TypeDetails {
     }
 
     std::vector<RecordField> fields;
+};
+
+struct EnumTypeDetails : TypeDetails {
+    EnumTypeDetails(Type underlyingType, DeclId name)
+        : underlyingType(underlyingType)
+        , name(name)
+    {
+    }
+
+    Type underlyingType;
+    DeclId name;
 };
 }
