@@ -144,6 +144,8 @@ void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta* meta, binary:
         binaryMetaStruct._flags |= BinaryFlags::MethodIsNullTerminatedVariadic;
     if (meta->getFlags(::Meta::MetaFlags::MethodOwnsReturnedCocoaObject))
         binaryMetaStruct._flags |= BinaryFlags::MethodOwnsReturnedCocoaObject;
+    if (meta->getFlags(::Meta::MetaFlags::MethodHasErrorOutParameter))
+        binaryMetaStruct._flags |= BinaryFlags::MethodHasErrorOutParameter;
 
     vector< ::Meta::Type> typeEncodings;
     for (auto& encoding : meta->signature) {

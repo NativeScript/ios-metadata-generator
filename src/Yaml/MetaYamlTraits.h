@@ -127,6 +127,7 @@ namespace yaml {
             io.bitSetCase(value, "MethodIsVariadic", Meta::MetaFlags::MethodIsVariadic);
             io.bitSetCase(value, "MethodIsNullTerminatedVariadic", Meta::MetaFlags::MethodIsNullTerminatedVariadic);
             io.bitSetCase(value, "MethodOwnsReturnedCocoaObject", Meta::MetaFlags::MethodOwnsReturnedCocoaObject);
+            io.bitSetCase(value, "MethodHasErrorOutParameter", Meta::MetaFlags::MethodHasErrorOutParameter);
         }
     };
 
