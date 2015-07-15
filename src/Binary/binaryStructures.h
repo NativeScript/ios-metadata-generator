@@ -57,6 +57,7 @@ enum BinaryFlags : uint8_t {
     FunctionIsVariadic = 1 << 5,
     FunctionOwnsReturnedCocoaObject = 1 << 4,
     // Method
+    MethodIsInitializer = 1 << 1,
     MethodIsVariadic = 1 << 2,
     MethodIsNullTerminatedVariadic = 1 << 3,
     MethodOwnsReturnedCocoaObject = 1 << 4,

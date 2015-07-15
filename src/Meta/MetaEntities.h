@@ -32,7 +32,8 @@ enum MetaFlags : uint8_t {
     MethodIsVariadic = 1 << 3,
     MethodIsNullTerminatedVariadic = 1 << 4,
     MethodOwnsReturnedCocoaObject = 1 << 5,
-    MethodHasErrorOutParameter = 1 << 6
+    MethodHasErrorOutParameter = 1 << 6,
+    MethodIsInitializer = 1 << 7
 };
 
 enum MetaType {

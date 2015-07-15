@@ -287,6 +287,9 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
         }
     }
 
+    // set MethodIsInitializer flag
+    methodMeta->setFlags(MetaFlags::MethodIsInitializer, method.getMethodFamily() == clang::ObjCMethodFamily::OMF_init);
+
     if (method.isVariadic() && !isNullTerminatedVariadic)
         throw MetaCreationException(_delegate->getId(method, false), "Method is variadic (and is not marked as nil terminated.).", false);
 
