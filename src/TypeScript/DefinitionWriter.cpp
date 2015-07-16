@@ -453,7 +453,8 @@ std::string DefinitionWriter::tsifyType(const Type& type)
     case TypeFunctionPointer:
         return "interop.FunctionReference<" + writeFunctionProto(type.getDetailsAs<FunctionPointerTypeDetails>().signature)
                + ">";
-    case TypeInterface: {
+    case TypeInterface:
+    case TypeBridgedInterface: {
         InterfaceTypeDetails& details = type.getDetailsAs<InterfaceTypeDetails>();
         if (details.id.jsName == "NSNumber") {
             return "number";
