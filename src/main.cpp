@@ -58,6 +58,7 @@ public:
 
         // Serialize Meta objects to Yaml
         if (!cla_outputYamlFolder.empty()) {
+            llvm::sys::fs::create_directories(cla_outputYamlFolder);
             for (Meta::MetaContainer::top_level_modules_iterator it = metaContainer.top_level_modules_begin(); it != metaContainer.top_level_modules_end(); ++it) {
                 Yaml::YamlSerializer::serialize<Meta::ModuleMeta>(std::string(cla_outputYamlFolder.getValue()) + "/" + it->getFullName() + ".yaml", *it);
             }
