@@ -113,6 +113,14 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
     }
 
+    if (compoundInstanceMethods.find("objectAtIndexedSubscript") != compoundInstanceMethods.end()) {
+        _buffer << "\t\t[index: number]: any;" << std::endl;
+    }
+
+    if (compoundInstanceMethods.find("countByEnumeratingWithStateObjectsCount") != compoundInstanceMethods.end()) {
+        _buffer << "\t\t[Symbol.iterator](): Iterator<any>;" << std::endl;
+    }
+
     for (auto& methodPair : compoundInstanceMethods) {
         if (compoundProperties.find(methodPair.first) != compoundProperties.end()) {
             continue;
