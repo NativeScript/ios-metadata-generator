@@ -174,6 +174,8 @@ shared_ptr<Type> TypeFactory::create(const clang::Type* type)
             resultType = createFromFunctionNoProtoType(concreteType);
         else if (const clang::ParenType* concreteType = clang::dyn_cast<clang::ParenType>(type))
             resultType = createFromParenType(concreteType);
+        else if(const clang::AttributedType* attributedType = clang::dyn_cast<clang::AttributedType>(type))
+            return createFromAttributedType(attributedType);
         else
             throw TypeCreationException(type, "Unable to create encoding for this type.", true);
     }
@@ -451,6 +453,10 @@ shared_ptr<Type> TypeFactory::createFromFunctionNoProtoType(const clang::Functio
 shared_ptr<Type> TypeFactory::createFromParenType(const clang::ParenType* type)
 {
     return this->create(type->desugar().getTypePtr());
+}
+
+shared_ptr<Type> TypeFactory::createFromAttributedType(const clang::AttributedType* type) {
+    return this->create(type->getModifiedType());
 }
 
 bool TypeFactory::isSpecificTypedefType(const clang::TypedefType* type, const string& typedefName)

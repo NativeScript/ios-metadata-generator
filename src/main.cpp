@@ -1,7 +1,6 @@
 #include <llvm/Support/Debug.h>
 #include <clang/Tooling/Tooling.h>
 #include <clang/Frontend/CompilerInstance.h>
-#include "RemoveUnsupportedSyntaxAction.h"
 #include "HeadersParser/Parser.h"
 #include "Meta/DeclarationConverterVisitor.h"
 #include "Meta/Filters/HandleExceptionalMetasFilter.h"
@@ -16,9 +15,7 @@
 #include <fstream>
 
 // Command line parameters
-llvm::cl::opt<bool> cla_enableHeaderPreprocessingIfNeeded("enable-header-preprocessing-if-needed", llvm::cl::desc("Whether to preprocess and remove all new ObjC features (generics, nullability specifiers etc.) from headers. The preprocessing happens only if a concrete SDK is detected."));
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));
-llvm::cl::opt<string> cla_outputIntermediateHeadersPath("output-intermediate-headers", llvm::cl::desc("Specify the output folder for intermediate headers"), llvm::cl::value_desc("<dir_path>"));
 llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("<dir_path>"));
 llvm::cl::opt<string> cla_outputBinFile("output-bin", llvm::cl::desc("Specify the output binary metadata file"), llvm::cl::value_desc("<file_path>"));
 llvm::cl::opt<string> cla_outputDtsFolder("output-typescript", llvm::cl::desc("Specify the output .d.ts folder"), llvm::cl::value_desc("<dir_path>"));
@@ -175,41 +172,8 @@ int main(int argc, const char** argv)
         }
     }
 
-    clang::tooling::FileContentMappings filesMappings;
-    // Remove not supported syntax in headers
-    if (cla_enableHeaderPreprocessingIfNeeded) {
-        // Extract SDK version form isysroot path. This depends on specific naming convention of SDK folders.
-        std::size_t lastPathComponentIndex = isysroot.find_last_of("/");
-        std::size_t sdkVersionDigit = isysroot.find_first_of("0123456789", lastPathComponentIndex);
-        bool isLowerThaniOS9 = (isysroot[sdkVersionDigit] - '0' < 9 && isysroot[sdkVersionDigit + 1] == '.');
-
-        if (!isLowerThaniOS9) {
-            std::map<std::string, std::stringstream> filesMap;
-            clang::tooling::runToolOnCodeWithArgs(new RemoveUnsupportedSyntaxAction(filesMap), umbrellaContent, clangArgs, "umbrella.h");
-
-            // save the output header file on the file system (optional)
-            if (!cla_outputIntermediateHeadersPath.empty()) {
-                for (auto& pair : filesMap) {
-                    if (!pair.first.empty()) {
-                        std::error_code errorCode;
-                        llvm::raw_fd_ostream outputFileStream(cla_outputIntermediateHeadersPath + replaceString(pair.first, "/", "|"), errorCode, llvm::sys::fs::OpenFlags::F_None);
-                        if (!errorCode) {
-                            outputFileStream << pair.second.str();
-                            outputFileStream.close();
-                        }
-                    }
-                }
-            }
-
-            for (auto& pair : filesMap) {
-                if (!pair.first.empty())
-                    filesMappings.push_back(std::pair<std::string, std::string>(pair.first, pair.second.str()));
-            }
-        }
-    }
-
     // generate metadata for the intermediate sdk header
-    clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", filesMappings);
+    clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", std::make_shared<clang::PCHContainerOperations>());
 
     std::clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;

@@ -93,6 +93,8 @@ private:
 
     std::shared_ptr<Type> createFromParenType(const clang::ParenType* type);
 
+    std::shared_ptr<Type> createFromAttributedType(const clang::AttributedType* type);
+
     // helpers
     bool isSpecificTypedefType(const clang::TypedefType* type, const std::string& typedefName);
 

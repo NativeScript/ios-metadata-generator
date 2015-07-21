@@ -22,7 +22,6 @@ set(GENERATOR_HEADERS
     Meta/TypeFactory.h
     Meta/TypeVisitor.h
     Meta/Utils.h
-    RemoveUnsupportedSyntaxAction.h
     TypeScript/DefinitionWriter.h
     Utils/fileStream.h
     Utils/memoryStream.h
@@ -35,7 +34,6 @@ set(GENERATOR_HEADERS
 
 set(GENERATOR_SOURCES
     main.cpp
-    RemoveUnsupportedSyntaxAction.cpp
     HeadersParser/Parser.cpp
     Meta/DeclarationConverterVisitor.cpp
     Meta/MetaFactory.cpp
