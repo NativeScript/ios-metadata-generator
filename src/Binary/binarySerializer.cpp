@@ -146,7 +146,7 @@ void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta* meta, binary:
         binaryMetaStruct._flags |= BinaryFlags::MethodOwnsReturnedCocoaObject;
     if (meta->getFlags(::Meta::MetaFlags::MethodHasErrorOutParameter))
         binaryMetaStruct._flags |= BinaryFlags::MethodHasErrorOutParameter;
-    if(meta->getFlags(::Meta::MetaFlags::MethodIsInitializer))
+    if (meta->getFlags(::Meta::MetaFlags::MethodIsInitializer))
         binaryMetaStruct._flags |= BinaryFlags::MethodIsInitializer;
 
     vector< ::Meta::Type> typeEncodings;

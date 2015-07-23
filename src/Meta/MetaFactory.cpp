@@ -295,21 +295,21 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
 
     // set MethodOwnsReturnedCocoaObject flag
     clang::ObjCMethodFamily methodFamily = method.getMethodFamily();
-    switch(methodFamily) {
-        case clang::ObjCMethodFamily::OMF_copy :
-        //case clang::ObjCMethodFamily::OMF_init :
-        //case clang::ObjCMethodFamily::OMF_alloc :
-        case clang::ObjCMethodFamily::OMF_mutableCopy :
-        case clang::ObjCMethodFamily::OMF_new : {
-            bool hasNsReturnsNotRetainedAttr = Utils::getAttributes<clang::NSReturnsNotRetainedAttr>(method).size() > 0;
-            methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, !hasNsReturnsNotRetainedAttr);
-            break;
-        }
-        default: {
-            bool hasNsReturnsRetainedAttr = Utils::getAttributes<clang::NSReturnsRetainedAttr>(method).size() > 0;
-            methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, hasNsReturnsRetainedAttr);
-            break;
-        }
+    switch (methodFamily) {
+    case clang::ObjCMethodFamily::OMF_copy:
+    //case clang::ObjCMethodFamily::OMF_init :
+    //case clang::ObjCMethodFamily::OMF_alloc :
+    case clang::ObjCMethodFamily::OMF_mutableCopy:
+    case clang::ObjCMethodFamily::OMF_new: {
+        bool hasNsReturnsNotRetainedAttr = Utils::getAttributes<clang::NSReturnsNotRetainedAttr>(method).size() > 0;
+        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, !hasNsReturnsNotRetainedAttr);
+        break;
+    }
+    default: {
+        bool hasNsReturnsRetainedAttr = Utils::getAttributes<clang::NSReturnsRetainedAttr>(method).size() > 0;
+        methodMeta->setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, hasNsReturnsRetainedAttr);
+        break;
+    }
     }
 
     // set signature

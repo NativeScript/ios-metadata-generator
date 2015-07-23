@@ -13,10 +13,9 @@ static map<clang::Decl::Kind, vector<string> > IosSdkNamesToRecalculate = {
     { clang::Decl::Kind::Record, { "kevent", "flock", "sigvec", "sigaction", "wait" } },
     { clang::Decl::Kind::Var, { "timezone" } },
     { clang::Decl::Kind::ObjCProtocol, { "NSObject", "AVVideoCompositionInstruction", "OS_dispatch_data",
-                                                // FIXME: These protocols are part of KontaktIO library (http://kontaktio.github.io/ios-sdk-docs/html//index.html).
-                                                // Hardcoding their names here is a dirty temporary solution for name collisions problems. We need a general solution.
-                                               "KTKAction", "KTKBeacon", "KTKBeaconProfile", "KTKCloudBeacon", "KTKCompany", "KTKDataTransferObject", "KTKFirmware", "KTKManager",
-                                               "KTKPaging", "KTKPublicAction", "KTKPublicBeacon", "KTKPublicVenue", "KTKRegion", "KTKSubordinate", "KTKUser", "KTKVenue", "KTKVenueBase" } }
+                                         // FIXME: These protocols are part of KontaktIO library (http://kontaktio.github.io/ios-sdk-docs/html//index.html).
+                                         // Hardcoding their names here is a dirty temporary solution for name collisions problems. We need a general solution.
+                                         "KTKAction", "KTKBeacon", "KTKBeaconProfile", "KTKCloudBeacon", "KTKCompany", "KTKDataTransferObject", "KTKFirmware", "KTKManager", "KTKPaging", "KTKPublicAction", "KTKPublicBeacon", "KTKPublicVenue", "KTKRegion", "KTKSubordinate", "KTKUser", "KTKVenue", "KTKVenueBase" } }
 };
 
 map<clang::Decl::Kind, vector<string> >& Meta::IdentifierFactory::getIosSdkNamesToRecalculate()
