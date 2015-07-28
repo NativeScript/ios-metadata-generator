@@ -113,6 +113,14 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
     }
 
+    if (compoundInstanceMethods.find("objectAtIndexedSubscript") != compoundInstanceMethods.end()) {
+        _buffer << "\t\t[index: number]: any;" << std::endl;
+    }
+
+    if (compoundInstanceMethods.find("countByEnumeratingWithStateObjectsCount") != compoundInstanceMethods.end()) {
+        _buffer << "\t\t[Symbol.iterator](): Iterator<any>;" << std::endl;
+    }
+
     for (auto& methodPair : compoundInstanceMethods) {
         if (compoundProperties.find(methodPair.first) != compoundProperties.end()) {
             continue;
@@ -453,7 +461,8 @@ std::string DefinitionWriter::tsifyType(const Type& type)
     case TypeFunctionPointer:
         return "interop.FunctionReference<" + writeFunctionProto(type.getDetailsAs<FunctionPointerTypeDetails>().signature)
                + ">";
-    case TypeInterface: {
+    case TypeInterface:
+    case TypeBridgedInterface: {
         InterfaceTypeDetails& details = type.getDetailsAs<InterfaceTypeDetails>();
         if (details.id.jsName == "NSNumber") {
             return "number";
