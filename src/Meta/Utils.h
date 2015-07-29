@@ -12,8 +12,7 @@ public:
     static std::vector<T*> getAttributes(const clang::Decl& decl)
     {
         std::vector<T*> attributes;
-        for (clang::Decl::attr_iterator i = decl.attr_begin(); i != decl.attr_end(); ++i) {
-            clang::Attr* attribute = *i;
+        for (clang::Attr* attribute : decl.attrs()) {
             if (T* typedAttribute = clang::dyn_cast<T>(attribute)) {
                 attributes.push_back(typedAttribute);
             }

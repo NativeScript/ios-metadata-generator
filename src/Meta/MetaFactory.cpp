@@ -135,8 +135,7 @@ shared_ptr<Meta::FunctionMeta> Meta::MetaFactory::createFromFunction(clang::Func
 
     // set signature
     functionMeta->signature.push_back(_delegate->getType(function.getReturnType()));
-    for (clang::FunctionDecl::param_const_iterator it = function.param_begin(); it != function.param_end(); ++it) {
-        clang::ParmVarDecl* param = *it;
+    for (clang::ParmVarDecl* param : function.parameters()) {
         functionMeta->signature.push_back(_delegate->getType(param->getType()));
     }
 
@@ -158,8 +157,7 @@ shared_ptr<Meta::RecordMeta> Meta::MetaFactory::createFromRecord(clang::RecordDe
     populateMetaFields(record, *(recordMeta.get()));
 
     // set fields
-    for (clang::RecordDecl::field_iterator it = record.field_begin(); it != record.field_end(); ++it) {
-        clang::FieldDecl* field = *it;
+    for (clang::FieldDecl* field : record.fields()) {
         RecordField recordField(_delegate->getId(*field, true).jsName, _delegate->getType(field->getType()));
         recordMeta->fields.push_back(recordField);
     }
@@ -190,16 +188,15 @@ std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumD
     populateMetaFields(enumeration, *(jsCodeMeta.get()));
 
     std::vector<std::string> fieldNames;
-    for (clang::EnumDecl::enumerator_iterator it = enumeration.enumerator_begin(); it != enumeration.enumerator_end(); ++it)
-        fieldNames.push_back((*it)->getNameAsString());
+    for (clang::EnumConstantDecl* enumField : enumeration.enumerators())
+        fieldNames.push_back(enumField->getNameAsString());
     fieldNames.push_back(jsCodeMeta->id.jsName);
     size_t fieldNamePrefixLength = Utils::getCommonWordPrefix(fieldNames).length();
 
     std::ostringstream jsCodeStream;
     jsCodeStream << "__tsEnum({";
     bool isFirstField = true;
-    for (clang::EnumDecl::enumerator_iterator it = enumeration.enumerator_begin(); it != enumeration.enumerator_end(); ++it) {
-        clang::EnumConstantDecl* enumField = *it;
+    for (clang::EnumConstantDecl* enumField : enumeration.enumerators()) {
         llvm::SmallVector<char, 10> value;
         enumField->getInitVal().toString(value, 10, enumField->getInitVal().isSigned());
         std::string valueStr = std::string(value.data(), value.size());
@@ -314,8 +311,7 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
 
     // set signature
     methodMeta->signature.push_back(method.hasRelatedResultType() ? Type::Instancetype() : _delegate->getType(method.getReturnType()));
-    for (clang::FunctionDecl::param_const_iterator it = method.param_begin(); it != method.param_end(); ++it) {
-        clang::ParmVarDecl* param = *it;
+    for (clang::ParmVarDecl* param : method.parameters()) {
         methodMeta->signature.push_back(_delegate->getType(param->getType()));
     }
 
@@ -351,9 +347,8 @@ void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta)
     if (hasUnavailableAttr) {
         throw MetaCreationException(_delegate->getId(decl, false), "The declaration is marked unvailable (with unavailable attribute).", false);
     }
-    vector<clang::AvailabilityAttr*> availabilityAttr = Utils::getAttributes<clang::AvailabilityAttr>(decl);
-    for (vector<clang::AvailabilityAttr*>::iterator i = availabilityAttr.begin(); i != availabilityAttr.end(); ++i) {
-        clang::AvailabilityAttr* availability = *i;
+    vector<clang::AvailabilityAttr*> availabilityAttributes = Utils::getAttributes<clang::AvailabilityAttr>(decl);
+    for (clang::AvailabilityAttr* availability : availabilityAttributes) {
         string platform = availability->getPlatform()->getName().str();
         if (platform == string("ios")) {
             iosAvailability = availability;
@@ -372,7 +367,7 @@ void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta)
         TODO: We are considering a declaration to be unavailable for iOS Extensions if it has
         ios_app_extension availability attribute and its unavailable property is set to true.
         This is not quite right because the availability attribute contains much more information such as
-        Introduced, Deprecated, Obsolated properties which are not considered. The possible solution is to
+        Introduced, Deprecated, Obsoleted properties which are not considered. The possible solution is to
         save information in metadata about all these properties (this is what we do for iOS Availability attribute).
 
         Maybe we can change availability format to some more clever alternative.
@@ -391,9 +386,7 @@ void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta)
 
 void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& decl, BaseClassMeta& baseClass)
 {
-    llvm::iterator_range<clang::ObjCProtocolList::iterator> protocols = this->getProtocols(&decl);
-    for (clang::ObjCProtocolList::iterator i = protocols.begin(); i != protocols.end(); ++i) {
-        clang::ObjCProtocolDecl* protocol = *i;
+    for (clang::ObjCProtocolDecl* protocol : this->getProtocols(&decl)) {
         try {
             baseClass.protocols.push_back(_delegate->getId(ensureCanBeCreated(*protocol->getDefinition()), true));
         }
@@ -403,11 +396,10 @@ void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& de
     }
     std::sort(baseClass.protocols.begin(), baseClass.protocols.end(), protocolsComparerByJsName); // order by jsName
 
-    for (clang::ObjCContainerDecl::classmeth_iterator i = decl.classmeth_begin(); i != decl.classmeth_end(); ++i) {
-        clang::ObjCMethodDecl& classMethod = **i;
-        if (!classMethod.isImplicit()) {
+    for (clang::ObjCMethodDecl* classMethod : decl.class_methods()) {
+        if (!classMethod->isImplicit()) {
             try {
-                baseClass.staticMethods.push_back(static_pointer_cast<MethodMeta>(this->create(classMethod)));
+                baseClass.staticMethods.push_back(static_pointer_cast<MethodMeta>(this->create(*classMethod)));
             }
             catch (MetaCreationException& e) {
                 continue;
@@ -416,11 +408,10 @@ void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& de
     }
     std::sort(baseClass.staticMethods.begin(), baseClass.staticMethods.end(), methodsComparerByJsName); // order by jsName
 
-    for (clang::ObjCContainerDecl::instmeth_iterator i = decl.instmeth_begin(); i != decl.instmeth_end(); ++i) {
-        clang::ObjCMethodDecl& instanceMethod = **i;
-        if (!instanceMethod.isImplicit()) {
+    for (clang::ObjCMethodDecl* instanceMethod : decl.instance_methods()) {
+        if (!instanceMethod->isImplicit()) {
             try {
-                baseClass.instanceMethods.push_back(static_pointer_cast<MethodMeta>(this->create(instanceMethod)));
+                baseClass.instanceMethods.push_back(static_pointer_cast<MethodMeta>(this->create(*instanceMethod)));
             }
             catch (MetaCreationException& e) {
                 continue;
@@ -429,10 +420,9 @@ void Meta::MetaFactory::populateBaseClassMetaFields(clang::ObjCContainerDecl& de
     }
     std::sort(baseClass.instanceMethods.begin(), baseClass.instanceMethods.end(), methodsComparerByJsName); // order by jsName
 
-    for (clang::ObjCContainerDecl::prop_iterator i = decl.prop_begin(); i != decl.prop_end(); ++i) {
-        clang::ObjCPropertyDecl& property = **i;
+    for (clang::ObjCPropertyDecl* property : decl.properties()) {
         try {
-            baseClass.properties.push_back(static_pointer_cast<PropertyMeta>(this->create(property)));
+            baseClass.properties.push_back(static_pointer_cast<PropertyMeta>(this->create(*property)));
         }
         catch (MetaCreationException& e) {
             continue;

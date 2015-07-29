@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../Meta/MetaEntities.h"
-#include "../Meta/Utils.h"
+#include "Meta/MetaEntities.h"
+#include "Meta/Utils.h"
 
 namespace llvm {
 namespace yaml {

@@ -2,8 +2,8 @@
 #include <clang/AST/DeclObjC.h>
 #include <algorithm>
 #include <iterator>
-#include "../Meta/Utils.h"
-#include "../Meta/MetaEntities.h"
+#include "Meta/Utils.h"
+#include "Meta/MetaEntities.h"
 
 namespace TypeScript {
 using namespace Meta;

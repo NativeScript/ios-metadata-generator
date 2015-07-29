@@ -24,7 +24,6 @@ set(GENERATOR_HEADERS
     TypeScript/DefinitionWriter.h
     Utils/fileStream.h
     Utils/memoryStream.h
-    Utils/serializer.h
     Utils/stream.h
     Utils/StringHasher.h
     Yaml/MetaYamlTraits.h
@@ -54,6 +53,8 @@ set(GENERATOR_SOURCES
     Binary/metaFile.cpp
     TypeScript/DefinitionWriter.cpp
 )
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_executable(objc-metadata-generator ${GENERATOR_HEADERS} ${GENERATOR_SOURCES})
 target_link_libraries(objc-metadata-generator ${LLVM_LINKER_FLAGS})

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include "../Meta/TypeEntities.h"
+#include "Meta/TypeEntities.h"
 #include "binaryStructures.h"
 #include "binaryWriter.h"
 

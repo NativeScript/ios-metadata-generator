@@ -1,5 +1,5 @@
 #include "metaFile.h"
-#include "../utils/fileStream.h"
+#include "Utils/fileStream.h"
 
 unsigned int binary::MetaFile::size()
 {

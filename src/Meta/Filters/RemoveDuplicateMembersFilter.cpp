@@ -1,5 +1,5 @@
 #include "RemoveDuplicateMembersFilter.h"
-#include "../Utils.h"
+#include "Meta/Utils.h"
 
 bool areMethodsEqual(Meta::MethodMeta& method1, Meta::MethodMeta& method2)
 {
@@ -21,8 +21,7 @@ bool arePropertiesEqual(Meta::PropertyMeta& prop1, Meta::PropertyMeta& prop2)
 
 void removeDuplicateMethods(std::vector<std::shared_ptr<Meta::MethodMeta> >& from, std::vector<std::shared_ptr<Meta::MethodMeta> >& duplicates)
 {
-    for (std::vector<std::shared_ptr<Meta::MethodMeta> >::iterator dupIt = duplicates.begin(); dupIt != duplicates.end(); dupIt++) {
-        std::shared_ptr<Meta::MethodMeta> dupMethod = *dupIt;
+    for (std::shared_ptr<Meta::MethodMeta> dupMethod : duplicates) {
         from.erase(std::remove_if(from.begin(),
                                   from.end(),
                                   [&](std::shared_ptr<Meta::MethodMeta>& method) { return areMethodsEqual(*method.get(), *dupMethod.get()); }),
@@ -32,8 +31,7 @@ void removeDuplicateMethods(std::vector<std::shared_ptr<Meta::MethodMeta> >& fro
 
 void removeDuplicateProperties(std::vector<std::shared_ptr<Meta::PropertyMeta> >& from, std::vector<std::shared_ptr<Meta::PropertyMeta> >& duplicates)
 {
-    for (std::vector<std::shared_ptr<Meta::PropertyMeta> >::iterator dupIt = duplicates.begin(); dupIt != duplicates.end(); dupIt++) {
-        std::shared_ptr<Meta::PropertyMeta> dupProperty = *dupIt;
+    for (std::shared_ptr<Meta::PropertyMeta> dupProperty : duplicates) {
         from.erase(std::remove_if(from.begin(),
                                   from.end(),
                                   [&](std::shared_ptr<Meta::PropertyMeta>& property) { return arePropertiesEqual(*property.get(), *dupProperty.get()); }),
@@ -53,8 +51,8 @@ void processBaseClassAndHierarchyOf(std::shared_ptr<Meta::BaseClassMeta> child, 
     if (child != parent) {
         removeDuplicateMembersFromChild(child, parent);
     }
-    for (std::vector<Meta::DeclId>::iterator protIt = parent->protocols.begin(); protIt != parent->protocols.end(); protIt++) {
-        std::shared_ptr<Meta::ProtocolMeta> protocol = container.getMetaAs<Meta::ProtocolMeta>(*protIt);
+    for (const Meta::DeclId& protocolId : parent->protocols) {
+        std::shared_ptr<Meta::ProtocolMeta> protocol = container.getMetaAs<Meta::ProtocolMeta>(protocolId);
         if (protocol) {
             processBaseClassAndHierarchyOf(child, protocol, container);
         }
@@ -72,10 +70,9 @@ void processBaseClassAndHierarchyOf(std::shared_ptr<Meta::BaseClassMeta> child, 
 
 void Meta::RemoveDuplicateMembersFilter::filter(MetaContainer& container)
 {
-    for (MetaContainer::top_level_modules_iterator modIt = container.top_level_modules_begin(); modIt != container.top_level_modules_end(); modIt++) {
-        ModuleMeta& module = *modIt;
-        for (ModuleMeta::iterator metaIt = module.begin(); metaIt != module.end(); metaIt++) {
-            std::shared_ptr<Meta> meta = metaIt->second;
+    for (ModuleMeta& module : container.top_level_modules()) {
+        for (const auto& metaPair : module) {
+            std::shared_ptr<Meta> meta = metaPair.second;
             if (meta->is(MetaType::Interface) || meta->is(MetaType::Protocol)) {
                 std::shared_ptr<BaseClassMeta> baseClass = std::static_pointer_cast<BaseClassMeta>(meta);
                 processBaseClassAndHierarchyOf(baseClass, baseClass, container);
