@@ -1,5 +1,5 @@
 #pragma once
-#include "../MetaEntities.h"
+#include "Meta/MetaEntities.h"
 
 namespace Meta {
 class RemoveDuplicateMembersFilter {

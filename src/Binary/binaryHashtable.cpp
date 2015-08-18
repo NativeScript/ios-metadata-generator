@@ -1,5 +1,5 @@
 #include "binaryHashtable.h"
-#include "../utils/StringHasher.h"
+#include "Utils/StringHasher.h"
 #include "metaFile.h"
 
 unsigned int binary::BinaryHashtable::hash(std::string value)

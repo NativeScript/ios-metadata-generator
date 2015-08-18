@@ -3,7 +3,7 @@
 #include <string>
 #include <sstream>
 #include <unordered_set>
-#include "../Meta/MetaEntities.h"
+#include "Meta/MetaEntities.h"
 
 namespace TypeScript {
 class DefinitionWriter : Meta::MetaVisitor {

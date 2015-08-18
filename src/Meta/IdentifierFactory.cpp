@@ -23,7 +23,7 @@ map<clang::Decl::Kind, vector<string> >& Meta::IdentifierFactory::getIosSdkNames
     return IosSdkNamesToRecalculate;
 }
 
-void splitString(const std::string& s, char delim, vector<string>& elems)
+static void splitString(const std::string& s, char delim, vector<string>& elems)
 {
     stringstream ss(s);
     string item;

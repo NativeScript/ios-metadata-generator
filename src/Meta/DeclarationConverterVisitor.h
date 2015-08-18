@@ -20,8 +20,7 @@ public:
 
     void resolveUnresolvedBridgedInterfaces()
     {
-        for (std::vector<Type>::iterator it = _unresolvedBridgedInterfaces.begin(); it != _unresolvedBridgedInterfaces.end(); ++it) {
-            Type type = *it;
+        for (const Type& type : _unresolvedBridgedInterfaces) {
             std::shared_ptr<InterfaceMeta> interface = _result.getInterface(type.getDetailsAs<BridgedInterfaceTypeDetails>().id.name);
             // TODO: Handle the case when there is no interface found, instead of setting empty DeclId
             type.getDetailsAs<BridgedInterfaceTypeDetails>().id = (interface ? interface->id : DeclId());

@@ -9,26 +9,26 @@ using namespace Meta;
 Type TypeFactory::create(const clang::Type* type)
 {
     try {
-        if (const clang::ConstantArrayType* concreteType = clang::dyn_cast<clang::ConstantArrayType>(type))
-            return createFromConstantArrayType(concreteType);
-        if (const clang::IncompleteArrayType* concreteType = clang::dyn_cast<clang::IncompleteArrayType>(type))
-            return createFromIncompleteArrayType(concreteType);
+        if (const clang::BuiltinType* concreteType = clang::dyn_cast<clang::BuiltinType>(type))
+            return createFromBuiltinType(concreteType);
+        if (const clang::TypedefType* concreteType = clang::dyn_cast<clang::TypedefType>(type))
+            return createFromTypedefType(concreteType);
+        if (const clang::ObjCObjectPointerType* concreteType = clang::dyn_cast<clang::ObjCObjectPointerType>(type))
+            return createFromObjCObjectPointerType(concreteType);
+        if (const clang::EnumType* concreteType = clang::dyn_cast<clang::EnumType>(type))
+            return createFromEnumType(concreteType);
         if (const clang::PointerType* concreteType = clang::dyn_cast<clang::PointerType>(type))
             return createFromPointerType(concreteType);
         if (const clang::BlockPointerType* concreteType = clang::dyn_cast<clang::BlockPointerType>(type))
             return createFromBlockPointerType(concreteType);
-        if (const clang::BuiltinType* concreteType = clang::dyn_cast<clang::BuiltinType>(type))
-            return createFromBuiltinType(concreteType);
-        if (const clang::ObjCObjectPointerType* concreteType = clang::dyn_cast<clang::ObjCObjectPointerType>(type))
-            return createFromObjCObjectPointerType(concreteType);
         if (const clang::RecordType* concreteType = clang::dyn_cast<clang::RecordType>(type))
             return createFromRecordType(concreteType);
-        if (const clang::EnumType* concreteType = clang::dyn_cast<clang::EnumType>(type))
-            return createFromEnumType(concreteType);
         if (const clang::VectorType* concreteType = clang::dyn_cast<clang::VectorType>(type))
             return createFromVectorType(concreteType);
-        if (const clang::TypedefType* concreteType = clang::dyn_cast<clang::TypedefType>(type))
-            return createFromTypedefType(concreteType);
+        if (const clang::ConstantArrayType* concreteType = clang::dyn_cast<clang::ConstantArrayType>(type))
+            return createFromConstantArrayType(concreteType);
+        if (const clang::IncompleteArrayType* concreteType = clang::dyn_cast<clang::IncompleteArrayType>(type))
+            return createFromIncompleteArrayType(concreteType);
         if (const clang::ElaboratedType* concreteType = clang::dyn_cast<clang::ElaboratedType>(type))
             return createFromElaboratedType(concreteType);
         if (const clang::AdjustedType* concreteType = clang::dyn_cast<clang::AdjustedType>(type))
@@ -114,7 +114,6 @@ Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type)
     // Objective-C does not support the long double type. @encode(long double) returns d, which is the same encoding as for double.
     case clang::BuiltinType::Kind::LongDouble:
         return Type::Double();
-        return Type::Selector();
 
     // ObjCSel, ObjCId and ObjCClass builtin types should never enter in this method because these types should be handled on upper level.
     // The 'SEL' type is represented as pointer to BuiltinType of kind ObjCSel.
@@ -157,8 +156,8 @@ Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type)
 Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type)
 {
     vector<DeclId> protocols;
-    for (clang::ObjCObjectPointerType::qual_iterator it = type->qual_begin(); it != type->qual_end(); ++it) {
-        clang::ObjCProtocolDecl* protocolDef = (*it)->getDefinition();
+    for (clang::ObjCProtocolDecl* qual : type->quals()) {
+        clang::ObjCProtocolDecl* protocolDef = qual->getDefinition();
         if (protocolDef) {
             try {
                 protocols.push_back(_delegate->getDeclId(_delegate->validate(*protocolDef), true));
@@ -251,8 +250,7 @@ Type TypeFactory::createFromRecordType(const clang::RecordType* type)
     if (!recordDef->hasNameForLinkage()) {
         // The record is anonymous
         std::vector<RecordField> fields;
-        for (clang::RecordDecl::field_iterator it = recordDef->field_begin(); it != recordDef->field_end(); ++it) {
-            clang::FieldDecl* field = *it;
+        for (clang::FieldDecl* field : recordDef->fields()) {
             RecordField fieldMeta(_delegate->getDeclId(*field, true).jsName, this->create(field->getType()));
             fields.push_back(fieldMeta);
         }
@@ -294,8 +292,8 @@ Type TypeFactory::createFromFunctionProtoType(const clang::FunctionProtoType* ty
 {
     std::vector<Type> signature;
     signature.push_back(this->create(type->getReturnType()));
-    for (clang::FunctionProtoType::param_type_iterator it = type->param_type_begin(); it != type->param_type_end(); ++it)
-        signature.push_back(this->create(*it));
+    for (const clang::QualType& parm : type->param_types())
+        signature.push_back(this->create(parm));
     return Type::FunctionPointer(signature);
 }
 

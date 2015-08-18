@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Meta/MetaEntities.h"
+#include "Meta/MetaEntities.h"
 
 uint8_t convertVersion(Meta::Version version);
 bool compareMetas(Meta::Meta& meta1, Meta::Meta& meta2);

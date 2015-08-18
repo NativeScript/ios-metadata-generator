@@ -39,7 +39,7 @@ public:
     {
     }
 
-    virtual void HandleTranslationUnit(clang::ASTContext& Context)
+    virtual void HandleTranslationUnit(clang::ASTContext& Context) override
     {
         llvm::SmallVector<clang::Module*, 64> modules;
         _headerSearch.collectAllModules(modules);
@@ -59,8 +59,8 @@ public:
         // Serialize Meta objects to Yaml
         if (!cla_outputYamlFolder.empty()) {
             llvm::sys::fs::create_directories(cla_outputYamlFolder);
-            for (Meta::MetaContainer::top_level_modules_iterator it = metaContainer.top_level_modules_begin(); it != metaContainer.top_level_modules_end(); ++it) {
-                Yaml::YamlSerializer::serialize<Meta::ModuleMeta>(std::string(cla_outputYamlFolder.getValue()) + "/" + it->getFullName() + ".yaml", *it);
+            for (Meta::ModuleMeta& moduleMeta : metaContainer.top_level_modules()) {
+                Yaml::YamlSerializer::serialize<Meta::ModuleMeta>(std::string(cla_outputYamlFolder.getValue()) + "/" + moduleMeta.getFullName() + ".yaml", moduleMeta);
             }
         }
 
@@ -104,7 +104,7 @@ class MetaGenerationFrontendAction : public clang::ASTFrontendAction {
 public:
     MetaGenerationFrontendAction() {}
 
-    virtual std::unique_ptr<clang::ASTConsumer> CreateASTConsumer(clang::CompilerInstance& Compiler, llvm::StringRef InFile)
+    virtual std::unique_ptr<clang::ASTConsumer> CreateASTConsumer(clang::CompilerInstance& Compiler, llvm::StringRef InFile) override
     {
         return std::unique_ptr<clang::ASTConsumer>(new MetaGenerationConsumer(Compiler.getASTContext().getSourceManager(), Compiler.getPreprocessor().getHeaderSearchInfo()));
     }
@@ -153,8 +153,8 @@ int main(int argc, const char** argv)
 
     // log compiler settings
     std::cout << "Clang parameters: ";
-    for (std::vector<std::string>::iterator it = clangArgs.begin(); it != clangArgs.end(); ++it) {
-        std::cout << *it << " ";
+    for (const std::string& arg : clangArgs) {
+        std::cout << arg << " ";
     }
     std::cout << std::endl;
 

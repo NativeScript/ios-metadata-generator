@@ -209,6 +209,7 @@ struct RecordField {
 };
 
 struct TypeDetails {
+    virtual ~TypeDetails() = default;
 };
 
 struct IdTypeDetails : TypeDetails {

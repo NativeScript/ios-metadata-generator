@@ -3,7 +3,7 @@
 #include "MetaFile.h"
 #include "binaryTypeEncodingSerializer.h"
 #include <map>
-#include "../Meta/MetaEntities.h"
+#include "Meta/MetaEntities.h"
 
 namespace binary {
 /*

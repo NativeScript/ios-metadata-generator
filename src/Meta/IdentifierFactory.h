@@ -90,7 +90,6 @@ public:
     {
     }
 
-    virtual const char* what() const throw() { return this->whatAsString().c_str(); }
     std::string whatAsString() const { return _message + " Decl: \"" + _id.jsName + "\"" + " Module: " + _id.moduleNameOrEmpty() + " File: " + _id.fileName; }
     DeclId getId() const { return this->_id; }
     std::string getMessage() const { return this->_message; }

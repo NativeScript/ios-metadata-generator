@@ -1,6 +1,6 @@
 #include "binarySerializer.h"
 #include "binarySerializerPrivate.h"
-#include "../Meta/Utils.h"
+#include "Meta/Utils.h"
 
 uint8_t convertVersion(Meta::Version version)
 {
@@ -14,12 +14,12 @@ uint8_t convertVersion(Meta::Version version)
     return result;
 }
 
-bool compareMethodMetas(std::shared_ptr<Meta::MethodMeta>& meta1, std::shared_ptr<Meta::MethodMeta>& meta2)
+static bool compareMethodMetas(std::shared_ptr<Meta::MethodMeta>& meta1, std::shared_ptr<Meta::MethodMeta>& meta2)
 {
     return meta1->id.jsName < meta2->id.jsName;
 }
 
-bool comparePropertyMetas(std::shared_ptr<Meta::PropertyMeta>& meta1, std::shared_ptr<Meta::PropertyMeta>& meta2)
+static bool comparePropertyMetas(std::shared_ptr<Meta::PropertyMeta>& meta1, std::shared_ptr<Meta::PropertyMeta>& meta2)
 {
     return meta1->id.jsName < meta2->id.jsName;
 }
@@ -29,9 +29,9 @@ bool compareIdentifiers(Meta::DeclId& id1, Meta::DeclId& id2)
     return id1.jsName < id2.jsName;
 }
 
-bool isInitMethod(std::shared_ptr<Meta::MethodMeta>& meta)
+static bool isInitMethod(std::shared_ptr<Meta::MethodMeta>& meta)
 {
-    std::string prefix = "init";
+    static std::string prefix = "init";
     return meta->id.name.substr(0, prefix.size()) == prefix;
 }
 
@@ -67,7 +67,7 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
     if (moduleOffset != 0)
         binaryMetaStruct._topLevelModule = moduleOffset;
     else {
-        binary::ModuleMeta moduleMeta;
+        binary::ModuleMeta moduleMeta{};
         serializeModule(topLevelModule, moduleMeta);
         binaryMetaStruct._topLevelModule = moduleMeta.save(this->heapWriter);
         this->file->registerInTopLevelModulesTable(topLevelModuleName, binaryMetaStruct._topLevelModule);
@@ -136,7 +136,7 @@ void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta* meta, binary:
 {
 
     this->serializeBase(meta, binaryMetaStruct);
-    binaryMetaStruct._flags &= 248; // 248 = 11111000; this clears the type information written in the lower 3 bits
+    binaryMetaStruct._flags &= 0b11111000; // this clears the type information written in the lower 3 bits
 
     if (meta->getFlags(::Meta::MetaFlags::MethodIsVariadic))
         binaryMetaStruct._flags |= BinaryFlags::MethodIsVariadic;
@@ -160,7 +160,7 @@ void binary::BinarySerializer::serializeProperty(::Meta::PropertyMeta* meta, bin
 {
 
     this->serializeBase(meta, binaryMetaStruct);
-    binaryMetaStruct._flags &= 248; // 248 = 11111000; this clears the type information writen in the lower 3 bits
+    binaryMetaStruct._flags &= 248; // 248 = 11111000; this clears the type information written in the lower 3 bits
 
     if (meta->getter) {
         binaryMetaStruct._flags |= BinaryFlags::PropertyHasGetter;
@@ -195,8 +195,7 @@ void binary::BinarySerializer::serializeRecord(::Meta::RecordMeta* meta, binary:
 void binary::BinarySerializer::serializeContainer(::Meta::MetaContainer& container)
 {
     this->start(&container);
-    for (::Meta::MetaContainer::top_level_modules_iterator moduleIt = container.top_level_modules_begin(); moduleIt != container.top_level_modules_end(); ++moduleIt) {
-        ::Meta::ModuleMeta& module = *moduleIt;
+    for (::Meta::ModuleMeta& module : container.top_level_modules()) {
         for (::Meta::ModuleMeta::iterator metaIt = module.begin(); metaIt != module.end(); ++metaIt) {
             std::pair<std::string, std::shared_ptr< ::Meta::Meta> > metaPair = *metaIt;
             metaPair.second->visit(this);

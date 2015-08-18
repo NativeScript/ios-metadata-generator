@@ -1,5 +1,5 @@
 #pragma once
-#include "../MetaEntities.h"
+#include "Meta/MetaEntities.h"
 
 bool isSpecialCategory(std::shared_ptr<Meta::CategoryMeta>& category)
 {
@@ -22,8 +22,8 @@ public:
         if (std::shared_ptr<InterfaceMeta> nsNullMeta = container.getMetaAs<InterfaceMeta>("Foundation", "NSNull")) {
 
             std::vector<std::shared_ptr<MethodMeta> >::iterator method = std::find_if(nsNullMeta->staticMethods.begin(), nsNullMeta->staticMethods.end(),
-                                                                                      [&](const std::shared_ptr<MethodMeta>& method) {
-                            return method->getSelector() == "null";
+                                                                                      [&](const std::shared_ptr<MethodMeta>& m) {
+                            return m->getSelector() == "null";
             });
 
             if (method != nsNullMeta->instanceMethods.end()) {

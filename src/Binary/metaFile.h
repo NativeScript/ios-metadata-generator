@@ -3,7 +3,7 @@
 #include "binaryHashtable.h"
 #include "binaryWriter.h"
 #include "binaryReader.h"
-#include "../Utils/memoryStream.h"
+#include "Utils/memoryStream.h"
 #include <vector>
 #include <memory>
 

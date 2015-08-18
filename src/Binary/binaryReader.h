@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Utils/stream.h"
+#include "Utils/stream.h"
 #include "binaryStructures.h"
 #include "binaryOperation.h"
 #include <string>

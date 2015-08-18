@@ -63,6 +63,8 @@ public:
 
     clang::Decl* declaration;
 
+    virtual ~Meta() = default;
+
     // visitors
     virtual void visit(MetaVisitor* serializer) = 0;
 
@@ -75,7 +77,12 @@ public:
 
     void setFlags(MetaFlags flags, bool value)
     {
-        value ? this->flags = (MetaFlags)(this->flags | flags) : this->flags = (MetaFlags)(this->flags & ~flags);
+        if (value) {
+            this->flags = static_cast<MetaFlags>(this->flags | flags);
+        }
+        else {
+            this->flags = static_cast<MetaFlags>(this->flags & ~flags);
+        }
     }
 };
 
@@ -223,8 +230,8 @@ public:
     ModuleMeta(clang::Module* module, std::vector<std::shared_ptr<Meta> >& declarations)
         : _module(module)
     {
-        for (std::vector<std::shared_ptr<Meta> >::iterator it = declarations.begin(); it != declarations.end(); ++it)
-            this->add(*it);
+        for (const auto& decl : declarations)
+            this->add(decl);
     }
 
     std::shared_ptr<Meta> getMeta(const std::string& jsName)
@@ -247,7 +254,7 @@ public:
         if (_declarations.find(meta->id.jsName) == _declarations.end())
             _declarations.insert(std::pair<std::string, std::shared_ptr<Meta> >(meta->id.jsName, meta));
         //else
-        //    std::cerr << "The declaration with name '" << meta->jsName << "' already exists in module '" << _name << "'." <<  std::endl; // TODO: research why there are conflicts
+        //    std::cerr << "The declaration with name '" << meta->id.jsName << "' already exists in module '" << _module->Name.c_str() << "'." <<  std::endl; // TODO: research why there are conflicts
     }
 
     ModuleMeta::iterator begin() { return _declarations.begin(); }
