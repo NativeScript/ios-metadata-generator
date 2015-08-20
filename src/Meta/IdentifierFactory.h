@@ -68,6 +68,8 @@ public:
     DeclId getIdentifier(const clang::Decl& decl, bool throwIfEmpty);
 
 private:
+    std::string calculateName(const clang::Decl &decl);
+
     std::string calculateOriginalName(const clang::Decl& decl);
 
     std::string calculateJsName(const clang::Decl& decl, std::string originalName);

@@ -1,8 +1,10 @@
 #include <clang/AST/Decl.h>
+#include <clang/AST/Attr.h>
 #include <sstream>
 #include <clang/AST/DeclObjC.h>
 #include <iostream>
 #include "IdentifierFactory.h"
+#include "Utils.h"
 
 using namespace std;
 
@@ -40,14 +42,10 @@ Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, boo
         return cachedId->second;
     }
 
-    std::string name;
+    std::string name = calculateName(decl);
     std::string jsName;
     std::string fileName;
     clang::Module* module = nullptr;
-
-    // calculate name
-    if (const clang::NamedDecl* namedDecl = clang::dyn_cast<clang::NamedDecl>(&decl))
-        name = namedDecl->getNameAsString();
 
     // calculate js name
     std::string originalName = calculateOriginalName(decl);
@@ -91,9 +89,21 @@ Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, boo
     return id;
 }
 
+string Meta::IdentifierFactory::calculateName(const clang::Decl& decl) {
+    if (const clang::NamedDecl* namedDecl = clang::dyn_cast<clang::NamedDecl>(&decl)) {
+        std::vector<clang::ObjCRuntimeNameAttr*> objCRuntimeNameAttributes = Utils::getAttributes<clang::ObjCRuntimeNameAttr>(*namedDecl);
+        if (!objCRuntimeNameAttributes.size()) {
+            return namedDecl->getNameAsString();
+        }
+
+        return objCRuntimeNameAttributes[0]->getMetadataName().str();
+    }
+
+    return "";
+}
+
 string Meta::IdentifierFactory::calculateOriginalName(const clang::Decl& decl)
 {
-
     switch (decl.getKind()) {
     case clang::Decl::Kind::Function:
     case clang::Decl::Kind::ObjCInterface:
