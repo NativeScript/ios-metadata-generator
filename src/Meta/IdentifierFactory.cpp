@@ -74,13 +74,19 @@ Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, boo
 
     if (throwIfEmpty) {
         // if name is empty we don't throw exception, it's OK the declaration to be anonymous
-        if (id.jsName.empty())
+        if (id.jsName.empty()) {
             throw IdentifierCreationException(id, "Unknown js name for declaration.");
-        if (id.fileName.empty())
+        }
+        if (id.fileName.empty()) {
             throw IdentifierCreationException(id, "Unknown file for declaration.");
-        if (id.module == nullptr)
+        }
+        if (id.module == nullptr) {
             throw IdentifierCreationException(id, "Unknown module for declaration.");
+        }
     }
+
+    // add to cache
+    _declCache.insert({ &decl, id });
 
     return id;
 }
