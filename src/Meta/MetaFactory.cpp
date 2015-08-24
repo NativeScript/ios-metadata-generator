@@ -70,8 +70,8 @@ shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl)
             result = createFromEnum(*enumDecl);
         else if (clang::EnumConstantDecl* enumConstantDecl = clang::dyn_cast<clang::EnumConstantDecl>(&decl))
             result = createFromEnumConstant(*enumConstantDecl);
-        else if (clang::ObjCInterfaceDecl* ineterface = clang::dyn_cast<clang::ObjCInterfaceDecl>(&decl))
-            result = createFromInterface(*ineterface);
+        else if (clang::ObjCInterfaceDecl* interface = clang::dyn_cast<clang::ObjCInterfaceDecl>(&decl))
+            result = createFromInterface(*interface);
         else if (clang::ObjCProtocolDecl* protocol = clang::dyn_cast<clang::ObjCProtocolDecl>(&decl))
             result = createFromProtocol(*protocol);
         else if (clang::ObjCCategoryDecl* category = clang::dyn_cast<clang::ObjCCategoryDecl>(&decl))
@@ -81,7 +81,7 @@ shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl)
         else if (clang::ObjCPropertyDecl* property = clang::dyn_cast<clang::ObjCPropertyDecl>(&decl))
             result = createFromProperty(*property);
         else
-            throw MetaCreationException(_delegate->getId(decl, false), "Unknow declaration type.", true);
+            throw MetaCreationException(_delegate->getId(decl, false), "Unknown declaration type.", true);
 
         _metaCreationStack.pop_back(); // remove from creation stack
         _cache.insert(std::pair<const clang::Decl*, std::shared_ptr<Meta> >(&decl, result)); // add to cache
@@ -345,7 +345,7 @@ void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta)
     // Traverse attributes
     bool hasUnavailableAttr = Utils::getAttributes<clang::UnavailableAttr>(decl).size() > 0;
     if (hasUnavailableAttr) {
-        throw MetaCreationException(_delegate->getId(decl, false), "The declaration is marked unvailable (with unavailable attribute).", false);
+        throw MetaCreationException(_delegate->getId(decl, false), "The declaration is marked unavailable (with unavailable attribute).", false);
     }
     vector<clang::AvailabilityAttr*> availabilityAttributes = Utils::getAttributes<clang::AvailabilityAttr>(decl);
     for (clang::AvailabilityAttr* availability : availabilityAttributes) {

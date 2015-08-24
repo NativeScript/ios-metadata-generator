@@ -2,7 +2,7 @@
 
 #include <string>
 #include <vector>
-#include "IdentifierFactory.h"
+#include "Identifier.h"
 #include "TypeVisitor.h"
 
 namespace Meta {

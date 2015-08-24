@@ -2,6 +2,7 @@
 #include <llvm/Support/CommandLine.h>
 #include <llvm/Support/FileSystem.h>
 #include <llvm/Support/Path.h>
+#include <llvm/Support/Debug.h>
 #include <clang/Tooling/Tooling.h>
 #include <clang/Frontend/CompilerInstance.h>
 #include "RemoveUnsupportedSyntaxAction.h"
@@ -35,7 +36,7 @@ class MetaGenerationConsumer : public clang::ASTConsumer {
 public:
     explicit MetaGenerationConsumer(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch)
         : _headerSearch(headerSearch)
-        , _visitor(sourceManager, headerSearch)
+        , _visitor(sourceManager, _headerSearch)
     {
     }
 
@@ -58,9 +59,17 @@ public:
 
         // Serialize Meta objects to Yaml
         if (!cla_outputYamlFolder.empty()) {
-            llvm::sys::fs::create_directories(cla_outputYamlFolder);
+            std::string outputYamlFolder{ cla_outputYamlFolder.getValue() };
+
+            if (!llvm::sys::fs::exists(outputYamlFolder)) {
+                DEBUG_WITH_TYPE("yaml", llvm::dbgs() << "Creating YAML output directory: " << outputYamlFolder << "\n");
+                llvm::sys::fs::create_directories(cla_outputYamlFolder);
+            }
+
             for (Meta::ModuleMeta& moduleMeta : metaContainer.top_level_modules()) {
-                Yaml::YamlSerializer::serialize<Meta::ModuleMeta>(std::string(cla_outputYamlFolder.getValue()) + "/" + moduleMeta.getFullName() + ".yaml", moduleMeta);
+                std::string yamlFileName = moduleMeta.getFullName() + ".yaml";
+                DEBUG_WITH_TYPE("yaml", llvm::dbgs() << "Generating: " << yamlFileName << "\n");
+                Yaml::YamlSerializer::serialize<Meta::ModuleMeta>(outputYamlFolder + "/" + yamlFileName, moduleMeta);
             }
         }
 
@@ -137,7 +146,8 @@ int main(int argc, const char** argv)
         "-target", cla_target.getValue(),
         std::string("-std=") + cla_std.getValue(),
         std::string("-miphoneos-version-min=") + cla_iphoneOSVersionMin.getValue(),
-        "-Wno-unknown-pragmas", "-Wno-ignored-attributes", "-ferror-limit=0"
+        "-Wno-unknown-pragmas", "-Wno-ignored-attributes",
+        "-ferror-limit=0"
     };
 
     printf("Parsed header search paths:\n");

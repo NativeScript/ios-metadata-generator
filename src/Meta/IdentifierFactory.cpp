@@ -73,23 +73,27 @@ Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, boo
 
     DeclId id(name, jsName, fileName, module);
 
-    // add to cache
-    _declCache.insert(std::pair<const clang::Decl*, DeclId>(&decl, id));
-
     if (throwIfEmpty) {
         // if name is empty we don't throw exception, it's OK the declaration to be anonymous
-        if (id.jsName.empty())
+        if (id.jsName.empty()) {
             throw IdentifierCreationException(id, "Unknown js name for declaration.");
-        if (id.fileName.empty())
+        }
+        if (id.fileName.empty()) {
             throw IdentifierCreationException(id, "Unknown file for declaration.");
-        if (id.module == nullptr)
+        }
+        if (id.module == nullptr) {
             throw IdentifierCreationException(id, "Unknown module for declaration.");
+        }
     }
+
+    // add to cache
+    _declCache.insert({ &decl, id });
 
     return id;
 }
 
-string Meta::IdentifierFactory::calculateName(const clang::Decl& decl) {
+string Meta::IdentifierFactory::calculateName(const clang::Decl& decl)
+{
     if (const clang::NamedDecl* namedDecl = clang::dyn_cast<clang::NamedDecl>(&decl)) {
         std::vector<clang::ObjCRuntimeNameAttr*> objCRuntimeNameAttributes = Utils::getAttributes<clang::ObjCRuntimeNameAttr>(*namedDecl);
         if (!objCRuntimeNameAttributes.size()) {
