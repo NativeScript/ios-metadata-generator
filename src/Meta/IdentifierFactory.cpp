@@ -102,6 +102,45 @@ string Meta::IdentifierFactory::calculateName(const clang::Decl& decl) {
     return "";
 }
 
+/*
+ * TODO: Check if the next declaration in the context is typedef declaration to the given decl and if true - use the name of the typedef.
+ * Example:
+ *          typedef struct _ugly_name {
+ *              int field;
+ *          } NiceName;
+ * The algorithm should detect the typedef and use NiceName instead of _ugly_name.
+ * Example:
+ *          struct _ugly_name {
+ *              int field;
+ *          }
+ *          typedef struct _ugly_name NiceName;
+ * Here, the algorithm will also detect the typedef and use NiceName instead of _ugly_name,
+ * because the typedef declaration is still the next declaration in context.
+ */
+static string getTypedefOrOwnName(const clang::TagDecl* tagDecl)
+{
+    assert(tagDecl);
+
+    if (!tagDecl->hasNameForLinkage()) {
+        return ""; // It is absolutely anonymous decl. It has neither name nor typedef name.
+    }
+
+    if (tagDecl->getNextDeclInContext() != nullptr) {
+        if (const clang::TypedefDecl* nextDecl = clang::dyn_cast<clang::TypedefDecl>(tagDecl->getNextDeclInContext())) {
+            if (const clang::ElaboratedType* innerElaboratedType = clang::dyn_cast<clang::ElaboratedType>(nextDecl->getUnderlyingType().getTypePtr())) {
+                if (const clang::TagType* tagType = clang::dyn_cast<clang::TagType>(innerElaboratedType->desugar().getTypePtr())) {
+                    if (tagType->getDecl() == tagDecl) {
+                        return nextDecl->getFirstDecl()->getNameAsString();
+                    }
+                }
+            }
+        }
+    }
+
+    // The decl has no typedef name, so we return its name.
+    return tagDecl->getNameAsString();
+}
+
 string Meta::IdentifierFactory::calculateOriginalName(const clang::Decl& decl)
 {
     switch (decl.getKind()) {
@@ -121,77 +160,12 @@ string Meta::IdentifierFactory::calculateOriginalName(const clang::Decl& decl)
         return "";
     }
     case clang::Decl::Kind::Record: {
-        if (const clang::RecordDecl* record = clang::dyn_cast<clang::RecordDecl>(&decl)) {
-            if (!record->hasNameForLinkage()) {
-                return ""; // It is absolutely anonymous record. It has neither name nor typedef name.
-            }
-
-            /*
-                 * TODO: Check if the next declaration in the context is typedef declaration to the given record and if true - use the name of the typedef.
-                 * Example:
-                 *          typedef struct _ugly_name {
-                 *              int field;
-                 *          } NiceName;
-                 * The algorithm should detect the typedef and use NiceName instead of  _ugly_name.
-                 * Example:
-                 *          struct _ugly_name {
-                 *              int field;
-                 *          }
-                 *          typedef struct _ugly_name NiceName;
-                 * Here, the algorithm will also detect the typedef and use NiceName instead of  _ugly_name,
-                 * because the typedef declaration is still the next declaration in context.
-                 */
-            if (record->getNextDeclInContext() != nullptr) {
-                if (const clang::TypedefDecl* nextDecl = clang::dyn_cast<clang::TypedefDecl>(record->getNextDeclInContext())) {
-                    if (const clang::ElaboratedType* innerElaboratedType = clang::dyn_cast<clang::ElaboratedType>(nextDecl->getUnderlyingType().getTypePtr())) {
-                        if (const clang::RecordType* recordType = clang::dyn_cast<clang::RecordType>(innerElaboratedType->desugar().getTypePtr())) {
-                            if (recordType->getDecl() == record) {
-                                return nextDecl->getFirstDecl()->getNameAsString();
-                            }
-                        }
-                    }
-                }
-            }
-            // The record has no typedef name, so we return its name.
-            return record->getNameAsString();
-        }
-        return "";
+        const clang::RecordDecl* recordDecl = clang::dyn_cast<clang::RecordDecl>(&decl);
+        return getTypedefOrOwnName(recordDecl);
     }
     case clang::Decl::Kind::Enum: {
-        if (const clang::EnumDecl* enumDecl = clang::dyn_cast<clang::EnumDecl>(&decl)) {
-            if (!enumDecl->hasNameForLinkage()) {
-                return ""; // It is absolutely anonymous record. It has neither name nor typedef name.
-            }
-
-            /*
-                 * TODO: Check if the next declaration in the context is typedef declaration to the given enum and if true - use the name of the typedef.
-                 * Example:
-                 *          typedef enum _ugly_name {
-                 *              field1, field2
-                 *          } NiceName;
-                 * The algorithm should detect the typedef and use NiceName instead of  _ugly_name.
-                 * Example:
-                 *          enum _ugly_name {
-                 *              field1, field2
-                 *          }
-                 *          typedef enum _ugly_name NiceName;
-                 * Here, the algorithm will also detect the typedef and use NiceName instead of  _ugly_name,
-                 * because the typedef declaration is still the next declaration in context.
-                 */
-            if (enumDecl->getNextDeclInContext() != nullptr) {
-                if (const clang::TypedefDecl* nextDecl = clang::dyn_cast<clang::TypedefDecl>(enumDecl->getNextDeclInContext())) {
-                    if (const clang::ElaboratedType* innerElaboratedType = clang::dyn_cast<clang::ElaboratedType>(nextDecl->getUnderlyingType().getTypePtr())) {
-                        if (const clang::EnumType* enumType = clang::dyn_cast<clang::EnumType>(innerElaboratedType->desugar().getTypePtr())) {
-                            if (enumType->getDecl() == enumDecl) {
-                                return nextDecl->getFirstDecl()->getNameAsString();
-                            }
-                        }
-                    }
-                }
-            }
-            return enumDecl->getNameAsString();
-        }
-        return "";
+        const clang::EnumDecl* enumDecl = clang::dyn_cast<clang::EnumDecl>(&decl);
+        return getTypedefOrOwnName(enumDecl);
     }
     default:
         throw logic_error(string("Can't generate original name for ") + decl.getDeclKindName() + " type of declaration.");
