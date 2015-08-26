@@ -2,6 +2,7 @@
 
 #include <string>
 #include <clang/Basic/Module.h>
+#include "Utils/NonCopyable.h"
 
 namespace Meta {
 
@@ -22,6 +23,8 @@ struct LinkLib {
 };
 
 struct DeclId {
+    MAKE_NONCOPYABLE(DeclId);
+
 public:
     DeclId()
         : DeclId("", "", "", nullptr)
@@ -64,7 +67,7 @@ public:
 
 class IdentifierCreationException : public std::exception {
 public:
-    IdentifierCreationException(DeclId id, std::string message)
+    IdentifierCreationException(std::shared_ptr<DeclId> id, std::string message)
         : _id(id)
         , _message(message)
     {
@@ -72,10 +75,10 @@ public:
 
     std::string whatAsString() const
     {
-        return _message + " Decl: \"" + _id.jsName + "\"" + " Module: " + _id.moduleNameOrEmpty() + " File: " + _id.fileName;
+        return _message + " Decl: \"" + _id->jsName + "\"" + " Module: " + _id->moduleNameOrEmpty() + " File: " + _id->fileName;
     }
 
-    DeclId getId() const
+    std::shared_ptr<DeclId> getId() const
     {
         return this->_id;
     }
@@ -86,7 +89,7 @@ public:
     }
 
 private:
-    DeclId _id;
+    std::shared_ptr<DeclId> _id;
     std::string _message;
 };
 }

@@ -20,7 +20,7 @@ namespace yaml {
 #include <llvm/Support/YAMLTraits.h>
 
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::string)
-LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::DeclId)
+LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::DeclId>)
 LLVM_YAML_IS_SEQUENCE_VECTOR(clang::Module::LinkLibrary)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::RecordField)
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::Meta>)
@@ -225,17 +225,17 @@ namespace yaml {
         }
     };
 
-    // DeclId
+    // std::shared_ptr<DeclId>
     template <>
-    struct MappingTraits<Meta::DeclId> {
+    struct MappingTraits<std::shared_ptr<Meta::DeclId> > {
 
-        static void mapping(IO& io, Meta::DeclId& id)
+        static void mapping(IO& io, std::shared_ptr<Meta::DeclId>& id)
         {
-            io.mapRequired("Name", id.name);
-            io.mapRequired("JsName", id.jsName);
-            io.mapRequired("Filename", id.fileName);
-            if (id.module != nullptr)
-                io.mapRequired("Module", *id.module);
+            io.mapRequired("Name", id->name);
+            io.mapRequired("JsName", id->jsName);
+            io.mapRequired("Filename", id->fileName);
+            if (id->module != nullptr)
+                io.mapRequired("Module", *id->module);
         }
     };
 
@@ -293,16 +293,16 @@ namespace yaml {
             }
             case Meta::TypeType::TypeStruct: {
                 Meta::StructTypeDetails& details = type.getDetailsAs<Meta::StructTypeDetails>();
-                std::string fullModuleName = details.id.module->getFullModuleName();
+                std::string fullModuleName = details.id->module->getFullModuleName();
                 io.mapRequired("Module", fullModuleName);
-                io.mapRequired("Name", details.id.jsName);
+                io.mapRequired("Name", details.id->jsName);
                 break;
             }
             case Meta::TypeType::TypeUnion: {
                 Meta::UnionTypeDetails& details = type.getDetailsAs<Meta::UnionTypeDetails>();
-                std::string fullModuleName = details.id.module->getFullModuleName();
+                std::string fullModuleName = details.id->module->getFullModuleName();
                 io.mapRequired("Module", fullModuleName);
-                io.mapRequired("Name", details.id.jsName);
+                io.mapRequired("Name", details.id->jsName);
                 break;
             }
             case Meta::TypeType::TypeAnonymousStruct: {
@@ -318,7 +318,7 @@ namespace yaml {
             case Meta::TypeType::TypeEnum: {
                 Meta::EnumTypeDetails& details = type.getDetailsAs<Meta::EnumTypeDetails>();
                 io.mapRequired("UnderlyingType", details.underlyingType);
-                io.mapRequired("Name", details.name.jsName);
+                io.mapRequired("Name", details.id->jsName);
                 break;
             }
             default: {
@@ -471,7 +471,9 @@ namespace yaml {
         {
             std::shared_ptr<Meta::BaseClassMeta> baseClassMeta = std::static_pointer_cast<Meta::InterfaceMeta>(meta);
             MappingTraits<std::shared_ptr<Meta::BaseClassMeta> >::mapping(io, baseClassMeta);
-            io.mapRequired("Base", meta->base);
+            if (meta->base) {
+                io.mapRequired("Base", meta->base);
+            }
         }
     };
 

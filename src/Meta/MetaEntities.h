@@ -4,6 +4,7 @@
 #include <vector>
 #include <map>
 #include <unordered_map>
+#include <unordered_set>
 #include <iostream>
 #include <llvm/ADT/iterator_range.h>
 #include <clang/AST/DeclBase.h>
@@ -58,7 +59,7 @@ class Meta {
 public:
     MetaType type = MetaType::Undefined;
     MetaFlags flags = MetaFlags::None;
-    DeclId id;
+    std::shared_ptr<DeclId> id;
 
     // Availability
     Version introducedIn = UNKNOWN_VERSION;
@@ -100,7 +101,7 @@ public:
     }
 
     // just a more convenient way to get the selector of method
-    std::string& getSelector() { return this->id.name; }
+    std::string& getSelector() { return this->id->name; }
 
     std::vector<Type> signature;
 
@@ -126,7 +127,7 @@ public:
     std::vector<std::shared_ptr<MethodMeta> > instanceMethods;
     std::vector<std::shared_ptr<MethodMeta> > staticMethods;
     std::vector<std::shared_ptr<PropertyMeta> > properties;
-    std::vector<DeclId> protocols;
+    std::vector<std::shared_ptr<DeclId> > protocols;
 };
 
 class CategoryMeta : public BaseClassMeta {
@@ -136,7 +137,7 @@ public:
         this->type = MetaType::Category;
     }
 
-    DeclId extendedInterface;
+    std::shared_ptr<DeclId> extendedInterface;
 
     virtual void visit(MetaVisitor* visitor) override;
 };
@@ -148,7 +149,7 @@ public:
         this->type = MetaType::Interface;
     }
 
-    DeclId base;
+    std::shared_ptr<DeclId> base;
 
     virtual void visit(MetaVisitor* visitor) override;
 };
@@ -254,13 +255,7 @@ public:
         return std::static_pointer_cast<T>(meta);
     }
 
-    void add(std::shared_ptr<Meta> meta)
-    {
-        if (_declarations.find(meta->id.jsName) == _declarations.end())
-            _declarations.insert(std::pair<std::string, std::shared_ptr<Meta> >(meta->id.jsName, meta));
-        //else
-        //    std::cerr << "The declaration with name '" << meta->id.jsName << "' already exists in module '" << _module->Name.c_str() << "'." <<  std::endl; // TODO: research why there are conflicts
-    }
+    void add(std::shared_ptr<Meta> meta);
 
     ModuleMeta::iterator begin() { return _declarations.begin(); }
     ModuleMeta::const_iterator begin() const { return _declarations.begin(); }
@@ -273,7 +268,9 @@ public:
 
 private:
     clang::Module* _module;
+
     std::map<std::string, std::shared_ptr<Meta> > _declarations;
+    std::unordered_set<std::string> _ambiguousDeclarations;
 };
 
 class MetaContainer {
@@ -294,10 +291,10 @@ public:
             this->_categoryIsMerged.push_back(false);
         }
         else {
-            std::string moduleName = meta->id.module->getTopLevelModule()->getFullModuleName();
+            std::string moduleName = meta->id->module->getTopLevelModule()->getFullModuleName();
             ModuleMeta* module = getTopLevelModule(moduleName);
             if (module == nullptr) {
-                ModuleMeta newModule = ModuleMeta(meta->id.module->getTopLevelModule());
+                ModuleMeta newModule = ModuleMeta(meta->id->module->getTopLevelModule());
                 newModule.add(meta);
                 this->_topLevelModules.push_back(newModule);
             }
@@ -308,7 +305,7 @@ public:
 
         if (meta->is(MetaType::Interface)) {
             std::shared_ptr<InterfaceMeta> interface = std::static_pointer_cast<InterfaceMeta>(meta);
-            this->_interfaces.insert(std::pair<std::string, std::shared_ptr<InterfaceMeta> >(meta->id.name, interface));
+            this->_interfaces.insert(std::pair<std::string, std::shared_ptr<InterfaceMeta> >(meta->id->name, interface));
         }
     }
 
@@ -396,9 +393,9 @@ public:
         for (size_t i = 0; i < _categories.size(); i++) {
             if (!_categoryIsMerged[i]) {
                 std::shared_ptr<CategoryMeta> category = _categories[i];
-                std::shared_ptr<InterfaceMeta> extendedInterface = this->getMetaAs<InterfaceMeta>(category->extendedInterface);
+                std::shared_ptr<InterfaceMeta> extendedInterface = this->getMetaAs<InterfaceMeta>(*category->extendedInterface);
                 if (!extendedInterface) {
-                    std::cerr << "Extended interface for category '" << category->id.name << "' not found." << std::endl;
+                    std::cerr << "Extended interface for category '" << category->id->name << "' not found." << std::endl;
                     continue;
                 }
 

@@ -88,20 +88,20 @@ public:
     static Type Instancetype() { return Type(TypeType::TypeInstancetype); }
     static Type ProtocolType() { return Type(TypeType::TypeProtocol); }
 
-    static Type ClassType(std::vector<DeclId> protocols);
-    static Type Id(std::vector<DeclId> protocols);
+    static Type ClassType(std::vector<std::shared_ptr<DeclId> > protocols);
+    static Type Id(std::vector<std::shared_ptr<DeclId> > protocols);
     static Type ConstantArray(Type innerType, int size);
     static Type IncompleteArray(Type innerType);
-    static Type Interface(DeclId name, std::vector<DeclId> protocols);
-    static Type BridgedInterface(DeclId id);
+    static Type Interface(std::shared_ptr<DeclId> name, std::vector<std::shared_ptr<DeclId> > protocols);
+    static Type BridgedInterface(std::shared_ptr<DeclId> id);
     static Type Pointer(Type innerType);
     static Type Block(std::vector<Type>& signature);
     static Type FunctionPointer(std::vector<Type>& signature);
-    static Type Struct(DeclId id);
-    static Type Union(DeclId id);
+    static Type Struct(std::shared_ptr<DeclId> id);
+    static Type Union(std::shared_ptr<DeclId> id);
     static Type AnonymousStruct(std::vector<RecordField> fields);
     static Type AnonymousUnion(std::vector<RecordField> fields);
-    static Type Enum(Type underlyingType, DeclId name);
+    static Type Enum(Type underlyingType, std::shared_ptr<DeclId> name);
 
     TypeType getType() const { return type; }
 
@@ -213,43 +213,43 @@ struct TypeDetails {
 };
 
 struct IdTypeDetails : TypeDetails {
-    IdTypeDetails(std::vector<DeclId>& protocols)
+    IdTypeDetails(std::vector<std::shared_ptr<DeclId> >& protocols)
         : protocols(protocols)
     {
     }
 
-    std::vector<DeclId> protocols;
+    std::vector<std::shared_ptr<DeclId> > protocols;
 };
 
 struct ClassTypeDetails : TypeDetails {
-    ClassTypeDetails(std::vector<DeclId>& protocols)
+    ClassTypeDetails(std::vector<std::shared_ptr<DeclId> >& protocols)
         : protocols(protocols)
     {
     }
 
-    std::vector<DeclId> protocols;
+    std::vector<std::shared_ptr<DeclId> > protocols;
 };
 
 struct InterfaceTypeDetails : TypeDetails {
-    InterfaceTypeDetails(DeclId id, std::vector<DeclId>& protocols)
+    InterfaceTypeDetails(std::shared_ptr<DeclId> id, std::vector<std::shared_ptr<DeclId> >& protocols)
         : id(id)
         , protocols(protocols)
     {
     }
 
-    DeclId id;
-    std::vector<DeclId> protocols;
+    std::shared_ptr<DeclId> id;
+    std::vector<std::shared_ptr<DeclId> > protocols;
 };
 
 struct BridgedInterfaceTypeDetails : TypeDetails {
-    BridgedInterfaceTypeDetails(DeclId id)
+    BridgedInterfaceTypeDetails(std::shared_ptr<DeclId> id)
         : id(id)
     {
     }
 
-    DeclId id;
+    std::shared_ptr<DeclId> id;
 
-    bool isResolved() { return id.module != nullptr; }
+    bool isResolved() { return id->module != nullptr; }
 };
 
 struct IncompleteArrayTypeDetails : TypeDetails {
@@ -300,21 +300,21 @@ struct FunctionPointerTypeDetails : TypeDetails {
 };
 
 struct StructTypeDetails : TypeDetails {
-    StructTypeDetails(DeclId id)
+    StructTypeDetails(std::shared_ptr<DeclId> id)
         : id(id)
     {
     }
 
-    DeclId id;
+    std::shared_ptr<DeclId> id;
 };
 
 struct UnionTypeDetails : TypeDetails {
-    UnionTypeDetails(DeclId id)
+    UnionTypeDetails(std::shared_ptr<DeclId> id)
         : id(id)
     {
     }
 
-    DeclId id;
+    std::shared_ptr<DeclId> id;
 };
 
 struct AnonymousStructTypeDetails : TypeDetails {
@@ -336,13 +336,13 @@ struct AnonymousUnionTypeDetails : TypeDetails {
 };
 
 struct EnumTypeDetails : TypeDetails {
-    EnumTypeDetails(Type underlyingType, DeclId name)
+    EnumTypeDetails(Type underlyingType, std::shared_ptr<DeclId> id)
         : underlyingType(underlyingType)
-        , name(name)
+        , id(id)
     {
     }
 
     Type underlyingType;
-    DeclId name;
+    std::shared_ptr<DeclId> id;
 };
 }

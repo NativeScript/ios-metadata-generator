@@ -8,7 +8,7 @@ static bool areMethodsEqual(Meta::MethodMeta& method1, Meta::MethodMeta& method2
 
 static bool arePropertiesEqual(Meta::PropertyMeta& prop1, Meta::PropertyMeta& prop2)
 {
-    if (prop1.id.name == prop2.id.name) {
+    if (prop1.id->name == prop2.id->name) {
         if ((bool)prop1.getter == (bool)prop2.getter && (bool)prop1.setter == (bool)prop2.setter) {
             if (prop1.getter)
                 return areMethodsEqual(*prop1.getter.get(), *prop2.getter.get());
@@ -51,16 +51,16 @@ static void processBaseClassAndHierarchyOf(std::shared_ptr<Meta::BaseClassMeta> 
     if (child != parent) {
         removeDuplicateMembersFromChild(child, parent);
     }
-    for (const Meta::DeclId& protocolId : parent->protocols) {
-        std::shared_ptr<Meta::ProtocolMeta> protocol = container.getMetaAs<Meta::ProtocolMeta>(protocolId);
+    for (const std::shared_ptr<Meta::DeclId> protocolId : parent->protocols) {
+        std::shared_ptr<Meta::ProtocolMeta> protocol = container.getMetaAs<Meta::ProtocolMeta>(*protocolId);
         if (protocol) {
             processBaseClassAndHierarchyOf(child, protocol, container);
         }
     }
     if (parent->is(Meta::MetaType::Interface)) {
         std::shared_ptr<Meta::InterfaceMeta> parentInterface = std::static_pointer_cast<Meta::InterfaceMeta>(parent);
-        if (!parentInterface->base.jsName.empty()) {
-            std::shared_ptr<Meta::InterfaceMeta> base = container.getMetaAs<Meta::InterfaceMeta>(parentInterface->base);
+        if (parentInterface->base) {
+            std::shared_ptr<Meta::InterfaceMeta> base = container.getMetaAs<Meta::InterfaceMeta>(*parentInterface->base);
             if (base) {
                 processBaseClassAndHierarchyOf(child, base, container);
             }
