@@ -36,45 +36,41 @@ static void splitString(const std::string& s, char delim, vector<string>& elems)
 
 Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, bool throwIfEmpty)
 {
+    DeclId id;
     // check for cached Identifier
     std::unordered_map<const clang::Decl*, DeclId>::const_iterator cachedId = _declCache.find(&decl);
     if (cachedId != _declCache.end()) {
-        return cachedId->second;
-    }
+        id = cachedId->second;
+    } else {
+        id.name = calculateName(decl);
 
-    std::string name = calculateName(decl);
-    std::string jsName;
-    std::string fileName;
-    clang::Module* module = nullptr;
-
-    // calculate js name
-    std::string originalName = calculateOriginalName(decl);
-    std::string recalculationMapName = originalName;
-    if (decl.getKind() == clang::Decl::Kind::ObjCProperty || decl.getKind() == clang::Decl::Kind::ObjCMethod) {
-        if (const clang::ObjCContainerDecl* containerDecl = clang::dyn_cast<clang::ObjCContainerDecl>(decl.getDeclContext()))
-            recalculationMapName = calculateOriginalName(*containerDecl) + "." + originalName;
-    }
-    jsName = calculateJsName(decl, originalName);
-    if (!jsName.empty()) {
-        std::vector<std::string> namesToCheck = _namesToRecalculate[decl.getKind()];
-        if (std::find(namesToCheck.begin(), namesToCheck.end(), recalculationMapName) != namesToCheck.end()) {
-            jsName = recalculateJsName(decl, jsName);
+        // calculate js name
+        std::string originalName = calculateOriginalName(decl);
+        std::string recalculationMapName = originalName;
+        if (decl.getKind() == clang::Decl::Kind::ObjCProperty || decl.getKind() == clang::Decl::Kind::ObjCMethod) {
+            if (const clang::ObjCContainerDecl* containerDecl = clang::dyn_cast<clang::ObjCContainerDecl>(
+                    decl.getDeclContext()))
+                recalculationMapName = calculateOriginalName(*containerDecl) + "." + originalName;
         }
+        id.jsName = calculateJsName(decl, originalName);
+        if (!id.jsName.empty()) {
+            std::vector<std::string> namesToCheck = _namesToRecalculate[decl.getKind()];
+            if (std::find(namesToCheck.begin(), namesToCheck.end(), recalculationMapName) != namesToCheck.end()) {
+                id.jsName = recalculateJsName(decl, id.jsName);
+            }
+        }
+
+        // calculate file name and module
+        clang::SourceLocation location = _sourceManager.getFileLoc(decl.getLocation());
+        clang::FileID fileId = _sourceManager.getDecomposedLoc(location).first;
+        const clang::FileEntry* entry = _sourceManager.getFileEntryForID(fileId);
+        if (entry != nullptr) {
+            id.fileName = entry->getName();
+            id.module = _headerSearch.findModuleForHeader(entry).getModule();
+        }
+        // add to cache
+        _declCache.insert(std::pair<const clang::Decl*, DeclId>(&decl, id));
     }
-
-    // calculate file name and module
-    clang::SourceLocation location = _sourceManager.getFileLoc(decl.getLocation());
-    clang::FileID fileId = _sourceManager.getDecomposedLoc(location).first;
-    const clang::FileEntry* entry = _sourceManager.getFileEntryForID(fileId);
-    if (entry != nullptr) {
-        fileName = entry->getName();
-        module = _headerSearch.findModuleForHeader(entry).getModule();
-    }
-
-    DeclId id(name, jsName, fileName, module);
-
-    // add to cache
-    _declCache.insert(std::pair<const clang::Decl*, DeclId>(&decl, id));
 
     if (throwIfEmpty) {
         // if name is empty we don't throw exception, it's OK the declaration to be anonymous
@@ -89,7 +85,8 @@ Meta::DeclId Meta::IdentifierFactory::getIdentifier(const clang::Decl& decl, boo
     return id;
 }
 
-string Meta::IdentifierFactory::calculateName(const clang::Decl& decl) {
+string Meta::IdentifierFactory::calculateName(const clang::Decl& decl)
+{
     if (const clang::NamedDecl* namedDecl = clang::dyn_cast<clang::NamedDecl>(&decl)) {
         std::vector<clang::ObjCRuntimeNameAttr*> objCRuntimeNameAttributes = Utils::getAttributes<clang::ObjCRuntimeNameAttr>(*namedDecl);
         if (!objCRuntimeNameAttributes.size()) {
