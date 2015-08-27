@@ -1,18 +1,19 @@
 #pragma once
 
+#include <iostream>
 #include <clang/Frontend/ASTUnit.h>
 #include <clang/Lex/Preprocessor.h>
 #include <clang/Lex/HeaderSearch.h>
 #include <clang/AST/RecursiveASTVisitor.h>
 #include "MetaFactory.h"
-#include <iostream>
+#include "IdentifierFactory.h"
 
 namespace Meta {
 class DeclarationConverterVisitor : public clang::RecursiveASTVisitor<DeclarationConverterVisitor>, public MetaFactoryDelegate, public TypeFactoryDelegate {
 public:
     explicit DeclarationConverterVisitor(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch)
         : _result()
-        , _idFactory(sourceManager, headerSearch, IdentifierFactory::getIosSdkNamesToRecalculate())
+        , _idFactory(sourceManager, headerSearch)
         , _metaFactory(this)
         , _typeFactory(this)
     {
@@ -21,9 +22,9 @@ public:
     void resolveUnresolvedBridgedInterfaces()
     {
         for (const Type& type : _unresolvedBridgedInterfaces) {
-            std::shared_ptr<InterfaceMeta> interface = _result.getInterface(type.getDetailsAs<BridgedInterfaceTypeDetails>().id.name);
-            // TODO: Handle the case when there is no interface found, instead of setting empty DeclId
-            type.getDetailsAs<BridgedInterfaceTypeDetails>().id = (interface ? interface->id : DeclId());
+            std::shared_ptr<InterfaceMeta> interface = _result.getInterface(type.getDetailsAs<BridgedInterfaceTypeDetails>().id->name);
+            // TODO: Handle the case when there is no interface found, instead of setting empty std::shared_ptr<DeclId>
+            type.getDetailsAs<BridgedInterfaceTypeDetails>().id = (interface ? interface->id : std::shared_ptr<DeclId>());
         }
     }
 
@@ -50,14 +51,14 @@ public:
     bool VisitObjCCategoryDecl(clang::ObjCCategoryDecl* protocol);
 
     // MetaFactoryDelegate methods
-    DeclId getId(const clang::Decl& decl, bool throwIfEmpty) override { return _idFactory.getIdentifier(decl, throwIfEmpty); }
+    std::shared_ptr<DeclId> getId(const clang::Decl& decl, bool throwIfEmpty) override { return _idFactory.getIdentifier(decl, throwIfEmpty); }
 
     Type getType(const clang::Type* type) override { return _typeFactory.create(type); }
 
     Type getType(const clang::QualType& type) override { return _typeFactory.create(type); }
 
     // TypeFactoryDelegate methods
-    virtual DeclId getDeclId(const clang::Decl& decl, bool throwIfEmpty) override { return _idFactory.getIdentifier(decl, throwIfEmpty); }
+    virtual std::shared_ptr<DeclId> getDeclId(const clang::Decl& decl, bool throwIfEmpty) override { return _idFactory.getIdentifier(decl, throwIfEmpty); }
 
     virtual clang::Decl& validate(clang::Decl& decl) override
     {
@@ -74,7 +75,7 @@ private:
         try {
             std::shared_ptr<Meta> meta = this->_metaFactory.create(*decl);
             addToResult(meta);
-            //std::cout << "Included: " << meta->id.jsName << " from " << meta->id.fullModule << std::endl;
+            //std::cout << "Included: " << meta->id->jsName << " from " << meta->id->fullModule << std::endl;
         }
         catch (MetaCreationException& e) {
             //if(e.isError())

@@ -6,41 +6,31 @@
 
 using namespace std;
 
-bool protocolsComparerByJsName(Meta::DeclId& protocol1, Meta::DeclId& protocol2)
+static bool protocolsComparerByJsName(std::shared_ptr<Meta::DeclId> protocol1, std::shared_ptr<Meta::DeclId> protocol2)
 {
-    string name1 = protocol1.jsName;
-    string name2 = protocol2.jsName;
+    string name1 = protocol1->jsName;
+    string name2 = protocol2->jsName;
     std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower);
     std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
     return name1 < name2;
 }
 
-bool methodsComparerByJsName(std::shared_ptr<Meta::MethodMeta>& method1, std::shared_ptr<Meta::MethodMeta>& method2)
+static bool methodsComparerByJsName(std::shared_ptr<Meta::MethodMeta>& method1, std::shared_ptr<Meta::MethodMeta>& method2)
 {
-    string name1 = method1->id.jsName;
-    string name2 = method2->id.jsName;
+    string name1 = method1->id->jsName;
+    string name2 = method2->id->jsName;
     std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower);
     std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
     return name1 < name2;
 }
 
-bool propertiesComparerByJsName(std::shared_ptr<Meta::PropertyMeta>& property1, std::shared_ptr<Meta::PropertyMeta>& property2)
+static bool propertiesComparerByJsName(std::shared_ptr<Meta::PropertyMeta>& property1, std::shared_ptr<Meta::PropertyMeta>& property2)
 {
-    string name1 = property1->id.jsName;
-    string name2 = property2->id.jsName;
+    string name1 = property1->id->jsName;
+    string name2 = property2->id->jsName;
     std::transform(name1.begin(), name1.end(), name1.begin(), ::tolower);
     std::transform(name2.begin(), name2.end(), name2.begin(), ::tolower);
     return name1 < name2;
-}
-
-bool stringBeginsWith(std::string& str, std::vector<std::string>& possibleBegins)
-{
-    for (size_t i = 0; i < possibleBegins.size(); ++i) {
-        if (possibleBegins[i].length() <= str.length() && str.compare(0, possibleBegins[i].size(), possibleBegins[i]) == 0) {
-            return true;
-        }
-    }
-    return false;
 }
 
 shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl)
@@ -54,7 +44,7 @@ shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl)
         throw MetaCreationException(_delegate->getId(decl, false), "Unable to create metadata.", false); // The meta object cannot be created
     }
     else if (std::find(_metaCreationStack.begin(), _metaCreationStack.end(), &decl) != _metaCreationStack.end()) {
-        throw runtime_error(std::string("Attempt to create the same meta object recursively(") + _delegate->getId(decl, false).jsName + ").");
+        throw runtime_error(std::string("Attempt to create the same meta object recursively(") + _delegate->getId(decl, false)->jsName + ").");
     }
 
     _metaCreationStack.push_back(&decl); // add to creation stack
@@ -70,8 +60,8 @@ shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl)
             result = createFromEnum(*enumDecl);
         else if (clang::EnumConstantDecl* enumConstantDecl = clang::dyn_cast<clang::EnumConstantDecl>(&decl))
             result = createFromEnumConstant(*enumConstantDecl);
-        else if (clang::ObjCInterfaceDecl* ineterface = clang::dyn_cast<clang::ObjCInterfaceDecl>(&decl))
-            result = createFromInterface(*ineterface);
+        else if (clang::ObjCInterfaceDecl* interface = clang::dyn_cast<clang::ObjCInterfaceDecl>(&decl))
+            result = createFromInterface(*interface);
         else if (clang::ObjCProtocolDecl* protocol = clang::dyn_cast<clang::ObjCProtocolDecl>(&decl))
             result = createFromProtocol(*protocol);
         else if (clang::ObjCCategoryDecl* category = clang::dyn_cast<clang::ObjCCategoryDecl>(&decl))
@@ -81,7 +71,7 @@ shared_ptr<Meta::Meta> Meta::MetaFactory::create(clang::Decl& decl)
         else if (clang::ObjCPropertyDecl* property = clang::dyn_cast<clang::ObjCPropertyDecl>(&decl))
             result = createFromProperty(*property);
         else
-            throw MetaCreationException(_delegate->getId(decl, false), "Unknow declaration type.", true);
+            throw MetaCreationException(_delegate->getId(decl, false), "Unknown declaration type.", true);
 
         _metaCreationStack.pop_back(); // remove from creation stack
         _cache.insert(std::pair<const clang::Decl*, std::shared_ptr<Meta> >(&decl, result)); // add to cache
@@ -158,7 +148,7 @@ shared_ptr<Meta::RecordMeta> Meta::MetaFactory::createFromRecord(clang::RecordDe
 
     // set fields
     for (clang::FieldDecl* field : record.fields()) {
-        RecordField recordField(_delegate->getId(*field, true).jsName, _delegate->getType(field->getType()));
+        RecordField recordField(_delegate->getId(*field, true)->jsName, _delegate->getType(field->getType()));
         recordMeta->fields.push_back(recordField);
     }
     return recordMeta;
@@ -190,7 +180,7 @@ std::shared_ptr<Meta::JsCodeMeta> Meta::MetaFactory::createFromEnum(clang::EnumD
     std::vector<std::string> fieldNames;
     for (clang::EnumConstantDecl* enumField : enumeration.enumerators())
         fieldNames.push_back(enumField->getNameAsString());
-    fieldNames.push_back(jsCodeMeta->id.jsName);
+    fieldNames.push_back(jsCodeMeta->id->jsName);
     size_t fieldNamePrefixLength = Utils::getCommonWordPrefix(fieldNames).length();
 
     std::ostringstream jsCodeStream;
@@ -234,7 +224,7 @@ shared_ptr<Meta::InterfaceMeta> Meta::MetaFactory::createFromInterface(clang::Ob
 
     // set base interface
     clang::ObjCInterfaceDecl* super = interface.getSuperClass();
-    interfaceMeta->base = (super == nullptr) ? DeclId() : _delegate->getId(ensureCanBeCreated(*super->getDefinition()), true);
+    interfaceMeta->base = (super == nullptr) ? nullptr : _delegate->getId(ensureCanBeCreated(*super->getDefinition()), true);
 
     return interfaceMeta;
 }
@@ -278,7 +268,7 @@ shared_ptr<Meta::MethodMeta> Meta::MetaFactory::createFromMethod(clang::ObjCMeth
         Type type = _delegate->getType(lastParameter->getType());
         if (type.is(TypeType::TypePointer)) {
             Type innerType = type.getDetailsAs<PointerTypeDetails>().innerType;
-            if (innerType.is(TypeType::TypeInterface) && innerType.getDetailsAs<InterfaceTypeDetails>().id.name == "NSError") {
+            if (innerType.is(TypeType::TypeInterface) && innerType.getDetailsAs<InterfaceTypeDetails>().id->name == "NSError") {
                 methodMeta->setFlags(MetaFlags::MethodHasErrorOutParameter, true);
             }
         }
@@ -345,7 +335,7 @@ void Meta::MetaFactory::populateMetaFields(clang::NamedDecl& decl, Meta& meta)
     // Traverse attributes
     bool hasUnavailableAttr = Utils::getAttributes<clang::UnavailableAttr>(decl).size() > 0;
     if (hasUnavailableAttr) {
-        throw MetaCreationException(_delegate->getId(decl, false), "The declaration is marked unvailable (with unavailable attribute).", false);
+        throw MetaCreationException(_delegate->getId(decl, false), "The declaration is marked unavailable (with unavailable attribute).", false);
     }
     vector<clang::AvailabilityAttr*> availabilityAttributes = Utils::getAttributes<clang::AvailabilityAttr>(decl);
     for (clang::AvailabilityAttr* availability : availabilityAttributes) {

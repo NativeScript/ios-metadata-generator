@@ -155,7 +155,7 @@ Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type)
 
 Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type)
 {
-    vector<DeclId> protocols;
+    vector<std::shared_ptr<DeclId> > protocols;
     for (clang::ObjCProtocolDecl* qual : type->quals()) {
         clang::ObjCProtocolDecl* protocolDef = qual->getDefinition();
         if (protocolDef) {
@@ -206,7 +206,7 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type)
             if (bridgeMutableAttrs.size() > 0) {
                 clang::ObjCBridgeMutableAttr* bridgeAttr = bridgeMutableAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                DeclId id = DeclId(name, "", "", nullptr); // The module name should be resolved after parsing all declarations
+                std::shared_ptr<DeclId> id = std::make_shared<DeclId>(name, "", "", nullptr); // The module name should be resolved after parsing all declarations
                 Type interface = Type::BridgedInterface(id);
                 _delegate->registerUnresolvedBridgedType(interface);
                 return interface;
@@ -216,7 +216,7 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type)
             if (bridgeAttrs.size() > 0) {
                 clang::ObjCBridgeAttr* bridgeAttr = bridgeAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                DeclId id = DeclId(name, "", "", nullptr); // The module name should be resolved after parsing all declarations
+                std::shared_ptr<DeclId> id = std::make_shared<DeclId>(name, "", "", nullptr); // The module name should be resolved after parsing all declarations
                 Type interface = Type::BridgedInterface(id);
                 _delegate->registerUnresolvedBridgedType(interface);
                 return interface;
@@ -251,13 +251,13 @@ Type TypeFactory::createFromRecordType(const clang::RecordType* type)
         // The record is anonymous
         std::vector<RecordField> fields;
         for (clang::FieldDecl* field : recordDef->fields()) {
-            RecordField fieldMeta(_delegate->getDeclId(*field, true).jsName, this->create(field->getType()));
+            RecordField fieldMeta(_delegate->getDeclId(*field, true)->jsName, this->create(field->getType()));
             fields.push_back(fieldMeta);
         }
         return Type::AnonymousStruct(fields);
     }
 
-    DeclId recordId = this->_delegate->getDeclId(_delegate->validate(*recordDef), true);
+    std::shared_ptr<DeclId> recordId = this->_delegate->getDeclId(_delegate->validate(*recordDef), true);
     return Type::Struct(recordId);
 }
 

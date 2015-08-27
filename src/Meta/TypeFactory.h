@@ -2,12 +2,12 @@
 
 #include <clang/AST/RecursiveASTVisitor.h>
 #include "TypeEntities.h"
-#include "IdentifierFactory.h"
+#include "Identifier.h"
 
 namespace Meta {
 class TypeFactoryDelegate {
 public:
-    virtual DeclId getDeclId(const clang::Decl& decl, bool throwIfEmpty) = 0;
+    virtual std::shared_ptr<DeclId> getDeclId(const clang::Decl& decl, bool throwIfEmpty) = 0;
 
     virtual void registerUnresolvedBridgedType(Type& type) = 0;
 

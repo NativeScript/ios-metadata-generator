@@ -2,12 +2,12 @@
 
 using namespace Meta;
 
-Type Type::ClassType(std::vector<DeclId> protocols)
+Type Type::ClassType(std::vector<std::shared_ptr<DeclId> > protocols)
 {
     return Type(TypeType::TypeClass, new ClassTypeDetails(protocols));
 }
 
-Type Type::Id(std::vector<DeclId> protocols)
+Type Type::Id(std::vector<std::shared_ptr<DeclId> > protocols)
 {
     return Type(TypeType::TypeId, new IdTypeDetails(protocols));
 }
@@ -22,12 +22,12 @@ Type Meta::Type::IncompleteArray(Type innerType)
     return Type(TypeType::TypeIncompleteArray, new IncompleteArrayTypeDetails(innerType));
 }
 
-Type Meta::Type::Interface(DeclId id, std::vector<DeclId> protocols)
+Type Meta::Type::Interface(std::shared_ptr<DeclId> id, std::vector<std::shared_ptr<DeclId> > protocols)
 {
     return Type(TypeType::TypeInterface, new InterfaceTypeDetails(id, protocols));
 }
 
-Type Meta::Type::BridgedInterface(DeclId id)
+Type Meta::Type::BridgedInterface(std::shared_ptr<DeclId> id)
 {
     return Type(TypeType::TypeBridgedInterface, new BridgedInterfaceTypeDetails(id));
 }
@@ -47,12 +47,12 @@ Type Meta::Type::FunctionPointer(std::vector<Type>& signature)
     return Type(TypeType::TypeFunctionPointer, new FunctionPointerTypeDetails(signature));
 }
 
-Type Meta::Type::Struct(DeclId id)
+Type Meta::Type::Struct(std::shared_ptr<DeclId> id)
 {
     return Type(TypeType::TypeStruct, new StructTypeDetails(id));
 }
 
-Type Meta::Type::Union(DeclId id)
+Type Meta::Type::Union(std::shared_ptr<DeclId> id)
 {
     return Type(TypeType::TypeUnion, new UnionTypeDetails(id));
 }
@@ -67,7 +67,7 @@ Type Meta::Type::AnonymousUnion(std::vector<RecordField> fields)
     return Type(TypeType::TypeAnonymousUnion, new AnonymousUnionTypeDetails(fields));
 }
 
-Type Type::Enum(Type underlyingType, DeclId name)
+Type Type::Enum(Type underlyingType, std::shared_ptr<DeclId> name)
 {
     return Type(TypeType::TypeEnum, new EnumTypeDetails(underlyingType, name));
 }

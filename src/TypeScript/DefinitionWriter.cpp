@@ -26,61 +26,61 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
 {
     CompoundMemberMap<MethodMeta> compoundStaticMethods;
     for (auto& method : meta->staticMethods) {
-        compoundStaticMethods.emplace(method->id.jsName, std::make_pair(meta, method));
+        compoundStaticMethods.emplace(method->id->jsName, std::make_pair(meta, method));
     }
 
     CompoundMemberMap<PropertyMeta> compoundProperties;
     for (auto& property : meta->properties) {
-        if (compoundProperties.find(property->id.jsName) == compoundProperties.end()) {
-            compoundProperties.emplace(property->id.jsName, std::make_pair(meta, property));
+        if (compoundProperties.find(property->id->jsName) == compoundProperties.end()) {
+            compoundProperties.emplace(property->id->jsName, std::make_pair(meta, property));
         }
     }
 
     CompoundMemberMap<MethodMeta> compoundInstanceMethods;
     for (auto& method : meta->instanceMethods) {
-        compoundInstanceMethods.emplace(method->id.jsName, std::make_pair(meta, method));
+        compoundInstanceMethods.emplace(method->id->jsName, std::make_pair(meta, method));
     }
 
     std::set<ProtocolMeta*> inheritedProtocols;
-    for (DeclId baseClassId = meta->base; !baseClassId.jsName.empty();) {
-        InterfaceMeta* baseClass = _container.getMetaAs<InterfaceMeta>(baseClassId).get();
+    for (std::shared_ptr<DeclId> baseClassId = meta->base; baseClassId;) {
+        InterfaceMeta* baseClass = _container.getMetaAs<InterfaceMeta>(*baseClassId).get();
 
         for (auto& method : baseClass->staticMethods) {
-            if (compoundStaticMethods.find(method->id.jsName) == compoundStaticMethods.end()) {
-                compoundStaticMethods.emplace(method->id.jsName, std::make_pair(baseClass, method));
+            if (compoundStaticMethods.find(method->id->jsName) == compoundStaticMethods.end()) {
+                compoundStaticMethods.emplace(method->id->jsName, std::make_pair(baseClass, method));
             }
         }
 
         for (auto& property : baseClass->properties) {
-            if (compoundProperties.find(property->id.jsName) == compoundProperties.end()) {
-                compoundProperties.emplace(property->id.jsName, std::make_pair(baseClass, property));
+            if (compoundProperties.find(property->id->jsName) == compoundProperties.end()) {
+                compoundProperties.emplace(property->id->jsName, std::make_pair(baseClass, property));
             }
         }
 
         for (auto& method : baseClass->instanceMethods) {
-            if (compoundInstanceMethods.find(method->id.jsName) == compoundInstanceMethods.end()) {
-                compoundInstanceMethods.emplace(method->id.jsName, std::make_pair(baseClass, method));
+            if (compoundInstanceMethods.find(method->id->jsName) == compoundInstanceMethods.end()) {
+                compoundInstanceMethods.emplace(method->id->jsName, std::make_pair(baseClass, method));
             }
         }
 
         for (auto& protocol : baseClass->protocols) {
-            getMembersRecursive(protocol, compoundStaticMethods, compoundProperties, compoundInstanceMethods, inheritedProtocols);
+            getMembersRecursive(*protocol, compoundStaticMethods, compoundProperties, compoundInstanceMethods, inheritedProtocols);
         }
 
         baseClassId = baseClass->base;
     }
 
-    _buffer << std::endl << "\tdeclare class " << meta->id.jsName;
-    if (!meta->base.name.empty()) {
-        _buffer << " extends " << localizeReference(meta->base);
+    _buffer << std::endl << "\tdeclare class " << meta->id->jsName;
+    if (meta->base) {
+        _buffer << " extends " << localizeReference(*meta->base);
     }
 
     std::set<ProtocolMeta*> protocols;
     if (meta->protocols.size()) {
         _buffer << " implements ";
         for (size_t i = 0; i < meta->protocols.size(); i++) {
-            getMembersRecursive(meta->protocols[i], compoundStaticMethods, compoundProperties, compoundInstanceMethods, protocols);
-            _buffer << localizeReference(meta->protocols[i]);
+            getMembersRecursive(*meta->protocols[i], compoundStaticMethods, compoundProperties, compoundInstanceMethods, protocols);
+            _buffer << localizeReference(*meta->protocols[i]);
             if (i < meta->protocols.size() - 1) {
                 _buffer << ", ";
             }
@@ -107,7 +107,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         if (owner == meta || immediateProtocols.find(reinterpret_cast<ProtocolMeta*>(owner)) != immediateProtocols.end()) {
             _buffer << "\t\t" << writeProperty(propertyPair.second.second.get(), meta);
             if (owner != meta) {
-                _buffer << " //inherited from " << localizeReference(DeclId("", owner->id.jsName, "", owner->id.module));
+                _buffer << " //inherited from " << localizeReference(DeclId("", owner->id->jsName, "", owner->id->module));
             }
             _buffer << std::endl;
         }
@@ -145,25 +145,25 @@ void DefinitionWriter::getMembersRecursive(DeclId& protocol,
         visitedProtocols.insert(protocolMeta);
 
         for (auto& method : protocolMeta->staticMethods) {
-            if (staticMethods.find(method->id.jsName) == staticMethods.end()) {
-                staticMethods.emplace(method->id.jsName, std::make_pair(protocolMeta, method));
+            if (staticMethods.find(method->id->jsName) == staticMethods.end()) {
+                staticMethods.emplace(method->id->jsName, std::make_pair(protocolMeta, method));
             }
         }
 
         for (auto& property : protocolMeta->properties) {
-            if (properties.find(property->id.jsName) == properties.end()) {
-                properties.emplace(property->id.jsName, std::make_pair(protocolMeta, property));
+            if (properties.find(property->id->jsName) == properties.end()) {
+                properties.emplace(property->id->jsName, std::make_pair(protocolMeta, property));
             }
         }
 
         for (auto& method : protocolMeta->instanceMethods) {
-            if (instanceMethods.find(method->id.jsName) == instanceMethods.end()) {
-                instanceMethods.emplace(method->id.jsName, std::make_pair(protocolMeta, method));
+            if (instanceMethods.find(method->id->jsName) == instanceMethods.end()) {
+                instanceMethods.emplace(method->id->jsName, std::make_pair(protocolMeta, method));
             }
         }
 
         for (auto& protocol : protocolMeta->protocols) {
-            getMembersRecursive(protocol, staticMethods, properties, instanceMethods, visitedProtocols);
+            getMembersRecursive(*protocol, staticMethods, properties, instanceMethods, visitedProtocols);
         }
     }
 }
@@ -172,11 +172,11 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
 {
     _buffer << std::endl;
 
-    _buffer << "\tinterface " << meta->id.jsName;
+    _buffer << "\tinterface " << meta->id->jsName;
     if (meta->protocols.size()) {
         _buffer << " extends ";
         for (size_t i = 0; i < meta->protocols.size(); i++) {
-            _buffer << localizeReference(meta->protocols[i]);
+            _buffer << localizeReference(*meta->protocols[i]);
             if (i < meta->protocols.size() - 1) {
                 _buffer << ", ";
             }
@@ -189,14 +189,14 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
     }
 
     for (auto& method : meta->instanceMethods) {
-        if (hiddenMethods.find(method->id.jsName) == hiddenMethods.end()) {
+        if (hiddenMethods.find(method->id->jsName) == hiddenMethods.end()) {
             _buffer << "\t\t" << writeMethod(method.get(), meta) << std::endl;
         }
     }
 
     _buffer << "\t}" << std::endl;
 
-    _buffer << "\tdeclare var " << meta->id.jsName << ": any; /* Protocol */" << std::endl;
+    _buffer << "\tdeclare var " << meta->id->jsName << ": any; /* Protocol */" << std::endl;
 }
 
 std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner)
@@ -219,7 +219,7 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
 
     std::ostringstream output;
 
-    output << meta->id.jsName;
+    output << meta->id->jsName;
     if (owner->type == MetaType::Protocol && methodDecl.getImplementationControl() == clang::ObjCMethodDecl::ImplementationControl::Optional) {
         output << "?";
     }
@@ -237,7 +237,7 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
 
     Type& retType = meta->signature[0];
     if (retType.is(TypeInstancetype)) {
-        output << owner->id.jsName;
+        output << owner->id->jsName;
     }
     else {
         output << tsifyType(retType);
@@ -254,7 +254,7 @@ std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_t
     auto memberOwner = methodPair.second.first;
     auto& method = methodPair.second.second;
 
-    if (hiddenMethods.find(method->id.jsName) != hiddenMethods.end()) {
+    if (hiddenMethods.find(method->id->jsName) != hiddenMethods.end()) {
         return std::string();
     }
 
@@ -264,7 +264,7 @@ std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_t
 
         output << writeMethod(method.get(), owner);
         if (memberOwner != owner) {
-            output << " //inherited from " << localizeReference(memberOwner->id.jsName, memberOwner->id.module->getFullModuleName());
+            output << " //inherited from " << localizeReference(memberOwner->id->jsName, memberOwner->id->module->getFullModuleName());
         }
     }
 
@@ -275,7 +275,7 @@ std::string DefinitionWriter::writeProperty(PropertyMeta* meta, BaseClassMeta* o
 {
     std::ostringstream output;
 
-    output << meta->id.jsName;
+    output << meta->id->jsName;
     if (owner->type == MetaType::Protocol && clang::dyn_cast<clang::ObjCPropertyDecl>(meta->declaration)->getPropertyImplementation() == clang::ObjCPropertyDecl::PropertyControl::Optional) {
         output << "?";
     }
@@ -302,7 +302,7 @@ void DefinitionWriter::visit(FunctionMeta* meta)
     }
 
     _buffer << std::endl;
-    _buffer << "\tdeclare function " << meta->id.jsName
+    _buffer << "\tdeclare function " << meta->id->jsName
             << "(" << params.str() << "): " << tsifyType(meta->signature[0]) << ";";
     _buffer << std::endl;
 }
@@ -311,11 +311,11 @@ void DefinitionWriter::visit(StructMeta* meta)
 {
     _buffer << std::endl;
 
-    _buffer << "\tinterface " << meta->id.jsName << " {" << std::endl;
+    _buffer << "\tinterface " << meta->id->jsName << " {" << std::endl;
     writeMembers(meta->fields);
     _buffer << "\t}" << std::endl;
 
-    _buffer << "\tdeclare var " << meta->id.jsName << ": interop.StructType<" << meta->id.jsName << ">;";
+    _buffer << "\tdeclare var " << meta->id->jsName << ": interop.StructType<" << meta->id->jsName << ">;";
 
     _buffer << std::endl;
 }
@@ -324,7 +324,7 @@ void DefinitionWriter::visit(UnionMeta* meta)
 {
     _buffer << std::endl;
 
-    _buffer << "\tinterface " << meta->id.jsName << " {" << std::endl;
+    _buffer << "\tinterface " << meta->id->jsName << " {" << std::endl;
     writeMembers(meta->fields);
     _buffer << "\t}" << std::endl;
 
@@ -344,7 +344,7 @@ void DefinitionWriter::visit(JsCodeMeta* meta)
         clang::EnumDecl* enumDecl = clang::dyn_cast<clang::EnumDecl>(enumConstantDecl->getLexicalDeclContext());
         if (!enumDecl->hasNameForLinkage()) {
             _buffer << std::endl;
-            _buffer << "\t declare const " << meta->id.jsName << ": number;";
+            _buffer << "\t declare const " << meta->id->jsName << ": number;";
             _buffer << std::endl;
         }
     }
@@ -360,7 +360,7 @@ void DefinitionWriter::visit(JsCodeMeta* meta)
             std::string prefix(Utils::getCommonWordPrefix(fieldNames));
 
             _buffer << std::endl;
-            _buffer << "\tdeclare const enum " << meta->id.jsName << " {" << std::endl;
+            _buffer << "\tdeclare const enum " << meta->id->jsName << " {" << std::endl;
 
             for (size_t i = 0; i < fields.size(); i++) {
                 _buffer << "\t\t" << fields[i]->getNameAsString().substr(prefix.size()) << " = " << fields[i]->getInitVal().toString(10);
@@ -379,7 +379,7 @@ void DefinitionWriter::visit(JsCodeMeta* meta)
 void DefinitionWriter::visit(VarMeta* meta)
 {
     _buffer << std::endl;
-    _buffer << "\tdeclare var " << meta->id.jsName << ": " << tsifyType(meta->signature) << ";";
+    _buffer << "\tdeclare var " << meta->id->jsName << ": " << tsifyType(meta->signature) << ";";
     _buffer << std::endl;
 }
 
@@ -440,7 +440,7 @@ std::string DefinitionWriter::tsifyType(const Type& type)
     case TypeId: {
         IdTypeDetails& details = type.getDetailsAs<IdTypeDetails>();
         if (details.protocols.size() == 1) {
-            return localizeReference(details.protocols[0]);
+            return localizeReference(*details.protocols[0]);
         }
         return "any";
     }
@@ -464,23 +464,23 @@ std::string DefinitionWriter::tsifyType(const Type& type)
     case TypeInterface:
     case TypeBridgedInterface: {
         InterfaceTypeDetails& details = type.getDetailsAs<InterfaceTypeDetails>();
-        if (details.id.jsName == "NSNumber") {
+        if (details.id->jsName == "NSNumber") {
             return "number";
         }
-        else if (details.id.jsName == "NSString") {
+        else if (details.id->jsName == "NSString") {
             return "string";
         }
-        else if (details.id.jsName == "NSDate") {
+        else if (details.id->jsName == "NSDate") {
             return "Date";
         }
         else {
-            return localizeReference(details.id);
+            return localizeReference(*details.id);
         }
     }
     case TypeStruct:
-        return localizeReference(type.getDetailsAs<StructTypeDetails>().id);
+        return localizeReference(*type.getDetailsAs<StructTypeDetails>().id);
     case TypeUnion:
-        return localizeReference(type.getDetailsAs<UnionTypeDetails>().id);
+        return localizeReference(*type.getDetailsAs<UnionTypeDetails>().id);
     case TypeAnonymousStruct:
     case TypeAnonymousUnion: {
         std::ostringstream output;
@@ -495,7 +495,7 @@ std::string DefinitionWriter::tsifyType(const Type& type)
         return output.str();
     }
     case TypeEnum:
-        return localizeReference(type.getDetailsAs<EnumTypeDetails>().name);
+        return localizeReference(*type.getDetailsAs<EnumTypeDetails>().id);
     case TypeUnknown:
     case TypeVaList:
     case TypeInstancetype:

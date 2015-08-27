@@ -6,13 +6,13 @@
 #include <clang/AST/RecursiveASTVisitor.h>
 #include "MetaEntities.h"
 #include "TypeFactory.h"
-#include "IdentifierFactory.h"
+#include "Identifier.h"
 
 namespace Meta {
 
 class MetaFactoryDelegate {
 public:
-    virtual DeclId getId(const clang::Decl& decl, bool throwIfEmpty) = 0;
+    virtual std::shared_ptr<DeclId> getId(const clang::Decl& decl, bool throwIfEmpty) = 0;
 
     virtual Type getType(const clang::Type* type) = 0;
 
@@ -63,7 +63,7 @@ private:
 
 class MetaCreationException : public std::exception {
 public:
-    MetaCreationException(DeclId id, std::string message, bool isError)
+    MetaCreationException(std::shared_ptr<DeclId> id, std::string message, bool isError)
         : _id(id)
         , _message(message)
         , _isError(isError)
@@ -71,13 +71,13 @@ public:
     }
 
     virtual const char* what() const throw() { return this->whatAsString().c_str(); }
-    std::string whatAsString() const { return _message + " Decl: " + _id.jsName + "(" + _id.fileName + ") -> " + (this->isError() ? std::string("error") : std::string("notice")); }
-    DeclId getIdentifier() const { return this->_id; }
+    std::string whatAsString() const { return _message + " Decl: " + _id->jsName + "(" + _id->fileName + ") -> " + (this->isError() ? std::string("error") : std::string("notice")); }
+    std::shared_ptr<DeclId> getIdentifier() const { return this->_id; }
     std::string getMessage() const { return this->_message; }
     bool isError() const { return this->_isError; }
 
 private:
-    DeclId _id;
+    std::shared_ptr<DeclId> _id;
     std::string _message;
     bool _isError;
 };
