@@ -6,7 +6,7 @@
 #include <clang/AST/RecursiveASTVisitor.h>
 #include "MetaEntities.h"
 #include "TypeFactory.h"
-#include "IdentifierFactory.h"
+#include "Identifier.h"
 
 namespace Meta {
 

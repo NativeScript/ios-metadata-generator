@@ -12,6 +12,7 @@ set(GENERATOR_HEADERS
     Meta/DeclarationConverterVisitor.h
     Meta/Filters/HandleExceptionalMetasFilter.h
     Meta/Filters/RemoveDuplicateMembersFilter.h
+    Meta/Identifier.h
     Meta/IdentifierFactory.h
     Meta/MetaEntities.h
     Meta/MetaFactory.h
@@ -26,6 +27,7 @@ set(GENERATOR_HEADERS
     Utils/memoryStream.h
     Utils/stream.h
     Utils/StringHasher.h
+    Utils/Noncopyable.h
     Yaml/MetaYamlTraits.h
     Yaml/YamlSerializer.h
 )
@@ -41,6 +43,7 @@ set(GENERATOR_SOURCES
     Meta/TypeEntities.cpp
     Meta/IdentifierFactory.cpp
     Meta/Utils.cpp
+    Meta/Filters/HandleExceptionalMetasFilter.cpp
     Meta/Filters/RemoveDuplicateMembersFilter.cpp
     Utils/fileStream.cpp
     Utils/memoryStream.cpp

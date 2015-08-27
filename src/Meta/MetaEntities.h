@@ -5,9 +5,11 @@
 #include <map>
 #include <unordered_map>
 #include <iostream>
+#include <llvm/ADT/iterator_range.h>
+#include <clang/AST/DeclBase.h>
 #include "TypeEntities.h"
 #include "MetaVisitor.h"
-#include <llvm/ADT/iterator_range.h>
+#include "Utils/Noncopyable.h"
 
 #define UNKNOWN_VERSION \
     {                   \
@@ -51,6 +53,8 @@ enum MetaType {
 };
 
 class Meta {
+    MAKE_NONCOPYABLE(Meta);
+
 public:
     MetaType type = MetaType::Undefined;
     MetaFlags flags = MetaFlags::None;
@@ -63,6 +67,7 @@ public:
 
     clang::Decl* declaration;
 
+    Meta() = default;
     virtual ~Meta() = default;
 
     // visitors
@@ -281,8 +286,6 @@ public:
     typedef std::vector<std::shared_ptr<CategoryMeta> >::const_iterator categories_const_iterator;
     typedef std::vector<ModuleMeta>::size_type size_type;
 
-    MetaContainer() {}
-
     void add(std::shared_ptr<Meta> meta)
     {
         if (meta->is(MetaType::Category)) {
@@ -309,7 +312,7 @@ public:
         }
     }
 
-    void removeCategories(bool (*predicate)(std::shared_ptr<CategoryMeta>&))
+    void removeCategories(bool (*predicate)(std::shared_ptr<CategoryMeta>))
     {
         for (std::vector<std::shared_ptr<CategoryMeta> >::size_type i = 0; i < _categories.size(); i++) {
             std::shared_ptr<CategoryMeta> cat = _categories[i];

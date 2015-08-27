@@ -1,11 +1,12 @@
 #pragma once
 
+#include <iostream>
 #include <clang/Frontend/ASTUnit.h>
 #include <clang/Lex/Preprocessor.h>
 #include <clang/Lex/HeaderSearch.h>
 #include <clang/AST/RecursiveASTVisitor.h>
 #include "MetaFactory.h"
-#include <iostream>
+#include "IdentifierFactory.h"
 
 namespace Meta {
 class DeclarationConverterVisitor : public clang::RecursiveASTVisitor<DeclarationConverterVisitor>, public MetaFactoryDelegate, public TypeFactoryDelegate {

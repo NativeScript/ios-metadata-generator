@@ -2,7 +2,7 @@
 
 #include <clang/AST/RecursiveASTVisitor.h>
 #include "TypeEntities.h"
-#include "IdentifierFactory.h"
+#include "Identifier.h"
 
 namespace Meta {
 class TypeFactoryDelegate {

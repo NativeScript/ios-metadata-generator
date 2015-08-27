@@ -59,7 +59,7 @@ static std::error_code addHeaderInclude(StringRef headerName, SmallVectorImpl<ch
     includes += "#import \"";
 
     // Use an absolute path for the include; there's no reason to think whether a relative path will
-    // work (. might not be on our include path) or that it will find the same file.
+    // work ('.' might not be on our include path) or that it will find the same file.
     if (path::is_absolute(headerName)) {
         includes += headerName;
     }
@@ -127,7 +127,7 @@ static std::error_code collectModuleHeaderIncludes(FileManager& fileMgr, ModuleM
     return std::error_code();
 }
 
-std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::string>& args, std::string* umbrellaHeaderContents, const std::vector<std::string>& moduleBlacklist)
+static std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::string>& args, std::string* umbrellaHeaderContents, const std::vector<std::string>& moduleBlacklist)
 {
     std::unique_ptr<clang::ASTUnit> ast = clang::tooling::buildASTFromCodeWithArgs("", args, "umbrella.h");
     if (!ast)
@@ -158,7 +158,6 @@ std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::str
 
 std::string CreateUmbrellaHeader(const std::vector<std::string>& clangArgs)
 {
-
     std::string umbrellaHeaderContents;
     std::vector<std::string> moduleBlacklist;
 
