@@ -9,11 +9,12 @@ set(GENERATOR_HEADERS
     Binary/binaryWriter.h
     Binary/metaFile.h
     HeadersParser/Parser.h
+    Meta/CreationException.h
     Meta/DeclarationConverterVisitor.h
     Meta/Filters/HandleExceptionalMetasFilter.h
+    Meta/Filters/MergeCategoriesFilter.h
     Meta/Filters/RemoveDuplicateMembersFilter.h
-    Meta/Identifier.h
-    Meta/IdentifierFactory.h
+    Meta/Filters/ResolveGlobalNamesCollisionsFilter.h
     Meta/MetaEntities.h
     Meta/MetaFactory.h
     Meta/MetaVisitor.h
@@ -40,11 +41,11 @@ set(GENERATOR_SOURCES
     Meta/MetaFactory.cpp
     Meta/MetaEntities.cpp
     Meta/TypeFactory.cpp
-    Meta/TypeEntities.cpp
-    Meta/IdentifierFactory.cpp
     Meta/Utils.cpp
     Meta/Filters/HandleExceptionalMetasFilter.cpp
+    Meta/Filters/MergeCategoriesFilter.cpp
     Meta/Filters/RemoveDuplicateMembersFilter.cpp
+    Meta/Filters/ResolveGlobalNamesCollisionsFilter.cpp
     Utils/fileStream.cpp
     Utils/memoryStream.cpp
     Binary/binaryHashtable.cpp
@@ -59,7 +60,7 @@ set(GENERATOR_SOURCES
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-add_executable(objc-metadata-generator ${GENERATOR_HEADERS} ${GENERATOR_SOURCES})
+add_executable(objc-metadata-generator ${GENERATOR_HEADERS} ${GENERATOR_SOURCES} Meta/Filters/ResolveGlobalNamesCollisionsFilter.cpp Meta/Filters/ResolveGlobalNamesCollisionsFilter.h)
 target_link_libraries(objc-metadata-generator ${LLVM_LINKER_FLAGS})
 target_link_libraries(objc-metadata-generator
     clangFrontend

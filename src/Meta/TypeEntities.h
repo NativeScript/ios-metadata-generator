@@ -2,16 +2,17 @@
 
 #include <string>
 #include <vector>
-#include "Identifier.h"
+#include "Utils/Noncopyable.h"
 #include "TypeVisitor.h"
 
 namespace Meta {
-
-struct RecordField;
-struct TypeDetails;
+class ProtocolMeta;
+class InterfaceMeta;
+class StructMeta;
+class UnionMeta;
+class JsCodeMeta;
 
 enum TypeType {
-    TypeUnknown,
     TypeVoid,
     TypeBool,
     TypeShort,
@@ -49,73 +50,45 @@ enum TypeType {
 };
 
 class Type {
+    MAKE_NONCOPYABLE(Type);
+
 public:
     Type()
-        : Type(TypeType::TypeUnknown, nullptr)
+        : Type(TypeType::TypeVoid)
     {
     }
 
     Type(TypeType type)
-        : Type(type, nullptr)
-    {
-    }
-
-    Type(TypeType type, TypeDetails* details)
         : type(type)
-        , details(details)
     {
     }
 
-    static Type Unknown() { return Type(TypeType::TypeUnknown); }
-    static Type Void() { return Type(TypeType::TypeVoid); }
-    static Type Bool() { return Type(TypeType::TypeBool); }
-    static Type Short() { return Type(TypeType::TypeShort); }
-    static Type UShort() { return Type(TypeType::TypeUShort); }
-    static Type Int() { return Type(TypeType::TypeInt); }
-    static Type UInt() { return Type(TypeType::TypeUInt); }
-    static Type Long() { return Type(TypeType::TypeLong); }
-    static Type ULong() { return Type(TypeType::TypeULong); }
-    static Type LongLong() { return Type(TypeType::TypeLongLong); }
-    static Type ULongLong() { return Type(TypeType::TypeULongLong); }
-    static Type SignedChar() { return Type(TypeType::TypeSignedChar); }
-    static Type UnsignedChar() { return Type(TypeType::TypeUnsignedChar); }
-    static Type Unichar() { return Type(TypeType::TypeUnichar); }
-    static Type CString() { return Type(TypeType::TypeCString); }
-    static Type Float() { return Type(TypeType::TypeFloat); }
-    static Type Double() { return Type(TypeType::TypeDouble); }
-    static Type VaList() { return Type(TypeType::TypeVaList); }
-    static Type Selector() { return Type(TypeType::TypeSelector); }
-    static Type Instancetype() { return Type(TypeType::TypeInstancetype); }
-    static Type ProtocolType() { return Type(TypeType::TypeProtocol); }
-
-    static Type ClassType(std::vector<DeclId> protocols);
-    static Type Id(std::vector<DeclId> protocols);
-    static Type ConstantArray(Type innerType, int size);
-    static Type IncompleteArray(Type innerType);
-    static Type Interface(DeclId name, std::vector<DeclId> protocols);
-    static Type BridgedInterface(DeclId id);
-    static Type Pointer(Type innerType);
-    static Type Block(std::vector<Type>& signature);
-    static Type FunctionPointer(std::vector<Type>& signature);
-    static Type Struct(DeclId id);
-    static Type Union(DeclId id);
-    static Type AnonymousStruct(std::vector<RecordField> fields);
-    static Type AnonymousUnion(std::vector<RecordField> fields);
-    static Type Enum(Type underlyingType, DeclId name);
-
-    TypeType getType() const { return type; }
+    TypeType getType() const
+    {
+        return type;
+    }
 
     template <class T>
-    T& getDetailsAs() const { return *std::static_pointer_cast<T>(details).get(); }
+    const T& as() const
+    {
+        return *static_cast<const T*>(this);
+    }
 
-    bool is(TypeType type) { return this->type == type; }
+    template <class T>
+    T& as()
+    {
+        return *static_cast<T*>(this);
+    }
+
+    bool is(TypeType type) const
+    {
+        return this->type == type;
+    }
 
     template <class T>
     T visit(TypeVisitor<T>& visitor)
     {
         switch (this->type) {
-        case TypeUnknown:
-            return visitor.visitUnknown();
         case TypeVoid:
             return visitor.visitVoid();
         case TypeBool:
@@ -157,192 +130,214 @@ public:
         case TypeProtocol:
             return visitor.visitProtocol();
         case TypeClass:
-            return visitor.visitClass(getDetailsAs<ClassTypeDetails>());
+            return visitor.visitClass(as<ClassType>());
         case TypeId:
-            return visitor.visitId(getDetailsAs<IdTypeDetails>());
+            return visitor.visitId(as<IdType>());
         case TypeConstantArray:
-            return visitor.visitConstantArray(getDetailsAs<ConstantArrayTypeDetails>());
+            return visitor.visitConstantArray(as<ConstantArrayType>());
         case TypeIncompleteArray:
-            return visitor.visitIncompleteArray(getDetailsAs<IncompleteArrayTypeDetails>());
+            return visitor.visitIncompleteArray(as<IncompleteArrayType>());
         case TypePointer:
-            return visitor.visitPointer(getDetailsAs<PointerTypeDetails>());
+            return visitor.visitPointer(as<PointerType>());
         case TypeBlock:
-            return visitor.visitBlock(getDetailsAs<BlockTypeDetails>());
+            return visitor.visitBlock(as<BlockType>());
         case TypeFunctionPointer:
-            return visitor.visitFunctionPointer(getDetailsAs<FunctionPointerTypeDetails>());
+            return visitor.visitFunctionPointer(as<FunctionPointerType>());
         case TypeInterface:
-            return visitor.visitInterface(getDetailsAs<InterfaceTypeDetails>());
+            return visitor.visitInterface(as<InterfaceType>());
         case TypeBridgedInterface:
-            return visitor.visitBridgedInterface(getDetailsAs<BridgedInterfaceTypeDetails>());
+            return visitor.visitBridgedInterface(as<BridgedInterfaceType>());
         case TypeStruct:
-            return visitor.visitStruct(getDetailsAs<StructTypeDetails>());
+            return visitor.visitStruct(as<StructType>());
         case TypeUnion:
-            return visitor.visitUnion(getDetailsAs<UnionTypeDetails>());
+            return visitor.visitUnion(as<UnionType>());
         case TypeAnonymousStruct:
-            return visitor.visitAnonymousStruct(getDetailsAs<AnonymousStructTypeDetails>());
+            return visitor.visitAnonymousStruct(as<AnonymousStructType>());
         case TypeAnonymousUnion:
-            return visitor.visitAnonymousUnion(getDetailsAs<AnonymousUnionTypeDetails>());
+            return visitor.visitAnonymousUnion(as<AnonymousUnionType>());
         case TypeEnum:
-            return visitor.visitEnum(getDetailsAs<EnumTypeDetails>());
+            return visitor.visitEnum(as<EnumType>());
         }
     }
 
-private:
+protected:
     TypeType type;
-    std::shared_ptr<TypeDetails> details;
 };
 
 struct RecordField {
     RecordField()
-        : RecordField("", Type())
+        : RecordField("", nullptr)
     {
     }
 
-    RecordField(std::string name, Type encoding)
+    RecordField(std::string name, Type* encoding)
         : name(name)
         , encoding(encoding)
     {
     }
 
     std::string name;
-    Type encoding;
+    Type* encoding;
 };
 
-struct TypeDetails {
-    virtual ~TypeDetails() = default;
-};
-
-struct IdTypeDetails : TypeDetails {
-    IdTypeDetails(std::vector<DeclId>& protocols)
-        : protocols(protocols)
-    {
-    }
-
-    std::vector<DeclId> protocols;
-};
-
-struct ClassTypeDetails : TypeDetails {
-    ClassTypeDetails(std::vector<DeclId>& protocols)
-        : protocols(protocols)
-    {
-    }
-
-    std::vector<DeclId> protocols;
-};
-
-struct InterfaceTypeDetails : TypeDetails {
-    InterfaceTypeDetails(DeclId id, std::vector<DeclId>& protocols)
-        : id(id)
+class IdType : public Type {
+public:
+    IdType(std::vector<ProtocolMeta*> protocols)
+        : Type(TypeType::TypeId)
         , protocols(protocols)
     {
     }
 
-    DeclId id;
-    std::vector<DeclId> protocols;
+    std::vector<ProtocolMeta*> protocols;
 };
 
-struct BridgedInterfaceTypeDetails : TypeDetails {
-    BridgedInterfaceTypeDetails(DeclId id)
-        : id(id)
+class ClassType : public Type {
+public:
+    ClassType(std::vector<ProtocolMeta*> protocols)
+        : Type(TypeType::TypeClass)
+        , protocols(protocols)
     {
     }
 
-    DeclId id;
-
-    bool isResolved() { return id.module != nullptr; }
+    std::vector<ProtocolMeta*> protocols;
 };
 
-struct IncompleteArrayTypeDetails : TypeDetails {
-    IncompleteArrayTypeDetails(Type innerType)
-        : innerType(innerType)
+class InterfaceType : public Type {
+public:
+    InterfaceType(InterfaceMeta* interface, std::vector<ProtocolMeta*> protocols)
+        : Type(TypeType::TypeInterface)
+        , interface(interface)
+        , protocols(protocols)
     {
     }
 
-    Type innerType;
+    InterfaceMeta* interface;
+    std::vector<ProtocolMeta*> protocols;
 };
 
-struct ConstantArrayTypeDetails : TypeDetails {
-    ConstantArrayTypeDetails(Type innerType, int size)
-        : innerType(innerType)
-        , size(size)
-    {
-    }
-
-    Type innerType;
-    int size;
-};
-
-struct PointerTypeDetails : TypeDetails {
-    PointerTypeDetails(Type innerType)
-        : innerType(innerType)
-    {
-    }
-
-    Type innerType;
-};
-
-struct BlockTypeDetails : TypeDetails {
-    BlockTypeDetails(std::vector<Type> signature)
-        : signature(signature)
-    {
-    }
-
-    std::vector<Type> signature;
-};
-
-struct FunctionPointerTypeDetails : TypeDetails {
-    FunctionPointerTypeDetails(std::vector<Type> signature)
-        : signature(signature)
-    {
-    }
-
-    std::vector<Type> signature;
-};
-
-struct StructTypeDetails : TypeDetails {
-    StructTypeDetails(DeclId id)
-        : id(id)
-    {
-    }
-
-    DeclId id;
-};
-
-struct UnionTypeDetails : TypeDetails {
-    UnionTypeDetails(DeclId id)
-        : id(id)
-    {
-    }
-
-    DeclId id;
-};
-
-struct AnonymousStructTypeDetails : TypeDetails {
-    AnonymousStructTypeDetails(std::vector<RecordField>& fields)
-        : fields(fields)
-    {
-    }
-
-    std::vector<RecordField> fields;
-};
-
-struct AnonymousUnionTypeDetails : TypeDetails {
-    AnonymousUnionTypeDetails(std::vector<RecordField>& fields)
-        : fields(fields)
-    {
-    }
-
-    std::vector<RecordField> fields;
-};
-
-struct EnumTypeDetails : TypeDetails {
-    EnumTypeDetails(Type underlyingType, DeclId name)
-        : underlyingType(underlyingType)
+class BridgedInterfaceType : public Type {
+public:
+    BridgedInterfaceType(std::string name, Type* bridgedInterface)
+        : Type(TypeType::TypeBridgedInterface)
         , name(name)
     {
     }
 
-    Type underlyingType;
-    DeclId name;
+    std::string name;
+    InterfaceMeta* bridgedInterface;
+};
+
+class IncompleteArrayType : public Type {
+public:
+    IncompleteArrayType(Type* innerType)
+        : Type(TypeType::TypeIncompleteArray)
+        , innerType(innerType)
+    {
+    }
+
+    Type* innerType;
+};
+
+class ConstantArrayType : public Type {
+public:
+    ConstantArrayType(Type* innerType, int size)
+        : Type(TypeType::TypeConstantArray)
+        , innerType(innerType)
+        , size(size)
+    {
+    }
+
+    Type* innerType;
+    int size;
+};
+
+class PointerType : public Type {
+public:
+    PointerType(Type* innerType)
+        : Type(TypeType::TypePointer)
+        , innerType(innerType)
+    {
+    }
+
+    Type* innerType;
+};
+
+class BlockType : public Type {
+public:
+    BlockType(std::vector<Type*> signature)
+        : Type(TypeType::TypeBlock)
+        , signature(signature)
+    {
+    }
+
+    std::vector<Type*> signature;
+};
+
+class FunctionPointerType : public Type {
+public:
+    FunctionPointerType(std::vector<Type*> signature)
+        : Type(TypeType::TypeFunctionPointer)
+        , signature(signature)
+    {
+    }
+
+    std::vector<Type*> signature;
+};
+
+class StructType : public Type {
+public:
+    StructType(StructMeta* structMeta)
+        : Type(TypeType::TypeStruct)
+        , structMeta(structMeta)
+    {
+    }
+
+    StructMeta* structMeta;
+};
+
+class UnionType : public Type {
+public:
+    UnionType(UnionMeta* unionMeta)
+        : Type(TypeType::TypeUnion)
+        , unionMeta(unionMeta)
+    {
+    }
+
+    UnionMeta* unionMeta;
+};
+
+class AnonymousStructType : public Type {
+public:
+    AnonymousStructType(std::vector<RecordField> fields)
+        : Type(TypeType::TypeAnonymousStruct)
+        , fields(fields)
+    {
+    }
+
+    std::vector<RecordField> fields;
+};
+
+class AnonymousUnionType : public Type {
+public:
+    AnonymousUnionType(std::vector<RecordField> fields)
+        : Type(TypeType::TypeAnonymousUnion)
+        , fields(fields)
+    {
+    }
+
+    std::vector<RecordField> fields;
+};
+
+class EnumType : public Type {
+public:
+    EnumType(Type* underlyingType, JsCodeMeta* enumMeta)
+        : Type(TypeType::TypeEnum)
+        , underlyingType(underlyingType)
+        , enumMeta(enumMeta)
+    {
+    }
+
+    Type* underlyingType;
+    JsCodeMeta* enumMeta;
 };
 }

@@ -20,56 +20,16 @@ namespace yaml {
 #include <llvm/Support/YAMLTraits.h>
 
 LLVM_YAML_IS_SEQUENCE_VECTOR(std::string)
-LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::DeclId)
 LLVM_YAML_IS_SEQUENCE_VECTOR(clang::Module::LinkLibrary)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::RecordField)
-LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::Meta>)
-LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::MethodMeta>)
-LLVM_YAML_IS_SEQUENCE_VECTOR(std::shared_ptr<Meta::PropertyMeta>)
-LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::Type)
-LLVM_YAML_STRONG_TYPEDEF(std::shared_ptr<Meta::Meta>, BaseMeta)
+LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::Meta*)
+LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::ProtocolMeta*)
+LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::MethodMeta*)
+LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::PropertyMeta*)
+LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::Type*)
 
 namespace llvm {
 namespace yaml {
-
-    // ModuleMeta
-    template <>
-    struct MappingTraits<Meta::ModuleMeta> {
-
-        class NormalizedModule {
-        public:
-            NormalizedModule(IO& io)
-                : clangModule()
-                , declarations()
-            {
-            }
-
-            NormalizedModule(IO& io, Meta::ModuleMeta& module)
-                : clangModule(module.getClangModule())
-            {
-                for (auto& pair : module) {
-                    declarations.push_back(pair.second);
-                }
-            }
-
-            Meta::ModuleMeta denormalize(IO& io)
-            {
-                Meta::ModuleMeta module(clangModule, declarations);
-                return module;
-            }
-
-            clang::Module* clangModule;
-            std::vector<std::shared_ptr<Meta::Meta> > declarations;
-        };
-
-        static void mapping(IO& io, Meta::ModuleMeta& module)
-        {
-            MappingNormalization<NormalizedModule, Meta::ModuleMeta> keys(io, module);
-
-            io.mapRequired("Module", *keys->clangModule);
-            io.mapRequired("Items", keys->declarations);
-        }
-    };
 
     // Version
     template <>
@@ -109,7 +69,10 @@ namespace yaml {
             return StringRef();
         }
         // Determine if this scalar needs quotes.
-        static bool mustQuote(StringRef) { return false; }
+        static bool mustQuote(StringRef)
+        {
+            return false;
+        }
     };
 
     // MetaFlags
@@ -179,7 +142,7 @@ namespace yaml {
             io.enumCase(value, "ConstantArray", Meta::TypeType::TypeConstantArray);
             io.enumCase(value, "IncompleteArray", Meta::TypeType::TypeIncompleteArray);
             io.enumCase(value, "Interface", Meta::TypeType::TypeInterface);
-            io.enumCase(value, "Interface", Meta::TypeType::TypeBridgedInterface);
+            io.enumCase(value, "BridgedInterface", Meta::TypeType::TypeBridgedInterface);
             io.enumCase(value, "Pointer", Meta::TypeType::TypePointer);
             io.enumCase(value, "FunctionPointer", Meta::TypeType::TypeFunctionPointer);
             io.enumCase(value, "Block", Meta::TypeType::TypeBlock);
@@ -190,7 +153,6 @@ namespace yaml {
             io.enumCase(value, "Enum", Meta::TypeType::TypeEnum);
             io.enumCase(value, "VaList", Meta::TypeType::TypeVaList);
             io.enumCase(value, "Protocol", Meta::TypeType::TypeProtocol);
-            io.enumCase(value, "Unknown", Meta::TypeType::TypeUnknown);
         }
     };
 
@@ -205,18 +167,18 @@ namespace yaml {
         }
     };
 
-    // clang::Module
+    // clang::Module *
     template <>
-    struct MappingTraits<clang::Module> {
+    struct MappingTraits<clang::Module*> {
 
-        static void mapping(IO& io, clang::Module& module)
+        static void mapping(IO& io, clang::Module*& module)
         {
-            std::string fullModuleName = module.getFullModuleName();
-            bool isPartOfFramework = module.isPartOfFramework();
-            bool isSystem = module.IsSystem;
+            std::string fullModuleName = module->getFullModuleName();
+            bool isPartOfFramework = module->isPartOfFramework();
+            bool isSystem = module->IsSystem;
             std::vector<clang::Module::LinkLibrary> libs;
 
-            Meta::Utils::getAllLinkLibraries(&module, libs);
+            Meta::Utils::getAllLinkLibraries(module, libs);
 
             io.mapRequired("FullName", fullModuleName);
             io.mapRequired("IsPartOfFramework", isPartOfFramework);
@@ -225,100 +187,107 @@ namespace yaml {
         }
     };
 
-    // DeclId
+    // std::pair<clang::Module *, std::vector<Meta::Meta *>>
     template <>
-    struct MappingTraits<Meta::DeclId> {
+    struct MappingTraits<std::pair<clang::Module*, std::vector<Meta::Meta*> > > {
 
-        static void mapping(IO& io, Meta::DeclId& id)
+        static void mapping(IO& io, std::pair<clang::Module*, std::vector<Meta::Meta*> >& module)
         {
-            io.mapRequired("Name", id.name);
-            io.mapRequired("JsName", id.jsName);
-            io.mapRequired("Filename", id.fileName);
-            if (id.module != nullptr)
-                io.mapRequired("Module", *id.module);
+            io.mapRequired("Module", module.first);
+            io.mapRequired("Items", module.second);
         }
     };
 
-    // Type
+    // Type *
     template <>
-    struct MappingTraits<Meta::Type> {
+    struct MappingTraits<Meta::Type*> {
 
-        static void mapping(IO& io, Meta::Type& type)
+        static void mapping(IO& io, Meta::Type*& type)
         {
-            Meta::TypeType typeType = type.getType();
+            Meta::TypeType typeType = type->getType();
             io.mapRequired("Type", typeType);
 
             switch (typeType) {
             case Meta::TypeType::TypeId: {
-                Meta::IdTypeDetails& details = type.getDetailsAs<Meta::IdTypeDetails>();
-                io.mapRequired("WithProtocols", details.protocols);
+                Meta::IdType& concreteType = type->as<Meta::IdType>();
+                std::vector<std::string> protocols;
+                for (Meta::ProtocolMeta* protocol : concreteType.protocols) {
+                    protocols.push_back(protocol->jsName);
+                }
+                io.mapRequired("WithProtocols", protocols);
                 break;
             }
             case Meta::TypeType::TypeConstantArray: {
-                Meta::ConstantArrayTypeDetails& details = type.getDetailsAs<Meta::ConstantArrayTypeDetails>();
-                io.mapRequired("ArrayType", details.innerType);
-                io.mapRequired("Size", details.size);
+                Meta::ConstantArrayType& concreteType = type->as<Meta::ConstantArrayType>();
+                io.mapRequired("ArrayType", concreteType.innerType);
+                io.mapRequired("Size", concreteType.size);
                 break;
             }
             case Meta::TypeType::TypeIncompleteArray: {
-                Meta::IncompleteArrayTypeDetails& details = type.getDetailsAs<Meta::IncompleteArrayTypeDetails>();
-                io.mapRequired("ArrayType", details.innerType);
+                Meta::IncompleteArrayType& concreteType = type->as<Meta::IncompleteArrayType>();
+                io.mapRequired("ArrayType", concreteType.innerType);
                 break;
             }
             case Meta::TypeType::TypeInterface: {
-                Meta::InterfaceTypeDetails& details = type.getDetailsAs<Meta::InterfaceTypeDetails>();
-                io.mapRequired("Id", details.id);
-                io.mapRequired("WithProtocols", details.protocols);
+                Meta::InterfaceType& concreteType = type->as<Meta::InterfaceType>();
+                io.mapRequired("JsName", concreteType.interface->jsName);
+                std::vector<std::string> protocols;
+                for (Meta::ProtocolMeta* protocol : concreteType.protocols) {
+                    protocols.push_back(protocol->jsName);
+                }
+                io.mapRequired("WithProtocols", protocols);
                 break;
             }
             case Meta::TypeType::TypeBridgedInterface: {
-                Meta::BridgedInterfaceTypeDetails& details = type.getDetailsAs<Meta::BridgedInterfaceTypeDetails>();
-                io.mapRequired("Id", details.id);
+                Meta::BridgedInterfaceType& concreteType = type->as<Meta::BridgedInterfaceType>();
+                io.mapRequired("Name", concreteType.name);
+                std::string bridgedTo = concreteType.bridgedInterface == nullptr ? "[None]" : concreteType.bridgedInterface->jsName;
+                io.mapRequired("BridgedTo", bridgedTo);
                 break;
             }
             case Meta::TypeType::TypePointer: {
-                Meta::PointerTypeDetails& details = type.getDetailsAs<Meta::PointerTypeDetails>();
-                io.mapRequired("PointerType", details.innerType);
+                Meta::PointerType& concreteType = type->as<Meta::PointerType>();
+                io.mapRequired("PointerType", concreteType.innerType);
                 break;
             }
             case Meta::TypeType::TypeFunctionPointer: {
-                Meta::FunctionPointerTypeDetails& details = type.getDetailsAs<Meta::FunctionPointerTypeDetails>();
-                io.mapRequired("Signature", details.signature);
+                Meta::FunctionPointerType& concreteType = type->as<Meta::FunctionPointerType>();
+                io.mapRequired("Signature", concreteType.signature);
                 break;
             }
             case Meta::TypeType::TypeBlock: {
-                Meta::BlockTypeDetails& details = type.getDetailsAs<Meta::BlockTypeDetails>();
-                io.mapRequired("Signature", details.signature);
+                Meta::BlockType& concreteType = type->as<Meta::BlockType>();
+                io.mapRequired("Signature", concreteType.signature);
                 break;
             }
             case Meta::TypeType::TypeStruct: {
-                Meta::StructTypeDetails& details = type.getDetailsAs<Meta::StructTypeDetails>();
-                std::string fullModuleName = details.id.module->getFullModuleName();
+                Meta::StructType& concreteType = type->as<Meta::StructType>();
+                std::string fullModuleName = concreteType.structMeta->module->getFullModuleName();
                 io.mapRequired("Module", fullModuleName);
-                io.mapRequired("Name", details.id.jsName);
+                io.mapRequired("JsName", concreteType.structMeta->jsName);
                 break;
             }
             case Meta::TypeType::TypeUnion: {
-                Meta::UnionTypeDetails& details = type.getDetailsAs<Meta::UnionTypeDetails>();
-                std::string fullModuleName = details.id.module->getFullModuleName();
+                Meta::UnionType& concreteType = type->as<Meta::UnionType>();
+                std::string fullModuleName = concreteType.unionMeta->module->getFullModuleName();
                 io.mapRequired("Module", fullModuleName);
-                io.mapRequired("Name", details.id.jsName);
+                io.mapRequired("JsName", concreteType.unionMeta->jsName);
                 break;
             }
             case Meta::TypeType::TypeAnonymousStruct: {
-                Meta::AnonymousStructTypeDetails& details = type.getDetailsAs<Meta::AnonymousStructTypeDetails>();
-                io.mapRequired("Fields", details.fields);
+                Meta::AnonymousStructType& concreteType = type->as<Meta::AnonymousStructType>();
+                io.mapRequired("Fields", concreteType.fields);
                 break;
             }
             case Meta::TypeType::TypeAnonymousUnion: {
-                Meta::AnonymousUnionTypeDetails& details = type.getDetailsAs<Meta::AnonymousUnionTypeDetails>();
-                io.mapRequired("Fields", details.fields);
+                Meta::AnonymousUnionType& concreteType = type->as<Meta::AnonymousUnionType>();
+                io.mapRequired("Fields", concreteType.fields);
                 break;
             }
             case Meta::TypeType::TypeEnum: {
-                Meta::EnumTypeDetails& details = type.getDetailsAs<Meta::EnumTypeDetails>();
-                io.mapRequired("UnderlyingType", details.underlyingType);
-                io.mapRequired("Name", details.name.jsName);
+                Meta::EnumType& concreteType = type->as<Meta::EnumType>();
+                io.mapRequired("UnderlyingType", concreteType.underlyingType);
+                io.mapRequired("Name", concreteType.enumMeta->jsName);
                 break;
             }
             default: {
@@ -327,38 +296,35 @@ namespace yaml {
         }
     };
 
-    // BaseMeta
-    template <>
-    struct MappingTraits<BaseMeta> {
-        static void mapping(IO& io, std::shared_ptr<Meta::Meta>& meta)
-        {
-            io.mapRequired("Id", meta->id);
-            io.mapOptional("IntroducedIn", meta->introducedIn, UNKNOWN_VERSION);
-            io.mapRequired("Flags", meta->flags);
-            io.mapRequired("Type", meta->type);
-        }
-    };
+    static void mapBaseMeta(IO& io, Meta::Meta* meta)
+    {
+        io.mapRequired("Name", meta->name);
+        io.mapRequired("JsName", meta->jsName);
+        io.mapRequired("Filename", meta->fileName);
+        io.mapRequired("Module", meta->module);
+        io.mapOptional("IntroducedIn", meta->introducedIn, UNKNOWN_VERSION);
+        io.mapRequired("Flags", meta->flags);
+        io.mapRequired("Type", meta->type);
+    }
 
-    // shared_ptr<MethodMeta>
+    // MethodMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::MethodMeta> > {
+    struct MappingTraits<Meta::MethodMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::MethodMeta>& meta)
+        static void mapping(IO& io, Meta::MethodMeta*& meta)
         {
-            std::shared_ptr<Meta::Meta> baseMeta = std::static_pointer_cast<Meta::MethodMeta>(meta);
-            MappingTraits<BaseMeta>::mapping(io, baseMeta);
+            mapBaseMeta(io, meta);
             io.mapRequired("Signature", meta->signature);
         }
     };
 
-    // shared_ptr<PropertyMeta>
+    // PropertyMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::PropertyMeta> > {
+    struct MappingTraits<Meta::PropertyMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::PropertyMeta>& meta)
+        static void mapping(IO& io, Meta::PropertyMeta*& meta)
         {
-            std::shared_ptr<Meta::Meta> baseMeta = std::static_pointer_cast<Meta::PropertyMeta>(meta);
-            MappingTraits<BaseMeta>::mapping(io, baseMeta);
+            mapBaseMeta(io, meta);
 
             if (meta->getter)
                 io.mapRequired("Getter", meta->getter);
@@ -367,29 +333,31 @@ namespace yaml {
         }
     };
 
-    // shared_ptr<BaseClassMeta>
+    // BaseClassMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::BaseClassMeta> > {
+    struct MappingTraits<Meta::BaseClassMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::BaseClassMeta>& meta)
+        static void mapping(IO& io, Meta::BaseClassMeta*& meta)
         {
-            std::shared_ptr<Meta::Meta> baseMeta = std::static_pointer_cast<Meta::Meta>(meta);
-            MappingTraits<BaseMeta>::mapping(io, baseMeta);
+            mapBaseMeta(io, meta);
             io.mapRequired("InstanceMethods", meta->instanceMethods);
             io.mapRequired("StaticMethods", meta->staticMethods);
             io.mapRequired("Properties", meta->properties);
-            io.mapRequired("Protocols", meta->protocols);
+            std::vector<std::string> protocols;
+            for (Meta::ProtocolMeta* protocol : meta->protocols) {
+                protocols.push_back(protocol->jsName);
+            }
+            io.mapRequired("Protocols", protocols);
         }
     };
 
-    // shared_ptr<FunctionMeta>
+    // FunctionMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::FunctionMeta> > {
+    struct MappingTraits<Meta::FunctionMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::FunctionMeta>& meta)
+        static void mapping(IO& io, Meta::FunctionMeta*& meta)
         {
-            std::shared_ptr<Meta::Meta> baseMeta = std::static_pointer_cast<Meta::FunctionMeta>(meta);
-            MappingTraits<BaseMeta>::mapping(io, baseMeta);
+            mapBaseMeta(io, meta);
             io.mapRequired("Signature", meta->signature);
         }
     };
@@ -405,155 +373,154 @@ namespace yaml {
         }
     };
 
-    // shared_ptr<RecordMeta>
+    // RecordMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::RecordMeta> > {
+    struct MappingTraits<Meta::RecordMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::RecordMeta>& meta)
+        static void mapping(IO& io, Meta::RecordMeta*& meta)
         {
-            std::shared_ptr<Meta::Meta> baseMeta = std::static_pointer_cast<Meta::RecordMeta>(meta);
-            MappingTraits<BaseMeta>::mapping(io, baseMeta);
+            mapBaseMeta(io, meta);
             io.mapRequired("Fields", meta->fields);
         }
     };
 
-    // shared_ptr<StructMeta>
+    // StructMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::StructMeta> > {
+    struct MappingTraits<Meta::StructMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::StructMeta>& meta)
+        static void mapping(IO& io, Meta::StructMeta*& meta)
         {
-            std::shared_ptr<Meta::RecordMeta> baseRecordMeta = std::static_pointer_cast<Meta::StructMeta>(meta);
-            MappingTraits<std::shared_ptr<Meta::RecordMeta> >::mapping(io, baseRecordMeta);
+            Meta::RecordMeta* recordMeta = &meta->as<Meta::RecordMeta>();
+            MappingTraits<Meta::RecordMeta*>::mapping(io, recordMeta);
         }
     };
 
-    // shared_ptr<UnionMeta>
+    // UnionMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::UnionMeta> > {
+    struct MappingTraits<Meta::UnionMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::UnionMeta>& meta)
+        static void mapping(IO& io, Meta::UnionMeta*& meta)
         {
-            std::shared_ptr<Meta::RecordMeta> baseRecordMeta = std::static_pointer_cast<Meta::UnionMeta>(meta);
-            MappingTraits<std::shared_ptr<Meta::RecordMeta> >::mapping(io, baseRecordMeta);
+            Meta::RecordMeta* recordMeta = &meta->as<Meta::RecordMeta>();
+            MappingTraits<Meta::RecordMeta*>::mapping(io, recordMeta);
         }
     };
 
-    // shared_ptr<VarMeta>
+    // VarMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::VarMeta> > {
+    struct MappingTraits<Meta::VarMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::VarMeta>& meta)
+        static void mapping(IO& io, Meta::VarMeta*& meta)
         {
-            std::shared_ptr<Meta::Meta> baseMeta = std::static_pointer_cast<Meta::VarMeta>(meta);
-            MappingTraits<BaseMeta>::mapping(io, baseMeta);
+            mapBaseMeta(io, meta);
             io.mapRequired("Signature", meta->signature);
         }
     };
 
-    // shared_ptr<JsCodeMeta>
+    // JsCodeMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::JsCodeMeta> > {
+    struct MappingTraits<Meta::JsCodeMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::JsCodeMeta>& meta)
+        static void mapping(IO& io, Meta::JsCodeMeta*& meta)
         {
-            std::shared_ptr<Meta::Meta> baseMeta = std::static_pointer_cast<Meta::JsCodeMeta>(meta);
-            MappingTraits<BaseMeta>::mapping(io, baseMeta);
+            mapBaseMeta(io, meta);
             io.mapRequired("JsCode", meta->jsCode);
         }
     };
 
-    // shared_ptr<InterfaceMeta>
+    // InterfaceMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::InterfaceMeta> > {
+    struct MappingTraits<Meta::InterfaceMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::InterfaceMeta>& meta)
+        static void mapping(IO& io, Meta::InterfaceMeta*& meta)
         {
-            std::shared_ptr<Meta::BaseClassMeta> baseClassMeta = std::static_pointer_cast<Meta::InterfaceMeta>(meta);
-            MappingTraits<std::shared_ptr<Meta::BaseClassMeta> >::mapping(io, baseClassMeta);
-            io.mapRequired("Base", meta->base);
+            Meta::BaseClassMeta* baseClassMeta = &meta->as<Meta::BaseClassMeta>();
+            MappingTraits<Meta::BaseClassMeta*>::mapping(io, baseClassMeta);
+            if (meta->base != nullptr) {
+                io.mapRequired("Base", meta->base->jsName);
+            }
         }
     };
 
-    // shared_ptr<ProtocolMeta>
+    // ProtocolMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::ProtocolMeta> > {
+    struct MappingTraits<Meta::ProtocolMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::ProtocolMeta>& meta)
+        static void mapping(IO& io, Meta::ProtocolMeta*& meta)
         {
-            std::shared_ptr<Meta::BaseClassMeta> baseClassMeta = std::static_pointer_cast<Meta::ProtocolMeta>(meta);
-            MappingTraits<std::shared_ptr<Meta::BaseClassMeta> >::mapping(io, baseClassMeta);
+            Meta::BaseClassMeta* baseClassMeta = &meta->as<Meta::BaseClassMeta>();
+            MappingTraits<Meta::BaseClassMeta*>::mapping(io, baseClassMeta);
         }
     };
 
-    // shared_ptr<CategoryMeta>
+    // CategoryMeta *
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::CategoryMeta> > {
+    struct MappingTraits<Meta::CategoryMeta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::CategoryMeta>& meta)
+        static void mapping(IO& io, Meta::CategoryMeta*& meta)
         {
-            std::shared_ptr<Meta::BaseClassMeta> baseClassMeta = std::static_pointer_cast<Meta::CategoryMeta>(meta);
-            MappingTraits<std::shared_ptr<Meta::BaseClassMeta> >::mapping(io, baseClassMeta);
+            Meta::BaseClassMeta* baseClassMeta = &meta->as<Meta::BaseClassMeta>();
+            MappingTraits<Meta::BaseClassMeta*>::mapping(io, baseClassMeta);
             io.mapRequired("ExtendedInterface", meta->extendedInterface);
         }
     };
 
-    // shared_ptr<Meta>
+    // Meta *
     // These traits check which is the actual run-time type of the meta and forward to the corresponding traits.
     template <>
-    struct MappingTraits<std::shared_ptr<Meta::Meta> > {
+    struct MappingTraits<Meta::Meta*> {
 
-        static void mapping(IO& io, std::shared_ptr<Meta::Meta>& meta)
+        static void mapping(IO& io, Meta::Meta*& meta)
         {
             switch (meta->type) {
             case Meta::MetaType::Function: {
-                std::shared_ptr<Meta::FunctionMeta> function = std::static_pointer_cast<Meta::FunctionMeta>(meta);
-                MappingTraits<std::shared_ptr<Meta::FunctionMeta> >::mapping(io, function);
+                Meta::FunctionMeta* functionMeta = &meta->as<Meta::FunctionMeta>();
+                MappingTraits<Meta::FunctionMeta*>::mapping(io, functionMeta);
                 break;
             }
             case Meta::MetaType::Struct: {
-                std::shared_ptr<Meta::StructMeta> structMeta = std::static_pointer_cast<Meta::StructMeta>(meta);
-                MappingTraits<std::shared_ptr<Meta::StructMeta> >::mapping(io, structMeta);
+                Meta::StructMeta* structMeta = &meta->as<Meta::StructMeta>();
+                MappingTraits<Meta::StructMeta*>::mapping(io, structMeta);
                 break;
             }
             case Meta::MetaType::Union: {
-                std::shared_ptr<Meta::UnionMeta> unionMeta = std::static_pointer_cast<Meta::UnionMeta>(meta);
-                MappingTraits<std::shared_ptr<Meta::UnionMeta> >::mapping(io, unionMeta);
+                Meta::UnionMeta* unionMeta = &meta->as<Meta::UnionMeta>();
+                MappingTraits<Meta::UnionMeta*>::mapping(io, unionMeta);
                 break;
             }
             case Meta::MetaType::Var: {
-                std::shared_ptr<Meta::VarMeta> var = std::static_pointer_cast<Meta::VarMeta>(meta);
-                MappingTraits<std::shared_ptr<Meta::VarMeta> >::mapping(io, var);
+                Meta::VarMeta* varMeta = &meta->as<Meta::VarMeta>();
+                MappingTraits<Meta::VarMeta*>::mapping(io, varMeta);
                 break;
             }
             case Meta::MetaType::JsCode: {
-                std::shared_ptr<Meta::JsCodeMeta> jsCode = std::static_pointer_cast<Meta::JsCodeMeta>(meta);
-                MappingTraits<std::shared_ptr<Meta::JsCodeMeta> >::mapping(io, jsCode);
+                Meta::JsCodeMeta* jsCodeMeta = &meta->as<Meta::JsCodeMeta>();
+                MappingTraits<Meta::JsCodeMeta*>::mapping(io, jsCodeMeta);
                 break;
             }
             case Meta::MetaType::Interface: {
-                std::shared_ptr<Meta::InterfaceMeta> interface = std::static_pointer_cast<Meta::InterfaceMeta>(meta);
-                MappingTraits<std::shared_ptr<Meta::InterfaceMeta> >::mapping(io, interface);
+                Meta::InterfaceMeta* interfaceMeta = &meta->as<Meta::InterfaceMeta>();
+                MappingTraits<Meta::InterfaceMeta*>::mapping(io, interfaceMeta);
                 break;
             }
             case Meta::MetaType::Protocol: {
-                std::shared_ptr<Meta::ProtocolMeta> protocol = std::static_pointer_cast<Meta::ProtocolMeta>(meta);
-                MappingTraits<std::shared_ptr<Meta::ProtocolMeta> >::mapping(io, protocol);
+                Meta::ProtocolMeta* protocolMeta = &meta->as<Meta::ProtocolMeta>();
+                MappingTraits<Meta::ProtocolMeta*>::mapping(io, protocolMeta);
                 break;
             }
             case Meta::MetaType::Category: {
-                std::shared_ptr<Meta::CategoryMeta> category = std::static_pointer_cast<Meta::CategoryMeta>(meta);
-                MappingTraits<std::shared_ptr<Meta::CategoryMeta> >::mapping(io, category);
+                Meta::CategoryMeta* categoryMeta = &meta->as<Meta::CategoryMeta>();
+                MappingTraits<Meta::CategoryMeta*>::mapping(io, categoryMeta);
                 break;
             }
             case Meta::MetaType::Method: {
-                std::shared_ptr<Meta::MethodMeta> method = std::static_pointer_cast<Meta::MethodMeta>(meta);
-                MappingTraits<std::shared_ptr<Meta::MethodMeta> >::mapping(io, method);
+                Meta::MethodMeta* methodMeta = &meta->as<Meta::MethodMeta>();
+                MappingTraits<Meta::MethodMeta*>::mapping(io, methodMeta);
                 break;
             }
             case Meta::MetaType::Property: {
-                std::shared_ptr<Meta::PropertyMeta> property = std::static_pointer_cast<Meta::PropertyMeta>(meta);
-                MappingTraits<std::shared_ptr<Meta::PropertyMeta> >::mapping(io, property);
+                Meta::PropertyMeta* propertyMeta = &meta->as<Meta::PropertyMeta>();
+                MappingTraits<Meta::PropertyMeta*>::mapping(io, propertyMeta);
                 break;
             }
             case Meta::MetaType::Undefined:

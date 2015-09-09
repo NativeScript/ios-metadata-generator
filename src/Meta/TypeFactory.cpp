@@ -1,119 +1,273 @@
+#include <llvm/ADT/STLExtras.h>
 #include "TypeFactory.h"
-#include <iostream>
 #include "Utils.h"
+#include "CreationException.h"
 #include "MetaFactory.h"
 
+namespace Meta {
 using namespace std;
-using namespace Meta;
 
-Type TypeFactory::create(const clang::Type* type)
+shared_ptr<Type> TypeFactory::getVoid()
 {
-    try {
+    static shared_ptr<Type> type(new Type(TypeType::TypeVoid));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getBool()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeBool));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getShort()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeShort));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getUShort()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeUShort));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getInt()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeInt));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getUInt()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeUInt));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getLong()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeLong));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getULong()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeULong));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getLongLong()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeLongLong));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getULongLong()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeULongLong));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getSignedChar()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeSignedChar));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getUnsignedChar()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeUnsignedChar));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getUnichar()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeUnichar));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getCString()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeCString));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getFloat()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeFloat));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getDouble()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeDouble));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getVaList()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeVaList));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getSelector()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeSelector));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getInstancetype()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeInstancetype));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::getProtocolType()
+{
+    static shared_ptr<Type> type(new Type(TypeType::TypeProtocol));
+    return type;
+}
+
+shared_ptr<Type> TypeFactory::create(const clang::Type* type)
+{
+    // check for cached Type
+    unordered_map<const clang::Type*, pair<shared_ptr<Type>, string> >::const_iterator cachedTypeIt = _cache.find(type);
+    if (cachedTypeIt != _cache.end()) {
+        shared_ptr<Type> resultType = cachedTypeIt->second.first;
+        string errorMessage = cachedTypeIt->second.second;
+        if (errorMessage.empty()) {
+            return resultType;
+        }
+        throw TypeCreationException(type, errorMessage, false);
+    }
+
+    const clang::Type& typeRef = *type;
+    shared_ptr<Type> resultType(nullptr);
+    try
+    {
         if (const clang::BuiltinType* concreteType = clang::dyn_cast<clang::BuiltinType>(type))
-            return createFromBuiltinType(concreteType);
-        if (const clang::TypedefType* concreteType = clang::dyn_cast<clang::TypedefType>(type))
-            return createFromTypedefType(concreteType);
-        if (const clang::ObjCObjectPointerType* concreteType = clang::dyn_cast<clang::ObjCObjectPointerType>(type))
-            return createFromObjCObjectPointerType(concreteType);
-        if (const clang::EnumType* concreteType = clang::dyn_cast<clang::EnumType>(type))
-            return createFromEnumType(concreteType);
-        if (const clang::PointerType* concreteType = clang::dyn_cast<clang::PointerType>(type))
-            return createFromPointerType(concreteType);
-        if (const clang::BlockPointerType* concreteType = clang::dyn_cast<clang::BlockPointerType>(type))
-            return createFromBlockPointerType(concreteType);
-        if (const clang::RecordType* concreteType = clang::dyn_cast<clang::RecordType>(type))
-            return createFromRecordType(concreteType);
-        if (const clang::VectorType* concreteType = clang::dyn_cast<clang::VectorType>(type))
-            return createFromVectorType(concreteType);
-        if (const clang::ConstantArrayType* concreteType = clang::dyn_cast<clang::ConstantArrayType>(type))
-            return createFromConstantArrayType(concreteType);
-        if (const clang::IncompleteArrayType* concreteType = clang::dyn_cast<clang::IncompleteArrayType>(type))
-            return createFromIncompleteArrayType(concreteType);
-        if (const clang::ElaboratedType* concreteType = clang::dyn_cast<clang::ElaboratedType>(type))
-            return createFromElaboratedType(concreteType);
-        if (const clang::AdjustedType* concreteType = clang::dyn_cast<clang::AdjustedType>(type))
-            return createFromAdjustedType(concreteType);
-        if (const clang::FunctionProtoType* concreteType = clang::dyn_cast<clang::FunctionProtoType>(type))
-            return createFromFunctionProtoType(concreteType);
-        if (const clang::FunctionNoProtoType* concreteType = clang::dyn_cast<clang::FunctionNoProtoType>(type))
-            return createFromFunctionNoProtoType(concreteType);
-        if (const clang::ParenType* concreteType = clang::dyn_cast<clang::ParenType>(type))
-            return createFromParenType(concreteType);
-        throw TypeCreationException(type->getTypeClassName(), "Unable to create encoding for this type.", true);
+            resultType = createFromBuiltinType(concreteType);
+        else if (const clang::TypedefType* concreteType = clang::dyn_cast<clang::TypedefType>(type))
+            resultType = createFromTypedefType(concreteType);
+        else if (const clang::ObjCObjectPointerType* concreteType = clang::dyn_cast<clang::ObjCObjectPointerType>(type))
+            resultType = createFromObjCObjectPointerType(concreteType);
+        else if (const clang::EnumType* concreteType = clang::dyn_cast<clang::EnumType>(type))
+            resultType = createFromEnumType(concreteType);
+        else if (const clang::PointerType* concreteType = clang::dyn_cast<clang::PointerType>(type))
+            resultType = createFromPointerType(concreteType);
+        else if (const clang::BlockPointerType* concreteType = clang::dyn_cast<clang::BlockPointerType>(type))
+            resultType = createFromBlockPointerType(concreteType);
+        else if (const clang::RecordType* concreteType = clang::dyn_cast<clang::RecordType>(type))
+            resultType = createFromRecordType(concreteType);
+        else if (const clang::VectorType* concreteType = clang::dyn_cast<clang::VectorType>(type))
+            resultType = createFromVectorType(concreteType);
+        else if (const clang::ConstantArrayType* concreteType = clang::dyn_cast<clang::ConstantArrayType>(type))
+            resultType = createFromConstantArrayType(concreteType);
+        else if (const clang::IncompleteArrayType* concreteType = clang::dyn_cast<clang::IncompleteArrayType>(type))
+            resultType = createFromIncompleteArrayType(concreteType);
+        else if (const clang::ElaboratedType* concreteType = clang::dyn_cast<clang::ElaboratedType>(type))
+            resultType = createFromElaboratedType(concreteType);
+        else if (const clang::AdjustedType* concreteType = clang::dyn_cast<clang::AdjustedType>(type))
+            resultType = createFromAdjustedType(concreteType);
+        else if (const clang::FunctionProtoType* concreteType = clang::dyn_cast<clang::FunctionProtoType>(type))
+            resultType = createFromFunctionProtoType(concreteType);
+        else if (const clang::FunctionNoProtoType* concreteType = clang::dyn_cast<clang::FunctionNoProtoType>(type))
+            resultType = createFromFunctionNoProtoType(concreteType);
+        else if (const clang::ParenType* concreteType = clang::dyn_cast<clang::ParenType>(type))
+            resultType = createFromParenType(concreteType);
+        else
+            throw TypeCreationException(type, "Unable to create encoding for this type.", true);
     }
-    catch (MetaCreationException& e) {
-        throw TypeCreationException(type->getTypeClassName(), string("Type is referencing not supported declaration [") + e.whatAsString() + "]", true);
+    catch (TypeCreationException& e)
+    {
+        if (e.getType() == type) {
+            _cache.insert(make_pair<Cache::key_type, Cache::mapped_type>(&typeRef, make_pair<shared_ptr<Type>, string>(nullptr, e.getMessage())));
+            throw;
+        };
+        pair<Cache::iterator, bool> insertionResult = _cache.insert(make_pair<Cache::key_type, Cache::mapped_type>(&typeRef, make_pair<shared_ptr<Type>, string>(nullptr, "")));
+        string message = CreationException::constructMessage("Can't create type dependency.", e.getDetailedMessage());
+        insertionResult.first->second.second = message;
+        throw TypeCreationException(type, message, e.isError());
     }
-    catch (IdentifierCreationException& e) {
-        throw TypeCreationException(type->getTypeClassName(), string("Identifier Error [") + e.whatAsString() + "]", true);
+    catch (MetaCreationException& e)
+    {
+        pair<Cache::iterator, bool> insertionResult = _cache.insert(make_pair<Cache::key_type, Cache::mapped_type>(&typeRef, make_pair<shared_ptr<Type>, string>(nullptr, "")));
+        string message = CreationException::constructMessage("Can't create meta dependency.", e.getDetailedMessage());
+        insertionResult.first->second.second = message;
+        throw TypeCreationException(type, message, e.isError());
+    }
+    assert(resultType != nullptr);
+    pair<Cache::iterator, bool> insertionResult = _cache.insert(make_pair<Cache::key_type, Cache::mapped_type>(&typeRef, make_pair<shared_ptr<Type>, string>(nullptr, "")));
+    if (insertionResult.second) {
+        assert(insertionResult.first->second.first.get() == nullptr);
+        insertionResult.first->second.first = resultType;
+        return resultType;
+    } else {
+        return insertionResult.first->second.first;
     }
 }
 
-Type TypeFactory::create(const clang::QualType& type)
+shared_ptr<Type> TypeFactory::create(const clang::QualType& type)
 {
     const clang::Type* typePtr = type.getTypePtrOrNull();
     if (typePtr)
         return this->create(typePtr);
-    throw TypeCreationException(type->getTypeClassName(), "Unable to get the inner type of qualified type.", true);
+    throw TypeCreationException(nullptr, "Unable to get the inner type of qualified type.", true);
 }
 
-Type TypeFactory::createFromConstantArrayType(const clang::ConstantArrayType* type)
+shared_ptr<ConstantArrayType> TypeFactory::createFromConstantArrayType(const clang::ConstantArrayType* type)
 {
-    return Type::ConstantArray(this->create(type->getElementType()), (int)type->getSize().roundToDouble());
+    return make_shared<ConstantArrayType>(this->create(type->getElementType()).get(), (int)type->getSize().roundToDouble());
 }
 
-Type TypeFactory::createFromIncompleteArrayType(const clang::IncompleteArrayType* type)
+shared_ptr<IncompleteArrayType> TypeFactory::createFromIncompleteArrayType(const clang::IncompleteArrayType* type)
 {
-    return Type::IncompleteArray(this->create(type->getElementType()));
+    return make_shared<IncompleteArrayType>(this->create(type->getElementType()).get());
 }
 
-Type TypeFactory::createFromBlockPointerType(const clang::BlockPointerType* type)
+shared_ptr<BlockType> TypeFactory::createFromBlockPointerType(const clang::BlockPointerType* type)
 {
     const clang::Type* pointee = type->getPointeeType().getTypePtr();
-    Type pointeeType = this->create(pointee);
-    if (pointeeType.getType() == TypeType::TypeFunctionPointer) {
-        return Type::Block(pointeeType.getDetailsAs<FunctionPointerTypeDetails>().signature);
-    }
-
-    throw TypeCreationException(type->getTypeClassName(), "Unable to parse a block type.", true);
+    Type* pointeeType = this->create(pointee).get();
+    assert(pointeeType->is(TypeType::TypeFunctionPointer));
+    return make_shared<BlockType>(pointeeType->as<FunctionPointerType>().signature);
 }
 
-Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type)
+shared_ptr<Type> TypeFactory::createFromBuiltinType(const clang::BuiltinType* type)
 {
     switch (type->getKind()) {
     case clang::BuiltinType::Kind::Void:
-        return Type::Void();
+        return TypeFactory::getVoid();
     case clang::BuiltinType::Kind::Bool:
-        return Type::Bool();
+        return TypeFactory::getBool();
     case clang::BuiltinType::Kind::Char_S:
     case clang::BuiltinType::Kind::Char_U:
     case clang::BuiltinType::Kind::SChar:
-        return Type::SignedChar();
+        return TypeFactory::getSignedChar();
     case clang::BuiltinType::Kind::Short:
-        return Type::Short();
+        return TypeFactory::getShort();
     case clang::BuiltinType::Kind::Int:
-        return Type::Int();
+        return TypeFactory::getInt();
     case clang::BuiltinType::Kind::Long:
-        return Type::Long();
+        return TypeFactory::getLong();
     case clang::BuiltinType::Kind::LongLong:
-        return Type::LongLong();
+        return TypeFactory::getLongLong();
     case clang::BuiltinType::Kind::UChar:
-        return Type::UnsignedChar();
+        return TypeFactory::getUnsignedChar();
     case clang::BuiltinType::Kind::UShort:
-        return Type::UShort();
+        return TypeFactory::getUShort();
     case clang::BuiltinType::Kind::UInt:
-        return Type::UInt();
+        return TypeFactory::getUInt();
     case clang::BuiltinType::Kind::ULong:
-        return Type::ULong();
+        return TypeFactory::getULong();
     case clang::BuiltinType::Kind::ULongLong:
-        return Type::ULongLong();
+        return TypeFactory::getULongLong();
     case clang::BuiltinType::Kind::Float:
-        return Type::Float();
+        return TypeFactory::getFloat();
     case clang::BuiltinType::Kind::Double:
-        return Type::Double();
+        return TypeFactory::getDouble();
     // Objective-C does not support the long double type. @encode(long double) returns d, which is the same encoding as for double.
     case clang::BuiltinType::Kind::LongDouble:
-        return Type::Double();
+        return TypeFactory::getDouble();
 
     // ObjCSel, ObjCId and ObjCClass builtin types should never enter in this method because these types should be handled on upper level.
     // The 'SEL' type is represented as pointer to BuiltinType of kind ObjCSel.
@@ -122,7 +276,6 @@ Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type)
     case clang::BuiltinType::Kind::ObjCSel:
     case clang::BuiltinType::Kind::ObjCId:
     case clang::BuiltinType::Kind::ObjCClass:
-
     // Not supported types
     case clang::BuiltinType::Kind::Int128:
     case clang::BuiltinType::Kind::UInt128:
@@ -147,44 +300,40 @@ Type TypeFactory::createFromBuiltinType(const clang::BuiltinType* type)
     case clang::BuiltinType::Kind::OCLImage3d:
     case clang::BuiltinType::Kind::OCLSampler:
     case clang::BuiltinType::Kind::OCLEvent:
-        throw TypeCreationException(type->getName(clang::PrintingPolicy(clang::LangOptions())).str(), string("Not supported builtin type."), true);
     default:
-        llvm_unreachable("Invalid builtin type.");
+        throw TypeCreationException(type, string("Not supported builtin type(") + type->getTypeClassName() + ").", true);
     }
 }
 
-Type TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type)
+shared_ptr<Type> TypeFactory::createFromObjCObjectPointerType(const clang::ObjCObjectPointerType* type)
 {
-    vector<DeclId> protocols;
+    vector<ProtocolMeta*> protocols;
     for (clang::ObjCProtocolDecl* qual : type->quals()) {
         clang::ObjCProtocolDecl* protocolDef = qual->getDefinition();
-        if (protocolDef) {
-            try {
-                protocols.push_back(_delegate->getDeclId(_delegate->validate(*protocolDef), true));
-            }
-            catch (MetaCreationException& e) {
-                continue;
-            }
+        Meta* protocolMeta = nullptr;
+        if (_metaFactory->tryCreate(*protocolDef, &protocolMeta)) {
+            assert(protocolMeta->is(MetaType::Protocol));
+            protocols.push_back(&protocolMeta->as<ProtocolMeta>());
         }
     }
     if (type->isObjCIdType() || type->isObjCQualifiedIdType()) {
-        return Type::Id(protocols);
+        return make_shared<IdType>(protocols);
     }
     if (type->isObjCClassType() || type->isObjCQualifiedClassType()) {
-        return Type::ClassType(protocols);
+        return make_shared<ClassType>(protocols);
     }
 
     if (clang::ObjCInterfaceDecl* interface = type->getObjectType()->getInterface()) {
         if (interface->getNameAsString() == "Protocol")
-            return Type::ProtocolType();
+            return TypeFactory::getProtocolType();
         if (clang::ObjCInterfaceDecl* interfaceDef = interface->getDefinition())
-            return Type::Interface(_delegate->getDeclId(_delegate->validate(*interfaceDef), true), protocols);
+            return make_shared<InterfaceType>(&_metaFactory->create(*interfaceDef)->as<InterfaceMeta>(), protocols);
     }
 
-    throw TypeCreationException(type->getObjectType()->getTypeClassName(), "Invalid interface pointer type.", true);
+    throw TypeCreationException(type, "Invalid interface pointer type.", true);
 }
 
-Type TypeFactory::createFromPointerType(const clang::PointerType* type)
+shared_ptr<Type> TypeFactory::createFromPointerType(const clang::PointerType* type)
 {
     clang::QualType qualPointee = type->getPointeeType();
     const clang::Type* pointee = qualPointee.getTypePtr();
@@ -192,9 +341,9 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type)
 
     if (const clang::BuiltinType* builtinType = clang::dyn_cast<clang::BuiltinType>(canonicalPointee)) {
         if (builtinType->getKind() == clang::BuiltinType::Kind::ObjCSel)
-            return Type::Selector();
+            return TypeFactory::getSelector();
         if (builtinType->getKind() == clang::BuiltinType::Kind::Char_S || builtinType->getKind() == clang::BuiltinType::Kind::UChar)
-            return Type::CString();
+            return TypeFactory::getCString();
     }
 
     // Check for pointer to toll-free bridged types
@@ -206,20 +355,14 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type)
             if (bridgeMutableAttrs.size() > 0) {
                 clang::ObjCBridgeMutableAttr* bridgeAttr = bridgeMutableAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                DeclId id = DeclId(name, "", "", nullptr); // The module name should be resolved after parsing all declarations
-                Type interface = Type::BridgedInterface(id);
-                _delegate->registerUnresolvedBridgedType(interface);
-                return interface;
+                return make_shared<BridgedInterfaceType>(name, nullptr);
             }
 
             vector<clang::ObjCBridgeAttr*> bridgeAttrs = Utils::getAttributes<clang::ObjCBridgeAttr>(*tagDecl);
             if (bridgeAttrs.size() > 0) {
                 clang::ObjCBridgeAttr* bridgeAttr = bridgeAttrs[0];
                 string name = bridgeAttr->getBridgedType()->getName().str();
-                DeclId id = DeclId(name, "", "", nullptr); // The module name should be resolved after parsing all declarations
-                Type interface = Type::BridgedInterface(id);
-                _delegate->registerUnresolvedBridgedType(interface);
-                return interface;
+                return make_shared<BridgedInterfaceType>(name, nullptr);
             }
         }
     }
@@ -229,107 +372,127 @@ Type TypeFactory::createFromPointerType(const clang::PointerType* type)
         return this->create(qualPointee);
     }
 
-    return Type::Pointer(this->create(qualPointee));
+    return make_shared<PointerType>(this->create(qualPointee).get());
 }
 
-Type TypeFactory::createFromEnumType(const clang::EnumType* type)
+shared_ptr<Type> TypeFactory::createFromEnumType(const clang::EnumType* type)
 {
     return this->create(type->getDecl()->getIntegerType());
 }
 
-Type TypeFactory::createFromRecordType(const clang::RecordType* type)
+shared_ptr<Type> TypeFactory::createFromRecordType(const clang::RecordType* type)
 {
     clang::RecordDecl* recordDef = type->getDecl()->getDefinition();
     if (!recordDef) {
-        return Type::Void(); // the record is opaque
+        return TypeFactory::getVoid();
     }
     if (recordDef->isUnion())
-        throw TypeCreationException(type->getTypeClassName(), "The record is an union.", true);
+        throw TypeCreationException(type, "The record is an union.", true);
     if (!recordDef->isStruct())
-        throw TypeCreationException(type->getTypeClassName(), "The record is not a struct.", true);
+        throw TypeCreationException(type, "The record is not a struct.", true);
     if (!recordDef->hasNameForLinkage()) {
         // The record is anonymous
-        std::vector<RecordField> fields;
+        vector<RecordField> fields;
         for (clang::FieldDecl* field : recordDef->fields()) {
-            RecordField fieldMeta(_delegate->getDeclId(*field, true).jsName, this->create(field->getType()));
+            RecordField fieldMeta(field->getNameAsString(), this->create(field->getType()).get());
             fields.push_back(fieldMeta);
         }
-        return Type::AnonymousStruct(fields);
+        return make_shared<AnonymousStructType>(fields);
     }
 
-    DeclId recordId = this->_delegate->getDeclId(_delegate->validate(*recordDef), true);
-    return Type::Struct(recordId);
+    return make_shared<StructType>(&_metaFactory->create(*recordDef)->as<StructMeta>());
 }
 
-Type TypeFactory::createFromTypedefType(const clang::TypedefType* type)
+shared_ptr<Type> TypeFactory::createFromTypedefType(const clang::TypedefType* type)
 {
-    std::vector<string> boolTypedefs{ "BOOL", "Boolean" };
+    vector<string> boolTypedefs{ "BOOL", "Boolean" };
     if (isSpecificTypedefType(type, boolTypedefs))
-        return Type::Bool();
+        return TypeFactory::getBool();
     if (isSpecificTypedefType(type, "unichar"))
-        return Type::Unichar();
+        return TypeFactory::getUnichar();
     if (isSpecificTypedefType(type, "__builtin_va_list"))
-        throw TypeCreationException(type->getTypeClassName(), "VaList type is not supported.", true);
+        throw TypeCreationException(type, "VaList type is not supported.", true);
     return this->create(type->getDecl()->getUnderlyingType());
 }
 
-Type TypeFactory::createFromVectorType(const clang::VectorType* type)
+shared_ptr<Type> TypeFactory::createFromVectorType(const clang::VectorType* type)
 {
-    throw TypeCreationException(type->getTypeClassName(), "Vector type is not supported.", true);
+    throw TypeCreationException(type, "Vector type is not supported.", true);
 }
 
-Type TypeFactory::createFromElaboratedType(const clang::ElaboratedType* type)
+shared_ptr<Type> TypeFactory::createFromElaboratedType(const clang::ElaboratedType* type)
 {
     return this->create(type->getNamedType());
 }
 
-Type TypeFactory::createFromAdjustedType(const clang::AdjustedType* type)
+shared_ptr<Type> TypeFactory::createFromAdjustedType(const clang::AdjustedType* type)
 {
     return this->create(type->getOriginalType());
 }
 
-Type TypeFactory::createFromFunctionProtoType(const clang::FunctionProtoType* type)
+shared_ptr<Type> TypeFactory::createFromFunctionProtoType(const clang::FunctionProtoType* type)
 {
-    std::vector<Type> signature;
-    signature.push_back(this->create(type->getReturnType()));
+    vector<Type*> signature;
+    signature.push_back(this->create(type->getReturnType()).get());
     for (const clang::QualType& parm : type->param_types())
-        signature.push_back(this->create(parm));
-    return Type::FunctionPointer(signature);
+        signature.push_back(this->create(parm).get());
+    return make_shared<FunctionPointerType>(signature);
 }
 
-Type TypeFactory::createFromFunctionNoProtoType(const clang::FunctionNoProtoType* type)
+shared_ptr<Type> TypeFactory::createFromFunctionNoProtoType(const clang::FunctionNoProtoType* type)
 {
-    std::vector<Type> signature;
-    signature.push_back(this->create(type->getReturnType()));
-    return Type::FunctionPointer(signature);
+    vector<Type*> signature;
+    signature.push_back(this->create(type->getReturnType()).get());
+    return make_shared<FunctionPointerType>(signature);
 }
 
-Type TypeFactory::createFromParenType(const clang::ParenType* type)
+shared_ptr<Type> TypeFactory::createFromParenType(const clang::ParenType* type)
 {
     return this->create(type->desugar().getTypePtr());
 }
 
-bool TypeFactory::isSpecificTypedefType(const clang::TypedefType* type, const std::string& typedefName)
+bool TypeFactory::isSpecificTypedefType(const clang::TypedefType* type, const string& typedefName)
 {
-    const std::vector<std::string> typedefNames{ typedefName };
+    const vector<string> typedefNames{ typedefName };
     return this->isSpecificTypedefType(type, typedefNames);
 }
 
-bool TypeFactory::isSpecificTypedefType(const clang::TypedefType* type, const std::vector<std::string>& typedefNames)
+bool TypeFactory::isSpecificTypedefType(const clang::TypedefType* type, const vector<string>& typedefNames)
 {
     clang::TypedefNameDecl* decl = type->getDecl();
     while (decl) {
-        if (std::find(typedefNames.begin(), typedefNames.end(), decl->getNameAsString()) != typedefNames.end()) {
+        if (find(typedefNames.begin(), typedefNames.end(), decl->getNameAsString()) != typedefNames.end()) {
             return true;
         }
 
         clang::Type const* innerType = decl->getUnderlyingType().getTypePtr();
         if (const clang::TypedefType* innerTypedef = clang::dyn_cast<clang::TypedefType>(innerType)) {
             decl = innerTypedef->getDecl();
-        }
-        else {
+        } else {
             return false;
         }
     }
     return false;
+}
+
+void TypeFactory::resolveCachedBridgedInterfaceTypes(unordered_map<string, InterfaceMeta*>& interfaceMap)
+{
+    unordered_map<string, InterfaceMeta*>::const_iterator nsObjectIt = interfaceMap.find("NSObject");
+    for (Cache::value_type& typeEntry : _cache) {
+        if (typeEntry.second.second.empty()) {
+            Type* type = typeEntry.second.first.get();
+            if (type->is(TypeType::TypeBridgedInterface)) {
+                BridgedInterfaceType* bridgedType = &type->as<BridgedInterfaceType>();
+                unordered_map<string, InterfaceMeta*>::const_iterator it = interfaceMap.find(bridgedType->name);
+                if (it != interfaceMap.end()) {
+                    bridgedType->bridgedInterface = it->second;
+                } else {
+                    assert(nsObjectIt != interfaceMap.end());
+                    bridgedType->bridgedInterface = nsObjectIt->second;
+                    cout << "Unable to resolve bridged interface type. Interface " << bridgedType->name << " not found. NSObject used instead." << endl;
+                }
+            }
+        }
+    }
+}
 }

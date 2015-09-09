@@ -1,11 +1,12 @@
 #include "binaryTypeEncodingSerializer.h"
 #include <llvm/ADT/STLExtras.h>
+#include "../Meta/MetaEntities.h"
 
-binary::MetaFileOffset binary::BinaryTypeEncodingSerializer::visit(std::vector< ::Meta::Type>& types)
+binary::MetaFileOffset binary::BinaryTypeEncodingSerializer::visit(std::vector< ::Meta::Type*>& types)
 {
     vector<unique_ptr<binary::TypeEncoding> > binaryEncodings;
-    for (::Meta::Type& type : types) {
-        unique_ptr<binary::TypeEncoding> binaryEncoding = type.visit(*this);
+    for (::Meta::Type* type : types) {
+        unique_ptr<binary::TypeEncoding> binaryEncoding = type->visit(*this);
         binaryEncodings.push_back(std::move(binaryEncoding));
     }
 
@@ -14,11 +15,6 @@ binary::MetaFileOffset binary::BinaryTypeEncodingSerializer::visit(std::vector< 
         binaryEncoding->save(this->_heapWriter);
     }
     return offset;
-}
-
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitUnknown()
-{
-    return llvm::make_unique<binary::TypeEncoding>(binary::BinaryTypeEncodingType::Unknown);
 }
 
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitVoid()
@@ -116,7 +112,7 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitInst
     return llvm::make_unique<binary::TypeEncoding>(binary::BinaryTypeEncodingType::InstanceType);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitClass(::Meta::ClassTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitClass(const ::Meta::ClassType& type)
 {
     return llvm::make_unique<binary::TypeEncoding>(binary::BinaryTypeEncodingType::Class); // TODO: Add protocols
 }
@@ -126,107 +122,110 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitProt
     return llvm::make_unique<binary::TypeEncoding>(binary::BinaryTypeEncodingType::Protocol);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitId(::Meta::IdTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitId(const ::Meta::IdType& type)
 {
     return llvm::make_unique<binary::TypeEncoding>(binary::BinaryTypeEncodingType::Id); // TODO: Add protocols
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitConstantArray(::Meta::ConstantArrayTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitConstantArray(const ::Meta::ConstantArrayType& type)
 {
     binary::ConstantArrayEncoding* s = new binary::ConstantArrayEncoding();
-    s->_size = typeDetails.size;
-    s->_elementType = typeDetails.innerType.visit(*this);
+    s->_size = type.size;
+    s->_elementType = type.innerType->visit(*this);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitIncompleteArray(::Meta::IncompleteArrayTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitIncompleteArray(const ::Meta::IncompleteArrayType& type)
 {
     binary::IncompleteArrayEncoding* s = new binary::IncompleteArrayEncoding();
-    s->_elementType = typeDetails.innerType.visit(*this);
+    s->_elementType = type.innerType->visit(*this);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitInterface(::Meta::InterfaceTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitInterface(const ::Meta::InterfaceType& type)
 {
     binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::InterfaceDeclarationReference);
-    s->_name = this->_heapWriter.push_string(typeDetails.id.jsName);
+    s->_name = this->_heapWriter.push_string(type.interface->jsName);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitBridgedInterface(::Meta::BridgedInterfaceTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitBridgedInterface(const ::Meta::BridgedInterfaceType& type)
 {
+    if (type.bridgedInterface == nullptr) {
+        throw logic_error(std::string("Unresolved bridged interface for BridgedInterfaceType with name '") + type.bridgedInterface->name + "'.");
+    }
     binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::InterfaceDeclarationReference);
-    s->_name = this->_heapWriter.push_string(typeDetails.id.jsName);
+    s->_name = this->_heapWriter.push_string(type.bridgedInterface->jsName);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitPointer(::Meta::PointerTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitPointer(const ::Meta::PointerType& type)
 {
     binary::PointerEncoding* s = new binary::PointerEncoding();
-    s->_target = typeDetails.innerType.visit(*this);
+    s->_target = type.innerType->visit(*this);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitBlock(::Meta::BlockTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitBlock(const ::Meta::BlockType& type)
 {
     binary::BlockEncoding* s = new binary::BlockEncoding();
-    s->_encodingsCount = (uint8_t)typeDetails.signature.size();
-    for (::Meta::Type& type : typeDetails.signature) {
-        s->_encodings.push_back(type.visit(*this));
+    s->_encodingsCount = (uint8_t)type.signature.size();
+    for (::Meta::Type* signatureType : type.signature) {
+        s->_encodings.push_back(signatureType->visit(*this));
     }
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitFunctionPointer(::Meta::FunctionPointerTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitFunctionPointer(const ::Meta::FunctionPointerType& type)
 {
     binary::FunctionEncoding* s = new binary::FunctionEncoding();
-    s->_encodingsCount = (uint8_t)typeDetails.signature.size();
-    for (::Meta::Type& type : typeDetails.signature) {
-        s->_encodings.push_back(type.visit(*this));
+    s->_encodingsCount = (uint8_t)type.signature.size();
+    for (::Meta::Type* signatureType : type.signature) {
+        s->_encodings.push_back(signatureType->visit(*this));
     }
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitStruct(::Meta::StructTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitStruct(const ::Meta::StructType& type)
 {
     binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::StructDeclarationReference);
-    s->_name = this->_heapWriter.push_string(typeDetails.id.jsName);
+    s->_name = this->_heapWriter.push_string(type.structMeta->jsName);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitUnion(::Meta::UnionTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitUnion(const ::Meta::UnionType& type)
 {
     binary::DeclarationReferenceEncoding* s = new binary::DeclarationReferenceEncoding(BinaryTypeEncodingType::UnionDeclarationReference);
-    s->_name = this->_heapWriter.push_string(typeDetails.id.jsName);
+    s->_name = this->_heapWriter.push_string(type.unionMeta->jsName);
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitAnonymousStruct(::Meta::AnonymousStructTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitAnonymousStruct(const ::Meta::AnonymousStructType& type)
 {
-    return this->serializeRecordEncoding(binary::BinaryTypeEncodingType::AnonymousStruct, typeDetails.fields);
+    return this->serializeRecordEncoding(binary::BinaryTypeEncodingType::AnonymousStruct, type.fields);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitAnonymousUnion(::Meta::AnonymousUnionTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitAnonymousUnion(const ::Meta::AnonymousUnionType& type)
 {
-    return this->serializeRecordEncoding(binary::BinaryTypeEncodingType::AnonymousUnion, typeDetails.fields);
+    return this->serializeRecordEncoding(binary::BinaryTypeEncodingType::AnonymousUnion, type.fields);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitEnum(::Meta::EnumTypeDetails& typeDetails)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitEnum(const ::Meta::EnumType& type)
 {
-    return typeDetails.underlyingType.visit(*this);
+    return type.underlyingType->visit(*this);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serializeRecordEncoding(binary::BinaryTypeEncodingType encodingType, std::vector< ::Meta::RecordField>& fields)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serializeRecordEncoding(const binary::BinaryTypeEncodingType encodingType, const std::vector< ::Meta::RecordField>& fields)
 {
     binary::AnonymousRecordEncoding* s = new binary::AnonymousRecordEncoding(encodingType);
     s->_fieldsCount = (uint8_t)fields.size();
 
-    for (::Meta::RecordField& field : fields) {
+    for (const ::Meta::RecordField& field : fields) {
         s->_fieldNames.push_back(this->_heapWriter.push_string(field.name));
     }
 
-    for (::Meta::RecordField& field : fields) {
-        s->_fieldEncodings.push_back(field.encoding.visit(*this));
+    for (const ::Meta::RecordField& field : fields) {
+        s->_fieldEncodings.push_back(field.encoding->visit(*this));
     }
     return unique_ptr<binary::TypeEncoding>(s);
 }
