@@ -11,43 +11,6 @@ using namespace clang;
 namespace path = llvm::sys::path;
 namespace fs = llvm::sys::fs;
 
-std::vector<std::string> parsePaths(std::string& paths)
-{
-    std::vector<std::string> result;
-    char buffer[paths.size() + 1];
-    int bufferSize = 0;
-    bool inQuote = false;
-    for (char& c : paths) {
-        if (c == ' ' && !inQuote) {
-            if (bufferSize != 0) {
-                buffer[bufferSize] = '\0';
-                result.push_back(std::string(buffer));
-                bufferSize = 0;
-            }
-            continue;
-        }
-
-        if (c == '\"') {
-            if (inQuote) {
-                buffer[bufferSize] = '\0';
-                result.push_back(std::string(buffer));
-            }
-            inQuote = !inQuote;
-            bufferSize = 0;
-            continue;
-        }
-
-        buffer[bufferSize] = c;
-        bufferSize++;
-    }
-    if (bufferSize != 0) {
-        buffer[bufferSize] = '\0';
-        result.push_back(std::string(buffer));
-        bufferSize = 0;
-    }
-    return result;
-}
-
 static SmallVectorImpl<char>& operator+=(SmallVectorImpl<char>& includes, StringRef rhs)
 {
     includes.append(rhs.begin(), rhs.end());
@@ -62,8 +25,7 @@ static std::error_code addHeaderInclude(StringRef headerName, SmallVectorImpl<ch
     // work ('.' might not be on our include path) or that it will find the same file.
     if (path::is_absolute(headerName)) {
         includes += headerName;
-    }
-    else {
+    } else {
         SmallString<256> header = headerName;
         if (std::error_code err = fs::make_absolute(header))
             return err;
@@ -94,8 +56,7 @@ static std::error_code collectModuleHeaderIncludes(FileManager& fileMgr, ModuleM
     if (auto umbrellaHeader = module->getUmbrellaHeader()) {
         if (std::error_code err = addHeaderInclude(umbrellaHeader, includes))
             return err;
-    }
-    else if (const DirectoryEntry* umbrellaDir = module->getUmbrellaDir()) {
+    } else if (const DirectoryEntry* umbrellaDir = module->getUmbrellaDir()) {
         // Add all of the headers we find in this subdirectory.
         std::error_code ec;
         SmallString<128> dirNative;
