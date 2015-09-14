@@ -15,11 +15,11 @@ static int getPriority(Meta* meta)
         return 6;
     case MetaType::Function:
         return 5;
-    case MetaType::Struct:
-        return 4;
-    case MetaType::Union:
-        return 3;
     case MetaType::Var:
+        return 4;
+    case MetaType::Struct:
+        return 3;
+    case MetaType::Union:
         return 2;
     case MetaType::JsCode:
         return 1;
@@ -38,12 +38,12 @@ static std::string renameMeta(MetaType type, std::string& originalJsName, int in
         return originalJsName + "Protocol" + indexStr;
     case MetaType::Function:
         return originalJsName + "Function" + indexStr;
+    case MetaType::Var:
+        return originalJsName + "Var" + indexStr;
     case MetaType::Struct:
         return originalJsName + "Struct" + indexStr;
     case MetaType::Union:
         return originalJsName + "Union" + indexStr;
-    case MetaType::Var:
-        return originalJsName + "Var" + indexStr;
     case MetaType::JsCode:
         return originalJsName + "Decl" + indexStr;
     default:
