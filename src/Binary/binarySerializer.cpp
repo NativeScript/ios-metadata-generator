@@ -14,39 +14,17 @@ uint8_t convertVersion(Meta::Version version)
     return result;
 }
 
-static bool compareMethodMetas(std::shared_ptr<Meta::MethodMeta>& meta1, std::shared_ptr<Meta::MethodMeta>& meta2)
-{
-    return meta1->id.jsName < meta2->id.jsName;
-}
-
-static bool comparePropertyMetas(std::shared_ptr<Meta::PropertyMeta>& meta1, std::shared_ptr<Meta::PropertyMeta>& meta2)
-{
-    return meta1->id.jsName < meta2->id.jsName;
-}
-
-bool compareIdentifiers(Meta::DeclId& id1, Meta::DeclId& id2)
-{
-    return id1.jsName < id2.jsName;
-}
-
-static bool isInitMethod(std::shared_ptr<Meta::MethodMeta>& meta)
-{
-    static std::string prefix = "init";
-    return meta->id.name.substr(0, prefix.size()) == prefix;
-}
-
 void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& binaryMetaStruct)
 {
     // name
-    bool hasName = meta->id.name != meta->id.jsName;
+    bool hasName = meta->name != meta->jsName;
     if (hasName) {
-        MetaFileOffset offset1 = this->heapWriter.push_string(meta->id.jsName);
-        MetaFileOffset offset2 = this->heapWriter.push_string(meta->id.name);
+        MetaFileOffset offset1 = this->heapWriter.push_string(meta->jsName);
+        MetaFileOffset offset2 = this->heapWriter.push_string(meta->name);
         binaryMetaStruct._names = this->heapWriter.push_pointer(offset1);
         this->heapWriter.push_pointer(offset2);
-    }
-    else {
-        binaryMetaStruct._names = this->heapWriter.push_string(meta->id.jsName);
+    } else {
+        binaryMetaStruct._names = this->heapWriter.push_string(meta->jsName);
     }
 
     // flags
@@ -61,7 +39,7 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
     binaryMetaStruct._flags = flags;
 
     // module
-    clang::Module* topLevelModule = meta->id.module->getTopLevelModule();
+    clang::Module* topLevelModule = meta->module->getTopLevelModule();
     std::string topLevelModuleName = topLevelModule->getFullModuleName();
     MetaFileOffset moduleOffset = this->file->getFromTopLevelModulesTable(topLevelModuleName);
     if (moduleOffset != 0)
@@ -84,47 +62,47 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta* meta, b
     std::vector<MetaFileOffset> offsets;
 
     // instance methods
-    std::sort(meta->instanceMethods.begin(), meta->instanceMethods.end(), compareMethodMetas);
-    for (std::shared_ptr< ::Meta::MethodMeta> methodMeta : meta->instanceMethods) {
+    std::sort(meta->instanceMethods.begin(), meta->instanceMethods.end(), compareMetasByJsName< ::Meta::MethodMeta>);
+    for (::Meta::MethodMeta* methodMeta : meta->instanceMethods) {
         binary::MethodMeta binaryMeta;
-        this->serializeMethod(methodMeta.get(), binaryMeta);
+        this->serializeMethod(methodMeta, binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
     binaryMetaStruct._instanceMethods = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // static methods
-    std::sort(meta->staticMethods.begin(), meta->staticMethods.end(), compareMethodMetas);
-    for (std::shared_ptr< ::Meta::MethodMeta> methodMeta : meta->staticMethods) {
+    std::sort(meta->staticMethods.begin(), meta->staticMethods.end(), compareMetasByJsName< ::Meta::MethodMeta>);
+    for (::Meta::MethodMeta* methodMeta : meta->staticMethods) {
         binary::MethodMeta binaryMeta;
-        this->serializeMethod(methodMeta.get(), binaryMeta);
+        this->serializeMethod(methodMeta, binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
     binaryMetaStruct._staticMethods = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // properties
-    std::sort(meta->properties.begin(), meta->properties.end(), comparePropertyMetas);
-    for (std::shared_ptr< ::Meta::PropertyMeta>& propertyMeta : meta->properties) {
+    std::sort(meta->properties.begin(), meta->properties.end(), compareMetasByJsName< ::Meta::PropertyMeta>);
+    for (::Meta::PropertyMeta* propertyMeta : meta->properties) {
         binary::PropertyMeta binaryMeta;
-        this->serializeProperty(propertyMeta.get(), binaryMeta);
+        this->serializeProperty(propertyMeta, binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
     binaryMetaStruct._properties = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // protocols
-    std::sort(meta->protocols.begin(), meta->protocols.end(), compareIdentifiers);
-    for (::Meta::DeclId& protocolName : meta->protocols) {
-        offsets.push_back(this->heapWriter.push_string(protocolName.jsName));
+    std::sort(meta->protocols.begin(), meta->protocols.end(), compareMetasByJsName< ::Meta::ProtocolMeta>);
+    for (::Meta::ProtocolMeta* protocol : meta->protocols) {
+        offsets.push_back(this->heapWriter.push_string(protocol->jsName));
     }
     binaryMetaStruct._protocols = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // first initializer index
     int16_t firstInitializerIndex = -1;
-    for (std::vector<std::shared_ptr< ::Meta::MethodMeta> >::iterator it = meta->instanceMethods.begin(); it != meta->instanceMethods.end(); ++it) {
-        if (isInitMethod(*it)) {
+    for (std::vector< ::Meta::MethodMeta*>::iterator it = meta->instanceMethods.begin(); it != meta->instanceMethods.end(); ++it) {
+        if ((*it)->getFlags(::Meta::MetaFlags::MethodIsInitializer)) {
             firstInitializerIndex = (int16_t)std::distance(meta->instanceMethods.begin(), it);
             break;
         }
@@ -149,11 +127,7 @@ void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta* meta, binary:
     if (meta->getFlags(::Meta::MetaFlags::MethodIsInitializer))
         binaryMetaStruct._flags |= BinaryFlags::MethodIsInitializer;
 
-    vector< ::Meta::Type> typeEncodings;
-    for (auto& encoding : meta->signature) {
-        typeEncodings.push_back(encoding);
-    }
-    binaryMetaStruct._encoding = this->typeEncodingSerializer.visit(typeEncodings);
+    binaryMetaStruct._encoding = this->typeEncodingSerializer.visit(meta->signature);
 }
 
 void binary::BinarySerializer::serializeProperty(::Meta::PropertyMeta* meta, binary::PropertyMeta& binaryMetaStruct)
@@ -165,13 +139,13 @@ void binary::BinarySerializer::serializeProperty(::Meta::PropertyMeta* meta, bin
     if (meta->getter) {
         binaryMetaStruct._flags |= BinaryFlags::PropertyHasGetter;
         binary::MethodMeta binaryMeta;
-        this->serializeMethod(meta->getter.get(), binaryMeta);
+        this->serializeMethod(meta->getter, binaryMeta);
         binaryMetaStruct._getter = binaryMeta.save(this->heapWriter);
     }
     if (meta->setter) {
         binaryMetaStruct._flags |= BinaryFlags::PropertyHasSetter;
         binary::MethodMeta binaryMeta;
-        this->serializeMethod(meta->setter.get(), binaryMeta);
+        this->serializeMethod(meta->setter, binaryMeta);
         binaryMetaStruct._setter = binaryMeta.save(this->heapWriter);
     }
 }
@@ -180,7 +154,7 @@ void binary::BinarySerializer::serializeRecord(::Meta::RecordMeta* meta, binary:
 {
     this->serializeBase(meta, binaryMetaStruct);
 
-    vector< ::Meta::Type> typeEncodings;
+    vector< ::Meta::Type*> typeEncodings;
     vector<MetaFileOffset> nameOffsets;
 
     for (::Meta::RecordField& recordField : meta->fields) {
@@ -192,16 +166,15 @@ void binary::BinarySerializer::serializeRecord(::Meta::RecordMeta* meta, binary:
     binaryMetaStruct._fieldsEncodings = this->typeEncodingSerializer.visit(typeEncodings);
 }
 
-void binary::BinarySerializer::serializeContainer(::Meta::MetaContainer& container)
+void binary::BinarySerializer::serializeContainer(std::vector<std::pair<clang::Module*, std::vector< ::Meta::Meta*> > >& container)
 {
-    this->start(&container);
-    for (::Meta::ModuleMeta& module : container.top_level_modules()) {
-        for (::Meta::ModuleMeta::iterator metaIt = module.begin(); metaIt != module.end(); ++metaIt) {
-            std::pair<std::string, std::shared_ptr< ::Meta::Meta> > metaPair = *metaIt;
-            metaPair.second->visit(this);
+    this->start(container);
+    for (std::pair<clang::Module*, std::vector< ::Meta::Meta*> >& module : container) {
+        for (::Meta::Meta* meta : module.second) {
+            meta->visit(this);
         }
     }
-    this->finish(&container);
+    this->finish(container);
 }
 
 void binary::BinarySerializer::serializeModule(clang::Module* module, binary::ModuleMeta& binaryModule)
@@ -233,11 +206,11 @@ void binary::BinarySerializer::serializeLibrary(clang::Module::LinkLibrary* libr
     binaryLib._name = this->heapWriter.push_string(library->Library);
 }
 
-void binary::BinarySerializer::start(::Meta::MetaContainer* container)
+void binary::BinarySerializer::start(std::vector<std::pair<clang::Module*, std::vector< ::Meta::Meta*> > >& container)
 {
 }
 
-void binary::BinarySerializer::finish(::Meta::MetaContainer* container)
+void binary::BinarySerializer::finish(std::vector<std::pair<clang::Module*, std::vector< ::Meta::Meta*> > >& container)
 {
 }
 
@@ -245,17 +218,17 @@ void binary::BinarySerializer::visit(::Meta::InterfaceMeta* meta)
 {
     binary::InterfaceMeta binaryStruct;
     serializeBaseClass(meta, binaryStruct);
-    if (!meta->base.jsName.empty()) {
-        binaryStruct._baseName = this->heapWriter.push_string(meta->base.jsName);
+    if (meta->base != nullptr) {
+        binaryStruct._baseName = this->heapWriter.push_string(meta->base->jsName);
     }
-    this->file->registerInGlobalTable(meta->id.jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::ProtocolMeta* meta)
 {
     binary::ProtocolMeta binaryStruct;
     serializeBaseClass(meta, binaryStruct);
-    this->file->registerInGlobalTable(meta->id.jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::CategoryMeta* meta)
@@ -273,26 +246,22 @@ void binary::BinarySerializer::visit(::Meta::FunctionMeta* meta)
     if (meta->getFlags(::Meta::MetaFlags::FunctionOwnsReturnedCocoaObject))
         binaryStruct._flags |= BinaryFlags::FunctionOwnsReturnedCocoaObject;
 
-    vector< ::Meta::Type> typeEncodings;
-    for (auto& encoding : meta->signature) {
-        typeEncodings.push_back(encoding);
-    }
-    binaryStruct._encoding = this->typeEncodingSerializer.visit(typeEncodings);
-    this->file->registerInGlobalTable(meta->id.jsName, binaryStruct.save(this->heapWriter));
+    binaryStruct._encoding = this->typeEncodingSerializer.visit(meta->signature);
+    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::StructMeta* meta)
 {
     binary::StructMeta binaryStruct;
     serializeRecord(meta, binaryStruct);
-    this->file->registerInGlobalTable(meta->id.jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::UnionMeta* meta)
 {
     binary::UnionMeta binaryStruct;
     serializeRecord(meta, binaryStruct);
-    this->file->registerInGlobalTable(meta->id.jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::JsCodeMeta* meta)
@@ -300,14 +269,14 @@ void binary::BinarySerializer::visit(::Meta::JsCodeMeta* meta)
     binary::JsCodeMeta binaryStruct;
     serializeBase(meta, binaryStruct);
     binaryStruct._jsCode = this->heapWriter.push_string(meta->jsCode);
-    this->file->registerInGlobalTable(meta->id.jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::VarMeta* meta)
 {
     binary::VarMeta binaryStruct;
     serializeBase(meta, binaryStruct);
-    unique_ptr<binary::TypeEncoding> binarySignature = meta->signature.visit(this->typeEncodingSerializer);
+    unique_ptr<binary::TypeEncoding> binarySignature = meta->signature->visit(this->typeEncodingSerializer);
     binaryStruct._encoding = binarySignature->save(this->heapWriter);
-    this->file->registerInGlobalTable(meta->id.jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
 }

@@ -8,9 +8,8 @@
 namespace TypeScript {
 class DefinitionWriter : Meta::MetaVisitor {
 public:
-    DefinitionWriter(Meta::ModuleMeta* module, Meta::MetaContainer& container)
-        : _container(container)
-        , _module(module)
+    DefinitionWriter(std::pair<clang::Module*, std::vector<Meta::Meta*> >& module)
+        : _module(module)
     {
     }
 
@@ -34,9 +33,9 @@ public:
 
 private:
     template <class Member>
-    using CompoundMemberMap = std::map<std::string, std::pair<Meta::BaseClassMeta*, std::shared_ptr<Member> > >;
+    using CompoundMemberMap = std::map<std::string, std::pair<Meta::BaseClassMeta*, Member*> >;
 
-    void getMembersRecursive(Meta::DeclId& protocol,
+    void getMembersRecursive(Meta::ProtocolMeta* protocol,
                              CompoundMemberMap<Meta::MethodMeta>& staticMethods,
                              CompoundMemberMap<Meta::PropertyMeta>& properties,
                              CompoundMemberMap<Meta::MethodMeta>& instanceMethods,
@@ -47,16 +46,15 @@ private:
                             const std::set<Meta::ProtocolMeta*>& protocols);
     std::string writeProperty(Meta::PropertyMeta* meta, Meta::BaseClassMeta* owner);
 
-    std::string writeFunctionProto(const std::vector<Meta::Type>& signature);
+    std::string writeFunctionProto(const std::vector<Meta::Type*>& signature);
 
     void writeMembers(const std::vector<Meta::RecordField>& fields);
 
     std::string localizeReference(const std::string& jsName, std::string moduleName);
-    std::string localizeReference(const Meta::DeclId& name);
+    std::string localizeReference(const Meta::Meta& meta);
     std::string tsifyType(const Meta::Type& type);
 
-    Meta::MetaContainer& _container;
-    Meta::ModuleMeta* _module;
+    std::pair<clang::Module*, std::vector<Meta::Meta*> >& _module;
     std::unordered_set<std::string> _importedModules;
     std::ostringstream _buffer;
 };

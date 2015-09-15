@@ -22,7 +22,7 @@ public:
 
     static bool areTypesEqual(const Type& type1, const Type& type2);
 
-    static bool areTypesEqual(const std::vector<Type>& types1, const std::vector<Type>& types2);
+    static bool areTypesEqual(const std::vector<Type*>& types1, const std::vector<Type*>& types2);
 
     static std::string getCommonWordPrefix(const std::vector<std::string>& strings);
 

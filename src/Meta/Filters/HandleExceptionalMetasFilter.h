@@ -4,6 +4,6 @@
 namespace Meta {
 class HandleExceptionalMetasFilter {
 public:
-    void filter(MetaContainer& container);
+    void filter(std::list<Meta*>& container);
 };
 }

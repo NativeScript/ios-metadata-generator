@@ -1,99 +1,91 @@
 #include "Utils.h"
 #include "TypeEntities.h"
 
-bool areIdentifierListsEqual(const std::vector<Meta::DeclId>& vector1, const std::vector<Meta::DeclId>& vector2)
+namespace Meta {
+bool areRecordFieldListsEqual(const std::vector<RecordField>& vector1, const std::vector<RecordField>& vector2)
 {
     if (vector1.size() != vector2.size()) {
         return false;
     }
 
-    for (std::vector<Meta::DeclId>::size_type i = 0; i < vector1.size(); i++) {
-        if (vector1[i] != vector2[i]) {
+    for (std::vector<RecordField>::size_type i = 0; i < vector1.size(); i++) {
+        if ((vector1[i].name != vector2[i].name) || !Utils::areTypesEqual(*vector1[i].encoding, *vector2[i].encoding)) {
             return false;
         }
     }
     return true;
 }
 
-bool areRecordFieldListsEqual(const std::vector<Meta::RecordField>& vector1, const std::vector<Meta::RecordField>& vector2)
-{
-    if (vector1.size() != vector2.size()) {
-        return false;
-    }
-
-    for (std::vector<Meta::RecordField>::size_type i = 0; i < vector1.size(); i++) {
-        if ((vector1[i].name != vector2[i].name) || !Meta::Utils::areTypesEqual(vector1[i].encoding, vector2[i].encoding)) {
-            return false;
-        }
-    }
-    return true;
-}
-
-bool Meta::Utils::areTypesEqual(const Type& type1, const Type& type2)
+bool Utils::areTypesEqual(const Type& type1, const Type& type2)
 {
     if (type1.getType() != type2.getType())
         return false;
 
     switch (type1.getType()) {
     case TypeType::TypeClass: {
-        ClassTypeDetails& details1 = type1.getDetailsAs<ClassTypeDetails>();
-        ClassTypeDetails& details2 = type2.getDetailsAs<ClassTypeDetails>();
-        return areIdentifierListsEqual(details1.protocols, details2.protocols);
+        const ClassType& classType1 = type1.as<ClassType>();
+        const ClassType& classType2 = type2.as<ClassType>();
+        return classType1.protocols == classType2.protocols;
     }
     case TypeType::TypeId: {
-        IdTypeDetails& details1 = type1.getDetailsAs<IdTypeDetails>();
-        IdTypeDetails& details2 = type2.getDetailsAs<IdTypeDetails>();
-        return areIdentifierListsEqual(details1.protocols, details2.protocols);
+        const IdType& idType1 = type1.as<IdType>();
+        const IdType& idType2 = type2.as<IdType>();
+        return idType1.protocols == idType2.protocols;
     };
     case TypeType::TypeConstantArray: {
-        ConstantArrayTypeDetails& details1 = type1.getDetailsAs<ConstantArrayTypeDetails>();
-        ConstantArrayTypeDetails& details2 = type2.getDetailsAs<ConstantArrayTypeDetails>();
-        return details1.size == details2.size && areTypesEqual(details1.innerType, details2.innerType);
+        const ConstantArrayType& arrayType1 = type1.as<ConstantArrayType>();
+        const ConstantArrayType& arrayType2 = type2.as<ConstantArrayType>();
+        return arrayType1.size == arrayType2.size && areTypesEqual(*arrayType1.innerType, *arrayType2.innerType);
     };
     case TypeType::TypeIncompleteArray: {
-        IncompleteArrayTypeDetails& details1 = type1.getDetailsAs<IncompleteArrayTypeDetails>();
-        IncompleteArrayTypeDetails& details2 = type2.getDetailsAs<IncompleteArrayTypeDetails>();
-        return areTypesEqual(details1.innerType, details2.innerType);
+        const IncompleteArrayType& arrayType1 = type1.as<IncompleteArrayType>();
+        const IncompleteArrayType& arrayType2 = type2.as<IncompleteArrayType>();
+        return areTypesEqual(*arrayType1.innerType, *arrayType2.innerType);
     };
     case TypeType::TypePointer: {
-        PointerTypeDetails& details1 = type1.getDetailsAs<PointerTypeDetails>();
-        PointerTypeDetails& details2 = type2.getDetailsAs<PointerTypeDetails>();
-        return areTypesEqual(details1.innerType, details2.innerType);
+        const PointerType& pointerType1 = type1.as<PointerType>();
+        const PointerType& pointerType2 = type2.as<PointerType>();
+        return areTypesEqual(*pointerType1.innerType, *pointerType2.innerType);
     };
     case TypeType::TypeBlock: {
-        BlockTypeDetails& details1 = type1.getDetailsAs<BlockTypeDetails>();
-        BlockTypeDetails& details2 = type2.getDetailsAs<BlockTypeDetails>();
-        return Utils::areTypesEqual(details1.signature, details2.signature);
+        const BlockType& blockType1 = type1.as<BlockType>();
+        const BlockType& blockType2 = type2.as<BlockType>();
+        return Utils::areTypesEqual(blockType1.signature, blockType2.signature);
     };
     case TypeType::TypeFunctionPointer: {
-        FunctionPointerTypeDetails& details1 = type1.getDetailsAs<FunctionPointerTypeDetails>();
-        FunctionPointerTypeDetails& details2 = type2.getDetailsAs<FunctionPointerTypeDetails>();
-        return Utils::areTypesEqual(details1.signature, details2.signature);
+        const FunctionPointerType& functionType1 = type1.as<FunctionPointerType>();
+        const FunctionPointerType& functionType2 = type2.as<FunctionPointerType>();
+        return Utils::areTypesEqual(functionType1.signature, functionType2.signature);
     };
     case TypeType::TypeInterface: {
-        InterfaceTypeDetails& details1 = type1.getDetailsAs<InterfaceTypeDetails>();
-        InterfaceTypeDetails& details2 = type2.getDetailsAs<InterfaceTypeDetails>();
-        return details1.id == details2.id && areIdentifierListsEqual(details1.protocols, details2.protocols);
+        const InterfaceType& interfaceType1 = type1.as<InterfaceType>();
+        const InterfaceType& interfaceType2 = type2.as<InterfaceType>();
+        return interfaceType1.interface == interfaceType2.interface && interfaceType1.protocols == interfaceType2.protocols;
+    };
+    case TypeType::TypeBridgedInterface: {
+        const BridgedInterfaceType& interfaceType1 = type1.as<BridgedInterfaceType>();
+        const BridgedInterfaceType& interfaceType2 = type2.as<BridgedInterfaceType>();
+        return interfaceType1.name == interfaceType2.name;
     };
     case TypeType::TypeStruct: {
-        StructTypeDetails& details1 = type1.getDetailsAs<StructTypeDetails>();
-        StructTypeDetails& details2 = type2.getDetailsAs<StructTypeDetails>();
-        return details1.id == details2.id;
+        const StructType& structType1 = type1.as<StructType>();
+        const StructType& structType2 = type2.as<StructType>();
+        return structType1.structMeta == structType2.structMeta;
     };
     case TypeType::TypeUnion: {
-        UnionTypeDetails& details1 = type1.getDetailsAs<UnionTypeDetails>();
-        UnionTypeDetails& details2 = type2.getDetailsAs<UnionTypeDetails>();
-        return details1.id == details2.id;
+        const UnionType& unionType1 = type1.as<UnionType>();
+        const UnionType& unionType2 = type2.as<UnionType>();
+        return unionType1.unionMeta == unionType2.unionMeta;
     };
     case TypeType::TypeAnonymousStruct: {
-        AnonymousStructTypeDetails& details1 = type1.getDetailsAs<AnonymousStructTypeDetails>();
-        AnonymousStructTypeDetails& details2 = type2.getDetailsAs<AnonymousStructTypeDetails>();
-        return areRecordFieldListsEqual(details1.fields, details2.fields);
+        const AnonymousStructType& structType1 = type1.as<AnonymousStructType>();
+        const AnonymousStructType& structType2 = type2.as<AnonymousStructType>();
+        return areRecordFieldListsEqual(structType1.fields, structType2.fields);
     };
     case TypeType::TypeAnonymousUnion: {
-        AnonymousUnionTypeDetails& details1 = type1.getDetailsAs<AnonymousUnionTypeDetails>();
-        AnonymousUnionTypeDetails& details2 = type2.getDetailsAs<AnonymousUnionTypeDetails>();
-        return areRecordFieldListsEqual(details1.fields, details2.fields);
+        const AnonymousUnionType& unionType1 = type1.as<AnonymousUnionType>();
+        const AnonymousUnionType& unionType2 = type2.as<AnonymousUnionType>();
+        return areRecordFieldListsEqual(unionType1.fields, unionType2.fields);
     };
     default: {
         return true;
@@ -101,14 +93,14 @@ bool Meta::Utils::areTypesEqual(const Type& type1, const Type& type2)
     }
 }
 
-bool Meta::Utils::areTypesEqual(const std::vector<Meta::Type>& vector1, const std::vector<Meta::Type>& vector2)
+bool Utils::areTypesEqual(const std::vector<Type*>& vector1, const std::vector<Type*>& vector2)
 {
     if (vector1.size() != vector2.size()) {
         return false;
     }
 
-    for (std::vector<Meta::Type>::size_type i = 0; i < vector1.size(); i++) {
-        if (!Meta::Utils::areTypesEqual(vector1[i], vector2[i])) {
+    for (std::vector<Type*>::size_type i = 0; i < vector1.size(); i++) {
+        if (!Utils::areTypesEqual(*vector1[i], *vector2[i])) {
             return false;
         }
     }
@@ -125,7 +117,7 @@ bool isAlpha(const std::vector<std::string>& strings, size_t index)
     return true;
 }
 
-std::string Meta::Utils::getCommonWordPrefix(const std::vector<std::string>& strings)
+std::string Utils::getCommonWordPrefix(const std::vector<std::string>& strings)
 {
     for (size_t prefixLength = 0; prefixLength < strings[0].size(); prefixLength++) {
         char c = strings[0][prefixLength];
@@ -142,10 +134,12 @@ std::string Meta::Utils::getCommonWordPrefix(const std::vector<std::string>& str
     return std::string();
 }
 
-void Meta::Utils::getAllLinkLibraries(clang::Module* module, std::vector<clang::Module::LinkLibrary>& result)
+void Utils::getAllLinkLibraries(clang::Module* module, std::vector<clang::Module::LinkLibrary>& result)
 {
     for (clang::Module::LinkLibrary lib : module->LinkLibraries)
         result.push_back(lib);
-    for (clang::Module::submodule_const_iterator it = module->submodule_begin(); it != module->submodule_end(); ++it)
+    for (clang::Module::submodule_const_iterator it = module->submodule_begin();
+         it != module->submodule_end(); ++it)
         getAllLinkLibraries(*it, result);
+}
 }

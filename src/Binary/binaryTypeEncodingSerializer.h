@@ -16,7 +16,7 @@ class BinaryTypeEncodingSerializer : public ::Meta::TypeVisitor<unique_ptr<binar
 private:
     BinaryWriter _heapWriter;
 
-    unique_ptr<TypeEncoding> serializeRecordEncoding(binary::BinaryTypeEncodingType encodingType, std::vector< ::Meta::RecordField>& fields);
+    unique_ptr<TypeEncoding> serializeRecordEncoding(const binary::BinaryTypeEncodingType encodingType, const std::vector< ::Meta::RecordField>& fields);
 
 public:
     BinaryTypeEncodingSerializer(BinaryWriter& heapWriter)
@@ -24,9 +24,7 @@ public:
     {
     }
 
-    MetaFileOffset visit(std::vector< ::Meta::Type>& types);
-
-    virtual unique_ptr<TypeEncoding> visitUnknown() override;
+    MetaFileOffset visit(std::vector< ::Meta::Type*>& types);
 
     virtual unique_ptr<TypeEncoding> visitVoid() override;
 
@@ -66,34 +64,34 @@ public:
 
     virtual unique_ptr<TypeEncoding> visitInstancetype() override;
 
-    virtual unique_ptr<TypeEncoding> visitClass(::Meta::ClassTypeDetails& typeDetails) override;
-
     virtual unique_ptr<TypeEncoding> visitProtocol() override;
 
-    virtual unique_ptr<TypeEncoding> visitId(::Meta::IdTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitClass(const ::Meta::ClassType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitConstantArray(::Meta::ConstantArrayTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitId(const ::Meta::IdType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitIncompleteArray(::Meta::IncompleteArrayTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitConstantArray(const ::Meta::ConstantArrayType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitInterface(::Meta::InterfaceTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitIncompleteArray(const ::Meta::IncompleteArrayType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitBridgedInterface(::Meta::BridgedInterfaceTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitInterface(const ::Meta::InterfaceType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitPointer(::Meta::PointerTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitBridgedInterface(const ::Meta::BridgedInterfaceType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitBlock(::Meta::BlockTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitPointer(const ::Meta::PointerType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitFunctionPointer(::Meta::FunctionPointerTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitBlock(const ::Meta::BlockType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitStruct(::Meta::StructTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitFunctionPointer(const ::Meta::FunctionPointerType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitUnion(::Meta::UnionTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitStruct(const ::Meta::StructType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitAnonymousStruct(::Meta::AnonymousStructTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitUnion(const ::Meta::UnionType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitAnonymousUnion(::Meta::AnonymousUnionTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitAnonymousStruct(const ::Meta::AnonymousStructType& type) override;
 
-    virtual unique_ptr<TypeEncoding> visitEnum(::Meta::EnumTypeDetails& typeDetails) override;
+    virtual unique_ptr<TypeEncoding> visitAnonymousUnion(const ::Meta::AnonymousUnionType& type) override;
+
+    virtual unique_ptr<TypeEncoding> visitEnum(const ::Meta::EnumType& type) override;
 };
 }

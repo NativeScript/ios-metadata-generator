@@ -2,20 +2,20 @@
 
 namespace Meta {
 
-struct ClassTypeDetails;
-struct IdTypeDetails;
-struct ConstantArrayTypeDetails;
-struct IncompleteArrayTypeDetails;
-struct InterfaceTypeDetails;
-struct BridgedInterfaceTypeDetails;
-struct PointerTypeDetails;
-struct BlockTypeDetails;
-struct FunctionPointerTypeDetails;
-struct StructTypeDetails;
-struct UnionTypeDetails;
-struct AnonymousStructTypeDetails;
-struct AnonymousUnionTypeDetails;
-struct EnumTypeDetails;
+class ClassType;
+class IdType;
+class ConstantArrayType;
+class IncompleteArrayType;
+class InterfaceType;
+class BridgedInterfaceType;
+class PointerType;
+class BlockType;
+class FunctionPointerType;
+class StructType;
+class UnionType;
+class AnonymousStructType;
+class AnonymousUnionType;
+class EnumType;
 
 /*
      * \class TypeVisitor<T>
@@ -26,8 +26,6 @@ struct EnumTypeDetails;
 template <typename T_RESULT>
 class TypeVisitor {
 public:
-    virtual T_RESULT visitUnknown() = 0;
-
     virtual T_RESULT visitVoid() = 0;
 
     virtual T_RESULT visitBool() = 0;
@@ -66,34 +64,34 @@ public:
 
     virtual T_RESULT visitInstancetype() = 0;
 
-    virtual T_RESULT visitClass(ClassTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitClass(const ClassType& typeDetails) = 0;
 
     virtual T_RESULT visitProtocol() = 0;
 
-    virtual T_RESULT visitId(IdTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitId(const IdType& typeDetails) = 0;
 
-    virtual T_RESULT visitConstantArray(ConstantArrayTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitConstantArray(const ConstantArrayType& typeDetails) = 0;
 
-    virtual T_RESULT visitIncompleteArray(IncompleteArrayTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitIncompleteArray(const IncompleteArrayType& typeDetails) = 0;
 
-    virtual T_RESULT visitInterface(InterfaceTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitInterface(const InterfaceType& typeDetails) = 0;
 
-    virtual T_RESULT visitBridgedInterface(BridgedInterfaceTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitBridgedInterface(const BridgedInterfaceType& typeDetails) = 0;
 
-    virtual T_RESULT visitPointer(PointerTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitPointer(const PointerType& typeDetails) = 0;
 
-    virtual T_RESULT visitBlock(BlockTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitBlock(const BlockType& typeDetails) = 0;
 
-    virtual T_RESULT visitFunctionPointer(FunctionPointerTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitFunctionPointer(const FunctionPointerType& typeDetails) = 0;
 
-    virtual T_RESULT visitStruct(StructTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitStruct(const StructType& typeDetails) = 0;
 
-    virtual T_RESULT visitUnion(UnionTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitUnion(const UnionType& typeDetails) = 0;
 
-    virtual T_RESULT visitAnonymousStruct(AnonymousStructTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitAnonymousStruct(const AnonymousStructType& typeDetails) = 0;
 
-    virtual T_RESULT visitAnonymousUnion(AnonymousUnionTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitAnonymousUnion(const AnonymousUnionType& typeDetails) = 0;
 
-    virtual T_RESULT visitEnum(EnumTypeDetails& typeDetails) = 0;
+    virtual T_RESULT visitEnum(const EnumType& typeDetails) = 0;
 };
 }

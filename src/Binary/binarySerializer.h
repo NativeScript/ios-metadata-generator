@@ -38,11 +38,11 @@ public:
         this->file = file;
     }
 
-    void serializeContainer(::Meta::MetaContainer& container);
+    void serializeContainer(std::vector<std::pair<clang::Module*, std::vector< ::Meta::Meta*> > >& container);
 
-    void start(::Meta::MetaContainer* container);
+    void start(std::vector<std::pair<clang::Module*, std::vector< ::Meta::Meta*> > >& container);
 
-    void finish(::Meta::MetaContainer* container);
+    void finish(std::vector<std::pair<clang::Module*, std::vector< ::Meta::Meta*> > >& container);
 
     virtual void visit(::Meta::InterfaceMeta* Meta) override;
 

@@ -8,8 +8,10 @@
 #include "RemoveUnsupportedSyntaxAction.h"
 #include "HeadersParser/Parser.h"
 #include "Meta/DeclarationConverterVisitor.h"
-#include "Meta/Filters/RemoveDuplicateMembersFilter.h"
 #include "Meta/Filters/HandleExceptionalMetasFilter.h"
+#include "Meta/Filters/MergeCategoriesFilter.h"
+#include "Meta/Filters/RemoveDuplicateMembersFilter.h"
+#include "Meta/Filters/ResolveGlobalNamesCollisionsFilter.h"
 #include "Yaml/YamlSerializer.h"
 #include "Binary/binarySerializer.h"
 #include "TypeScript/DefinitionWriter.h"
@@ -44,18 +46,21 @@ public:
     {
         llvm::SmallVector<clang::Module*, 64> modules;
         _headerSearch.collectAllModules(modules);
-        _visitor.TraverseDecl(Context.getTranslationUnitDecl());
-        _visitor.resolveUnresolvedBridgedInterfaces();
+        std::list<Meta::Meta*>& metaContainer = _visitor.generateMetadata(Context.getTranslationUnitDecl());
 
-        Meta::MetaContainer& metaContainer = _visitor.getMetaContainer();
-
-        // Filter
-        metaContainer.filter(Meta::HandleExceptionalMetasFilter());
-        metaContainer.mergeCategoriesInInterfaces();
-        metaContainer.filter(Meta::RemoveDuplicateMembersFilter());
+        // Filters
+        Meta::HandleExceptionalMetasFilter().filter(metaContainer);
+        Meta::MergeCategoriesFilter().filter(metaContainer);
+        Meta::RemoveDuplicateMembersFilter().filter(metaContainer);
+        Meta::ResolveGlobalNamesCollisionsFilter filter = Meta::ResolveGlobalNamesCollisionsFilter();
+        filter.filter(metaContainer);
+        std::unique_ptr<std::pair<Meta::ResolveGlobalNamesCollisionsFilter::MetasByModules, Meta::ResolveGlobalNamesCollisionsFilter::InterfacesByName> > result = filter.getResult();
+        Meta::ResolveGlobalNamesCollisionsFilter::MetasByModules& metasByModules = result->first;
+        Meta::ResolveGlobalNamesCollisionsFilter::InterfacesByName& interfacesByName = result->second;
+        _visitor.getMetaFactory().getTypeFactory().resolveCachedBridgedInterfaceTypes(interfacesByName);
 
         // Log statistic for parsed Meta objects
-        std::cout << "Result: " << metaContainer.topLevelMetasCount() << " declarations from " << metaContainer.topLevelModulesCount() << " top level modules" << std::endl;
+        std::cout << "Result: " << metaContainer.size() << " declarations from " << metasByModules.size() << " top level modules" << std::endl;
 
         // Serialize Meta objects to Yaml
         if (!cla_outputYamlFolder.empty()) {
@@ -66,18 +71,18 @@ public:
                 llvm::sys::fs::create_directories(cla_outputYamlFolder);
             }
 
-            for (Meta::ModuleMeta& moduleMeta : metaContainer.top_level_modules()) {
-                std::string yamlFileName = moduleMeta.getFullName() + ".yaml";
+            for (std::pair<clang::Module*, std::vector<Meta::Meta*> >& modulePair : metasByModules) {
+                std::string yamlFileName = modulePair.first->getFullModuleName() + ".yaml";
                 DEBUG_WITH_TYPE("yaml", llvm::dbgs() << "Generating: " << yamlFileName << "\n");
-                Yaml::YamlSerializer::serialize<Meta::ModuleMeta>(outputYamlFolder + "/" + yamlFileName, moduleMeta);
+                Yaml::YamlSerializer::serialize<std::pair<clang::Module*, std::vector<Meta::Meta*> > >(outputYamlFolder + "/" + yamlFileName, modulePair);
             }
         }
 
         // Serialize Meta objects to binary metadata
         if (!cla_outputBinFile.empty()) {
-            binary::MetaFile file(metaContainer.topLevelMetasCount());
+            binary::MetaFile file(metasByModules.size());
             binary::BinarySerializer serializer(&file);
-            serializer.serializeContainer(metaContainer);
+            serializer.serializeContainer(metasByModules);
             std::string output = cla_outputBinFile.getValue();
             file.save(output);
         }
@@ -85,11 +90,11 @@ public:
         // Generate TypeScript definitions
         if (!cla_outputDtsFolder.empty()) {
             llvm::sys::fs::create_directories(cla_outputDtsFolder);
-            for (auto& module : metaContainer.top_level_modules()) {
-                TypeScript::DefinitionWriter definitionWriter(&module, metaContainer);
+            for (std::pair<clang::Module*, std::vector<Meta::Meta*> >& modulePair : metasByModules) {
+                TypeScript::DefinitionWriter definitionWriter(modulePair);
 
                 llvm::SmallString<128> path;
-                llvm::sys::path::append(path, cla_outputDtsFolder, "objc!" + module.getFullName() + ".d.ts");
+                llvm::sys::path::append(path, cla_outputDtsFolder, "objc!" + modulePair.first->getFullModuleName() + ".d.ts");
 
                 std::error_code error;
                 llvm::raw_fd_ostream file(path.str(), error, llvm::sys::fs::F_Text);
@@ -111,7 +116,9 @@ private:
 
 class MetaGenerationFrontendAction : public clang::ASTFrontendAction {
 public:
-    MetaGenerationFrontendAction() {}
+    MetaGenerationFrontendAction()
+    {
+    }
 
     virtual std::unique_ptr<clang::ASTConsumer> CreateASTConsumer(clang::CompilerInstance& Compiler, llvm::StringRef InFile) override
     {
