@@ -117,16 +117,12 @@ bool isAlpha(const std::vector<std::string>& strings, size_t index)
     return true;
 }
 
-std::string Utils::calculateEnumFieldsPrefix(std::string enumName, std::vector<std::string> fields)
+std::string Utils::calculateEnumFieldsPrefix(const std::string& enumName, const std::vector<std::string>& fields)
 {
-    fields.push_back(enumName);
-    for (size_t prefixLength = 0; prefixLength < fields[0].size(); prefixLength++) {
-        char c = fields[0][prefixLength];
-        for (size_t i = 1; i < fields.size(); i++) {
+    for (size_t prefixLength = 0; prefixLength < enumName.size(); prefixLength++) {
+        char c = enumName[prefixLength];
+        for (size_t i = 0; i < fields.size(); i++) {
             if (prefixLength >= fields[i].size() || fields[i][prefixLength] != c) {
-                if (prefixLength == enumName.size()) {
-                    return enumName;
-                }
                 while (prefixLength > 0 && (!std::isupper(fields[i][prefixLength]) || !isAlpha(fields, prefixLength))) {
                     prefixLength--;
                 }
@@ -135,7 +131,7 @@ std::string Utils::calculateEnumFieldsPrefix(std::string enumName, std::vector<s
         }
     }
 
-    return std::string();
+    return enumName;
 }
 
 void Utils::getAllLinkLibraries(clang::Module* module, std::vector<clang::Module::LinkLibrary>& result)
