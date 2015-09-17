@@ -24,7 +24,7 @@ public:
 
     static bool areTypesEqual(const std::vector<Type*>& types1, const std::vector<Type*>& types2);
 
-    static std::string calculateEnumFieldsPrefix(std::string enumName, std::vector<std::string> fields);
+    static std::string calculateEnumFieldsPrefix(const std::string& enumName, const std::vector<std::string>& fields);
 
     static void getAllLinkLibraries(clang::Module* module, std::vector<clang::Module::LinkLibrary>& result);
 };
