@@ -1,7 +1,3 @@
-#include <llvm/Support/CommandLine.h>
-#include <llvm/Support/CommandLine.h>
-#include <llvm/Support/FileSystem.h>
-#include <llvm/Support/Path.h>
 #include <llvm/Support/Debug.h>
 #include <clang/Tooling/Tooling.h>
 #include <clang/Frontend/CompilerInstance.h>
@@ -20,19 +16,14 @@
 #include <fstream>
 
 // Command line parameters
-llvm::cl::opt<string> cla_isysroot("isysroot", llvm::cl::Required, llvm::cl::desc("Specify the SDK directory"), llvm::cl::value_desc("dir"));
-llvm::cl::opt<string> cla_arch("arch", llvm::cl::Required, llvm::cl::desc("Specify the architecture to the clang compiler instance"), llvm::cl::value_desc("arch"));
-llvm::cl::opt<string> cla_iphoneOSVersionMin("iphoneos-version-min", llvm::cl::Required, llvm::cl::desc("Specify the earliest iPhone OS version on which this program will run"), llvm::cl::value_desc("version"));
-llvm::cl::opt<string> cla_target("target", llvm::cl::init("arm-apple-darwin"), llvm::cl::desc("Specify the target triple to the clang compiler instance"), llvm::cl::value_desc("triple"));
-llvm::cl::opt<string> cla_std("std", llvm::cl::init("gnu99"), llvm::cl::desc("Specify the language mode to the clang compiler instance"), llvm::cl::value_desc("std-name"));
-llvm::cl::opt<string> cla_headerSearchPaths("header-search-paths", llvm::cl::desc("The paths in which clag searches for header files separated by space. To escape a space in a path, surround the path with quotes."), llvm::cl::value_desc("paths"));
-llvm::cl::opt<string> cla_frameworkSearchPaths("framework-search-paths", llvm::cl::desc("The paths in which clag searches for frameworks separated by space. To escape a space in a path, surround the path with quotes."), llvm::cl::value_desc("paths"));
 llvm::cl::opt<bool> cla_enableHeaderPreprocessingIfNeeded("enable-header-preprocessing-if-needed", llvm::cl::desc("Whether to preprocess and remove all new ObjC features (generics, nullability specifiers etc.) from headers. The preprocessing happens only if a concrete SDK is detected."));
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));
-llvm::cl::opt<string> cla_outputIntermediateHeadersPath("output-intermediate-headers", llvm::cl::desc("Specify the output headers folder"), llvm::cl::value_desc("folder_path"));
-llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("dir"));
-llvm::cl::opt<string> cla_outputBinFile("output-bin", llvm::cl::desc("Specify the output binary metadata file"), llvm::cl::value_desc("file_path"));
-llvm::cl::opt<string> cla_outputDtsFolder("output-typescript", llvm::cl::desc("Specify the output .d.ts folder"), llvm::cl::value_desc("dir"));
+llvm::cl::opt<string> cla_outputIntermediateHeadersPath("output-intermediate-headers", llvm::cl::desc("Specify the output folder for intermediate headers"), llvm::cl::value_desc("<dir_path>"));
+llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("<dir_path>"));
+llvm::cl::opt<string> cla_outputBinFile("output-bin", llvm::cl::desc("Specify the output binary metadata file"), llvm::cl::value_desc("<file_path>"));
+llvm::cl::opt<string> cla_outputDtsFolder("output-typescript", llvm::cl::desc("Specify the output .d.ts folder"), llvm::cl::value_desc("<dir_path>"));
+llvm::cl::opt<string> cla_clangArgumentsDelimiter(llvm::cl::Positional, llvm::cl::desc("Xclang"), llvm::cl::init("-"));
+llvm::cl::list<string> cla_clangArguments(llvm::cl::ConsumeAfter, llvm::cl::desc("<clang arguments>..."));
 
 class MetaGenerationConsumer : public clang::ASTConsumer {
 public:
@@ -64,17 +55,15 @@ public:
 
         // Serialize Meta objects to Yaml
         if (!cla_outputYamlFolder.empty()) {
-            std::string outputYamlFolder{ cla_outputYamlFolder.getValue() };
-
-            if (!llvm::sys::fs::exists(outputYamlFolder)) {
-                DEBUG_WITH_TYPE("yaml", llvm::dbgs() << "Creating YAML output directory: " << outputYamlFolder << "\n");
+            if (!llvm::sys::fs::exists(cla_outputYamlFolder)) {
+                DEBUG_WITH_TYPE("yaml", llvm::dbgs() << "Creating YAML output directory: " << cla_outputYamlFolder << "\n");
                 llvm::sys::fs::create_directories(cla_outputYamlFolder);
             }
 
             for (std::pair<clang::Module*, std::vector<Meta::Meta*> >& modulePair : metasByModules) {
                 std::string yamlFileName = modulePair.first->getFullModuleName() + ".yaml";
                 DEBUG_WITH_TYPE("yaml", llvm::dbgs() << "Generating: " << yamlFileName << "\n");
-                Yaml::YamlSerializer::serialize<std::pair<clang::Module*, std::vector<Meta::Meta*> > >(outputYamlFolder + "/" + yamlFileName, modulePair);
+                Yaml::YamlSerializer::serialize<std::pair<clang::Module*, std::vector<Meta::Meta*> > >(cla_outputYamlFolder + "/" + yamlFileName, modulePair);
             }
         }
 
@@ -83,8 +72,7 @@ public:
             binary::MetaFile file(metasByModules.size());
             binary::BinarySerializer serializer(&file);
             serializer.serializeContainer(metasByModules);
-            std::string output = cla_outputBinFile.getValue();
-            file.save(output);
+            file.save(cla_outputBinFile);
         }
 
         // Generate TypeScript definitions
@@ -95,7 +83,6 @@ public:
 
                 llvm::SmallString<128> path;
                 llvm::sys::path::append(path, cla_outputDtsFolder, "objc!" + modulePair.first->getFullModuleName() + ".d.ts");
-
                 std::error_code error;
                 llvm::raw_fd_ostream file(path.str(), error, llvm::sys::fs::F_Text);
                 if (error) {
@@ -140,49 +127,48 @@ int main(int argc, const char** argv)
 {
     std::clock_t begin = clock();
 
-    // Parse clang arguments from command line
     llvm::cl::ParseCommandLineOptions(argc, argv);
+    assert(cla_clangArgumentsDelimiter.getValue() == "Xclang");
+
+    // Log Metadata Genrator Arguments
+    std::cout << "Metadata Generator Arguments: " << std::endl;
+    for (int i = 0; i < argc; ++i) {
+        std::string arg = *(argv + i);
+        std::cout << "\"" << arg << "\", ";
+    }
+    std::cout << std::endl;
 
     std::vector<std::string> clangArgs{
         "-v",
         "-x", "objective-c",
-        "-fno-objc-arc",
-        "-fmodule-maps",
-        "-isysroot", cla_isysroot.getValue(),
-        "-arch", cla_arch.getValue(),
-        "-target", cla_target.getValue(),
-        std::string("-std=") + cla_std.getValue(),
-        std::string("-miphoneos-version-min=") + cla_iphoneOSVersionMin.getValue(),
-        "-Wno-unknown-pragmas", "-Wno-ignored-attributes",
-        "-ferror-limit=0"
+        "-fno-objc-arc", "-fmodule-maps", "-ferror-limit=0",
+        "-Wno-unknown-pragmas", "-Wno-ignored-attributes"
     };
 
-    printf("Parsed header search paths:\n");
-    for (std::string path : parsePaths(cla_headerSearchPaths.getValue())) {
-        printf("\"%s\"\n", path.c_str());
-        clangArgs.push_back(std::string("-I") + path);
-    }
-    printf("Parsed framework search paths:\n");
-    for (std::string path : parsePaths(cla_frameworkSearchPaths.getValue())) {
-        printf("\"%s\"\n", path.c_str());
-        clangArgs.push_back(std::string("-F") + path);
-    }
+    // merge with hardcoded clang arguments
+    clangArgs.insert(clangArgs.end(), cla_clangArguments.begin(), cla_clangArguments.end());
 
-    // log compiler settings
-    std::cout << "Clang parameters: ";
+    // Log Clang Arguments
+    std::cout << "Clang Arguments: \n";
     for (const std::string& arg : clangArgs) {
-        std::cout << arg << " ";
+        std::cout << "\"" << arg << "\","
+                  << " ";
     }
     std::cout << std::endl;
+
+    std::string isysroot;
+    std::vector<string>::const_iterator it = std::find(clangArgs.begin(), clangArgs.end(), "-isysroot");
+    if (it != clangArgs.end() && ++it != clangArgs.end()) {
+        isysroot = *it;
+    }
 
     // Create umbrella header
     std::string umbrellaContent = CreateUmbrellaHeader(clangArgs);
 
     // Save the umbrella file
-    std::string umbrellaFile = cla_outputUmbrellaHeaderFile.getValue();
-    if (!umbrellaFile.empty()) {
+    if (!cla_outputUmbrellaHeaderFile.empty()) {
         std::error_code errorCode;
-        llvm::raw_fd_ostream umbrellaFileStream(umbrellaFile, errorCode, llvm::sys::fs::OpenFlags::F_None);
+        llvm::raw_fd_ostream umbrellaFileStream(cla_outputUmbrellaHeaderFile, errorCode, llvm::sys::fs::OpenFlags::F_None);
         if (!errorCode) {
             umbrellaFileStream << umbrellaContent;
             umbrellaFileStream.close();
@@ -191,9 +177,8 @@ int main(int argc, const char** argv)
 
     clang::tooling::FileContentMappings filesMappings;
     // Remove not supported syntax in headers
-    if (cla_enableHeaderPreprocessingIfNeeded.getValue()) {
+    if (cla_enableHeaderPreprocessingIfNeeded) {
         // Extract SDK version form isysroot path. This depends on specific naming convention of SDK folders.
-        std::string isysroot = cla_isysroot.getValue();
         std::size_t lastPathComponentIndex = isysroot.find_last_of("/");
         std::size_t sdkVersionDigit = isysroot.find_first_of("0123456789", lastPathComponentIndex);
         bool isLowerThaniOS9 = (isysroot[sdkVersionDigit] - '0' < 9 && isysroot[sdkVersionDigit + 1] == '.');
@@ -203,12 +188,11 @@ int main(int argc, const char** argv)
             clang::tooling::runToolOnCodeWithArgs(new RemoveUnsupportedSyntaxAction(filesMap), umbrellaContent, clangArgs, "umbrella.h");
 
             // save the output header file on the file system (optional)
-            std::string sdkHeaderOutputFolder = cla_outputIntermediateHeadersPath.getValue();
-            if (!sdkHeaderOutputFolder.empty()) {
+            if (!cla_outputIntermediateHeadersPath.empty()) {
                 for (auto& pair : filesMap) {
                     if (!pair.first.empty()) {
                         std::error_code errorCode;
-                        llvm::raw_fd_ostream outputFileStream(sdkHeaderOutputFolder + replaceString(pair.first, "/", "|"), errorCode, llvm::sys::fs::OpenFlags::F_None);
+                        llvm::raw_fd_ostream outputFileStream(cla_outputIntermediateHeadersPath + replaceString(pair.first, "/", "|"), errorCode, llvm::sys::fs::OpenFlags::F_None);
                         if (!errorCode) {
                             outputFileStream << pair.second.str();
                             outputFileStream.close();
