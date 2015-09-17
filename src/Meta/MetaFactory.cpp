@@ -225,8 +225,7 @@ void MetaFactory::createFromEnum(const clang::EnumDecl& enumeration, JsCodeMeta&
     std::vector<std::string> fieldNames;
     for (clang::EnumConstantDecl* enumField : enumeration.enumerators())
         fieldNames.push_back(enumField->getNameAsString());
-    fieldNames.push_back(jsCodeMeta.jsName);
-    size_t fieldNamePrefixLength = Utils::getCommonWordPrefix(fieldNames).length();
+    size_t fieldNamePrefixLength = Utils::calculateEnumFieldsPrefix(jsCodeMeta.jsName, fieldNames).size();
 
     std::ostringstream jsCodeStream;
     jsCodeStream << "__tsEnum({";

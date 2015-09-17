@@ -117,16 +117,20 @@ bool isAlpha(const std::vector<std::string>& strings, size_t index)
     return true;
 }
 
-std::string Utils::getCommonWordPrefix(const std::vector<std::string>& strings)
+std::string Utils::calculateEnumFieldsPrefix(std::string enumName, std::vector<std::string> fields)
 {
-    for (size_t prefixLength = 0; prefixLength < strings[0].size(); prefixLength++) {
-        char c = strings[0][prefixLength];
-        for (size_t i = 1; i < strings.size(); i++) {
-            if (prefixLength >= strings[i].size() || strings[i][prefixLength] != c) {
-                while (prefixLength > 0 && (!std::isupper(strings[i][prefixLength]) || !isAlpha(strings, prefixLength))) {
+    fields.push_back(enumName);
+    for (size_t prefixLength = 0; prefixLength < fields[0].size(); prefixLength++) {
+        char c = fields[0][prefixLength];
+        for (size_t i = 1; i < fields.size(); i++) {
+            if (prefixLength >= fields[i].size() || fields[i][prefixLength] != c) {
+                if (prefixLength == enumName.size()) {
+                    return enumName;
+                }
+                while (prefixLength > 0 && (!std::isupper(fields[i][prefixLength]) || !isAlpha(fields, prefixLength))) {
                     prefixLength--;
                 }
-                return strings[i].substr(0, prefixLength);
+                return fields[i].substr(0, prefixLength);
             }
         }
     }
