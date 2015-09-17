@@ -311,7 +311,7 @@ shared_ptr<Type> TypeFactory::createFromObjCObjectPointerType(const clang::ObjCO
     for (clang::ObjCProtocolDecl* qual : type->quals()) {
         clang::ObjCProtocolDecl* protocolDef = qual->getDefinition();
         Meta* protocolMeta = nullptr;
-        if (_metaFactory->tryCreate(*protocolDef, &protocolMeta)) {
+        if (protocolDef != nullptr && _metaFactory->tryCreate(*protocolDef, &protocolMeta)) {
             assert(protocolMeta->is(MetaType::Protocol));
             protocols.push_back(&protocolMeta->as<ProtocolMeta>());
         }
