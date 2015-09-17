@@ -343,14 +343,14 @@ void DefinitionWriter::visit(JsCodeMeta* meta)
         }
     } else if (const clang::EnumDecl* enumDecl = clang::dyn_cast<clang::EnumDecl>(meta->declaration)) {
         if (enumDecl->hasNameForLinkage()) {
-            std::vector<std::string> fieldNames{ enumDecl->getNameAsString() };
+            std::vector<std::string> fieldNames;
             std::vector<const clang::EnumConstantDecl*> fields;
             for (const clang::EnumConstantDecl* member : enumDecl->enumerators()) {
                 fieldNames.push_back(member->getNameAsString());
                 fields.push_back(member);
             }
 
-            std::string prefix(Utils::getCommonWordPrefix(fieldNames));
+            std::string prefix(Utils::calculateEnumFieldsPrefix(meta->jsName, fieldNames));
 
             _buffer << std::endl;
             _buffer << "\tdeclare const enum " << meta->jsName << " {" << std::endl;
