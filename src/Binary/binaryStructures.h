@@ -12,7 +12,6 @@ class MetaFile;
 class BinaryWriter;
 
 enum BinaryTypeEncodingType : uint8_t {
-    Unknown,
     Void,
     Bool,
     Short,
@@ -33,7 +32,6 @@ enum BinaryTypeEncodingType : uint8_t {
     InterfaceDeclarationReference,
     StructDeclarationReference,
     UnionDeclarationReference,
-    InterfaceDeclaration, // NSString* -> DeclarationReference, NSString -> InterfaceDeclaration
     Pointer,
     VaList,
     Selector,
@@ -255,18 +253,6 @@ public:
 
     uint8_t _encodingsCount;
     std::vector<std::unique_ptr<TypeEncoding> > _encodings;
-
-    virtual MetaFileOffset save(BinaryWriter& writer) override;
-};
-
-struct InterfaceDeclarationEncoding : public TypeEncoding {
-public:
-    InterfaceDeclarationEncoding()
-        : TypeEncoding(BinaryTypeEncodingType::InterfaceDeclaration)
-    {
-    }
-
-    MetaFileOffset _name;
 
     virtual MetaFileOffset save(BinaryWriter& writer) override;
 };

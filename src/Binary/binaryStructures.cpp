@@ -145,13 +145,6 @@ binary::MetaFileOffset binary::FunctionEncoding::save(binary::BinaryWriter& writ
     return offset;
 }
 
-binary::MetaFileOffset binary::InterfaceDeclarationEncoding::save(binary::BinaryWriter& writer)
-{
-    binary::MetaFileOffset offset = TypeEncoding::save(writer);
-    writer.push_pointer(this->_name);
-    return offset;
-}
-
 binary::MetaFileOffset binary::AnonymousRecordEncoding::save(binary::BinaryWriter& writer)
 {
     binary::MetaFileOffset offset = TypeEncoding::save(writer);
