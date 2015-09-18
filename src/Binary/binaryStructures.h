@@ -36,7 +36,7 @@ enum BinaryTypeEncodingType : uint8_t {
     VaList,
     Selector,
     Class,
-    Protocol,
+    ProtocolType,
     InstanceType,
     Id,
     ConstantArray,
@@ -45,6 +45,18 @@ enum BinaryTypeEncodingType : uint8_t {
     Block,
     AnonymousStruct,
     AnonymousUnion
+};
+
+// BinaryMetaType values must not exceed
+enum BinaryMetaType : uint8_t {
+    Undefined = 0,
+    Struct,
+    Union,
+    Function,
+    JsCode,
+    Var,
+    Interface,
+    Protocol
 };
 
 enum BinaryFlags : uint8_t {
@@ -68,6 +80,11 @@ enum BinaryFlags : uint8_t {
 #pragma pack(push, 1)
 struct Meta {
 public:
+    Meta(BinaryMetaType type)
+        : _flags(type & 7) // 7 = 111 -> get only the first 3 bits of the type
+    {
+    }
+
     MetaFileOffset _names = 0;
     MetaFileOffset _topLevelModule = 0;
     uint8_t _flags = 0;
@@ -78,6 +95,11 @@ public:
 
 struct RecordMeta : Meta {
 public:
+    RecordMeta(BinaryMetaType type)
+        : Meta(type)
+    {
+    }
+
     MetaFileOffset _fieldNames = 0;
     MetaFileOffset _fieldsEncodings = 0;
 
@@ -85,13 +107,28 @@ public:
 };
 
 struct StructMeta : RecordMeta {
+public:
+    StructMeta()
+        : RecordMeta(BinaryMetaType::Struct)
+    {
+    }
 };
 
 struct UnionMeta : RecordMeta {
+public:
+    UnionMeta()
+        : RecordMeta(BinaryMetaType::Union)
+    {
+    }
 };
 
 struct FunctionMeta : Meta {
 public:
+    FunctionMeta()
+        : Meta(BinaryMetaType::Function)
+    {
+    }
+
     MetaFileOffset _encoding = 0;
 
     virtual MetaFileOffset save(BinaryWriter& writer) override;
@@ -99,6 +136,11 @@ public:
 
 struct JsCodeMeta : Meta {
 public:
+    JsCodeMeta()
+        : Meta(BinaryMetaType::JsCode)
+    {
+    }
+
     MetaFileOffset _jsCode = 0;
 
     virtual MetaFileOffset save(BinaryWriter& writer) override;
@@ -106,12 +148,22 @@ public:
 
 struct VarMeta : Meta {
 public:
+    VarMeta()
+        : Meta(BinaryMetaType::Var)
+    {
+    }
+
     MetaFileOffset _encoding = 0;
 
     virtual MetaFileOffset save(BinaryWriter& writer) override;
 };
 
 struct MemberMeta : Meta {
+public:
+    MemberMeta()
+        : Meta(BinaryMetaType::Undefined)
+    {
+    }
 };
 
 struct MethodMeta : MemberMeta {
@@ -130,6 +182,11 @@ struct PropertyMeta : MemberMeta {
 
 struct BaseClassMeta : Meta {
 public:
+    BaseClassMeta(BinaryMetaType type)
+        : Meta(type)
+    {
+    }
+
     MetaFileOffset _instanceMethods = 0;
     MetaFileOffset _staticMethods = 0;
     MetaFileOffset _properties = 0;
@@ -140,10 +197,20 @@ public:
 };
 
 struct ProtocolMeta : BaseClassMeta {
+public:
+    ProtocolMeta()
+        : BaseClassMeta(BinaryMetaType::Protocol)
+    {
+    }
 };
 
 struct InterfaceMeta : BaseClassMeta {
 public:
+    InterfaceMeta()
+        : BaseClassMeta(BinaryMetaType::Interface)
+    {
+    }
+
     MetaFileOffset _baseName = 0;
 
     virtual MetaFileOffset save(BinaryWriter& writer) override;

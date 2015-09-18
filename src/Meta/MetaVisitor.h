@@ -8,8 +8,11 @@ class CategoryMeta;
 class FunctionMeta;
 class StructMeta;
 class UnionMeta;
-class JsCodeMeta;
+class EnumMeta;
 class VarMeta;
+class MethodMeta;
+class PropertyMeta;
+class EnumConstantMeta;
 
 class MetaVisitor {
 public:
@@ -25,8 +28,14 @@ public:
 
     virtual void visit(UnionMeta* meta) = 0;
 
-    virtual void visit(JsCodeMeta* meta) = 0;
+    virtual void visit(EnumMeta* meta) = 0;
 
     virtual void visit(VarMeta* meta) = 0;
+
+    virtual void visit(MethodMeta* meta) = 0;
+
+    virtual void visit(PropertyMeta* meta) = 0;
+
+    virtual void visit(EnumConstantMeta* meta) = 0;
 };
 }

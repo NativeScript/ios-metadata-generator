@@ -44,13 +44,14 @@ enum MetaType {
     Struct,
     Union,
     Function,
-    JsCode,
+    Enum,
     Var,
     Interface,
     Protocol,
     Category,
     Method,
-    Property
+    Property,
+    EnumConstant
 };
 
 class Meta {
@@ -219,13 +220,33 @@ public:
     virtual void visit(MetaVisitor* visitor) override;
 };
 
-class JsCodeMeta : public Meta {
+class EnumConstantMeta : public Meta {
 public:
-    JsCodeMeta()
+    EnumConstantMeta()
     {
-        this->type = MetaType::JsCode;
+        this->type = MetaType::EnumConstant;
     }
-    std::string jsCode;
+
+    std::string value;
+
+    virtual void visit(MetaVisitor* visitor) override;
+};
+
+struct EnumField {
+    std::string name;
+    std::string value;
+};
+
+class EnumMeta : public Meta {
+public:
+    EnumMeta()
+    {
+        this->type = MetaType::Enum;
+    }
+
+    std::vector<EnumField> fullNameFields;
+
+    std::vector<EnumField> swiftNameFields;
 
     virtual void visit(MetaVisitor* visitor) override;
 };

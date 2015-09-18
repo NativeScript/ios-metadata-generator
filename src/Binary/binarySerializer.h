@@ -56,8 +56,14 @@ public:
 
     virtual void visit(::Meta::UnionMeta* Meta) override;
 
-    virtual void visit(::Meta::JsCodeMeta* Meta) override;
+    virtual void visit(::Meta::EnumMeta* Meta) override;
 
     virtual void visit(::Meta::VarMeta* Meta) override;
+
+    virtual void visit(::Meta::EnumConstantMeta* Meta) override;
+
+    virtual void visit(::Meta::PropertyMeta* Meta) override;
+
+    virtual void visit(::Meta::MethodMeta* Meta) override;
 };
 }

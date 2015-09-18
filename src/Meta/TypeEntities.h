@@ -10,7 +10,7 @@ class ProtocolMeta;
 class InterfaceMeta;
 class StructMeta;
 class UnionMeta;
-class JsCodeMeta;
+class EnumMeta;
 
 enum TypeType {
     TypeVoid,
@@ -330,7 +330,7 @@ public:
 
 class EnumType : public Type {
 public:
-    EnumType(Type* underlyingType, JsCodeMeta* enumMeta)
+    EnumType(Type* underlyingType, EnumMeta* enumMeta)
         : Type(TypeType::TypeEnum)
         , underlyingType(underlyingType)
         , enumMeta(enumMeta)
@@ -338,6 +338,6 @@ public:
     }
 
     Type* underlyingType;
-    JsCodeMeta* enumMeta;
+    EnumMeta* enumMeta;
 };
 }

@@ -377,7 +377,9 @@ shared_ptr<Type> TypeFactory::createFromPointerType(const clang::PointerType* ty
 
 shared_ptr<Type> TypeFactory::createFromEnumType(const clang::EnumType* type)
 {
-    return this->create(type->getDecl()->getIntegerType());
+    Type* innerType = this->create(type->getDecl()->getIntegerType()).get();
+    EnumMeta* enumMeta = &this->_metaFactory->create(*type->getDecl()->getDefinition())->as<EnumMeta>();
+    return make_shared<EnumType>(innerType, enumMeta);
 }
 
 shared_ptr<Type> TypeFactory::createFromRecordType(const clang::RecordType* type)

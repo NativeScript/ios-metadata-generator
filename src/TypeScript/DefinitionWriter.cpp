@@ -332,41 +332,23 @@ void DefinitionWriter::writeMembers(const std::vector<RecordField>& fields)
     }
 }
 
-void DefinitionWriter::visit(JsCodeMeta* meta)
+void DefinitionWriter::visit(EnumMeta* meta)
 {
-    if (const clang::EnumConstantDecl* enumConstantDecl = clang::dyn_cast<clang::EnumConstantDecl>(meta->declaration)) {
-        const clang::EnumDecl* enumDecl = clang::dyn_cast<clang::EnumDecl>(enumConstantDecl->getLexicalDeclContext());
-        if (!enumDecl->hasNameForLinkage()) {
-            _buffer << std::endl;
-            _buffer << "\t declare const " << meta->jsName << ": number;";
-            _buffer << std::endl;
+    _buffer << std::endl;
+    _buffer << "\tdeclare const enum " << meta->jsName << " {" << std::endl;
+
+    std::vector<EnumField>& fields = meta->swiftNameFields.size() != 0 ? meta->swiftNameFields : meta->fullNameFields;
+
+    for (size_t i = 0; i < fields.size(); i++) {
+        _buffer << "\t\t" << fields[i].name << " = " << fields[i].value;
+        if (i < fields.size() - 1) {
+            _buffer << ",";
         }
-    } else if (const clang::EnumDecl* enumDecl = clang::dyn_cast<clang::EnumDecl>(meta->declaration)) {
-        if (enumDecl->hasNameForLinkage()) {
-            std::vector<std::string> fieldNames;
-            std::vector<const clang::EnumConstantDecl*> fields;
-            for (const clang::EnumConstantDecl* member : enumDecl->enumerators()) {
-                fieldNames.push_back(member->getNameAsString());
-                fields.push_back(member);
-            }
-
-            std::string prefix(Utils::calculateEnumFieldsPrefix(meta->jsName, fieldNames));
-
-            _buffer << std::endl;
-            _buffer << "\tdeclare const enum " << meta->jsName << " {" << std::endl;
-
-            for (size_t i = 0; i < fields.size(); i++) {
-                _buffer << "\t\t" << fields[i]->getNameAsString().substr(prefix.size()) << " = " << fields[i]->getInitVal().toString(10);
-                if (i < fields.size() - 1) {
-                    _buffer << ",";
-                }
-                _buffer << std::endl;
-            }
-
-            _buffer << "\t}";
-            _buffer << std::endl;
-        }
+        _buffer << std::endl;
     }
+
+    _buffer << "\t}";
+    _buffer << std::endl;
 }
 
 void DefinitionWriter::visit(VarMeta* meta)
@@ -390,6 +372,21 @@ std::string DefinitionWriter::writeFunctionProto(const std::vector<Type*>& signa
 
     output << ") => " << tsifyType(*signature[0]);
     return output.str();
+}
+
+void DefinitionWriter::visit(MethodMeta* meta)
+{
+}
+
+void DefinitionWriter::visit(PropertyMeta* meta)
+{
+}
+
+void DefinitionWriter::visit(EnumConstantMeta* meta)
+{
+    _buffer << std::endl;
+    _buffer << "\t declare const " << meta->jsName << ": number;";
+    _buffer << std::endl;
 }
 
 std::string DefinitionWriter::localizeReference(const std::string& jsName, std::string moduleName)

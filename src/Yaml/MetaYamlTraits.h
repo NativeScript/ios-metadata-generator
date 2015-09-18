@@ -27,6 +27,7 @@ LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::ProtocolMeta*)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::MethodMeta*)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::PropertyMeta*)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::Type*)
+LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::EnumField)
 
 namespace llvm {
 namespace yaml {
@@ -104,7 +105,8 @@ namespace yaml {
             io.enumCase(value, "Struct", Meta::MetaType::Struct);
             io.enumCase(value, "Union", Meta::MetaType::Union);
             io.enumCase(value, "Function", Meta::MetaType::Function);
-            io.enumCase(value, "JsCode", Meta::MetaType::JsCode);
+            io.enumCase(value, "Enum", Meta::MetaType::Enum);
+            io.enumCase(value, "EnumConstant", Meta::MetaType::EnumConstant);
             io.enumCase(value, "Var", Meta::MetaType::Var);
             io.enumCase(value, "Interface", Meta::MetaType::Interface);
             io.enumCase(value, "Protocol", Meta::MetaType::Protocol);
@@ -286,7 +288,6 @@ namespace yaml {
             }
             case Meta::TypeType::TypeEnum: {
                 Meta::EnumType& concreteType = type->as<Meta::EnumType>();
-                io.mapRequired("UnderlyingType", concreteType.underlyingType);
                 io.mapRequired("Name", concreteType.enumMeta->jsName);
                 break;
             }
@@ -417,14 +418,36 @@ namespace yaml {
         }
     };
 
-    // JsCodeMeta *
+    // EnumField
     template <>
-    struct MappingTraits<Meta::JsCodeMeta*> {
+    struct MappingTraits<Meta::EnumField> {
 
-        static void mapping(IO& io, Meta::JsCodeMeta*& meta)
+        static void mapping(IO& io, Meta::EnumField& field)
+        {
+            io.mapRequired(field.name.c_str(), field.value);
+        }
+    };
+
+    // EnumMeta *
+    template <>
+    struct MappingTraits<Meta::EnumMeta*> {
+
+        static void mapping(IO& io, Meta::EnumMeta*& meta)
         {
             mapBaseMeta(io, meta);
-            io.mapRequired("JsCode", meta->jsCode);
+            io.mapRequired("FullNameFields", meta->fullNameFields);
+            io.mapRequired("SwiftNameFields", meta->swiftNameFields);
+        }
+    };
+
+    // EnumConstantMeta *
+    template <>
+    struct MappingTraits<Meta::EnumConstantMeta*> {
+
+        static void mapping(IO& io, Meta::EnumConstantMeta*& meta)
+        {
+            mapBaseMeta(io, meta);
+            io.mapRequired("Value", meta->value);
         }
     };
 
@@ -493,9 +516,14 @@ namespace yaml {
                 MappingTraits<Meta::VarMeta*>::mapping(io, varMeta);
                 break;
             }
-            case Meta::MetaType::JsCode: {
-                Meta::JsCodeMeta* jsCodeMeta = &meta->as<Meta::JsCodeMeta>();
-                MappingTraits<Meta::JsCodeMeta*>::mapping(io, jsCodeMeta);
+            case Meta::MetaType::Enum: {
+                Meta::EnumMeta* enumMeta = &meta->as<Meta::EnumMeta>();
+                MappingTraits<Meta::EnumMeta*>::mapping(io, enumMeta);
+                break;
+            }
+            case Meta::MetaType::EnumConstant: {
+                Meta::EnumConstantMeta* enumConstantMeta = &meta->as<Meta::EnumConstantMeta>();
+                MappingTraits<Meta::EnumConstantMeta*>::mapping(io, enumConstantMeta);
                 break;
             }
             case Meta::MetaType::Interface: {

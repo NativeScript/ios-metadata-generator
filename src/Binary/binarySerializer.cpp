@@ -1,3 +1,4 @@
+#include <sstream>
 #include "binarySerializer.h"
 #include "binarySerializerPrivate.h"
 #include "Meta/Utils.h"
@@ -28,15 +29,11 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
     }
 
     // flags
-    uint8_t flags = 0;
-    //::Meta::MetaFlags flags = meta->flags;
-    if (hasName) {
+    uint8_t& flags = binaryMetaStruct._flags;
+    if (hasName)
         flags = (uint8_t)(flags | BinaryFlags::HasName);
-    }
-    flags = (uint8_t)(flags | (meta->type & 7)); // add type; 7 = 111 -> get only the first 3 bits of the type
     if (meta->getFlags(::Meta::MetaFlags::IsIosAppExtensionAvailable))
         flags |= BinaryFlags::IsIosAppExtensionAvailable;
-    binaryMetaStruct._flags = flags;
 
     // module
     clang::Module* topLevelModule = meta->module->getTopLevelModule();
@@ -264,11 +261,26 @@ void binary::BinarySerializer::visit(::Meta::UnionMeta* meta)
     this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
 }
 
-void binary::BinarySerializer::visit(::Meta::JsCodeMeta* meta)
+void binary::BinarySerializer::visit(::Meta::EnumMeta* meta)
 {
     binary::JsCodeMeta binaryStruct;
     serializeBase(meta, binaryStruct);
-    binaryStruct._jsCode = this->heapWriter.push_string(meta->jsCode);
+
+    // generate JsCode from enum names and values
+    std::ostringstream jsCodeStream;
+    jsCodeStream << "__tsEnum({";
+    bool isFirstField = true;
+    for (::Meta::EnumField& field : meta->swiftNameFields) {
+        jsCodeStream << (isFirstField ? "" : ",") << "\"" << field.name << "\":" << field.value;
+        isFirstField = false;
+    }
+    for (::Meta::EnumField& field : meta->fullNameFields) {
+        jsCodeStream << (isFirstField ? "" : ",") << "\"" << field.name << "\":" << field.value;
+        isFirstField = false;
+    }
+    jsCodeStream << "})";
+
+    binaryStruct._jsCode = this->heapWriter.push_string(jsCodeStream.str());
     this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
 }
 
@@ -279,4 +291,21 @@ void binary::BinarySerializer::visit(::Meta::VarMeta* meta)
     unique_ptr<binary::TypeEncoding> binarySignature = meta->signature->visit(this->typeEncodingSerializer);
     binaryStruct._encoding = binarySignature->save(this->heapWriter);
     this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+}
+
+void binary::BinarySerializer::visit(::Meta::EnumConstantMeta* meta)
+{
+    binary::JsCodeMeta binaryStruct;
+    serializeBase(meta, binaryStruct);
+
+    binaryStruct._jsCode = this->heapWriter.push_string(meta->value);
+    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+}
+
+void binary::BinarySerializer::visit(::Meta::PropertyMeta* meta)
+{
+}
+
+void binary::BinarySerializer::visit(::Meta::MethodMeta* meta)
+{
 }
