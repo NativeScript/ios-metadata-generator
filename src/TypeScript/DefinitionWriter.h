@@ -27,9 +27,15 @@ public:
 
     virtual void visit(Meta::UnionMeta* meta) override;
 
-    virtual void visit(Meta::JsCodeMeta* meta) override;
+    virtual void visit(Meta::EnumMeta* meta) override;
 
     virtual void visit(Meta::VarMeta* meta) override;
+
+    virtual void visit(Meta::MethodMeta* meta) override;
+
+    virtual void visit(Meta::PropertyMeta* meta) override;
+
+    virtual void visit(Meta::EnumConstantMeta* meta) override;
 
 private:
     template <class Member>

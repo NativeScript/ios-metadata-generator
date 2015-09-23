@@ -95,13 +95,13 @@ Meta* MetaFactory::create(const clang::Decl& decl)
             populateIdentificationFields(*var, *metaPtr.get());
             createFromVar(*var, metaPtr.get()->as<VarMeta>());
         } else if (const clang::EnumDecl* enumDecl = clang::dyn_cast<clang::EnumDecl>(&decl)) {
-            metaPtr.reset(new JsCodeMeta());
+            metaPtr.reset(new EnumMeta());
             populateIdentificationFields(*enumDecl, *metaPtr.get());
-            createFromEnum(*enumDecl, metaPtr.get()->as<JsCodeMeta>());
+            createFromEnum(*enumDecl, metaPtr.get()->as<EnumMeta>());
         } else if (const clang::EnumConstantDecl* enumConstantDecl = clang::dyn_cast<clang::EnumConstantDecl>(&decl)) {
-            metaPtr.reset(new JsCodeMeta());
+            metaPtr.reset(new EnumConstantMeta());
             populateIdentificationFields(*enumConstantDecl, *metaPtr.get());
-            createFromEnumConstant(*enumConstantDecl, metaPtr.get()->as<JsCodeMeta>());
+            createFromEnumConstant(*enumConstantDecl, metaPtr.get()->as<EnumConstantMeta>());
         } else if (const clang::ObjCInterfaceDecl* interface = clang::dyn_cast<clang::ObjCInterfaceDecl>(&decl)) {
             metaPtr.reset(new InterfaceMeta());
             populateIdentificationFields(*interface, *metaPtr.get());
@@ -214,43 +214,37 @@ void MetaFactory::createFromVar(const clang::VarDecl& var, VarMeta& varMeta)
     varMeta.signature = _typeFactory.create(var.getType()).get();
 }
 
-void MetaFactory::createFromEnum(const clang::EnumDecl& enumeration, JsCodeMeta& jsCodeMeta)
+void MetaFactory::createFromEnum(const clang::EnumDecl& enumeration, EnumMeta& enumMeta)
 {
     if (!enumeration.isThisDeclarationADefinition()) {
-        throw MetaCreationException(&jsCodeMeta, "Forward declaration of enum.", false);
+        throw MetaCreationException(&enumMeta, "Forward declaration of enum.", false);
     }
 
-    populateMetaFields(enumeration, jsCodeMeta);
+    populateMetaFields(enumeration, enumMeta);
 
     std::vector<std::string> fieldNames;
     for (clang::EnumConstantDecl* enumField : enumeration.enumerators())
         fieldNames.push_back(enumField->getNameAsString());
-    size_t fieldNamePrefixLength = Utils::calculateEnumFieldsPrefix(jsCodeMeta.jsName, fieldNames).size();
+    size_t fieldNamePrefixLength = Utils::calculateEnumFieldsPrefix(enumMeta.jsName, fieldNames).size();
 
-    std::ostringstream jsCodeStream;
-    jsCodeStream << "__tsEnum({";
-    bool isFirstField = true;
     for (clang::EnumConstantDecl* enumField : enumeration.enumerators()) {
         llvm::SmallVector<char, 10> value;
         enumField->getInitVal().toString(value, 10, enumField->getInitVal().isSigned());
         std::string valueStr = std::string(value.data(), value.size());
+
         if (fieldNamePrefixLength > 0) {
-            jsCodeStream << (isFirstField ? "" : ",") << "\"" << enumField->getNameAsString().substr(fieldNamePrefixLength, std::string::npos) << "\":" << valueStr;
-            isFirstField = false;
+            enumMeta.swiftNameFields.push_back({ enumField->getNameAsString().substr(fieldNamePrefixLength, std::string::npos), valueStr });
         }
-        jsCodeStream << (isFirstField ? "" : ",") << "\"" << enumField->getNameAsString() << "\":" << valueStr;
-        isFirstField = false;
+        enumMeta.fullNameFields.push_back({ enumField->getNameAsString(), valueStr });
     }
-    jsCodeStream << "})";
-    jsCodeMeta.jsCode = jsCodeStream.str();
 }
 
-void MetaFactory::createFromEnumConstant(const clang::EnumConstantDecl& enumConstant, JsCodeMeta& jsCodeMeta)
+void MetaFactory::createFromEnumConstant(const clang::EnumConstantDecl& enumConstant, EnumConstantMeta& enumMeta)
 {
-    populateMetaFields(enumConstant, jsCodeMeta);
+    populateMetaFields(enumConstant, enumMeta);
     llvm::SmallVector<char, 10> value;
     enumConstant.getInitVal().toString(value, 10, enumConstant.getInitVal().isSigned());
-    jsCodeMeta.jsCode = std::string(value.data(), value.size());
+    enumMeta.value = std::string(value.data(), value.size());
 }
 
 void MetaFactory::createFromInterface(const clang::ObjCInterfaceDecl& interface, InterfaceMeta& interfaceMeta)

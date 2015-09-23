@@ -34,9 +34,9 @@ private:
 
     void createFromVar(const clang::VarDecl& var, VarMeta& varMeta);
 
-    void createFromEnum(const clang::EnumDecl& enumeration, JsCodeMeta& jsCodeMeta);
+    void createFromEnum(const clang::EnumDecl& enumeration, EnumMeta& enumMeta);
 
-    void createFromEnumConstant(const clang::EnumConstantDecl& enumConstant, JsCodeMeta& jsCodeMeta);
+    void createFromEnumConstant(const clang::EnumConstantDecl& enumConstant, EnumConstantMeta& enumMeta);
 
     void createFromInterface(const clang::ObjCInterfaceDecl& interface, InterfaceMeta& interfaceMeta);
 

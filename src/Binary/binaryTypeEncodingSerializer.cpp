@@ -119,7 +119,7 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitClas
 
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitProtocol()
 {
-    return llvm::make_unique<binary::TypeEncoding>(binary::BinaryTypeEncodingType::Protocol);
+    return llvm::make_unique<binary::TypeEncoding>(binary::BinaryTypeEncodingType::ProtocolType);
 }
 
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitId(const ::Meta::IdType& type)
