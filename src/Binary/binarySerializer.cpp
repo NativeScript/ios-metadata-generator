@@ -286,11 +286,20 @@ void binary::BinarySerializer::visit(::Meta::EnumMeta* meta)
 
 void binary::BinarySerializer::visit(::Meta::VarMeta* meta)
 {
-    binary::VarMeta binaryStruct;
-    serializeBase(meta, binaryStruct);
-    unique_ptr<binary::TypeEncoding> binarySignature = meta->signature->visit(this->typeEncodingSerializer);
-    binaryStruct._encoding = binarySignature->save(this->heapWriter);
-    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+    if (meta->hasValue) {
+        // serialize as JsCodeMeta
+        binary::JsCodeMeta binaryStruct;
+        serializeBase(meta, binaryStruct);
+        binaryStruct._jsCode = this->heapWriter.push_string(meta->value);
+        this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+    } else {
+        // serialize as VarMeta
+        binary::VarMeta binaryStruct;
+        serializeBase(meta, binaryStruct);
+        unique_ptr<binary::TypeEncoding> binarySignature = meta->signature->visit(this->typeEncodingSerializer);
+        binaryStruct._encoding = binarySignature->save(this->heapWriter);
+        this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+    }
 }
 
 void binary::BinarySerializer::visit(::Meta::EnumConstantMeta* meta)

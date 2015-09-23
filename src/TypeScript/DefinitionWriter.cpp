@@ -354,8 +354,7 @@ void DefinitionWriter::visit(EnumMeta* meta)
 void DefinitionWriter::visit(VarMeta* meta)
 {
     _buffer << std::endl;
-    _buffer << "\tdeclare var " << meta->jsName << ": " << tsifyType(*meta->signature) << ";";
-    _buffer << std::endl;
+    _buffer << "\tdeclare var " << meta->jsName << ": " << tsifyType(*meta->signature) << ";" << std::endl;
 }
 
 std::string DefinitionWriter::writeFunctionProto(const std::vector<Type*>& signature)

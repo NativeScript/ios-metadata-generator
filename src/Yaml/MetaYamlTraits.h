@@ -415,6 +415,9 @@ namespace yaml {
         {
             mapBaseMeta(io, meta);
             io.mapRequired("Signature", meta->signature);
+            if (meta->hasValue) {
+                io.mapRequired("Value", meta->value);
+            }
         }
     };
 

@@ -257,7 +257,10 @@ public:
     {
         this->type = MetaType::Var;
     }
+
     Type* signature;
+    bool hasValue;
+    std::string value;
 
     virtual void visit(MetaVisitor* visitor) override;
 };
