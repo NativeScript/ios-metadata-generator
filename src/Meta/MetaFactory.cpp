@@ -209,9 +209,52 @@ void MetaFactory::createFromVar(const clang::VarDecl& var, VarMeta& varMeta)
     }
 
     populateMetaFields(var, varMeta);
-
     //set type
     varMeta.signature = _typeFactory.create(var.getType()).get();
+    varMeta.hasValue = false;
+
+    if (var.isThisDeclarationADefinition()) {
+        clang::APValue* evValue = var.evaluateValue();
+        if (evValue == nullptr) {
+            throw MetaCreationException(&varMeta, "Unable to evaluate compile-time constant value.", false);
+        }
+
+        varMeta.hasValue = true;
+        llvm::SmallVector<char, 10> valueAsString;
+
+        switch (evValue->getKind()) {
+        case clang::APValue::ValueKind::Int:
+            evValue->getInt().toString(valueAsString, 10, evValue->getInt().isSigned());
+            break;
+        case clang::APValue::ValueKind::Float:
+            evValue->getFloat().toString(valueAsString);
+            break;
+        case clang::APValue::ValueKind::ComplexInt:
+            throw MetaCreationException(&varMeta, "Not supported compile-time constant value: ComplexInt.", false);
+        case clang::APValue::ValueKind::ComplexFloat:
+            throw MetaCreationException(&varMeta, "Not supported compile-time constant value: ComplexFloat.", false);
+        case clang::APValue::ValueKind::AddrLabelDiff:
+            throw MetaCreationException(&varMeta, "Not supported compile-time constant value: AddrLabelDiff.", false);
+        case clang::APValue::ValueKind::Array:
+            throw MetaCreationException(&varMeta, "Not supported compile-time constant value: Array.", false);
+        case clang::APValue::ValueKind::LValue:
+            throw MetaCreationException(&varMeta, "Not supported compile-time constant value: LValue.", false);
+        case clang::APValue::ValueKind::MemberPointer:
+            throw MetaCreationException(&varMeta, "Not supported compile-time constant value: MemberPointer.", false);
+        case clang::APValue::ValueKind::Struct:
+            throw MetaCreationException(&varMeta, "Not supported compile-time constant value: Struct.", false);
+        case clang::APValue::ValueKind::Union:
+            throw MetaCreationException(&varMeta, "Not supported compile-time constant value: Union.", false);
+        case clang::APValue::ValueKind::Vector:
+            throw MetaCreationException(&varMeta, "Not supported compile-time constant value: Vector.", false);
+        case clang::APValue::ValueKind::Uninitialized:
+            throw MetaCreationException(&varMeta, "Not supported compile-time constant value: Uninitialized.", false);
+        default:
+            throw MetaCreationException(&varMeta, "Not supported compile-time constant value: -.", false);
+        }
+
+        varMeta.value = std::string(valueAsString.data(), valueAsString.size());
+    }
 }
 
 void MetaFactory::createFromEnum(const clang::EnumDecl& enumeration, EnumMeta& enumMeta)
