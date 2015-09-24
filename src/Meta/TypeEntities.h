@@ -223,6 +223,11 @@ public:
     {
     }
 
+    bool isId() const
+    {
+        return name == "id";
+    }
+
     std::string name;
     InterfaceMeta* bridgedInterface;
 };

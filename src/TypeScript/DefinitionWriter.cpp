@@ -448,6 +448,10 @@ std::string DefinitionWriter::tsifyType(const Type& type)
                + ">";
     case TypeInterface:
     case TypeBridgedInterface: {
+        if (type.is(TypeType::TypeBridgedInterface) && type.as<BridgedInterfaceType>().isId()) {
+            return tsifyType(IdType({}));
+        }
+
         const InterfaceMeta& interface = type.is(TypeType::TypeInterface) ? *type.as<InterfaceType>().interface : *type.as<BridgedInterfaceType>().bridgedInterface;
         if (interface.name == "NSNumber") {
             return "number";
