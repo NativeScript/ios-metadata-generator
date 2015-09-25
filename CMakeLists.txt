@@ -2,7 +2,7 @@ project(MetadataGenerator)
 cmake_minimum_required(VERSION 2.8)
 
 find_program(LLVM_CONFIG_EXE
-             NAMES llvm-config llvm-config-3.6)
+             NAMES llvm-config llvm-config-3.7)
 if (NOT EXISTS ${LLVM_CONFIG_EXE})
     message(FATAL_ERROR "llvm-config not found")
 endif ()

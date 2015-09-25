@@ -53,10 +53,11 @@ static std::error_code collectModuleHeaderIncludes(FileManager& fileMgr, ModuleM
             return err;
     }
 
-    if (auto umbrellaHeader = module->getUmbrellaHeader()) {
+    if (const FileEntry *umbrellaHeader = module->getUmbrellaHeader().Entry) {
         if (std::error_code err = addHeaderInclude(umbrellaHeader, includes))
             return err;
-    } else if (const DirectoryEntry* umbrellaDir = module->getUmbrellaDir()) {
+    }
+    else if (const DirectoryEntry *umbrellaDir = module->getUmbrellaDir().Entry) {
         // Add all of the headers we find in this subdirectory.
         std::error_code ec;
         SmallString<128> dirNative;

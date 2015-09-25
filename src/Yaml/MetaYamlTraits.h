@@ -243,7 +243,7 @@ namespace yaml {
             case Meta::TypeType::TypeBridgedInterface: {
                 Meta::BridgedInterfaceType& concreteType = type->as<Meta::BridgedInterfaceType>();
                 io.mapRequired("Name", concreteType.name);
-                std::string bridgedTo = concreteType.bridgedInterface == nullptr ? "[None]" : concreteType.bridgedInterface->jsName;
+                std::string bridgedTo = concreteType.isId() ? "id" : (concreteType.bridgedInterface == nullptr ? "[None]" : concreteType.bridgedInterface->jsName);
                 io.mapRequired("BridgedTo", bridgedTo);
                 break;
             }
