@@ -213,7 +213,7 @@ void MetaFactory::createFromVar(const clang::VarDecl& var, VarMeta& varMeta)
     varMeta.signature = _typeFactory.create(var.getType()).get();
     varMeta.hasValue = false;
 
-    if (var.isThisDeclarationADefinition()) {
+    if (var.hasInit()) {
         clang::APValue* evValue = var.evaluateValue();
         if (evValue == nullptr) {
             throw MetaCreationException(&varMeta, "Unable to evaluate compile-time constant value.", false);
