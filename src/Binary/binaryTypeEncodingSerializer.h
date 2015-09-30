@@ -93,5 +93,7 @@ public:
     virtual unique_ptr<TypeEncoding> visitAnonymousUnion(const ::Meta::AnonymousUnionType& type) override;
 
     virtual unique_ptr<TypeEncoding> visitEnum(const ::Meta::EnumType& type) override;
+
+    virtual unique_ptr<TypeEncoding> visitTypeArgument(const ::Meta::TypeArgumentType& type) override;
 };
 }

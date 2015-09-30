@@ -155,6 +155,7 @@ namespace yaml {
             io.enumCase(value, "Enum", Meta::TypeType::TypeEnum);
             io.enumCase(value, "VaList", Meta::TypeType::TypeVaList);
             io.enumCase(value, "Protocol", Meta::TypeType::TypeProtocol);
+            io.enumCase(value, "TypeArgument", Meta::TypeType::TypeTypeArgument);
         }
     };
 
@@ -233,6 +234,13 @@ namespace yaml {
             case Meta::TypeType::TypeInterface: {
                 Meta::InterfaceType& concreteType = type->as<Meta::InterfaceType>();
                 io.mapRequired("JsName", concreteType.interface->jsName);
+                if (concreteType.typeArguments.size() > 0) {
+                    std::vector<Meta::Type*> typeArguments;
+                    for (Meta::TypeArgumentType* type : concreteType.typeArguments) {
+                        typeArguments.push_back(type);
+                    }
+                    io.mapRequired("TypeParameters", typeArguments);
+                }
                 std::vector<std::string> protocols;
                 for (Meta::ProtocolMeta* protocol : concreteType.protocols) {
                     protocols.push_back(protocol->jsName);
@@ -289,6 +297,12 @@ namespace yaml {
             case Meta::TypeType::TypeEnum: {
                 Meta::EnumType& concreteType = type->as<Meta::EnumType>();
                 io.mapRequired("Name", concreteType.enumMeta->jsName);
+                break;
+            }
+            case Meta::TypeType::TypeTypeArgument: {
+                Meta::TypeArgumentType& concreteType = type->as<Meta::TypeArgumentType>();
+                io.mapRequired("Name", concreteType.name);
+                io.mapRequired("UnderlyingType", concreteType.underlyingType);
                 break;
             }
             default: {

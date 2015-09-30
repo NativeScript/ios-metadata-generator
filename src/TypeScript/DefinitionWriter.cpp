@@ -8,7 +8,7 @@
 namespace TypeScript {
 using namespace Meta;
 
-static std::set<std::string> hiddenMethods = { "retain", "release", "autorelease", "allocWithZone", "zone" };
+static std::set<std::string> hiddenMethods = { "retain", "release", "autorelease", "allocWithZone", "zone", "countByEnumeratingWithStateObjectsCount" };
 
 static std::set<std::string> bannedIdentifiers = { "function", "arguments", "in" };
 
@@ -19,6 +19,27 @@ static std::string sanitizeParameterName(const std::string& parameterName)
     } else {
         return parameterName;
     }
+}
+
+static std::string getTypeArgumentsStringOrEmpty(const InterfaceMeta* meta)
+{
+    std::ostringstream output;
+    auto interfaceDecl = clang::cast<clang::ObjCInterfaceDecl>(meta->declaration);
+    if (clang::ObjCTypeParamList* typeParameters = interfaceDecl->getTypeParamListAsWritten()) {
+        if (typeParameters->size()) {
+            output << "<";
+            for (unsigned i = 0; i < typeParameters->size(); i++) {
+                clang::ObjCTypeParamDecl* typeParam = *(typeParameters->begin() + i);
+                output << typeParam->getNameAsString();
+                if (i < typeParameters->size() - 1) {
+                    output << ", ";
+                }
+            }
+            output << ">";
+        }
+    }
+
+    return output.str();
 }
 
 void DefinitionWriter::visit(InterfaceMeta* meta)
@@ -67,7 +88,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
     }
 
-    _buffer << std::endl << "\tdeclare class " << meta->jsName;
+    _buffer << std::endl << "\tdeclare class " << meta->jsName << getTypeArgumentsStringOrEmpty(meta);
     if (meta->base != nullptr) {
         _buffer << " extends " << localizeReference(*meta->base);
     }
@@ -110,8 +131,10 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
     }
 
-    if (compoundInstanceMethods.find("objectAtIndexedSubscript") != compoundInstanceMethods.end()) {
-        _buffer << "\t\t[index: number]: any;" << std::endl;
+    auto objectAtIndexedSubscript = compoundInstanceMethods.find("objectAtIndexedSubscript");
+    if (objectAtIndexedSubscript != compoundInstanceMethods.end()) {
+        std::string indexerReturnType = computeMethodReturnType(objectAtIndexedSubscript->second.second, meta);
+        _buffer << "\t\t[index: number]: " << indexerReturnType << ";" << std::endl;
     }
 
     if (compoundInstanceMethods.find("countByEnumeratingWithStateObjectsCount") != compoundInstanceMethods.end()) {
@@ -228,16 +251,7 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
             output << ", ";
         }
     }
-    output << "): ";
-
-    Type& retType = *meta->signature[0];
-    if (retType.is(TypeInstancetype)) {
-        output << owner->jsName;
-    } else {
-        output << tsifyType(retType);
-    }
-
-    output << ";";
+    output << "): " << computeMethodReturnType(meta, owner) << ";";
     return output.str();
 }
 
@@ -384,7 +398,7 @@ void DefinitionWriter::visit(PropertyMeta* meta)
 void DefinitionWriter::visit(EnumConstantMeta* meta)
 {
     _buffer << std::endl;
-    _buffer << "\t declare const " << meta->jsName << ": number;";
+    _buffer << "\tdeclare const " << meta->jsName << ": number;";
     _buffer << std::endl;
 }
 
@@ -459,9 +473,24 @@ std::string DefinitionWriter::tsifyType(const Type& type)
             return "string";
         } else if (interface.name == "NSDate") {
             return "Date";
-        } else {
-            return localizeReference(interface);
         }
+
+        std::ostringstream output;
+        output << localizeReference(interface);
+        if (type.is(TypeInterface)) {
+            const InterfaceType& interfaceType = type.as<InterfaceType>();
+            if (interfaceType.typeArguments.size()) {
+                output << "<";
+                for (size_t i = 0; i < interfaceType.typeArguments.size(); i++) {
+                    output << tsifyType(*interfaceType.typeArguments[i]);
+                    if (i < interfaceType.typeArguments.size() - 1) {
+                        output << ", ";
+                    }
+                }
+                output << ">";
+            }
+        }
+        return output.str();
     }
     case TypeStruct:
         return localizeReference(*type.as<StructType>().structMeta);
@@ -482,6 +511,8 @@ std::string DefinitionWriter::tsifyType(const Type& type)
     }
     case TypeEnum:
         return localizeReference(*type.as<EnumType>().enumMeta);
+    case TypeTypeArgument:
+        return type.as<TypeArgumentType>().name;
     case TypeVaList:
     case TypeInstancetype:
     default:
@@ -490,6 +521,22 @@ std::string DefinitionWriter::tsifyType(const Type& type)
 
     assert(false);
     return "";
+}
+
+std::string DefinitionWriter::computeMethodReturnType(const MethodMeta* method, const BaseClassMeta* owner)
+{
+    std::ostringstream output;
+    const Type* retType = method->signature[0];
+    if (retType->is(TypeInstancetype)) {
+        output << owner->jsName;
+        if (owner->is(MetaType::Interface)) {
+            output << getTypeArgumentsStringOrEmpty(static_cast<const InterfaceMeta*>(owner));
+        }
+    } else {
+        output << tsifyType(*retType);
+    }
+
+    return output.str();
 }
 
 std::string DefinitionWriter::write()

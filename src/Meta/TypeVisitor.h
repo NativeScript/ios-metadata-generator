@@ -16,6 +16,7 @@ class UnionType;
 class AnonymousStructType;
 class AnonymousUnionType;
 class EnumType;
+class TypeArgumentType;
 
 /*
      * \class TypeVisitor<T>
@@ -93,5 +94,7 @@ public:
     virtual T_RESULT visitAnonymousUnion(const AnonymousUnionType& typeDetails) = 0;
 
     virtual T_RESULT visitEnum(const EnumType& typeDetails) = 0;
+
+    virtual T_RESULT visitTypeArgument(const ::Meta::TypeArgumentType& type) = 0;
 };
 }
