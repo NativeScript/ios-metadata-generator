@@ -326,10 +326,15 @@ shared_ptr<Type> TypeFactory::createFromObjCObjectPointerType(const clang::ObjCO
     }
 
     if (clang::ObjCInterfaceDecl* interface = type->getObjectType()->getInterface()) {
-        if (interface->getNameAsString() == "Protocol")
+        if (interface->getNameAsString() == "Protocol") {
             return TypeFactory::getProtocolType();
-        if (clang::ObjCInterfaceDecl* interfaceDef = interface->getDefinition())
-            return make_shared<InterfaceType>(&_metaFactory->create(*interfaceDef)->as<InterfaceMeta>(), protocols);
+        } else if (clang::ObjCInterfaceDecl* interfaceDef = interface->getDefinition()) {
+            vector<TypeArgumentType*> typeArguments;
+            for (const clang::QualType& typeArg : type->getTypeArgsAsWritten()) {
+                typeArguments.push_back(&this->create(typeArg)->as<TypeArgumentType>());
+            }
+            return make_shared<InterfaceType>(&_metaFactory->create(*interfaceDef)->as<InterfaceMeta>(), protocols, typeArguments);
+        }
     }
 
     throw TypeCreationException(type, "Invalid interface pointer type.", true);
@@ -416,6 +421,8 @@ shared_ptr<Type> TypeFactory::createFromTypedefType(const clang::TypedefType* ty
         return TypeFactory::getUnichar();
     if (isSpecificTypedefType(type, "__builtin_va_list"))
         throw TypeCreationException(type, "VaList type is not supported.", true);
+    if (auto typeParamDecl = clang::dyn_cast<clang::ObjCTypeParamDecl>(type->getDecl()))
+        return make_shared<TypeArgumentType>(this->create(typeParamDecl->getUnderlyingType()).get(), typeParamDecl->getNameAsString());
     return this->create(type->getDecl()->getUnderlyingType());
 }
 

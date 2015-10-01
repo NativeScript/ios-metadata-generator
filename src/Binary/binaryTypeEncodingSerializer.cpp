@@ -218,6 +218,11 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitEnum
     return type.underlyingType->visit(*this);
 }
 
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitTypeArgument(const ::Meta::TypeArgumentType& type)
+{
+    return type.underlyingType->visit(*this);
+}
+
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serializeRecordEncoding(const binary::BinaryTypeEncodingType encodingType, const std::vector< ::Meta::RecordField>& fields)
 {
     binary::AnonymousRecordEncoding* s = new binary::AnonymousRecordEncoding(encodingType);

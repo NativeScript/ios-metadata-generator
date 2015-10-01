@@ -47,17 +47,13 @@ enum TypeType {
     TypeAnonymousStruct,
     TypeAnonymousUnion,
     TypeEnum,
+    TypeTypeArgument
 };
 
 class Type {
     MAKE_NONCOPYABLE(Type);
 
 public:
-    Type()
-        : Type(TypeType::TypeVoid)
-    {
-    }
-
     Type(TypeType type)
         : type(type)
     {
@@ -157,6 +153,8 @@ public:
             return visitor.visitAnonymousUnion(as<AnonymousUnionType>());
         case TypeEnum:
             return visitor.visitEnum(as<EnumType>());
+        case TypeTypeArgument:
+            return visitor.visitTypeArgument(as<TypeArgumentType>());
         }
     }
 
@@ -202,17 +200,32 @@ public:
     std::vector<ProtocolMeta*> protocols;
 };
 
+class TypeArgumentType : public Type {
+public:
+    TypeArgumentType(Type* underlyingType, const std::string& name)
+        : Type(TypeType::TypeTypeArgument)
+        , underlyingType(underlyingType)
+        , name(name)
+    {
+    }
+
+    Type* underlyingType;
+    std::string name;
+};
+
 class InterfaceType : public Type {
 public:
-    InterfaceType(InterfaceMeta* interface, std::vector<ProtocolMeta*> protocols)
+    InterfaceType(InterfaceMeta* interface, std::vector<ProtocolMeta*> protocols, std::vector<TypeArgumentType*> typeArguments)
         : Type(TypeType::TypeInterface)
         , interface(interface)
         , protocols(protocols)
+        , typeArguments(typeArguments)
     {
     }
 
     InterfaceMeta* interface;
     std::vector<ProtocolMeta*> protocols;
+    std::vector<TypeArgumentType*> typeArguments;
 };
 
 class BridgedInterfaceType : public Type {

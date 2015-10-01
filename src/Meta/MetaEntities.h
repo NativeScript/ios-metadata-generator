@@ -78,12 +78,12 @@ public:
     // visitors
     virtual void visit(MetaVisitor* serializer) = 0;
 
-    bool is(MetaType type)
+    bool is(MetaType type) const
     {
         return this->type == type;
     }
 
-    bool getFlags(MetaFlags flags)
+    bool getFlags(MetaFlags flags) const
     {
         return (this->flags & flags) == flags;
     }
@@ -95,6 +95,12 @@ public:
         } else {
             this->flags = static_cast<MetaFlags>(this->flags & ~flags);
         }
+    }
+
+    template <class T>
+    const T& as() const
+    {
+        return *static_cast<T*>(this);
     }
 
     template <class T>

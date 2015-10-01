@@ -16,6 +16,7 @@ bool areRecordFieldListsEqual(const std::vector<RecordField>& vector1, const std
     return true;
 }
 
+// TODO: This logic should be moved in types (and meta entities) entites
 bool Utils::areTypesEqual(const Type& type1, const Type& type2)
 {
     if (type1.getType() != type2.getType())
@@ -86,6 +87,11 @@ bool Utils::areTypesEqual(const Type& type1, const Type& type2)
         const AnonymousUnionType& unionType1 = type1.as<AnonymousUnionType>();
         const AnonymousUnionType& unionType2 = type2.as<AnonymousUnionType>();
         return areRecordFieldListsEqual(unionType1.fields, unionType2.fields);
+    };
+    case TypeType::TypeTypeArgument: {
+        const TypeArgumentType& argType1 = type1.as<TypeArgumentType>();
+        const TypeArgumentType& argType2 = type2.as<TypeArgumentType>();
+        return areTypesEqual(*argType1.underlyingType, *argType2.underlyingType);
     };
     default: {
         return true;
