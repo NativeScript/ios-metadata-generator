@@ -182,14 +182,30 @@ void MetaFactory::createFromFunction(const clang::FunctionDecl& function, Functi
     populateMetaFields(function, functionMeta);
 
     functionMeta.setFlags(MetaFlags::FunctionIsVariadic, function.isVariadic()); // set IsVariadic
-    functionMeta.setFlags(MetaFlags::FunctionOwnsReturnedCocoaObject,
-                          Utils::getAttributes<clang::NSReturnsRetainedAttr>(function).size() > 0 || Utils::getAttributes<clang::CFReturnsRetainedAttr>(function).size() > 0); // set OwnsReturnedCocoaObjects
 
     // set signature
     functionMeta.signature.push_back(_typeFactory.create(function.getReturnType()).get());
     for (clang::ParmVarDecl* param : function.parameters()) {
         functionMeta.signature.push_back(_typeFactory.create(param->getType()).get());
     }
+
+    bool returnsRetained = Utils::getAttributes<clang::NSReturnsRetainedAttr>(function).size() > 0 || Utils::getAttributes<clang::CFReturnsRetainedAttr>(function).size() > 0;
+    bool returnsNotRetained = Utils::getAttributes<clang::NSReturnsNotRetainedAttr>(function).size() > 0 || Utils::getAttributes<clang::CFReturnsNotRetainedAttr>(function).size() > 0;
+
+    // Clang doesn't handle The Create Rule automatically like for methods, so we have to do it manually
+    if (!(returnsRetained || returnsNotRetained)) {
+        Type* returnType = functionMeta.signature[0];
+        if (returnType->is(TypeInterface) || returnType->is(TypeBridgedInterface) || returnType->is(TypeId)) {
+            std::string functionName = function.getNameAsString();
+            if (functionName.find("Create") != string::npos || functionName.find("Copy") != string::npos) {
+                if (function.hasAttr<clang::CFAuditedTransferAttr>()) {
+                    returnsRetained = true;
+                }
+            }
+        }
+    }
+
+    functionMeta.setFlags(MetaFlags::FunctionOwnsReturnedCocoaObject, returnsRetained); // set OwnsReturnedCocoaObjects
 }
 
 void MetaFactory::createFromStruct(const clang::RecordDecl& record, StructMeta& structMeta)
