@@ -182,7 +182,8 @@ void MetaFactory::createFromFunction(const clang::FunctionDecl& function, Functi
     populateMetaFields(function, functionMeta);
 
     functionMeta.setFlags(MetaFlags::FunctionIsVariadic, function.isVariadic()); // set IsVariadic
-    functionMeta.setFlags(MetaFlags::FunctionOwnsReturnedCocoaObject, Utils::getAttributes<clang::NSReturnsRetainedAttr>(function).size() > 0); // set OwnsReturnedCocoaObjects
+    functionMeta.setFlags(MetaFlags::FunctionOwnsReturnedCocoaObject,
+                          Utils::getAttributes<clang::NSReturnsRetainedAttr>(function).size() > 0 || Utils::getAttributes<clang::CFReturnsRetainedAttr>(function).size() > 0); // set OwnsReturnedCocoaObjects
 
     // set signature
     functionMeta.signature.push_back(_typeFactory.create(function.getReturnType()).get());
@@ -362,12 +363,14 @@ void MetaFactory::createFromMethod(const clang::ObjCMethodDecl& method, MethodMe
     case clang::ObjCMethodFamily::OMF_mutableCopy:
     case clang::ObjCMethodFamily::OMF_new: {
         bool hasNsReturnsNotRetainedAttr = Utils::getAttributes<clang::NSReturnsNotRetainedAttr>(method).size() > 0;
-        methodMeta.setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, !hasNsReturnsNotRetainedAttr);
+        bool hasCfReturnsNotRetainedAttr = Utils::getAttributes<clang::CFReturnsNotRetainedAttr>(method).size() > 0;
+        methodMeta.setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, !(hasNsReturnsNotRetainedAttr || hasCfReturnsNotRetainedAttr));
         break;
     }
     default: {
         bool hasNsReturnsRetainedAttr = Utils::getAttributes<clang::NSReturnsRetainedAttr>(method).size() > 0;
-        methodMeta.setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, hasNsReturnsRetainedAttr);
+        bool hasCfReturnsRetainedAttr = Utils::getAttributes<clang::CFReturnsRetainedAttr>(method).size() > 0;
+        methodMeta.setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, hasNsReturnsRetainedAttr || hasCfReturnsRetainedAttr);
         break;
     }
     }
