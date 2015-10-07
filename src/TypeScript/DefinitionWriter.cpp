@@ -16,7 +16,8 @@ static std::string sanitizeParameterName(const std::string& parameterName)
 {
     if (bannedIdentifiers.find(parameterName) != bannedIdentifiers.end()) {
         return "_" + parameterName;
-    } else {
+    }
+    else {
         return parameterName;
     }
 }
@@ -469,9 +470,11 @@ std::string DefinitionWriter::tsifyType(const Type& type)
         const InterfaceMeta& interface = type.is(TypeType::TypeInterface) ? *type.as<InterfaceType>().interface : *type.as<BridgedInterfaceType>().bridgedInterface;
         if (interface.name == "NSNumber") {
             return "number";
-        } else if (interface.name == "NSString") {
+        }
+        else if (interface.name == "NSString") {
             return "string";
-        } else if (interface.name == "NSDate") {
+        }
+        else if (interface.name == "NSDate") {
             return "Date";
         }
 
@@ -532,7 +535,8 @@ std::string DefinitionWriter::computeMethodReturnType(const MethodMeta* method, 
         if (owner->is(MetaType::Interface)) {
             output << getTypeArgumentsStringOrEmpty(static_cast<const InterfaceMeta*>(owner));
         }
-    } else {
+    }
+    else {
         output << tsifyType(*retType);
     }
 

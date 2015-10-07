@@ -142,8 +142,7 @@ shared_ptr<Type> TypeFactory::create(const clang::Type* type)
 
     const clang::Type& typeRef = *type;
     shared_ptr<Type> resultType(nullptr);
-    try
-    {
+    try {
         if (const clang::BuiltinType* concreteType = clang::dyn_cast<clang::BuiltinType>(type))
             resultType = createFromBuiltinType(concreteType);
         else if (const clang::TypedefType* concreteType = clang::dyn_cast<clang::TypedefType>(type))
@@ -179,8 +178,7 @@ shared_ptr<Type> TypeFactory::create(const clang::Type* type)
         else
             throw TypeCreationException(type, "Unable to create encoding for this type.", true);
     }
-    catch (TypeCreationException& e)
-    {
+    catch (TypeCreationException& e) {
         if (e.getType() == type) {
             _cache.insert(make_pair<Cache::key_type, Cache::mapped_type>(&typeRef, make_pair<shared_ptr<Type>, string>(nullptr, e.getMessage())));
             throw;
@@ -190,8 +188,7 @@ shared_ptr<Type> TypeFactory::create(const clang::Type* type)
         insertionResult.first->second.second = message;
         throw TypeCreationException(type, message, e.isError());
     }
-    catch (MetaCreationException& e)
-    {
+    catch (MetaCreationException& e) {
         pair<Cache::iterator, bool> insertionResult = _cache.insert(make_pair<Cache::key_type, Cache::mapped_type>(&typeRef, make_pair<shared_ptr<Type>, string>(nullptr, "")));
         string message = CreationException::constructMessage("Can't create meta dependency.", e.getDetailedMessage());
         insertionResult.first->second.second = message;
@@ -203,7 +200,8 @@ shared_ptr<Type> TypeFactory::create(const clang::Type* type)
         assert(insertionResult.first->second.first.get() == nullptr);
         insertionResult.first->second.first = resultType;
         return resultType;
-    } else {
+    }
+    else {
         return insertionResult.first->second.first;
     }
 }
@@ -328,7 +326,8 @@ shared_ptr<Type> TypeFactory::createFromObjCObjectPointerType(const clang::ObjCO
     if (clang::ObjCInterfaceDecl* interface = type->getObjectType()->getInterface()) {
         if (interface->getNameAsString() == "Protocol") {
             return TypeFactory::getProtocolType();
-        } else if (clang::ObjCInterfaceDecl* interfaceDef = interface->getDefinition()) {
+        }
+        else if (clang::ObjCInterfaceDecl* interfaceDef = interface->getDefinition()) {
             vector<TypeArgumentType*> typeArguments;
             for (const clang::QualType& typeArg : type->getTypeArgsAsWritten()) {
                 typeArguments.push_back(&this->create(typeArg)->as<TypeArgumentType>());
@@ -484,7 +483,8 @@ bool TypeFactory::isSpecificTypedefType(const clang::TypedefType* type, const ve
         clang::Type const* innerType = decl->getUnderlyingType().getTypePtr();
         if (const clang::TypedefType* innerTypedef = clang::dyn_cast<clang::TypedefType>(innerType)) {
             decl = innerTypedef->getDecl();
-        } else {
+        }
+        else {
             return false;
         }
     }
@@ -503,7 +503,8 @@ void TypeFactory::resolveCachedBridgedInterfaceTypes(unordered_map<string, Inter
                     unordered_map<string, InterfaceMeta*>::const_iterator it = interfaceMap.find(bridgedType->name);
                     if (it != interfaceMap.end()) {
                         bridgedType->bridgedInterface = it->second;
-                    } else {
+                    }
+                    else {
                         assert(nsObjectIt != interfaceMap.end());
                         bridgedType->bridgedInterface = nsObjectIt->second;
                         cout << "Unable to resolve bridged interface type. Interface " << bridgedType->name << " not found. NSObject used instead." << endl;

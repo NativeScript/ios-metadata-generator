@@ -49,14 +49,12 @@ private:
     template <class T>
     bool Visit(T* decl)
     {
-        try
-        {
+        try {
             Meta* meta = this->_metaFactory.create(*decl);
             _metaContainer.push_back(meta);
             //std::cout << "Included: " << meta->jsName << " from " << meta->module->getFullModuleName() << std::endl;
         }
-        catch (MetaCreationException& e)
-        {
+        catch (MetaCreationException& e) {
             //if(e.isError())
             //std::cout << e.getDetailedMessage() << std::endl;
         }

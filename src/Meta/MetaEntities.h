@@ -92,7 +92,8 @@ public:
     {
         if (value) {
             this->flags = static_cast<MetaFlags>(this->flags | flags);
-        } else {
+        }
+        else {
             this->flags = static_cast<MetaFlags>(this->flags & ~flags);
         }
     }

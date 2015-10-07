@@ -25,7 +25,8 @@ static std::error_code addHeaderInclude(StringRef headerName, SmallVectorImpl<ch
     // work ('.' might not be on our include path) or that it will find the same file.
     if (path::is_absolute(headerName)) {
         includes += headerName;
-    } else {
+    }
+    else {
         SmallString<256> header = headerName;
         if (std::error_code err = fs::make_absolute(header))
             return err;
@@ -53,11 +54,11 @@ static std::error_code collectModuleHeaderIncludes(FileManager& fileMgr, ModuleM
             return err;
     }
 
-    if (const FileEntry *umbrellaHeader = module->getUmbrellaHeader().Entry) {
+    if (const FileEntry* umbrellaHeader = module->getUmbrellaHeader().Entry) {
         if (std::error_code err = addHeaderInclude(umbrellaHeader, includes))
             return err;
     }
-    else if (const DirectoryEntry *umbrellaDir = module->getUmbrellaDir().Entry) {
+    else if (const DirectoryEntry* umbrellaDir = module->getUmbrellaDir().Entry) {
         // Add all of the headers we find in this subdirectory.
         std::error_code ec;
         SmallString<128> dirNative;

@@ -24,7 +24,8 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
         MetaFileOffset offset2 = this->heapWriter.push_string(meta->name);
         binaryMetaStruct._names = this->heapWriter.push_pointer(offset1);
         this->heapWriter.push_pointer(offset2);
-    } else {
+    }
+    else {
         binaryMetaStruct._names = this->heapWriter.push_string(meta->jsName);
     }
 
@@ -292,7 +293,8 @@ void binary::BinarySerializer::visit(::Meta::VarMeta* meta)
         serializeBase(meta, binaryStruct);
         binaryStruct._jsCode = this->heapWriter.push_string(meta->value);
         this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
-    } else {
+    }
+    else {
         // serialize as VarMeta
         binary::VarMeta binaryStruct;
         serializeBase(meta, binaryStruct);
