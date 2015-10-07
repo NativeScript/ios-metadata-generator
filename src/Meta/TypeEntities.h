@@ -180,7 +180,7 @@ struct RecordField {
 
 class IdType : public Type {
 public:
-    IdType(std::vector<ProtocolMeta*> protocols)
+    IdType(std::vector<ProtocolMeta*> protocols = {})
         : Type(TypeType::TypeId)
         , protocols(protocols)
     {
@@ -191,7 +191,7 @@ public:
 
 class ClassType : public Type {
 public:
-    ClassType(std::vector<ProtocolMeta*> protocols)
+    ClassType(std::vector<ProtocolMeta*> protocols = {})
         : Type(TypeType::TypeClass)
         , protocols(protocols)
     {

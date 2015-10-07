@@ -152,7 +152,7 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitInte
 unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitBridgedInterface(const ::Meta::BridgedInterfaceType& type)
 {
     if (type.isId()) {
-        return this->visitId(::Meta::IdType({}));
+        return this->visitId(::Meta::IdType());
     }
     if (type.bridgedInterface == nullptr) {
         throw logic_error(std::string("Unresolved bridged interface for BridgedInterfaceType with name '") + type.bridgedInterface->name + "'.");
