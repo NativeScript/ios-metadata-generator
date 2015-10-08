@@ -15,7 +15,6 @@ macro(llvm_config option var)
 endmacro()
 
 set(CMAKE_OSX_DEPLOYMENT_TARGET 10.9)
-set(CMAKE_OSX_SYSROOT macosx)
 
 llvm_config(system-libs LLVM_SYSTEM_LIBS)
 llvm_config(cppflags LLVM_PREPROCESSOR_FLAGS)
