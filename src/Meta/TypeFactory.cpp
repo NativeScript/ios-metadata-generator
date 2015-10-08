@@ -3,6 +3,7 @@
 #include "Utils.h"
 #include "CreationException.h"
 #include "MetaFactory.h"
+#include "KnownBridgedTypes.h"
 
 namespace Meta {
 using namespace std;
@@ -352,27 +353,6 @@ shared_ptr<Type> TypeFactory::createFromPointerType(const clang::PointerType* ty
             return TypeFactory::getCString();
     }
 
-    // Check for pointer to toll-free bridged types
-    if (const clang::ElaboratedType* elaboratedType = clang::dyn_cast<clang::ElaboratedType>(pointee)) {
-        if (const clang::TagType* tagType = clang::dyn_cast<clang::TagType>(elaboratedType->desugar().getTypePtr())) {
-            const clang::TagDecl* tagDecl = tagType->getDecl();
-
-            vector<clang::ObjCBridgeMutableAttr*> bridgeMutableAttrs = Utils::getAttributes<clang::ObjCBridgeMutableAttr>(*tagDecl);
-            if (bridgeMutableAttrs.size() > 0) {
-                clang::ObjCBridgeMutableAttr* bridgeAttr = bridgeMutableAttrs[0];
-                string name = bridgeAttr->getBridgedType()->getName().str();
-                return make_shared<BridgedInterfaceType>(name, nullptr);
-            }
-
-            vector<clang::ObjCBridgeAttr*> bridgeAttrs = Utils::getAttributes<clang::ObjCBridgeAttr>(*tagDecl);
-            if (bridgeAttrs.size() > 0) {
-                clang::ObjCBridgeAttr* bridgeAttr = bridgeAttrs[0];
-                string name = bridgeAttr->getBridgedType()->getName().str();
-                return make_shared<BridgedInterfaceType>(name, nullptr);
-            }
-        }
-    }
-
     // if is a FunctionPointerType don't wrap the type in another pointer type
     if (clang::isa<clang::ParenType>(pointee)) {
         return this->create(qualPointee);
@@ -411,6 +391,36 @@ shared_ptr<Type> TypeFactory::createFromRecordType(const clang::RecordType* type
     return make_shared<StructType>(&_metaFactory->create(*recordDef)->as<StructMeta>());
 }
 
+static shared_ptr<Type> tryCreateFromBridgedType(const clang::Type* type)
+{
+    if (const clang::PointerType* pointerType = clang::dyn_cast<clang::PointerType>(type)) {
+        const clang::Type* pointee = pointerType->getPointeeType().getTypePtr();
+
+        // Check for pointer to toll-free bridged types
+        if (const clang::ElaboratedType* elaboratedType = clang::dyn_cast<clang::ElaboratedType>(pointee)) {
+            if (const clang::TagType* tagType = clang::dyn_cast<clang::TagType>(elaboratedType->desugar().getTypePtr())) {
+                const clang::TagDecl* tagDecl = tagType->getDecl();
+
+                vector<clang::ObjCBridgeMutableAttr*> bridgeMutableAttrs = Utils::getAttributes<clang::ObjCBridgeMutableAttr>(*tagDecl);
+                if (bridgeMutableAttrs.size() > 0) {
+                    clang::ObjCBridgeMutableAttr* bridgeAttr = bridgeMutableAttrs[0];
+                    string name = bridgeAttr->getBridgedType()->getName().str();
+                    return make_shared<BridgedInterfaceType>(name, nullptr);
+                }
+
+                vector<clang::ObjCBridgeAttr*> bridgeAttrs = Utils::getAttributes<clang::ObjCBridgeAttr>(*tagDecl);
+                if (bridgeAttrs.size() > 0) {
+                    clang::ObjCBridgeAttr* bridgeAttr = bridgeAttrs[0];
+                    string name = bridgeAttr->getBridgedType()->getName().str();
+                    return make_shared<BridgedInterfaceType>(name, nullptr);
+                }
+            }
+        }
+    }
+
+    return nullptr;
+}
+
 shared_ptr<Type> TypeFactory::createFromTypedefType(const clang::TypedefType* type)
 {
     vector<string> boolTypedefs{ "BOOL", "Boolean" };
@@ -422,6 +432,12 @@ shared_ptr<Type> TypeFactory::createFromTypedefType(const clang::TypedefType* ty
         throw TypeCreationException(type, "VaList type is not supported.", true);
     if (auto typeParamDecl = clang::dyn_cast<clang::ObjCTypeParamDecl>(type->getDecl()))
         return make_shared<TypeArgumentType>(this->create(typeParamDecl->getUnderlyingType()).get(), typeParamDecl->getNameAsString());
+    if (auto bridgedInterfaceType = tryCreateFromBridgedType(type->getDecl()->getUnderlyingType().getTypePtrOrNull())) {
+        return bridgedInterfaceType;
+    }
+    if (isSpecificTypedefType(type, KNOWN_BRIDGED_TYPES)) {
+        return make_shared<BridgedInterfaceType>("id", nullptr);
+    }
     return this->create(type->getDecl()->getUnderlyingType());
 }
 
