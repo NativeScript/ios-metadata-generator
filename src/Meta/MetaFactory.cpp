@@ -189,8 +189,8 @@ void MetaFactory::createFromFunction(const clang::FunctionDecl& function, Functi
         functionMeta.signature.push_back(_typeFactory.create(param->getType()).get());
     }
 
-    bool returnsRetained = Utils::getAttributes<clang::NSReturnsRetainedAttr>(function).size() > 0 || Utils::getAttributes<clang::CFReturnsRetainedAttr>(function).size() > 0;
-    bool returnsNotRetained = Utils::getAttributes<clang::NSReturnsNotRetainedAttr>(function).size() > 0 || Utils::getAttributes<clang::CFReturnsNotRetainedAttr>(function).size() > 0;
+    bool returnsRetained = function.hasAttr<clang::NSReturnsRetainedAttr>() || function.hasAttr<clang::CFReturnsRetainedAttr>();
+    bool returnsNotRetained = function.hasAttr<clang::NSReturnsNotRetainedAttr>() || function.hasAttr<clang::CFReturnsNotRetainedAttr>();
 
     // Clang doesn't handle The Create Rule automatically like for methods, so we have to do it manually
     if (!(returnsRetained || returnsNotRetained)) {
@@ -350,7 +350,7 @@ void MetaFactory::createFromMethod(const clang::ObjCMethodDecl& method, MethodMe
 
     methodMeta.setFlags(MetaFlags::MethodIsVariadic, method.isVariadic()); // set IsVariadic flag
 
-    bool isNullTerminatedVariadic = method.isVariadic() && Utils::getAttributes<clang::SentinelAttr>(method).size() > 0; // set MethodIsNilTerminatedVariadic flag
+    bool isNullTerminatedVariadic = method.isVariadic() && method.hasAttr<clang::SentinelAttr>(); // set MethodIsNilTerminatedVariadic flag
     methodMeta.setFlags(MetaFlags::MethodIsNullTerminatedVariadic, isNullTerminatedVariadic);
 
     // set MethodHasErrorOutParameter flag
@@ -378,14 +378,14 @@ void MetaFactory::createFromMethod(const clang::ObjCMethodDecl& method, MethodMe
     //case clang::ObjCMethodFamily::OMF_alloc :
     case clang::ObjCMethodFamily::OMF_mutableCopy:
     case clang::ObjCMethodFamily::OMF_new: {
-        bool hasNsReturnsNotRetainedAttr = Utils::getAttributes<clang::NSReturnsNotRetainedAttr>(method).size() > 0;
-        bool hasCfReturnsNotRetainedAttr = Utils::getAttributes<clang::CFReturnsNotRetainedAttr>(method).size() > 0;
+        bool hasNsReturnsNotRetainedAttr = method.hasAttr<clang::NSReturnsNotRetainedAttr>();
+        bool hasCfReturnsNotRetainedAttr = method.hasAttr<clang::CFReturnsNotRetainedAttr>();
         methodMeta.setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, !(hasNsReturnsNotRetainedAttr || hasCfReturnsNotRetainedAttr));
         break;
     }
     default: {
-        bool hasNsReturnsRetainedAttr = Utils::getAttributes<clang::NSReturnsRetainedAttr>(method).size() > 0;
-        bool hasCfReturnsRetainedAttr = Utils::getAttributes<clang::CFReturnsRetainedAttr>(method).size() > 0;
+        bool hasNsReturnsRetainedAttr = method.hasAttr<clang::NSReturnsRetainedAttr>();
+        bool hasCfReturnsRetainedAttr = method.hasAttr<clang::CFReturnsRetainedAttr>();
         methodMeta.setFlags(MetaFlags::MethodOwnsReturnedCocoaObject, hasNsReturnsRetainedAttr || hasCfReturnsRetainedAttr);
         break;
     }
@@ -413,8 +413,8 @@ void MetaFactory::populateIdentificationFields(const clang::NamedDecl& decl, Met
 {
     meta.declaration = &decl;
     // calculate name
-    std::vector<clang::ObjCRuntimeNameAttr*> objCRuntimeNameAttributes = Utils::getAttributes<clang::ObjCRuntimeNameAttr>(decl);
-    meta.name = objCRuntimeNameAttributes.size() == 0 ? decl.getNameAsString() : objCRuntimeNameAttributes[0]->getMetadataName().str();
+    clang::ObjCRuntimeNameAttr* objCRuntimeNameAttribute = decl.getAttr<clang::ObjCRuntimeNameAttr>();
+    meta.name = !objCRuntimeNameAttribute ? decl.getNameAsString() : objCRuntimeNameAttribute->getMetadataName().str();
 
     // calculate file name and module
     clang::SourceLocation location = _sourceManager.getFileLoc(decl.getLocation());
@@ -479,8 +479,7 @@ void MetaFactory::populateMetaFields(const clang::NamedDecl& decl, Meta& meta)
     clang::AvailabilityAttr* iosExtensionsAvailability = nullptr;
 
     // Traverse attributes
-    bool hasUnavailableAttr = Utils::getAttributes<clang::UnavailableAttr>(decl).size() > 0;
-    if (hasUnavailableAttr) {
+    if (decl.hasAttr<clang::UnavailableAttr>()) {
         throw MetaCreationException(&meta, "The declaration is marked unavailable (with unavailable attribute).", false);
     }
     vector<clang::AvailabilityAttr*> availabilityAttributes = Utils::getAttributes<clang::AvailabilityAttr>(decl);
