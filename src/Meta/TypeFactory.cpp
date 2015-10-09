@@ -410,6 +410,11 @@ static shared_ptr<Type> tryCreateFromBridgedType(const clang::Type* type)
                     string name = bridgeAttr->getBridgedType()->getName().str();
                     return make_shared<BridgedInterfaceType>(name, nullptr);
                 }
+
+                if (clang::ObjCBridgeRelatedAttr* bridgeRelatedAttr = tagDecl->getAttr<clang::ObjCBridgeRelatedAttr>()) {
+                    string name = bridgeRelatedAttr->getRelatedClass()->getName();
+                    return make_shared<BridgedInterfaceType>(name, nullptr);
+                }
             }
         }
     }
