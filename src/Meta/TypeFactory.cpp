@@ -401,16 +401,12 @@ static shared_ptr<Type> tryCreateFromBridgedType(const clang::Type* type)
             if (const clang::TagType* tagType = clang::dyn_cast<clang::TagType>(elaboratedType->desugar().getTypePtr())) {
                 const clang::TagDecl* tagDecl = tagType->getDecl();
 
-                vector<clang::ObjCBridgeMutableAttr*> bridgeMutableAttrs = Utils::getAttributes<clang::ObjCBridgeMutableAttr>(*tagDecl);
-                if (bridgeMutableAttrs.size() > 0) {
-                    clang::ObjCBridgeMutableAttr* bridgeAttr = bridgeMutableAttrs[0];
-                    string name = bridgeAttr->getBridgedType()->getName().str();
+                if (clang::ObjCBridgeMutableAttr* bridgeMutableAttr = tagDecl->getAttr<clang::ObjCBridgeMutableAttr>()) {
+                    string name = bridgeMutableAttr->getBridgedType()->getName().str();
                     return make_shared<BridgedInterfaceType>(name, nullptr);
                 }
 
-                vector<clang::ObjCBridgeAttr*> bridgeAttrs = Utils::getAttributes<clang::ObjCBridgeAttr>(*tagDecl);
-                if (bridgeAttrs.size() > 0) {
-                    clang::ObjCBridgeAttr* bridgeAttr = bridgeAttrs[0];
+                if (clang::ObjCBridgeAttr* bridgeAttr = tagDecl->getAttr<clang::ObjCBridgeAttr>()) {
                     string name = bridgeAttr->getBridgedType()->getName().str();
                     return make_shared<BridgedInterfaceType>(name, nullptr);
                 }
