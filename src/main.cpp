@@ -32,6 +32,7 @@ public:
 
     virtual void HandleTranslationUnit(clang::ASTContext& Context) override
     {
+        Context.getDiagnostics().Reset();
         llvm::SmallVector<clang::Module*, 64> modules;
         _headerSearch.collectAllModules(modules);
         std::list<Meta::Meta*>& metaContainer = _visitor.generateMetadata(Context.getTranslationUnitDecl());

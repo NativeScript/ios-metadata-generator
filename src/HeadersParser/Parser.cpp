@@ -96,6 +96,8 @@ static std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<s
     if (!ast)
         return std::error_code(-1, std::generic_category());
 
+    ast->getDiagnostics().setClient(new clang::IgnoringDiagConsumer);
+
     clang::SmallVector<clang::Module*, 64> modules;
     HeaderSearch& headerSearch = ast->getPreprocessor().getHeaderSearchInfo();
     headerSearch.collectAllModules(modules);
