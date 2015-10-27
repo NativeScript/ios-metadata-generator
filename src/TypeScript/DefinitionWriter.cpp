@@ -312,7 +312,15 @@ void DefinitionWriter::visit(FunctionMeta* meta)
 
     _buffer << std::endl;
     _buffer << "\tdeclare function " << meta->jsName
-            << "(" << params.str() << "): " << tsifyType(*meta->signature[0]) << ";";
+            << "(" << params.str() << "): ";
+    
+    std::string returnName = tsifyType(*meta->signature[0]);
+    if (meta->getFlags(MetaFlags::FunctionReturnsUnmanaged)) {
+        returnName = "interop.Unmanaged<" + returnName + ">";
+    }
+    
+    _buffer << returnName << ";";
+    
     _buffer << std::endl;
 }
 
