@@ -91,7 +91,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
 
     _buffer << std::endl << "\tdeclare class " << meta->jsName << getTypeArgumentsStringOrEmpty(meta);
     if (meta->base != nullptr) {
-        _buffer << " extends " << localizeReference(*meta->base);
+        _buffer << " extends " << localizeReference(*meta->base) << getTypeArgumentsStringOrEmpty(meta->base);
     }
 
     std::set<ProtocolMeta*> protocols;
@@ -126,7 +126,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         if (owner == meta || immediateProtocols.find(reinterpret_cast<ProtocolMeta*>(owner)) != immediateProtocols.end()) {
             _buffer << "\t\t" << writeProperty(propertyPair.second.second, meta);
             if (owner != meta) {
-                _buffer << " //inherited from " << localizeReference(*owner);
+                _buffer << " // inherited from " << localizeReference(*owner);
             }
             _buffer << std::endl;
         }
@@ -273,7 +273,7 @@ std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_t
 
         output << writeMethod(method, owner);
         if (memberOwner != owner) {
-            output << " //inherited from " << localizeReference(memberOwner->jsName, memberOwner->module->getFullModuleName());
+            output << " // inherited from " << localizeReference(memberOwner->jsName, memberOwner->module->getFullModuleName());
         }
     }
 
@@ -313,14 +313,14 @@ void DefinitionWriter::visit(FunctionMeta* meta)
     _buffer << std::endl;
     _buffer << "\tdeclare function " << meta->jsName
             << "(" << params.str() << "): ";
-    
+
     std::string returnName = tsifyType(*meta->signature[0]);
     if (meta->getFlags(MetaFlags::FunctionReturnsUnmanaged)) {
         returnName = "interop.Unmanaged<" + returnName + ">";
     }
-    
+
     _buffer << returnName << ";";
-    
+
     _buffer << std::endl;
 }
 
@@ -488,6 +488,8 @@ std::string DefinitionWriter::tsifyType(const Type& type)
 
         std::ostringstream output;
         output << localizeReference(interface);
+
+        bool hasClosedGenerics = false;
         if (type.is(TypeInterface)) {
             const InterfaceType& interfaceType = type.as<InterfaceType>();
             if (interfaceType.typeArguments.size()) {
@@ -499,8 +501,25 @@ std::string DefinitionWriter::tsifyType(const Type& type)
                     }
                 }
                 output << ">";
+
+                hasClosedGenerics = true;
             }
         }
+
+        // This also translates CFArray to NSArray<any>
+        if (!hasClosedGenerics) {
+            if (auto typeParamList = clang::dyn_cast<clang::ObjCInterfaceDecl>(interface.declaration)->getTypeParamListAsWritten()) {
+                output << "<";
+                for (size_t i = 0; i < typeParamList->size(); i++) {
+                    output << "any";
+                    if (i < typeParamList->size() - 1) {
+                        output << ", ";
+                    }
+                }
+                output << ">";
+            }
+        }
+
         return output.str();
     }
     case TypeStruct:
