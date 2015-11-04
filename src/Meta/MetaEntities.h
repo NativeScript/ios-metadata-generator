@@ -24,19 +24,20 @@ struct Version {
     int SubMinor;
 };
 
-enum MetaFlags : uint8_t {
+enum MetaFlags : uint16_t {
     // Common
     None = 0,
     IsIosAppExtensionAvailable = 1 << 0,
     // Function
     FunctionIsVariadic = 1 << 1,
     FunctionOwnsReturnedCocoaObject = 1 << 2,
+    FunctionReturnsUnmanaged = 1 << 3,
     // Method
-    MethodIsVariadic = 1 << 3,
-    MethodIsNullTerminatedVariadic = 1 << 4,
-    MethodOwnsReturnedCocoaObject = 1 << 5,
-    MethodHasErrorOutParameter = 1 << 6,
-    MethodIsInitializer = 1 << 7
+    MethodIsVariadic = 1 << 4,
+    MethodIsNullTerminatedVariadic = 1 << 5,
+    MethodOwnsReturnedCocoaObject = 1 << 6,
+    MethodHasErrorOutParameter = 1 << 7,
+    MethodIsInitializer = 1 << 8
 };
 
 enum MetaType {

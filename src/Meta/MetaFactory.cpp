@@ -193,15 +193,15 @@ void MetaFactory::createFromFunction(const clang::FunctionDecl& function, Functi
     bool returnsNotRetained = function.hasAttr<clang::NSReturnsNotRetainedAttr>() || function.hasAttr<clang::CFReturnsNotRetainedAttr>();
 
     // Clang doesn't handle The Create Rule automatically like for methods, so we have to do it manually
-    if (!(returnsRetained || returnsNotRetained)) {
-        Type* returnType = functionMeta.signature[0];
-        if (returnType->is(TypeInterface) || returnType->is(TypeBridgedInterface) || returnType->is(TypeId)) {
-            std::string functionName = function.getNameAsString();
+    if (!(returnsRetained || returnsNotRetained) && functionMeta.signature[0]->is(TypeBridgedInterface)) {
+        std::string functionName = function.getNameAsString();
+        if (function.hasAttr<clang::CFAuditedTransferAttr>()) {
             if (functionName.find("Create") != string::npos || functionName.find("Copy") != string::npos) {
-                if (function.hasAttr<clang::CFAuditedTransferAttr>()) {
-                    returnsRetained = true;
-                }
+                returnsRetained = true;
             }
+        }
+        else {
+            functionMeta.setFlags(MetaFlags::FunctionReturnsUnmanaged, true);
         }
     }
 

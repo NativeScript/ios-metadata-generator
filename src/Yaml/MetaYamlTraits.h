@@ -87,6 +87,7 @@ namespace yaml {
 
             io.bitSetCase(value, "FunctionIsVariadic", Meta::MetaFlags::FunctionIsVariadic);
             io.bitSetCase(value, "FunctionOwnsReturnedCocoaObject", Meta::MetaFlags::FunctionOwnsReturnedCocoaObject);
+            io.bitSetCase(value, "FunctionReturnsUnmanaged", Meta::MetaFlags::FunctionReturnsUnmanaged);
 
             io.bitSetCase(value, "MethodIsVariadic", Meta::MetaFlags::MethodIsVariadic);
             io.bitSetCase(value, "MethodIsNullTerminatedVariadic", Meta::MetaFlags::MethodIsNullTerminatedVariadic);

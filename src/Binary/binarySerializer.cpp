@@ -243,6 +243,8 @@ void binary::BinarySerializer::visit(::Meta::FunctionMeta* meta)
         binaryStruct._flags |= BinaryFlags::FunctionIsVariadic;
     if (meta->getFlags(::Meta::MetaFlags::FunctionOwnsReturnedCocoaObject))
         binaryStruct._flags |= BinaryFlags::FunctionOwnsReturnedCocoaObject;
+    if (meta->getFlags(::Meta::MetaFlags::FunctionReturnsUnmanaged))
+        binaryStruct._flags |= BinaryFlags::FunctionReturnsUnmanaged;
 
     binaryStruct._encoding = this->typeEncodingSerializer.visit(meta->signature);
     this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
