@@ -194,8 +194,8 @@ void MetaFactory::createFromFunction(const clang::FunctionDecl& function, Functi
 
     // Clang doesn't handle The Create Rule automatically like for methods, so we have to do it manually
     if (!(returnsRetained || returnsNotRetained) && functionMeta.signature[0]->is(TypeBridgedInterface)) {
-        std::string functionName = function.getNameAsString();
         if (function.hasAttr<clang::CFAuditedTransferAttr>()) {
+            std::string functionName = function.getNameAsString();
             if (functionName.find("Create") != string::npos || functionName.find("Copy") != string::npos) {
                 returnsRetained = true;
             }
