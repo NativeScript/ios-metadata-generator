@@ -23,6 +23,7 @@ set(GENERATOR_HEADERS
     Meta/TypeVisitor.h
     Meta/Utils.h
     TypeScript/DefinitionWriter.h
+    TypeScript/DocSetManager.h
     Utils/fileStream.h
     Utils/memoryStream.h
     Utils/stream.h
@@ -55,12 +56,15 @@ set(GENERATOR_SOURCES
     Binary/binaryWriter.cpp
     Binary/metaFile.cpp
     TypeScript/DefinitionWriter.cpp
+    TypeScript/DocSetManager.cpp
 )
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${LIBXML2_INCLUDE_DIR})
 
 add_executable(objc-metadata-generator ${GENERATOR_HEADERS} ${GENERATOR_SOURCES})
 target_link_libraries(objc-metadata-generator ${LLVM_LINKER_FLAGS})
+target_link_libraries(objc-metadata-generator ${LIBXML2_LIBRARIES})
 target_link_libraries(objc-metadata-generator
     clangFrontend
     clangSerialization
