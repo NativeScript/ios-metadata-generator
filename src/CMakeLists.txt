@@ -59,7 +59,7 @@ set(GENERATOR_SOURCES
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-add_executable(objc-metadata-generator ${GENERATOR_HEADERS} ${GENERATOR_SOURCES} Meta/Filters/ResolveGlobalNamesCollisionsFilter.cpp Meta/Filters/ResolveGlobalNamesCollisionsFilter.h)
+add_executable(objc-metadata-generator ${GENERATOR_HEADERS} ${GENERATOR_SOURCES})
 target_link_libraries(objc-metadata-generator ${LLVM_LINKER_FLAGS})
 target_link_libraries(objc-metadata-generator
     clangFrontend
