@@ -1,6 +1,9 @@
 #include <llvm/Support/Debug.h>
 #include <clang/Tooling/Tooling.h>
 #include <clang/Frontend/CompilerInstance.h>
+#include <sstream>
+#include <fstream>
+#include <pwd.h>
 #include "HeadersParser/Parser.h"
 #include "Meta/DeclarationConverterVisitor.h"
 #include "Meta/Filters/HandleExceptionalMetasFilter.h"
@@ -10,15 +13,14 @@
 #include "Yaml/YamlSerializer.h"
 #include "Binary/binarySerializer.h"
 #include "TypeScript/DefinitionWriter.h"
-#include <ctime>
-#include <sstream>
-#include <fstream>
+#include "TypeScript/DocSetManager.h"
 
 // Command line parameters
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));
 llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("<dir_path>"));
 llvm::cl::opt<string> cla_outputBinFile("output-bin", llvm::cl::desc("Specify the output binary metadata file"), llvm::cl::value_desc("<file_path>"));
 llvm::cl::opt<string> cla_outputDtsFolder("output-typescript", llvm::cl::desc("Specify the output .d.ts folder"), llvm::cl::value_desc("<dir_path>"));
+llvm::cl::opt<string> cla_docSetFile("docset-path", llvm::cl::desc("Specify the path to the iOS SDK docset package"), llvm::cl::value_desc("<file_path>"));
 llvm::cl::opt<string> cla_clangArgumentsDelimiter(llvm::cl::Positional, llvm::cl::desc("Xclang"), llvm::cl::init("-"));
 llvm::cl::list<string> cla_clangArguments(llvm::cl::ConsumeAfter, llvm::cl::desc("<clang arguments>..."));
 
@@ -76,8 +78,9 @@ public:
         // Generate TypeScript definitions
         if (!cla_outputDtsFolder.empty()) {
             llvm::sys::fs::create_directories(cla_outputDtsFolder);
+            std::string docSetPath = cla_docSetFile.empty() ? "" : cla_docSetFile.getValue();
             for (std::pair<clang::Module*, std::vector<Meta::Meta*> >& modulePair : metasByModules) {
-                TypeScript::DefinitionWriter definitionWriter(modulePair, _visitor.getMetaFactory().getTypeFactory());
+                TypeScript::DefinitionWriter definitionWriter(modulePair, _visitor.getMetaFactory().getTypeFactory(), docSetPath);
 
                 llvm::SmallString<128> path;
                 llvm::sys::path::append(path, cla_outputDtsFolder, "objc!" + modulePair.first->getFullModuleName() + ".d.ts");

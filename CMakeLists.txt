@@ -14,6 +14,12 @@ macro(llvm_config option var)
     )
 endmacro()
 
+find_package(LibXml2)
+if (NOT LIBXML2_FOUND)
+	message(FATAL_ERROR "libXML2 not found")
+endif ()
+
+
 set(CMAKE_OSX_DEPLOYMENT_TARGET 10.10)
 
 llvm_config(system-libs LLVM_SYSTEM_LIBS)

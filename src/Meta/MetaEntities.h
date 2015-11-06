@@ -102,7 +102,7 @@ public:
     template <class T>
     const T& as() const
     {
-        return *static_cast<T*>(this);
+        return *static_cast<const T*>(this);
     }
 
     template <class T>
