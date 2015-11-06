@@ -113,7 +113,7 @@ bool Utils::areTypesEqual(const std::vector<Type*>& vector1, const std::vector<T
     return true;
 }
 
-bool isAlpha(const std::vector<std::string>& strings, size_t index)
+static bool isalpha(const std::vector<std::string>& strings, size_t index)
 {
     for (auto& str : strings) {
         if (!std::isalpha(str[index])) {
@@ -123,21 +123,51 @@ bool isAlpha(const std::vector<std::string>& strings, size_t index)
     return true;
 }
 
+static std::string createValidPrefix(const std::vector<std::string>& fieldNames, const std::string& prefix)
+{
+    if (!prefix.empty()) {
+        for (const std::string& field : fieldNames) {
+            if (std::isdigit(field[prefix.size()])) {
+                int newPrefixLength = prefix.size();
+                while (newPrefixLength > 0 && !std::isupper(field[newPrefixLength])) {
+                    newPrefixLength--;
+                }
+
+                std::string newPrefix = prefix.substr(0, newPrefixLength);
+                return createValidPrefix(fieldNames, newPrefix);
+            }
+        }
+
+        bool allMembersStartWithUnderscore = true;
+        for (const std::string& field : fieldNames) {
+            if (field[prefix.size()] != '_') {
+                allMembersStartWithUnderscore = false;
+                break;
+            }
+        }
+        if (allMembersStartWithUnderscore) {
+            return createValidPrefix(fieldNames, prefix + '_');
+        }
+    }
+
+    return prefix;
+}
+
 std::string Utils::calculateEnumFieldsPrefix(const std::string& enumName, const std::vector<std::string>& fields)
 {
     for (size_t prefixLength = 0; prefixLength < enumName.size(); prefixLength++) {
         char c = enumName[prefixLength];
         for (size_t i = 0; i < fields.size(); i++) {
             if (prefixLength >= fields[i].size() || fields[i][prefixLength] != c) {
-                while (prefixLength > 0 && (!std::isupper(fields[i][prefixLength]) || !isAlpha(fields, prefixLength))) {
+                while (prefixLength > 0 && (!std::isupper(fields[i][prefixLength]) || !isalpha(fields, prefixLength))) {
                     prefixLength--;
                 }
-                return fields[i].substr(0, prefixLength);
+                return createValidPrefix(fields, fields[i].substr(0, prefixLength));
             }
         }
     }
 
-    return enumName;
+    return createValidPrefix(fields, enumName);
 }
 
 void Utils::getAllLinkLibraries(clang::Module* module, std::vector<clang::Module::LinkLibrary>& result)
