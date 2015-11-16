@@ -1,4 +1,9 @@
 #include <sstream>
+#include <clang/Basic/FileManager.h>
+#include <llvm/Support/Path.h>
+#include <llvm/Object/MachO.h>
+#include <llvm/Object/MachOUniversal.h>
+#include <llvm/Object/Binary.h>
 #include "binarySerializer.h"
 #include "binarySerializerPrivate.h"
 #include "Meta/Utils.h"
@@ -110,7 +115,6 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta* meta, b
 
 void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta* meta, binary::MethodMeta& binaryMetaStruct)
 {
-
     this->serializeBase(meta, binaryMetaStruct);
     binaryMetaStruct._flags &= 0b11111000; // this clears the type information written in the lower 3 bits
 
@@ -175,13 +179,65 @@ void binary::BinarySerializer::serializeContainer(std::vector<std::pair<clang::M
     this->finish(container);
 }
 
+static llvm::ErrorOr<bool> isStaticFramework(clang::Module* framework)
+{
+    using namespace llvm;
+    using namespace llvm::object;
+    using namespace llvm::sys;
+
+    if (framework->LinkLibraries.size() == 0) {
+        return errc::no_such_file_or_directory;
+    }
+
+    std::string library = framework->LinkLibraries[0].Library;
+
+    SmallString<128> path;
+    if (!path::is_absolute(library)) {
+        path::append(path, framework->Directory->getName());
+    }
+    path::append(path, library);
+
+    if (!fs::exists(path)) {
+        return errc::no_such_file_or_directory;
+    }
+
+    ErrorOr<OwningBinary<Binary> > binaryOrErr = createBinary(path);
+    if (std::error_code errorCode = binaryOrErr.getError()) {
+        return errorCode;
+    }
+    Binary& binary = *binaryOrErr.get().getBinary();
+
+    if (MachOUniversalBinary* machoBinary = dyn_cast<MachOUniversalBinary>(&binary)) {
+        for (const MachOUniversalBinary::ObjectForArch& object : machoBinary->objects()) {
+            if (ErrorOr<std::unique_ptr<MachOObjectFile> > objectFile = object.getAsObjectFile()) {
+                if (MachOObjectFile* machObjectFile = dyn_cast<MachOObjectFile>(objectFile.get().get())) {
+                    uint32_t filetype = (machObjectFile->is64Bit() ? machObjectFile->getHeader64().filetype : machObjectFile->getHeader().filetype);
+                    if (filetype == MachO::MH_DYLIB || filetype == MachO::MH_DYLIB_STUB) {
+                        return false;
+                    }
+                }
+            }
+            else if (ErrorOr<std::unique_ptr<Archive> > archive = object.getAsArchive()) {
+                return true;
+            }
+        }
+    }
+
+    return errc::invalid_argument;
+}
+
 void binary::BinarySerializer::serializeModule(clang::Module* module, binary::ModuleMeta& binaryModule)
 {
     uint8_t flags = 0;
-    if (module->isPartOfFramework())
-        flags |= 1;
-    if (module->IsSystem)
+    if (module->isPartOfFramework()) {
+        llvm::ErrorOr<bool> isStatic = isStaticFramework(module);
+        if (!isStatic.getError() && !isStatic.get()) {
+            flags |= 1;
+        }
+    }
+    if (module->IsSystem) {
         flags |= 2;
+    }
     binaryModule._flags |= flags;
     binaryModule._name = this->heapWriter.push_string(module->getFullModuleName());
     std::vector<clang::Module::LinkLibrary> libraries;
