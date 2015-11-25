@@ -122,12 +122,22 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     }
 
     for (auto& propertyPair : compoundProperties) {
-        auto owner = propertyPair.second.first;
+        BaseClassMeta* owner = propertyPair.second.first;
+        PropertyMeta* propertyMeta = propertyPair.second.second;
+
         if (owner == meta || immediateProtocols.find(reinterpret_cast<ProtocolMeta*>(owner)) != immediateProtocols.end()) {
-            _buffer << "\t\t" << writeProperty(propertyPair.second.second, meta);
+            _buffer << "\t\t";
+
+            if (!propertyMeta->setter) {
+                _buffer << "/* readonly */ ";
+            }
+
+            _buffer << writeProperty(propertyMeta, meta);
+
             if (owner != meta) {
                 _buffer << " // inherited from " << localizeReference(*owner);
             }
+
             _buffer << std::endl;
         }
     }
