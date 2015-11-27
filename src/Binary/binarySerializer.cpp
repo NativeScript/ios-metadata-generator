@@ -230,9 +230,15 @@ void binary::BinarySerializer::serializeModule(clang::Module* module, binary::Mo
 {
     uint8_t flags = 0;
     if (module->isPartOfFramework()) {
-        llvm::ErrorOr<bool> isStatic = isStaticFramework(module);
-        if (!isStatic.getError() && !isStatic.get()) {
+        // Sometimes the framework binary is missing in the SDK but exists on the device.
+        // System frameworks are always shared, so there's no need to check them anyways.
+        if (module->IsSystem) {
             flags |= 1;
+        }
+        else if (llvm::ErrorOr<bool> isStatic = isStaticFramework(module)) {
+            if (!isStatic.get()) {
+                flags |= 1;
+            }
         }
     }
     if (module->IsSystem) {
