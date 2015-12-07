@@ -15,7 +15,6 @@ set(GENERATOR_HEADERS
     Meta/Filters/MergeCategoriesFilter.h
     Meta/Filters/RemoveDuplicateMembersFilter.h
     Meta/Filters/ResolveGlobalNamesCollisionsFilter.h
-    Meta/KnownBridgedTypes.h
     Meta/MetaEntities.h
     Meta/MetaFactory.h
     Meta/MetaVisitor.h

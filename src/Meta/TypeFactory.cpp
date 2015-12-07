@@ -3,10 +3,17 @@
 #include "Utils.h"
 #include "CreationException.h"
 #include "MetaFactory.h"
-#include "KnownBridgedTypes.h"
 
 namespace Meta {
 using namespace std;
+
+static const std::vector<std::string> KNOWN_BRIDGED_TYPES = {
+#define CF_TYPE(NAME) #NAME,
+#define NON_CF_TYPE(NAME)
+#include "CFDatabase.def"
+#undef CF_TYPE
+#undef NON_CF_TYPE
+};
 
 shared_ptr<Type> TypeFactory::getVoid()
 {
