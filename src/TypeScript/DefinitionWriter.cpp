@@ -144,7 +144,8 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
 
     auto objectAtIndexedSubscript = compoundInstanceMethods.find("objectAtIndexedSubscript");
     if (objectAtIndexedSubscript != compoundInstanceMethods.end()) {
-        std::string indexerReturnType = computeMethodReturnType(objectAtIndexedSubscript->second.second, meta);
+        const Type* retType = objectAtIndexedSubscript->second.second->signature[0];
+        std::string indexerReturnType = computeMethodReturnType(retType, meta);
         _buffer << "\t\t[index: number]: " << indexerReturnType << ";" << std::endl;
     }
 
@@ -249,6 +250,14 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     std::ostringstream output;
 
     output << meta->jsName;
+    
+    const Type* retType = meta->signature[0];
+    if(!methodDecl.isInstanceMethod() && owner->is(MetaType::Interface)) {
+        if(retType->is(TypeInstancetype) || this->hasClosedGenerics(*retType)) {
+            output << getTypeArgumentsStringOrEmpty(static_cast<const InterfaceMeta*>(owner));
+        }
+    }
+    
     if (owner->type == MetaType::Protocol && methodDecl.getImplementationControl() == clang::ObjCMethodDecl::ImplementationControl::Optional) {
         output << "?";
     }
@@ -262,7 +271,7 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
             output << ", ";
         }
     }
-    output << "): " << computeMethodReturnType(meta, owner) << ";";
+    output << "): " << computeMethodReturnType(retType, owner) << ";";
     return output.str();
 }
 
@@ -430,6 +439,15 @@ std::string DefinitionWriter::localizeReference(const ::Meta::Meta& meta)
 {
     return localizeReference(meta.jsName, meta.module->getFullModuleName());
 }
+    
+bool DefinitionWriter::hasClosedGenerics(const Type& type) {
+    if (type.is(TypeInterface)) {
+        const InterfaceType& interfaceType = type.as<InterfaceType>();
+        return interfaceType.typeArguments.size();
+    }
+    
+    return false;
+}
 
 std::string DefinitionWriter::tsifyType(const Type& type)
 {
@@ -499,25 +517,19 @@ std::string DefinitionWriter::tsifyType(const Type& type)
         std::ostringstream output;
         output << localizeReference(interface);
 
-        bool hasClosedGenerics = false;
-        if (type.is(TypeInterface)) {
+        bool hasClosedGenerics = this->hasClosedGenerics(type);
+        if (hasClosedGenerics) {
             const InterfaceType& interfaceType = type.as<InterfaceType>();
-            if (interfaceType.typeArguments.size()) {
-                output << "<";
-                for (size_t i = 0; i < interfaceType.typeArguments.size(); i++) {
-                    output << tsifyType(*interfaceType.typeArguments[i]);
-                    if (i < interfaceType.typeArguments.size() - 1) {
-                        output << ", ";
-                    }
+            output << "<";
+            for (size_t i = 0; i < interfaceType.typeArguments.size(); i++) {
+                output << tsifyType(*interfaceType.typeArguments[i]);
+                if (i < interfaceType.typeArguments.size() - 1) {
+                    output << ", ";
                 }
-                output << ">";
-
-                hasClosedGenerics = true;
             }
-        }
-
-        // This also translates CFArray to NSArray<any>
-        if (!hasClosedGenerics) {
+            output << ">";
+        } else {
+            // This also translates CFArray to NSArray<any>
             if (auto typeParamList = clang::dyn_cast<clang::ObjCInterfaceDecl>(interface.declaration)->getTypeParamListAsWritten()) {
                 output << "<";
                 for (size_t i = 0; i < typeParamList->size(); i++) {
@@ -563,10 +575,9 @@ std::string DefinitionWriter::tsifyType(const Type& type)
     return "";
 }
 
-std::string DefinitionWriter::computeMethodReturnType(const MethodMeta* method, const BaseClassMeta* owner)
+std::string DefinitionWriter::computeMethodReturnType(const Type* retType, const BaseClassMeta* owner)
 {
     std::ostringstream output;
-    const Type* retType = method->signature[0];
     if (retType->is(TypeInstancetype)) {
         output << owner->jsName;
         if (owner->is(MetaType::Interface)) {

@@ -59,8 +59,10 @@ private:
     std::string localizeReference(const std::string& jsName, std::string moduleName);
     std::string localizeReference(const Meta::Meta& meta);
     std::string tsifyType(const Meta::Type& type);
-    std::string computeMethodReturnType(const Meta::MethodMeta* method, const Meta::BaseClassMeta* owner);
+    std::string computeMethodReturnType(const Meta::Type* retType, const Meta::BaseClassMeta* owner);
 
+    bool hasClosedGenerics(const Meta::Type& type);
+    
     std::pair<clang::Module*, std::vector<Meta::Meta*> >& _module;
     std::unordered_set<std::string> _importedModules;
     std::ostringstream _buffer;
