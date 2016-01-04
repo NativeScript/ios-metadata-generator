@@ -41,27 +41,25 @@ private:
     template <class Member>
     using CompoundMemberMap = std::map<std::string, std::pair<Meta::BaseClassMeta*, Member*> >;
 
-    void getMembersRecursive(Meta::ProtocolMeta* protocol,
+    void writeMembers(const std::vector<Meta::RecordField>& fields);
+    
+    static void getMembersRecursive(Meta::ProtocolMeta* protocol,
                              CompoundMemberMap<Meta::MethodMeta>& staticMethods,
                              CompoundMemberMap<Meta::PropertyMeta>& properties,
                              CompoundMemberMap<Meta::MethodMeta>& instanceMethods,
                              std::set<Meta::ProtocolMeta*>& visitedProtocols);
 
-    std::string writeMethod(Meta::MethodMeta* meta, Meta::BaseClassMeta* owner);
-    std::string writeMethod(CompoundMemberMap<Meta::MethodMeta>::value_type& method, Meta::BaseClassMeta* owner,
+    static std::string writeMethod(Meta::MethodMeta* meta, Meta::BaseClassMeta* owner);
+    static std::string writeMethod(CompoundMemberMap<Meta::MethodMeta>::value_type& method, Meta::BaseClassMeta* owner,
                             const std::set<Meta::ProtocolMeta*>& protocols);
-    std::string writeProperty(Meta::PropertyMeta* meta, Meta::BaseClassMeta* owner);
+    static std::string writeProperty(Meta::PropertyMeta* meta, Meta::BaseClassMeta* owner);
+    static std::string writeFunctionProto(const std::vector<Meta::Type*>& signature);
+    static std::string localizeReference(const std::string& jsName, std::string moduleName);
+    static std::string localizeReference(const Meta::Meta& meta);
+    static std::string tsifyType(const Meta::Type& type);
+    static std::string computeMethodReturnType(const Meta::Type* retType, const Meta::BaseClassMeta* owner);
 
-    std::string writeFunctionProto(const std::vector<Meta::Type*>& signature);
-
-    void writeMembers(const std::vector<Meta::RecordField>& fields);
-
-    std::string localizeReference(const std::string& jsName, std::string moduleName);
-    std::string localizeReference(const Meta::Meta& meta);
-    std::string tsifyType(const Meta::Type& type);
-    std::string computeMethodReturnType(const Meta::Type* retType, const Meta::BaseClassMeta* owner);
-
-    bool hasClosedGenerics(const Meta::Type& type);
+    static bool hasClosedGenerics(const Meta::Type& type);
     
     std::pair<clang::Module*, std::vector<Meta::Meta*> >& _module;
     std::unordered_set<std::string> _importedModules;

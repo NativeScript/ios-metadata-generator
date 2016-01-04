@@ -253,7 +253,7 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     
     const Type* retType = meta->signature[0];
     if(!methodDecl.isInstanceMethod() && owner->is(MetaType::Interface)) {
-        if(retType->is(TypeInstancetype) || this->hasClosedGenerics(*retType)) {
+        if(retType->is(TypeInstancetype) || DefinitionWriter::hasClosedGenerics(*retType)) {
             output << getTypeArgumentsStringOrEmpty(static_cast<const InterfaceMeta*>(owner));
         }
     }
@@ -517,7 +517,7 @@ std::string DefinitionWriter::tsifyType(const Type& type)
         std::ostringstream output;
         output << localizeReference(interface);
 
-        bool hasClosedGenerics = this->hasClosedGenerics(type);
+        bool hasClosedGenerics = DefinitionWriter::hasClosedGenerics(type);
         if (hasClosedGenerics) {
             const InterfaceType& interfaceType = type.as<InterfaceType>();
             output << "<";
