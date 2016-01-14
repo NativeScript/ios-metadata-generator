@@ -2,6 +2,7 @@
 #include <sstream>
 #include "Utils.h"
 #include "CreationException.h"
+#include "Utils/StringUtils.h"
 
 using namespace std;
 
@@ -19,15 +20,6 @@ static bool compareJsNames(string& protocol1, string& protocol2)
 static bool metasComparerByJsName(Meta* meta1, Meta* meta2)
 {
     return compareJsNames(meta1->jsName, meta2->jsName);
-}
-
-static void splitString(const std::string& s, char delim, vector<string>& elems)
-{
-    stringstream ss(s);
-    string item;
-    while (getline(ss, item, delim)) {
-        elems.push_back(item);
-    }
 }
 
 static string getTypedefOrOwnName(const clang::TagDecl* tagDecl)
@@ -440,7 +432,7 @@ void MetaFactory::populateIdentificationFields(const clang::NamedDecl& decl, Met
         const clang::ObjCMethodDecl* method = clang::dyn_cast<clang::ObjCMethodDecl>(&decl);
         std::string selector = method->getSelector().getAsString();
         vector<string> tokens;
-        splitString(selector, ':', tokens);
+        StringUtils::split(selector, ':', std::back_inserter(tokens));
         for (vector<string>::size_type i = 1; i < tokens.size(); ++i) {
             tokens[i][0] = toupper(tokens[i][0]);
             tokens[0] += tokens[i];
