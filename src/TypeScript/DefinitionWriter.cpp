@@ -4,6 +4,7 @@
 #include <iterator>
 #include "Meta/Utils.h"
 #include "Meta/MetaEntities.h"
+#include "Utils/StringUtils.h"
 
 namespace TypeScript {
 using namespace Meta;
@@ -154,7 +155,13 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     }
 
     for (auto& methodPair : compoundInstanceMethods) {
-        if (compoundProperties.find(methodPair.first) != compoundProperties.end()) {
+        if (methodPair.second.second->getFlags(MethodIsInitializer)) {
+            _buffer << "\t\t" << writeConstructor(methodPair, meta) << std::endl;
+        }
+    }
+
+    for (auto& methodPair : compoundInstanceMethods) {
+        if (compoundProperties.find(methodPair.first) != compoundProperties.end() || methodPair.second.second->getFlags(MethodIsInitializer)) {
             continue;
         }
 
@@ -227,6 +234,54 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
     _buffer << "\t}" << std::endl;
 
     _buffer << "\tdeclare var " << meta->jsName << ": any; /* Protocol */" << std::endl;
+}
+
+std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMeta>::value_type& initializer,
+                                               const BaseClassMeta* owner) {
+    MethodMeta* method = initializer.second.second;
+    assert(method->getFlags(MethodIsInitializer));
+
+    static std::string defaultInitializer("init");
+    auto selector = method->getSelector();
+    assert(selector.substr(0, defaultInitializer.length()) == defaultInitializer);
+
+    std::ostringstream output;
+
+    std::vector<std::string> initializerSegments;
+    if (selector == defaultInitializer) {
+        output << "constructor();";
+    } else {
+        static std::string initWithInitializer("initWith");
+        size_t substrLength = StringUtils::starts_with(selector, initWithInitializer) ? initWithInitializer.length() : defaultInitializer.length();
+        if (StringUtils::split(selector.substr(substrLength), ':', std::back_inserter(initializerSegments)) > 0) {
+            output << "constructor(o: { ";
+
+            if (selector.back() != ':' && initializerSegments.size() == 1) {
+                output << static_cast<char>(std::tolower(initializerSegments.front()[0]))
+                       << initializerSegments.front().substr(1)
+                       << ": void;";
+            } else {
+                for (size_t i = 0; i < initializerSegments.size(); i++) {
+                    if (i == initializerSegments.size() - 1 && method->getFlags(MethodHasErrorOutParameter)) {
+                        break;
+                    }
+
+                    auto& initializerSegment = initializerSegments[i];
+                    output << static_cast<char>(std::tolower(initializerSegment[0]))
+                           << initializerSegment.substr(1)
+                           << ": " << tsifyType(*method->signature[i + 1]) << "; ";
+                }
+            }
+            output << "});";
+        }
+    }
+
+    BaseClassMeta* initializerOwner = initializer.second.first;
+    if (initializerOwner != owner) {
+        output << " // inherited from " << initializerOwner->jsName;
+    }
+
+    return output.str();
 }
 
 std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner)

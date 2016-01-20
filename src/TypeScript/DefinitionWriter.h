@@ -49,6 +49,8 @@ private:
                              CompoundMemberMap<Meta::MethodMeta>& instanceMethods,
                              std::set<Meta::ProtocolMeta*>& visitedProtocols);
 
+    static std::string writeConstructor(const CompoundMemberMap<Meta::MethodMeta>::value_type& initializer,
+                                        const Meta::BaseClassMeta* owner);
     static std::string writeMethod(Meta::MethodMeta* meta, Meta::BaseClassMeta* owner);
     static std::string writeMethod(CompoundMemberMap<Meta::MethodMeta>::value_type& method, Meta::BaseClassMeta* owner,
                             const std::set<Meta::ProtocolMeta*>& protocols);

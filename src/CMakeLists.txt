@@ -27,6 +27,7 @@ set(GENERATOR_HEADERS
     Utils/memoryStream.h
     Utils/stream.h
     Utils/StringHasher.h
+    Utils/StringUtils.h
     Utils/Noncopyable.h
     Yaml/MetaYamlTraits.h
     Yaml/YamlSerializer.h
