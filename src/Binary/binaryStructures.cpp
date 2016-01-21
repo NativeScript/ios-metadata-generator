@@ -78,9 +78,14 @@ binary::MetaFileOffset binary::InterfaceMeta::save(BinaryWriter& writer)
 
 binary::MetaFileOffset binary::ModuleMeta::save(BinaryWriter& writer)
 {
+    // first serialize module hashtable
+    std::vector<binary::MetaFileOffset> serializedHashTable = this->_moduleTable.serialize(writer);
+    MetaFileOffset hashTableOffset = writer.push_binaryArray(serializedHashTable);
+
     binary::MetaFileOffset offset = writer.push_byte(this->_flags);
     writer.push_pointer(this->_name);
     writer.push_pointer(this->_libraries);
+    writer.push_pointer(hashTableOffset);
     return offset;
 }
 

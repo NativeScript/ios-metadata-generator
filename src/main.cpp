@@ -67,7 +67,7 @@ public:
 
         // Serialize Meta objects to binary metadata
         if (!cla_outputBinFile.empty()) {
-            binary::MetaFile file(metasByModules.size());
+            binary::MetaFile file(metaContainer.size());
             binary::BinarySerializer serializer(&file);
             serializer.serializeContainer(metasByModules);
             file.save(cla_outputBinFile);

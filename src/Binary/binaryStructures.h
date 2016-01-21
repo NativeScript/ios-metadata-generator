@@ -3,11 +3,9 @@
 #include <stdint.h>
 #include <memory>
 #include <vector>
+#include "binaryHashtable.h"
 
 namespace binary {
-typedef int32_t MetaFileOffset;
-typedef int32_t MetaArrayCount;
-
 class MetaFile;
 class BinaryWriter;
 
@@ -219,9 +217,18 @@ public:
 
 struct ModuleMeta {
 public:
+    ModuleMeta(int size)
+        : _flags(0)
+        , _name(0)
+        , _libraries(0)
+        , _moduleTable(size)
+    {
+    }
+
     int8_t _flags;
     MetaFileOffset _name;
     MetaFileOffset _libraries;
+    BinaryHashtable _moduleTable;
 
     virtual MetaFileOffset save(BinaryWriter& writer);
 };
