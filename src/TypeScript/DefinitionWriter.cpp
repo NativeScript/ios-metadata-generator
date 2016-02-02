@@ -480,9 +480,6 @@ void DefinitionWriter::visit(PropertyMeta* meta)
 
 void DefinitionWriter::visit(EnumConstantMeta* meta)
 {
-    _buffer << std::endl;
-    _buffer << "\tdeclare const " << meta->jsName << ": number;";
-    _buffer << std::endl;
 }
 
 std::string DefinitionWriter::localizeReference(const std::string& jsName, std::string moduleName)
