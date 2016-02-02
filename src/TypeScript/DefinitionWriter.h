@@ -3,13 +3,14 @@
 #include <string>
 #include <sstream>
 #include <unordered_set>
+#include <Meta/TypeFactory.h>
 #include "Meta/MetaEntities.h"
 
 namespace TypeScript {
 class DefinitionWriter : Meta::MetaVisitor {
 public:
-    DefinitionWriter(std::pair<clang::Module*, std::vector<Meta::Meta*> >& module)
-        : _module(module)
+    DefinitionWriter(std::pair<clang::Module*, std::vector<Meta::Meta*> >& module, Meta::TypeFactory& typeFactory)
+        : _module(module), _typeFactory(typeFactory)
     {
     }
 
@@ -60,10 +61,12 @@ private:
     static std::string localizeReference(const Meta::Meta& meta);
     static std::string tsifyType(const Meta::Type& type);
     static std::string computeMethodReturnType(const Meta::Type* retType, const Meta::BaseClassMeta* owner);
+    std::string getTypeArgumentsStringOrEmpty(const clang::ObjCObjectType* objectType);
 
     static bool hasClosedGenerics(const Meta::Type& type);
     
     std::pair<clang::Module*, std::vector<Meta::Meta*> >& _module;
+    Meta::TypeFactory& _typeFactory;
     std::unordered_set<std::string> _importedModules;
     std::ostringstream _buffer;
 };

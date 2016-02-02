@@ -77,7 +77,7 @@ public:
         if (!cla_outputDtsFolder.empty()) {
             llvm::sys::fs::create_directories(cla_outputDtsFolder);
             for (std::pair<clang::Module*, std::vector<Meta::Meta*> >& modulePair : metasByModules) {
-                TypeScript::DefinitionWriter definitionWriter(modulePair);
+                TypeScript::DefinitionWriter definitionWriter(modulePair, _visitor.getMetaFactory().getTypeFactory());
 
                 llvm::SmallString<128> path;
                 llvm::sys::path::append(path, cla_outputDtsFolder, "objc!" + modulePair.first->getFullModuleName() + ".d.ts");

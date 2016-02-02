@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <iterator>
 #include "Meta/Utils.h"
-#include "Meta/MetaEntities.h"
 #include "Utils/StringUtils.h"
 
 namespace TypeScript {
@@ -23,10 +22,9 @@ static std::string sanitizeParameterName(const std::string& parameterName)
     }
 }
 
-static std::string getTypeArgumentsStringOrEmpty(const InterfaceMeta* meta)
+static std::string getTypeParametersStringOrEmpty(const clang::ObjCInterfaceDecl* interfaceDecl)
 {
     std::ostringstream output;
-    auto interfaceDecl = clang::cast<clang::ObjCInterfaceDecl>(meta->declaration);
     if (clang::ObjCTypeParamList* typeParameters = interfaceDecl->getTypeParamListAsWritten()) {
         if (typeParameters->size()) {
             output << "<";
@@ -39,6 +37,24 @@ static std::string getTypeArgumentsStringOrEmpty(const InterfaceMeta* meta)
             }
             output << ">";
         }
+    }
+
+    return output.str();
+}
+
+std::string DefinitionWriter::getTypeArgumentsStringOrEmpty(const clang::ObjCObjectType* objectType)
+{
+    std::ostringstream output;
+    llvm::ArrayRef<clang::QualType> typeArgs = objectType->getTypeArgsAsWritten();
+    if (!typeArgs.empty()) {
+        output << "<";
+        for (unsigned i = 0; i < typeArgs.size(); i++) {
+            output << tsifyType(*_typeFactory.create(typeArgs[i]));
+            if (i < typeArgs.size() - 1) {
+                output << ", ";
+            }
+        }
+        output << ">";
     }
 
     return output.str();
@@ -90,9 +106,9 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
     }
 
-    _buffer << std::endl << "\tdeclare class " << meta->jsName << getTypeArgumentsStringOrEmpty(meta);
+    _buffer << std::endl << "\tdeclare class " << meta->jsName << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
     if (meta->base != nullptr) {
-        _buffer << " extends " << localizeReference(*meta->base) << getTypeArgumentsStringOrEmpty(meta->base);
+        _buffer << " extends " << localizeReference(*meta->base) << getTypeArgumentsStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration)->getSuperClassType());
     }
 
     std::set<ProtocolMeta*> protocols;
@@ -309,7 +325,7 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     const Type* retType = meta->signature[0];
     if(!methodDecl.isInstanceMethod() && owner->is(MetaType::Interface)) {
         if(retType->is(TypeInstancetype) || DefinitionWriter::hasClosedGenerics(*retType)) {
-            output << getTypeArgumentsStringOrEmpty(static_cast<const InterfaceMeta*>(owner));
+            output << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
         }
     }
     
@@ -633,7 +649,7 @@ std::string DefinitionWriter::computeMethodReturnType(const Type* retType, const
     if (retType->is(TypeInstancetype)) {
         output << owner->jsName;
         if (owner->is(MetaType::Interface)) {
-            output << getTypeArgumentsStringOrEmpty(static_cast<const InterfaceMeta*>(owner));
+            output << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
         }
     }
     else {
