@@ -38,21 +38,22 @@ void findAndReplaceIn(string& str, string searchFor, string replaceBy)
     };
 }
 
-xmlNodeSetPtr all(const xmlChar* xpath, xmlDocPtr doc)
+xmlNodeSetPtr all(const xmlChar* xpath, xmlDocPtr doc, xmlXPathObjectPtr& result)
 {
     xmlXPathContextPtr context = xmlXPathNewContext(doc);
-    xmlXPathObjectPtr result = xmlXPathEvalExpression(xpath, context);
+    result = xmlXPathEvalExpression(xpath, context);
     xmlXPathFreeContext(context);
     if (xmlXPathNodeSetIsEmpty(result->nodesetval)) {
         xmlXPathFreeObject(result);
+        result = nullptr;
         return NULL;
     }
     return result->nodesetval;
 }
 
-xmlNodePtr first(const xmlChar* xpath, xmlDocPtr doc)
+xmlNodePtr first(const xmlChar* xpath, xmlDocPtr doc, xmlXPathObjectPtr& result)
 {
-    xmlNodeSetPtr nodes = all(xpath, doc);
+    xmlNodeSetPtr nodes = all(xpath, doc, result);
     if (nodes && nodes->nodeNr > 0)
         return nodes->nodeTab[0];
     return nullptr;
@@ -112,7 +113,8 @@ TSComment DocSetManager::getCommentFor(std::string name, Meta::MetaType type, st
 
     TSComment comment;
     if (doc) {
-        xmlNodePtr abstractNode = first(reinterpret_cast<const xmlChar*>("/*/Abstract"), doc);
+        xmlXPathObjectPtr abstractNodeResult = nullptr;
+        xmlNodePtr abstractNode = first(reinterpret_cast<const xmlChar*>("/*/Abstract"), doc, abstractNodeResult);
         if (abstractNode != nullptr) {
             std::string description = innerTextOf(abstractNode, doc);
             comment.description = trim(description);
@@ -121,20 +123,25 @@ TSComment DocSetManager::getCommentFor(std::string name, Meta::MetaType type, st
         switch (type) {
         case Meta::MetaType::Method:
         case Meta::MetaType::Function: {
-            std::vector<string> paramNames = innerTextOf(all(reinterpret_cast<const xmlChar*>("/*/Parameters/Parameter/Term"), doc), doc);
+            xmlXPathObjectPtr termNodesResult = nullptr;
+            std::vector<string> paramNames = innerTextOf(all(reinterpret_cast<const xmlChar*>("/*/Parameters/Parameter/Term"), doc, termNodesResult), doc);
             if (paramNames.size() > 0) {
-                std::vector<string> paramDescs = innerTextOf(all(reinterpret_cast<const xmlChar*>("/*/Parameters/Parameter/Discussion"), doc), doc);
+                xmlXPathObjectPtr discussionNodesResult = nullptr;
+                std::vector<string> paramDescs = innerTextOf(all(reinterpret_cast<const xmlChar*>("/*/Parameters/Parameter/Discussion"), doc, discussionNodesResult), doc);
                 assert(paramNames.size() == paramDescs.size());
 
                 for (size_t i = 0; i < paramNames.size(); i++) {
                     comment.params.push_back(std::pair<std::string, std::string>(paramNames[i], trim(paramDescs[i])));
                 }
+                xmlXPathFreeObject(discussionNodesResult);
             }
+            xmlXPathFreeObject(termNodesResult);
             break;
         }
         case Meta::MetaType::Struct:
         case Meta::MetaType::Union: {
-            std::vector<string> fieldsDescs = innerTextOf(all(reinterpret_cast<const xmlChar*>("/*/Fields/Field/Discussion"), doc), doc);
+            xmlXPathObjectPtr discussionNodesResult = nullptr;
+            std::vector<string> fieldsDescs = innerTextOf(all(reinterpret_cast<const xmlChar*>("/*/Fields/Field/Discussion"), doc, discussionNodesResult), doc);
             if (fieldsDescs.size() > 0) {
                 for (size_t i = 0; i < fieldsDescs.size(); i++) {
                     TSComment fieldComment;
@@ -142,13 +149,16 @@ TSComment DocSetManager::getCommentFor(std::string name, Meta::MetaType type, st
                     comment.fields.push_back(fieldComment);
                 }
             }
+            xmlXPathFreeObject(discussionNodesResult);
             break;
         }
         default: {
             break;
         }
         }
+        xmlXPathFreeObject(abstractNodeResult);
     }
+
     xmlFreeDoc(doc);
     return comment;
 }
