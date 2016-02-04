@@ -106,7 +106,8 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
     }
 
-    _buffer << std::endl << "\tdeclare class " << meta->jsName << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
+    _buffer << std::endl
+            << _docSet.getCommentFor(meta).toString("\t") << "\tdeclare class " << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
     if (meta->base != nullptr) {
         _buffer << " extends " << localizeReference(*meta->base) << getTypeArgumentsStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration)->getSuperClassType());
     }
@@ -134,6 +135,10 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     for (auto& methodPair : compoundStaticMethods) {
         std::string output = writeMethod(methodPair, meta, immediateProtocols);
         if (output.size()) {
+            MethodMeta* method = methodPair.second.second;
+            BaseClassMeta* owner = methodPair.second.first;
+            _buffer << std::endl
+                    << _docSet.getCommentFor(method, owner).toString("\t\t");
             _buffer << "\t\tstatic " << output << std::endl;
         }
     }
@@ -143,6 +148,8 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         PropertyMeta* propertyMeta = propertyPair.second.second;
 
         if (owner == meta || immediateProtocols.find(reinterpret_cast<ProtocolMeta*>(owner)) != immediateProtocols.end()) {
+            _buffer << std::endl
+                    << _docSet.getCommentFor(propertyMeta, owner).toString("\t\t");
             _buffer << "\t\t";
 
             if (!propertyMeta->setter) {
@@ -172,6 +179,8 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
 
     for (auto& methodPair : compoundInstanceMethods) {
         if (methodPair.second.second->getFlags(MethodIsInitializer)) {
+            _buffer << std::endl
+                    << _docSet.getCommentFor(methodPair.second.second, methodPair.second.first).toString("\t\t");
             _buffer << "\t\t" << writeConstructor(methodPair, meta) << std::endl;
         }
     }
@@ -183,6 +192,8 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
 
         std::string output = writeMethod(methodPair, meta, immediateProtocols);
         if (output.size()) {
+            _buffer << std::endl
+                    << _docSet.getCommentFor(methodPair.second.second, methodPair.second.first).toString("\t\t");
             _buffer << "\t\t" << output << std::endl;
         }
     }
@@ -191,10 +202,10 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
 }
 
 void DefinitionWriter::getMembersRecursive(ProtocolMeta* protocolMeta,
-                                           CompoundMemberMap<MethodMeta>& staticMethods,
-                                           CompoundMemberMap<PropertyMeta>& properties,
-                                           CompoundMemberMap<MethodMeta>& instanceMethods,
-                                           std::set<ProtocolMeta*>& visitedProtocols)
+    CompoundMemberMap<MethodMeta>& staticMethods,
+    CompoundMemberMap<PropertyMeta>& properties,
+    CompoundMemberMap<MethodMeta>& instanceMethods,
+    std::set<ProtocolMeta*>& visitedProtocols)
 {
     visitedProtocols.insert(protocolMeta);
 
@@ -223,7 +234,8 @@ void DefinitionWriter::getMembersRecursive(ProtocolMeta* protocolMeta,
 
 void DefinitionWriter::visit(ProtocolMeta* meta)
 {
-    _buffer << std::endl;
+    _buffer << std::endl
+            << _docSet.getCommentFor(meta).toString("\t");
 
     _buffer << "\tinterface " << meta->jsName;
     if (meta->protocols.size()) {
@@ -238,12 +250,14 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
     _buffer << " {" << std::endl;
 
     for (PropertyMeta* property : meta->properties) {
-        _buffer << "\t\t" << writeProperty(property, meta) << std::endl;
+        _buffer << std::endl
+                << _docSet.getCommentFor(property, meta).toString("\t\t") << "\t\t" << writeProperty(property, meta) << std::endl;
     }
 
     for (MethodMeta* method : meta->instanceMethods) {
         if (hiddenMethods.find(method->jsName) == hiddenMethods.end()) {
-            _buffer << "\t\t" << writeMethod(method, meta) << std::endl;
+            _buffer << std::endl
+                    << _docSet.getCommentFor(method, meta).toString("\t\t") << "\t\t" << writeMethod(method, meta) << std::endl;
         }
     }
 
@@ -253,7 +267,8 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
 }
 
 std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMeta>::value_type& initializer,
-                                               const BaseClassMeta* owner) {
+    const BaseClassMeta* owner)
+{
     MethodMeta* method = initializer.second.second;
     assert(method->getFlags(MethodIsInitializer));
 
@@ -266,7 +281,8 @@ std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMet
     std::vector<std::string> initializerSegments;
     if (selector == defaultInitializer) {
         output << "constructor();";
-    } else {
+    }
+    else {
         static std::string initWithInitializer("initWith");
         size_t substrLength = StringUtils::starts_with(selector, initWithInitializer) ? initWithInitializer.length() : defaultInitializer.length();
         if (StringUtils::split(selector.substr(substrLength), ':', std::back_inserter(initializerSegments)) > 0) {
@@ -276,7 +292,8 @@ std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMet
                 output << static_cast<char>(std::tolower(initializerSegments.front()[0]))
                        << initializerSegments.front().substr(1)
                        << ": void;";
-            } else {
+            }
+            else {
                 for (size_t i = 0; i < initializerSegments.size(); i++) {
                     if (i == initializerSegments.size() - 1 && method->getFlags(MethodHasErrorOutParameter)) {
                         break;
@@ -307,7 +324,7 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
 
     std::vector<std::string> parameterNames;
     std::transform(parameters.begin(), parameters.end(), std::back_inserter(parameterNames), [](clang::ParmVarDecl* param) {
-            return param->getNameAsString();
+        return param->getNameAsString();
     });
 
     for (size_t i = 0; i < parameterNames.size(); i++) {
@@ -321,14 +338,15 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     std::ostringstream output;
 
     output << meta->jsName;
-    
+
     const Type* retType = meta->signature[0];
     if(!methodDecl.isInstanceMethod() && owner->is(MetaType::Interface)) {
-        if(retType->is(TypeInstancetype) || DefinitionWriter::hasClosedGenerics(*retType)) {
-            output << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
+        if (retType->is(TypeInstancetype) || DefinitionWriter::hasClosedGenerics(*retType)) {
+            output << getTypeParametersStringOrEmpty(
+                    clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta *>(owner)->declaration));
         }
     }
-    
+
     if (owner->type == MetaType::Protocol && methodDecl.getImplementationControl() == clang::ObjCMethodDecl::ImplementationControl::Optional) {
         output << "?";
     }
@@ -400,7 +418,8 @@ void DefinitionWriter::visit(FunctionMeta* meta)
         }
     }
 
-    _buffer << std::endl;
+    _buffer << std::endl
+            << _docSet.getCommentFor(meta).toString("\t");
     _buffer << "\tdeclare function " << meta->jsName
             << "(" << params.str() << "): ";
 
@@ -416,10 +435,12 @@ void DefinitionWriter::visit(FunctionMeta* meta)
 
 void DefinitionWriter::visit(StructMeta* meta)
 {
-    _buffer << std::endl;
+    TSComment comment = _docSet.getCommentFor(meta);
+    _buffer << std::endl
+            << comment.toString("\t");
 
     _buffer << "\tinterface " << meta->jsName << " {" << std::endl;
-    writeMembers(meta->fields);
+    writeMembers(meta->fields, comment.fields);
     _buffer << "\t}" << std::endl;
 
     _buffer << "\tdeclare var " << meta->jsName << ": interop.StructType<" << meta->jsName << ">;";
@@ -429,30 +450,38 @@ void DefinitionWriter::visit(StructMeta* meta)
 
 void DefinitionWriter::visit(UnionMeta* meta)
 {
-    _buffer << std::endl;
+    TSComment comment = _docSet.getCommentFor(meta);
+    _buffer << std::endl
+            << comment.toString("\t");
 
     _buffer << "\tinterface " << meta->jsName << " {" << std::endl;
-    writeMembers(meta->fields);
+    writeMembers(meta->fields, comment.fields);
     _buffer << "\t}" << std::endl;
 
     _buffer << std::endl;
 }
 
-void DefinitionWriter::writeMembers(const std::vector<RecordField>& fields)
+void DefinitionWriter::writeMembers(const std::vector<RecordField>& fields, std::vector<TSComment> fieldsComments)
 {
-    for (auto& field : fields) {
-        _buffer << "\t\t" << field.name << ": " << tsifyType(*field.encoding) << ";" << std::endl;
+    for (size_t i = 0; i < fields.size(); i++) {
+        if (i < fieldsComments.size()) {
+            _buffer << fieldsComments[i].toString("\t\t");
+        }
+        _buffer << "\t\t" << fields[i].name << ": " << tsifyType(*fields[i].encoding) << ";" << std::endl;
     }
 }
 
 void DefinitionWriter::visit(EnumMeta* meta)
 {
-    _buffer << std::endl;
+    _buffer << std::endl
+            << _docSet.getCommentFor(meta).toString("\t");
     _buffer << "\tdeclare const enum " << meta->jsName << " {" << std::endl;
 
     std::vector<EnumField>& fields = meta->swiftNameFields.size() != 0 ? meta->swiftNameFields : meta->fullNameFields;
 
     for (size_t i = 0; i < fields.size(); i++) {
+        _buffer << std::endl
+                << _docSet.getCommentFor(meta->fullNameFields[i].name, MetaType::EnumConstant).toString("\t\t");
         _buffer << "\t\t" << fields[i].name << " = " << fields[i].value;
         if (i < fields.size() - 1) {
             _buffer << ",";
@@ -466,7 +495,8 @@ void DefinitionWriter::visit(EnumMeta* meta)
 
 void DefinitionWriter::visit(VarMeta* meta)
 {
-    _buffer << std::endl;
+    _buffer << std::endl
+            << _docSet.getCommentFor(meta).toString("\t");
     _buffer << "\tdeclare var " << meta->jsName << ": " << tsifyType(*meta->signature) << ";" << std::endl;
 }
 
@@ -507,13 +537,14 @@ std::string DefinitionWriter::localizeReference(const ::Meta::Meta& meta)
 {
     return localizeReference(meta.jsName, meta.module->getFullModuleName());
 }
-    
-bool DefinitionWriter::hasClosedGenerics(const Type& type) {
+
+bool DefinitionWriter::hasClosedGenerics(const Type& type)
+{
     if (type.is(TypeInterface)) {
         const InterfaceType& interfaceType = type.as<InterfaceType>();
         return interfaceType.typeArguments.size();
     }
-    
+
     return false;
 }
 
@@ -564,7 +595,7 @@ std::string DefinitionWriter::tsifyType(const Type& type)
         return writeFunctionProto(type.as<BlockType>().signature);
     case TypeFunctionPointer:
         return "interop.FunctionReference<" + writeFunctionProto(type.as<FunctionPointerType>().signature)
-               + ">";
+            + ">";
     case TypeInterface:
     case TypeBridgedInterface: {
         if (type.is(TypeType::TypeBridgedInterface) && type.as<BridgedInterfaceType>().isId()) {
@@ -596,7 +627,8 @@ std::string DefinitionWriter::tsifyType(const Type& type)
                 }
             }
             output << ">";
-        } else {
+        }
+        else {
             // This also translates CFArray to NSArray<any>
             if (auto typeParamList = clang::dyn_cast<clang::ObjCInterfaceDecl>(interface.declaration)->getTypeParamListAsWritten()) {
                 output << "<";
