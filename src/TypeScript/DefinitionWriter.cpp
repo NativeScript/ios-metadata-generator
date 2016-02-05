@@ -107,7 +107,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     }
 
     _buffer << std::endl
-            << _docSet.getCommentFor(meta).toString("\t") << "\tdeclare class " << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
+            << _docSet.getCommentFor(meta).toString("\t") << "\tdeclare class " << meta->jsName << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
     if (meta->base != nullptr) {
         _buffer << " extends " << localizeReference(*meta->base) << getTypeArgumentsStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration)->getSuperClassType());
     }
@@ -340,10 +340,10 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     output << meta->jsName;
 
     const Type* retType = meta->signature[0];
-    if(!methodDecl.isInstanceMethod() && owner->is(MetaType::Interface)) {
+    if (!methodDecl.isInstanceMethod() && owner->is(MetaType::Interface)) {
         if (retType->is(TypeInstancetype) || DefinitionWriter::hasClosedGenerics(*retType)) {
             output << getTypeParametersStringOrEmpty(
-                    clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta *>(owner)->declaration));
+                clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
         }
     }
 
