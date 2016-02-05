@@ -156,7 +156,8 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
                 _buffer << "/* readonly */ ";
             }
 
-            _buffer << writeProperty(propertyMeta, meta);
+            bool optOutTypeChecking = compoundInstanceMethods.find(propertyMeta->jsName) != compoundInstanceMethods.end();
+            _buffer << writeProperty(propertyMeta, meta, optOutTypeChecking);
 
             if (owner != meta) {
                 _buffer << " // inherited from " << localizeReference(*owner);
@@ -388,7 +389,7 @@ std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_t
     return output.str();
 }
 
-std::string DefinitionWriter::writeProperty(PropertyMeta* meta, BaseClassMeta* owner)
+std::string DefinitionWriter::writeProperty(PropertyMeta* meta, BaseClassMeta* owner, bool optOutTypeChecking)
 {
     std::ostringstream output;
 
@@ -396,7 +397,12 @@ std::string DefinitionWriter::writeProperty(PropertyMeta* meta, BaseClassMeta* o
     if (owner->is(MetaType::Protocol) && clang::dyn_cast<clang::ObjCPropertyDecl>(meta->declaration)->getPropertyImplementation() == clang::ObjCPropertyDecl::PropertyControl::Optional) {
         output << "?";
     }
-    output << ": " << tsifyType(*meta->getter->signature[0]) << ";";
+
+    if (optOutTypeChecking) {
+        output << ": any;";
+    } else {
+        output << ": " << tsifyType(*meta->getter->signature[0]) << ";";
+    }
 
     return output.str();
 }
