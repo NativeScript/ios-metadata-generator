@@ -107,7 +107,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     }
 
     _buffer << std::endl
-            << _docSet.getCommentFor(meta).toString("\t") << "\tdeclare class " << meta->jsName << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
+            << _docSet.getCommentFor(meta).toString("") << "declare class " << meta->jsName << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
     if (meta->base != nullptr) {
         _buffer << " extends " << localizeReference(*meta->base) << getTypeArgumentsStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration)->getSuperClassType());
     }
@@ -138,8 +138,8 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
             MethodMeta* method = methodPair.second.second;
             BaseClassMeta* owner = methodPair.second.first;
             _buffer << std::endl
-                    << _docSet.getCommentFor(method, owner).toString("\t\t");
-            _buffer << "\t\tstatic " << output << std::endl;
+                    << _docSet.getCommentFor(method, owner).toString("\t");
+            _buffer << "\tstatic " << output << std::endl;
         }
     }
 
@@ -149,8 +149,8 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
 
         if (owner == meta || immediateProtocols.find(reinterpret_cast<ProtocolMeta*>(owner)) != immediateProtocols.end()) {
             _buffer << std::endl
-                    << _docSet.getCommentFor(propertyMeta, owner).toString("\t\t");
-            _buffer << "\t\t";
+                    << _docSet.getCommentFor(propertyMeta, owner).toString("\t");
+            _buffer << "\t";
 
             if (!propertyMeta->setter) {
                 _buffer << "/* readonly */ ";
@@ -170,18 +170,18 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     if (objectAtIndexedSubscript != compoundInstanceMethods.end()) {
         const Type* retType = objectAtIndexedSubscript->second.second->signature[0];
         std::string indexerReturnType = computeMethodReturnType(retType, meta);
-        _buffer << "\t\t[index: number]: " << indexerReturnType << ";" << std::endl;
+        _buffer << "\t[index: number]: " << indexerReturnType << ";" << std::endl;
     }
 
     if (compoundInstanceMethods.find("countByEnumeratingWithStateObjectsCount") != compoundInstanceMethods.end()) {
-        _buffer << "\t\t[Symbol.iterator](): Iterator<any>;" << std::endl;
+        _buffer << "\t[Symbol.iterator](): Iterator<any>;" << std::endl;
     }
 
     for (auto& methodPair : compoundInstanceMethods) {
         if (methodPair.second.second->getFlags(MethodIsInitializer)) {
             _buffer << std::endl
-                    << _docSet.getCommentFor(methodPair.second.second, methodPair.second.first).toString("\t\t");
-            _buffer << "\t\t" << writeConstructor(methodPair, meta) << std::endl;
+                    << _docSet.getCommentFor(methodPair.second.second, methodPair.second.first).toString("\t");
+            _buffer << "\t" << writeConstructor(methodPair, meta) << std::endl;
         }
     }
 
@@ -193,12 +193,12 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         std::string output = writeMethod(methodPair, meta, immediateProtocols);
         if (output.size()) {
             _buffer << std::endl
-                    << _docSet.getCommentFor(methodPair.second.second, methodPair.second.first).toString("\t\t");
-            _buffer << "\t\t" << output << std::endl;
+                    << _docSet.getCommentFor(methodPair.second.second, methodPair.second.first).toString("\t");
+            _buffer << "\t" << output << std::endl;
         }
     }
 
-    _buffer << "\t}" << std::endl;
+    _buffer << "}" << std::endl;
 }
 
 void DefinitionWriter::getMembersRecursive(ProtocolMeta* protocolMeta,
@@ -235,9 +235,9 @@ void DefinitionWriter::getMembersRecursive(ProtocolMeta* protocolMeta,
 void DefinitionWriter::visit(ProtocolMeta* meta)
 {
     _buffer << std::endl
-            << _docSet.getCommentFor(meta).toString("\t");
+            << _docSet.getCommentFor(meta).toString("");
 
-    _buffer << "\tinterface " << meta->jsName;
+    _buffer << "interface " << meta->jsName;
     if (meta->protocols.size()) {
         _buffer << " extends ";
         for (size_t i = 0; i < meta->protocols.size(); i++) {
@@ -251,19 +251,19 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
 
     for (PropertyMeta* property : meta->properties) {
         _buffer << std::endl
-                << _docSet.getCommentFor(property, meta).toString("\t\t") << "\t\t" << writeProperty(property, meta) << std::endl;
+                << _docSet.getCommentFor(property, meta).toString("\t") << "\t" << writeProperty(property, meta) << std::endl;
     }
 
     for (MethodMeta* method : meta->instanceMethods) {
         if (hiddenMethods.find(method->jsName) == hiddenMethods.end()) {
             _buffer << std::endl
-                    << _docSet.getCommentFor(method, meta).toString("\t\t") << "\t\t" << writeMethod(method, meta) << std::endl;
+                    << _docSet.getCommentFor(method, meta).toString("\t") << "\t" << writeMethod(method, meta) << std::endl;
         }
     }
 
-    _buffer << "\t}" << std::endl;
+    _buffer << "}" << std::endl;
 
-    _buffer << "\tdeclare var " << meta->jsName << ": any; /* Protocol */" << std::endl;
+    _buffer << "declare var " << meta->jsName << ": any; /* Protocol */" << std::endl;
 }
 
 std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMeta>::value_type& initializer,
@@ -419,8 +419,8 @@ void DefinitionWriter::visit(FunctionMeta* meta)
     }
 
     _buffer << std::endl
-            << _docSet.getCommentFor(meta).toString("\t");
-    _buffer << "\tdeclare function " << meta->jsName
+            << _docSet.getCommentFor(meta).toString("");
+    _buffer << "declare function " << meta->jsName
             << "(" << params.str() << "): ";
 
     std::string returnName = tsifyType(*meta->signature[0]);
@@ -437,13 +437,13 @@ void DefinitionWriter::visit(StructMeta* meta)
 {
     TSComment comment = _docSet.getCommentFor(meta);
     _buffer << std::endl
-            << comment.toString("\t");
+            << comment.toString("");
 
-    _buffer << "\tinterface " << meta->jsName << " {" << std::endl;
+    _buffer << "interface " << meta->jsName << " {" << std::endl;
     writeMembers(meta->fields, comment.fields);
-    _buffer << "\t}" << std::endl;
+    _buffer << "}" << std::endl;
 
-    _buffer << "\tdeclare var " << meta->jsName << ": interop.StructType<" << meta->jsName << ">;";
+    _buffer << "declare var " << meta->jsName << ": interop.StructType<" << meta->jsName << ">;";
 
     _buffer << std::endl;
 }
@@ -452,11 +452,11 @@ void DefinitionWriter::visit(UnionMeta* meta)
 {
     TSComment comment = _docSet.getCommentFor(meta);
     _buffer << std::endl
-            << comment.toString("\t");
+            << comment.toString("");
 
-    _buffer << "\tinterface " << meta->jsName << " {" << std::endl;
+    _buffer << "interface " << meta->jsName << " {" << std::endl;
     writeMembers(meta->fields, comment.fields);
-    _buffer << "\t}" << std::endl;
+    _buffer << "}" << std::endl;
 
     _buffer << std::endl;
 }
@@ -465,39 +465,39 @@ void DefinitionWriter::writeMembers(const std::vector<RecordField>& fields, std:
 {
     for (size_t i = 0; i < fields.size(); i++) {
         if (i < fieldsComments.size()) {
-            _buffer << fieldsComments[i].toString("\t\t");
+            _buffer << fieldsComments[i].toString("\t");
         }
-        _buffer << "\t\t" << fields[i].name << ": " << tsifyType(*fields[i].encoding) << ";" << std::endl;
+        _buffer << "\t" << fields[i].name << ": " << tsifyType(*fields[i].encoding) << ";" << std::endl;
     }
 }
 
 void DefinitionWriter::visit(EnumMeta* meta)
 {
     _buffer << std::endl
-            << _docSet.getCommentFor(meta).toString("\t");
-    _buffer << "\tdeclare const enum " << meta->jsName << " {" << std::endl;
+            << _docSet.getCommentFor(meta).toString("");
+    _buffer << "declare const enum " << meta->jsName << " {" << std::endl;
 
     std::vector<EnumField>& fields = meta->swiftNameFields.size() != 0 ? meta->swiftNameFields : meta->fullNameFields;
 
     for (size_t i = 0; i < fields.size(); i++) {
         _buffer << std::endl
-                << _docSet.getCommentFor(meta->fullNameFields[i].name, MetaType::EnumConstant).toString("\t\t");
-        _buffer << "\t\t" << fields[i].name << " = " << fields[i].value;
+                << _docSet.getCommentFor(meta->fullNameFields[i].name, MetaType::EnumConstant).toString("\t");
+        _buffer << "\t" << fields[i].name << " = " << fields[i].value;
         if (i < fields.size() - 1) {
             _buffer << ",";
         }
         _buffer << std::endl;
     }
 
-    _buffer << "\t}";
+    _buffer << "}";
     _buffer << std::endl;
 }
 
 void DefinitionWriter::visit(VarMeta* meta)
 {
     _buffer << std::endl
-            << _docSet.getCommentFor(meta).toString("\t");
-    _buffer << "\tdeclare var " << meta->jsName << ": " << tsifyType(*meta->signature) << ";" << std::endl;
+            << _docSet.getCommentFor(meta).toString("");
+    _buffer << "declare var " << meta->jsName << ": " << tsifyType(*meta->signature) << ";" << std::endl;
 }
 
 std::string DefinitionWriter::writeFunctionProto(const std::vector<Type*>& signature)
