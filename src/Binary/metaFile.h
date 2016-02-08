@@ -1,13 +1,18 @@
 #pragma once
 
+#include <vector>
+#include <memory>
+#include <clang/Basic/Module.h>
 #include "binaryHashtable.h"
 #include "binaryWriter.h"
 #include "binaryReader.h"
 #include "Utils/memoryStream.h"
-#include <vector>
-#include <memory>
 
 using namespace std;
+
+namespace Meta {
+class Meta;
+}
 
 namespace binary {
 /*
@@ -20,7 +25,7 @@ namespace binary {
 class MetaFile {
 private:
     std::unique_ptr<BinaryHashtable> _globalTableSymbols;
-    std::map<std::string, MetaFileOffset> _topLevelModules;
+    std::map<const clang::Module*, binary::ModuleMeta> _topLevelModules;
     std::shared_ptr<utils::MemoryStream> _heap;
 
 public:
@@ -50,29 +55,14 @@ public:
          * \param jsName The jsName of the element
          * \param offset The offset in the heap
          */
-    void registerInGlobalTable(const std::string& jsName, MetaFileOffset offset);
+    void registerInGlobalTables(const ::Meta::Meta* meta, binary::MetaFileOffset offset);
 
     /*
-         * \brief Returns the offset to which the specified jsName is mapped in the global table.
+         * \brief Adds an entry to the modules table
          * \param jsName The jsName of the element
-         * \return The offset in the heap
-         */
-    MetaFileOffset getFromGlobalTable(const std::string& jsName);
-
-    /// module table
-    /*
-         * \brief Adds a top level module in module table
-         * \param moduleName The name of the module
          * \param offset The offset in the heap
          */
-    void registerInTopLevelModulesTable(const std::string& moduleName, MetaFileOffset offset);
-
-    /*
-         * \brief Returns the offset to which the specified module is mapped in the module table.
-         * \param moduleName The name of the module
-         * \return The offset in the heap
-         */
-    binary::MetaFileOffset getFromTopLevelModulesTable(const std::string& moduleName);
+    void registerModule(const clang::Module* module, binary::ModuleMeta& moduleBinaryStructure);
 
     /// heap
     /*

@@ -1,3 +1,4 @@
+#include "Meta/MetaEntities.h"
 #include "metaFile.h"
 #include "Utils/fileStream.h"
 
@@ -6,25 +7,16 @@ unsigned int binary::MetaFile::size()
     return this->_globalTableSymbols->size();
 }
 
-void binary::MetaFile::registerInGlobalTable(const std::string& jsName, binary::MetaFileOffset offset)
+void binary::MetaFile::registerInGlobalTables(const ::Meta::Meta* meta, binary::MetaFileOffset offset)
 {
-    this->_globalTableSymbols->add(jsName, offset);
+    this->_globalTableSymbols->add(meta->jsName, offset);
+    std::map<const clang::Module*, binary::ModuleMeta>::iterator modulePair = this->_topLevelModules.find(meta->module->getTopLevelModule());
+    modulePair->second._moduleTable.add(meta->jsName, offset);
 }
 
-binary::MetaFileOffset binary::MetaFile::getFromGlobalTable(const std::string& jsName)
+void binary::MetaFile::registerModule(const clang::Module* module, binary::ModuleMeta& moduleBinaryStructure)
 {
-    return this->_globalTableSymbols->get(jsName);
-}
-
-void binary::MetaFile::registerInTopLevelModulesTable(const std::string& moduleName, binary::MetaFileOffset offset)
-{
-    this->_topLevelModules.insert(std::pair<std::string, MetaFileOffset>(moduleName, offset));
-}
-
-binary::MetaFileOffset binary::MetaFile::getFromTopLevelModulesTable(const std::string& moduleName)
-{
-    std::map<std::string, MetaFileOffset>::iterator it = this->_topLevelModules.find(moduleName);
-    return (it != this->_topLevelModules.end()) ? it->second : 0;
+    this->_topLevelModules.insert(std::pair<const clang::Module*, binary::ModuleMeta>(module, moduleBinaryStructure));
 }
 
 binary::BinaryWriter binary::MetaFile::heap_writer()
@@ -53,8 +45,8 @@ void binary::MetaFile::save(std::shared_ptr<utils::Stream> stream)
     globalTableStreamWriter.push_binaryArray(offsets);
 
     std::vector<MetaFileOffset> modulesOffsets;
-    for (std::pair<std::string, MetaFileOffset> pair : this->_topLevelModules)
-        modulesOffsets.push_back(pair.second);
+    for (std::pair<const clang::Module*, binary::ModuleMeta> pair : this->_topLevelModules)
+        modulesOffsets.push_back(pair.second.save(heapWriter));
     globalTableStreamWriter.push_binaryArray(modulesOffsets);
 
     // dump heap

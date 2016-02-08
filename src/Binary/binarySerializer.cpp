@@ -42,17 +42,7 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
         flags |= BinaryFlags::IsIosAppExtensionAvailable;
 
     // module
-    clang::Module* topLevelModule = meta->module->getTopLevelModule();
-    std::string topLevelModuleName = topLevelModule->getFullModuleName();
-    MetaFileOffset moduleOffset = this->file->getFromTopLevelModulesTable(topLevelModuleName);
-    if (moduleOffset != 0)
-        binaryMetaStruct._topLevelModule = moduleOffset;
-    else {
-        binary::ModuleMeta moduleMeta{};
-        serializeModule(topLevelModule, moduleMeta);
-        binaryMetaStruct._topLevelModule = moduleMeta.save(this->heapWriter);
-        this->file->registerInTopLevelModulesTable(topLevelModuleName, binaryMetaStruct._topLevelModule);
-    }
+    binaryMetaStruct._topLevelModule = this->heapWriter.push_string(meta->module->getTopLevelModule()->getFullModuleName());
 
     // introduced in
     binaryMetaStruct._introduced = convertVersion(meta->introducedIn);
@@ -172,6 +162,9 @@ void binary::BinarySerializer::serializeContainer(std::vector<std::pair<clang::M
 {
     this->start(container);
     for (std::pair<clang::Module*, std::vector< ::Meta::Meta*> >& module : container) {
+        ModuleMeta moduleMeta(module.second.size());
+        this->serializeModule(module.first, moduleMeta);
+        this->file->registerModule(module.first, moduleMeta);
         for (::Meta::Meta* meta : module.second) {
             meta->visit(this);
         }
@@ -281,14 +274,14 @@ void binary::BinarySerializer::visit(::Meta::InterfaceMeta* meta)
     if (meta->base != nullptr) {
         binaryStruct._baseName = this->heapWriter.push_string(meta->base->jsName);
     }
-    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTables(meta, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::ProtocolMeta* meta)
 {
     binary::ProtocolMeta binaryStruct;
     serializeBaseClass(meta, binaryStruct);
-    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTables(meta, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::CategoryMeta* meta)
@@ -309,21 +302,21 @@ void binary::BinarySerializer::visit(::Meta::FunctionMeta* meta)
         binaryStruct._flags |= BinaryFlags::FunctionReturnsUnmanaged;
 
     binaryStruct._encoding = this->typeEncodingSerializer.visit(meta->signature);
-    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTables(meta, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::StructMeta* meta)
 {
     binary::StructMeta binaryStruct;
     serializeRecord(meta, binaryStruct);
-    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTables(meta, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::UnionMeta* meta)
 {
     binary::UnionMeta binaryStruct;
     serializeRecord(meta, binaryStruct);
-    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTables(meta, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::EnumMeta* meta)
@@ -346,7 +339,7 @@ void binary::BinarySerializer::visit(::Meta::EnumMeta* meta)
     jsCodeStream << "})";
 
     binaryStruct._jsCode = this->heapWriter.push_string(jsCodeStream.str());
-    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTables(meta, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::VarMeta* meta)
@@ -356,7 +349,7 @@ void binary::BinarySerializer::visit(::Meta::VarMeta* meta)
         binary::JsCodeMeta binaryStruct;
         serializeBase(meta, binaryStruct);
         binaryStruct._jsCode = this->heapWriter.push_string(meta->value);
-        this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+        this->file->registerInGlobalTables(meta, binaryStruct.save(this->heapWriter));
     }
     else {
         // serialize as VarMeta
@@ -364,7 +357,7 @@ void binary::BinarySerializer::visit(::Meta::VarMeta* meta)
         serializeBase(meta, binaryStruct);
         unique_ptr<binary::TypeEncoding> binarySignature = meta->signature->visit(this->typeEncodingSerializer);
         binaryStruct._encoding = binarySignature->save(this->heapWriter);
-        this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+        this->file->registerInGlobalTables(meta, binaryStruct.save(this->heapWriter));
     }
 }
 
@@ -374,7 +367,7 @@ void binary::BinarySerializer::visit(::Meta::EnumConstantMeta* meta)
     serializeBase(meta, binaryStruct);
 
     binaryStruct._jsCode = this->heapWriter.push_string(meta->value);
-    this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
+    this->file->registerInGlobalTables(meta, binaryStruct.save(this->heapWriter));
 }
 
 void binary::BinarySerializer::visit(::Meta::PropertyMeta* meta)

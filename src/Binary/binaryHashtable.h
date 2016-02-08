@@ -2,9 +2,13 @@
 
 #include <string>
 #include <vector>
-#include "binaryStructures.h"
 
 namespace binary {
+
+typedef int32_t MetaFileOffset;
+typedef int32_t MetaArrayCount;
+class BinaryWriter;
+
 /*
      * \class BinaryHashtable
      * \brief This class implements a hash table, which maps jsName keys to offsets.
