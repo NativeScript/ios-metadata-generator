@@ -26,28 +26,15 @@ set(GENERATOR_HEADERS
     TypeScript/DocSetManager.h
     Utils/fileStream.h
     Utils/memoryStream.h
+    Utils/Noncopyable.h
     Utils/stream.h
     Utils/StringHasher.h
     Utils/StringUtils.h
-    Utils/Noncopyable.h
     Yaml/MetaYamlTraits.h
     Yaml/YamlSerializer.h
 )
 
 set(GENERATOR_SOURCES
-    main.cpp
-    HeadersParser/Parser.cpp
-    Meta/DeclarationConverterVisitor.cpp
-    Meta/MetaFactory.cpp
-    Meta/MetaEntities.cpp
-    Meta/TypeFactory.cpp
-    Meta/Utils.cpp
-    Meta/Filters/HandleExceptionalMetasFilter.cpp
-    Meta/Filters/MergeCategoriesFilter.cpp
-    Meta/Filters/RemoveDuplicateMembersFilter.cpp
-    Meta/Filters/ResolveGlobalNamesCollisionsFilter.cpp
-    Utils/fileStream.cpp
-    Utils/memoryStream.cpp
     Binary/binaryHashtable.cpp
     Binary/binaryReader.cpp
     Binary/binarySerializer.cpp
@@ -55,17 +42,29 @@ set(GENERATOR_SOURCES
     Binary/binaryTypeEncodingSerializer.cpp
     Binary/binaryWriter.cpp
     Binary/metaFile.cpp
+    HeadersParser/Parser.cpp
+    main.cpp
+    Meta/DeclarationConverterVisitor.cpp
+    Meta/Filters/HandleExceptionalMetasFilter.cpp
+    Meta/Filters/MergeCategoriesFilter.cpp
+    Meta/Filters/RemoveDuplicateMembersFilter.cpp
+    Meta/Filters/ResolveGlobalNamesCollisionsFilter.cpp
+    Meta/MetaEntities.cpp
+    Meta/MetaFactory.cpp
+    Meta/TypeFactory.cpp
+    Meta/Utils.cpp
     TypeScript/DefinitionWriter.cpp
     TypeScript/DocSetManager.cpp
+    Utils/fileStream.cpp
+    Utils/memoryStream.cpp
 )
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-include_directories(${LIBXML2_INCLUDE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${LIBXML2_INCLUDE_DIR})
 
 add_executable(objc-metadata-generator ${GENERATOR_HEADERS} ${GENERATOR_SOURCES})
-target_link_libraries(objc-metadata-generator ${LLVM_LINKER_FLAGS})
-target_link_libraries(objc-metadata-generator ${LIBXML2_LIBRARIES})
 target_link_libraries(objc-metadata-generator
+    ${LLVM_LINKER_FLAGS}
+    ${LIBXML2_LIBRARIES}
     clangFrontend
     clangSerialization
     clangDriver
@@ -80,12 +79,12 @@ target_link_libraries(objc-metadata-generator
 )
 
 set_target_properties(objc-metadata-generator PROPERTIES
-    COMPILE_FLAGS "-Werror -Wall -Wextra -Wno-unused-parameter"
+    COMPILE_FLAGS "-fvisibility=hidden -Werror -Wall -Wextra -Wno-unused-parameter"
 )
 
 add_custom_command(TARGET objc-metadata-generator
-                    POST_BUILD
-                    COMMAND ${CMAKE_COMMAND} -E copy_directory ${LLVM_LIBDIR}/clang ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang)
+                   POST_BUILD
+                   COMMAND ${CMAKE_COMMAND} -E copy_directory ${LLVM_LIBDIR}/clang ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang)
 
 install(TARGETS objc-metadata-generator
         RUNTIME DESTINATION bin)
