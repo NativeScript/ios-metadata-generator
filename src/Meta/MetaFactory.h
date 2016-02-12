@@ -9,6 +9,8 @@
 #include "Utils/Noncopyable.h"
 
 namespace Meta {
+typedef std::unordered_map<const clang::Decl*, std::pair<std::unique_ptr<Meta>, std::string>> Cache;
+
 class MetaFactory {
 public:
     MetaFactory(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch)
@@ -25,6 +27,10 @@ public:
     TypeFactory& getTypeFactory()
     {
         return this->_typeFactory;
+    }
+
+    Cache& getCache() {
+        return this->_cache;
     }
 
 private:
@@ -62,7 +68,6 @@ private:
     clang::HeaderSearch& _headerSearch;
     TypeFactory _typeFactory;
 
-    typedef std::unordered_map<const clang::Decl*, std::pair<std::unique_ptr<Meta>, std::string> > Cache;
     Cache _cache;
 };
 }

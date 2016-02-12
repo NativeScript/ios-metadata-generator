@@ -10,6 +10,7 @@
 #include "Meta/Filters/MergeCategoriesFilter.h"
 #include "Meta/Filters/RemoveDuplicateMembersFilter.h"
 #include "Meta/Filters/ResolveGlobalNamesCollisionsFilter.h"
+#include "Meta/Filters/HandleMethodsAndPropertiesWithSameNameFilter.h"
 #include "Yaml/YamlSerializer.h"
 #include "Binary/binarySerializer.h"
 #include "TypeScript/DefinitionWriter.h"
@@ -43,6 +44,7 @@ public:
         Meta::HandleExceptionalMetasFilter().filter(metaContainer);
         Meta::MergeCategoriesFilter().filter(metaContainer);
         Meta::RemoveDuplicateMembersFilter().filter(metaContainer);
+        Meta::HandleMethodsAndPropertiesWithSameNameFilter(_visitor.getMetaFactory()).filter(metaContainer);
         Meta::ResolveGlobalNamesCollisionsFilter filter = Meta::ResolveGlobalNamesCollisionsFilter();
         filter.filter(metaContainer);
         std::unique_ptr<std::pair<Meta::ResolveGlobalNamesCollisionsFilter::MetasByModules, Meta::ResolveGlobalNamesCollisionsFilter::InterfacesByName> > result = filter.getResult();

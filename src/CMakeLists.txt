@@ -13,6 +13,7 @@ set(GENERATOR_HEADERS
     Meta/DeclarationConverterVisitor.h
     Meta/Filters/HandleExceptionalMetasFilter.h
     Meta/Filters/MergeCategoriesFilter.h
+    Meta/Filters/PropertyInheritedFromMethodFilter.h
     Meta/Filters/RemoveDuplicateMembersFilter.h
     Meta/Filters/ResolveGlobalNamesCollisionsFilter.h
     Meta/MetaEntities.h
@@ -47,6 +48,7 @@ set(GENERATOR_SOURCES
     Meta/DeclarationConverterVisitor.cpp
     Meta/Filters/HandleExceptionalMetasFilter.cpp
     Meta/Filters/MergeCategoriesFilter.cpp
+    Meta/Filters/PropertyInheritedFromMethodFilter.cpp
     Meta/Filters/RemoveDuplicateMembersFilter.cpp
     Meta/Filters/ResolveGlobalNamesCollisionsFilter.cpp
     Meta/MetaEntities.cpp
