@@ -435,10 +435,11 @@ std::string DefinitionWriter::writeProperty(PropertyMeta* meta, BaseClassMeta* o
         output << "?";
     }
 
+    std::string returnType = tsifyType(*meta->getter->signature[0]);
     if (optOutTypeChecking) {
-        output << ": any;";
+        output << ": any; /*" << returnType << " */";
     } else {
-        output << ": " << tsifyType(*meta->getter->signature[0]) << ";";
+        output << ": " << returnType << ";";
     }
 
     return output.str();
