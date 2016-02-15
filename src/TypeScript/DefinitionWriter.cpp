@@ -102,7 +102,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
 
         for (ProtocolMeta* protocol : baseClass->protocols) {
-            getMembersRecursive(protocol, compoundStaticMethods, compoundProperties, compoundInstanceMethods, inheritedProtocols);
+            getMembersRecursive(protocol, &compoundStaticMethods, &compoundProperties, &compoundInstanceMethods, inheritedProtocols);
         }
     }
 
@@ -116,7 +116,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     if (meta->protocols.size()) {
         _buffer << " implements ";
         for (size_t i = 0; i < meta->protocols.size(); i++) {
-            getMembersRecursive(meta->protocols[i], compoundStaticMethods, compoundProperties, compoundInstanceMethods, protocols);
+            getMembersRecursive(meta->protocols[i], &compoundStaticMethods, &compoundProperties, &compoundInstanceMethods, protocols);
             _buffer << localizeReference(*meta->protocols[i]);
             if (i < meta->protocols.size() - 1) {
                 _buffer << ", ";
@@ -202,28 +202,34 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
 }
 
 void DefinitionWriter::getMembersRecursive(ProtocolMeta* protocolMeta,
-    CompoundMemberMap<MethodMeta>& staticMethods,
-    CompoundMemberMap<PropertyMeta>& properties,
-    CompoundMemberMap<MethodMeta>& instanceMethods,
+    CompoundMemberMap<MethodMeta>* staticMethods,
+    CompoundMemberMap<PropertyMeta>* properties,
+    CompoundMemberMap<MethodMeta>* instanceMethods,
     std::set<ProtocolMeta*>& visitedProtocols)
 {
     visitedProtocols.insert(protocolMeta);
 
-    for (MethodMeta* method : protocolMeta->staticMethods) {
-        if (staticMethods.find(method->jsName) == staticMethods.end()) {
-            staticMethods.emplace(method->jsName, std::make_pair(protocolMeta, method));
+    if (staticMethods) {
+        for (MethodMeta* method : protocolMeta->staticMethods) {
+            if (staticMethods->find(method->jsName) == staticMethods->end()) {
+                staticMethods->emplace(method->jsName, std::make_pair(protocolMeta, method));
+            }
         }
     }
 
-    for (PropertyMeta* property : protocolMeta->properties) {
-        if (properties.find(property->jsName) == properties.end()) {
-            properties.emplace(property->jsName, std::make_pair(protocolMeta, property));
+    if (properties) {
+        for (PropertyMeta* property : protocolMeta->properties) {
+            if (properties->find(property->jsName) == properties->end()) {
+                properties->emplace(property->jsName, std::make_pair(protocolMeta, property));
+            }
         }
     }
 
-    for (MethodMeta* method : protocolMeta->instanceMethods) {
-        if (instanceMethods.find(method->jsName) == instanceMethods.end()) {
-            instanceMethods.emplace(method->jsName, std::make_pair(protocolMeta, method));
+    if (instanceMethods) {
+        for (MethodMeta* method : protocolMeta->instanceMethods) {
+            if (instanceMethods->find(method->jsName) == instanceMethods->end()) {
+                instanceMethods->emplace(method->jsName, std::make_pair(protocolMeta, method));
+            }
         }
     }
 
@@ -263,7 +269,33 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
 
     _buffer << "}" << std::endl;
 
-    _buffer << "declare var " << meta->jsName << ": any; /* Protocol */" << std::endl;
+    _buffer << "declare var " << meta->jsName << ": {" << std::endl;
+
+    _buffer << std::endl
+            << "\tprototype: " << meta->jsName << ";" << std::endl;
+
+    CompoundMemberMap<MethodMeta> compoundStaticMethods;
+    for (MethodMeta* method : meta->staticMethods) {
+        compoundStaticMethods.emplace(method->jsName, std::make_pair(meta, method));
+    }
+
+    std::set<ProtocolMeta*> protocols;
+    for (ProtocolMeta* protocol : meta->protocols) {
+        getMembersRecursive(protocol, &compoundStaticMethods, nullptr, nullptr, protocols);
+    }
+
+    for (auto& methodPair : compoundStaticMethods) {
+        std::string output = writeMethod(methodPair, meta, protocols);
+        if (output.size()) {
+            MethodMeta* method = methodPair.second.second;
+            BaseClassMeta* owner = methodPair.second.first;
+            _buffer << std::endl
+                    << _docSet.getCommentFor(method, owner).toString("\t");
+            _buffer << "\t" << output << std::endl;
+        }
+    }
+
+    _buffer << "};" << std::endl;
 }
 
 std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMeta>::value_type& initializer,
@@ -376,7 +408,7 @@ std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_t
     }
 
     if (memberOwner == owner
-        || protocols.find(reinterpret_cast<ProtocolMeta*>(memberOwner)) != protocols.end()
+        || protocols.find(static_cast<ProtocolMeta*>(memberOwner)) != protocols.end()
         || method->signature[0]->is(TypeInstancetype)) {
 
         output << writeMethod(method, owner);
