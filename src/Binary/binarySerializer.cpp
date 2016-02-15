@@ -130,6 +130,7 @@ void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta* meta, binary:
         binaryMetaStruct._flags |= BinaryFlags::MethodIsInitializer;
 
     binaryMetaStruct._encoding = this->typeEncodingSerializer.visit(meta->signature);
+    binaryMetaStruct._constructorTokens = this->heapWriter.push_string(meta->constructorTokens);
 }
 
 void binary::BinarySerializer::serializeProperty(::Meta::PropertyMeta* meta, binary::PropertyMeta& binaryMetaStruct)

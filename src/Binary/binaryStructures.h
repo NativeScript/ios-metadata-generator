@@ -170,6 +170,7 @@ public:
 struct MethodMeta : MemberMeta {
 public:
     MetaFileOffset _encoding = 0;
+    MetaFileOffset _constructorTokens = 0;
 
     virtual MetaFileOffset save(BinaryWriter& writer) override;
 };
