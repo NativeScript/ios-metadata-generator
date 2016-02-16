@@ -11,7 +11,9 @@ namespace TypeScript {
 class DefinitionWriter : Meta::MetaVisitor {
 public:
     DefinitionWriter(std::pair<clang::Module*, std::vector<Meta::Meta*> >& module, Meta::TypeFactory& typeFactory, std::string docSetPath)
-        : _module(module), _typeFactory(typeFactory), _docSet(docSetPath)
+        : _module(module)
+        , _typeFactory(typeFactory)
+        , _docSet(docSetPath)
     {
     }
 
@@ -46,9 +48,9 @@ private:
     void writeMembers(const std::vector<Meta::RecordField>& fields, std::vector<TSComment> fieldsComments);
 
     static void getMembersRecursive(Meta::ProtocolMeta* protocol,
-        CompoundMemberMap<Meta::MethodMeta>& staticMethods,
-        CompoundMemberMap<Meta::PropertyMeta>& properties,
-        CompoundMemberMap<Meta::MethodMeta>& instanceMethods,
+        CompoundMemberMap<Meta::MethodMeta>* staticMethods,
+        CompoundMemberMap<Meta::PropertyMeta>* properties,
+        CompoundMemberMap<Meta::MethodMeta>* instanceMethods,
         std::set<Meta::ProtocolMeta*>& visitedProtocols);
 
     static std::string writeConstructor(const CompoundMemberMap<Meta::MethodMeta>::value_type& initializer,
