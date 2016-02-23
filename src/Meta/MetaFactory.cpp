@@ -357,17 +357,25 @@ void MetaFactory::createFromMethod(const clang::ObjCMethodDecl& method, MethodMe
         }
     }
 
-    bool isInitializer = (method.getMethodFamily() == clang::ObjCMethodFamily::OMF_init);
+    bool isInitializer = method.getMethodFamily() == clang::ObjCMethodFamily::OMF_init;
     methodMeta.setFlags(MetaFlags::MethodIsInitializer, isInitializer); // set MethodIsInitializer flag
     if (isInitializer) {
         assert(methodMeta.getSelector().find("init", 0) == 0);
-        std::string initPrefix = (methodMeta.getSelector().find("initWith", 0) == 0) ? "initWith" : "init";
+        std::string initPrefix = methodMeta.getSelector().find("initWith", 0) == 0 ? "initWith" : "init";
         std::string selector = methodMeta.getSelector().substr(initPrefix.length(), std::string::npos);
 
         if (selector.length() > 0) {
             // split selector in tokens
             vector<string> ctorTokens;
             StringUtils::split(selector, ':', std::back_inserter(ctorTokens));
+            // make the first letter of all tokens a lowercase letter
+            for (std::string& token : ctorTokens) {
+                // this will not lowercase the first letter of tokens like 'URL', 'OAuth' etc
+                if (token.length() > 1 && std::isupper(token[1])) {
+                    continue;
+                }
+                token[0] = std::tolower(token[0]);
+            }
 
             // if the last parameter is NSError**, remove the last selector token
             if (methodMeta.getFlags(MetaFlags::MethodHasErrorOutParameter)) {
