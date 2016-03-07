@@ -304,41 +304,20 @@ std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMet
     MethodMeta* method = initializer.second.second;
     assert(method->getFlags(MethodIsInitializer));
 
-    static std::string defaultInitializer("init");
-    auto selector = method->getSelector();
-    assert(selector.substr(0, defaultInitializer.length()) == defaultInitializer);
-
     std::ostringstream output;
 
-    std::vector<std::string> initializerSegments;
-    if (selector == defaultInitializer) {
+    if (method->constructorTokens == "") {
         output << "constructor();";
     }
     else {
-        static std::string initWithInitializer("initWith");
-        size_t substrLength = StringUtils::starts_with(selector, initWithInitializer) ? initWithInitializer.length() : defaultInitializer.length();
-        if (StringUtils::split(selector.substr(substrLength), ':', std::back_inserter(initializerSegments)) > 0) {
-            output << "constructor(o: { ";
-
-            if (selector.back() != ':' && initializerSegments.size() == 1) {
-                output << static_cast<char>(std::tolower(initializerSegments.front()[0]))
-                       << initializerSegments.front().substr(1)
-                       << ": void;";
-            }
-            else {
-                for (size_t i = 0; i < initializerSegments.size(); i++) {
-                    if (i == initializerSegments.size() - 1 && method->getFlags(MethodHasErrorOutParameter)) {
-                        break;
-                    }
-
-                    auto& initializerSegment = initializerSegments[i];
-                    output << static_cast<char>(std::tolower(initializerSegment[0]))
-                           << initializerSegment.substr(1)
-                           << ": " << tsifyType(*method->signature[i + 1]) << "; ";
-                }
-            }
-            output << "});";
+        std::vector<std::string> ctorTokens;
+        StringUtils::split(method->constructorTokens, ':', std::back_inserter(ctorTokens));
+        output << "constructor(o: { ";
+        for (size_t i = 0; i < ctorTokens.size(); i++) {
+            output << ctorTokens[i] << ": ";
+            output << (i + 1 < method->signature.size() ? tsifyType(*method->signature[i + 1]) : "void") << "; ";
         }
+        output << "});";
     }
 
     BaseClassMeta* initializerOwner = initializer.second.first;

@@ -357,7 +357,50 @@ void MetaFactory::createFromMethod(const clang::ObjCMethodDecl& method, MethodMe
         }
     }
 
-    methodMeta.setFlags(MetaFlags::MethodIsInitializer, method.getMethodFamily() == clang::ObjCMethodFamily::OMF_init); // set MethodIsInitializer flag
+    bool isInitializer = method.getMethodFamily() == clang::ObjCMethodFamily::OMF_init;
+    methodMeta.setFlags(MetaFlags::MethodIsInitializer, isInitializer); // set MethodIsInitializer flag
+    if (isInitializer) {
+        assert(methodMeta.getSelector().find("init", 0) == 0);
+        std::string initPrefix = methodMeta.getSelector().find("initWith", 0) == 0 ? "initWith" : "init";
+        std::string selector = methodMeta.getSelector().substr(initPrefix.length(), std::string::npos);
+
+        if (selector.length() > 0) {
+            // split selector in tokens
+            vector<string> ctorTokens;
+            StringUtils::split(selector, ':', std::back_inserter(ctorTokens));
+            // make the first letter of all tokens a lowercase letter
+            for (std::string& token : ctorTokens) {
+                // this will not lowercase the first letter of tokens like 'URL', 'OAuth' etc
+                if (token.length() > 1 && std::isupper(token[1])) {
+                    continue;
+                }
+                token[0] = std::tolower(token[0]);
+            }
+
+            // if the last parameter is NSError**, remove the last selector token
+            if (methodMeta.getFlags(MetaFlags::MethodHasErrorOutParameter)) {
+                ctorTokens.pop_back();
+            }
+            if (ctorTokens.size() > 0) {
+                // rename duplicated tokens by adding digit at the end of the token
+                for (std::vector<string>::size_type i = 0; i < ctorTokens.size(); i++) {
+                    int occurrences = 0;
+                    for (std::vector<string>::size_type j = 0; j < i; j++) {
+                        if (ctorTokens[i] == ctorTokens[j])
+                            occurrences++;
+                    }
+                    if (occurrences > 0) {
+                        ctorTokens[i] += std::to_string(occurrences + 1);
+                    }
+                }
+
+                std::ostringstream joinedTokens;
+                const char* delimiter = ":";
+                copy(ctorTokens.begin(), ctorTokens.end(), ostream_iterator<string>(joinedTokens, delimiter));
+                methodMeta.constructorTokens = joinedTokens.str();
+            }
+        }
+    }
 
     if (method.isVariadic() && !isNullTerminatedVariadic)
         throw MetaCreationException(&methodMeta, "Method is variadic (and is not marked as nil terminated.).", false);

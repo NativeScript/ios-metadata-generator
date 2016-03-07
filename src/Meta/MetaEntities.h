@@ -132,6 +132,7 @@ public:
     }
 
     std::vector<Type*> signature;
+    std::string constructorTokens;
 
     virtual void visit(MetaVisitor* visitor) override;
 };
