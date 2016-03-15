@@ -67,10 +67,11 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         compoundStaticMethods.emplace(method->jsName, std::make_pair(meta, method));
     }
 
-    CompoundMemberMap<PropertyMeta> compoundProperties;
+    CompoundMemberMap<PropertyMeta> baseClassProperties;
+    CompoundMemberMap<PropertyMeta> ownProperties;
     for (PropertyMeta* property : meta->properties) {
-        if (compoundProperties.find(property->jsName) == compoundProperties.end()) {
-            compoundProperties.emplace(property->jsName, std::make_pair(meta, property));
+        if (ownProperties.find(property->jsName) == ownProperties.end()) {
+            ownProperties.emplace(property->jsName, std::make_pair(meta, property));
         }
     }
 
@@ -90,8 +91,8 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
 
         for (PropertyMeta* property : baseClass->properties) {
-            if (compoundProperties.find(property->jsName) == compoundProperties.end()) {
-                compoundProperties.emplace(property->jsName, std::make_pair(baseClass, property));
+            if (baseClassProperties.find(property->jsName) == baseClassProperties.end()) {
+                baseClassProperties.emplace(property->jsName, std::make_pair(baseClass, property));
             }
         }
 
@@ -102,7 +103,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
 
         for (ProtocolMeta* protocol : baseClass->protocols) {
-            getMembersRecursive(protocol, &compoundStaticMethods, &compoundProperties, &compoundInstanceMethods, inheritedProtocols);
+            getMembersRecursive(protocol, &compoundStaticMethods, &baseClassProperties, &compoundInstanceMethods, inheritedProtocols);
         }
     }
 
@@ -112,11 +113,12 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         _buffer << " extends " << localizeReference(*meta->base) << getTypeArgumentsStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration)->getSuperClassType());
     }
 
+    CompoundMemberMap<PropertyMeta> protocolInheritedProperties;
     std::set<ProtocolMeta*> protocols;
     if (meta->protocols.size()) {
         _buffer << " implements ";
         for (size_t i = 0; i < meta->protocols.size(); i++) {
-            getMembersRecursive(meta->protocols[i], &compoundStaticMethods, &compoundProperties, &compoundInstanceMethods, protocols);
+            getMembersRecursive(meta->protocols[i], &compoundStaticMethods, &protocolInheritedProperties, &compoundInstanceMethods, protocols);
             _buffer << localizeReference(*meta->protocols[i]);
             if (i < meta->protocols.size() - 1) {
                 _buffer << ", ";
@@ -143,26 +145,23 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
     }
 
-    for (auto& propertyPair : compoundProperties) {
+    for (auto& propertyPair : ownProperties) {
         BaseClassMeta* owner = propertyPair.second.first;
         PropertyMeta* propertyMeta = propertyPair.second.second;
 
-        if (owner == meta || immediateProtocols.find(reinterpret_cast<ProtocolMeta*>(owner)) != immediateProtocols.end()) {
-            _buffer << std::endl
-                    << _docSet.getCommentFor(propertyMeta, owner).toString("\t");
-            _buffer << "\t";
+        if (owner == meta) {
 
-            if (!propertyMeta->setter) {
-                _buffer << "/* readonly */ ";
-            }
+            this->writeProperty(propertyMeta, owner, meta, baseClassProperties);
+        }
+    }
 
-            _buffer << writeProperty(propertyMeta, meta);
+    for (auto& propertyPair : protocolInheritedProperties) {
+        BaseClassMeta* owner = propertyPair.second.first;
+        PropertyMeta* propertyMeta = propertyPair.second.second;
 
-            if (owner != meta) {
-                _buffer << " // inherited from " << localizeReference(*owner);
-            }
-
-            _buffer << std::endl;
+        bool isDuplicated = ownProperties.find(propertyMeta->jsName) != ownProperties.end();
+        if (immediateProtocols.find(reinterpret_cast<ProtocolMeta*>(owner)) != immediateProtocols.end() && !isDuplicated) {
+            this->writeProperty(propertyMeta, owner, meta, baseClassProperties);
         }
     }
 
@@ -186,7 +185,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     }
 
     for (auto& methodPair : compoundInstanceMethods) {
-        if (compoundProperties.find(methodPair.first) != compoundProperties.end() || methodPair.second.second->getFlags(MethodIsInitializer)) {
+        if (ownProperties.find(methodPair.first) != ownProperties.end() || methodPair.second.second->getFlags(MethodIsInitializer)) {
             continue;
         }
 
@@ -199,6 +198,29 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     }
 
     _buffer << "}" << std::endl;
+}
+
+void DefinitionWriter::writeProperty(PropertyMeta* propertyMeta, BaseClassMeta* owner, InterfaceMeta* target, CompoundMemberMap<PropertyMeta> baseClassProperties) {
+    _buffer << std::endl
+            << _docSet.getCommentFor(propertyMeta, owner).toString("\t");
+    _buffer << "\t";
+
+    if (!propertyMeta->setter) {
+        _buffer << "/* readonly */ ";
+    }
+
+    bool optOutTypeChecking = false;
+    auto result = baseClassProperties.find(propertyMeta->jsName);
+    if (result != baseClassProperties.end()) {
+        optOutTypeChecking = result->second.second->getter->signature[0] != propertyMeta->getter->signature[0];
+    }
+    _buffer << writeProperty(propertyMeta, target, optOutTypeChecking);
+
+    if (owner != target) {
+        _buffer << " // inherited from " << localizeReference(*owner);
+    }
+
+    _buffer << std::endl;
 }
 
 void DefinitionWriter::getMembersRecursive(ProtocolMeta* protocolMeta,
@@ -244,9 +266,14 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
             << _docSet.getCommentFor(meta).toString("");
 
     _buffer << "interface " << meta->jsName;
+    std::map<std::string, PropertyMeta*> conformedProtocolsProperties;
     if (meta->protocols.size()) {
         _buffer << " extends ";
         for (size_t i = 0; i < meta->protocols.size(); i++) {
+            std::transform(meta->protocols[i]->properties.begin(), meta->protocols[i]->properties.end(), std::inserter(conformedProtocolsProperties, conformedProtocolsProperties.end()), [](PropertyMeta* propertyMeta) {
+                return std::make_pair(propertyMeta->jsName, propertyMeta);
+            });
+
             _buffer << localizeReference(*meta->protocols[i]);
             if (i < meta->protocols.size() - 1) {
                 _buffer << ", ";
@@ -256,8 +283,9 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
     _buffer << " {" << std::endl;
 
     for (PropertyMeta* property : meta->properties) {
+        bool optOutTypeChecking = conformedProtocolsProperties.find(property->jsName) != conformedProtocolsProperties.end();
         _buffer << std::endl
-                << _docSet.getCommentFor(property, meta).toString("\t") << "\t" << writeProperty(property, meta) << std::endl;
+                << _docSet.getCommentFor(property, meta).toString("\t") << "\t" << writeProperty(property, meta, optOutTypeChecking) << std::endl;
     }
 
     for (MethodMeta* method : meta->instanceMethods) {
@@ -399,15 +427,20 @@ std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_t
     return output.str();
 }
 
-std::string DefinitionWriter::writeProperty(PropertyMeta* meta, BaseClassMeta* owner)
-{
+std::string DefinitionWriter::writeProperty(PropertyMeta* meta, BaseClassMeta* owner, bool optOutTypeChecking) {
     std::ostringstream output;
 
     output << meta->jsName;
     if (owner->is(MetaType::Protocol) && clang::dyn_cast<clang::ObjCPropertyDecl>(meta->declaration)->getPropertyImplementation() == clang::ObjCPropertyDecl::PropertyControl::Optional) {
         output << "?";
     }
-    output << ": " << tsifyType(*meta->getter->signature[0]) << ";";
+
+    std::string returnType = tsifyType(*meta->getter->signature[0]);
+    if (optOutTypeChecking) {
+        output << ": any; /*" << returnType << " */";
+    } else {
+        output << ": " << returnType << ";";
+    }
 
     return output.str();
 }
