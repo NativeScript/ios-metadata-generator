@@ -81,30 +81,18 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     }
 
     std::set<ProtocolMeta*> inheritedProtocols;
-    if (meta->base != nullptr) {
-        InterfaceMeta* baseClass = meta->base;
 
-        for (MethodMeta* method : baseClass->staticMethods) {
-            if (compoundStaticMethods.find(method->jsName) == compoundStaticMethods.end()) {
-                compoundStaticMethods.emplace(method->jsName, std::make_pair(baseClass, method));
-            }
+    CompoundMemberMap<MethodMeta> inheritedStaticMethods;
+    getInheritedMembersRecursive(meta, &inheritedStaticMethods, NULL, NULL);
+    for (auto& methodPair : inheritedStaticMethods) {
+        MethodMeta* method = methodPair.second.second;
+        if (!method->signature[0]->is(TypeInstancetype)) {
+            continue;
         }
-
-        for (PropertyMeta* property : baseClass->properties) {
-            if (baseClassProperties.find(property->jsName) == baseClassProperties.end()) {
-                baseClassProperties.emplace(property->jsName, std::make_pair(baseClass, property));
-            }
+        if (compoundStaticMethods.find(method->jsName) != compoundStaticMethods.end()) {
+            continue;
         }
-
-        for (MethodMeta* method : baseClass->instanceMethods) {
-            if (compoundInstanceMethods.find(method->jsName) == compoundInstanceMethods.end()) {
-                compoundInstanceMethods.emplace(method->jsName, std::make_pair(baseClass, method));
-            }
-        }
-
-        for (ProtocolMeta* protocol : baseClass->protocols) {
-            getMembersRecursive(protocol, &compoundStaticMethods, &baseClassProperties, &compoundInstanceMethods, inheritedProtocols);
-        }
+        compoundStaticMethods.emplace(methodPair);
     }
 
     _buffer << std::endl
@@ -118,7 +106,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     if (meta->protocols.size()) {
         _buffer << " implements ";
         for (size_t i = 0; i < meta->protocols.size(); i++) {
-            getMembersRecursive(meta->protocols[i], &compoundStaticMethods, &protocolInheritedProperties, &compoundInstanceMethods, protocols);
+            getProtocolMembersRecursive(meta->protocols[i], &compoundStaticMethods, &protocolInheritedProperties, &compoundInstanceMethods, protocols);
             _buffer << localizeReference(*meta->protocols[i]);
             if (i < meta->protocols.size() - 1) {
                 _buffer << ", ";
@@ -168,7 +156,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     auto objectAtIndexedSubscript = compoundInstanceMethods.find("objectAtIndexedSubscript");
     if (objectAtIndexedSubscript != compoundInstanceMethods.end()) {
         const Type* retType = objectAtIndexedSubscript->second.second->signature[0];
-        std::string indexerReturnType = computeMethodReturnType(retType, meta);
+        std::string indexerReturnType = computeMethodReturnType(retType, meta, true);
         _buffer << "\t[index: number]: " << indexerReturnType << ";" << std::endl;
     }
 
@@ -185,11 +173,15 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     }
 
     for (auto& methodPair : compoundInstanceMethods) {
-        if (ownProperties.find(methodPair.first) != ownProperties.end() || methodPair.second.second->getFlags(MethodIsInitializer)) {
+        if (ownProperties.find(methodPair.first) != ownProperties.end()) {
             continue;
         }
 
-        std::string output = writeMethod(methodPair, meta, immediateProtocols);
+//        if (methodPair.second.second->getFlags(MethodIsInitializer)) {
+//            continue;
+//        }
+
+        std::string output = writeMethod(methodPair, meta, immediateProtocols, true);
         if (output.size()) {
             _buffer << std::endl
                     << _docSet.getCommentFor(methodPair.second.second, methodPair.second.first).toString("\t");
@@ -223,7 +215,50 @@ void DefinitionWriter::writeProperty(PropertyMeta* propertyMeta, BaseClassMeta* 
     _buffer << std::endl;
 }
 
-void DefinitionWriter::getMembersRecursive(ProtocolMeta* protocolMeta,
+void DefinitionWriter::getInheritedMembersRecursive(InterfaceMeta* interface,
+    CompoundMemberMap<MethodMeta>* staticMethods,
+    CompoundMemberMap<PropertyMeta>* properties,
+    CompoundMemberMap<MethodMeta>* instanceMethods)
+{
+    auto base = interface->base;
+    if (!base) {
+        return;
+    }
+
+    if (staticMethods) {
+        for (MethodMeta* method : base->staticMethods) {
+            if (staticMethods->find(method->jsName) == staticMethods->end()) {
+                staticMethods->emplace(method->jsName, std::make_pair(base, method));
+            }
+        }
+    }
+
+    if (properties) {
+        for (PropertyMeta* property : base->properties) {
+            if (properties->find(property->jsName) == properties->end()) {
+                properties->emplace(property->jsName, std::make_pair(base, property));
+            }
+        }
+    }
+
+    if (instanceMethods) {
+        for (MethodMeta* method : base->instanceMethods) {
+            if (instanceMethods->find(method->jsName) == instanceMethods->end()) {
+                instanceMethods->emplace(method->jsName, std::make_pair(base, method));
+            }
+        }
+    }
+
+    // accumulate...
+    std::set<ProtocolMeta*> protocols;
+    for(auto protocol : base->protocols) {
+        getProtocolMembersRecursive(protocol, staticMethods, properties, instanceMethods, protocols);
+    }
+
+    getInheritedMembersRecursive(base, staticMethods, properties, instanceMethods);
+}
+
+void DefinitionWriter::getProtocolMembersRecursive(ProtocolMeta* protocolMeta,
     CompoundMemberMap<MethodMeta>* staticMethods,
     CompoundMemberMap<PropertyMeta>* properties,
     CompoundMemberMap<MethodMeta>* instanceMethods,
@@ -256,7 +291,7 @@ void DefinitionWriter::getMembersRecursive(ProtocolMeta* protocolMeta,
     }
 
     for (ProtocolMeta* protocol : protocolMeta->protocols) {
-        getMembersRecursive(protocol, staticMethods, properties, instanceMethods, visitedProtocols);
+        getProtocolMembersRecursive(protocol, staticMethods, properties, instanceMethods, visitedProtocols);
     }
 }
 
@@ -309,7 +344,7 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
 
     std::set<ProtocolMeta*> protocols;
     for (ProtocolMeta* protocol : meta->protocols) {
-        getMembersRecursive(protocol, &compoundStaticMethods, nullptr, nullptr, protocols);
+        getProtocolMembersRecursive(protocol, &compoundStaticMethods, nullptr, nullptr, protocols);
     }
 
     for (auto& methodPair : compoundStaticMethods) {
@@ -356,7 +391,7 @@ std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMet
     return output.str();
 }
 
-std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner)
+std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner, bool canUseThisType)
 {
     const clang::ObjCMethodDecl& methodDecl = *clang::dyn_cast<clang::ObjCMethodDecl>(meta->declaration);
     auto parameters = methodDecl.parameters();
@@ -399,11 +434,11 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
             output << ", ";
         }
     }
-    output << "): " << computeMethodReturnType(retType, owner) << ";";
+    output << "): " << computeMethodReturnType(retType, owner, canUseThisType) << ";";
     return output.str();
 }
 
-std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_type& methodPair, BaseClassMeta* owner, const std::set<ProtocolMeta*>& protocols)
+std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_type& methodPair, BaseClassMeta* owner, const std::set<ProtocolMeta*>& protocols, bool canUseThisType)
 {
     std::ostringstream output;
 
@@ -414,12 +449,13 @@ std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_t
         return std::string();
     }
 
-    if (memberOwner == owner
-        || protocols.find(static_cast<ProtocolMeta*>(memberOwner)) != protocols.end()
-        || method->signature[0]->is(TypeInstancetype)) {
+    bool isOwnMethod = memberOwner == owner;
+    bool implementsProtocol = protocols.find(static_cast<ProtocolMeta*>(memberOwner)) != protocols.end();
+    bool returnsInstanceType = method->signature[0]->is(TypeInstancetype);
 
-        output << writeMethod(method, owner);
-        if (memberOwner != owner) {
+    if (isOwnMethod || implementsProtocol || returnsInstanceType) {
+        output << writeMethod(method, owner, canUseThisType);
+        if (!isOwnMethod && !implementsProtocol) {
             output << " // inherited from " << localizeReference(memberOwner->jsName, memberOwner->module->getFullModuleName());
         }
     }
@@ -429,6 +465,10 @@ std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_t
 
 std::string DefinitionWriter::writeProperty(PropertyMeta* meta, BaseClassMeta* owner, bool optOutTypeChecking) {
     std::ostringstream output;
+
+    if (hiddenMethods.find(meta->jsName) != hiddenMethods.end()) {
+        return std::string();
+    }
 
     output << meta->jsName;
     if (owner->is(MetaType::Protocol) && clang::dyn_cast<clang::ObjCPropertyDecl>(meta->declaration)->getPropertyImplementation() == clang::ObjCPropertyDecl::PropertyControl::Optional) {
@@ -623,7 +663,11 @@ std::string DefinitionWriter::tsifyType(const Type& type)
     case TypeId: {
         const IdType& idType = type.as<IdType>();
         if (idType.protocols.size() == 1) {
-            return localizeReference(*idType.protocols[0]);
+            std::string protocol = localizeReference(*idType.protocols[0]);
+            // We pass string to be marshalled to NSString which conforms to NSCopying. NSCopying is tricky.
+            if (protocol != "NSCopying") {
+                return protocol;
+            }
         }
         return "any";
     }
@@ -633,7 +677,7 @@ std::string DefinitionWriter::tsifyType(const Type& type)
         return "interop.Reference<" + tsifyType(*type.as<IncompleteArrayType>().innerType) + ">";
     case TypePointer: {
         const PointerType& pointerType = type.as<PointerType>();
-        return (pointerType.innerType->is(TypeVoid)) ? "interop.Pointer" : "interop.Reference<" + tsifyType(*pointerType.innerType) + ">";
+        return (pointerType.innerType->is(TypeVoid)) ? "interop.Pointer | interop.Reference<any>" : "interop.Pointer | interop.Reference<" + tsifyType(*pointerType.innerType) + ">";
     }
     case TypeBlock:
         return writeFunctionProto(type.as<BlockType>().signature);
@@ -654,7 +698,7 @@ std::string DefinitionWriter::tsifyType(const Type& type)
             return "string";
         }
         else if (interface.name == "NSDate") {
-            return "Date";
+            return "NSDate";
         }
 
         std::ostringstream output;
@@ -719,13 +763,17 @@ std::string DefinitionWriter::tsifyType(const Type& type)
     return "";
 }
 
-std::string DefinitionWriter::computeMethodReturnType(const Type* retType, const BaseClassMeta* owner)
+std::string DefinitionWriter::computeMethodReturnType(const Type* retType, const BaseClassMeta* owner, bool instanceMember)
 {
     std::ostringstream output;
     if (retType->is(TypeInstancetype)) {
-        output << owner->jsName;
-        if (owner->is(MetaType::Interface)) {
-            output << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
+        if (instanceMember) {
+            output << "this";
+        } else {
+            output << owner->jsName;
+            if (owner->is(MetaType::Interface)) {
+                output << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
+            }
         }
     }
     else {

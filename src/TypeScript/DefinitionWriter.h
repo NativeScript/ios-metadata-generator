@@ -48,7 +48,12 @@ private:
     void writeMembers(const std::vector<Meta::RecordField>& fields, std::vector<TSComment> fieldsComments);
     void writeProperty(Meta::PropertyMeta* meta, Meta::BaseClassMeta* owner, Meta::InterfaceMeta* target, CompoundMemberMap<Meta::PropertyMeta> compoundProperties);
 
-    static void getMembersRecursive(Meta::ProtocolMeta* protocol,
+    static void getInheritedMembersRecursive(Meta::InterfaceMeta* interface,
+        CompoundMemberMap<Meta::MethodMeta>* staticMethods,
+        CompoundMemberMap<Meta::PropertyMeta>* properties,
+        CompoundMemberMap<Meta::MethodMeta>* instanceMethods);
+
+    static void getProtocolMembersRecursive(Meta::ProtocolMeta* protocol,
         CompoundMemberMap<Meta::MethodMeta>* staticMethods,
         CompoundMemberMap<Meta::PropertyMeta>* properties,
         CompoundMemberMap<Meta::MethodMeta>* instanceMethods,
@@ -56,15 +61,15 @@ private:
 
     static std::string writeConstructor(const CompoundMemberMap<Meta::MethodMeta>::value_type& initializer,
         const Meta::BaseClassMeta* owner);
-    static std::string writeMethod(Meta::MethodMeta* meta, Meta::BaseClassMeta* owner);
+    static std::string writeMethod(Meta::MethodMeta* meta, Meta::BaseClassMeta* owner, bool canUseThisType = false);
     static std::string writeMethod(CompoundMemberMap<Meta::MethodMeta>::value_type& method, Meta::BaseClassMeta* owner,
-        const std::set<Meta::ProtocolMeta*>& protocols);
-    static std::string writeProperty(Meta::PropertyMeta* meta, Meta::BaseClassMeta* owner, bool optOutTypeChecking = false);
+        const std::set<Meta::ProtocolMeta*>& protocols, bool canUseThisType = false);
+    static std::string writeProperty(Meta::PropertyMeta* meta, Meta::BaseClassMeta* owner, bool optOutTypeChecking);
     static std::string writeFunctionProto(const std::vector<Meta::Type*>& signature);
     static std::string localizeReference(const std::string& jsName, std::string moduleName);
     static std::string localizeReference(const Meta::Meta& meta);
     static std::string tsifyType(const Meta::Type& type);
-    static std::string computeMethodReturnType(const Meta::Type* retType, const Meta::BaseClassMeta* owner);
+    static std::string computeMethodReturnType(const Meta::Type* retType, const Meta::BaseClassMeta* owner, bool canUseThisType = false);
     std::string getTypeArgumentsStringOrEmpty(const clang::ObjCObjectType* objectType);
 
     static bool hasClosedGenerics(const Meta::Type& type);
