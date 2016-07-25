@@ -698,7 +698,7 @@ std::string DefinitionWriter::tsifyType(const Type& type)
             return "string";
         }
         else if (interface.name == "NSDate") {
-            return "NSDate";
+            return "Date";
         }
 
         std::ostringstream output;
