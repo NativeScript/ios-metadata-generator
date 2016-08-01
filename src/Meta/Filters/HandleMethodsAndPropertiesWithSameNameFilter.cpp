@@ -2,10 +2,12 @@
 
 namespace Meta {
 HandleMethodsAndPropertiesWithSameNameFilter::HandleMethodsAndPropertiesWithSameNameFilter(MetaFactory& metaFactory)
-    : m_metaFactory(metaFactory) {
+    : m_metaFactory(metaFactory)
+{
 }
 
-void HandleMethodsAndPropertiesWithSameNameFilter::filter(std::list<Meta*>& container) {
+void HandleMethodsAndPropertiesWithSameNameFilter::filter(std::list<Meta*>& container)
+{
     for (Meta* meta : container) {
         if (meta->is(MetaType::Interface)) {
             const clang::ObjCInterfaceDecl* decl = clang::cast<clang::ObjCInterfaceDecl>(meta->declaration);
@@ -25,7 +27,8 @@ void HandleMethodsAndPropertiesWithSameNameFilter::filter(std::list<Meta*>& cont
     }
 }
 
-void HandleMethodsAndPropertiesWithSameNameFilter::replaceMethodWithPropertyIfNecessary(clang::ObjCMethodDecl* duplicateMethod, clang::ObjCPropertyDecl* propertyDecl) {
+void HandleMethodsAndPropertiesWithSameNameFilter::replaceMethodWithPropertyIfNecessary(clang::ObjCMethodDecl* duplicateMethod, clang::ObjCPropertyDecl* propertyDecl)
+{
     if (duplicateMethod && !duplicateMethod->isPropertyAccessor()) {
         clang::Decl* parent_decl = clang::dyn_cast<clang::Decl>(duplicateMethod->getParent());
 

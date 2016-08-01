@@ -1,12 +1,12 @@
 #pragma once
 
-#include <iostream>
-#include <clang/Frontend/ASTUnit.h>
-#include <clang/Lex/Preprocessor.h>
-#include <clang/Lex/HeaderSearch.h>
-#include <clang/AST/RecursiveASTVisitor.h>
-#include "MetaFactory.h"
 #include "CreationException.h"
+#include "MetaFactory.h"
+#include <clang/AST/RecursiveASTVisitor.h>
+#include <clang/Frontend/ASTUnit.h>
+#include <clang/Lex/HeaderSearch.h>
+#include <clang/Lex/Preprocessor.h>
+#include <iostream>
 
 namespace Meta {
 class DeclarationConverterVisitor : public clang::RecursiveASTVisitor<DeclarationConverterVisitor> {
@@ -53,8 +53,7 @@ private:
             Meta* meta = this->_metaFactory.create(*decl);
             _metaContainer.push_back(meta);
             //std::cout << "Included: " << meta->jsName << " from " << meta->module->getFullModuleName() << std::endl;
-        }
-        catch (MetaCreationException& e) {
+        } catch (MetaCreationException& e) {
             //if(e.isError())
             //std::cout << e.getDetailedMessage() << std::endl;
         }

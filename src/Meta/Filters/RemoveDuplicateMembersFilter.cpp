@@ -24,11 +24,11 @@ static void removeDuplicateMethods(std::vector<MethodMeta*>& from, std::vector<M
 {
     for (MethodMeta* dupMethod : duplicates) {
         from.erase(std::remove_if(from.begin(),
-                                  from.end(),
-                                  [&](MethodMeta* method) {
-                                          return areMethodsEqual(*method, *dupMethod);
-                   }),
-                   from.end());
+                       from.end(),
+                       [&](MethodMeta* method) {
+                           return areMethodsEqual(*method, *dupMethod);
+                       }),
+            from.end());
     }
 }
 
@@ -36,11 +36,11 @@ static void removeDuplicateProperties(std::vector<PropertyMeta*>& from, std::vec
 {
     for (PropertyMeta* dupProperty : duplicates) {
         from.erase(std::remove_if(from.begin(),
-                                  from.end(),
-                                  [&](PropertyMeta* property) {
-                                          return arePropertiesEqual(*property, *dupProperty);
-                   }),
-                   from.end());
+                       from.end(),
+                       [&](PropertyMeta* property) {
+                           return arePropertiesEqual(*property, *dupProperty);
+                       }),
+            from.end());
     }
 }
 

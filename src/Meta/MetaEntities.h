@@ -1,16 +1,16 @@
 #pragma once
 
-#include <string>
-#include <vector>
-#include <map>
-#include <unordered_map>
-#include <iostream>
-#include <llvm/ADT/iterator_range.h>
+#include "MetaVisitor.h"
+#include "TypeEntities.h"
+#include "Utils/Noncopyable.h"
 #include <clang/AST/DeclBase.h>
 #include <clang/Basic/Module.h>
-#include "TypeEntities.h"
-#include "MetaVisitor.h"
-#include "Utils/Noncopyable.h"
+#include <iostream>
+#include <llvm/ADT/iterator_range.h>
+#include <map>
+#include <string>
+#include <unordered_map>
+#include <vector>
 
 #define UNKNOWN_VERSION \
     {                   \
@@ -93,8 +93,7 @@ public:
     {
         if (value) {
             this->flags = static_cast<MetaFlags>(this->flags | flags);
-        }
-        else {
+        } else {
             this->flags = static_cast<MetaFlags>(this->flags & ~flags);
         }
     }

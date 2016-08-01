@@ -1,5 +1,5 @@
-#include <vector>
 #include "memoryStream.h"
+#include <vector>
 
 unsigned long utils::MemoryStream::size()
 {

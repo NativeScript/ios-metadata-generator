@@ -1,15 +1,15 @@
 #pragma once
 
-#include <clang/Frontend/ASTUnit.h>
-#include <clang/Lex/Preprocessor.h>
-#include <clang/Lex/HeaderSearch.h>
-#include <clang/AST/RecursiveASTVisitor.h>
 #include "MetaEntities.h"
 #include "TypeFactory.h"
 #include "Utils/Noncopyable.h"
+#include <clang/AST/RecursiveASTVisitor.h>
+#include <clang/Frontend/ASTUnit.h>
+#include <clang/Lex/HeaderSearch.h>
+#include <clang/Lex/Preprocessor.h>
 
 namespace Meta {
-typedef std::unordered_map<const clang::Decl*, std::pair<std::unique_ptr<Meta>, std::string>> Cache;
+typedef std::unordered_map<const clang::Decl*, std::pair<std::unique_ptr<Meta>, std::string> > Cache;
 
 class MetaFactory {
 public:
@@ -29,7 +29,8 @@ public:
         return this->_typeFactory;
     }
 
-    Cache& getCache() {
+    Cache& getCache()
+    {
         return this->_cache;
     }
 

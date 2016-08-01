@@ -1,11 +1,11 @@
 #pragma once
 
-#include <string>
-#include <sstream>
-#include <unordered_set>
-#include <Meta/TypeFactory.h>
-#include "Meta/MetaEntities.h"
 #include "DocSetManager.h"
+#include "Meta/MetaEntities.h"
+#include <Meta/TypeFactory.h>
+#include <sstream>
+#include <string>
+#include <unordered_set>
 
 namespace TypeScript {
 class DefinitionWriter : Meta::MetaVisitor {

@@ -1,20 +1,20 @@
-#include <llvm/Support/Debug.h>
-#include <clang/Tooling/Tooling.h>
-#include <clang/Frontend/CompilerInstance.h>
-#include <sstream>
-#include <fstream>
-#include <pwd.h>
+#include "Binary/binarySerializer.h"
 #include "HeadersParser/Parser.h"
 #include "Meta/DeclarationConverterVisitor.h"
 #include "Meta/Filters/HandleExceptionalMetasFilter.h"
+#include "Meta/Filters/HandleMethodsAndPropertiesWithSameNameFilter.h"
 #include "Meta/Filters/MergeCategoriesFilter.h"
 #include "Meta/Filters/RemoveDuplicateMembersFilter.h"
 #include "Meta/Filters/ResolveGlobalNamesCollisionsFilter.h"
-#include "Meta/Filters/HandleMethodsAndPropertiesWithSameNameFilter.h"
-#include "Yaml/YamlSerializer.h"
-#include "Binary/binarySerializer.h"
 #include "TypeScript/DefinitionWriter.h"
 #include "TypeScript/DocSetManager.h"
+#include "Yaml/YamlSerializer.h"
+#include <clang/Frontend/CompilerInstance.h>
+#include <clang/Tooling/Tooling.h>
+#include <fstream>
+#include <llvm/Support/Debug.h>
+#include <pwd.h>
+#include <sstream>
 
 // Command line parameters
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));

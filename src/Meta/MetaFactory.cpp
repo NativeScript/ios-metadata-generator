@@ -1,8 +1,8 @@
 #include "MetaFactory.h"
-#include <sstream>
-#include "Utils.h"
 #include "CreationException.h"
+#include "Utils.h"
 #include "Utils/StringUtils.h"
+#include <sstream>
 
 using namespace std;
 
@@ -71,66 +71,54 @@ Meta* MetaFactory::create(const clang::Decl& decl)
             metaPtr.reset(new FunctionMeta());
             populateIdentificationFields(*function, *metaPtr.get());
             createFromFunction(*function, metaPtr.get()->as<FunctionMeta>());
-        }
-        else if (const clang::RecordDecl* record = clang::dyn_cast<clang::RecordDecl>(&decl)) {
+        } else if (const clang::RecordDecl* record = clang::dyn_cast<clang::RecordDecl>(&decl)) {
             if (record->isStruct()) {
                 metaPtr.reset(new StructMeta());
                 populateIdentificationFields(*record, *metaPtr.get());
                 createFromStruct(*record, metaPtr.get()->as<StructMeta>());
-            }
-            else {
+            } else {
                 metaPtr.reset(new UnionMeta());
                 populateIdentificationFields(*record, *metaPtr.get());
                 throw MetaCreationException(metaPtr.get(), "The record is union.", false);
             }
-        }
-        else if (const clang::VarDecl* var = clang::dyn_cast<clang::VarDecl>(&decl)) {
+        } else if (const clang::VarDecl* var = clang::dyn_cast<clang::VarDecl>(&decl)) {
             metaPtr.reset(new VarMeta());
             populateIdentificationFields(*var, *metaPtr.get());
             createFromVar(*var, metaPtr.get()->as<VarMeta>());
-        }
-        else if (const clang::EnumDecl* enumDecl = clang::dyn_cast<clang::EnumDecl>(&decl)) {
+        } else if (const clang::EnumDecl* enumDecl = clang::dyn_cast<clang::EnumDecl>(&decl)) {
             metaPtr.reset(new EnumMeta());
             populateIdentificationFields(*enumDecl, *metaPtr.get());
             createFromEnum(*enumDecl, metaPtr.get()->as<EnumMeta>());
-        }
-        else if (const clang::EnumConstantDecl* enumConstantDecl = clang::dyn_cast<clang::EnumConstantDecl>(&decl)) {
+        } else if (const clang::EnumConstantDecl* enumConstantDecl = clang::dyn_cast<clang::EnumConstantDecl>(&decl)) {
             metaPtr.reset(new EnumConstantMeta());
             populateIdentificationFields(*enumConstantDecl, *metaPtr.get());
             createFromEnumConstant(*enumConstantDecl, metaPtr.get()->as<EnumConstantMeta>());
-        }
-        else if (const clang::ObjCInterfaceDecl* interface = clang::dyn_cast<clang::ObjCInterfaceDecl>(&decl)) {
+        } else if (const clang::ObjCInterfaceDecl* interface = clang::dyn_cast<clang::ObjCInterfaceDecl>(&decl)) {
             metaPtr.reset(new InterfaceMeta());
             populateIdentificationFields(*interface, *metaPtr.get());
             createFromInterface(*interface, metaPtr.get()->as<InterfaceMeta>());
-        }
-        else if (const clang::ObjCProtocolDecl* protocol = clang::dyn_cast<clang::ObjCProtocolDecl>(&decl)) {
+        } else if (const clang::ObjCProtocolDecl* protocol = clang::dyn_cast<clang::ObjCProtocolDecl>(&decl)) {
             metaPtr.reset(new ProtocolMeta());
             populateIdentificationFields(*protocol, *metaPtr.get());
             createFromProtocol(*protocol, metaPtr.get()->as<ProtocolMeta>());
-        }
-        else if (const clang::ObjCCategoryDecl* category = clang::dyn_cast<clang::ObjCCategoryDecl>(&decl)) {
+        } else if (const clang::ObjCCategoryDecl* category = clang::dyn_cast<clang::ObjCCategoryDecl>(&decl)) {
             metaPtr.reset(new CategoryMeta());
             populateIdentificationFields(*category, *metaPtr.get());
             createFromCategory(*category, metaPtr.get()->as<CategoryMeta>());
-        }
-        else if (const clang::ObjCMethodDecl* method = clang::dyn_cast<clang::ObjCMethodDecl>(&decl)) {
+        } else if (const clang::ObjCMethodDecl* method = clang::dyn_cast<clang::ObjCMethodDecl>(&decl)) {
             metaPtr.reset(new MethodMeta());
             populateIdentificationFields(*method, *metaPtr.get());
             createFromMethod(*method, metaPtr.get()->as<MethodMeta>());
-        }
-        else if (const clang::ObjCPropertyDecl* property = clang::dyn_cast<clang::ObjCPropertyDecl>(&decl)) {
+        } else if (const clang::ObjCPropertyDecl* property = clang::dyn_cast<clang::ObjCPropertyDecl>(&decl)) {
             metaPtr.reset(new PropertyMeta());
             populateIdentificationFields(*property, *metaPtr.get());
             createFromProperty(*property, metaPtr.get()->as<PropertyMeta>());
-        }
-        else {
+        } else {
             throw logic_error("Unknown declaration type.");
         }
 
         return metaPtr.get();
-    }
-    catch (MetaCreationException& e) {
+    } catch (MetaCreationException& e) {
         if (e.getMeta() == metaPtr.get()) {
             insertionResult.first->second.second = e.getMessage();
             throw;
@@ -138,8 +126,7 @@ Meta* MetaFactory::create(const clang::Decl& decl)
         std::string message = CreationException::constructMessage("Can't create meta dependency.", e.getDetailedMessage());
         insertionResult.first->second.second = message;
         throw MetaCreationException(metaPtr.get(), message, e.isError());
-    }
-    catch (TypeCreationException& e) {
+    } catch (TypeCreationException& e) {
         std::string message = CreationException::constructMessage("Can't create type dependency.", e.getDetailedMessage());
         insertionResult.first->second.second = message;
         throw MetaCreationException(metaPtr.get(), message, e.isError());
@@ -154,8 +141,7 @@ bool MetaFactory::tryCreate(const clang::Decl& decl, Meta** meta)
             *meta = result;
         }
         return true;
-    }
-    catch (CreationException& e) {
+    } catch (CreationException& e) {
         return false;
     }
 }
@@ -191,8 +177,7 @@ void MetaFactory::createFromFunction(const clang::FunctionDecl& function, Functi
             if (functionName.find("Create") != string::npos || functionName.find("Copy") != string::npos) {
                 returnsRetained = true;
             }
-        }
-        else {
+        } else {
             functionMeta.setFlags(MetaFlags::FunctionReturnsUnmanaged, true);
         }
     }
@@ -503,11 +488,9 @@ void MetaFactory::populateIdentificationFields(const clang::NamedDecl& decl, Met
     if (!meta.is(MetaType::Category)) {
         if (meta.fileName == "") {
             throw MetaCreationException(&meta, "Unknown file for declaration.", true);
-        }
-        else if (meta.module == nullptr) {
+        } else if (meta.module == nullptr) {
             throw MetaCreationException(&meta, "Unknown module for declaration.", false);
-        }
-        else if (meta.jsName == "") {
+        } else if (meta.jsName == "") {
             throw MetaCreationException(&meta, "Anonymous declaration. Unable to calculate JS name.", false);
         }
     }
@@ -527,8 +510,7 @@ void MetaFactory::populateMetaFields(const clang::NamedDecl& decl, Meta& meta)
         string platform = availability->getPlatform()->getName().str();
         if (platform == string("ios")) {
             iosAvailability = availability;
-        }
-        else if (platform == string("ios_app_extension")) {
+        } else if (platform == string("ios_app_extension")) {
             iosExtensionsAvailability = availability;
         }
     }

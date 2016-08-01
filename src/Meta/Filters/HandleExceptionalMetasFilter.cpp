@@ -1,5 +1,5 @@
-#include <Meta/TypeFactory.h>
 #include "HandleExceptionalMetasFilter.h"
+#include <Meta/TypeFactory.h>
 
 namespace Meta {
 
@@ -24,7 +24,8 @@ static void handleUIResponderStandardEditActions(std::list<Meta*>& container)
             auto& methods = meta->as<BaseClassMeta>().instanceMethods;
             methods.erase(std::remove_if(methods.begin(), methods.end(), [](const MethodMeta* m) {
                 return m->jsName == "copy";
-            }), methods.end());
+            }),
+                methods.end());
 
             break;
         }
@@ -33,7 +34,8 @@ static void handleUIResponderStandardEditActions(std::list<Meta*>& container)
 
 // Change the return type of [NSNull null] to instancetype
 // TODO: remove the special handling of [NSNull null] from metadata generator and handle it in the runtime
-static void handleNSNullType(std::list<Meta*>& container) {
+static void handleNSNullType(std::list<Meta*>& container)
+{
     for (Meta* meta : container) {
         if (meta->is(MetaType::Interface) && meta->name == "NSNull" && meta->module->getFullModuleName() == "Foundation.NSNull") {
             InterfaceMeta& nsNullMeta = meta->as<InterfaceMeta>();

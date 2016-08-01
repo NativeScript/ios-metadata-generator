@@ -1,9 +1,9 @@
 #include "DefinitionWriter.h"
-#include <clang/AST/DeclObjC.h>
-#include <algorithm>
-#include <iterator>
 #include "Meta/Utils.h"
 #include "Utils/StringUtils.h"
+#include <algorithm>
+#include <clang/AST/DeclObjC.h>
+#include <iterator>
 
 namespace TypeScript {
 using namespace Meta;
@@ -16,8 +16,7 @@ static std::string sanitizeParameterName(const std::string& parameterName)
 {
     if (bannedIdentifiers.find(parameterName) != bannedIdentifiers.end()) {
         return "_" + parameterName;
-    }
-    else {
+    } else {
         return parameterName;
     }
 }
@@ -194,9 +193,9 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
             continue;
         }
 
-//        if (methodPair.second.second->getFlags(MethodIsInitializer)) {
-//            continue;
-//        }
+        //        if (methodPair.second.second->getFlags(MethodIsInitializer)) {
+        //            continue;
+        //        }
 
         std::string output = writeMethod(methodPair, meta, immediateProtocols, true);
         if (output.size()) {
@@ -209,7 +208,8 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     _buffer << "}" << std::endl;
 }
 
-void DefinitionWriter::writeProperty(PropertyMeta* propertyMeta, BaseClassMeta* owner, InterfaceMeta* target, CompoundMemberMap<PropertyMeta> baseClassProperties) {
+void DefinitionWriter::writeProperty(PropertyMeta* propertyMeta, BaseClassMeta* owner, InterfaceMeta* target, CompoundMemberMap<PropertyMeta> baseClassProperties)
+{
     _buffer << std::endl
             << _docSet.getCommentFor(propertyMeta, owner).toString("\t");
     _buffer << "\t";
@@ -268,7 +268,7 @@ void DefinitionWriter::getInheritedMembersRecursive(InterfaceMeta* interface,
 
     // accumulate...
     std::set<ProtocolMeta*> protocols;
-    for(auto protocol : base->protocols) {
+    for (auto protocol : base->protocols) {
         getProtocolMembersRecursive(protocol, staticMethods, properties, instanceMethods, protocols);
     }
 
@@ -388,8 +388,7 @@ std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMet
 
     if (method->constructorTokens == "") {
         output << "constructor();";
-    }
-    else {
+    } else {
         std::vector<std::string> ctorTokens;
         StringUtils::split(method->constructorTokens, ':', std::back_inserter(ctorTokens));
         output << "constructor(o: { ";
@@ -480,7 +479,8 @@ std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_t
     return output.str();
 }
 
-std::string DefinitionWriter::writeProperty(PropertyMeta* meta, BaseClassMeta* owner, bool optOutTypeChecking) {
+std::string DefinitionWriter::writeProperty(PropertyMeta* meta, BaseClassMeta* owner, bool optOutTypeChecking)
+{
     std::ostringstream output;
 
     if (hiddenMethods.find(meta->jsName) != hiddenMethods.end()) {
@@ -718,11 +718,9 @@ std::string DefinitionWriter::tsifyType(const Type& type)
         const InterfaceMeta& interface = type.is(TypeType::TypeInterface) ? *type.as<InterfaceType>().interface : *type.as<BridgedInterfaceType>().bridgedInterface;
         if (interface.name == "NSNumber") {
             return "number";
-        }
-        else if (interface.name == "NSString") {
+        } else if (interface.name == "NSString") {
             return "string";
-        }
-        else if (interface.name == "NSDate") {
+        } else if (interface.name == "NSDate") {
             return "Date";
         }
 
@@ -740,8 +738,7 @@ std::string DefinitionWriter::tsifyType(const Type& type)
                 }
             }
             output << ">";
-        }
-        else {
+        } else {
             // This also translates CFArray to NSArray<any>
             if (auto typeParamList = clang::dyn_cast<clang::ObjCInterfaceDecl>(interface.declaration)->getTypeParamListAsWritten()) {
                 output << "<";
@@ -800,8 +797,7 @@ std::string DefinitionWriter::computeMethodReturnType(const Type* retType, const
                 output << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
             }
         }
-    }
-    else {
+    } else {
         output << tsifyType(*retType);
     }
 

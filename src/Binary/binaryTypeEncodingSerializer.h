@@ -1,9 +1,9 @@
 #pragma once
 
-#include <vector>
 #include "Meta/TypeEntities.h"
 #include "binaryStructures.h"
 #include "binaryWriter.h"
+#include <vector>
 
 using namespace std;
 

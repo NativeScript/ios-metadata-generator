@@ -2,9 +2,9 @@
 // Created by Ivan Buhov on 9/4/15.
 //
 #pragma once
-#include <string>
 #include "MetaEntities.h"
 #include "TypeEntities.h"
+#include <string>
 
 namespace Meta {
 class CreationException {

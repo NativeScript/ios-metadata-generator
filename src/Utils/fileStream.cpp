@@ -19,7 +19,7 @@ unsigned long utils::FileStream::size()
 
 uint8_t utils::FileStream::read_byte()
 {
-    return (uint8_t) this->file.get();
+    return (uint8_t)this->file.get();
 }
 
 void utils::FileStream::push_byte(uint8_t b)

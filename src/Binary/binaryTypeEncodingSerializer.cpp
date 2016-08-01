@@ -1,6 +1,6 @@
 #include "binaryTypeEncodingSerializer.h"
-#include <llvm/ADT/STLExtras.h>
 #include "../Meta/MetaEntities.h"
+#include <llvm/ADT/STLExtras.h>
 
 binary::MetaFileOffset binary::BinaryTypeEncodingSerializer::visit(std::vector< ::Meta::Type*>& types)
 {
