@@ -201,23 +201,21 @@ static llvm::ErrorOr<bool> isStaticFramework(clang::Module* framework)
         return errc::no_such_file_or_directory;
     }
 
-    ErrorOr<OwningBinary<Binary> > binaryOrErr = createBinary(path);
-    if (std::error_code errorCode = binaryOrErr.getError()) {
-        return errorCode;
-    }
-    Binary& binary = *binaryOrErr.get().getBinary();
+    if (Expected<OwningBinary<Binary> > binaryOrErr = createBinary(path)) {
+        Binary& binary = *binaryOrErr.get().getBinary();
 
-    if (MachOUniversalBinary* machoBinary = dyn_cast<MachOUniversalBinary>(&binary)) {
-        for (const MachOUniversalBinary::ObjectForArch& object : machoBinary->objects()) {
-            if (ErrorOr<std::unique_ptr<MachOObjectFile> > objectFile = object.getAsObjectFile()) {
-                if (MachOObjectFile* machObjectFile = dyn_cast<MachOObjectFile>(objectFile.get().get())) {
-                    uint32_t filetype = (machObjectFile->is64Bit() ? machObjectFile->getHeader64().filetype : machObjectFile->getHeader().filetype);
-                    if (filetype == MachO::MH_DYLIB || filetype == MachO::MH_DYLIB_STUB) {
-                        return false;
+        if (MachOUniversalBinary* machoBinary = dyn_cast<MachOUniversalBinary>(&binary)) {
+            for (const MachOUniversalBinary::ObjectForArch& object : machoBinary->objects()) {
+                if (Expected<std::unique_ptr<MachOObjectFile> > objectFile = object.getAsObjectFile()) {
+                    if (MachOObjectFile* machObjectFile = dyn_cast<MachOObjectFile>(objectFile.get().get())) {
+                        uint32_t filetype = (machObjectFile->is64Bit() ? machObjectFile->getHeader64().filetype : machObjectFile->getHeader().filetype);
+                        if (filetype == MachO::MH_DYLIB || filetype == MachO::MH_DYLIB_STUB) {
+                            return false;
+                        }
                     }
+                } else if (Expected<std::unique_ptr<Archive> > archive = object.getAsArchive()) {
+                    return true;
                 }
-            } else if (ErrorOr<std::unique_ptr<Archive> > archive = object.getAsArchive()) {
-                return true;
             }
         }
     }

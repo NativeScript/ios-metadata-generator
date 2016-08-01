@@ -278,33 +278,7 @@ shared_ptr<Type> TypeFactory::createFromBuiltinType(const clang::BuiltinType* ty
     // The 'SEL' type is represented as pointer to BuiltinType of kind ObjCSel.
     // The 'id' type is actually represented by clang as TypedefType to ObjCObjectPointerType whose pointee is an ObjCObjectType with base BuiltinType::ObjCIdType.
     // This is also valid for ObjCClass type.
-    case clang::BuiltinType::Kind::ObjCSel:
-    case clang::BuiltinType::Kind::ObjCId:
-    case clang::BuiltinType::Kind::ObjCClass:
-    // Not supported types
-    case clang::BuiltinType::Kind::Int128:
-    case clang::BuiltinType::Kind::UInt128:
-    case clang::BuiltinType::Kind::Half:
-    case clang::BuiltinType::Kind::WChar_S:
-    case clang::BuiltinType::Kind::WChar_U:
-    case clang::BuiltinType::Kind::Char16:
-    case clang::BuiltinType::Kind::Char32:
-    case clang::BuiltinType::Kind::NullPtr:
-    case clang::BuiltinType::Kind::Overload:
-    case clang::BuiltinType::Kind::BoundMember:
-    case clang::BuiltinType::Kind::PseudoObject:
-    case clang::BuiltinType::Kind::Dependent:
-    case clang::BuiltinType::Kind::UnknownAny:
-    case clang::BuiltinType::Kind::ARCUnbridgedCast:
-    case clang::BuiltinType::Kind::BuiltinFn:
-    case clang::BuiltinType::Kind::OCLImage1d:
-    case clang::BuiltinType::Kind::OCLImage1dArray:
-    case clang::BuiltinType::Kind::OCLImage1dBuffer:
-    case clang::BuiltinType::Kind::OCLImage2d:
-    case clang::BuiltinType::Kind::OCLImage2dArray:
-    case clang::BuiltinType::Kind::OCLImage3d:
-    case clang::BuiltinType::Kind::OCLSampler:
-    case clang::BuiltinType::Kind::OCLEvent:
+
     default:
         throw TypeCreationException(type, string("Not supported builtin type(") + type->getTypeClassName() + ").", true);
     }

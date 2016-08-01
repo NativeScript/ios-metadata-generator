@@ -145,7 +145,7 @@ int main(int argc, const char** argv)
         "-v",
         "-x", "objective-c",
         "-fno-objc-arc", "-fmodule-maps", "-ferror-limit=0",
-        "-Wno-unknown-pragmas", "-Wno-ignored-attributes"
+        "-Wno-unknown-pragmas", "-Wno-ignored-attributes", "-Wno-nullability-completeness", "-Wno-expansion-to-defined"
     };
 
     // merge with hardcoded clang arguments
@@ -179,7 +179,7 @@ int main(int argc, const char** argv)
     }
 
     // generate metadata for the intermediate sdk header
-    clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", std::make_shared<clang::PCHContainerOperations>());
+    clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", "objc-metadata-generator");
 
     std::clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
