@@ -14,5 +14,6 @@ public:
 private:
     MetaFactory& m_metaFactory;
     void replaceMethodWithPropertyIfNecessary(clang::ObjCMethodDecl* duplicate, clang::ObjCPropertyDecl* propertyDecl);
+    void deleteStaticMethod(const clang::ObjCMethodDecl* duplicateMethod, const clang::ObjCInterfaceDecl* owner);
 };
 }

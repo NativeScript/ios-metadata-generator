@@ -570,10 +570,15 @@ void MetaFactory::populateBaseClassMetaFields(const clang::ObjCContainerDecl& de
     for (clang::ObjCPropertyDecl* property : decl.properties()) {
         Meta* propertyMeta;
         if (this->tryCreate(*property, &propertyMeta)) {
-            baseClass.properties.push_back(&propertyMeta->as<PropertyMeta>());
+            if (!property->isClassProperty()) {
+                baseClass.instanceProperties.push_back(&propertyMeta->as<PropertyMeta>());
+            } else {
+                baseClass.staticProperties.push_back(&propertyMeta->as<PropertyMeta>());
+            }
         }
     }
-    std::sort(baseClass.properties.begin(), baseClass.properties.end(), metasComparerByJsName); // order by jsName
+    std::sort(baseClass.instanceProperties.begin(), baseClass.instanceProperties.end(), metasComparerByJsName); // order by jsName
+    std::sort(baseClass.staticProperties.begin(), baseClass.staticProperties.end(), metasComparerByJsName); // order by jsName
 }
 
 llvm::iterator_range<clang::ObjCProtocolList::iterator> MetaFactory::getProtocols(const clang::ObjCContainerDecl* objCContainer)

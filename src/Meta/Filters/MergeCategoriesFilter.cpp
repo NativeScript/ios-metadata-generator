@@ -28,8 +28,12 @@ void MergeCategoriesFilter::filter(std::list<Meta*>& container)
                 interface.staticMethods.push_back(method);
             }
 
-            for (auto& property : category.properties) {
-                interface.properties.push_back(property);
+            for (auto& property : category.instanceProperties) {
+                interface.instanceProperties.push_back(property);
+            }
+
+            for (auto& property : category.staticProperties) {
+                interface.staticProperties.push_back(property);
             }
 
             for (auto& protocol : category.protocols) {

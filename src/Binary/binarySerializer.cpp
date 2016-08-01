@@ -83,14 +83,24 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta* meta, b
     binaryMetaStruct._staticMethods = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
-    // properties
-    std::sort(meta->properties.begin(), meta->properties.end(), compareMetasByJsName< ::Meta::PropertyMeta>);
-    for (::Meta::PropertyMeta* propertyMeta : meta->properties) {
+    // instance properties
+    std::sort(meta->instanceProperties.begin(), meta->instanceProperties.end(), compareMetasByJsName< ::Meta::PropertyMeta>);
+    for (::Meta::PropertyMeta* propertyMeta : meta->instanceProperties) {
         binary::PropertyMeta binaryMeta;
         this->serializeProperty(propertyMeta, binaryMeta);
         offsets.push_back(binaryMeta.save(this->heapWriter));
     }
-    binaryMetaStruct._properties = this->heapWriter.push_binaryArray(offsets);
+    binaryMetaStruct._instanceProperties = this->heapWriter.push_binaryArray(offsets);
+    offsets.clear();
+
+    // static properties
+    std::sort(meta->staticProperties.begin(), meta->staticProperties.end(), compareMetasByJsName< ::Meta::PropertyMeta>);
+    for (::Meta::PropertyMeta* propertyMeta : meta->staticProperties) {
+        binary::PropertyMeta binaryMeta;
+        this->serializeProperty(propertyMeta, binaryMeta);
+        offsets.push_back(binaryMeta.save(this->heapWriter));
+    }
+    binaryMetaStruct._staticProperties = this->heapWriter.push_binaryArray(offsets);
     offsets.clear();
 
     // protocols

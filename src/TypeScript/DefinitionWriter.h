@@ -50,13 +50,15 @@ private:
 
     static void getInheritedMembersRecursive(Meta::InterfaceMeta* interface,
         CompoundMemberMap<Meta::MethodMeta>* staticMethods,
-        CompoundMemberMap<Meta::PropertyMeta>* properties,
-        CompoundMemberMap<Meta::MethodMeta>* instanceMethods);
+        CompoundMemberMap<Meta::MethodMeta>* instanceMethods,
+        CompoundMemberMap<Meta::PropertyMeta>* staticProperties,
+        CompoundMemberMap<Meta::PropertyMeta>* instanceProperties);
 
     static void getProtocolMembersRecursive(Meta::ProtocolMeta* protocol,
         CompoundMemberMap<Meta::MethodMeta>* staticMethods,
-        CompoundMemberMap<Meta::PropertyMeta>* properties,
         CompoundMemberMap<Meta::MethodMeta>* instanceMethods,
+        CompoundMemberMap<Meta::PropertyMeta>* staticProperties,
+        CompoundMemberMap<Meta::PropertyMeta>* instanceProperties,
         std::set<Meta::ProtocolMeta*>& visitedProtocols);
 
     static std::string writeConstructor(const CompoundMemberMap<Meta::MethodMeta>::value_type& initializer,

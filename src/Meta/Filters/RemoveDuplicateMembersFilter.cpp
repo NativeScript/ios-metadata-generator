@@ -48,7 +48,8 @@ static void removeDuplicateMembersFromChild(BaseClassMeta* child, BaseClassMeta*
 {
     removeDuplicateMethods(child->staticMethods, parent->staticMethods);
     removeDuplicateMethods(child->instanceMethods, parent->instanceMethods);
-    removeDuplicateProperties(child->properties, parent->properties);
+    removeDuplicateProperties(child->instanceProperties, parent->instanceProperties);
+    removeDuplicateProperties(child->staticProperties, parent->staticProperties);
 }
 
 static void processBaseClassAndHierarchyOf(BaseClassMeta* child, BaseClassMeta* parent)

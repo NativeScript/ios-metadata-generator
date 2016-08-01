@@ -191,7 +191,8 @@ public:
 
     MetaFileOffset _instanceMethods = 0;
     MetaFileOffset _staticMethods = 0;
-    MetaFileOffset _properties = 0;
+    MetaFileOffset _instanceProperties = 0;
+    MetaFileOffset _staticProperties = 0;
     MetaFileOffset _protocols = 0;
     int16_t _initializersStartIndex = -1;
 
