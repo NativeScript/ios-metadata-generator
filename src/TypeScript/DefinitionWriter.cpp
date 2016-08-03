@@ -55,6 +55,23 @@ std::string DefinitionWriter::getTypeArgumentsStringOrEmpty(const clang::ObjCObj
             }
         }
         output << ">";
+    } else {
+        /* Fill implicit id parameters in similar cases:
+         * @interface MyInterface<ObjectType1, ObjectType2>
+         * @interface MyDerivedInterface : MyInterface
+         */
+        if (clang::ObjCTypeParamList* typeParameters = objectType->getInterface()->getTypeParamListAsWritten()) {
+            if (typeParameters->size()) {
+                output << "<";
+                for (unsigned i = 0; i < typeParameters->size(); i++) {
+                    output << "NSObject";
+                    if (i < typeParameters->size() - 1) {
+                        output << ", ";
+                    }
+                }
+                output << ">";
+            }
+        }
     }
 
     return output.str();
