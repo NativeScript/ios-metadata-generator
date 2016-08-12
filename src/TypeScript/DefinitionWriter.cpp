@@ -627,6 +627,14 @@ void DefinitionWriter::visit(PropertyMeta* meta)
 
 void DefinitionWriter::visit(EnumConstantMeta* meta)
 {
+    // The member will be printed by its parent EnumMeta as a TS Enum
+    if (meta->isScoped) {
+        return;
+    }
+
+    _buffer << std::endl;
+    _buffer << "declare const " << meta->jsName << ": number;";
+    _buffer << std::endl;
 }
 
 std::string DefinitionWriter::localizeReference(const std::string& jsName, std::string moduleName)

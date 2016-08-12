@@ -238,6 +238,8 @@ public:
 
     std::string value;
 
+    bool isScoped;
+
     virtual void visit(MetaVisitor* visitor) override;
 };
 
