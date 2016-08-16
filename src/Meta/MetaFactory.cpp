@@ -297,12 +297,17 @@ void MetaFactory::createFromEnum(const clang::EnumDecl& enumeration, EnumMeta& e
     }
 }
 
-void MetaFactory::createFromEnumConstant(const clang::EnumConstantDecl& enumConstant, EnumConstantMeta& enumMeta)
+void MetaFactory::createFromEnumConstant(const clang::EnumConstantDecl& enumConstant, EnumConstantMeta& enumConstantMeta)
 {
-    populateMetaFields(enumConstant, enumMeta);
+    populateMetaFields(enumConstant, enumConstantMeta);
+
     llvm::SmallVector<char, 10> value;
     enumConstant.getInitVal().toString(value, 10, enumConstant.getInitVal().isSigned());
-    enumMeta.value = std::string(value.data(), value.size());
+    enumConstantMeta.value = std::string(value.data(), value.size());
+
+    const clang::EnumDecl* parent = clang::cast<clang::EnumDecl>(enumConstant.getDeclContext());
+    EnumMeta& parentMeta = this->_cache.find(parent)->second.first.get()->as<EnumMeta>();
+    enumConstantMeta.isScoped = !parentMeta.jsName.empty();
 }
 
 void MetaFactory::createFromInterface(const clang::ObjCInterfaceDecl& interface, InterfaceMeta& interfaceMeta)
