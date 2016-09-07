@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Utils/stream.h"
-#include "binaryStructures.h"
 #include "binaryOperation.h"
+#include "binaryStructures.h"
 #include <string>
 #include <vector>
 

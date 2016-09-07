@@ -1,12 +1,12 @@
-#include <sstream>
+#include "binarySerializer.h"
+#include "Meta/Utils.h"
+#include "binarySerializerPrivate.h"
 #include <clang/Basic/FileManager.h>
-#include <llvm/Support/Path.h>
+#include <llvm/Object/Binary.h>
 #include <llvm/Object/MachO.h>
 #include <llvm/Object/MachOUniversal.h>
-#include <llvm/Object/Binary.h>
-#include "binarySerializer.h"
-#include "binarySerializerPrivate.h"
-#include "Meta/Utils.h"
+#include <llvm/Support/Path.h>
+#include <sstream>
 
 uint8_t convertVersion(Meta::Version version)
 {
@@ -29,8 +29,7 @@ void binary::BinarySerializer::serializeBase(::Meta::Meta* meta, binary::Meta& b
         MetaFileOffset offset2 = this->heapWriter.push_string(meta->name);
         binaryMetaStruct._names = this->heapWriter.push_pointer(offset1);
         this->heapWriter.push_pointer(offset2);
-    }
-    else {
+    } else {
         binaryMetaStruct._names = this->heapWriter.push_string(meta->jsName);
     }
 
@@ -202,24 +201,21 @@ static llvm::ErrorOr<bool> isStaticFramework(clang::Module* framework)
         return errc::no_such_file_or_directory;
     }
 
-    ErrorOr<OwningBinary<Binary> > binaryOrErr = createBinary(path);
-    if (std::error_code errorCode = binaryOrErr.getError()) {
-        return errorCode;
-    }
-    Binary& binary = *binaryOrErr.get().getBinary();
+    if (Expected<OwningBinary<Binary> > binaryOrErr = createBinary(path)) {
+        Binary& binary = *binaryOrErr.get().getBinary();
 
-    if (MachOUniversalBinary* machoBinary = dyn_cast<MachOUniversalBinary>(&binary)) {
-        for (const MachOUniversalBinary::ObjectForArch& object : machoBinary->objects()) {
-            if (ErrorOr<std::unique_ptr<MachOObjectFile> > objectFile = object.getAsObjectFile()) {
-                if (MachOObjectFile* machObjectFile = dyn_cast<MachOObjectFile>(objectFile.get().get())) {
-                    uint32_t filetype = (machObjectFile->is64Bit() ? machObjectFile->getHeader64().filetype : machObjectFile->getHeader().filetype);
-                    if (filetype == MachO::MH_DYLIB || filetype == MachO::MH_DYLIB_STUB) {
-                        return false;
+        if (MachOUniversalBinary* machoBinary = dyn_cast<MachOUniversalBinary>(&binary)) {
+            for (const MachOUniversalBinary::ObjectForArch& object : machoBinary->objects()) {
+                if (Expected<std::unique_ptr<MachOObjectFile> > objectFile = object.getAsObjectFile()) {
+                    if (MachOObjectFile* machObjectFile = dyn_cast<MachOObjectFile>(objectFile.get().get())) {
+                        uint32_t filetype = (machObjectFile->is64Bit() ? machObjectFile->getHeader64().filetype : machObjectFile->getHeader().filetype);
+                        if (filetype == MachO::MH_DYLIB || filetype == MachO::MH_DYLIB_STUB) {
+                            return false;
+                        }
                     }
+                } else if (Expected<std::unique_ptr<Archive> > archive = object.getAsArchive()) {
+                    return true;
                 }
-            }
-            else if (ErrorOr<std::unique_ptr<Archive> > archive = object.getAsArchive()) {
-                return true;
             }
         }
     }
@@ -235,8 +231,7 @@ void binary::BinarySerializer::serializeModule(clang::Module* module, binary::Mo
         // System frameworks are always shared, so there's no need to check them anyways.
         if (module->IsSystem) {
             flags |= 1;
-        }
-        else if (llvm::ErrorOr<bool> isStatic = isStaticFramework(module)) {
+        } else if (llvm::ErrorOr<bool> isStatic = isStaticFramework(module)) {
             if (!isStatic.get()) {
                 flags |= 1;
             }
@@ -358,8 +353,7 @@ void binary::BinarySerializer::visit(::Meta::VarMeta* meta)
         serializeBase(meta, binaryStruct);
         binaryStruct._jsCode = this->heapWriter.push_string(meta->value);
         this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
-    }
-    else {
+    } else {
         // serialize as VarMeta
         binary::VarMeta binaryStruct;
         serializeBase(meta, binaryStruct);

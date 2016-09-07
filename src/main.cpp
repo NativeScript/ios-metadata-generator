@@ -1,20 +1,20 @@
-#include <llvm/Support/Debug.h>
-#include <clang/Tooling/Tooling.h>
-#include <clang/Frontend/CompilerInstance.h>
-#include <sstream>
-#include <fstream>
-#include <pwd.h>
+#include "Binary/binarySerializer.h"
 #include "HeadersParser/Parser.h"
 #include "Meta/DeclarationConverterVisitor.h"
 #include "Meta/Filters/HandleExceptionalMetasFilter.h"
+#include "Meta/Filters/HandleMethodsAndPropertiesWithSameNameFilter.h"
 #include "Meta/Filters/MergeCategoriesFilter.h"
 #include "Meta/Filters/RemoveDuplicateMembersFilter.h"
 #include "Meta/Filters/ResolveGlobalNamesCollisionsFilter.h"
-#include "Meta/Filters/HandleMethodsAndPropertiesWithSameNameFilter.h"
-#include "Yaml/YamlSerializer.h"
-#include "Binary/binarySerializer.h"
 #include "TypeScript/DefinitionWriter.h"
 #include "TypeScript/DocSetManager.h"
+#include "Yaml/YamlSerializer.h"
+#include <clang/Frontend/CompilerInstance.h>
+#include <clang/Tooling/Tooling.h>
+#include <fstream>
+#include <llvm/Support/Debug.h>
+#include <pwd.h>
+#include <sstream>
 
 // Command line parameters
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));
@@ -145,7 +145,7 @@ int main(int argc, const char** argv)
         "-v",
         "-x", "objective-c",
         "-fno-objc-arc", "-fmodule-maps", "-ferror-limit=0",
-        "-Wno-unknown-pragmas", "-Wno-ignored-attributes"
+        "-Wno-unknown-pragmas", "-Wno-ignored-attributes", "-Wno-nullability-completeness", "-Wno-expansion-to-defined"
     };
 
     // merge with hardcoded clang arguments
@@ -179,7 +179,7 @@ int main(int argc, const char** argv)
     }
 
     // generate metadata for the intermediate sdk header
-    clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", std::make_shared<clang::PCHContainerOperations>());
+    clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", "objc-metadata-generator");
 
     std::clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;

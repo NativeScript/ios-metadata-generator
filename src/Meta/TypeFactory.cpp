@@ -1,8 +1,8 @@
-#include <llvm/ADT/STLExtras.h>
 #include "TypeFactory.h"
-#include "Utils.h"
 #include "CreationException.h"
 #include "MetaFactory.h"
+#include "Utils.h"
+#include <llvm/ADT/STLExtras.h>
 
 namespace Meta {
 using namespace std;
@@ -185,8 +185,7 @@ shared_ptr<Type> TypeFactory::create(const clang::Type* type)
             return createFromAttributedType(attributedType);
         else
             throw TypeCreationException(type, "Unable to create encoding for this type.", true);
-    }
-    catch (TypeCreationException& e) {
+    } catch (TypeCreationException& e) {
         if (e.getType() == type) {
             _cache.insert(make_pair<Cache::key_type, Cache::mapped_type>(&typeRef, make_pair<shared_ptr<Type>, string>(nullptr, e.getMessage())));
             throw;
@@ -195,8 +194,7 @@ shared_ptr<Type> TypeFactory::create(const clang::Type* type)
         string message = CreationException::constructMessage("Can't create type dependency.", e.getDetailedMessage());
         insertionResult.first->second.second = message;
         throw TypeCreationException(type, message, e.isError());
-    }
-    catch (MetaCreationException& e) {
+    } catch (MetaCreationException& e) {
         pair<Cache::iterator, bool> insertionResult = _cache.insert(make_pair<Cache::key_type, Cache::mapped_type>(&typeRef, make_pair<shared_ptr<Type>, string>(nullptr, "")));
         string message = CreationException::constructMessage("Can't create meta dependency.", e.getDetailedMessage());
         insertionResult.first->second.second = message;
@@ -208,8 +206,7 @@ shared_ptr<Type> TypeFactory::create(const clang::Type* type)
         assert(insertionResult.first->second.first.get() == nullptr);
         insertionResult.first->second.first = resultType;
         return resultType;
-    }
-    else {
+    } else {
         return insertionResult.first->second.first;
     }
 }
@@ -281,33 +278,7 @@ shared_ptr<Type> TypeFactory::createFromBuiltinType(const clang::BuiltinType* ty
     // The 'SEL' type is represented as pointer to BuiltinType of kind ObjCSel.
     // The 'id' type is actually represented by clang as TypedefType to ObjCObjectPointerType whose pointee is an ObjCObjectType with base BuiltinType::ObjCIdType.
     // This is also valid for ObjCClass type.
-    case clang::BuiltinType::Kind::ObjCSel:
-    case clang::BuiltinType::Kind::ObjCId:
-    case clang::BuiltinType::Kind::ObjCClass:
-    // Not supported types
-    case clang::BuiltinType::Kind::Int128:
-    case clang::BuiltinType::Kind::UInt128:
-    case clang::BuiltinType::Kind::Half:
-    case clang::BuiltinType::Kind::WChar_S:
-    case clang::BuiltinType::Kind::WChar_U:
-    case clang::BuiltinType::Kind::Char16:
-    case clang::BuiltinType::Kind::Char32:
-    case clang::BuiltinType::Kind::NullPtr:
-    case clang::BuiltinType::Kind::Overload:
-    case clang::BuiltinType::Kind::BoundMember:
-    case clang::BuiltinType::Kind::PseudoObject:
-    case clang::BuiltinType::Kind::Dependent:
-    case clang::BuiltinType::Kind::UnknownAny:
-    case clang::BuiltinType::Kind::ARCUnbridgedCast:
-    case clang::BuiltinType::Kind::BuiltinFn:
-    case clang::BuiltinType::Kind::OCLImage1d:
-    case clang::BuiltinType::Kind::OCLImage1dArray:
-    case clang::BuiltinType::Kind::OCLImage1dBuffer:
-    case clang::BuiltinType::Kind::OCLImage2d:
-    case clang::BuiltinType::Kind::OCLImage2dArray:
-    case clang::BuiltinType::Kind::OCLImage3d:
-    case clang::BuiltinType::Kind::OCLSampler:
-    case clang::BuiltinType::Kind::OCLEvent:
+
     default:
         throw TypeCreationException(type, string("Not supported builtin type(") + type->getTypeClassName() + ").", true);
     }
@@ -334,8 +305,7 @@ shared_ptr<Type> TypeFactory::createFromObjCObjectPointerType(const clang::ObjCO
     if (clang::ObjCInterfaceDecl* interface = type->getObjectType()->getInterface()) {
         if (interface->getNameAsString() == "Protocol") {
             return TypeFactory::getProtocolType();
-        }
-        else if (clang::ObjCInterfaceDecl* interfaceDef = interface->getDefinition()) {
+        } else if (clang::ObjCInterfaceDecl* interfaceDef = interface->getDefinition()) {
             vector<TypeArgumentType*> typeArguments;
             for (const clang::QualType& typeArg : type->getTypeArgsAsWritten()) {
                 typeArguments.push_back(&this->create(typeArg)->as<TypeArgumentType>());
@@ -502,8 +472,7 @@ bool TypeFactory::isSpecificTypedefType(const clang::TypedefType* type, const ve
         clang::Type const* innerType = decl->getUnderlyingType().getTypePtr();
         if (const clang::TypedefType* innerTypedef = clang::dyn_cast<clang::TypedefType>(innerType)) {
             decl = innerTypedef->getDecl();
-        }
-        else {
+        } else {
             return false;
         }
     }
@@ -522,8 +491,7 @@ void TypeFactory::resolveCachedBridgedInterfaceTypes(unordered_map<string, Inter
                     unordered_map<string, InterfaceMeta*>::const_iterator it = interfaceMap.find(bridgedType->name);
                     if (it != interfaceMap.end()) {
                         bridgedType->bridgedInterface = it->second;
-                    }
-                    else {
+                    } else {
                         assert(nsObjectIt != interfaceMap.end());
                         bridgedType->bridgedInterface = nsObjectIt->second;
                         cout << "Unable to resolve bridged interface type. Interface " << bridgedType->name << " not found. NSObject used instead." << endl;

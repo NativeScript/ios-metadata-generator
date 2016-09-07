@@ -45,8 +45,7 @@ std::vector<binary::MetaFileOffset> binary::BinaryHashtable::serialize(binary::B
             }
 
             offsets.push_back(heapWriter.push_binaryArray(elementOffsets));
-        }
-        else {
+        } else {
             offsets.push_back(0);
         }
     }

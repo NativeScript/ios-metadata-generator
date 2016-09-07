@@ -1,8 +1,8 @@
 #pragma once
 
 #include "stream.h"
-#include <ostream>
 #include <fstream>
+#include <ostream>
 #include <vector>
 
 namespace utils {

@@ -3,9 +3,9 @@
 //
 
 #include "DocSetManager.h"
+#include <libxml/xpath.h>
 #include <sstream>
 #include <unistd.h>
-#include <libxml/xpath.h>
 
 namespace {
 using namespace std;

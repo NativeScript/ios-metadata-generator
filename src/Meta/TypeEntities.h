@@ -1,9 +1,9 @@
 #pragma once
 
+#include "TypeVisitor.h"
+#include "Utils/Noncopyable.h"
 #include <string>
 #include <vector>
-#include "Utils/Noncopyable.h"
-#include "TypeVisitor.h"
 
 namespace Meta {
 class ProtocolMeta;

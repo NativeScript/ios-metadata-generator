@@ -1,9 +1,9 @@
 #pragma once
 
-#include <unordered_map>
-#include <clang/AST/RecursiveASTVisitor.h>
-#include "TypeEntities.h"
 #include "MetaEntities.h"
+#include "TypeEntities.h"
+#include <clang/AST/RecursiveASTVisitor.h>
+#include <unordered_map>
 
 namespace Meta {
 class MetaFactory;

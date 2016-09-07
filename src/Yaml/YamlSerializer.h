@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
-#include <llvm/Support/FileSystem.h>
 #include "MetaYamlTraits.h"
+#include <llvm/Support/FileSystem.h>
+#include <string>
 
 namespace Yaml {
 class YamlSerializer {

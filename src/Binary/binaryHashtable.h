@@ -1,8 +1,8 @@
 #pragma once
 
+#include "binaryStructures.h"
 #include <string>
 #include <vector>
-#include "binaryStructures.h"
 
 namespace binary {
 /*
