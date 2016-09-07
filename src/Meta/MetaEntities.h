@@ -154,7 +154,8 @@ class BaseClassMeta : public Meta {
 public:
     std::vector<MethodMeta*> instanceMethods;
     std::vector<MethodMeta*> staticMethods;
-    std::vector<PropertyMeta*> properties;
+    std::vector<PropertyMeta*> instanceProperties;
+    std::vector<PropertyMeta*> staticProperties;
     std::vector<ProtocolMeta*> protocols;
 };
 

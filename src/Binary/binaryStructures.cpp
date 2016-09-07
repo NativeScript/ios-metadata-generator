@@ -64,7 +64,8 @@ binary::MetaFileOffset binary::BaseClassMeta::save(BinaryWriter& writer)
     binary::MetaFileOffset offset = Meta::save(writer);
     writer.push_pointer(this->_instanceMethods);
     writer.push_pointer(this->_staticMethods);
-    writer.push_pointer(this->_properties);
+    writer.push_pointer(this->_instanceProperties);
+    writer.push_pointer(this->_staticProperties);
     writer.push_pointer(this->_protocols);
     writer.push_short(this->_initializersStartIndex);
     return offset;

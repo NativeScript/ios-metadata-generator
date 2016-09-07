@@ -358,7 +358,8 @@ namespace yaml {
             mapBaseMeta(io, meta);
             io.mapRequired("InstanceMethods", meta->instanceMethods);
             io.mapRequired("StaticMethods", meta->staticMethods);
-            io.mapRequired("Properties", meta->properties);
+            io.mapRequired("InstanceProperties", meta->instanceProperties);
+            io.mapRequired("StaticProperties", meta->staticProperties);
             std::vector<std::string> protocols;
             for (Meta::ProtocolMeta* protocol : meta->protocols) {
                 protocols.push_back(protocol->jsName);

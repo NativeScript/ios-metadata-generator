@@ -10,7 +10,11 @@ static void visitBaseClass(Meta::MetaVisitor* visitor, Meta::BaseClassMeta* base
         method->visit(visitor);
     }
 
-    for (Meta::PropertyMeta* property : baseClass->properties) {
+    for (Meta::PropertyMeta* property : baseClass->instanceProperties) {
+        property->visit(visitor);
+    }
+
+    for (Meta::PropertyMeta* property : baseClass->staticProperties) {
         property->visit(visitor);
     }
 }

@@ -11,8 +11,8 @@ void HandleMethodsAndPropertiesWithSameNameFilter::filter(std::list<Meta*>& cont
     for (Meta* meta : container) {
         if (meta->is(MetaType::Interface)) {
             const clang::ObjCInterfaceDecl* decl = clang::cast<clang::ObjCInterfaceDecl>(meta->declaration);
-            for (clang::ObjCPropertyDecl* propertyDecl : decl->properties()) {
 
+            for (clang::ObjCPropertyDecl* propertyDecl : decl->properties()) {
                 if (clang::ObjCInterfaceDecl* parent = decl->getSuperClass()) {
                     clang::ObjCMethodDecl* duplicate = parent->lookupInstanceMethod(propertyDecl->getGetterName());
                     replaceMethodWithPropertyIfNecessary(duplicate, propertyDecl);
@@ -23,10 +23,43 @@ void HandleMethodsAndPropertiesWithSameNameFilter::filter(std::list<Meta*>& cont
                     replaceMethodWithPropertyIfNecessary(duplicate, propertyDecl);
                 }
             }
+
+            if (clang::ObjCInterfaceDecl* parent_decl = decl->getSuperClass()) {
+                for (clang::ObjCMethodDecl* methodDecl : decl->methods()) {
+                    if (!(methodDecl->isClassMethod() && !methodDecl->isPropertyAccessor())) {
+                        continue;
+                    }
+
+                    if (parent_decl->lookupPropertyAccessor(methodDecl->getSelector(), nullptr, true /*IsClassProperty*/)) {
+                        deleteStaticMethod(methodDecl, decl);
+                    }
+                }
+            }
         }
     }
 }
 
+/*
+
+## Before
+@protocol MyProtocol
+- (int)myProperty;
+@end
+
+@interface MyInterface <MyProtocol>
+@property int myProperty;
+@end
+
+## After
+@protocol MyProtocol
+@property int myProperty;
+@end
+
+@interface MyInterface <MyProtocol>
+@property int myProperty;
+@end
+
+*/
 void HandleMethodsAndPropertiesWithSameNameFilter::replaceMethodWithPropertyIfNecessary(clang::ObjCMethodDecl* duplicateMethod, clang::ObjCPropertyDecl* propertyDecl)
 {
     if (duplicateMethod && !duplicateMethod->isPropertyAccessor()) {
@@ -49,8 +82,45 @@ void HandleMethodsAndPropertiesWithSameNameFilter::replaceMethodWithPropertyIfNe
                 property_decl->setGetterMethodDecl(duplicateMethod);
 
                 PropertyMeta* property_meta = static_cast<PropertyMeta*>(this->m_metaFactory.create(*property_decl));
-                parent_meta->properties.push_back(property_meta);
+                parent_meta->instanceProperties.push_back(property_meta);
             }
+        }
+    }
+}
+
+/*
+ 
+## Before
+@interface MyInterface
+@property (class) int myProperty;
+@end
+
+@interface MyDerivedInterface : MyInterface
++ (int)myProperty;
+@end
+ 
+## After
+@interface MyInterface
+@property (class) int myProperty;
+@end
+
+@interface MyDerivedInterface : MyInterface
+@end
+
+*/
+void HandleMethodsAndPropertiesWithSameNameFilter::deleteStaticMethod(const clang::ObjCMethodDecl* duplicateMethod, const clang::ObjCInterfaceDecl* owner)
+{
+    Cache& cache = this->m_metaFactory.getCache();
+    auto cachedMetaIt = cache.find(owner);
+    auto cachedMethodIt = cache.find(duplicateMethod);
+    if (cachedMetaIt != cache.end() && cachedMethodIt != cache.end()) {
+        BaseClassMeta* parent_meta = static_cast<BaseClassMeta*>(cachedMetaIt->second.first.get());
+        MethodMeta* duplicated_method = static_cast<MethodMeta*>(cachedMethodIt->second.first.get());
+
+        std::vector<MethodMeta*>& staticMethods = parent_meta->staticMethods;
+        auto staticMethod = std::find(staticMethods.begin(), staticMethods.end(), duplicated_method);
+        if (staticMethod != staticMethods.end()) {
+            staticMethods.erase(staticMethod);
         }
     }
 }
