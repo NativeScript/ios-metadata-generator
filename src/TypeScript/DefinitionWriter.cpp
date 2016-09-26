@@ -241,12 +241,12 @@ void DefinitionWriter::writeProperty(PropertyMeta* propertyMeta, BaseClassMeta* 
             << _docSet.getCommentFor(propertyMeta, owner).toString("\t");
     _buffer << "\t";
 
-    if (!propertyMeta->setter) {
-        _buffer << "/* readonly */ ";
-    }
-
     if (clang::cast<clang::ObjCPropertyDecl>(propertyMeta->declaration)->isClassProperty()) {
         _buffer << "static ";
+    }
+
+    if (!propertyMeta->setter) {
+        _buffer << "readonly ";
     }
 
     bool optOutTypeChecking = false;
