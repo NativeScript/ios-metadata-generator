@@ -573,9 +573,14 @@ void DefinitionWriter::visit(FunctionMeta* meta)
     _buffer << "declare function " << meta->jsName
             << "(" << params.str() << "): ";
 
-    std::string returnName = tsifyType(*meta->signature[0]);
-    if (meta->getFlags(MetaFlags::FunctionReturnsUnmanaged)) {
-        returnName = "interop.Unmanaged<" + returnName + ">";
+    std::string returnName;
+    if (meta->name == "UIApplicationMain" || meta->name == "NSApplicationMain" || meta->name == "dispatch_main" ) {
+        returnName = "never";
+    } else {
+        returnName = tsifyType(*meta->signature[0]);
+        if (meta->getFlags(MetaFlags::FunctionReturnsUnmanaged)) {
+            returnName = "interop.Unmanaged<" + returnName + ">";
+        }
     }
 
     _buffer << returnName << ";";
