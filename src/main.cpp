@@ -19,6 +19,7 @@
 // Command line parameters
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));
 llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("<dir_path>"));
+llvm::cl::opt<string> cla_outputModuleMapsFolder("output-modulemaps", llvm::cl::desc("Specify the fodler where modulemap files of all parsed modules will be dumped"), llvm::cl::value_desc("<dir_path>"));
 llvm::cl::opt<string> cla_outputBinFile("output-bin", llvm::cl::desc("Specify the output binary metadata file"), llvm::cl::value_desc("<file_path>"));
 llvm::cl::opt<string> cla_outputDtsFolder("output-typescript", llvm::cl::desc("Specify the output .d.ts folder"), llvm::cl::value_desc("<dir_path>"));
 llvm::cl::opt<string> cla_docSetFile("docset-path", llvm::cl::desc("Specify the path to the iOS SDK docset package"), llvm::cl::value_desc("<file_path>"));
@@ -54,6 +55,22 @@ public:
 
         // Log statistic for parsed Meta objects
         std::cout << "Result: " << metaContainer.size() << " declarations from " << metasByModules.size() << " top level modules" << std::endl;
+
+        // Dump module maps
+        if (!cla_outputModuleMapsFolder.empty()) {
+            llvm::sys::fs::create_directories(cla_outputModuleMapsFolder);
+            for (clang::Module*& module : modules) {
+                std::string filePath = std::string(cla_outputModuleMapsFolder) + std::string("/") + module->getFullModuleName() + ".modulemap";
+                std::error_code error;
+                llvm::raw_fd_ostream file(filePath, error, llvm::sys::fs::F_Text);
+                if (error) {
+                    std::cout << error.message();
+                    continue;
+                }
+                module->print(file);
+                file.close();
+            }
+        }
 
         // Serialize Meta objects to Yaml
         if (!cla_outputYamlFolder.empty()) {
