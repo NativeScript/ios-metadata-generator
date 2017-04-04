@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Meta/MetaEntities.h"
-#include "MetaFile.h"
+#include "metaFile.h"
 #include "binaryTypeEncodingSerializer.h"
 #include <map>
 
