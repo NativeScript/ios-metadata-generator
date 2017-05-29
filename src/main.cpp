@@ -162,7 +162,8 @@ int main(int argc, const char** argv)
         "-v",
         "-x", "objective-c",
         "-fno-objc-arc", "-fmodule-maps", "-ferror-limit=0",
-        "-Wno-unknown-pragmas", "-Wno-ignored-attributes", "-Wno-nullability-completeness", "-Wno-expansion-to-defined"
+        "-Wno-unknown-pragmas", "-Wno-ignored-attributes", "-Wno-nullability-completeness", "-Wno-expansion-to-defined",
+        "-D__NATIVESCRIPT_METADATA_GENERATOR=1"
     };
 
     // merge with hardcoded clang arguments
