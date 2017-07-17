@@ -68,26 +68,27 @@ void ResolveGlobalNamesCollisionsFilter::filter(std::list<Meta*>& container)
     }
 
     // resolve collisions
+    std::vector<Meta*> conflictingMetas;
     for (auto modulesIt = _modules.begin(); modulesIt != _modules.end(); ++modulesIt) {
         for (auto bucketIt = modulesIt->second.begin(); bucketIt != modulesIt->second.end(); ++bucketIt) {
             std::vector<Meta*>& metas = bucketIt->second;
             if (metas.size() > 1) {
                 std::sort(metas.begin(), metas.end(), metasComparerByPriority);
-                Meta* firstMeta = metas[0];
-                for (Meta* meta : metas) {
-                    if (meta != firstMeta) {
-                        int index = 1;
-                        std::string originalJsName = meta->jsName;
-                        do {
-                            meta->jsName = renameMeta(meta->type, originalJsName, index);
-                            index++;
-                        } while (!addMeta(meta, false));
-                    }
+                for (std::vector<Meta*>::size_type i = 1; i < metas.size(); i++) {
+                    conflictingMetas.push_back(metas[i]);
                 }
-                metas.clear();
-                metas.push_back(firstMeta); // leave only the meta with the highest priority in the bucket
+                metas.resize(1); // leave only the meta with the highest priority in the bucket
             }
         }
+    }
+
+    for (Meta* meta : conflictingMetas) {
+        int index = 1;
+        std::string originalJsName = meta->jsName;
+        do {
+            meta->jsName = renameMeta(meta->type, originalJsName, index);
+            index++;
+        } while (!addMeta(meta, false));
     }
 }
 

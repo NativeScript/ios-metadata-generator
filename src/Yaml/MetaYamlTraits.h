@@ -304,6 +304,13 @@ namespace yaml {
                 Meta::TypeArgumentType& concreteType = type->as<Meta::TypeArgumentType>();
                 io.mapRequired("Name", concreteType.name);
                 io.mapRequired("UnderlyingType", concreteType.underlyingType);
+                std::vector<std::string> protocols;
+                for (Meta::ProtocolMeta* protocol : concreteType.protocols) {
+                    protocols.push_back(protocol->jsName);
+                }
+                if (protocols.size() > 0) {
+                    io.mapRequired("WithProtocols", protocols);
+                }
                 break;
             }
             default: {

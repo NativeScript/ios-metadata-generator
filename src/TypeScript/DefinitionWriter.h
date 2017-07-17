@@ -59,13 +59,13 @@ private:
         CompoundMemberMap<Meta::MethodMeta>* instanceMethods,
         CompoundMemberMap<Meta::PropertyMeta>* staticProperties,
         CompoundMemberMap<Meta::PropertyMeta>* instanceProperties,
-        std::set<Meta::ProtocolMeta*>& visitedProtocols);
+        std::unordered_set<Meta::ProtocolMeta*>& visitedProtocols);
 
     static std::string writeConstructor(const CompoundMemberMap<Meta::MethodMeta>::value_type& initializer,
         const Meta::BaseClassMeta* owner);
     static std::string writeMethod(Meta::MethodMeta* meta, Meta::BaseClassMeta* owner, bool canUseThisType = false);
     static std::string writeMethod(CompoundMemberMap<Meta::MethodMeta>::value_type& method, Meta::BaseClassMeta* owner,
-        const std::set<Meta::ProtocolMeta*>& protocols, bool canUseThisType = false);
+        const std::unordered_set<Meta::ProtocolMeta*>& protocols, bool canUseThisType = false);
     static std::string writeProperty(Meta::PropertyMeta* meta, Meta::BaseClassMeta* owner, bool optOutTypeChecking);
     static std::string writeFunctionProto(const std::vector<Meta::Type*>& signature);
     static std::string localizeReference(const std::string& jsName, std::string moduleName);

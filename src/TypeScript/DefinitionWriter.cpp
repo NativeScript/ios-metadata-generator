@@ -8,15 +8,16 @@
 namespace TypeScript {
 using namespace Meta;
 
-static std::set<std::string> hiddenMethods = { "retain", "release", "autorelease", "allocWithZone", "zone", "countByEnumeratingWithStateObjectsCount" };
+static std::unordered_set<std::string> hiddenMethods = { "retain", "release", "autorelease", "allocWithZone", "zone", "countByEnumeratingWithStateObjectsCount" };
 
-static std::set<std::string> bannedIdentifiers = { "function", "arguments", "in" };
+static std::unordered_set<std::string> bannedIdentifiers = { "function", "arguments", "in" };
 
 static std::string sanitizeParameterName(const std::string& parameterName)
 {
     if (bannedIdentifiers.find(parameterName) != bannedIdentifiers.end()) {
         return "_" + parameterName;
-    } else {
+    }
+    else {
         return parameterName;
     }
 }
@@ -54,7 +55,8 @@ std::string DefinitionWriter::getTypeArgumentsStringOrEmpty(const clang::ObjCObj
             }
         }
         output << ">";
-    } else {
+    }
+    else {
         /* Fill implicit id parameters in similar cases:
          * @interface MyInterface<ObjectType1, ObjectType2>
          * @interface MyDerivedInterface : MyInterface
@@ -104,7 +106,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
     }
 
-    std::set<ProtocolMeta*> inheritedProtocols;
+    std::unordered_set<ProtocolMeta*> inheritedProtocols;
 
     CompoundMemberMap<MethodMeta> inheritedStaticMethods;
     getInheritedMembersRecursive(meta, &inheritedStaticMethods, nullptr, nullptr, nullptr);
@@ -127,7 +129,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
 
     CompoundMemberMap<PropertyMeta> protocolInheritedStaticProperties;
     CompoundMemberMap<PropertyMeta> protocolInheritedInstanceProperties;
-    std::set<ProtocolMeta*> protocols;
+    std::unordered_set<ProtocolMeta*> protocols;
     if (meta->protocols.size()) {
         _buffer << " implements ";
         for (size_t i = 0; i < meta->protocols.size(); i++) {
@@ -140,7 +142,7 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     }
     _buffer << " {" << std::endl;
 
-    std::set<ProtocolMeta*> immediateProtocols;
+    std::unordered_set<ProtocolMeta*> immediateProtocols;
     for (auto protocol : protocols) {
         if (inheritedProtocols.find(protocol) == inheritedProtocols.end()) {
             immediateProtocols.insert(protocol);
@@ -307,7 +309,7 @@ void DefinitionWriter::getInheritedMembersRecursive(InterfaceMeta* interface,
     }
 
     // accumulate...
-    std::set<ProtocolMeta*> protocols;
+    std::unordered_set<ProtocolMeta*> protocols;
     for (auto protocol : base->protocols) {
         getProtocolMembersRecursive(protocol, staticMethods, instanceMethods, staticProperties, instanceProperties, protocols);
     }
@@ -320,7 +322,7 @@ void DefinitionWriter::getProtocolMembersRecursive(ProtocolMeta* protocolMeta,
     CompoundMemberMap<MethodMeta>* instanceMethods,
     CompoundMemberMap<PropertyMeta>* staticProperties,
     CompoundMemberMap<PropertyMeta>* instanceProperties,
-    std::set<ProtocolMeta*>& visitedProtocols)
+    std::unordered_set<ProtocolMeta*>& visitedProtocols)
 {
     visitedProtocols.insert(protocolMeta);
 
@@ -408,7 +410,7 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
         compoundStaticMethods.emplace(method->jsName, std::make_pair(meta, method));
     }
 
-    std::set<ProtocolMeta*> protocols;
+    std::unordered_set<ProtocolMeta*> protocols;
     for (ProtocolMeta* protocol : meta->protocols) {
         getProtocolMembersRecursive(protocol, &compoundStaticMethods, nullptr, nullptr, nullptr, protocols);
     }
@@ -437,7 +439,8 @@ std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMet
 
     if (method->constructorTokens == "") {
         output << "constructor();";
-    } else {
+    }
+    else {
         std::vector<std::string> ctorTokens;
         StringUtils::split(method->constructorTokens, ':', std::back_inserter(ctorTokens));
         output << "constructor(o: { ";
@@ -503,7 +506,7 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     return output.str();
 }
 
-std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_type& methodPair, BaseClassMeta* owner, const std::set<ProtocolMeta*>& protocols, bool canUseThisType)
+std::string DefinitionWriter::writeMethod(CompoundMemberMap<MethodMeta>::value_type& methodPair, BaseClassMeta* owner, const std::unordered_set<ProtocolMeta*>& protocols, bool canUseThisType)
 {
     std::ostringstream output;
 
@@ -544,7 +547,8 @@ std::string DefinitionWriter::writeProperty(PropertyMeta* meta, BaseClassMeta* o
     std::string returnType = tsifyType(*meta->getter->signature[0]);
     if (optOutTypeChecking) {
         output << ": any; /*" << returnType << " */";
-    } else {
+    }
+    else {
         output << ": " << returnType << ";";
     }
 
@@ -574,9 +578,10 @@ void DefinitionWriter::visit(FunctionMeta* meta)
             << "(" << params.str() << "): ";
 
     std::string returnName;
-    if (meta->name == "UIApplicationMain" || meta->name == "NSApplicationMain" || meta->name == "dispatch_main" ) {
+    if (meta->name == "UIApplicationMain" || meta->name == "NSApplicationMain" || meta->name == "dispatch_main") {
         returnName = "never";
-    } else {
+    }
+    else {
         returnName = tsifyType(*meta->signature[0]);
         if (meta->getFlags(MetaFlags::FunctionReturnsUnmanaged)) {
             returnName = "interop.Unmanaged<" + returnName + ">";
@@ -772,9 +777,11 @@ std::string DefinitionWriter::tsifyType(const Type& type)
         const InterfaceMeta& interface = type.is(TypeType::TypeInterface) ? *type.as<InterfaceType>().interface : *type.as<BridgedInterfaceType>().bridgedInterface;
         if (interface.name == "NSNumber") {
             return "number";
-        } else if (interface.name == "NSString") {
+        }
+        else if (interface.name == "NSString") {
             return "string";
-        } else if (interface.name == "NSDate") {
+        }
+        else if (interface.name == "NSDate") {
             return "Date";
         }
 
@@ -792,7 +799,8 @@ std::string DefinitionWriter::tsifyType(const Type& type)
                 }
             }
             output << ">";
-        } else {
+        }
+        else {
             // This also translates CFArray to NSArray<any>
             if (auto typeParamList = clang::dyn_cast<clang::ObjCInterfaceDecl>(interface.declaration)->getTypeParamListAsWritten()) {
                 output << "<";
@@ -845,13 +853,15 @@ std::string DefinitionWriter::computeMethodReturnType(const Type* retType, const
     if (retType->is(TypeInstancetype)) {
         if (instanceMember) {
             output << "this";
-        } else {
+        }
+        else {
             output << owner->jsName;
             if (owner->is(MetaType::Interface)) {
                 output << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
             }
         }
-    } else {
+    }
+    else {
         output << tsifyType(*retType);
     }
 

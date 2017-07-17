@@ -202,15 +202,17 @@ public:
 
 class TypeArgumentType : public Type {
 public:
-    TypeArgumentType(Type* underlyingType, const std::string& name)
+    TypeArgumentType(Type* underlyingType, const std::string& name, std::vector<ProtocolMeta*> protocols = {})
         : Type(TypeType::TypeTypeArgument)
         , underlyingType(underlyingType)
         , name(name)
+        , protocols(protocols)
     {
     }
 
     Type* underlyingType;
     std::string name;
+    std::vector<ProtocolMeta*> protocols;
 };
 
 class InterfaceType : public Type {

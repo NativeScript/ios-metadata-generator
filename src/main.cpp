@@ -13,6 +13,7 @@
 #include <clang/Tooling/Tooling.h>
 #include <fstream>
 #include <llvm/Support/Debug.h>
+#include <llvm/Support/Path.h>
 #include <pwd.h>
 #include <sstream>
 
