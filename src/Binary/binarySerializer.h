@@ -6,6 +6,32 @@
 #include <map>
 
 namespace binary {
+    
+enum FFIType : uint8_t {
+    FFIVoid,
+    FFIPointer,
+    FFISint8,
+    FFIUint8,
+    FFIUint16,
+    FFISint16,
+    FFIUint32,
+    FFISint32,
+    FFIUint64,
+    FFISint64,
+    FFIUshort,
+    FFIDouble,
+    FFIStruct,
+    FFIFloat
+};
+    
+struct CachedSignature {
+    
+    MetaFileOffset offset;
+    std::vector<FFIType> types;
+    
+};
+    
+    
 /*
      * \class BinarySerializer
      * \brief Applies the Visitor pattern for serializing \c Meta::Meta objects in binary format.
@@ -15,6 +41,10 @@ private:
     MetaFile* file;
     BinaryWriter heapWriter;
     BinaryTypeEncodingSerializer typeEncodingSerializer;
+    
+    std::vector<CachedSignature> cachedSignatures;
+    
+    binary::MetaFileOffset checkForExistingSignature(std::vector<::Meta::Type*> signature);
 
     void serializeBase(::Meta::Meta* Meta, binary::Meta& binaryMetaStruct);
 

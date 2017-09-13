@@ -139,8 +139,136 @@ void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta* meta, binary:
     if (meta->getFlags(::Meta::MetaFlags::MethodIsInitializer))
         binaryMetaStruct._flags |= BinaryFlags::MethodIsInitializer;
 
-    binaryMetaStruct._encoding = this->typeEncodingSerializer.visit(meta->signature);
+    binaryMetaStruct._encoding = this->checkForExistingSignature(meta->signature);
     binaryMetaStruct._constructorTokens = this->heapWriter.push_string(meta->constructorTokens);
+}
+
+binary::MetaFileOffset binary::BinarySerializer::checkForExistingSignature(std::vector<::Meta::Type*> signature) {
+
+    for (size_t i = 0; i < this->cachedSignatures.size(); i++) {
+        if (this->cachedSignatures[i].types.size() != signature.size()) {
+            continue;
+        } else {
+            for (size_t x = 0; x < this->cachedSignatures[i].types.size(); x++) {
+                
+                
+                if ((this->cachedSignatures[i].types[x] == FFIVoid && signature[x]->getType() == ::Meta::TypeVoid) ||
+                    (this->cachedSignatures[i].types[x] == FFISint8 && signature[x]->getType() == ::Meta::TypeBool) ||
+                    (this->cachedSignatures[i].types[x] == FFISint16 && signature[x]->getType() == ::Meta::TypeShort) ||
+                    (this->cachedSignatures[i].types[x] == FFISint32 && (signature[x]->getType() == ::Meta::TypeInt || signature[x]->getType() == ::Meta::TypeLong)) ||
+                    (this->cachedSignatures[i].types[x] == FFISint64 && signature[x]->getType() == ::Meta::TypeLongLong) ||
+                    (this->cachedSignatures[i].types[x] == FFIUint16 && signature[x]->getType() == ::Meta::TypeUShort) ||
+                    (this->cachedSignatures[i].types[x] == FFIUint32 && (signature[x]->getType() == ::Meta::TypeUInt || signature[x]->getType() == ::Meta::TypeULong)) ||
+                    (this->cachedSignatures[i].types[x] == FFIFloat && signature[x]->getType() == ::Meta::TypeFloat) ||
+                    (this->cachedSignatures[i].types[x] == FFIDouble && signature[x]->getType() == ::Meta::TypeDouble) ||
+                    (this->cachedSignatures[i].types[x] == FFIStruct && signature[x]->getType() == ::Meta::TypeStruct) ||
+                    (this->cachedSignatures[i].types[x] == FFIPointer && (signature[x]->getType() == ::Meta::TypePointer ||
+                                                                          signature[x]->getType() == ::Meta::TypeEnum ||
+                                                                          signature[x]->getType() == ::Meta::TypeClass ||
+                                                                          signature[x]->getType() == ::Meta::TypeId ||
+                                                                          signature[x]->getType() == ::Meta::TypeBlock ||
+                                                                          signature[x]->getType() == ::Meta::TypeUnion ||
+                                                                          signature[x]->getType() == ::Meta::TypeStruct ||
+                                                                          signature[x]->getType() == ::Meta::TypeSelector ||
+                                                                          signature[x]->getType() == ::Meta::TypeProtocol ||
+                                                                          signature[x]->getType() == ::Meta::TypeInterface ||
+                                                                          signature[x]->getType() == ::Meta::TypeInstancetype ||
+                                                                          signature[x]->getType() == ::Meta::TypeVaList ||
+                                                                          signature[x]->getType() == ::Meta::TypeTypeArgument ||
+                                                                          signature[x]->getType() == ::Meta::TypeConstantArray ||
+                                                                          signature[x]->getType() == ::Meta::TypeFunctionPointer ||
+                                                                          signature[x]->getType() == ::Meta::TypeBridgedInterface ||
+                                                                          signature[x]->getType() == ::Meta::TypeCString))) {
+                    if (x == cachedSignatures[i].types.size()-1) {
+                        return cachedSignatures[i].offset;
+                    }
+                }  else {
+                    break;
+                }
+                
+            }
+        }
+    }
+    
+    binary::MetaFileOffset newOffset = this->typeEncodingSerializer.visit(signature);
+    CachedSignature newSignature;
+    newSignature.offset = newOffset;
+    
+    for (size_t i = 0; i < signature.size(); i++) {
+
+        switch (signature[i]->getType()) {
+            case ::Meta::TypeVoid:
+                newSignature.types.push_back(FFIVoid);
+                break;
+                
+            case ::Meta::TypeInt:
+                newSignature.types.push_back(FFISint32);
+                break;
+                
+            case ::Meta::TypeUInt:
+                newSignature.types.push_back(FFIUint32);
+                break;
+                
+            case ::Meta::TypeLong:
+                newSignature.types.push_back(FFISint32);
+                break;
+                
+            case ::Meta::TypeULong:
+                newSignature.types.push_back(FFIUint32);
+                break;
+                
+            case ::Meta::TypeLongLong:
+                newSignature.types.push_back(FFISint64);
+                break;
+                
+            case ::Meta::TypeULongLong:
+                newSignature.types.push_back(FFIUint64);
+                break;
+                
+            case ::Meta::TypeBool:
+                newSignature.types.push_back(FFISint8);
+                break;
+                
+            case ::Meta::TypeFloat:
+                newSignature.types.push_back(FFIFloat);
+                break;
+                
+            case ::Meta::TypeDouble:
+                newSignature.types.push_back(FFIDouble);
+                break;
+                
+            case ::Meta::TypeShort:
+                newSignature.types.push_back(FFISint16);
+                break;
+                
+            case ::Meta::TypeUShort:
+                newSignature.types.push_back(FFIUint16);
+                break;
+                
+            case ::Meta::TypeUnichar:
+                newSignature.types.push_back(FFIUshort);
+                break;
+                
+            case ::Meta::TypeSignedChar:
+                newSignature.types.push_back(FFIUshort);
+                break;
+                
+            case ::Meta::TypeUnsignedChar:
+                newSignature.types.push_back(FFIUshort);
+                break;
+                
+            case ::Meta::TypeStruct:
+                newSignature.types.push_back(FFIStruct);
+                break;
+                
+            default:
+                newSignature.types.push_back(FFIPointer);
+                break;
+        }
+    }
+    cachedSignatures.push_back(newSignature);
+    
+    return newOffset;
 }
 
 void binary::BinarySerializer::serializeProperty(::Meta::PropertyMeta* meta, binary::PropertyMeta& binaryMetaStruct)
@@ -318,7 +446,8 @@ void binary::BinarySerializer::visit(::Meta::FunctionMeta* meta)
     if (meta->getFlags(::Meta::MetaFlags::FunctionReturnsUnmanaged))
         binaryStruct._flags |= BinaryFlags::FunctionReturnsUnmanaged;
 
-    binaryStruct._encoding = this->typeEncodingSerializer.visit(meta->signature);
+    binaryStruct._encoding = this->checkForExistingSignature(meta->signature);
+    
     this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
 }
 
