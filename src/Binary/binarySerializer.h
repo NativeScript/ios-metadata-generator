@@ -7,27 +7,42 @@
 
 namespace binary {
     
-enum FFIType : uint8_t {
-    FFIVoid,
-    FFIPointer,
-    FFISint8,
-    FFIUint8,
-    FFIUint16,
-    FFISint16,
-    FFIUint32,
-    FFISint32,
-    FFIUint64,
-    FFISint64,
-    FFIUshort,
-    FFIDouble,
-    FFIStruct,
-    FFIFloat
-};
-    
 struct CachedSignature {
     
     MetaFileOffset offset;
-    std::vector<FFIType> types;
+    std::vector<::Meta::FFIType> types;
+    
+};
+    
+struct SignatureHash {
+    
+    std::size_t operator()(std::vector<::Meta::FFIType> signature) const {
+        std::size_t seed = 0;
+        for(size_t i = 0; i < signature.size(); i++) {
+            seed <<= 4;
+            seed |= signature[i];
+        }
+        return seed;
+    }
+    
+};
+    
+struct SignatureEq {
+    
+    bool operator() (const std::vector<::Meta::FFIType>& l, const std::vector<::Meta::FFIType>& r) const {
+        if (l.size() != r.size()) {
+            return false;
+        } else {
+            for (size_t i = 0; i < l.size(); i++) {
+                
+                if (l[i] != r[i]) {
+                    return false;
+                }
+                    
+            }
+        }
+        return true;
+    }
     
 };
     
@@ -43,8 +58,9 @@ private:
     BinaryTypeEncodingSerializer typeEncodingSerializer;
     
     std::vector<CachedSignature> cachedSignatures;
-    
-    binary::MetaFileOffset checkForExistingSignature(std::vector<::Meta::Type*> signature);
+    std::unordered_map<std::vector<::Meta::FFIType>, MetaFileOffset, SignatureHash, SignatureEq>signatureCache;
+
+    binary::MetaFileOffset getOffset(std::vector<::Meta::Type*> signature, std::vector<::Meta::FFIType> ffiSignature);
 
     void serializeBase(::Meta::Meta* Meta, binary::Meta& binaryMetaStruct);
 

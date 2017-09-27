@@ -134,6 +134,8 @@ public:
     std::string constructorTokens;
 
     virtual void visit(MetaVisitor* visitor) override;
+    
+    std::vector<FFIType>getFFISignature();
 };
 
 class PropertyMeta : public Meta {
@@ -227,6 +229,8 @@ public:
     std::vector<Type*> signature;
 
     virtual void visit(MetaVisitor* visitor) override;
+    
+    std::vector<FFIType>getFFISignature();
 };
 
 class EnumConstantMeta : public Meta {
