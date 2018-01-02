@@ -237,3 +237,11 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serialize
     }
     return unique_ptr<binary::TypeEncoding>(s);
 }
+
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitVector(const ::Meta::VectorType& type)
+{
+    binary::VectorEncoding* s = new binary::VectorEncoding();
+    s->_size = type.size;
+    s->_elementType = type.innerType->visit(*this);
+    return unique_ptr<binary::TypeEncoding>(s);
+}

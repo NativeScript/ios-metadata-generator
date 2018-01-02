@@ -113,6 +113,14 @@ binary::MetaFileOffset binary::ConstantArrayEncoding::save(binary::BinaryWriter&
     return offset;
 }
 
+binary::MetaFileOffset binary::VectorEncoding::save(binary::BinaryWriter& writer)
+{
+    binary::MetaFileOffset offset = TypeEncoding::save(writer);
+    writer.push_int(this->_size);
+    this->_elementType->save(writer);
+    return offset;
+}
+
 binary::MetaFileOffset binary::DeclarationReferenceEncoding::save(binary::BinaryWriter& writer)
 {
     binary::MetaFileOffset offset = TypeEncoding::save(writer);

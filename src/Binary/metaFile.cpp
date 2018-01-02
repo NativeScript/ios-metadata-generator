@@ -48,7 +48,7 @@ void binary::MetaFile::save(std::shared_ptr<utils::Stream> stream)
 {
     // dump global table
     BinaryWriter globalTableStreamWriter = BinaryWriter(stream);
-    BinaryWriter heapWriter = this->heap_writer();
+    BinaryWriter heapWriter = this->heap_writer();							
     std::vector<binary::MetaFileOffset> offsets = this->_globalTableSymbols->serialize(heapWriter);
     globalTableStreamWriter.push_binaryArray(offsets);
 

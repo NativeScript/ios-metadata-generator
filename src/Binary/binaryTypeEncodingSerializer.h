@@ -71,6 +71,8 @@ public:
     virtual unique_ptr<TypeEncoding> visitId(const ::Meta::IdType& type) override;
 
     virtual unique_ptr<TypeEncoding> visitConstantArray(const ::Meta::ConstantArrayType& type) override;
+    
+    virtual unique_ptr<TypeEncoding> visitVector(const ::Meta::VectorType& type) override;
 
     virtual unique_ptr<TypeEncoding> visitIncompleteArray(const ::Meta::IncompleteArrayType& type) override;
 

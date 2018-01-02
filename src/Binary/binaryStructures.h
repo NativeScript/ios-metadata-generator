@@ -44,7 +44,8 @@ enum BinaryTypeEncodingType : uint8_t {
     FunctionPointer,
     Block,
     AnonymousStruct,
-    AnonymousUnion
+    AnonymousUnion,
+    Vector
 };
 
 // BinaryMetaType values must not exceed
@@ -274,6 +275,19 @@ public:
     int _size;
     std::unique_ptr<TypeEncoding> _elementType;
 
+    virtual MetaFileOffset save(BinaryWriter& writer) override;
+};
+    
+struct VectorEncoding: public TypeEncoding {
+public:
+    VectorEncoding()
+        : TypeEncoding(BinaryTypeEncodingType::Vector)
+    {
+    }
+    
+    int _size;
+    std::unique_ptr<TypeEncoding> _elementType;
+    
     virtual MetaFileOffset save(BinaryWriter& writer) override;
 };
 
