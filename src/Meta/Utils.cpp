@@ -38,9 +38,9 @@ bool Utils::areTypesEqual(const Type& type1, const Type& type2)
         const ConstantArrayType& arrayType2 = type2.as<ConstantArrayType>();
         return arrayType1.size == arrayType2.size && areTypesEqual(*arrayType1.innerType, *arrayType2.innerType);
     };
-    case TypeType::TypeVector: {
-        const VectorType& arrayType1 = type1.as<VectorType>();
-        const VectorType& arrayType2 = type2.as<VectorType>();
+    case TypeType::TypeExtVector: {
+        const ExtVectorType& arrayType1 = type1.as<ExtVectorType>();
+        const ExtVectorType& arrayType2 = type2.as<ExtVectorType>();
         return arrayType1.size == arrayType2.size && areTypesEqual(*arrayType1.innerType, *arrayType2.innerType);
     };
     case TypeType::TypeIncompleteArray: {

@@ -48,7 +48,7 @@ enum TypeType {
     TypeAnonymousUnion,
     TypeEnum,
     TypeTypeArgument,
-    TypeVector
+    TypeExtVector
 };
 
 class Type {
@@ -156,8 +156,8 @@ public:
             return visitor.visitEnum(as<EnumType>());
         case TypeTypeArgument:
             return visitor.visitTypeArgument(as<TypeArgumentType>());
-        case TypeVector:
-            return visitor.visitVector(as<VectorType>());
+        case TypeExtVector:
+            return visitor.visitExtVector(as<ExtVectorType>());
                 
         }
     }
@@ -275,10 +275,10 @@ public:
     int size;
 };
     
-class VectorType : public Type {
+class ExtVectorType : public Type {
 public:
-    VectorType(Type* innerType, int size)
-    : Type(TypeType::TypeVector)
+    ExtVectorType(Type* innerType, int size)
+    : Type(TypeType::TypeExtVector)
     , innerType(innerType)
     , size(size)
     {

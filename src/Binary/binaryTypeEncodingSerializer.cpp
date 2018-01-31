@@ -238,9 +238,9 @@ unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::serialize
     return unique_ptr<binary::TypeEncoding>(s);
 }
 
-unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitVector(const ::Meta::VectorType& type)
+unique_ptr<binary::TypeEncoding> binary::BinaryTypeEncodingSerializer::visitExtVector(const ::Meta::ExtVectorType& type)
 {
-    binary::VectorEncoding* s = new binary::VectorEncoding();
+    binary::ExtVectorEncoding* s = new binary::ExtVectorEncoding();
     s->_size = type.size;
     s->_elementType = type.innerType->visit(*this);
     return unique_ptr<binary::TypeEncoding>(s);

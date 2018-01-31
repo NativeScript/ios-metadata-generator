@@ -165,6 +165,10 @@ shared_ptr<Type> TypeFactory::create(const clang::Type* type)
             resultType = createFromBlockPointerType(concreteType);
         else if (const clang::RecordType* concreteType = clang::dyn_cast<clang::RecordType>(type))
             resultType = createFromRecordType(concreteType);
+        else if (const clang::ExtVectorType* concreteType = clang::dyn_cast<clang::ExtVectorType>(type)) {
+            resultType = createFromExtVectorType(concreteType);
+        }
+        
         else if (const clang::VectorType* concreteType = clang::dyn_cast<clang::VectorType>(type))
             resultType = createFromVectorType(concreteType);
         else if (const clang::ConstantArrayType* concreteType = clang::dyn_cast<clang::ConstantArrayType>(type))
@@ -429,11 +433,15 @@ shared_ptr<Type> TypeFactory::createFromTypedefType(const clang::TypedefType* ty
     }
     return this->create(type->getDecl()->getUnderlyingType());
 }
+    
+shared_ptr<Type> TypeFactory::createFromExtVectorType(const clang::ExtVectorType* type)
+{
+    return make_shared<ExtVectorType>(this->create(type->getElementType()).get(), type->getNumElements());
+}
 
 shared_ptr<Type> TypeFactory::createFromVectorType(const clang::VectorType* type)
 {
-    return make_shared<VectorType>(this->create(type->getElementType()).get(), type->getNumElements());
-    //throw TypeCreationException(type, "Vector type is not supported.", true);
+    throw TypeCreationException(type, "Vector type is not supported.", true);
 }
 
 shared_ptr<Type> TypeFactory::createFromElaboratedType(const clang::ElaboratedType* type)

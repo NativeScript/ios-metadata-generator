@@ -17,7 +17,7 @@ class AnonymousStructType;
 class AnonymousUnionType;
 class EnumType;
 class TypeArgumentType;
-class VectorType;
+class ExtVectorType;
 
 /*
      * \class TypeVisitor<T>
@@ -74,7 +74,7 @@ public:
 
     virtual T_RESULT visitConstantArray(const ConstantArrayType& typeDetails) = 0;
     
-    virtual T_RESULT visitVector(const VectorType& typeDetails) = 0;
+    virtual T_RESULT visitExtVector(const ExtVectorType& typeDetails) = 0;
 
     virtual T_RESULT visitIncompleteArray(const IncompleteArrayType& typeDetails) = 0;
 

@@ -278,9 +278,9 @@ public:
     virtual MetaFileOffset save(BinaryWriter& writer) override;
 };
     
-struct VectorEncoding: public TypeEncoding {
+struct ExtVectorEncoding: public TypeEncoding {
 public:
-    VectorEncoding()
+    ExtVectorEncoding()
         : TypeEncoding(BinaryTypeEncodingType::Vector)
     {
     }

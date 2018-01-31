@@ -80,6 +80,8 @@ private:
     std::shared_ptr<Type> createFromRecordType(const clang::RecordType* type);
 
     std::shared_ptr<Type> createFromTypedefType(const clang::TypedefType* type);
+    
+    std::shared_ptr<Type> createFromExtVectorType(const clang::ExtVectorType* type);
 
     std::shared_ptr<Type> createFromVectorType(const clang::VectorType* type);
 
