@@ -165,10 +165,8 @@ shared_ptr<Type> TypeFactory::create(const clang::Type* type)
             resultType = createFromBlockPointerType(concreteType);
         else if (const clang::RecordType* concreteType = clang::dyn_cast<clang::RecordType>(type))
             resultType = createFromRecordType(concreteType);
-        else if (const clang::ExtVectorType* concreteType = clang::dyn_cast<clang::ExtVectorType>(type)) {
+        else if (const clang::ExtVectorType* concreteType = clang::dyn_cast<clang::ExtVectorType>(type))
             resultType = createFromExtVectorType(concreteType);
-        }
-        
         else if (const clang::VectorType* concreteType = clang::dyn_cast<clang::VectorType>(type))
             resultType = createFromVectorType(concreteType);
         else if (const clang::ConstantArrayType* concreteType = clang::dyn_cast<clang::ConstantArrayType>(type))
