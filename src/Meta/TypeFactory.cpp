@@ -191,11 +191,6 @@ shared_ptr<Type> TypeFactory::create(const clang::Type* type)
             throw TypeCreationException(type, "Unable to create encoding for this type.", true);
     }
     catch (TypeCreationException& e) {
-        if (const clang::TypedefType* concreteType = clang::dyn_cast<clang::TypedefType>(type)) {
-            if (concreteType->getDecl()->getNameAsString() == "matrix_float4x4") {
-                std::cout<<"matrix type";
-            }
-        }
         if (e.getType() == type) {
             _cache.insert(make_pair<Cache::key_type, Cache::mapped_type>(&typeRef, make_pair<shared_ptr<Type>, string>(nullptr, e.getMessage())));
             throw;
@@ -293,11 +288,6 @@ shared_ptr<Type> TypeFactory::createFromBuiltinType(const clang::BuiltinType* ty
     // This is also valid for ObjCClass type.
 
     default:
-            if (const clang::TypedefType* concreteType = clang::dyn_cast<clang::TypedefType>(type)) {
-                if (concreteType->getDecl()->getNameAsString() == "matrix_float4x4") {
-                    std::cout<<"matrix type";
-                }
-            }
         throw TypeCreationException(type, string("Not supported builtin type(") + type->getTypeClassName() + ").", true);
     }
 }
@@ -416,7 +406,6 @@ static shared_ptr<Type> tryCreateFromBridgedType(const clang::Type* type)
 shared_ptr<Type> TypeFactory::createFromTypedefType(const clang::TypedefType* type)
 {
     vector<string> boolTypedefs{ "BOOL", "Boolean" };
-   // std::cout<<type->getDecl()->getNameAsString()<<"typedefs";
     if (isSpecificTypedefType(type, boolTypedefs))
         return TypeFactory::getBool();
     if (isSpecificTypedefType(type, "unichar"))
