@@ -201,6 +201,7 @@ int main(int argc, const char** argv)
     }
 
     // generate metadata for the intermediate sdk header
+    // We add this because "bool" is being parsed as int because stdbool.h is missing
     umbrellaContent = "typedef _Bool bool;\n" + umbrellaContent;
     clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", "objc-metadata-generator");
 
