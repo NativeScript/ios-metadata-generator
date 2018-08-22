@@ -7,6 +7,8 @@
 #include <string>
 #include <unordered_set>
 
+extern bool apply_manual_changes;
+
 namespace TypeScript {
 class DefinitionWriter : Meta::MetaVisitor {
 public:

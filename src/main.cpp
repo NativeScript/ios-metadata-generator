@@ -156,6 +156,9 @@ int main(int argc, const char** argv)
     for (int i = 0; i < argc; ++i) {
         std::string arg = *(argv + i);
         std::cout << "\"" << arg << "\", ";
+        if (arg == "--apply-manual-changes") {
+            apply_manual_changes = true;
+        }
     }
     std::cout << std::endl;
 
@@ -199,6 +202,7 @@ int main(int argc, const char** argv)
 
     // generate metadata for the intermediate sdk header
     printf("%s", umbrellaContent.c_str());
+    umbrellaContent = "typedef _Bool bool;\n" + umbrellaContent;
     clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", "objc-metadata-generator");
 
     std::clock_t end = clock();

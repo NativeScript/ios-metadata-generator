@@ -5,6 +5,8 @@
 #include <clang/AST/DeclObjC.h>
 #include <iterator>
 
+bool apply_manual_changes = false;
+
 namespace TypeScript {
 using namespace Meta;
 
@@ -122,15 +124,19 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     }
     
     std::string metaJsName = meta->jsName;
+    std::string parametersString = getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
     
-    if (metaJsName == "UIEvent") {
-        metaJsName = "_UIEvent";
+    if (apply_manual_changes) {
+        if (metaJsName == "UIEvent") {
+            metaJsName = "_UIEvent";
+        } else if (metaJsName == "HMMutableCharacteristicEvent") {
+            parametersString = "<TriggerValueType extends NSObject>";
+        }
     }
-
+    
     _buffer << std::endl
-            << _docSet.getCommentFor(meta).toString("") << "declare class " << metaJsName << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
+            << _docSet.getCommentFor(meta).toString("") << "declare class " << metaJsName << parametersString;
     if (meta->base != nullptr) {
-        
         _buffer << " extends " << localizeReference(*meta->base) << getTypeArgumentsStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration)->getSuperClassType());
     }
 
@@ -377,8 +383,11 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
     
     std::string metaName = meta->jsName;
     
-    if (metaName == "AudioBuffer") {
-        metaName = "_AudioBuffer";
+    if (apply_manual_changes) {
+        
+        if (metaName == "AudioBuffer") {
+            metaName = "_AudioBuffer";
+        }
     }
 
     _buffer << "interface " << metaName;
@@ -493,14 +502,21 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     std::ostringstream output;
 
     output << meta->jsName;
-    
-    if (meta->jsName == "sharedKeySetForKeys") {
-        output << "<KeyType>";
+    bool skipGenerics = false;
+
+    if (apply_manual_changes) {
+        if (owner->jsName == "HMMutableCharacteristicEvent" && (meta->jsName == "alloc" || meta->jsName == "new")) {
+            skipGenerics = true;
+        }
+        
+        if (meta->jsName == "sharedKeySetForKeys") {
+            output << "<KeyType>";
+        }
     }
 
     const Type* retType = meta->signature[0];
     if (!methodDecl.isInstanceMethod() && owner->is(MetaType::Interface)) {
-        if (retType->is(TypeInstancetype) || DefinitionWriter::hasClosedGenerics(*retType)) {
+        if ((retType->is(TypeInstancetype) || DefinitionWriter::hasClosedGenerics(*retType)) && !skipGenerics) {
             output << getTypeParametersStringOrEmpty(
                 clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
         }
@@ -513,6 +529,13 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     output << "(";
 
     size_t lastParamIndex = meta->getFlags(::Meta::MetaFlags::MethodHasErrorOutParameter) ? (meta->signature.size() - 1) : meta->signature.size();
+    
+    if (apply_manual_changes) {
+        if (owner->jsName == "PDFView" && meta->jsName == "copy") {
+            lastParamIndex = 0;
+        }
+    }
+    
     for (size_t i = 1; i < lastParamIndex; i++) {
         
         output << sanitizeParameterName(parameterNames[i - 1]) << ": " << tsifyType(*meta->signature[i], true);
@@ -522,7 +545,14 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
         }
         
     }
-    output << "): " << computeMethodReturnType(retType, owner, canUseThisType) << ";";
+    
+    output << "): ";
+    if (skipGenerics) {
+        output << "any;";
+    } else {
+        output << computeMethodReturnType(retType, owner, canUseThisType) << ";";
+    }
+    
     return output.str();
 }
 
@@ -617,9 +647,11 @@ void DefinitionWriter::visit(StructMeta* meta)
 {
     
     std::string metaName = meta->jsName;
-    
-    if (metaName == "AudioBuffer") {
-        metaName = "_AudioBuffer";
+
+    if (apply_manual_changes) {
+        if (metaName == "AudioBuffer") {
+            metaName = "_AudioBuffer";
+        }
     }
     
     TSComment comment = _docSet.getCommentFor(meta);
@@ -654,6 +686,7 @@ void DefinitionWriter::writeMembers(const std::vector<RecordField>& fields, std:
         if (i < fieldsComments.size()) {
             _buffer << fieldsComments[i].toString("\t");
         }
+        std::cout << fields[i].name << "\n";
         _buffer << "\t" << fields[i].name << ": " << tsifyType(*fields[i].encoding) << ";" << std::endl;
     }
 }
@@ -725,10 +758,12 @@ void DefinitionWriter::visit(EnumConstantMeta* meta)
 
 std::string DefinitionWriter::localizeReference(const std::string& jsName, std::string moduleName)
 {
-    if (jsName == "AudioBuffer") {
-        return "_AudioBuffer";
-    } else if (jsName == "UIEvent") {
-        return "_UIEvent";
+    if (apply_manual_changes) {
+        if (jsName == "AudioBuffer") {
+            return "_AudioBuffer";
+        } else if (jsName == "UIEvent") {
+            return "_UIEvent";
+        }
     }
     return jsName;
 }
@@ -817,9 +852,12 @@ std::string DefinitionWriter::tsifyType(const Type& type, const bool isFuncParam
         else if (interface.name == "NSDate") {
             return "Date";
         }
-        else if (interface.name == "UIEvent") {
-            return "_UIEvent";
-        }
+    
+    if (apply_manual_changes) {
+            if (interface.name == "UIEvent") {
+                return "_UIEvent";
+            }
+    }
 
         std::ostringstream output;
         output << localizeReference(interface);
@@ -866,10 +904,8 @@ std::string DefinitionWriter::tsifyType(const Type& type, const bool isFuncParam
 
         return output.str();
     }
-    case TypeStruct: {
-        std::string structName = localizeReference(*type.as<StructType>().structMeta);
-        return structName;
-    }
+    case TypeStruct:
+        return localizeReference(*type.as<StructType>().structMeta);
     case TypeUnion:
         return localizeReference(*type.as<UnionType>().unionMeta);
     case TypeAnonymousStruct:
@@ -909,10 +945,12 @@ std::string DefinitionWriter::computeMethodReturnType(const Type* retType, const
         else {
             
             std::string ownerJsName = owner->jsName;
-            
-            if (ownerJsName == "UIEvent") {
-                ownerJsName = "_UIEvent";
-            }
+    
+    if (apply_manual_changes) {
+                if (ownerJsName == "UIEvent") {
+                    ownerJsName = "_UIEvent";
+                }
+    }
             
             output << ownerJsName;
             if (owner->is(MetaType::Interface)) {
