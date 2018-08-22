@@ -201,7 +201,6 @@ int main(int argc, const char** argv)
     }
 
     // generate metadata for the intermediate sdk header
-    printf("%s", umbrellaContent.c_str());
     umbrellaContent = "typedef _Bool bool;\n" + umbrellaContent;
     clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", "objc-metadata-generator");
 

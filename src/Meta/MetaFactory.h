@@ -33,6 +33,8 @@ public:
     {
         return this->_cache;
     }
+    
+    static std::string getTypedefOrOwnName(const clang::TagDecl* tagDecl);
 
 private:
     void createFromFunction(const clang::FunctionDecl& function, FunctionMeta& functionMeta);

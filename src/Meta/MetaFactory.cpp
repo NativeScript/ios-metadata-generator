@@ -22,16 +22,13 @@ static bool metasComparerByJsName(Meta* meta1, Meta* meta2)
     return compareJsNames(meta1->jsName, meta2->jsName);
 }
 
-static string getTypedefOrOwnName(const clang::TagDecl* tagDecl)
+string MetaFactory::getTypedefOrOwnName(const clang::TagDecl* tagDecl)
 {
     assert(tagDecl);
 
-    if (!tagDecl->hasNameForLinkage()) {
-        return ""; // It is absolutely anonymous decl. It has neither name nor typedef name.
-    }
-
     if (tagDecl->getNextDeclInContext() != nullptr) {
         if (const clang::TypedefDecl* nextDecl = clang::dyn_cast<clang::TypedefDecl>(tagDecl->getNextDeclInContext())) {
+            
             if (const clang::ElaboratedType* innerElaboratedType = clang::dyn_cast<clang::ElaboratedType>(nextDecl->getUnderlyingType().getTypePtr())) {
                 if (const clang::TagType* tagType = clang::dyn_cast<clang::TagType>(innerElaboratedType->desugar().getTypePtr())) {
                     if (tagType->getDecl() == tagDecl) {

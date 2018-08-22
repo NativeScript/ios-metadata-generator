@@ -686,7 +686,6 @@ void DefinitionWriter::writeMembers(const std::vector<RecordField>& fields, std:
         if (i < fieldsComments.size()) {
             _buffer << fieldsComments[i].toString("\t");
         }
-        std::cout << fields[i].name << "\n";
         _buffer << "\t" << fields[i].name << ": " << tsifyType(*fields[i].encoding) << ";" << std::endl;
     }
 }
