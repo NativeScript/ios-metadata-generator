@@ -5,14 +5,14 @@
 #include <clang/AST/DeclObjC.h>
 #include <iterator>
 
-bool apply_manual_changes = false;
-
 namespace TypeScript {
 using namespace Meta;
 
 static std::unordered_set<std::string> hiddenMethods = { "retain", "release", "autorelease", "allocWithZone", "zone", "countByEnumeratingWithStateObjectsCount" };
 
 static std::unordered_set<std::string> bannedIdentifiers = { "function", "arguments", "in" };
+
+bool DefinitionWriter::applyManualChanges = false;
 
 static std::string sanitizeParameterName(const std::string& parameterName)
 {
@@ -126,10 +126,12 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
     std::string metaJsName = meta->jsName;
     std::string parametersString = getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
     
-    if (apply_manual_changes) {
+    if (DefinitionWriter::applyManualChanges) {
         if (metaJsName == "UIEvent") {
             metaJsName = "_UIEvent";
         } else if (metaJsName == "HMMutableCharacteristicEvent") {
+            // We need to add 'extends NSObject in order to inherit NSObject properties. By default it is exported as <TriggerValueType>
+            // @interface HMMutableCharacteristicEvent<TriggerValueType : id<NSCopying>> : HMCharacteristicEvent
             parametersString = "<TriggerValueType extends NSObject>";
         }
     }
@@ -383,7 +385,7 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
     
     std::string metaName = meta->jsName;
     
-    if (apply_manual_changes) {
+    if (DefinitionWriter::applyManualChanges) {
         
         if (metaName == "AudioBuffer") {
             metaName = "_AudioBuffer";
@@ -504,11 +506,17 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     output << meta->jsName;
     bool skipGenerics = false;
 
-    if (apply_manual_changes) {
+    if (DefinitionWriter::applyManualChanges) {
+        // HMMutableCharacteristicEvent constructors should not have generics. Default export:
+        // static alloc<TriggerValueType>(): HMMutableCharacteristicEvent<TriggerValueType>;
         if (owner->jsName == "HMMutableCharacteristicEvent" && (meta->jsName == "alloc" || meta->jsName == "new")) {
             skipGenerics = true;
         }
         
+        // Default export:
+        // static sharedKeySetForKeys(keys: NSArray<KeyType> | KeyType[]): any;
+        // ObjC interface:
+        // + (id)sharedKeySetForKeys:(NSArray<id<NSCopying>> *)keys;
         if (meta->jsName == "sharedKeySetForKeys") {
             output << "<KeyType>";
         }
@@ -530,7 +538,11 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
 
     size_t lastParamIndex = meta->getFlags(::Meta::MetaFlags::MethodHasErrorOutParameter) ? (meta->signature.size() - 1) : meta->signature.size();
     
-    if (apply_manual_changes) {
+    if (DefinitionWriter::applyManualChanges) {
+        // Default export:
+        // copy(sender: any): void;
+        // ObjC interface:
+        // - (IBAction)copy:(nullable id)sender; -> overrides parent class' (UIView) `copy` method 
         if (owner->jsName == "PDFView" && meta->jsName == "copy") {
             lastParamIndex = 0;
         }
@@ -648,7 +660,7 @@ void DefinitionWriter::visit(StructMeta* meta)
     
     std::string metaName = meta->jsName;
 
-    if (apply_manual_changes) {
+    if (DefinitionWriter::applyManualChanges) {
         if (metaName == "AudioBuffer") {
             metaName = "_AudioBuffer";
         }
@@ -757,7 +769,7 @@ void DefinitionWriter::visit(EnumConstantMeta* meta)
 
 std::string DefinitionWriter::localizeReference(const std::string& jsName, std::string moduleName)
 {
-    if (apply_manual_changes) {
+    if (DefinitionWriter::applyManualChanges) {
         if (jsName == "AudioBuffer") {
             return "_AudioBuffer";
         } else if (jsName == "UIEvent") {
@@ -852,7 +864,7 @@ std::string DefinitionWriter::tsifyType(const Type& type, const bool isFuncParam
             return "Date";
         }
     
-    if (apply_manual_changes) {
+    if (DefinitionWriter::applyManualChanges) {
             if (interface.name == "UIEvent") {
                 return "_UIEvent";
             }
@@ -945,10 +957,10 @@ std::string DefinitionWriter::computeMethodReturnType(const Type* retType, const
             
             std::string ownerJsName = owner->jsName;
     
-    if (apply_manual_changes) {
-                if (ownerJsName == "UIEvent") {
-                    ownerJsName = "_UIEvent";
-                }
+    if (DefinitionWriter::applyManualChanges) {
+        if (ownerJsName == "UIEvent") {
+            ownerJsName = "_UIEvent";
+        }
     }
             
             output << ownerJsName;

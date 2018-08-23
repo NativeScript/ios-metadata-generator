@@ -20,6 +20,8 @@ public:
     }
 
     std::string write();
+    
+    static bool applyManualChanges;
 
     virtual void visit(Meta::InterfaceMeta* meta) override;
 

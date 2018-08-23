@@ -157,7 +157,7 @@ int main(int argc, const char** argv)
         std::string arg = *(argv + i);
         std::cout << "\"" << arg << "\", ";
         if (arg == "--apply-manual-changes") {
-            apply_manual_changes = true;
+            TypeScript::DefinitionWriter::applyManualChanges = true;
         }
     }
     std::cout << std::endl;
