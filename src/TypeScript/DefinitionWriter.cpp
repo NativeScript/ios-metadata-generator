@@ -43,7 +43,21 @@ static std::string getTypeParametersStringOrEmpty(const clang::ObjCInterfaceDecl
 
     return output.str();
 }
-
+    
+static std::vector<std::string> getTypeParameterNames(const clang::ObjCInterfaceDecl* interfaceDecl)
+{
+    std::vector<std::string> params;
+    if (clang::ObjCTypeParamList* typeParameters = interfaceDecl->getTypeParamListAsWritten()) {
+        if (typeParameters->size()) {
+            for (unsigned i = 0; i < typeParameters->size(); i++) {
+                clang::ObjCTypeParamDecl* typeParam = *(typeParameters->begin() + i);
+                params.push_back(typeParam->getNameAsString());
+            }
+        }
+    }
+    return params;
+}
+    
 std::string DefinitionWriter::getTypeArgumentsStringOrEmpty(const clang::ObjCObjectType* objectType)
 {
     std::ostringstream output;
@@ -482,6 +496,20 @@ std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMet
 
     return output.str();
 }
+    
+void getClosedGenericsIfAny(const Type& type, std::vector<TypeArgumentType*>& params)
+{
+    if (type.is(TypeInterface)) {
+        const InterfaceType& interfaceType = type.as<InterfaceType>();
+        for (size_t i = 0; i < interfaceType.typeArguments.size(); i++) {
+            if (interfaceType.typeArguments[i]->name != "") {
+                if (std::find(params.begin(), params.end(), interfaceType.typeArguments[i]) == params.end()) {
+                    params.push_back(interfaceType.typeArguments[i]);
+                }
+            }
+        }
+    }
+}
 
 std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner, bool canUseThisType)
 {
@@ -489,14 +517,30 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     auto parameters = methodDecl.parameters();
 
     std::vector<std::string> parameterNames;
+    std::vector<TypeArgumentType*> paramsGenerics;
+    std::vector<std::string> ownerGenerics;
+    if (owner->is(Interface)) {
+        ownerGenerics = getTypeParameterNames(clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
+    }
+    
     std::transform(parameters.begin(), parameters.end(), std::back_inserter(parameterNames), [](clang::ParmVarDecl* param) {
+        
         return param->getNameAsString();
     });
 
     for (size_t i = 0; i < parameterNames.size(); i++) {
+        getClosedGenericsIfAny(*meta->signature[i+1], paramsGenerics);
         for (size_t n = 0; n < parameterNames.size(); n++) {
             if (parameterNames[i] == parameterNames[n] && i != n) {
                 parameterNames[n] += std::to_string(n);
+            }
+        }
+    }
+    if (!paramsGenerics.empty()) {
+        for (size_t i = 0; i < paramsGenerics.size(); i++) {
+            if (std::find(ownerGenerics.begin(), ownerGenerics.end(), paramsGenerics[i]->name) == ownerGenerics.end())
+            {
+                paramsGenerics.erase(paramsGenerics.begin() + i);
             }
         }
     }
@@ -512,21 +556,23 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
         if (owner->jsName == "HMMutableCharacteristicEvent" && (meta->jsName == "alloc" || meta->jsName == "new")) {
             skipGenerics = true;
         }
-        
-        // Default export:
-        // static sharedKeySetForKeys(keys: NSArray<KeyType> | KeyType[]): any;
-        // ObjC interface:
-        // + (id)sharedKeySetForKeys:(NSArray<id<NSCopying>> *)keys;
-        if (meta->jsName == "sharedKeySetForKeys") {
-            output << "<KeyType>";
-        }
     }
 
     const Type* retType = meta->signature[0];
+    
     if (!methodDecl.isInstanceMethod() && owner->is(MetaType::Interface)) {
         if ((retType->is(TypeInstancetype) || DefinitionWriter::hasClosedGenerics(*retType)) && !skipGenerics) {
             output << getTypeParametersStringOrEmpty(
                 clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
+        } else if (!paramsGenerics.empty()) {
+            output << "<";
+            for (size_t i = 0; i < paramsGenerics.size(); i++) {
+                output << paramsGenerics[i]->name;
+                if (i < paramsGenerics.size() - 1) {
+                    output << ", ";
+                }
+            }
+            output << ">";
         }
     }
 
@@ -542,7 +588,7 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
         // Default export:
         // copy(sender: any): void;
         // ObjC interface:
-        // - (IBAction)copy:(nullable id)sender; -> overrides parent class' (UIView) `copy` method 
+        // - (IBAction)copy:(nullable id)sender; -> overrides parent class' (UIView) `copy` method
         if (owner->jsName == "PDFView" && meta->jsName == "copy") {
             lastParamIndex = 0;
         }
@@ -957,11 +1003,11 @@ std::string DefinitionWriter::computeMethodReturnType(const Type* retType, const
             
             std::string ownerJsName = owner->jsName;
     
-    if (DefinitionWriter::applyManualChanges) {
-        if (ownerJsName == "UIEvent") {
-            ownerJsName = "_UIEvent";
-        }
-    }
+            if (DefinitionWriter::applyManualChanges) {
+                if (ownerJsName == "UIEvent") {
+                    ownerJsName = "_UIEvent";
+                }
+            }
             
             output << ownerJsName;
             if (owner->is(MetaType::Interface)) {
