@@ -484,7 +484,7 @@ std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMet
         output << "constructor(o: { ";
         for (size_t i = 0; i < ctorTokens.size(); i++) {
             output << ctorTokens[i] << ": ";
-            output << (i + 1 < method->signature.size() ? tsifyType(*method->signature[i + 1]) : "void") << "; ";
+            output << (i + 1 < method->signature.size() ? tsifyType(*method->signature[i + 1], true) : "void") << "; ";
         }
         output << "});";
     }
