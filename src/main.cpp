@@ -153,11 +153,12 @@ int main(int argc, const char** argv)
 
     // Log Metadata Genrator Arguments
     std::cout << "Metadata Generator Arguments: " << std::endl;
+    TypeScript::DefinitionWriter::applyManualChanges = true;
     for (int i = 0; i < argc; ++i) {
         std::string arg = *(argv + i);
         std::cout << "\"" << arg << "\", ";
-        if (arg == "--apply-manual-changes") {
-            TypeScript::DefinitionWriter::applyManualChanges = true;
+        if (arg == "--no-apply-manual-changes") {
+            TypeScript::DefinitionWriter::applyManualChanges = false;
         }
     }
     std::cout << std::endl;
