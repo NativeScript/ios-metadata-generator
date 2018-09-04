@@ -19,6 +19,7 @@ set(GENERATOR_HEADERS
     Meta/MetaEntities.h
     Meta/MetaFactory.h
     Meta/MetaVisitor.h
+    Meta/NameRetrieverVisitor.h
     Meta/TypeEntities.h
     Meta/TypeFactory.h
     Meta/TypeVisitor.h
@@ -53,6 +54,7 @@ set(GENERATOR_SOURCES
     Meta/Filters/ResolveGlobalNamesCollisionsFilter.cpp
     Meta/MetaEntities.cpp
     Meta/MetaFactory.cpp
+    Meta/NameRetrieverVisitor.cpp
     Meta/TypeFactory.cpp
     Meta/Utils.cpp
     TypeScript/DefinitionWriter.cpp

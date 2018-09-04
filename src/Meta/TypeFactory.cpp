@@ -315,9 +315,10 @@ shared_ptr<Type> TypeFactory::createFromObjCObjectPointerType(const clang::ObjCO
             return TypeFactory::getProtocolType();
         }
         else if (clang::ObjCInterfaceDecl* interfaceDef = interface->getDefinition()) {
-            vector<TypeArgumentType*> typeArguments;
+            vector<Type*> typeArguments;
             for (const clang::QualType& typeArg : type->getTypeArgsAsWritten()) {
-                typeArguments.push_back(&this->create(typeArg)->as<TypeArgumentType>());
+
+                typeArguments.push_back(this->create(typeArg).get());
             }
             return make_shared<InterfaceType>(&_metaFactory->create(*interfaceDef)->as<InterfaceMeta>(), protocols, typeArguments);
         }

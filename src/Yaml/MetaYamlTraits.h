@@ -237,7 +237,7 @@ namespace yaml {
                 io.mapRequired("JsName", concreteType.interface->jsName);
                 if (concreteType.typeArguments.size() > 0) {
                     std::vector<Meta::Type*> typeArguments;
-                    for (Meta::TypeArgumentType* type : concreteType.typeArguments) {
+                    for (Meta::Type* type : concreteType.typeArguments) {
                         typeArguments.push_back(type);
                     }
                     io.mapRequired("TypeParameters", typeArguments);

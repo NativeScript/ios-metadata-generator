@@ -1,5 +1,6 @@
 #include "DefinitionWriter.h"
 #include "Meta/Utils.h"
+#include "Meta/NameRetrieverVisitor.h"
 #include "Utils/StringUtils.h"
 #include <algorithm>
 #include <clang/AST/DeclObjC.h>
@@ -497,15 +498,18 @@ std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMet
     return output.str();
 }
     
-void getClosedGenericsIfAny(const Type& type, std::vector<TypeArgumentType*>& params)
+void getClosedGenericsIfAny(Type& type, std::vector<Type*>& params)
 {
     if (type.is(TypeInterface)) {
         const InterfaceType& interfaceType = type.as<InterfaceType>();
         for (size_t i = 0; i < interfaceType.typeArguments.size(); i++) {
-            if (interfaceType.typeArguments[i]->name != "") {
-                if (std::find(params.begin(), params.end(), interfaceType.typeArguments[i]) == params.end()) {
-                    params.push_back(interfaceType.typeArguments[i]);
-                }
+            getClosedGenericsIfAny(*interfaceType.typeArguments[i], params);
+        }
+    } else if (type.is(TypeTypeArgument)) {
+        TypeArgumentType* typeArg = &type.as<TypeArgumentType>();
+        if (typeArg->visit(NameRetrieverVisitor::instanceTs) != "") {
+            if (std::find(params.begin(), params.end(), typeArg) == params.end()) {
+                params.push_back(typeArg);
             }
         }
     }
@@ -517,7 +521,7 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     auto parameters = methodDecl.parameters();
 
     std::vector<std::string> parameterNames;
-    std::vector<TypeArgumentType*> paramsGenerics;
+    std::vector<Type*> paramsGenerics;
     std::vector<std::string> ownerGenerics;
     if (owner->is(Interface)) {
         ownerGenerics = getTypeParameterNames(clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
@@ -538,9 +542,11 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     }
     if (!paramsGenerics.empty()) {
         for (size_t i = 0; i < paramsGenerics.size(); i++) {
-            if (std::find(ownerGenerics.begin(), ownerGenerics.end(), paramsGenerics[i]->name) == ownerGenerics.end())
+            std::string name = paramsGenerics[i]->visit(NameRetrieverVisitor::instanceTs);
+            if (std::find(ownerGenerics.begin(), ownerGenerics.end(), name) == ownerGenerics.end())
             {
                 paramsGenerics.erase(paramsGenerics.begin() + i);
+                i--;
             }
         }
     }
@@ -567,7 +573,8 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
         } else if (!paramsGenerics.empty()) {
             output << "<";
             for (size_t i = 0; i < paramsGenerics.size(); i++) {
-                output << paramsGenerics[i]->name;
+                auto name = paramsGenerics[i]->visit(NameRetrieverVisitor::instanceTs);
+                output << name;
                 if (i < paramsGenerics.size() - 1) {
                     output << ", ";
                 }
