@@ -18,6 +18,8 @@ public:
     }
 
     std::string write();
+    
+    static bool applyManualChanges;
 
     virtual void visit(Meta::InterfaceMeta* meta) override;
 
@@ -70,7 +72,7 @@ private:
     static std::string writeFunctionProto(const std::vector<Meta::Type*>& signature);
     static std::string localizeReference(const std::string& jsName, std::string moduleName);
     static std::string localizeReference(const Meta::Meta& meta);
-    static std::string tsifyType(const Meta::Type& type);
+    static std::string tsifyType(const Meta::Type& type, const bool isParam = false);
     static std::string computeMethodReturnType(const Meta::Type* retType, const Meta::BaseClassMeta* owner, bool canUseThisType = false);
     std::string getTypeArgumentsStringOrEmpty(const clang::ObjCObjectType* objectType);
 

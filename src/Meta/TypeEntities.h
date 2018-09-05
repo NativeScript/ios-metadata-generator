@@ -83,7 +83,7 @@ public:
     }
 
     template <class T>
-    T visit(TypeVisitor<T>& visitor)
+    T visit(TypeVisitor<T>& visitor) const
     {
         switch (this->type) {
         case TypeVoid:
@@ -221,7 +221,7 @@ public:
 
 class InterfaceType : public Type {
 public:
-    InterfaceType(InterfaceMeta* interface, std::vector<ProtocolMeta*> protocols, std::vector<TypeArgumentType*> typeArguments)
+    InterfaceType(InterfaceMeta* interface, std::vector<ProtocolMeta*> protocols, std::vector<Type*> typeArguments)
         : Type(TypeType::TypeInterface)
         , interface(interface)
         , protocols(protocols)
@@ -231,7 +231,7 @@ public:
 
     InterfaceMeta* interface;
     std::vector<ProtocolMeta*> protocols;
-    std::vector<TypeArgumentType*> typeArguments;
+    std::vector<Type*> typeArguments;
 };
 
 class BridgedInterfaceType : public Type {

@@ -315,9 +315,10 @@ shared_ptr<Type> TypeFactory::createFromObjCObjectPointerType(const clang::ObjCO
             return TypeFactory::getProtocolType();
         }
         else if (clang::ObjCInterfaceDecl* interfaceDef = interface->getDefinition()) {
-            vector<TypeArgumentType*> typeArguments;
+            vector<Type*> typeArguments;
             for (const clang::QualType& typeArg : type->getTypeArgsAsWritten()) {
-                typeArguments.push_back(&this->create(typeArg)->as<TypeArgumentType>());
+
+                typeArguments.push_back(this->create(typeArg).get());
             }
             return make_shared<InterfaceType>(&_metaFactory->create(*interfaceDef)->as<InterfaceMeta>(), protocols, typeArguments);
         }
@@ -356,6 +357,7 @@ shared_ptr<Type> TypeFactory::createFromEnumType(const clang::EnumType* type)
 
 shared_ptr<Type> TypeFactory::createFromRecordType(const clang::RecordType* type)
 {
+    
     clang::RecordDecl* recordDef = type->getDecl()->getDefinition();
     if (!recordDef) {
         return TypeFactory::getVoid();
@@ -364,7 +366,8 @@ shared_ptr<Type> TypeFactory::createFromRecordType(const clang::RecordType* type
         throw TypeCreationException(type, "The record is an union.", true);
     if (!recordDef->isStruct())
         throw TypeCreationException(type, "The record is not a struct.", true);
-    if (!recordDef->hasNameForLinkage()) {
+    const clang::TagDecl* tagDecl = clang::dyn_cast<clang::TagDecl>(type->getDecl());
+    if (MetaFactory::getTypedefOrOwnName(tagDecl) == "") {
         // The record is anonymous
         vector<RecordField> fields;
         for (clang::FieldDecl* field : recordDef->fields()) {
@@ -405,7 +408,7 @@ static shared_ptr<Type> tryCreateFromBridgedType(const clang::Type* type)
 
 shared_ptr<Type> TypeFactory::createFromTypedefType(const clang::TypedefType* type)
 {
-    vector<string> boolTypedefs{ "BOOL", "Boolean" };
+    vector<string> boolTypedefs{ "BOOL", "Boolean", "bool"};
     if (isSpecificTypedefType(type, boolTypedefs))
         return TypeFactory::getBool();
     if (isSpecificTypedefType(type, "unichar"))

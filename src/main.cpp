@@ -153,9 +153,13 @@ int main(int argc, const char** argv)
 
     // Log Metadata Genrator Arguments
     std::cout << "Metadata Generator Arguments: " << std::endl;
+    TypeScript::DefinitionWriter::applyManualChanges = true;
     for (int i = 0; i < argc; ++i) {
         std::string arg = *(argv + i);
         std::cout << "\"" << arg << "\", ";
+        if (arg == "--no-apply-manual-changes") {
+            TypeScript::DefinitionWriter::applyManualChanges = false;
+        }
     }
     std::cout << std::endl;
 
@@ -198,7 +202,8 @@ int main(int argc, const char** argv)
     }
 
     // generate metadata for the intermediate sdk header
-    printf("%s", umbrellaContent.c_str());
+    // We add this because "bool" is being parsed as int because stdbool.h is missing
+    umbrellaContent = "typedef _Bool bool;\n" + umbrellaContent;
     clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", "objc-metadata-generator");
 
     std::clock_t end = clock();

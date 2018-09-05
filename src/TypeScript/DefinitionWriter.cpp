@@ -1,5 +1,6 @@
 #include "DefinitionWriter.h"
 #include "Meta/Utils.h"
+#include "Meta/NameRetrieverVisitor.h"
 #include "Utils/StringUtils.h"
 #include <algorithm>
 #include <clang/AST/DeclObjC.h>
@@ -11,6 +12,8 @@ using namespace Meta;
 static std::unordered_set<std::string> hiddenMethods = { "retain", "release", "autorelease", "allocWithZone", "zone", "countByEnumeratingWithStateObjectsCount" };
 
 static std::unordered_set<std::string> bannedIdentifiers = { "function", "arguments", "in" };
+
+bool DefinitionWriter::applyManualChanges = false;
 
 static std::string sanitizeParameterName(const std::string& parameterName)
 {
@@ -41,7 +44,21 @@ static std::string getTypeParametersStringOrEmpty(const clang::ObjCInterfaceDecl
 
     return output.str();
 }
-
+    
+static std::vector<std::string> getTypeParameterNames(const clang::ObjCInterfaceDecl* interfaceDecl)
+{
+    std::vector<std::string> params;
+    if (clang::ObjCTypeParamList* typeParameters = interfaceDecl->getTypeParamListAsWritten()) {
+        if (typeParameters->size()) {
+            for (unsigned i = 0; i < typeParameters->size(); i++) {
+                clang::ObjCTypeParamDecl* typeParam = *(typeParameters->begin() + i);
+                params.push_back(typeParam->getNameAsString());
+            }
+        }
+    }
+    return params;
+}
+    
 std::string DefinitionWriter::getTypeArgumentsStringOrEmpty(const clang::ObjCObjectType* objectType)
 {
     std::ostringstream output;
@@ -120,9 +137,22 @@ void DefinitionWriter::visit(InterfaceMeta* meta)
         }
         compoundStaticMethods.emplace(methodPair);
     }
-
+    
+    std::string metaJsName = meta->jsName;
+    std::string parametersString = getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
+    
+    if (DefinitionWriter::applyManualChanges) {
+        if (metaJsName == "UIEvent") {
+            metaJsName = "_UIEvent";
+        } else if (metaJsName == "HMMutableCharacteristicEvent") {
+            // We need to add 'extends NSObject in order to inherit NSObject properties. By default it is exported as <TriggerValueType>
+            // @interface HMMutableCharacteristicEvent<TriggerValueType : id<NSCopying>> : HMCharacteristicEvent
+            parametersString = "<TriggerValueType extends NSObject>";
+        }
+    }
+    
     _buffer << std::endl
-            << _docSet.getCommentFor(meta).toString("") << "declare class " << meta->jsName << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration));
+            << _docSet.getCommentFor(meta).toString("") << "declare class " << metaJsName << parametersString;
     if (meta->base != nullptr) {
         _buffer << " extends " << localizeReference(*meta->base) << getTypeArgumentsStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(meta->declaration)->getSuperClassType());
     }
@@ -367,8 +397,17 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
 {
     _buffer << std::endl
             << _docSet.getCommentFor(meta).toString("");
+    
+    std::string metaName = meta->jsName;
+    
+    if (DefinitionWriter::applyManualChanges) {
+        
+        if (metaName == "AudioBuffer") {
+            metaName = "_AudioBuffer";
+        }
+    }
 
-    _buffer << "interface " << meta->jsName;
+    _buffer << "interface " << metaName;
     std::map<std::string, PropertyMeta*> conformedProtocolsProperties;
     if (meta->protocols.size()) {
         _buffer << " extends ";
@@ -400,10 +439,10 @@ void DefinitionWriter::visit(ProtocolMeta* meta)
 
     _buffer << "}" << std::endl;
 
-    _buffer << "declare var " << meta->jsName << ": {" << std::endl;
+    _buffer << "declare var " << metaName << ": {" << std::endl;
 
     _buffer << std::endl
-            << "\tprototype: " << meta->jsName << ";" << std::endl;
+            << "\tprototype: " << metaName << ";" << std::endl;
 
     CompoundMemberMap<MethodMeta> compoundStaticMethods;
     for (MethodMeta* method : meta->staticMethods) {
@@ -446,7 +485,7 @@ std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMet
         output << "constructor(o: { ";
         for (size_t i = 0; i < ctorTokens.size(); i++) {
             output << ctorTokens[i] << ": ";
-            output << (i + 1 < method->signature.size() ? tsifyType(*method->signature[i + 1]) : "void") << "; ";
+            output << (i + 1 < method->signature.size() ? tsifyType(*method->signature[i + 1], true) : "void") << "; ";
         }
         output << "});";
     }
@@ -458,6 +497,23 @@ std::string DefinitionWriter::writeConstructor(const CompoundMemberMap<MethodMet
 
     return output.str();
 }
+    
+void getClosedGenericsIfAny(Type& type, std::vector<Type*>& params)
+{
+    if (type.is(TypeInterface)) {
+        const InterfaceType& interfaceType = type.as<InterfaceType>();
+        for (size_t i = 0; i < interfaceType.typeArguments.size(); i++) {
+            getClosedGenericsIfAny(*interfaceType.typeArguments[i], params);
+        }
+    } else if (type.is(TypeTypeArgument)) {
+        TypeArgumentType* typeArg = &type.as<TypeArgumentType>();
+        if (typeArg->visit(NameRetrieverVisitor::instanceTs) != "") {
+            if (std::find(params.begin(), params.end(), typeArg) == params.end()) {
+                params.push_back(typeArg);
+            }
+        }
+    }
+}
 
 std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner, bool canUseThisType)
 {
@@ -465,14 +521,32 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     auto parameters = methodDecl.parameters();
 
     std::vector<std::string> parameterNames;
+    std::vector<Type*> paramsGenerics;
+    std::vector<std::string> ownerGenerics;
+    if (owner->is(Interface)) {
+        ownerGenerics = getTypeParameterNames(clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
+    }
+    
     std::transform(parameters.begin(), parameters.end(), std::back_inserter(parameterNames), [](clang::ParmVarDecl* param) {
+        
         return param->getNameAsString();
     });
 
     for (size_t i = 0; i < parameterNames.size(); i++) {
+        getClosedGenericsIfAny(*meta->signature[i+1], paramsGenerics);
         for (size_t n = 0; n < parameterNames.size(); n++) {
             if (parameterNames[i] == parameterNames[n] && i != n) {
                 parameterNames[n] += std::to_string(n);
+            }
+        }
+    }
+    if (!paramsGenerics.empty()) {
+        for (size_t i = 0; i < paramsGenerics.size(); i++) {
+            std::string name = paramsGenerics[i]->visit(NameRetrieverVisitor::instanceTs);
+            if (std::find(ownerGenerics.begin(), ownerGenerics.end(), name) == ownerGenerics.end())
+            {
+                paramsGenerics.erase(paramsGenerics.begin() + i);
+                i--;
             }
         }
     }
@@ -480,12 +554,32 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     std::ostringstream output;
 
     output << meta->jsName;
+    bool skipGenerics = false;
+
+    if (DefinitionWriter::applyManualChanges) {
+        // HMMutableCharacteristicEvent constructors should not have generics. Default export:
+        // static alloc<TriggerValueType>(): HMMutableCharacteristicEvent<TriggerValueType>;
+        if (owner->jsName == "HMMutableCharacteristicEvent" && (meta->jsName == "alloc" || meta->jsName == "new")) {
+            skipGenerics = true;
+        }
+    }
 
     const Type* retType = meta->signature[0];
+    
     if (!methodDecl.isInstanceMethod() && owner->is(MetaType::Interface)) {
-        if (retType->is(TypeInstancetype) || DefinitionWriter::hasClosedGenerics(*retType)) {
+        if ((retType->is(TypeInstancetype) || DefinitionWriter::hasClosedGenerics(*retType)) && !skipGenerics) {
             output << getTypeParametersStringOrEmpty(
                 clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
+        } else if (!paramsGenerics.empty()) {
+            output << "<";
+            for (size_t i = 0; i < paramsGenerics.size(); i++) {
+                auto name = paramsGenerics[i]->visit(NameRetrieverVisitor::instanceTs);
+                output << name;
+                if (i < paramsGenerics.size() - 1) {
+                    output << ", ";
+                }
+            }
+            output << ">";
         }
     }
 
@@ -496,13 +590,34 @@ std::string DefinitionWriter::writeMethod(MethodMeta* meta, BaseClassMeta* owner
     output << "(";
 
     size_t lastParamIndex = meta->getFlags(::Meta::MetaFlags::MethodHasErrorOutParameter) ? (meta->signature.size() - 1) : meta->signature.size();
+    
+    if (DefinitionWriter::applyManualChanges) {
+        // Default export:
+        // copy(sender: any): void;
+        // ObjC interface:
+        // - (IBAction)copy:(nullable id)sender; -> overrides parent class' (UIView) `copy` method
+        if (owner->jsName == "PDFView" && meta->jsName == "copy") {
+            lastParamIndex = 0;
+        }
+    }
+    
     for (size_t i = 1; i < lastParamIndex; i++) {
-        output << sanitizeParameterName(parameterNames[i - 1]) << ": " << tsifyType(*meta->signature[i]);
+        
+        output << sanitizeParameterName(parameterNames[i - 1]) << ": " << tsifyType(*meta->signature[i], true);
+
         if (i < lastParamIndex - 1) {
             output << ", ";
         }
+        
     }
-    output << "): " << computeMethodReturnType(retType, owner, canUseThisType) << ";";
+    
+    output << "): ";
+    if (skipGenerics) {
+        output << "any;";
+    } else {
+        output << computeMethodReturnType(retType, owner, canUseThisType) << ";";
+    }
+    
     return output.str();
 }
 
@@ -595,15 +710,24 @@ void DefinitionWriter::visit(FunctionMeta* meta)
 
 void DefinitionWriter::visit(StructMeta* meta)
 {
+    
+    std::string metaName = meta->jsName;
+
+    if (DefinitionWriter::applyManualChanges) {
+        if (metaName == "AudioBuffer") {
+            metaName = "_AudioBuffer";
+        }
+    }
+    
     TSComment comment = _docSet.getCommentFor(meta);
     _buffer << std::endl
             << comment.toString("");
 
-    _buffer << "interface " << meta->jsName << " {" << std::endl;
+    _buffer << "interface " << metaName << " {" << std::endl;
     writeMembers(meta->fields, comment.fields);
     _buffer << "}" << std::endl;
 
-    _buffer << "declare var " << meta->jsName << ": interop.StructType<" << meta->jsName << ">;";
+    _buffer << "declare var " << metaName << ": interop.StructType<" << metaName << ">;";
 
     _buffer << std::endl;
 }
@@ -698,6 +822,13 @@ void DefinitionWriter::visit(EnumConstantMeta* meta)
 
 std::string DefinitionWriter::localizeReference(const std::string& jsName, std::string moduleName)
 {
+    if (DefinitionWriter::applyManualChanges) {
+        if (jsName == "AudioBuffer") {
+            return "_AudioBuffer";
+        } else if (jsName == "UIEvent") {
+            return "_UIEvent";
+        }
+    }
     return jsName;
 }
 
@@ -716,7 +847,7 @@ bool DefinitionWriter::hasClosedGenerics(const Type& type)
     return false;
 }
 
-std::string DefinitionWriter::tsifyType(const Type& type)
+std::string DefinitionWriter::tsifyType(const Type& type, const bool isFuncParam)
 {
     switch (type.getType()) {
     case TypeVoid:
@@ -756,6 +887,7 @@ std::string DefinitionWriter::tsifyType(const Type& type)
         return "any";
     }
     case TypeConstantArray:
+    case TypeExtVector:
         return "interop.Reference<" + tsifyType(*type.as<ConstantArrayType>().innerType) + ">";
     case TypeIncompleteArray:
         return "interop.Reference<" + tsifyType(*type.as<IncompleteArrayType>().innerType) + ">";
@@ -784,16 +916,27 @@ std::string DefinitionWriter::tsifyType(const Type& type)
         else if (interface.name == "NSDate") {
             return "Date";
         }
+    
+    if (DefinitionWriter::applyManualChanges) {
+            if (interface.name == "UIEvent") {
+                return "_UIEvent";
+            }
+    }
 
         std::ostringstream output;
         output << localizeReference(interface);
 
         bool hasClosedGenerics = DefinitionWriter::hasClosedGenerics(type);
+        std::string firstElementType;
         if (hasClosedGenerics) {
             const InterfaceType& interfaceType = type.as<InterfaceType>();
             output << "<";
             for (size_t i = 0; i < interfaceType.typeArguments.size(); i++) {
-                output << tsifyType(*interfaceType.typeArguments[i]);
+                std::string argType = tsifyType(*interfaceType.typeArguments[i]);
+                output << argType;
+                if (i == 0) {
+                    firstElementType = argType;//we only need this for NSArray
+                }
                 if (i < interfaceType.typeArguments.size() - 1) {
                     output << ", ";
                 }
@@ -811,6 +954,15 @@ std::string DefinitionWriter::tsifyType(const Type& type)
                     }
                 }
                 output << ">";
+            }
+        }
+        
+        if (interface.name == "NSArray" && isFuncParam) {
+            if (hasClosedGenerics) {
+                std::string arrayType = firstElementType;
+                output << " | " << arrayType << "[]";
+            } else {
+                output << " | any[]";
             }
         }
 
@@ -855,7 +1007,16 @@ std::string DefinitionWriter::computeMethodReturnType(const Type* retType, const
             output << "this";
         }
         else {
-            output << owner->jsName;
+            
+            std::string ownerJsName = owner->jsName;
+    
+            if (DefinitionWriter::applyManualChanges) {
+                if (ownerJsName == "UIEvent") {
+                    ownerJsName = "_UIEvent";
+                }
+            }
+            
+            output << ownerJsName;
             if (owner->is(MetaType::Interface)) {
                 output << getTypeParametersStringOrEmpty(clang::cast<clang::ObjCInterfaceDecl>(static_cast<const InterfaceMeta*>(owner)->declaration));
             }

@@ -20,7 +20,7 @@ if (NOT LIBXML2_FOUND)
 endif ()
 
 
-set(CMAKE_OSX_DEPLOYMENT_TARGET 10.10)
+set(CMAKE_OSX_DEPLOYMENT_TARGET 10.12)
 
 llvm_config(system-libs LLVM_SYSTEM_LIBS)
 llvm_config(cppflags LLVM_PREPROCESSOR_FLAGS)
