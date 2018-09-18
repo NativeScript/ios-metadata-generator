@@ -37,7 +37,10 @@ enum MetaFlags : uint16_t {
     MethodIsNullTerminatedVariadic = 1 << 5,
     MethodOwnsReturnedCocoaObject = 1 << 6,
     MethodHasErrorOutParameter = 1 << 7,
-    MethodIsInitializer = 1 << 8
+    MethodIsInitializer = 1 << 8,
+    
+    // Member
+    MemberIsOptional = 1 << 10,
 };
 
 enum MetaType {

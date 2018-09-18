@@ -68,6 +68,8 @@ enum BinaryFlags : uint8_t {
     FunctionIsVariadic = 1 << 5,
     FunctionOwnsReturnedCocoaObject = 1 << 4,
     FunctionReturnsUnmanaged = 1 << 3,
+    // Member
+    MemberIsOptional = 1 << 0,
     // Method
     MethodIsInitializer = 1 << 1,
     MethodIsVariadic = 1 << 2,

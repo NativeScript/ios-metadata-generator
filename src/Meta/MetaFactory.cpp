@@ -326,7 +326,8 @@ void MetaFactory::createFromCategory(const clang::ObjCCategoryDecl& category, Ca
 void MetaFactory::createFromMethod(const clang::ObjCMethodDecl& method, MethodMeta& methodMeta)
 {
     populateMetaFields(method, methodMeta);
-
+    
+    methodMeta.setFlags(MetaFlags::MemberIsOptional, method.isOptional());
     methodMeta.setFlags(MetaFlags::MethodIsVariadic, method.isVariadic()); // set IsVariadic flag
 
     bool isNullTerminatedVariadic = method.isVariadic() && method.hasAttr<clang::SentinelAttr>(); // set MethodIsNilTerminatedVariadic flag
@@ -423,6 +424,8 @@ void MetaFactory::createFromMethod(const clang::ObjCMethodDecl& method, MethodMe
 void MetaFactory::createFromProperty(const clang::ObjCPropertyDecl& property, PropertyMeta& propertyMeta)
 {
     populateMetaFields(property, propertyMeta);
+
+    propertyMeta.setFlags(MetaFlags::MemberIsOptional, property.isOptional());
 
     clang::ObjCMethodDecl* getter = property.getGetterMethodDecl();
     propertyMeta.getter = getter ? &create(*getter)->as<MethodMeta>() : nullptr;

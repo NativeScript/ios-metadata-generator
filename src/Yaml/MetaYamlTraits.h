@@ -83,6 +83,7 @@ namespace yaml {
         static void bitset(IO& io, Meta::MetaFlags& value)
         {
             io.bitSetCase(value, "IsIosAppExtensionAvailable", Meta::MetaFlags::IsIosAppExtensionAvailable);
+            io.bitSetCase(value, "MemberIsOptional", Meta::MetaFlags::MemberIsOptional);
             //io.bitSetCase(value, "HasName",  Meta::MetaFlags::HasName);
 
             io.bitSetCase(value, "FunctionIsVariadic", Meta::MetaFlags::FunctionIsVariadic);

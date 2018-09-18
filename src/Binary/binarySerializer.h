@@ -20,6 +20,8 @@ private:
 
     void serializeBaseClass(::Meta::BaseClassMeta* Meta, binary::BaseClassMeta& binaryMetaStruct);
 
+    void serializeMember(::Meta::Meta* meta, binary::MemberMeta& binaryMetaStruct);
+
     void serializeMethod(::Meta::MethodMeta* Meta, binary::MethodMeta& binaryMetaStruct);
 
     void serializeProperty(::Meta::PropertyMeta* Meta, binary::PropertyMeta& binaryMetaStruct);

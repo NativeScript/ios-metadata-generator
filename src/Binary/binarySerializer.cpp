@@ -123,11 +123,20 @@ void binary::BinarySerializer::serializeBaseClass(::Meta::BaseClassMeta* meta, b
     binaryMetaStruct._initializersStartIndex = firstInitializerIndex;
 }
 
-void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta* meta, binary::MethodMeta& binaryMetaStruct)
+void binary::BinarySerializer::serializeMember(::Meta::Meta* meta, binary::MemberMeta& binaryMetaStruct)
 {
     this->serializeBase(meta, binaryMetaStruct);
     binaryMetaStruct._flags &= 0b11111000; // this clears the type information written in the lower 3 bits
+    
+    if (meta->getFlags(::Meta::MetaFlags::MemberIsOptional))
+        binaryMetaStruct._flags |= BinaryFlags::MemberIsOptional;
 
+}
+
+void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta* meta, binary::MethodMeta& binaryMetaStruct)
+{
+    this->serializeMember(meta, binaryMetaStruct);
+    
     if (meta->getFlags(::Meta::MetaFlags::MethodIsVariadic))
         binaryMetaStruct._flags |= BinaryFlags::MethodIsVariadic;
     if (meta->getFlags(::Meta::MetaFlags::MethodIsNullTerminatedVariadic))
@@ -145,9 +154,7 @@ void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta* meta, binary:
 
 void binary::BinarySerializer::serializeProperty(::Meta::PropertyMeta* meta, binary::PropertyMeta& binaryMetaStruct)
 {
-
-    this->serializeBase(meta, binaryMetaStruct);
-    binaryMetaStruct._flags &= 248; // 248 = 11111000; this clears the type information written in the lower 3 bits
+    this->serializeMember(meta, binaryMetaStruct);
 
     if (meta->getter) {
         binaryMetaStruct._flags |= BinaryFlags::PropertyHasGetter;
