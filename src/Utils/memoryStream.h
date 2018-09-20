@@ -13,6 +13,8 @@ private:
     std::vector<uint8_t> _heap;
 
 public:
+    
+    virtual ~MemoryStream() { }
     /*
          * \brief Returns the number of bytes in this stream.
          */

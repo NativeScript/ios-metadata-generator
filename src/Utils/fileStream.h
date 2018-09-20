@@ -15,8 +15,10 @@ private:
     std::fstream file;
 
     FileStream() {}
-
+    
 public:
+    virtual ~FileStream() {}
+    
     /*
          * \brief Opens the file identified by argument filename, associating it with the stream object,
          * so that input/output operations are performed on its content.

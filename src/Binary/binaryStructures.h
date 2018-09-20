@@ -253,6 +253,7 @@ public:
     BinaryTypeEncodingType _type;
 
     virtual MetaFileOffset save(BinaryWriter& writer);
+    virtual ~TypeEncoding() { }
 };
 
 struct IncompleteArrayEncoding : public TypeEncoding {
