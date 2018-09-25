@@ -137,20 +137,25 @@ shared_ptr<Type> TypeFactory::getProtocolType()
 
 shared_ptr<Type> TypeFactory::create(const clang::Type* type)
 {
-    // check for cached Type
-    unordered_map<const clang::Type*, pair<shared_ptr<Type>, string> >::const_iterator cachedTypeIt = _cache.find(type);
-    if (cachedTypeIt != _cache.end()) {
-        shared_ptr<Type> resultType = cachedTypeIt->second.first;
-        string errorMessage = cachedTypeIt->second.second;
-        if (errorMessage.empty()) {
-            return resultType;
-        }
-        throw TypeCreationException(type, errorMessage, false);
-    }
-
     const clang::Type& typeRef = *type;
     shared_ptr<Type> resultType(nullptr);
+    
     try {
+        // check for cached Type
+        unordered_map<const clang::Type*, pair<shared_ptr<Type>, string> >::const_iterator cachedTypeIt = _cache.find(type);
+        if (cachedTypeIt != _cache.end()) {
+            shared_ptr<Type> resultType = cachedTypeIt->second.first;
+            string errorMessage = cachedTypeIt->second.second;
+            if (errorMessage.empty()) {
+                // revalidate in case the Type's metadata creation has failed after it was returned
+                // (e.g. from a forward declaration)
+                this->_metaFactory->validate(resultType.get());
+                
+                return resultType;
+            }
+            throw TypeCreationException(type, errorMessage, false);
+        }
+
         if (const clang::BuiltinType* concreteType = clang::dyn_cast<clang::BuiltinType>(type))
             resultType = createFromBuiltinType(concreteType);
         else if (const clang::TypedefType* concreteType = clang::dyn_cast<clang::TypedefType>(type))

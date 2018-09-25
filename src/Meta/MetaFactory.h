@@ -9,7 +9,9 @@
 #include <clang/Lex/Preprocessor.h>
 
 namespace Meta {
+
 typedef std::unordered_map<const clang::Decl*, std::pair<std::unique_ptr<Meta>, std::string> > Cache;
+typedef std::unordered_map<const Meta*, const clang::Decl*> MetaToDeclMap;
 
 class MetaFactory {
 public:
@@ -33,6 +35,10 @@ public:
     {
         return this->_cache;
     }
+    
+    void validate(Type* type);
+
+    void validate(Meta* meta);
     
     static std::string getTypedefOrOwnName(const clang::TagDecl* tagDecl);
 
@@ -72,5 +78,6 @@ private:
     TypeFactory _typeFactory;
 
     Cache _cache;
+    MetaToDeclMap _metaToDecl;
 };
 }

@@ -24,6 +24,7 @@ set(GENERATOR_HEADERS
     Meta/TypeFactory.h
     Meta/TypeVisitor.h
     Meta/Utils.h
+    Meta/ValidateMetaTypeVisitor.h
     TypeScript/DefinitionWriter.h
     TypeScript/DocSetManager.h
     Utils/fileStream.h
@@ -57,6 +58,7 @@ set(GENERATOR_SOURCES
     Meta/NameRetrieverVisitor.cpp
     Meta/TypeFactory.cpp
     Meta/Utils.cpp
+    Meta/ValidateMetaTypeVisitor.cpp
     TypeScript/DefinitionWriter.cpp
     TypeScript/DocSetManager.cpp
     Utils/fileStream.cpp
