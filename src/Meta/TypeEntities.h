@@ -236,9 +236,10 @@ public:
 
 class BridgedInterfaceType : public Type {
 public:
-    BridgedInterfaceType(std::string name, Type* bridgedInterface)
+    BridgedInterfaceType(std::string name, InterfaceMeta* bridgedInterface)
         : Type(TypeType::TypeBridgedInterface)
         , name(name)
+        , bridgedInterface(bridgedInterface)
     {
     }
 
