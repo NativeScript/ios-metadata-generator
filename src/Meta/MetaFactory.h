@@ -35,6 +35,8 @@ public:
     }
     
     static std::string getTypedefOrOwnName(const clang::TagDecl* tagDecl);
+    
+    static std::string renameMeta(MetaType type, std::string& originalJsName, int index = 1);
 
 private:
     void createFromFunction(const clang::FunctionDecl& function, FunctionMeta& functionMeta);

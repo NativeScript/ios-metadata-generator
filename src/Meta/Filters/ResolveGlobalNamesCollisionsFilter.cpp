@@ -3,6 +3,7 @@
 //
 
 #include "ResolveGlobalNamesCollisionsFilter.h"
+#include "Meta/MetaFactory.h"
 
 namespace Meta {
 
@@ -27,31 +28,6 @@ static int getPriority(Meta* meta)
         return 1;
     default:
         return 0;
-    }
-}
-
-static std::string renameMeta(MetaType type, std::string& originalJsName, int index = 1)
-{
-    std::string indexStr = index == 1 ? "" : std::to_string(index);
-    switch (type) {
-    case MetaType::Interface:
-        return originalJsName + "Interface" + indexStr;
-    case MetaType::Protocol:
-        return originalJsName + "Protocol" + indexStr;
-    case MetaType::Function:
-        return originalJsName + "Function" + indexStr;
-    case MetaType::Var:
-        return originalJsName + "Var" + indexStr;
-    case MetaType::Struct:
-        return originalJsName + "Struct" + indexStr;
-    case MetaType::Union:
-        return originalJsName + "Union" + indexStr;
-    case MetaType::Enum:
-        return originalJsName + "Enum" + indexStr;
-    case MetaType::EnumConstant:
-        return originalJsName + "Var" + indexStr;
-    default:
-        return originalJsName + "Decl" + indexStr;
     }
 }
 
@@ -86,7 +62,7 @@ void ResolveGlobalNamesCollisionsFilter::filter(std::list<Meta*>& container)
         int index = 1;
         std::string originalJsName = meta->jsName;
         do {
-            meta->jsName = renameMeta(meta->type, originalJsName, index);
+            meta->jsName = MetaFactory::renameMeta(meta->type, originalJsName, index);
             index++;
         } while (!addMeta(meta, false));
     }
