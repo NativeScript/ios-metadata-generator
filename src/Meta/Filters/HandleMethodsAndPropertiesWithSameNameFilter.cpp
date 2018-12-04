@@ -1,6 +1,20 @@
 #include "HandleMethodsAndPropertiesWithSameNameFilter.h"
 
 namespace Meta {
+typedef  std::unordered_map<std::string, std::vector<MethodMeta*>>  MethodsStructure;
+
+bool addMeta(MethodMeta* meta, MethodsStructure* methods, bool forceIfNameCollision)
+{
+    std::pair<std::unordered_map<std::string, std::vector<MethodMeta*> >::iterator, bool> insertionResult = methods->emplace(meta->jsName + std::to_string(meta->signature.size()), std::vector<MethodMeta*>());
+    
+    if (insertionResult.second || forceIfNameCollision) {
+        std::vector<MethodMeta*>& metasWithSameJsName = insertionResult.first->second;
+        metasWithSameJsName.push_back(meta);
+        return true;
+    }
+    return false;
+}
+    
 HandleMethodsAndPropertiesWithSameNameFilter::HandleMethodsAndPropertiesWithSameNameFilter(MetaFactory& metaFactory)
     : m_metaFactory(metaFactory)
 {
@@ -10,6 +24,8 @@ void HandleMethodsAndPropertiesWithSameNameFilter::filter(std::list<Meta*>& cont
 {
     for (Meta* meta : container) {
         if (meta->is(MetaType::Interface)) {
+            InterfaceMeta* interface = static_cast<InterfaceMeta*>(meta);
+            
             const clang::ObjCInterfaceDecl* decl = clang::cast<clang::ObjCInterfaceDecl>(meta->declaration);
 
             for (clang::ObjCPropertyDecl* propertyDecl : decl->properties()) {
@@ -35,6 +51,24 @@ void HandleMethodsAndPropertiesWithSameNameFilter::filter(std::list<Meta*>& cont
                     }
                 }
             }
+            
+            MethodsStructure methods;
+            for (MethodMeta* method : interface->instanceMethods) {
+                addMeta(method, &methods, true);
+            }
+            
+            // resolve collisions
+            
+            for (auto bucketIt = methods.begin(); bucketIt != methods.end(); ++bucketIt) {
+                std::vector<MethodMeta*>& metas = bucketIt->second;
+                if (metas.size() > 1) {
+                    for (std::vector<Meta*>::size_type i = 1; i < metas.size(); i++) {
+                        std::string originalJsName = metas[i]->jsName;
+                        metas[i]->jsName = MetaFactory::renameMeta(metas[i]->type, originalJsName, i);
+                    }
+                }
+            }
+            
         }
     }
 }

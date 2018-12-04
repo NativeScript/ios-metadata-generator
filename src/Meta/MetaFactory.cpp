@@ -619,6 +619,33 @@ void MetaFactory::populateBaseClassMetaFields(const clang::ObjCContainerDecl& de
     std::sort(baseClass.instanceProperties.begin(), baseClass.instanceProperties.end(), metasComparerByJsName); // order by jsName
     std::sort(baseClass.staticProperties.begin(), baseClass.staticProperties.end(), metasComparerByJsName); // order by jsName
 }
+    
+std::string MetaFactory::renameMeta(MetaType type, std::string& originalJsName, int index)
+{
+    std::string indexStr = index == 1 ? "" : std::to_string(index);
+    switch (type) {
+        case MetaType::Interface:
+            return originalJsName + "Interface" + indexStr;
+        case MetaType::Protocol:
+            return originalJsName + "Protocol" + indexStr;
+        case MetaType::Function:
+            return originalJsName + "Function" + indexStr;
+        case MetaType::Var:
+            return originalJsName + "Var" + indexStr;
+        case MetaType::Struct:
+            return originalJsName + "Struct" + indexStr;
+        case MetaType::Union:
+            return originalJsName + "Union" + indexStr;
+        case MetaType::Enum:
+            return originalJsName + "Enum" + indexStr;
+        case MetaType::EnumConstant:
+            return originalJsName + "Var" + indexStr;
+        case MetaType::Method:
+            return originalJsName + "Method" + indexStr;
+        default:
+            return originalJsName + "Decl" + indexStr;
+    }
+}
 
 llvm::iterator_range<clang::ObjCProtocolList::iterator> MetaFactory::getProtocols(const clang::ObjCContainerDecl* objCContainer)
 {
