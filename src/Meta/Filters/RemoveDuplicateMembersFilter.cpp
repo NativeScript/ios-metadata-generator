@@ -60,12 +60,6 @@ static void processBaseClassAndHierarchyOf(BaseClassMeta* child, BaseClassMeta* 
     for (ProtocolMeta* protocol : parent->protocols) {
         processBaseClassAndHierarchyOf(child, protocol);
     }
-    if (parent->is(MetaType::Interface)) {
-        InterfaceMeta* parentInterface = &parent->as<InterfaceMeta>();
-        if (parentInterface->base != nullptr) {
-            processBaseClassAndHierarchyOf(child, parentInterface->base);
-        }
-    }
 }
 
 void RemoveDuplicateMembersFilter::filter(std::list<Meta*>& container)
