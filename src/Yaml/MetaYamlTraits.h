@@ -19,7 +19,6 @@ namespace yaml {
 
 #include <llvm/Support/YAMLTraits.h>
 
-LLVM_YAML_IS_SEQUENCE_VECTOR(std::string)
 LLVM_YAML_IS_SEQUENCE_VECTOR(clang::Module::LinkLibrary)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::RecordField)
 LLVM_YAML_IS_SEQUENCE_VECTOR(Meta::Meta*)
@@ -70,9 +69,9 @@ namespace yaml {
             return StringRef();
         }
         // Determine if this scalar needs quotes.
-        static bool mustQuote(StringRef)
+        static QuotingType mustQuote(StringRef)
         {
-            return false;
+            return QuotingType::None;
         }
     };
 
