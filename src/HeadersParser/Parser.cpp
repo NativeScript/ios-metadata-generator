@@ -50,11 +50,6 @@ static std::error_code collectModuleHeaderIncludes(FileManager& fileMgr, ModuleM
     if (!module->isAvailable())
         return std::error_code();
 
-    for (auto header : module->Headers[Module::HK_Normal]) {
-        if (auto err = addHeaderInclude(header.Entry, includes))
-            return err;
-    }
-
     if (const FileEntry* umbrellaHeader = module->getUmbrellaHeader().Entry) {
         if (std::error_code err = addHeaderInclude(umbrellaHeader, includes))
             return err;
@@ -86,48 +81,67 @@ static std::error_code collectModuleHeaderIncludes(FileManager& fileMgr, ModuleM
 
         if (ec)
             return ec;
+    } else {
+        for (auto header : module->Headers[Module::HK_Normal]) {
+            if (auto err = addHeaderInclude(header.Entry, includes))
+                return err;
+        }
     }
 
     return std::error_code();
 }
 
-static std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::string>& args, std::string* umbrellaHeaderContents, const std::vector<std::string>& moduleBlacklist)
+static std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<std::string>& args, std::string* umbrellaHeaderContents, const std::vector<std::string>& moduleBlacklist, std::vector<std::string>& includePaths)
 {
     std::unique_ptr<clang::ASTUnit> ast = clang::tooling::buildASTFromCodeWithArgs("", args, "umbrella.h");
     if (!ast)
         return std::error_code(-1, std::generic_category());
-
+    
     ast->getDiagnostics().setClient(new clang::IgnoringDiagConsumer);
-
+    
     clang::SmallVector<clang::Module*, 64> modules;
     HeaderSearch& headerSearch = ast->getPreprocessor().getHeaderSearchInfo();
     headerSearch.collectAllModules(modules);
-
+    
     ModuleMap& moduleMap = headerSearch.getModuleMap();
     FileManager& fileManager = ast->getFileManager();
-
+    
     SmallString<256> headerContents;
     std::function<void(const Module*)> collector = [&](const Module* module) {
+        // uncomment for debugging unavailable modules
+//        if (!module->isAvailable()) {
+//            clang::Module::Requirement req;
+//            clang::Module::UnresolvedHeaderDirective h;
+//            clang::Module* sm;
+//            module->isAvailable(ast->getPreprocessor().getLangOpts(), ast->getPreprocessor().getTargetInfo(), req, h, sm);
+//        }
         if (std::find(moduleBlacklist.begin(), moduleBlacklist.end(), module->getFullModuleName()) != moduleBlacklist.end())
             return;
+        
+        // use -idirafter instead of -I in order  add the directories AFTER the include search paths
+        std::string includeString = "-idirafter" + module->Directory->getName().str();
+        if (std::find(includePaths.begin(), includePaths.end(), includeString) == includePaths.end() && !module->isPartOfFramework()) {
+            includePaths.push_back(includeString);
+        }
+        
         collectModuleHeaderIncludes(fileManager, moduleMap, module, headerContents);
         std::for_each(module->submodule_begin(), module->submodule_end(), collector);
     };
-
+    
     std::for_each(modules.begin(), modules.end(), collector);
-
+    
     if (umbrellaHeaderContents)
         *umbrellaHeaderContents = headerContents.str();
-
+    
     return std::error_code();
 }
 
-std::string CreateUmbrellaHeader(const std::vector<std::string>& clangArgs)
+std::string CreateUmbrellaHeader(const std::vector<std::string>& clangArgs, std::vector<std::string>& includePaths)
 {
     std::string umbrellaHeaderContents;
     std::vector<std::string> moduleBlacklist;
-
+    
     // Generate umbrella header for all modules from the sdk
-    CreateUmbrellaHeaderForAmbientModules(clangArgs, &umbrellaHeaderContents, moduleBlacklist);
+    CreateUmbrellaHeaderForAmbientModules(clangArgs, &umbrellaHeaderContents, moduleBlacklist, includePaths);
     return umbrellaHeaderContents;
 }
