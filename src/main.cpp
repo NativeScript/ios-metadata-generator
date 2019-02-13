@@ -19,6 +19,7 @@
 
 // Command line parameters
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));
+llvm::cl::opt<string> cla_inputUmbrellaHeaderFile("input-umbrella", llvm::cl::desc("Specify the input umbrella header file"), llvm::cl::value_desc("file_path"));
 llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("<dir_path>"));
 llvm::cl::opt<string> cla_outputModuleMapsFolder("output-modulemaps", llvm::cl::desc("Specify the fodler where modulemap files of all parsed modules will be dumped"), llvm::cl::value_desc("<dir_path>"));
 llvm::cl::opt<string> cla_outputBinFile("output-bin", llvm::cl::desc("Specify the output binary metadata file"), llvm::cl::value_desc("<file_path>"));
@@ -187,10 +188,19 @@ int main(int argc, const char** argv)
     if (it != clangArgs.end() && ++it != clangArgs.end()) {
         isysroot = *it;
     }
-
-    // Create umbrella header
-    std::string umbrellaContent = CreateUmbrellaHeader(clangArgs);
-
+    std::string umbrellaContent;
+    std::vector<std::string> includePaths;
+    if (!cla_inputUmbrellaHeaderFile.empty()) {
+        std::ifstream fs(cla_inputUmbrellaHeaderFile);
+        umbrellaContent = std::string((std::istreambuf_iterator<char>(fs)),
+                                      std::istreambuf_iterator<char>());
+    } else {
+        // Create umbrella header
+        umbrellaContent = CreateUmbrellaHeader(clangArgs, includePaths);
+    }
+    
+    clangArgs.insert(clangArgs.end(), includePaths.begin(), includePaths.end());
+    
     // Save the umbrella file
     if (!cla_outputUmbrellaHeaderFile.empty()) {
         std::error_code errorCode;
@@ -202,10 +212,8 @@ int main(int argc, const char** argv)
     }
 
     // generate metadata for the intermediate sdk header
-    // We add this because "bool" is being parsed as int because stdbool.h is missing
-    umbrellaContent = "typedef _Bool bool;\n" + umbrellaContent;
     clang::tooling::runToolOnCodeWithArgs(new MetaGenerationFrontendAction(), umbrellaContent, clangArgs, "umbrella.h", "objc-metadata-generator");
-
+    
     std::clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
     std::cout << "Done! Running time: " << elapsed_secs << " sec " << std::endl;
