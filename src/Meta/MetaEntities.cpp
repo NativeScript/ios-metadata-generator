@@ -1,78 +1,86 @@
 #include "MetaEntities.h"
 
-static void visitBaseClass(Meta::MetaVisitor* visitor, Meta::BaseClassMeta* baseClass)
+
+
+namespace Meta {
+    
+Version Version::UnknownVersion;
+
+static void visitBaseClass(MetaVisitor* visitor, BaseClassMeta* baseClass)
 {
-    for (Meta::MethodMeta* method : baseClass->staticMethods) {
+    for (MethodMeta* method : baseClass->staticMethods) {
         method->visit(visitor);
     }
 
-    for (Meta::MethodMeta* method : baseClass->instanceMethods) {
+    for (MethodMeta* method : baseClass->instanceMethods) {
         method->visit(visitor);
     }
 
-    for (Meta::PropertyMeta* property : baseClass->instanceProperties) {
+    for (PropertyMeta* property : baseClass->instanceProperties) {
         property->visit(visitor);
     }
 
-    for (Meta::PropertyMeta* property : baseClass->staticProperties) {
+    for (PropertyMeta* property : baseClass->staticProperties) {
         property->visit(visitor);
     }
 }
 
-void Meta::MethodMeta::visit(MetaVisitor* visitor)
+void MethodMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
 }
 
-void Meta::PropertyMeta::visit(MetaVisitor* visitor)
+void PropertyMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
 }
 
-void Meta::EnumConstantMeta::visit(MetaVisitor* visitor)
+void EnumConstantMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
 }
 
-void Meta::CategoryMeta::visit(MetaVisitor* visitor)
+void CategoryMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
     visitBaseClass(visitor, this);
 }
 
-void Meta::InterfaceMeta::visit(MetaVisitor* visitor)
+void InterfaceMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
     visitBaseClass(visitor, this);
 }
 
-void Meta::ProtocolMeta::visit(MetaVisitor* visitor)
+void ProtocolMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
     visitBaseClass(visitor, this);
 }
 
-void Meta::StructMeta::visit(MetaVisitor* visitor)
+void StructMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
 }
 
-void Meta::UnionMeta::visit(MetaVisitor* visitor)
+void UnionMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
 }
 
-void Meta::FunctionMeta::visit(MetaVisitor* visitor)
+void FunctionMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
 }
 
-void Meta::EnumMeta::visit(MetaVisitor* visitor)
+void EnumMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
 }
 
-void Meta::VarMeta::visit(MetaVisitor* visitor)
+void VarMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
 }
+
+} // namespace Meta

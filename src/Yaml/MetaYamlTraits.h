@@ -49,7 +49,7 @@ namespace yaml {
 
         static StringRef input(StringRef stringValue, void* context, Meta::Version& value)
         {
-            value = UNKNOWN_VERSION;
+            value = Meta::Version::UnknownVersion;
             if (stringValue.size() == 0) {
                 return StringRef();
             }
@@ -325,7 +325,7 @@ namespace yaml {
         io.mapRequired("JsName", meta->jsName);
         io.mapRequired("Filename", meta->fileName);
         io.mapRequired("Module", meta->module);
-        io.mapOptional("IntroducedIn", meta->introducedIn, UNKNOWN_VERSION);
+        io.mapOptional("IntroducedIn", meta->introducedIn, Meta::Version::UnknownVersion);
         io.mapRequired("Flags", meta->flags);
         io.mapRequired("Type", meta->type);
     }

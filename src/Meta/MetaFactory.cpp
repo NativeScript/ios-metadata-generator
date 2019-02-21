@@ -660,11 +660,11 @@ llvm::iterator_range<clang::ObjCProtocolList::iterator> MetaFactory::getProtocol
 
 Version MetaFactory::convertVersion(clang::VersionTuple clangVersion)
 {
-    Version result = {
-        .Major = (int)clangVersion.getMajor(),
-        .Minor = (int)(clangVersion.getMinor().hasValue() ? clangVersion.getMinor().getValue() : -1),
-        .SubMinor = (int)(clangVersion.getSubminor().hasValue() ? clangVersion.getSubminor().getValue() : -1)
-    };
+    Version result(
+        (int)clangVersion.getMajor(),
+        (int)(clangVersion.getMinor().hasValue() ? clangVersion.getMinor().getValue() : -1),
+        (int)(clangVersion.getSubminor().hasValue() ? clangVersion.getSubminor().getValue() : -1)
+    );
     return result;
 }
 }

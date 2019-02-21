@@ -12,16 +12,45 @@
 #include <unordered_map>
 #include <vector>
 
-#define UNKNOWN_VERSION \
-    {                   \
-        -1, -1, -1      \
-    }
-
 namespace Meta {
 struct Version {
+
+    static Version UnknownVersion;
+    
+    Version(int major = -1, int minor = -1, int subMinor = -1) :
+        Major(major),
+        Minor(minor),
+        SubMinor(subMinor) {}
+    
     int Major;
     int Minor;
     int SubMinor;
+    
+    bool operator ==(const Version& other) const{
+        return memcmp(this, &other, sizeof(*this)) == 0;
+    }
+    
+    bool operator !=(const Version& other) const {
+        return !(*this == other);
+    }
+
+    bool operator <(const Version& other) const {
+        return (this->Major < other.Major) ||
+            (this->Major == other.Major &&
+             (this->Minor < other.Minor || (this->Minor == other.Minor && this->SubMinor < other.SubMinor)));
+    }
+    
+    bool operator <=(const Version& other) const {
+        return *this == other || *this < other;
+    }
+    
+    bool operator >(const Version& other) const {
+        return !(*this <= other);
+    }
+    
+    bool operator >=(const Version& other) const {
+        return !(*this < other);
+    }
 };
 
 enum MetaFlags : uint16_t {
@@ -72,9 +101,9 @@ public:
     const clang::Decl* declaration;
 
     // Availability
-    Version introducedIn = UNKNOWN_VERSION;
-    Version obsoletedIn = UNKNOWN_VERSION;
-    Version deprecatedIn = UNKNOWN_VERSION;
+    Version introducedIn;
+    Version obsoletedIn;
+    Version deprecatedIn;
 
     Meta() = default;
     virtual ~Meta() = default;
