@@ -12,9 +12,13 @@ uint8_t convertVersion(Meta::Version version)
 {
     uint8_t result = 0;
     if (version.Major != -1) {
-        result |= version.Major << 3;
+        assert(version.Major < (1 << 5)); // Overflow!
+        result |= std::min(0b11111, version.Major) << 3;
         if (version.Minor != -1) {
-            result |= version.Minor;
+            // There are some APIs in Apple frameworks such as `MTLBlendFactorOneMinusSource1Alpha` which have wrongly set
+            // macOS/tvOS versions for iOS (see https://developer.apple.com/documentation/metal/mtlblendfactor/mtlblendfactoroneminussource1alpha?language=objc)
+            assert(version.Minor < (1 << 3) || version.Major == 10); // Overflow!
+            result |= std::min(0b111, version.Minor);
         }
     }
     return result;
