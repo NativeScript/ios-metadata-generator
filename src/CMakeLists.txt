@@ -99,7 +99,7 @@ add_custom_command(TARGET objc-metadata-generator
 install(TARGETS objc-metadata-generator
         RUNTIME DESTINATION bin)
 
-install(DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang DESTINATION lib)
+install(DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang DESTINATION bin/lib)
 
 get_target_property(_target_sources objc-metadata-generator SOURCES)
 foreach(child ${_target_sources})
