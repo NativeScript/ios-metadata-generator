@@ -131,6 +131,11 @@ public:
 
     virtual std::unique_ptr<clang::ASTConsumer> CreateASTConsumer(clang::CompilerInstance& Compiler, llvm::StringRef InFile) override
     {
+        // Since in 4.0.1 'includeNotFound' errors are ignored for some reason
+        // (even though the 'suppressIncludeNotFound' setting is false)
+        // here we set this explicitly in order to keep the same behavior
+        Compiler.getPreprocessor().SetSuppressIncludeNotFoundError(true);
+        
         return std::unique_ptr<clang::ASTConsumer>(new MetaGenerationConsumer(Compiler.getASTContext().getSourceManager(), Compiler.getPreprocessor().getHeaderSearchInfo()));
     }
 };
