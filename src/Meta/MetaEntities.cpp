@@ -1,5 +1,8 @@
 #include "MetaEntities.h"
 
+
+Meta::Version Meta::Version::Unknown = UNKNOWN_VERSION;
+
 static void visitBaseClass(Meta::MetaVisitor* visitor, Meta::BaseClassMeta* baseClass)
 {
     for (Meta::MethodMeta* method : baseClass->staticMethods) {

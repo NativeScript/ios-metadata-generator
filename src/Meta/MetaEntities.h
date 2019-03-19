@@ -19,9 +19,49 @@
 
 namespace Meta {
 struct Version {
+    static Version Unknown;
+    
     int Major;
     int Minor;
     int SubMinor;
+    
+    bool isUnknown() const {
+        return this->Major <= 0;
+    }
+    
+    bool isGreaterThanOrUnknown(const Version& other) const {
+        return this->isUnknown() ||  (*this > other && !other.isUnknown());
+    }
+
+    bool operator ==(const Version& other) const {
+        return this->Major == other.Major &&
+            this->Minor == other.Minor && this->SubMinor == other.SubMinor;
+    }
+
+    bool operator !=(const Version& other) const {
+        return !(*this == other);
+    }
+    
+    bool operator <(const Version& other) const {
+        return this->Major < other.Major ||
+                (this->Major == other.Major &&
+                    (this->Minor < other.Minor ||
+                     (this->Minor == other.Minor && this->SubMinor < other.SubMinor)
+                    )
+                );
+    }
+
+    bool operator <=(const Version& other) const {
+        return *this == other || *this < other;
+    }
+
+    bool operator >(const Version& other) const {
+        return !(*this <= other);
+    }
+
+    bool operator >=(const Version& other) const {
+        return !(*this < other);
+    }
 };
 
 enum MetaFlags : uint16_t {
