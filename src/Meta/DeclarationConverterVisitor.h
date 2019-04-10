@@ -7,13 +7,15 @@
 #include <clang/Lex/HeaderSearch.h>
 #include <clang/Lex/Preprocessor.h>
 #include <iostream>
+#include <sstream>
 
 namespace Meta {
 class DeclarationConverterVisitor : public clang::RecursiveASTVisitor<DeclarationConverterVisitor> {
 public:
-    explicit DeclarationConverterVisitor(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch)
+    explicit DeclarationConverterVisitor(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch, bool verbose)
         : _metaContainer()
         , _metaFactory(sourceManager, headerSearch)
+        , _verbose(verbose)
     {
     }
 
@@ -52,15 +54,27 @@ private:
         try {
             Meta* meta = this->_metaFactory.create(*decl);
             _metaContainer.push_back(meta);
-            //std::cout << "Included: " << meta->jsName << " from " << meta->module->getFullModuleName() << std::endl;
+            log(std::stringstream() << "verbose: Included " << meta->jsName << " from " << meta->module->getFullModuleName());
         } catch (MetaCreationException& e) {
-            //if(e.isError())
-            //std::cout << e.getDetailedMessage() << std::endl;
+            if(e.isError()) {
+                log(std::stringstream() << "verbose: Exception " << e.getDetailedMessage());
+            }
         }
         return true;
     }
 
+    inline void log(const std::stringstream& s) {
+        this->log(s.str());
+    }
+    
+    inline void log(std::string str) {
+        if (this->_verbose) {
+            std::cerr << str << std::endl;
+        }
+    }
+    
     std::list<Meta*> _metaContainer;
     MetaFactory _metaFactory;
+    bool _verbose;
 };
 }

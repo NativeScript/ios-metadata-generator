@@ -18,6 +18,7 @@
 #include <sstream>
 
 // Command line parameters
+llvm::cl::opt<bool>   cla_verbose("verbose", llvm::cl::desc("Set verbose output mode"), llvm::cl::value_desc("bool"));
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));
 llvm::cl::opt<string> cla_inputUmbrellaHeaderFile("input-umbrella", llvm::cl::desc("Specify the input umbrella header file"), llvm::cl::value_desc("file_path"));
 llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("<dir_path>"));
@@ -32,7 +33,7 @@ class MetaGenerationConsumer : public clang::ASTConsumer {
 public:
     explicit MetaGenerationConsumer(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch)
         : _headerSearch(headerSearch)
-        , _visitor(sourceManager, _headerSearch)
+        , _visitor(sourceManager, _headerSearch, cla_verbose)
     {
     }
 
