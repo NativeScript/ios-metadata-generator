@@ -90,7 +90,12 @@ set_target_properties(objc-metadata-generator PROPERTIES
 
 add_custom_command(TARGET objc-metadata-generator
                    POST_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E copy_directory ${LLVM_LIBDIR}/clang ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang)
+                   COMMAND ${CMAKE_COMMAND} -E copy_directory ${LLVM_LIBDIR}/clang ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang
+                #    COMMAND ${CMAKE_COMMAND} -E copy_directory ${LLVM_LIBDIR}/clang ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/clang
+                   COMMAND printenv | sort
+
+                   COMMAND ${CMAKE_COMMAND} -E copy_directory \${TOOLCHAIN_DIR}/usr/include/c++ ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/include/c++
+                   )
 
 add_custom_command(TARGET objc-metadata-generator
                    POST_BUILD

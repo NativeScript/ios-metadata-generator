@@ -115,6 +115,7 @@ static std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<s
 //            clang::Module* sm;
 //            module->isAvailable(ast->getPreprocessor().getLangOpts(), ast->getPreprocessor().getTargetInfo(), req, h, sm);
 //        }
+        printf(">>>>>> Module: %s", module->getFullModuleName().c_str());
         if (std::find(moduleBlacklist.begin(), moduleBlacklist.end(), module->getFullModuleName()) != moduleBlacklist.end())
             return;
         
@@ -139,7 +140,21 @@ static std::error_code CreateUmbrellaHeaderForAmbientModules(const std::vector<s
 std::string CreateUmbrellaHeader(const std::vector<std::string>& clangArgs, std::vector<std::string>& includePaths)
 {
     std::string umbrellaHeaderContents;
-    std::vector<std::string> moduleBlacklist;
+    std::vector<std::string> moduleBlacklist {
+        // stdatomic.h mustn't be included in the generated header due to the following error: (see https://reviews.llvm.org/D45470)
+        //    include/c++/v1/atomic:559:2: error: C++ standard library is incompatible with <stdatomic.h>
+        "Darwin.C.stdatomic",
+        // complex shouldn't be included because it collides with iPhoneOS.sdk/usr/include/complex.h which defines a macro "complex"
+        "Darwin.C.complex",
+        "Darwin.POSIX.complex",
+        "Darwin.C.complex",
+        "std.complex",
+        "std.complex_h",
+        "std.compat.ccomplex",
+        "std.compat.ctgmath",
+        "std.tgmath_h",
+        "Darwin.C.tgmath",
+    };
     
     // Generate umbrella header for all modules from the sdk
     CreateUmbrellaHeaderForAmbientModules(clangArgs, &umbrellaHeaderContents, moduleBlacklist, includePaths);

@@ -51,11 +51,17 @@ private:
     {
         try {
             Meta* meta = this->_metaFactory.create(*decl);
-            _metaContainer.push_back(meta);
-            //std::cout << "Included: " << meta->jsName << " from " << meta->module->getFullModuleName() << std::endl;
+            if (meta) {
+                _metaContainer.push_back(meta);
+                std::cout << ">>>>> Included: " << meta->jsName << " from " << meta->module->getFullModuleName() << std::endl;
+            } else {
+                std::cout << ">>>>> Excluded: ";
+                decl->dump();
+                std::cout << std::endl;
+            }
         } catch (MetaCreationException& e) {
             //if(e.isError())
-            //std::cout << e.getDetailedMessage() << std::endl;
+            std::cout << ">>>>> Exception: " << e.getDetailedMessage() << std::endl;
         }
         return true;
     }

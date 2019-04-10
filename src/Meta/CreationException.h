@@ -51,7 +51,7 @@ public:
 
     std::string getDetailedMessage() const
     {
-        return _meta->identificationString() + " : " + this->getMessage();
+        return (_meta ? _meta->identificationString() : "<null>") + " : " + this->getMessage();
     }
 
     const Meta* getMeta()

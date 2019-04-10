@@ -93,21 +93,29 @@ Meta* MetaFactory::create(const clang::Decl& decl)
 
     try {
         if (const clang::FunctionDecl* function = clang::dyn_cast<clang::FunctionDecl>(&decl)) {
-            insertedMetaPtrRef.reset(new FunctionMeta());
-            _metaToDecl[insertedMetaPtrRef.get()] = &decl;
-            populateIdentificationFields(*function, *insertedMetaPtrRef.get());
-            createFromFunction(*function, insertedMetaPtrRef.get()->as<FunctionMeta>());
+//            if (!function->isCXXInstanceMember()) {
+                insertedMetaPtrRef.reset(new FunctionMeta());
+                _metaToDecl[insertedMetaPtrRef.get()] = &decl;
+                populateIdentificationFields(*function, *insertedMetaPtrRef.get());
+                createFromFunction(*function, insertedMetaPtrRef.get()->as<FunctionMeta>());
+//            }
         } else if (const clang::RecordDecl* record = clang::dyn_cast<clang::RecordDecl>(&decl)) {
-            if (record->isStruct()) {
-                insertedMetaPtrRef.reset(new StructMeta());
-                _metaToDecl[insertedMetaPtrRef.get()] = &decl;
-                populateIdentificationFields(*record, *insertedMetaPtrRef.get());
-                createFromStruct(*record, insertedMetaPtrRef.get()->as<StructMeta>());
-            } else {
-                insertedMetaPtrRef.reset(new UnionMeta());
-                _metaToDecl[insertedMetaPtrRef.get()] = &decl;
-                populateIdentificationFields(*record, *insertedMetaPtrRef.get());
-                throw MetaCreationException(insertedMetaPtrRef.get(), "The record is union.", false);
+            if (!record->isClass() &&
+                record->getKind() != clang::Decl::Kind::ClassTemplatePartialSpecialization &&
+                record->getKind() != clang::Decl::Kind::ClassTemplateSpecialization &&
+                record->getKind() != clang::Decl::Kind::ClassTemplate )
+            {
+                if (record->isStruct()) {
+                        insertedMetaPtrRef.reset(new StructMeta());
+                        _metaToDecl[insertedMetaPtrRef.get()] = &decl;
+                        populateIdentificationFields(*record, *insertedMetaPtrRef.get());
+                        createFromStruct(*record, insertedMetaPtrRef.get()->as<StructMeta>());
+                } else {
+                    insertedMetaPtrRef.reset(new UnionMeta());
+                    _metaToDecl[insertedMetaPtrRef.get()] = &decl;
+                    populateIdentificationFields(*record, *insertedMetaPtrRef.get());
+                    throw MetaCreationException(insertedMetaPtrRef.get(), "The record is union.", false);
+                }
             }
         } else if (const clang::VarDecl* var = clang::dyn_cast<clang::VarDecl>(&decl)) {
             insertedMetaPtrRef.reset(new VarMeta());
@@ -242,6 +250,8 @@ void MetaFactory::createFromVar(const clang::VarDecl& var, VarMeta& varMeta)
 {
     if (var.getLexicalDeclContext() != var.getASTContext().getTranslationUnitDecl()) {
         throw MetaCreationException(&varMeta, "A nested var.", false);
+//        std::cout << ">>>>> Swallowed: " << MetaCreationException(&varMeta, "A nested var.", false).getDetailedMessage();
+        
     }
 
     populateMetaFields(var, varMeta);
@@ -491,6 +501,11 @@ void MetaFactory::populateIdentificationFields(const clang::NamedDecl& decl, Met
 
     // calculate js name
     switch (decl.getKind()) {
+    case clang::Decl::Kind::CXXMethod:
+    case clang::Decl::Kind::CXXDestructor:
+    case clang::Decl::Kind::CXXConstructor:
+    case clang::Decl::Kind::CXXConversion:
+    case clang::Decl::Kind::CXXDeductionGuide:
     case clang::Decl::Kind::Function:
     case clang::Decl::Kind::ObjCInterface:
     case clang::Decl::Kind::ObjCProtocol:
@@ -512,6 +527,7 @@ void MetaFactory::populateIdentificationFields(const clang::NamedDecl& decl, Met
         meta.jsName = tokens[0];
         break;
     }
+    case clang::Decl::Kind::CXXRecord:
     case clang::Decl::Kind::Record:
     case clang::Decl::Kind::Enum: {
         const clang::TagDecl* tagDecl = clang::dyn_cast<clang::TagDecl>(&decl);

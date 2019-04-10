@@ -131,6 +131,23 @@ public:
 
     virtual std::unique_ptr<clang::ASTConsumer> CreateASTConsumer(clang::CompilerInstance& Compiler, llvm::StringRef InFile) override
     {
+//        Compiler.getPreprocessor().SetSuppressIncludeNotFoundError(true);
+
+        // The idea is to be able to remove SetSuppressIncludeNotFoundError and still have all metadata present in all cases. E.g.:
+        //   tns create imagePickerApp --template tns-template-master-detail-ng
+        //   tns platform add ios@next
+        //   tns run ios --emulator
+        // In Objective-C mode level-db framework breaks parsing because it includes c++ headers without checking whether the compiler is in C++ mode.
+        // In Objective-C++ mode many issues occurred. Some of them might be circumventable but the one which made me discard the effors was
+        // that enums are lost due to the following definition:
+        //    #if (__cplusplus)
+        //    #define CF_OPTIONS(_type, _name) _type _name; enum __CF_OPTIONS_ATTRIBUTES : _type
+        //    #else
+        //    #define CF_OPTIONS(_type, _name) enum __CF_OPTIONS_ATTRIBUTES _name : _type _name; enum _name : _type
+        //    #endif
+        // The reason for not wanting to suppress include not found errors is that issues like https://github.com/NativeScript/ios-runtime/issues/1117
+        // become really hard to debug and track down.
+
         return std::unique_ptr<clang::ASTConsumer>(new MetaGenerationConsumer(Compiler.getASTContext().getSourceManager(), Compiler.getPreprocessor().getHeaderSearchInfo()));
     }
 };
@@ -166,7 +183,7 @@ int main(int argc, const char** argv)
 
     std::vector<std::string> clangArgs{
         "-v",
-        "-x", "objective-c",
+        "-x", "objective-c++",
         "-fno-objc-arc", "-fmodule-maps", "-ferror-limit=0",
         "-Wno-unknown-pragmas", "-Wno-ignored-attributes", "-Wno-nullability-completeness", "-Wno-expansion-to-defined",
         "-D__NATIVESCRIPT_METADATA_GENERATOR=1"

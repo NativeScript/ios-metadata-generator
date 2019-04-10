@@ -27,6 +27,7 @@ llvm_config(cppflags LLVM_PREPROCESSOR_FLAGS)
 llvm_config(libs LLVM_LIBS)
 llvm_config(ldflags LLVM_LINKER_FLAGS)
 llvm_config(libdir LLVM_LIBDIR)
+llvm_config(includedir LLVM_INCLUDEDIR)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-rtti ${LLVM_PREPROCESSOR_FLAGS}")
 set(LLVM_LINKER_FLAGS "${LLVM_LINKER_FLAGS} ${LLVM_SYSTEM_LIBS} ${LLVM_LIBS}")
