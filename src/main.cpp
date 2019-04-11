@@ -19,6 +19,7 @@
 
 // Command line parameters
 llvm::cl::opt<bool>   cla_verbose("verbose", llvm::cl::desc("Set verbose output mode"), llvm::cl::value_desc("bool"));
+llvm::cl::opt<bool>   cla_strictIncludes("strict-includes", llvm::cl::desc("Set strict include headers for diagnostic purposes (usually when some metadata is not generated due to wrong import or include statement)"), llvm::cl::value_desc("bool"));
 llvm::cl::opt<string> cla_outputUmbrellaHeaderFile("output-umbrella", llvm::cl::desc("Specify the output umbrella header file"), llvm::cl::value_desc("file_path"));
 llvm::cl::opt<string> cla_inputUmbrellaHeaderFile("input-umbrella", llvm::cl::desc("Specify the input umbrella header file"), llvm::cl::value_desc("file_path"));
 llvm::cl::opt<string> cla_outputYamlFolder("output-yaml", llvm::cl::desc("Specify the output yaml folder"), llvm::cl::value_desc("<dir_path>"));
@@ -135,7 +136,7 @@ public:
         // Since in 4.0.1 'includeNotFound' errors are ignored for some reason
         // (even though the 'suppressIncludeNotFound' setting is false)
         // here we set this explicitly in order to keep the same behavior
-        Compiler.getPreprocessor().SetSuppressIncludeNotFoundError(true);
+        Compiler.getPreprocessor().SetSuppressIncludeNotFoundError(!cla_strictIncludes);
         
         return std::unique_ptr<clang::ASTConsumer>(new MetaGenerationConsumer(Compiler.getASTContext().getSourceManager(), Compiler.getPreprocessor().getHeaderSearchInfo()));
     }
