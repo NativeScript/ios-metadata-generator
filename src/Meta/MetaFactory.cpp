@@ -307,9 +307,11 @@ void MetaFactory::createFromEnum(const clang::EnumDecl& enumeration, EnumMeta& e
     size_t fieldNamePrefixLength = Utils::calculateEnumFieldsPrefix(enumMeta.jsName, fieldNames).size();
 
     for (clang::EnumConstantDecl* enumField : enumeration.enumerators()) {
-        llvm::SmallVector<char, 10> value;
-        enumField->getInitVal().toString(value, 10, enumField->getInitVal().isSigned());
-        std::string valueStr = std::string(value.data(), value.size());
+        // Convert values having the signed bit set to 1 to signed in order to represent them correctly in JS (-1, -2, etc)
+        // NOTE: Values having bits 53 to 62 different than the sign bit will continue to not be represented exactly
+        // as MAX_SAFE_INTEGER is 2 ^ 53 - 1
+        bool asSigned = enumField->getInitVal().isSigned() || enumField->getInitVal().getActiveBits() > 63;
+        std::string valueStr = enumField->getInitVal().toString(10, asSigned);
 
         if (fieldNamePrefixLength > 0) {
             enumMeta.swiftNameFields.push_back({ enumField->getNameAsString().substr(fieldNamePrefixLength, std::string::npos), valueStr });
