@@ -78,6 +78,13 @@ void resetMetaAndAddToMap(std::unique_ptr<Meta>& metaPtrRef, MetaToDeclMap& meta
         metaPtrRef.reset(new T());
         metaToDecl[metaPtrRef.get()] = &decl;
     }
+    
+    if (decl.isInvalidDecl()) {
+        std::string declDump;
+        llvm::raw_string_ostream os(declDump);
+        decl.dump(os);
+        throw MetaCreationException(metaPtrRef.get(), CreationException::constructMessage("Invalid decl.", os.str()), true);
+    }
 }
 
 Meta* MetaFactory::create(const clang::Decl& decl, bool resetCached /* = false*/)
@@ -347,7 +354,7 @@ void MetaFactory::createFromInterface(const clang::ObjCInterfaceDecl& interface,
 
     // set base interface
     clang::ObjCInterfaceDecl* super = interface.getSuperClass();
-    interfaceMeta.base = (super == nullptr) ? nullptr : &this->create(*super->getDefinition())->as<InterfaceMeta>();
+    interfaceMeta.base = (super == nullptr || super->getDefinition() == nullptr) ? nullptr : &this->create(*super->getDefinition())->as<InterfaceMeta>();
 }
 
 void MetaFactory::createFromProtocol(const clang::ObjCProtocolDecl& protocol, ProtocolMeta& protocolMeta)
@@ -589,7 +596,8 @@ void MetaFactory::populateBaseClassMetaFields(const clang::ObjCContainerDecl& de
 {
     for (clang::ObjCProtocolDecl* protocol : this->getProtocols(&decl)) {
         Meta* protocolMeta;
-        if (this->tryCreate(*protocol->getDefinition(), &protocolMeta)) {
+        
+        if (protocol->getDefinition() != nullptr && this->tryCreate(*protocol->getDefinition(), &protocolMeta)) {
             baseClass.protocols.push_back(&protocolMeta->as<ProtocolMeta>());
         }
     }
