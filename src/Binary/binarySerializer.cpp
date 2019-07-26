@@ -272,7 +272,7 @@ void binary::BinarySerializer::serializeModule(clang::Module* module, binary::Mo
             llvm::ErrorOr<bool> isStatic = isStaticFramework(module);
             assert(isStatic.getError().value() == 0);
 
-            bool isDynamic = isStatic.getError().value() == 0 && !isStatic.get()
+            bool isDynamic = isStatic.getError().value() == 0 && !isStatic.get();
             if (isDynamic) {
                 flags |= 1;
             }
