@@ -99,8 +99,6 @@ enum MetaType {
 };
 
 class Meta {
-    MAKE_NONCOPYABLE(Meta);
-
 public:
     MetaType type = MetaType::Undefined;
     MetaFlags flags = MetaFlags::None;
