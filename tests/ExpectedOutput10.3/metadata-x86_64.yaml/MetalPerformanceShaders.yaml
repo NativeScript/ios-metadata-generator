@@ -1,0 +1,64 @@
+---
+Module:          
+  FullName:        MetalPerformanceShaders
+  IsPartOfFramework: true
+  IsSystemModule:  true
+  Libraries:       
+    - Library:         MetalPerformanceShaders
+      IsFramework:     true
+Items:           
+  - Name:            MPSHintTemporaryMemoryHighWaterMark
+    JsName:          MPSHintTemporaryMemoryHighWaterMark
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalPerformanceShaders.framework/Headers/MetalPerformanceShaders.h'
+    Module:          
+      FullName:        MetalPerformanceShaders
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         MetalPerformanceShaders
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Void
+      - Type:            Id
+        WithProtocols:   
+          - MTLCommandBuffer
+      - Type:            ULong
+  - Name:            MPSSetHeapCacheDuration
+    JsName:          MPSSetHeapCacheDuration
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalPerformanceShaders.framework/Headers/MetalPerformanceShaders.h'
+    Module:          
+      FullName:        MetalPerformanceShaders
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         MetalPerformanceShaders
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Void
+      - Type:            Id
+        WithProtocols:   
+          - MTLCommandBuffer
+      - Type:            Double
+  - Name:            MPSSupportsMTLDevice
+    JsName:          MPSSupportsMTLDevice
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalPerformanceShaders.framework/Headers/MetalPerformanceShaders.h'
+    Module:          
+      FullName:        MetalPerformanceShaders
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         MetalPerformanceShaders
+          IsFramework:     true
+    IntroducedIn:    9.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Id
+        WithProtocols:   
+          - MTLDevice
+...

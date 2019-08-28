@@ -1,0 +1,1849 @@
+---
+Module:          
+  FullName:        CoreNFC
+  IsPartOfFramework: true
+  IsSystemModule:  true
+  Libraries:       
+    - Library:         CoreNFC
+      IsFramework:     true
+Items:           
+  - Name:            NFCErrorDomain
+    JsName:          NFCErrorDomain
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            NFCISO15693CustomCommandConfiguration
+    JsName:          NFCISO15693CustomCommandConfiguration
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'initWithManufacturerCode:customCommandCode:requestParameters:'
+        JsName:          initWithManufacturerCodeCustomCommandCodeRequestParameters
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            ULong
+          - Type:            ULong
+          - Type:            Interface
+            JsName:          NSData
+            WithProtocols:   []
+      - Name:            'initWithManufacturerCode:customCommandCode:requestParameters:maximumRetries:retryInterval:'
+        JsName:          initWithManufacturerCodeCustomCommandCodeRequestParametersMaximumRetriesRetryInterval
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            ULong
+          - Type:            ULong
+          - Type:            Interface
+            JsName:          NSData
+            WithProtocols:   []
+          - Type:            ULong
+          - Type:            Double
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            customCommandCode
+        JsName:          customCommandCode
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            customCommandCode
+          JsName:          customCommandCode
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            ULong
+        Setter:          
+          Name:            'setCustomCommandCode:'
+          JsName:          setCustomCommandCode
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            ULong
+      - Name:            manufacturerCode
+        JsName:          manufacturerCode
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            manufacturerCode
+          JsName:          manufacturerCode
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            ULong
+        Setter:          
+          Name:            'setManufacturerCode:'
+          JsName:          setManufacturerCode
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            ULong
+      - Name:            requestParameters
+        JsName:          requestParameters
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            requestParameters
+          JsName:          requestParameters
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSData
+              WithProtocols:   []
+        Setter:          
+          Name:            'setRequestParameters:'
+          JsName:          setRequestParameters
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSData
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            NFCTagCommandConfiguration
+  - Name:            NFCISO15693ReadMultipleBlocksConfiguration
+    JsName:          NFCISO15693ReadMultipleBlocksConfiguration
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'initWithRange:chunkSize:'
+        JsName:          initWithRangeChunkSize
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Struct
+            Module:          Foundation.NSRange
+            JsName:          NSRange
+          - Type:            ULong
+      - Name:            'initWithRange:chunkSize:maximumRetries:retryInterval:'
+        JsName:          initWithRangeChunkSizeMaximumRetriesRetryInterval
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Struct
+            Module:          Foundation.NSRange
+            JsName:          NSRange
+          - Type:            ULong
+          - Type:            ULong
+          - Type:            Double
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            chunkSize
+        JsName:          chunkSize
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            chunkSize
+          JsName:          chunkSize
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            ULong
+        Setter:          
+          Name:            'setChunkSize:'
+          JsName:          setChunkSize
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            ULong
+      - Name:            range
+        JsName:          range
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            range
+          JsName:          range
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Struct
+              Module:          Foundation.NSRange
+              JsName:          NSRange
+        Setter:          
+          Name:            'setRange:'
+          JsName:          setRange
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Struct
+              Module:          Foundation.NSRange
+              JsName:          NSRange
+    StaticProperties: []
+    Protocols:       []
+    Base:            NFCTagCommandConfiguration
+  - Name:            NFCISO15693ReaderSession
+    JsName:          NFCISO15693ReaderSession
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693ReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'initWithDelegate:queue:'
+        JsName:          initWithDelegateQueue
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693ReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Id
+            WithProtocols:   
+              - NFCReaderSessionDelegate
+          - Type:            Interface
+            JsName:          NSObject
+            WithProtocols:   
+              - OS_dispatch_queue
+      - Name:            restartPolling
+        JsName:          restartPolling
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693ReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: 
+      - Name:            readingAvailable
+        JsName:          readingAvailable
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693ReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            readingAvailable
+          JsName:          readingAvailable
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693ReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Bool
+    Protocols:       []
+    Base:            NFCReaderSession
+  - Name:            NFCISO15693Tag
+    JsName:          NFCISO15693Tag
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Protocol
+    InstanceMethods: 
+      - Name:            'readMultipleBlocksWithConfiguration:completionHandler:'
+        JsName:          readMultipleBlocksWithConfigurationCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NFCISO15693ReadMultipleBlocksConfiguration
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Interface
+                JsName:          NSData
+                WithProtocols:   []
+              - Type:            Interface
+                JsName:          NSError
+                WithProtocols:   []
+      - Name:            'sendCustomCommandWithConfiguration:completionHandler:'
+        JsName:          sendCustomCommandWithConfigurationCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NFCISO15693CustomCommandConfiguration
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Interface
+                JsName:          NSData
+                WithProtocols:   []
+              - Type:            Interface
+                JsName:          NSError
+                WithProtocols:   []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            icManufacturerCode
+        JsName:          icManufacturerCode
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            icManufacturerCode
+          JsName:          icManufacturerCode
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            ULong
+      - Name:            icSerialNumber
+        JsName:          icSerialNumber
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            icSerialNumber
+          JsName:          icSerialNumber
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSData
+              WithProtocols:   []
+      - Name:            identifier
+        JsName:          identifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            identifier
+          JsName:          identifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSData
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       
+      - NFCTag
+  - Name:            NFCISO15693TagResponseErrorKey
+    JsName:          NFCISO15693TagResponseErrorKey
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            NFCNDEFMessage
+    JsName:          NFCNDEFMessage
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            records
+        JsName:          records
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            records
+          JsName:          records
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSArray
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          NFCNDEFPayload
+                  WithProtocols:   []
+              WithProtocols:   []
+        Setter:          
+          Name:            'setRecords:'
+          JsName:          setRecords
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSArray
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          NFCNDEFPayload
+                  WithProtocols:   []
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            NFCNDEFPayload
+    JsName:          NFCNDEFPayload
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            identifier
+        JsName:          identifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            identifier
+          JsName:          identifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSData
+              WithProtocols:   []
+        Setter:          
+          Name:            'setIdentifier:'
+          JsName:          setIdentifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSData
+              WithProtocols:   []
+      - Name:            payload
+        JsName:          payload
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            payload
+          JsName:          payload
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSData
+              WithProtocols:   []
+        Setter:          
+          Name:            'setPayload:'
+          JsName:          setPayload
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSData
+              WithProtocols:   []
+      - Name:            type
+        JsName:          type
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            type
+          JsName:          type
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSData
+              WithProtocols:   []
+        Setter:          
+          Name:            'setType:'
+          JsName:          setType
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSData
+              WithProtocols:   []
+      - Name:            typeNameFormat
+        JsName:          typeNameFormat
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            typeNameFormat
+          JsName:          typeNameFormat
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            NFCTypeNameFormat
+        Setter:          
+          Name:            'setTypeNameFormat:'
+          JsName:          setTypeNameFormat
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Enum
+              Name:            NFCTypeNameFormat
+    StaticProperties: []
+    Protocols:       
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            NFCNDEFReaderSession
+    JsName:          NFCNDEFReaderSession
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'initWithDelegate:queue:invalidateAfterFirstRead:'
+        JsName:          initWithDelegateQueueInvalidateAfterFirstRead
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Id
+            WithProtocols:   
+              - NFCNDEFReaderSessionDelegate
+          - Type:            Interface
+            JsName:          NSObject
+            WithProtocols:   
+              - OS_dispatch_queue
+          - Type:            Bool
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: 
+      - Name:            readingAvailable
+        JsName:          readingAvailable
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            readingAvailable
+          JsName:          readingAvailable
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Bool
+    Protocols:       []
+    Base:            NFCReaderSession
+  - Name:            NFCNDEFReaderSessionDelegate
+    JsName:          NFCNDEFReaderSessionDelegate
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Protocol
+    InstanceMethods: 
+      - Name:            'readerSession:didDetectNDEFs:'
+        JsName:          readerSessionDidDetectNDEFs
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NFCNDEFReaderSession
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          NFCNDEFMessage
+                WithProtocols:   []
+            WithProtocols:   []
+      - Name:            'readerSession:didInvalidateWithError:'
+        JsName:          readerSessionDidInvalidateWithError
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NFCNDEFReaderSession
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSError
+            WithProtocols:   []
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: []
+    Protocols:       
+      - NSObjectProtocol
+  - Name:            NFCReaderError
+    JsName:          NFCReaderError
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - NFCReaderErrorUnsupportedFeature: '1'
+      - NFCReaderErrorSecurityViolation: '2'
+      - NFCReaderTransceiveErrorTagConnectionLost: '100'
+      - NFCReaderTransceiveErrorRetryExceeded: '101'
+      - NFCReaderTransceiveErrorTagResponseError: '102'
+      - NFCReaderSessionInvalidationErrorUserCanceled: '200'
+      - NFCReaderSessionInvalidationErrorSessionTimeout: '201'
+      - NFCReaderSessionInvalidationErrorSessionTerminatedUnexpectedly: '202'
+      - NFCReaderSessionInvalidationErrorSystemIsBusy: '203'
+      - NFCReaderSessionInvalidationErrorFirstNDEFTagRead: '204'
+      - NFCTagCommandConfigurationErrorInvalidParameters: '300'
+    SwiftNameFields: 
+      - ReaderErrorUnsupportedFeature: '1'
+      - ReaderErrorSecurityViolation: '2'
+      - ReaderTransceiveErrorTagConnectionLost: '100'
+      - ReaderTransceiveErrorRetryExceeded: '101'
+      - ReaderTransceiveErrorTagResponseError: '102'
+      - ReaderSessionInvalidationErrorUserCanceled: '200'
+      - ReaderSessionInvalidationErrorSessionTimeout: '201'
+      - ReaderSessionInvalidationErrorSessionTerminatedUnexpectedly: '202'
+      - ReaderSessionInvalidationErrorSystemIsBusy: '203'
+      - ReaderSessionInvalidationErrorFirstNDEFTagRead: '204'
+      - TagCommandConfigurationErrorInvalidParameters: '300'
+  - Name:            NFCReaderErrorSecurityViolation
+    JsName:          NFCReaderErrorSecurityViolation
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            NFCReaderErrorUnsupportedFeature
+    JsName:          NFCReaderErrorUnsupportedFeature
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            NFCReaderSession
+    JsName:          NFCReaderSession
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            delegate
+        JsName:          delegate
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            delegate
+          JsName:          delegate
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Id
+              WithProtocols:   []
+      - Name:            sessionQueue
+        JsName:          sessionQueue
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            sessionQueue
+          JsName:          sessionQueue
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSObject
+              WithProtocols:   
+                - OS_dispatch_queue
+    StaticProperties: []
+    Protocols:       
+      - NFCReaderSessionProtocol
+    Base:            NSObject
+  - Name:            NFCReaderSessionDelegate
+    JsName:          NFCReaderSessionDelegate
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Protocol
+    InstanceMethods: 
+      - Name:            'readerSessionDidBecomeActive:'
+        JsName:          readerSessionDidBecomeActive
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NFCReaderSession
+            WithProtocols:   []
+      - Name:            'readerSession:didDetectTags:'
+        JsName:          readerSessionDidDetectTags
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NFCReaderSession
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Id
+                WithProtocols:   
+                  - NFCTag
+            WithProtocols:   []
+      - Name:            'readerSession:didInvalidateWithError:'
+        JsName:          readerSessionDidInvalidateWithError
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NFCReaderSession
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSError
+            WithProtocols:   []
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: []
+    Protocols:       
+      - NSObjectProtocol
+  - Name:            NFCReaderSessionInvalidationErrorFirstNDEFTagRead
+    JsName:          NFCReaderSessionInvalidationErrorFirstNDEFTagRead
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '204'
+  - Name:            NFCReaderSessionInvalidationErrorSessionTerminatedUnexpectedly
+    JsName:          NFCReaderSessionInvalidationErrorSessionTerminatedUnexpectedly
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '202'
+  - Name:            NFCReaderSessionInvalidationErrorSessionTimeout
+    JsName:          NFCReaderSessionInvalidationErrorSessionTimeout
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '201'
+  - Name:            NFCReaderSessionInvalidationErrorSystemIsBusy
+    JsName:          NFCReaderSessionInvalidationErrorSystemIsBusy
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '203'
+  - Name:            NFCReaderSessionInvalidationErrorUserCanceled
+    JsName:          NFCReaderSessionInvalidationErrorUserCanceled
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '200'
+  - Name:            NFCReaderSession
+    JsName:          NFCReaderSessionProtocol
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Protocol
+    InstanceMethods: 
+      - Name:            beginSession
+        JsName:          beginSession
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+      - Name:            invalidateSession
+        JsName:          invalidateSession
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            alertMessage
+        JsName:          alertMessage
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            alertMessage
+          JsName:          alertMessage
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setAlertMessage:'
+          JsName:          setAlertMessage
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            ready
+        JsName:          ready
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            isReady
+          JsName:          isReady
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Bool
+    StaticProperties: []
+    Protocols:       
+      - NSObjectProtocol
+  - Name:            NFCReaderTransceiveErrorRetryExceeded
+    JsName:          NFCReaderTransceiveErrorRetryExceeded
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '101'
+  - Name:            NFCReaderTransceiveErrorTagConnectionLost
+    JsName:          NFCReaderTransceiveErrorTagConnectionLost
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '100'
+  - Name:            NFCReaderTransceiveErrorTagResponseError
+    JsName:          NFCReaderTransceiveErrorTagResponseError
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '102'
+  - Name:            NFCTag
+    JsName:          NFCTag
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Protocol
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            available
+        JsName:          available
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            isAvailable
+          JsName:          isAvailable
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Bool
+      - Name:            session
+        JsName:          session
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            session
+          JsName:          session
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Id
+              WithProtocols:   
+                - NFCReaderSessionProtocol
+      - Name:            type
+        JsName:          type
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            type
+          JsName:          type
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            NFCTagType
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSObjectProtocol
+      - NSSecureCoding
+  - Name:            NFCTagCommandConfiguration
+    JsName:          NFCTagCommandConfiguration
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            maximumRetries
+        JsName:          maximumRetries
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            maximumRetries
+          JsName:          maximumRetries
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            ULong
+        Setter:          
+          Name:            'setMaximumRetries:'
+          JsName:          setMaximumRetries
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            ULong
+      - Name:            retryInterval
+        JsName:          retryInterval
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+        Module:          
+          FullName:        CoreNFC
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+            - Library:         CoreNFC
+              IsFramework:     true
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            retryInterval
+          JsName:          retryInterval
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Double
+        Setter:          
+          Name:            'setRetryInterval:'
+          JsName:          setRetryInterval
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+          Module:          
+            FullName:        CoreNFC
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+              - Library:         CoreNFC
+                IsFramework:     true
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Double
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+    Base:            NSObject
+  - Name:            NFCTagCommandConfigurationErrorInvalidParameters
+    JsName:          NFCTagCommandConfigurationErrorInvalidParameters
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCError.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '300'
+  - Name:            NFCTagType
+    JsName:          NFCTagType
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - NFCTagTypeISO15693: '1'
+    SwiftNameFields: 
+      - ISO15693:        '1'
+  - Name:            NFCTagTypeISO15693
+    JsName:          NFCTagTypeISO15693
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCTag.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            NFCTypeNameFormat
+    JsName:          NFCTypeNameFormat
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - NFCTypeNameFormatEmpty: '0'
+      - NFCTypeNameFormatNFCWellKnown: '1'
+      - NFCTypeNameFormatMedia: '2'
+      - NFCTypeNameFormatAbsoluteURI: '3'
+      - NFCTypeNameFormatNFCExternal: '4'
+      - NFCTypeNameFormatUnknown: '5'
+      - NFCTypeNameFormatUnchanged: '6'
+    SwiftNameFields: 
+      - Empty:           '0'
+      - NFCWellKnown:    '1'
+      - Media:           '2'
+      - AbsoluteURI:     '3'
+      - NFCExternal:     '4'
+      - Unknown:         '5'
+      - Unchanged:       '6'
+  - Name:            NFCTypeNameFormatAbsoluteURI
+    JsName:          NFCTypeNameFormatAbsoluteURI
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '3'
+  - Name:            NFCTypeNameFormatEmpty
+    JsName:          NFCTypeNameFormatEmpty
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            NFCTypeNameFormatMedia
+    JsName:          NFCTypeNameFormatMedia
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            NFCTypeNameFormatNFCExternal
+    JsName:          NFCTypeNameFormatNFCExternal
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '4'
+  - Name:            NFCTypeNameFormatNFCWellKnown
+    JsName:          NFCTypeNameFormatNFCWellKnown
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            NFCTypeNameFormatUnchanged
+    JsName:          NFCTypeNameFormatUnchanged
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '6'
+  - Name:            NFCTypeNameFormatUnknown
+    JsName:          NFCTypeNameFormatUnknown
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h'
+    Module:          
+      FullName:        CoreNFC
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+        - Library:         CoreNFC
+          IsFramework:     true
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '5'
+...

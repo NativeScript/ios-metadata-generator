@@ -1,0 +1,1039 @@
+---
+Module:          
+  FullName:        AuthenticationServices
+  IsPartOfFramework: true
+  IsSystemModule:  true
+  Libraries:       
+    - Library:         AuthenticationServices
+      IsFramework:     true
+Items:           
+  - Name:            ASCredentialIdentityStore
+    JsName:          ASCredentialIdentityStore
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialIdentityStore
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'getCredentialIdentityStoreStateWithCompletion:'
+        JsName:          getCredentialIdentityStoreStateWithCompletion
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialIdentityStore
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Interface
+                JsName:          ASCredentialIdentityStoreState
+                WithProtocols:   []
+      - Name:            'removeAllCredentialIdentitiesWithCompletion:'
+        JsName:          removeAllCredentialIdentitiesWithCompletion
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialIdentityStore
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Bool
+              - Type:            Interface
+                JsName:          NSError
+                WithProtocols:   []
+      - Name:            'removeCredentialIdentities:completion:'
+        JsName:          removeCredentialIdentitiesCompletion
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialIdentityStore
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          ASPasswordCredentialIdentity
+                WithProtocols:   []
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Bool
+              - Type:            Interface
+                JsName:          NSError
+                WithProtocols:   []
+      - Name:            'replaceCredentialIdentitiesWithIdentities:completion:'
+        JsName:          replaceCredentialIdentitiesWithIdentitiesCompletion
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialIdentityStore
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          ASPasswordCredentialIdentity
+                WithProtocols:   []
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Bool
+              - Type:            Interface
+                JsName:          NSError
+                WithProtocols:   []
+      - Name:            'saveCredentialIdentities:completion:'
+        JsName:          saveCredentialIdentitiesCompletion
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialIdentityStore
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          ASPasswordCredentialIdentity
+                WithProtocols:   []
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Bool
+              - Type:            Interface
+                JsName:          NSError
+                WithProtocols:   []
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: 
+      - Name:            sharedStore
+        JsName:          sharedStore
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialIdentityStore
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            sharedStore
+          JsName:          sharedStore
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+          Module:          
+            FullName:        AuthenticationServices.ASCredentialIdentityStore
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          ASCredentialIdentityStore
+              WithProtocols:   []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            ASCredentialIdentityStoreErrorCode
+    JsName:          ASCredentialIdentityStoreErrorCode
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialIdentityStore
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - ASCredentialIdentityStoreErrorCodeInternalError: '0'
+      - ASCredentialIdentityStoreErrorCodeStoreDisabled: '1'
+      - ASCredentialIdentityStoreErrorCodeStoreBusy: '2'
+    SwiftNameFields: 
+      - InternalError:   '0'
+      - StoreDisabled:   '1'
+      - StoreBusy:       '2'
+  - Name:            ASCredentialIdentityStoreErrorCodeInternalError
+    JsName:          ASCredentialIdentityStoreErrorCodeInternalError
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialIdentityStore
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            ASCredentialIdentityStoreErrorCodeStoreBusy
+    JsName:          ASCredentialIdentityStoreErrorCodeStoreBusy
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialIdentityStore
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            ASCredentialIdentityStoreErrorCodeStoreDisabled
+    JsName:          ASCredentialIdentityStoreErrorCodeStoreDisabled
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialIdentityStore
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            ASCredentialIdentityStoreErrorDomain
+    JsName:          ASCredentialIdentityStoreErrorDomain
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStore.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialIdentityStore
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            ASCredentialIdentityStoreState
+    JsName:          ASCredentialIdentityStoreState
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStoreState.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialIdentityStoreState
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            enabled
+        JsName:          enabled
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStoreState.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialIdentityStoreState
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            isEnabled
+          JsName:          isEnabled
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStoreState.h'
+          Module:          
+            FullName:        AuthenticationServices.ASCredentialIdentityStoreState
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Bool
+      - Name:            supportsIncrementalUpdates
+        JsName:          supportsIncrementalUpdates
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStoreState.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialIdentityStoreState
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            supportsIncrementalUpdates
+          JsName:          supportsIncrementalUpdates
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialIdentityStoreState.h'
+          Module:          
+            FullName:        AuthenticationServices.ASCredentialIdentityStoreState
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Bool
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            ASCredentialProviderExtensionContext
+    JsName:          ASCredentialProviderExtensionContext
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderExtensionContext.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialProviderExtensionContext
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            completeExtensionConfigurationRequest
+        JsName:          completeExtensionConfigurationRequest
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderExtensionContext.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialProviderExtensionContext
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+      - Name:            'completeRequestWithSelectedCredential:completionHandler:'
+        JsName:          completeRequestWithSelectedCredentialCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderExtensionContext.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialProviderExtensionContext
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          ASPasswordCredential
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Bool
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSExtensionContext
+  - Name:            ASCredentialProviderViewController
+    JsName:          ASCredentialProviderViewController
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderViewController.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialProviderViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'prepareCredentialListForServiceIdentifiers:'
+        JsName:          prepareCredentialListForServiceIdentifiers
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderViewController.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialProviderViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          ASCredentialServiceIdentifier
+                WithProtocols:   []
+            WithProtocols:   []
+      - Name:            prepareInterfaceForExtensionConfiguration
+        JsName:          prepareInterfaceForExtensionConfiguration
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderViewController.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialProviderViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+      - Name:            'prepareInterfaceToProvideCredentialForIdentity:'
+        JsName:          prepareInterfaceToProvideCredentialForIdentity
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderViewController.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialProviderViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          ASPasswordCredentialIdentity
+            WithProtocols:   []
+      - Name:            'provideCredentialWithoutUserInteractionForIdentity:'
+        JsName:          provideCredentialWithoutUserInteractionForIdentity
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderViewController.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialProviderViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          ASPasswordCredentialIdentity
+            WithProtocols:   []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            extensionContext
+        JsName:          extensionContext
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderViewController.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialProviderViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            extensionContext
+          JsName:          extensionContext
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderViewController.h'
+          Module:          
+            FullName:        AuthenticationServices.ASCredentialProviderViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          ASCredentialProviderExtensionContext
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            UIViewController
+  - Name:            ASCredentialServiceIdentifier
+    JsName:          ASCredentialServiceIdentifier
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialServiceIdentifier.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialServiceIdentifier
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'initWithIdentifier:type:'
+        JsName:          initWithIdentifierType
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialServiceIdentifier.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialServiceIdentifier
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Enum
+            Name:            ASCredentialServiceIdentifierType
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            identifier
+        JsName:          identifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialServiceIdentifier.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialServiceIdentifier
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            identifier
+          JsName:          identifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialServiceIdentifier.h'
+          Module:          
+            FullName:        AuthenticationServices.ASCredentialServiceIdentifier
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            type
+        JsName:          type
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialServiceIdentifier.h'
+        Module:          
+          FullName:        AuthenticationServices.ASCredentialServiceIdentifier
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            type
+          JsName:          type
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialServiceIdentifier.h'
+          Module:          
+            FullName:        AuthenticationServices.ASCredentialServiceIdentifier
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            ASCredentialServiceIdentifierType
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            ASCredentialServiceIdentifierType
+    JsName:          ASCredentialServiceIdentifierType
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialServiceIdentifier.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialServiceIdentifier
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - ASCredentialServiceIdentifierTypeDomain: '0'
+      - ASCredentialServiceIdentifierTypeURL: '1'
+    SwiftNameFields: 
+      - Domain:          '0'
+      - URL:             '1'
+  - Name:            ASCredentialServiceIdentifierTypeDomain
+    JsName:          ASCredentialServiceIdentifierTypeDomain
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialServiceIdentifier.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialServiceIdentifier
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            ASCredentialServiceIdentifierTypeURL
+    JsName:          ASCredentialServiceIdentifierTypeURL
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialServiceIdentifier.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialServiceIdentifier
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            ASExtensionErrorCode
+    JsName:          ASExtensionErrorCode
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderExtensionContext.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialProviderExtensionContext
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - ASExtensionErrorCodeFailed: '0'
+      - ASExtensionErrorCodeUserCanceled: '1'
+      - ASExtensionErrorCodeUserInteractionRequired: '100'
+      - ASExtensionErrorCodeCredentialIdentityNotFound: '101'
+    SwiftNameFields: 
+      - Failed:          '0'
+      - UserCanceled:    '1'
+      - UserInteractionRequired: '100'
+      - CredentialIdentityNotFound: '101'
+  - Name:            ASExtensionErrorCodeCredentialIdentityNotFound
+    JsName:          ASExtensionErrorCodeCredentialIdentityNotFound
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderExtensionContext.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialProviderExtensionContext
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '101'
+  - Name:            ASExtensionErrorCodeFailed
+    JsName:          ASExtensionErrorCodeFailed
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderExtensionContext.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialProviderExtensionContext
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            ASExtensionErrorCodeUserCanceled
+    JsName:          ASExtensionErrorCodeUserCanceled
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderExtensionContext.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialProviderExtensionContext
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            ASExtensionErrorCodeUserInteractionRequired
+    JsName:          ASExtensionErrorCodeUserInteractionRequired
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderExtensionContext.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialProviderExtensionContext
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '100'
+  - Name:            ASExtensionErrorDomain
+    JsName:          ASExtensionErrorDomain
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASCredentialProviderExtensionContext.h'
+    Module:          
+      FullName:        AuthenticationServices.ASCredentialProviderExtensionContext
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            ASPasswordCredential
+    JsName:          ASPasswordCredential
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredential.h'
+    Module:          
+      FullName:        AuthenticationServices.ASPasswordCredential
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'initWithUser:password:'
+        JsName:          initWithUserPassword
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredential.h'
+        Module:          
+          FullName:        AuthenticationServices.ASPasswordCredential
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+    StaticMethods:   
+      - Name:            'credentialWithUser:password:'
+        JsName:          credentialWithUserPassword
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredential.h'
+        Module:          
+          FullName:        AuthenticationServices.ASPasswordCredential
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+    InstanceProperties: 
+      - Name:            password
+        JsName:          password
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredential.h'
+        Module:          
+          FullName:        AuthenticationServices.ASPasswordCredential
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            password
+          JsName:          password
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredential.h'
+          Module:          
+            FullName:        AuthenticationServices.ASPasswordCredential
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            user
+        JsName:          user
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredential.h'
+        Module:          
+          FullName:        AuthenticationServices.ASPasswordCredential
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            user
+          JsName:          user
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredential.h'
+          Module:          
+            FullName:        AuthenticationServices.ASPasswordCredential
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            ASPasswordCredentialIdentity
+    JsName:          ASPasswordCredentialIdentity
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+    Module:          
+      FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'initWithServiceIdentifier:user:recordIdentifier:'
+        JsName:          initWithServiceIdentifierUserRecordIdentifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+        Module:          
+          FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          ASCredentialServiceIdentifier
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+    StaticMethods:   
+      - Name:            'identityWithServiceIdentifier:user:recordIdentifier:'
+        JsName:          identityWithServiceIdentifierUserRecordIdentifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+        Module:          
+          FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          ASCredentialServiceIdentifier
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+    InstanceProperties: 
+      - Name:            rank
+        JsName:          rank
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+        Module:          
+          FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            rank
+          JsName:          rank
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+          Module:          
+            FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Long
+        Setter:          
+          Name:            'setRank:'
+          JsName:          setRank
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+          Module:          
+            FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Long
+      - Name:            recordIdentifier
+        JsName:          recordIdentifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+        Module:          
+          FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            recordIdentifier
+          JsName:          recordIdentifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+          Module:          
+            FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            serviceIdentifier
+        JsName:          serviceIdentifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+        Module:          
+          FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            serviceIdentifier
+          JsName:          serviceIdentifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+          Module:          
+            FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          ASCredentialServiceIdentifier
+              WithProtocols:   []
+      - Name:            user
+        JsName:          user
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+        Module:          
+          FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            user
+          JsName:          user
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASPasswordCredentialIdentity.h'
+          Module:          
+            FullName:        AuthenticationServices.ASPasswordCredentialIdentity
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            ASWebAuthenticationSession
+    JsName:          ASWebAuthenticationSession
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASWebAuthenticationSession.h'
+    Module:          
+      FullName:        AuthenticationServices.ASWebAuthenticationSession
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            cancel
+        JsName:          cancel
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASWebAuthenticationSession.h'
+        Module:          
+          FullName:        AuthenticationServices.ASWebAuthenticationSession
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+      - Name:            'initWithURL:callbackURLScheme:completionHandler:'
+        JsName:          initWithURLCallbackURLSchemeCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASWebAuthenticationSession.h'
+        Module:          
+          FullName:        AuthenticationServices.ASWebAuthenticationSession
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSURL
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Interface
+                JsName:          NSURL
+                WithProtocols:   []
+              - Type:            Interface
+                JsName:          NSError
+                WithProtocols:   []
+      - Name:            start
+        JsName:          start
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASWebAuthenticationSession.h'
+        Module:          
+          FullName:        AuthenticationServices.ASWebAuthenticationSession
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Bool
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            ASWebAuthenticationSessionErrorCode
+    JsName:          ASWebAuthenticationSessionErrorCode
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASWebAuthenticationSession.h'
+    Module:          
+      FullName:        AuthenticationServices.ASWebAuthenticationSession
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - ASWebAuthenticationSessionErrorCodeCanceledLogin: '1'
+    SwiftNameFields: 
+      - CanceledLogin:   '1'
+  - Name:            ASWebAuthenticationSessionErrorCodeCanceledLogin
+    JsName:          ASWebAuthenticationSessionErrorCodeCanceledLogin
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASWebAuthenticationSession.h'
+    Module:          
+      FullName:        AuthenticationServices.ASWebAuthenticationSession
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            ASWebAuthenticationSessionErrorDomain
+    JsName:          ASWebAuthenticationSessionErrorDomain
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AuthenticationServices.framework/Headers/ASWebAuthenticationSession.h'
+    Module:          
+      FullName:        AuthenticationServices.ASWebAuthenticationSession
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+...

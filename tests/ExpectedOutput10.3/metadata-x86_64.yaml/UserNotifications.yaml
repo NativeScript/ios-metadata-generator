@@ -1,0 +1,3667 @@
+---
+Module:          
+  FullName:        UserNotifications
+  IsPartOfFramework: true
+  IsSystemModule:  true
+  Libraries:       
+    - Library:         UserNotifications
+      IsFramework:     true
+Items:           
+  - Name:            UNAlertStyle
+    JsName:          UNAlertStyle
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - UNAlertStyleNone: '0'
+      - UNAlertStyleBanner: '1'
+      - UNAlertStyleAlert: '2'
+    SwiftNameFields: 
+      - None:            '0'
+      - Banner:          '1'
+      - Alert:           '2'
+  - Name:            UNAlertStyleAlert
+    JsName:          UNAlertStyleAlert
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            UNAlertStyleBanner
+    JsName:          UNAlertStyleBanner
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            UNAlertStyleNone
+    JsName:          UNAlertStyleNone
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            UNAuthorizationOptionAlert
+    JsName:          UNAuthorizationOptionAlert
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '4'
+  - Name:            UNAuthorizationOptionBadge
+    JsName:          UNAuthorizationOptionBadge
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            UNAuthorizationOptionCarPlay
+    JsName:          UNAuthorizationOptionCarPlay
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '8'
+  - Name:            UNAuthorizationOptionCriticalAlert
+    JsName:          UNAuthorizationOptionCriticalAlert
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '16'
+  - Name:            UNAuthorizationOptionNone
+    JsName:          UNAuthorizationOptionNone
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Enum
+      Name:            UNAuthorizationOptions
+    Value:           '0'
+  - Name:            UNAuthorizationOptionProvidesAppNotificationSettings
+    JsName:          UNAuthorizationOptionProvidesAppNotificationSettings
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '32'
+  - Name:            UNAuthorizationOptionProvisional
+    JsName:          UNAuthorizationOptionProvisional
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '64'
+  - Name:            UNAuthorizationOptionSound
+    JsName:          UNAuthorizationOptionSound
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            UNAuthorizationOptions
+    JsName:          UNAuthorizationOptions
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - UNAuthorizationOptionBadge: '1'
+      - UNAuthorizationOptionSound: '2'
+      - UNAuthorizationOptionAlert: '4'
+      - UNAuthorizationOptionCarPlay: '8'
+      - UNAuthorizationOptionCriticalAlert: '16'
+      - UNAuthorizationOptionProvidesAppNotificationSettings: '32'
+      - UNAuthorizationOptionProvisional: '64'
+    SwiftNameFields: 
+      - Badge:           '1'
+      - Sound:           '2'
+      - Alert:           '4'
+      - CarPlay:         '8'
+      - CriticalAlert:   '16'
+      - ProvidesAppNotificationSettings: '32'
+      - Provisional:     '64'
+  - Name:            UNAuthorizationStatus
+    JsName:          UNAuthorizationStatus
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - UNAuthorizationStatusNotDetermined: '0'
+      - UNAuthorizationStatusDenied: '1'
+      - UNAuthorizationStatusAuthorized: '2'
+      - UNAuthorizationStatusProvisional: '3'
+    SwiftNameFields: 
+      - NotDetermined:   '0'
+      - Denied:          '1'
+      - Authorized:      '2'
+      - Provisional:     '3'
+  - Name:            UNAuthorizationStatusAuthorized
+    JsName:          UNAuthorizationStatusAuthorized
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            UNAuthorizationStatusDenied
+    JsName:          UNAuthorizationStatusDenied
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            UNAuthorizationStatusNotDetermined
+    JsName:          UNAuthorizationStatusNotDetermined
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            UNAuthorizationStatusProvisional
+    JsName:          UNAuthorizationStatusProvisional
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '3'
+  - Name:            UNCalendarNotificationTrigger
+    JsName:          UNCalendarNotificationTrigger
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationTrigger
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            nextTriggerDate
+        JsName:          nextTriggerDate
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationTrigger
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Interface
+            JsName:          NSDate
+            WithProtocols:   []
+    StaticMethods:   
+      - Name:            'triggerWithDateMatchingComponents:repeats:'
+        JsName:          triggerWithDateMatchingComponentsRepeats
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationTrigger
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSDateComponents
+            WithProtocols:   []
+          - Type:            Bool
+    InstanceProperties: 
+      - Name:            dateComponents
+        JsName:          dateComponents
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationTrigger
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            dateComponents
+          JsName:          dateComponents
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationTrigger
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSDateComponents
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            UNNotificationTrigger
+  - Name:            UNErrorCode
+    JsName:          UNErrorCode
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h'
+    Module:          
+      FullName:        UserNotifications.UNError
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - UNErrorCodeNotificationsNotAllowed: '1'
+      - UNErrorCodeAttachmentInvalidURL: '100'
+      - UNErrorCodeAttachmentUnrecognizedType: '101'
+      - UNErrorCodeAttachmentInvalidFileSize: '102'
+      - UNErrorCodeAttachmentNotInDataStore: '103'
+      - UNErrorCodeAttachmentMoveIntoDataStoreFailed: '104'
+      - UNErrorCodeAttachmentCorrupt: '105'
+      - UNErrorCodeNotificationInvalidNoDate: '1400'
+      - UNErrorCodeNotificationInvalidNoContent: '1401'
+    SwiftNameFields: 
+      - NotificationsNotAllowed: '1'
+      - AttachmentInvalidURL: '100'
+      - AttachmentUnrecognizedType: '101'
+      - AttachmentInvalidFileSize: '102'
+      - AttachmentNotInDataStore: '103'
+      - AttachmentMoveIntoDataStoreFailed: '104'
+      - AttachmentCorrupt: '105'
+      - NotificationInvalidNoDate: '1400'
+      - NotificationInvalidNoContent: '1401'
+  - Name:            UNErrorCodeAttachmentCorrupt
+    JsName:          UNErrorCodeAttachmentCorrupt
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h'
+    Module:          
+      FullName:        UserNotifications.UNError
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '105'
+  - Name:            UNErrorCodeAttachmentInvalidFileSize
+    JsName:          UNErrorCodeAttachmentInvalidFileSize
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h'
+    Module:          
+      FullName:        UserNotifications.UNError
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '102'
+  - Name:            UNErrorCodeAttachmentInvalidURL
+    JsName:          UNErrorCodeAttachmentInvalidURL
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h'
+    Module:          
+      FullName:        UserNotifications.UNError
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '100'
+  - Name:            UNErrorCodeAttachmentMoveIntoDataStoreFailed
+    JsName:          UNErrorCodeAttachmentMoveIntoDataStoreFailed
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h'
+    Module:          
+      FullName:        UserNotifications.UNError
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '104'
+  - Name:            UNErrorCodeAttachmentNotInDataStore
+    JsName:          UNErrorCodeAttachmentNotInDataStore
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h'
+    Module:          
+      FullName:        UserNotifications.UNError
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '103'
+  - Name:            UNErrorCodeAttachmentUnrecognizedType
+    JsName:          UNErrorCodeAttachmentUnrecognizedType
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h'
+    Module:          
+      FullName:        UserNotifications.UNError
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '101'
+  - Name:            UNErrorCodeNotificationInvalidNoContent
+    JsName:          UNErrorCodeNotificationInvalidNoContent
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h'
+    Module:          
+      FullName:        UserNotifications.UNError
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1401'
+  - Name:            UNErrorCodeNotificationInvalidNoDate
+    JsName:          UNErrorCodeNotificationInvalidNoDate
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h'
+    Module:          
+      FullName:        UserNotifications.UNError
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1400'
+  - Name:            UNErrorCodeNotificationsNotAllowed
+    JsName:          UNErrorCodeNotificationsNotAllowed
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h'
+    Module:          
+      FullName:        UserNotifications.UNError
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            UNErrorDomain
+    JsName:          UNErrorDomain
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h'
+    Module:          
+      FullName:        UserNotifications.UNError
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            UNLocationNotificationTrigger
+    JsName:          UNLocationNotificationTrigger
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationTrigger
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   
+      - Name:            'triggerWithRegion:repeats:'
+        JsName:          triggerWithRegionRepeats
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationTrigger
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          CLRegion
+            WithProtocols:   []
+          - Type:            Bool
+    InstanceProperties: 
+      - Name:            region
+        JsName:          region
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationTrigger
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            region
+          JsName:          region
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationTrigger
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          CLRegion
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            UNNotificationTrigger
+  - Name:            UNMutableNotificationContent
+    JsName:          UNMutableNotificationContent
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationContent
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            attachments
+        JsName:          attachments
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            attachments
+          JsName:          attachments
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSArray
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          UNNotificationAttachment
+                  WithProtocols:   []
+              WithProtocols:   []
+        Setter:          
+          Name:            'setAttachments:'
+          JsName:          setAttachments
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSArray
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          UNNotificationAttachment
+                  WithProtocols:   []
+              WithProtocols:   []
+      - Name:            badge
+        JsName:          badge
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            badge
+          JsName:          badge
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSNumber
+              WithProtocols:   []
+        Setter:          
+          Name:            'setBadge:'
+          JsName:          setBadge
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSNumber
+              WithProtocols:   []
+      - Name:            body
+        JsName:          body
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            body
+          JsName:          body
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setBody:'
+          JsName:          setBody
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            categoryIdentifier
+        JsName:          categoryIdentifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            categoryIdentifier
+          JsName:          categoryIdentifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setCategoryIdentifier:'
+          JsName:          setCategoryIdentifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            launchImageName
+        JsName:          launchImageName
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            launchImageName
+          JsName:          launchImageName
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setLaunchImageName:'
+          JsName:          setLaunchImageName
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            sound
+        JsName:          sound
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            sound
+          JsName:          sound
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          UNNotificationSound
+              WithProtocols:   []
+        Setter:          
+          Name:            'setSound:'
+          JsName:          setSound
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          UNNotificationSound
+              WithProtocols:   []
+      - Name:            subtitle
+        JsName:          subtitle
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            subtitle
+          JsName:          subtitle
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setSubtitle:'
+          JsName:          setSubtitle
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            summaryArgument
+        JsName:          summaryArgument
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            summaryArgument
+          JsName:          summaryArgument
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setSummaryArgument:'
+          JsName:          setSummaryArgument
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            summaryArgumentCount
+        JsName:          summaryArgumentCount
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            summaryArgumentCount
+          JsName:          summaryArgumentCount
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            ULong
+        Setter:          
+          Name:            'setSummaryArgumentCount:'
+          JsName:          setSummaryArgumentCount
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            ULong
+      - Name:            threadIdentifier
+        JsName:          threadIdentifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            threadIdentifier
+          JsName:          threadIdentifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setThreadIdentifier:'
+          JsName:          setThreadIdentifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            title
+        JsName:          title
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            title
+          JsName:          title
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setTitle:'
+          JsName:          setTitle
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            userInfo
+        JsName:          userInfo
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            userInfo
+          JsName:          userInfo
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSDictionary
+              WithProtocols:   []
+        Setter:          
+          Name:            'setUserInfo:'
+          JsName:          setUserInfo
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSDictionary
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            UNNotificationContent
+  - Name:            UNNotification
+    JsName:          UNNotification
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotification.h'
+    Module:          
+      FullName:        UserNotifications.UNNotification
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            date
+        JsName:          date
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotification.h'
+        Module:          
+          FullName:        UserNotifications.UNNotification
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            date
+          JsName:          date
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotification.h'
+          Module:          
+            FullName:        UserNotifications.UNNotification
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSDate
+              WithProtocols:   []
+      - Name:            request
+        JsName:          request
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotification.h'
+        Module:          
+          FullName:        UserNotifications.UNNotification
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            request
+          JsName:          request
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotification.h'
+          Module:          
+            FullName:        UserNotifications.UNNotification
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          UNNotificationRequest
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            UNNotificationAction
+    JsName:          UNNotificationAction
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAction
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   
+      - Name:            'actionWithIdentifier:title:options:'
+        JsName:          actionWithIdentifierTitleOptions
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationAction
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Enum
+            Name:            UNNotificationActionOptions
+    InstanceProperties: 
+      - Name:            identifier
+        JsName:          identifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationAction
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            identifier
+          JsName:          identifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationAction
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            options
+        JsName:          options
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationAction
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            options
+          JsName:          options
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationAction
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNNotificationActionOptions
+      - Name:            title
+        JsName:          title
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationAction
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            title
+          JsName:          title
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationAction
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            UNNotificationActionOptionAuthenticationRequired
+    JsName:          UNNotificationActionOptionAuthenticationRequired
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAction
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            UNNotificationActionOptionDestructive
+    JsName:          UNNotificationActionOptionDestructive
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAction
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            UNNotificationActionOptionForeground
+    JsName:          UNNotificationActionOptionForeground
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAction
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '4'
+  - Name:            UNNotificationActionOptionNone
+    JsName:          UNNotificationActionOptionNone
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAction
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Enum
+      Name:            UNNotificationActionOptions
+    Value:           '0'
+  - Name:            UNNotificationActionOptions
+    JsName:          UNNotificationActionOptions
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAction
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - UNNotificationActionOptionAuthenticationRequired: '1'
+      - UNNotificationActionOptionDestructive: '2'
+      - UNNotificationActionOptionForeground: '4'
+    SwiftNameFields: 
+      - AuthenticationRequired: '1'
+      - Destructive:     '2'
+      - Foreground:      '4'
+  - Name:            UNNotificationAttachment
+    JsName:          UNNotificationAttachment
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAttachment
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   
+      - Name:            'attachmentWithIdentifier:URL:options:error:'
+        JsName:          attachmentWithIdentifierURLOptionsError
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationAttachment
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSURL
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSDictionary
+            WithProtocols:   []
+          - Type:            Pointer
+            PointerType:     
+              Type:            Interface
+              JsName:          NSError
+              WithProtocols:   []
+    InstanceProperties: 
+      - Name:            identifier
+        JsName:          identifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationAttachment
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            identifier
+          JsName:          identifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationAttachment
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            type
+        JsName:          type
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationAttachment
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            type
+          JsName:          type
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationAttachment
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            URL
+        JsName:          URL
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationAttachment
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            URL
+          JsName:          URL
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationAttachment
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSURL
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            UNNotificationAttachmentOptionsThumbnailClippingRectKey
+    JsName:          UNNotificationAttachmentOptionsThumbnailClippingRectKey
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAttachment
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            UNNotificationAttachmentOptionsThumbnailHiddenKey
+    JsName:          UNNotificationAttachmentOptionsThumbnailHiddenKey
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAttachment
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            UNNotificationAttachmentOptionsThumbnailTimeKey
+    JsName:          UNNotificationAttachmentOptionsThumbnailTimeKey
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAttachment
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            UNNotificationAttachmentOptionsTypeHintKey
+    JsName:          UNNotificationAttachmentOptionsTypeHintKey
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAttachment.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAttachment
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            UNNotificationCategory
+    JsName:          UNNotificationCategory
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationCategory
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   
+      - Name:            'categoryWithIdentifier:actions:intentIdentifiers:hiddenPreviewsBodyPlaceholder:categorySummaryFormat:options:'
+        JsName:          categoryWithIdentifierActionsIntentIdentifiersHiddenPreviewsBodyPlaceholderCategorySummaryFormatOptions
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationCategory
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          UNNotificationAction
+                WithProtocols:   []
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          NSString
+                WithProtocols:   []
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Enum
+            Name:            UNNotificationCategoryOptions
+      - Name:            'categoryWithIdentifier:actions:intentIdentifiers:hiddenPreviewsBodyPlaceholder:options:'
+        JsName:          categoryWithIdentifierActionsIntentIdentifiersHiddenPreviewsBodyPlaceholderOptions
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationCategory
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    11.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          UNNotificationAction
+                WithProtocols:   []
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          NSString
+                WithProtocols:   []
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Enum
+            Name:            UNNotificationCategoryOptions
+      - Name:            'categoryWithIdentifier:actions:intentIdentifiers:options:'
+        JsName:          categoryWithIdentifierActionsIntentIdentifiersOptions
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationCategory
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          UNNotificationAction
+                WithProtocols:   []
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          NSString
+                WithProtocols:   []
+            WithProtocols:   []
+          - Type:            Enum
+            Name:            UNNotificationCategoryOptions
+    InstanceProperties: 
+      - Name:            actions
+        JsName:          actions
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationCategory
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            actions
+          JsName:          actions
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationCategory
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSArray
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          UNNotificationAction
+                  WithProtocols:   []
+              WithProtocols:   []
+      - Name:            categorySummaryFormat
+        JsName:          categorySummaryFormat
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationCategory
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            categorySummaryFormat
+          JsName:          categorySummaryFormat
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationCategory
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            hiddenPreviewsBodyPlaceholder
+        JsName:          hiddenPreviewsBodyPlaceholder
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationCategory
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    11.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            hiddenPreviewsBodyPlaceholder
+          JsName:          hiddenPreviewsBodyPlaceholder
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationCategory
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    11.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            identifier
+        JsName:          identifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationCategory
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            identifier
+          JsName:          identifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationCategory
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            intentIdentifiers
+        JsName:          intentIdentifiers
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationCategory
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            intentIdentifiers
+          JsName:          intentIdentifiers
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationCategory
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSArray
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          NSString
+                  WithProtocols:   []
+              WithProtocols:   []
+      - Name:            options
+        JsName:          options
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationCategory
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            options
+          JsName:          options
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationCategory
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNNotificationCategoryOptions
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            UNNotificationCategoryOptionAllowInCarPlay
+    JsName:          UNNotificationCategoryOptionAllowInCarPlay
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationCategory
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            UNNotificationCategoryOptionCustomDismissAction
+    JsName:          UNNotificationCategoryOptionCustomDismissAction
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationCategory
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            UNNotificationCategoryOptionHiddenPreviewsShowSubtitle
+    JsName:          UNNotificationCategoryOptionHiddenPreviewsShowSubtitle
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationCategory
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '8'
+  - Name:            UNNotificationCategoryOptionHiddenPreviewsShowTitle
+    JsName:          UNNotificationCategoryOptionHiddenPreviewsShowTitle
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationCategory
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '4'
+  - Name:            UNNotificationCategoryOptionNone
+    JsName:          UNNotificationCategoryOptionNone
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationCategory
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Enum
+      Name:            UNNotificationCategoryOptions
+    Value:           '0'
+  - Name:            UNNotificationCategoryOptions
+    JsName:          UNNotificationCategoryOptions
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationCategory
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - UNNotificationCategoryOptionCustomDismissAction: '1'
+      - UNNotificationCategoryOptionAllowInCarPlay: '2'
+      - UNNotificationCategoryOptionHiddenPreviewsShowTitle: '4'
+      - UNNotificationCategoryOptionHiddenPreviewsShowSubtitle: '8'
+    SwiftNameFields: 
+      - CustomDismissAction: '1'
+      - AllowInCarPlay:  '2'
+      - HiddenPreviewsShowTitle: '4'
+      - HiddenPreviewsShowSubtitle: '8'
+  - Name:            UNNotificationContent
+    JsName:          UNNotificationContent
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationContent
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            attachments
+        JsName:          attachments
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            attachments
+          JsName:          attachments
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSArray
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          UNNotificationAttachment
+                  WithProtocols:   []
+              WithProtocols:   []
+      - Name:            badge
+        JsName:          badge
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            badge
+          JsName:          badge
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSNumber
+              WithProtocols:   []
+      - Name:            body
+        JsName:          body
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            body
+          JsName:          body
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            categoryIdentifier
+        JsName:          categoryIdentifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            categoryIdentifier
+          JsName:          categoryIdentifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            launchImageName
+        JsName:          launchImageName
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            launchImageName
+          JsName:          launchImageName
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            sound
+        JsName:          sound
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            sound
+          JsName:          sound
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          UNNotificationSound
+              WithProtocols:   []
+      - Name:            subtitle
+        JsName:          subtitle
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            subtitle
+          JsName:          subtitle
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            summaryArgument
+        JsName:          summaryArgument
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            summaryArgument
+          JsName:          summaryArgument
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            summaryArgumentCount
+        JsName:          summaryArgumentCount
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            summaryArgumentCount
+          JsName:          summaryArgumentCount
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            ULong
+      - Name:            threadIdentifier
+        JsName:          threadIdentifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            threadIdentifier
+          JsName:          threadIdentifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            title
+        JsName:          title
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            title
+          JsName:          title
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            userInfo
+        JsName:          userInfo
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationContent
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            userInfo
+          JsName:          userInfo
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationContent.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationContent
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSDictionary
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSMutableCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            UNNotificationDefaultActionIdentifier
+    JsName:          UNNotificationDefaultActionIdentifier
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationResponse.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationResponse
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            UNNotificationDismissActionIdentifier
+    JsName:          UNNotificationDismissActionIdentifier
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationResponse.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationResponse
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            UNNotificationPresentationOptionAlert
+    JsName:          UNNotificationPresentationOptionAlert
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '4'
+  - Name:            UNNotificationPresentationOptionBadge
+    JsName:          UNNotificationPresentationOptionBadge
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            UNNotificationPresentationOptionNone
+    JsName:          UNNotificationPresentationOptionNone
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Enum
+      Name:            UNNotificationPresentationOptions
+    Value:           '0'
+  - Name:            UNNotificationPresentationOptionSound
+    JsName:          UNNotificationPresentationOptionSound
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            UNNotificationPresentationOptions
+    JsName:          UNNotificationPresentationOptions
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - UNNotificationPresentationOptionBadge: '1'
+      - UNNotificationPresentationOptionSound: '2'
+      - UNNotificationPresentationOptionAlert: '4'
+    SwiftNameFields: 
+      - Badge:           '1'
+      - Sound:           '2'
+      - Alert:           '4'
+  - Name:            UNNotificationRequest
+    JsName:          UNNotificationRequest
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationRequest.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationRequest
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   
+      - Name:            'requestWithIdentifier:content:trigger:'
+        JsName:          requestWithIdentifierContentTrigger
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationRequest.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationRequest
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          UNNotificationContent
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          UNNotificationTrigger
+            WithProtocols:   []
+    InstanceProperties: 
+      - Name:            content
+        JsName:          content
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationRequest.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationRequest
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            content
+          JsName:          content
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationRequest.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          UNNotificationContent
+              WithProtocols:   []
+      - Name:            identifier
+        JsName:          identifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationRequest.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationRequest
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            identifier
+          JsName:          identifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationRequest.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            trigger
+        JsName:          trigger
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationRequest.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationRequest
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            trigger
+          JsName:          trigger
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationRequest.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          UNNotificationTrigger
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            UNNotificationResponse
+    JsName:          UNNotificationResponse
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationResponse.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationResponse
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            actionIdentifier
+        JsName:          actionIdentifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationResponse.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationResponse
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            actionIdentifier
+          JsName:          actionIdentifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationResponse.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationResponse
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            notification
+        JsName:          notification
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationResponse.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationResponse
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            notification
+          JsName:          notification
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationResponse.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationResponse
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          UNNotification
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            UNNotificationServiceExtension
+    JsName:          UNNotificationServiceExtension
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationServiceExtension.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationServiceExtension
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'didReceiveNotificationRequest:withContentHandler:'
+        JsName:          didReceiveNotificationRequestWithContentHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationServiceExtension.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationServiceExtension
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          UNNotificationRequest
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Interface
+                JsName:          UNNotificationContent
+                WithProtocols:   []
+      - Name:            serviceExtensionTimeWillExpire
+        JsName:          serviceExtensionTimeWillExpire
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationServiceExtension.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationServiceExtension
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            UNNotificationSetting
+    JsName:          UNNotificationSetting
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - UNNotificationSettingNotSupported: '0'
+      - UNNotificationSettingDisabled: '1'
+      - UNNotificationSettingEnabled: '2'
+    SwiftNameFields: 
+      - NotSupported:    '0'
+      - Disabled:        '1'
+      - Enabled:         '2'
+  - Name:            UNNotificationSettingDisabled
+    JsName:          UNNotificationSettingDisabled
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            UNNotificationSettingEnabled
+    JsName:          UNNotificationSettingEnabled
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            UNNotificationSettingNotSupported
+    JsName:          UNNotificationSettingNotSupported
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            UNNotificationSettings
+    JsName:          UNNotificationSettings
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            alertSetting
+        JsName:          alertSetting
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSettings
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            alertSetting
+          JsName:          alertSetting
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSettings
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNNotificationSetting
+      - Name:            alertStyle
+        JsName:          alertStyle
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSettings
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            alertStyle
+          JsName:          alertStyle
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSettings
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNAlertStyle
+      - Name:            authorizationStatus
+        JsName:          authorizationStatus
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSettings
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            authorizationStatus
+          JsName:          authorizationStatus
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSettings
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNAuthorizationStatus
+      - Name:            badgeSetting
+        JsName:          badgeSetting
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSettings
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            badgeSetting
+          JsName:          badgeSetting
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSettings
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNNotificationSetting
+      - Name:            carPlaySetting
+        JsName:          carPlaySetting
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSettings
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            carPlaySetting
+          JsName:          carPlaySetting
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSettings
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNNotificationSetting
+      - Name:            criticalAlertSetting
+        JsName:          criticalAlertSetting
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSettings
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            criticalAlertSetting
+          JsName:          criticalAlertSetting
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSettings
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNNotificationSetting
+      - Name:            lockScreenSetting
+        JsName:          lockScreenSetting
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSettings
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            lockScreenSetting
+          JsName:          lockScreenSetting
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSettings
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNNotificationSetting
+      - Name:            notificationCenterSetting
+        JsName:          notificationCenterSetting
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSettings
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            notificationCenterSetting
+          JsName:          notificationCenterSetting
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSettings
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNNotificationSetting
+      - Name:            providesAppNotificationSettings
+        JsName:          providesAppNotificationSettings
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSettings
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            providesAppNotificationSettings
+          JsName:          providesAppNotificationSettings
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSettings
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Bool
+      - Name:            showPreviewsSetting
+        JsName:          showPreviewsSetting
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSettings
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    11.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            showPreviewsSetting
+          JsName:          showPreviewsSetting
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSettings
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    11.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNShowPreviewsSetting
+      - Name:            soundSetting
+        JsName:          soundSetting
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSettings
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            soundSetting
+          JsName:          soundSetting
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSettings
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            UNNotificationSetting
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            UNNotificationSound
+    JsName:          UNNotificationSound
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSound.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSound
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   
+      - Name:            'criticalSoundNamed:'
+        JsName:          criticalSoundNamed
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSound.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSound
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+      - Name:            'criticalSoundNamed:withAudioVolume:'
+        JsName:          criticalSoundNamedWithAudioVolume
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSound.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSound
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Float
+      - Name:            'defaultCriticalSoundWithAudioVolume:'
+        JsName:          defaultCriticalSoundWithAudioVolume
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSound.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSound
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Float
+      - Name:            'soundNamed:'
+        JsName:          soundNamed
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSound.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSound
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+    InstanceProperties: []
+    StaticProperties: 
+      - Name:            defaultCriticalSound
+        JsName:          defaultCriticalSound
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSound.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSound
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            defaultCriticalSound
+          JsName:          defaultCriticalSound
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSound.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSound
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          UNNotificationSound
+              WithProtocols:   []
+      - Name:            defaultSound
+        JsName:          defaultSound
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSound.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationSound
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            defaultSound
+          JsName:          defaultSound
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSound.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationSound
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          UNNotificationSound
+              WithProtocols:   []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            UNNotificationTrigger
+    JsName:          UNNotificationTrigger
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationTrigger
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            repeats
+        JsName:          repeats
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationTrigger
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            repeats
+          JsName:          repeats
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationTrigger
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Bool
+    StaticProperties: []
+    Protocols:       
+      - NSCopying
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            UNPushNotificationTrigger
+    JsName:          UNPushNotificationTrigger
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationTrigger
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: []
+    Protocols:       []
+    Base:            UNNotificationTrigger
+  - Name:            UNShowPreviewsSetting
+    JsName:          UNShowPreviewsSetting
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    11.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - UNShowPreviewsSettingAlways: '0'
+      - UNShowPreviewsSettingWhenAuthenticated: '1'
+      - UNShowPreviewsSettingNever: '2'
+    SwiftNameFields: 
+      - Always:          '0'
+      - WhenAuthenticated: '1'
+      - Never:           '2'
+  - Name:            UNShowPreviewsSettingAlways
+    JsName:          UNShowPreviewsSettingAlways
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            UNShowPreviewsSettingNever
+    JsName:          UNShowPreviewsSettingNever
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            UNShowPreviewsSettingWhenAuthenticated
+    JsName:          UNShowPreviewsSettingWhenAuthenticated
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationSettings.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationSettings
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            UNTextInputNotificationAction
+    JsName:          UNTextInputNotificationAction
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationAction
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   
+      - Name:            'actionWithIdentifier:title:options:textInputButtonTitle:textInputPlaceholder:'
+        JsName:          actionWithIdentifierTitleOptionsTextInputButtonTitleTextInputPlaceholder
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationAction
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Enum
+            Name:            UNNotificationActionOptions
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+    InstanceProperties: 
+      - Name:            textInputButtonTitle
+        JsName:          textInputButtonTitle
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationAction
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            textInputButtonTitle
+          JsName:          textInputButtonTitle
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationAction
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            textInputPlaceholder
+        JsName:          textInputPlaceholder
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationAction
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            textInputPlaceholder
+          JsName:          textInputPlaceholder
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationAction.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationAction
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            UNNotificationAction
+  - Name:            UNTextInputNotificationResponse
+    JsName:          UNTextInputNotificationResponse
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationResponse.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationResponse
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            userText
+        JsName:          userText
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationResponse.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationResponse
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            userText
+          JsName:          userText
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationResponse.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationResponse
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            UNNotificationResponse
+  - Name:            UNTimeIntervalNotificationTrigger
+    JsName:          UNTimeIntervalNotificationTrigger
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+    Module:          
+      FullName:        UserNotifications.UNNotificationTrigger
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            nextTriggerDate
+        JsName:          nextTriggerDate
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationTrigger
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Interface
+            JsName:          NSDate
+            WithProtocols:   []
+    StaticMethods:   
+      - Name:            'triggerWithTimeInterval:repeats:'
+        JsName:          triggerWithTimeIntervalRepeats
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationTrigger
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Instancetype
+          - Type:            Double
+          - Type:            Bool
+    InstanceProperties: 
+      - Name:            timeInterval
+        JsName:          timeInterval
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+        Module:          
+          FullName:        UserNotifications.UNNotificationTrigger
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            timeInterval
+          JsName:          timeInterval
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationTrigger.h'
+          Module:          
+            FullName:        UserNotifications.UNNotificationTrigger
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Double
+    StaticProperties: []
+    Protocols:       []
+    Base:            UNNotificationTrigger
+  - Name:            UNUserNotificationCenter
+    JsName:          UNUserNotificationCenter
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'addNotificationRequest:withCompletionHandler:'
+        JsName:          addNotificationRequestWithCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          UNNotificationRequest
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Interface
+                JsName:          NSError
+                WithProtocols:   []
+      - Name:            'getDeliveredNotificationsWithCompletionHandler:'
+        JsName:          getDeliveredNotificationsWithCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Interface
+                JsName:          NSArray
+                TypeParameters:  
+                  - Type:            Interface
+                    JsName:          UNNotification
+                    WithProtocols:   []
+                WithProtocols:   []
+      - Name:            'getNotificationCategoriesWithCompletionHandler:'
+        JsName:          getNotificationCategoriesWithCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Interface
+                JsName:          NSSet
+                TypeParameters:  
+                  - Type:            Interface
+                    JsName:          UNNotificationCategory
+                    WithProtocols:   []
+                WithProtocols:   []
+      - Name:            'getNotificationSettingsWithCompletionHandler:'
+        JsName:          getNotificationSettingsWithCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Interface
+                JsName:          UNNotificationSettings
+                WithProtocols:   []
+      - Name:            'getPendingNotificationRequestsWithCompletionHandler:'
+        JsName:          getPendingNotificationRequestsWithCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Interface
+                JsName:          NSArray
+                TypeParameters:  
+                  - Type:            Interface
+                    JsName:          UNNotificationRequest
+                    WithProtocols:   []
+                WithProtocols:   []
+      - Name:            removeAllDeliveredNotifications
+        JsName:          removeAllDeliveredNotifications
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+      - Name:            removeAllPendingNotificationRequests
+        JsName:          removeAllPendingNotificationRequests
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+      - Name:            'removeDeliveredNotificationsWithIdentifiers:'
+        JsName:          removeDeliveredNotificationsWithIdentifiers
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          NSString
+                WithProtocols:   []
+            WithProtocols:   []
+      - Name:            'removePendingNotificationRequestsWithIdentifiers:'
+        JsName:          removePendingNotificationRequestsWithIdentifiers
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          NSString
+                WithProtocols:   []
+            WithProtocols:   []
+      - Name:            'requestAuthorizationWithOptions:completionHandler:'
+        JsName:          requestAuthorizationWithOptionsCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Enum
+            Name:            UNAuthorizationOptions
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Bool
+              - Type:            Interface
+                JsName:          NSError
+                WithProtocols:   []
+      - Name:            'setNotificationCategories:'
+        JsName:          setNotificationCategories
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSSet
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          UNNotificationCategory
+                WithProtocols:   []
+            WithProtocols:   []
+    StaticMethods:   
+      - Name:            currentNotificationCenter
+        JsName:          currentNotificationCenter
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Interface
+            JsName:          UNUserNotificationCenter
+            WithProtocols:   []
+    InstanceProperties: 
+      - Name:            delegate
+        JsName:          delegate
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            delegate
+          JsName:          delegate
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+          Module:          
+            FullName:        UserNotifications.UNUserNotificationCenter
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Id
+              WithProtocols:   
+                - UNUserNotificationCenterDelegate
+        Setter:          
+          Name:            'setDelegate:'
+          JsName:          setDelegate
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+          Module:          
+            FullName:        UserNotifications.UNUserNotificationCenter
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Id
+              WithProtocols:   
+                - UNUserNotificationCenterDelegate
+      - Name:            supportsContentExtensions
+        JsName:          supportsContentExtensions
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            supportsContentExtensions
+          JsName:          supportsContentExtensions
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+          Module:          
+            FullName:        UserNotifications.UNUserNotificationCenter
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Bool
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            UNUserNotificationCenterDelegate
+    JsName:          UNUserNotificationCenterDelegate
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+    Module:          
+      FullName:        UserNotifications.UNUserNotificationCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    10.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Protocol
+    InstanceMethods: 
+      - Name:            'userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:'
+        JsName:          userNotificationCenterDidReceiveNotificationResponseWithCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    10.0
+        Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          UNUserNotificationCenter
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          UNNotificationResponse
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+      - Name:            'userNotificationCenter:openSettingsForNotification:'
+        JsName:          userNotificationCenterOpenSettingsForNotification
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          UNUserNotificationCenter
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          UNNotification
+            WithProtocols:   []
+      - Name:            'userNotificationCenter:willPresentNotification:withCompletionHandler:'
+        JsName:          userNotificationCenterWillPresentNotificationWithCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h'
+        Module:          
+          FullName:        UserNotifications.UNUserNotificationCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    10.0
+        Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          UNUserNotificationCenter
+            WithProtocols:   []
+          - Type:            Interface
+            JsName:          UNNotification
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Enum
+                Name:            UNNotificationPresentationOptions
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: []
+    Protocols:       
+      - NSObjectProtocol
+...

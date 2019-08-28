@@ -1,0 +1,1691 @@
+---
+Module:          
+  FullName:        CoreTelephony
+  IsPartOfFramework: true
+  IsSystemModule:  true
+  Libraries:       
+    - Library:         CoreTelephony
+      IsFramework:     true
+Items:           
+  - Name:            CTCall
+    JsName:          CTCall
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCall.h'
+    Module:          
+      FullName:        CoreTelephony.CTCall
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    4.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            callID
+        JsName:          callID
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCall.h'
+        Module:          
+          FullName:        CoreTelephony.CTCall
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    4.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            callID
+          JsName:          callID
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCall.h'
+          Module:          
+            FullName:        CoreTelephony.CTCall
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            callState
+        JsName:          callState
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCall.h'
+        Module:          
+          FullName:        CoreTelephony.CTCall
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    4.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            callState
+          JsName:          callState
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCall.h'
+          Module:          
+            FullName:        CoreTelephony.CTCall
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            CTCallCenter
+    JsName:          CTCallCenter
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCallCenter.h'
+    Module:          
+      FullName:        CoreTelephony.CTCallCenter
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    4.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            callEventHandler
+        JsName:          callEventHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCallCenter.h'
+        Module:          
+          FullName:        CoreTelephony.CTCallCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    4.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            callEventHandler
+          JsName:          callEventHandler
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCallCenter.h'
+          Module:          
+            FullName:        CoreTelephony.CTCallCenter
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Block
+              Signature:       
+                - Type:            Void
+                - Type:            Interface
+                  JsName:          CTCall
+                  WithProtocols:   []
+        Setter:          
+          Name:            'setCallEventHandler:'
+          JsName:          setCallEventHandler
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCallCenter.h'
+          Module:          
+            FullName:        CoreTelephony.CTCallCenter
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Block
+              Signature:       
+                - Type:            Void
+                - Type:            Interface
+                  JsName:          CTCall
+                  WithProtocols:   []
+      - Name:            currentCalls
+        JsName:          currentCalls
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCallCenter.h'
+        Module:          
+          FullName:        CoreTelephony.CTCallCenter
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    4.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            currentCalls
+          JsName:          currentCalls
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCallCenter.h'
+          Module:          
+            FullName:        CoreTelephony.CTCallCenter
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSSet
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          CTCall
+                  WithProtocols:   []
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            CTCallStateConnected
+    JsName:          CTCallStateConnected
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCall.h'
+    Module:          
+      FullName:        CoreTelephony.CTCall
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    4.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTCallStateDialing
+    JsName:          CTCallStateDialing
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCall.h'
+    Module:          
+      FullName:        CoreTelephony.CTCall
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    4.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTCallStateDisconnected
+    JsName:          CTCallStateDisconnected
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCall.h'
+    Module:          
+      FullName:        CoreTelephony.CTCall
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    4.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTCallStateIncoming
+    JsName:          CTCallStateIncoming
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCall.h'
+    Module:          
+      FullName:        CoreTelephony.CTCall
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    4.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTCarrier
+    JsName:          CTCarrier
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCarrier.h'
+    Module:          
+      FullName:        CoreTelephony.CTCarrier
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    4.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            allowsVOIP
+        JsName:          allowsVOIP
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCarrier.h'
+        Module:          
+          FullName:        CoreTelephony.CTCarrier
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    4.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            allowsVOIP
+          JsName:          allowsVOIP
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCarrier.h'
+          Module:          
+            FullName:        CoreTelephony.CTCarrier
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Bool
+      - Name:            carrierName
+        JsName:          carrierName
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCarrier.h'
+        Module:          
+          FullName:        CoreTelephony.CTCarrier
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    4.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            carrierName
+          JsName:          carrierName
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCarrier.h'
+          Module:          
+            FullName:        CoreTelephony.CTCarrier
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            isoCountryCode
+        JsName:          isoCountryCode
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCarrier.h'
+        Module:          
+          FullName:        CoreTelephony.CTCarrier
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    4.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            isoCountryCode
+          JsName:          isoCountryCode
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCarrier.h'
+          Module:          
+            FullName:        CoreTelephony.CTCarrier
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            mobileCountryCode
+        JsName:          mobileCountryCode
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCarrier.h'
+        Module:          
+          FullName:        CoreTelephony.CTCarrier
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    4.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            mobileCountryCode
+          JsName:          mobileCountryCode
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCarrier.h'
+          Module:          
+            FullName:        CoreTelephony.CTCarrier
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            mobileNetworkCode
+        JsName:          mobileNetworkCode
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCarrier.h'
+        Module:          
+          FullName:        CoreTelephony.CTCarrier
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    4.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            mobileNetworkCode
+          JsName:          mobileNetworkCode
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCarrier.h'
+          Module:          
+            FullName:        CoreTelephony.CTCarrier
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            CTCellularData
+    JsName:          CTCellularData
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularData.h'
+    Module:          
+      FullName:        CoreTelephony.CTCellularData
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    9.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            cellularDataRestrictionDidUpdateNotifier
+        JsName:          cellularDataRestrictionDidUpdateNotifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularData.h'
+        Module:          
+          FullName:        CoreTelephony.CTCellularData
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    9.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            cellularDataRestrictionDidUpdateNotifier
+          JsName:          cellularDataRestrictionDidUpdateNotifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularData.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularData
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    9.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Block
+              Signature:       
+                - Type:            Void
+                - Type:            Enum
+                  Name:            CTCellularDataRestrictedState
+        Setter:          
+          Name:            'setCellularDataRestrictionDidUpdateNotifier:'
+          JsName:          setCellularDataRestrictionDidUpdateNotifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularData.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularData
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    9.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Block
+              Signature:       
+                - Type:            Void
+                - Type:            Enum
+                  Name:            CTCellularDataRestrictedState
+      - Name:            restrictedState
+        JsName:          restrictedState
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularData.h'
+        Module:          
+          FullName:        CoreTelephony.CTCellularData
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    9.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            restrictedState
+          JsName:          restrictedState
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularData.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularData
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    9.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Enum
+              Name:            CTCellularDataRestrictedState
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            CTCellularDataRestrictedState
+    JsName:          CTCellularDataRestrictedState
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularData.h'
+    Module:          
+      FullName:        CoreTelephony.CTCellularData
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - kCTCellularDataRestrictedStateUnknown: '0'
+      - kCTCellularDataRestricted: '1'
+      - kCTCellularDataNotRestricted: '2'
+    SwiftNameFields: []
+  - Name:            CTCellularPlanProvisioning
+    JsName:          CTCellularPlanProvisioning
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioning.h'
+    Module:          
+      FullName:        CoreTelephony.CTCellularPlanProvisioning
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'addPlanWith:completionHandler:'
+        JsName:          addPlanWithCompletionHandler
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioning.h'
+        Module:          
+          FullName:        CoreTelephony.CTCellularPlanProvisioning
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          CTCellularPlanProvisioningRequest
+            WithProtocols:   []
+          - Type:            Block
+            Signature:       
+              - Type:            Void
+              - Type:            Enum
+                Name:            CTCellularPlanProvisioningAddPlanResult
+      - Name:            supportsCellularPlan
+        JsName:          supportsCellularPlan
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioning.h'
+        Module:          
+          FullName:        CoreTelephony.CTCellularPlanProvisioning
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Bool
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            CTCellularPlanProvisioningAddPlanResult
+    JsName:          CTCellularPlanProvisioningAddPlanResult
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+    Module:          
+      FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - CTCellularPlanProvisioningAddPlanResultUnknown: '0'
+      - CTCellularPlanProvisioningAddPlanResultFail: '1'
+      - CTCellularPlanProvisioningAddPlanResultSuccess: '2'
+    SwiftNameFields: 
+      - Unknown:         '0'
+      - Fail:            '1'
+      - Success:         '2'
+  - Name:            CTCellularPlanProvisioningAddPlanResultFail
+    JsName:          CTCellularPlanProvisioningAddPlanResultFail
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+    Module:          
+      FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            CTCellularPlanProvisioningAddPlanResultSuccess
+    JsName:          CTCellularPlanProvisioningAddPlanResultSuccess
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+    Module:          
+      FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            CTCellularPlanProvisioningAddPlanResultUnknown
+    JsName:          CTCellularPlanProvisioningAddPlanResultUnknown
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+    Module:          
+      FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            CTCellularPlanProvisioningRequest
+    JsName:          CTCellularPlanProvisioningRequest
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+    Module:          
+      FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            address
+        JsName:          address
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+        Module:          
+          FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            address
+          JsName:          address
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setAddress:'
+          JsName:          setAddress
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            confirmationCode
+        JsName:          confirmationCode
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+        Module:          
+          FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            confirmationCode
+          JsName:          confirmationCode
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setConfirmationCode:'
+          JsName:          setConfirmationCode
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            EID
+        JsName:          EID
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+        Module:          
+          FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            EID
+          JsName:          EID
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setEID:'
+          JsName:          setEID
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            ICCID
+        JsName:          ICCID
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+        Module:          
+          FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            ICCID
+          JsName:          ICCID
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setICCID:'
+          JsName:          setICCID
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            matchingID
+        JsName:          matchingID
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+        Module:          
+          FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            matchingID
+          JsName:          matchingID
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setMatchingID:'
+          JsName:          setMatchingID
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            OID
+        JsName:          OID
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+        Module:          
+          FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            OID
+          JsName:          OID
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+        Setter:          
+          Name:            'setOID:'
+          JsName:          setOID
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularPlanProvisioningRequest.h'
+          Module:          
+            FullName:        CoreTelephony.CTCellularPlanProvisioningRequest
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       
+      - NSSecureCoding
+    Base:            NSObject
+  - Name:            ''
+    JsName:          CTError
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CoreTelephonyDefines.h'
+    Module:          
+      FullName:        CoreTelephony.CoreTelephonyDefines
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Struct
+    Fields:          
+      - Name:            domain
+        Signature:       
+          Type:            Int
+      - Name:            error
+        Signature:       
+          Type:            Int
+  - Name:            CTRadioAccessTechnologyCDMA1x
+    JsName:          CTRadioAccessTechnologyCDMA1x
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTRadioAccessTechnologyCDMAEVDORev0
+    JsName:          CTRadioAccessTechnologyCDMAEVDORev0
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTRadioAccessTechnologyCDMAEVDORevA
+    JsName:          CTRadioAccessTechnologyCDMAEVDORevA
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTRadioAccessTechnologyCDMAEVDORevB
+    JsName:          CTRadioAccessTechnologyCDMAEVDORevB
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTRadioAccessTechnologyDidChangeNotification
+    JsName:          CTRadioAccessTechnologyDidChangeNotification
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTRadioAccessTechnologyEdge
+    JsName:          CTRadioAccessTechnologyEdge
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTRadioAccessTechnologyGPRS
+    JsName:          CTRadioAccessTechnologyGPRS
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTRadioAccessTechnologyHSDPA
+    JsName:          CTRadioAccessTechnologyHSDPA
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTRadioAccessTechnologyHSUPA
+    JsName:          CTRadioAccessTechnologyHSUPA
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTRadioAccessTechnologyLTE
+    JsName:          CTRadioAccessTechnologyLTE
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTRadioAccessTechnologyWCDMA
+    JsName:          CTRadioAccessTechnologyWCDMA
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTRadioAccessTechnologyeHRPD
+    JsName:          CTRadioAccessTechnologyeHRPD
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTServiceRadioAccessTechnologyDidChangeNotification
+    JsName:          CTServiceRadioAccessTechnologyDidChangeNotification
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    12.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTSubscriber
+    JsName:          CTSubscriber
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriber.h'
+    Module:          
+      FullName:        CoreTelephony.CTSubscriber
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            carrierToken
+        JsName:          carrierToken
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriber.h'
+        Module:          
+          FullName:        CoreTelephony.CTSubscriber
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    7.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            carrierToken
+          JsName:          carrierToken
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriber.h'
+          Module:          
+            FullName:        CoreTelephony.CTSubscriber
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    7.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSData
+              WithProtocols:   []
+      - Name:            delegate
+        JsName:          delegate
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriber.h'
+        Module:          
+          FullName:        CoreTelephony.CTSubscriber
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.1
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            delegate
+          JsName:          delegate
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriber.h'
+          Module:          
+            FullName:        CoreTelephony.CTSubscriber
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.1
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Id
+              WithProtocols:   
+                - CTSubscriberDelegate
+        Setter:          
+          Name:            'setDelegate:'
+          JsName:          setDelegate
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriber.h'
+          Module:          
+            FullName:        CoreTelephony.CTSubscriber
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.1
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Id
+              WithProtocols:   
+                - CTSubscriberDelegate
+      - Name:            identifier
+        JsName:          identifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriber.h'
+        Module:          
+          FullName:        CoreTelephony.CTSubscriber
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.1
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            identifier
+          JsName:          identifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriber.h'
+          Module:          
+            FullName:        CoreTelephony.CTSubscriber
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.1
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            CTSubscriberDelegate
+    JsName:          CTSubscriberDelegate
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriber.h'
+    Module:          
+      FullName:        CoreTelephony.CTSubscriber
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Protocol
+    InstanceMethods: 
+      - Name:            'subscriberTokenRefreshed:'
+        JsName:          subscriberTokenRefreshed
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriber.h'
+        Module:          
+          FullName:        CoreTelephony.CTSubscriber
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          CTSubscriber
+            WithProtocols:   []
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: []
+    Protocols:       []
+  - Name:            CTSubscriberInfo
+    JsName:          CTSubscriberInfo
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriberInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTSubscriberInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    6.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   
+      - Name:            subscriber
+        JsName:          subscriber
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriberInfo.h'
+        Module:          
+          FullName:        CoreTelephony.CTSubscriberInfo
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    6.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Interface
+            JsName:          CTSubscriber
+            WithProtocols:   []
+      - Name:            subscribers
+        JsName:          subscribers
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriberInfo.h'
+        Module:          
+          FullName:        CoreTelephony.CTSubscriberInfo
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.1
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          CTSubscriber
+                WithProtocols:   []
+            WithProtocols:   []
+    InstanceProperties: []
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            CTSubscriberTokenRefreshed
+    JsName:          CTSubscriberTokenRefreshed
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTSubscriber.h'
+    Module:          
+      FullName:        CoreTelephony.CTSubscriber
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    7.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   []
+  - Name:            CTTelephonyNetworkInfo
+    JsName:          CTTelephonyNetworkInfo
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    4.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: []
+    StaticMethods:   []
+    InstanceProperties: 
+      - Name:            currentRadioAccessTechnology
+        JsName:          currentRadioAccessTechnology
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+        Module:          
+          FullName:        CoreTelephony.CTTelephonyNetworkInfo
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    7.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            currentRadioAccessTechnology
+          JsName:          currentRadioAccessTechnology
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+          Module:          
+            FullName:        CoreTelephony.CTTelephonyNetworkInfo
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    7.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            dataServiceIdentifier
+        JsName:          dataServiceIdentifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+        Module:          
+          FullName:        CoreTelephony.CTTelephonyNetworkInfo
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    13.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            dataServiceIdentifier
+          JsName:          dataServiceIdentifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+          Module:          
+            FullName:        CoreTelephony.CTTelephonyNetworkInfo
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    13.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   []
+      - Name:            delegate
+        JsName:          delegate
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+        Module:          
+          FullName:        CoreTelephony.CTTelephonyNetworkInfo
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    13.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            delegate
+          JsName:          delegate
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+          Module:          
+            FullName:        CoreTelephony.CTTelephonyNetworkInfo
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    13.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Id
+              WithProtocols:   
+                - CTTelephonyNetworkInfoDelegate
+        Setter:          
+          Name:            'setDelegate:'
+          JsName:          setDelegate
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+          Module:          
+            FullName:        CoreTelephony.CTTelephonyNetworkInfo
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    13.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Id
+              WithProtocols:   
+                - CTTelephonyNetworkInfoDelegate
+      - Name:            serviceCurrentRadioAccessTechnology
+        JsName:          serviceCurrentRadioAccessTechnology
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+        Module:          
+          FullName:        CoreTelephony.CTTelephonyNetworkInfo
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            serviceCurrentRadioAccessTechnology
+          JsName:          serviceCurrentRadioAccessTechnology
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+          Module:          
+            FullName:        CoreTelephony.CTTelephonyNetworkInfo
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSDictionary
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          NSString
+                  WithProtocols:   []
+                - Type:            Interface
+                  JsName:          NSString
+                  WithProtocols:   []
+              WithProtocols:   []
+      - Name:            serviceSubscriberCellularProviders
+        JsName:          serviceSubscriberCellularProviders
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+        Module:          
+          FullName:        CoreTelephony.CTTelephonyNetworkInfo
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            serviceSubscriberCellularProviders
+          JsName:          serviceSubscriberCellularProviders
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+          Module:          
+            FullName:        CoreTelephony.CTTelephonyNetworkInfo
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSDictionary
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          NSString
+                  WithProtocols:   []
+                - Type:            Interface
+                  JsName:          CTCarrier
+                  WithProtocols:   []
+              WithProtocols:   []
+      - Name:            serviceSubscriberCellularProvidersDidUpdateNotifier
+        JsName:          serviceSubscriberCellularProvidersDidUpdateNotifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+        Module:          
+          FullName:        CoreTelephony.CTTelephonyNetworkInfo
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    12.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            serviceSubscriberCellularProvidersDidUpdateNotifier
+          JsName:          serviceSubscriberCellularProvidersDidUpdateNotifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+          Module:          
+            FullName:        CoreTelephony.CTTelephonyNetworkInfo
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Block
+              Signature:       
+                - Type:            Void
+                - Type:            Interface
+                  JsName:          NSString
+                  WithProtocols:   []
+        Setter:          
+          Name:            'setServiceSubscriberCellularProvidersDidUpdateNotifier:'
+          JsName:          setServiceSubscriberCellularProvidersDidUpdateNotifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+          Module:          
+            FullName:        CoreTelephony.CTTelephonyNetworkInfo
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    12.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Block
+              Signature:       
+                - Type:            Void
+                - Type:            Interface
+                  JsName:          NSString
+                  WithProtocols:   []
+      - Name:            subscriberCellularProvider
+        JsName:          subscriberCellularProvider
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+        Module:          
+          FullName:        CoreTelephony.CTTelephonyNetworkInfo
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    4.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            subscriberCellularProvider
+          JsName:          subscriberCellularProvider
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+          Module:          
+            FullName:        CoreTelephony.CTTelephonyNetworkInfo
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          CTCarrier
+              WithProtocols:   []
+      - Name:            subscriberCellularProviderDidUpdateNotifier
+        JsName:          subscriberCellularProviderDidUpdateNotifier
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+        Module:          
+          FullName:        CoreTelephony.CTTelephonyNetworkInfo
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        IntroducedIn:    4.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            subscriberCellularProviderDidUpdateNotifier
+          JsName:          subscriberCellularProviderDidUpdateNotifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+          Module:          
+            FullName:        CoreTelephony.CTTelephonyNetworkInfo
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Block
+              Signature:       
+                - Type:            Void
+                - Type:            Interface
+                  JsName:          CTCarrier
+                  WithProtocols:   []
+        Setter:          
+          Name:            'setSubscriberCellularProviderDidUpdateNotifier:'
+          JsName:          setSubscriberCellularProviderDidUpdateNotifier
+          Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+          Module:          
+            FullName:        CoreTelephony.CTTelephonyNetworkInfo
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       []
+          IntroducedIn:    4.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Block
+              Signature:       
+                - Type:            Void
+                - Type:            Interface
+                  JsName:          CTCarrier
+                  WithProtocols:   []
+    StaticProperties: []
+    Protocols:       []
+    Base:            NSObject
+  - Name:            CTTelephonyNetworkInfoDelegate
+    JsName:          CTTelephonyNetworkInfoDelegate
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+    Module:          
+      FullName:        CoreTelephony.CTTelephonyNetworkInfo
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    IntroducedIn:    13.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Protocol
+    InstanceMethods: 
+      - Name:            'dataServiceIdentifierDidChange:'
+        JsName:          dataServiceIdentifierDidChange
+        Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTTelephonyNetworkInfo.h'
+        Module:          
+          FullName:        CoreTelephony.CTTelephonyNetworkInfo
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       []
+        Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   []
+    StaticMethods:   []
+    InstanceProperties: []
+    StaticProperties: []
+    Protocols:       
+      - NSObjectProtocol
+  - Name:            kCTCellularDataNotRestricted
+    JsName:          kCTCellularDataNotRestricted
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularData.h'
+    Module:          
+      FullName:        CoreTelephony.CTCellularData
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            kCTCellularDataRestricted
+    JsName:          kCTCellularDataRestricted
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularData.h'
+    Module:          
+      FullName:        CoreTelephony.CTCellularData
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            kCTCellularDataRestrictedStateUnknown
+    JsName:          kCTCellularDataRestrictedStateUnknown
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CTCellularData.h'
+    Module:          
+      FullName:        CoreTelephony.CTCellularData
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            kCTErrorDomainMach
+    JsName:          kCTErrorDomainMach
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CoreTelephonyDefines.h'
+    Module:          
+      FullName:        CoreTelephony.CoreTelephonyDefines
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            kCTErrorDomainNoError
+    JsName:          kCTErrorDomainNoError
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CoreTelephonyDefines.h'
+    Module:          
+      FullName:        CoreTelephony.CoreTelephonyDefines
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            kCTErrorDomainPOSIX
+    JsName:          kCTErrorDomainPOSIX
+    Filename:        '.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers/CoreTelephonyDefines.h'
+    Module:          
+      FullName:        CoreTelephony.CoreTelephonyDefines
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       []
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+...
