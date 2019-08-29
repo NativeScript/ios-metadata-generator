@@ -28,8 +28,8 @@ function GenerateMetadata() {
         -isysroot $SYSROOT -arch x86_64 -mios-simulator-version-min=9.0 -std=gnu99 -DDEBUG=1 2>&1 | \
         tee "$(dirname $OUTDIR)/verbose.out" | grep -v "verbose: "
 
-        # Unify paths to SDK
-        find $OUTDIR -name \*.yaml -type f -exec sed -i "" -e "s/\/.*\/SDKs/...\/SDKs/g" {} \;
+        # Unify paths to SDK stripping quotes
+        find $OUTDIR -name \*.yaml -type f -exec perl -pi -e "s|(: *)['\"]?.*(/SDKs/.*?)['\"]? *$|\1/...\2|g" {} \;
     )
 }
 
