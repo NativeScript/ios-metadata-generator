@@ -14,7 +14,7 @@ Items:
       FullName:        AVKit.AVPlaybackRouteSelecting
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    13.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -33,7 +33,7 @@ Items:
       FullName:        AVKit.AVPlaybackRouteSelecting
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -44,7 +44,7 @@ Items:
       FullName:        AVKit.AVPlaybackRouteSelecting
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -55,7 +55,7 @@ Items:
       FullName:        AVKit.AVPlaybackRouteSelecting
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -66,7 +66,7 @@ Items:
       FullName:        AVKit.AVError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -83,14 +83,14 @@ Items:
       FullName:        AVKit.AVError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            AVKitErrorPictureInPictureStartFailed
     JsName:          AVKitErrorPictureInPictureStartFailed
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVError.h
@@ -98,7 +98,7 @@ Items:
       FullName:        AVKit.AVError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1001'
@@ -109,7 +109,7 @@ Items:
       FullName:        AVKit.AVError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1000'
@@ -120,7 +120,7 @@ Items:
       FullName:        AVKit.AVPictureInPictureController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -132,14 +132,14 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          AVPlayerLayer
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            startPictureInPicture
         JsName:          startPictureInPicture
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPictureInPictureController.h
@@ -147,7 +147,7 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -159,7 +159,7 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -172,7 +172,7 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -184,16 +184,16 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          UIImage
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          UITraitCollection
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'pictureInPictureButtonStopImageCompatibleWithTraitCollection:'
         JsName:          pictureInPictureButtonStopImageCompatibleWithTraitCollection
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPictureInPictureController.h
@@ -201,16 +201,16 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          UIImage
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          UITraitCollection
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            delegate
         JsName:          delegate
@@ -219,7 +219,7 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -230,7 +230,7 @@ Items:
             FullName:        AVKit.AVPictureInPictureController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -245,7 +245,7 @@ Items:
             FullName:        AVKit.AVPictureInPictureController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -260,7 +260,7 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -271,7 +271,7 @@ Items:
             FullName:        AVKit.AVPictureInPictureController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -283,7 +283,7 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -294,7 +294,7 @@ Items:
             FullName:        AVKit.AVPictureInPictureController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -306,7 +306,7 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -317,7 +317,7 @@ Items:
             FullName:        AVKit.AVPictureInPictureController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -329,7 +329,7 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -340,13 +340,13 @@ Items:
             FullName:        AVKit.AVPictureInPictureController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          AVPlayerLayer
-              WithProtocols:   []
+              WithProtocols:   
     StaticProperties: 
       - Name:            pictureInPictureButtonStartImage
         JsName:          pictureInPictureButtonStartImage
@@ -355,7 +355,7 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    13.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -367,14 +367,14 @@ Items:
             FullName:        AVKit.AVPictureInPictureController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    13.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            pictureInPictureButtonStopImage
         JsName:          pictureInPictureButtonStopImage
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPictureInPictureController.h
@@ -382,7 +382,7 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    13.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -394,15 +394,15 @@ Items:
             FullName:        AVKit.AVPictureInPictureController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    13.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
-    Protocols:       []
+              WithProtocols:   
+    Protocols:       
     Base:            NSObject
   - Name:            AVPictureInPictureControllerDelegate
     JsName:          AVPictureInPictureControllerDelegate
@@ -411,7 +411,7 @@ Items:
       FullName:        AVKit.AVPictureInPictureController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -423,14 +423,14 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPictureInPictureController
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'pictureInPictureControllerDidStopPictureInPicture:'
         JsName:          pictureInPictureControllerDidStopPictureInPicture
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPictureInPictureController.h
@@ -438,14 +438,14 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPictureInPictureController
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'pictureInPictureController:failedToStartPictureInPictureWithError:'
         JsName:          pictureInPictureControllerFailedToStartPictureInPictureWithError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPictureInPictureController.h
@@ -453,17 +453,17 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPictureInPictureController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'pictureInPictureController:restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:'
         JsName:          pictureInPictureControllerRestoreUserInterfaceForPictureInPictureStopWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPictureInPictureController.h
@@ -471,14 +471,14 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPictureInPictureController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -490,14 +490,14 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPictureInPictureController
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'pictureInPictureControllerWillStopPictureInPicture:'
         JsName:          pictureInPictureControllerWillStopPictureInPicture
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPictureInPictureController.h
@@ -505,17 +505,17 @@ Items:
           FullName:        AVKit.AVPictureInPictureController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPictureInPictureController
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            AVPlayerViewController
@@ -525,7 +525,7 @@ Items:
       FullName:        AVKit.AVPlayerViewController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -537,7 +537,7 @@ Items:
           FullName:        iAd.AVPlayerViewController_iAdPreroll
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -550,7 +550,7 @@ Items:
           FullName:        iAd.AVPlayerViewController_iAdPreroll
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -561,7 +561,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
     StaticMethods:   
       - Name:            preparePrerollAds
         JsName:          preparePrerollAds
@@ -570,7 +570,7 @@ Items:
           FullName:        iAd.AVPlayerViewController_iAdPreroll
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -584,7 +584,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -596,7 +596,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -610,7 +610,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -624,7 +624,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -635,13 +635,13 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIView
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            delegate
         JsName:          delegate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPlayerViewController.h
@@ -649,7 +649,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -661,7 +661,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -677,7 +677,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -693,7 +693,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -705,7 +705,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -719,7 +719,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -733,7 +733,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -745,7 +745,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -759,7 +759,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -773,7 +773,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -785,7 +785,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -795,10 +795,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Id
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setPixelBufferAttributes:'
           JsName:          setPixelBufferAttributes
@@ -807,7 +807,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -818,10 +818,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Id
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            player
         JsName:          player
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPlayerViewController.h
@@ -829,7 +829,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -840,13 +840,13 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          AVPlayer
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setPlayer:'
           JsName:          setPlayer
@@ -855,14 +855,14 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          AVPlayer
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            readyForDisplay
         JsName:          readyForDisplay
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPlayerViewController.h
@@ -870,7 +870,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -881,7 +881,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -893,7 +893,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -904,7 +904,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -917,7 +917,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -930,7 +930,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -942,7 +942,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    10.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -956,7 +956,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    10.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -970,7 +970,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -981,7 +981,7 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -995,7 +995,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1006,13 +1006,13 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setVideoGravity:'
           JsName:          setVideoGravity
@@ -1021,16 +1021,16 @@ Items:
             FullName:        AVKit.AVPlayerViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            UIViewController
   - Name:            AVPlayerViewControllerDelegate
     JsName:          AVPlayerViewControllerDelegate
@@ -1039,7 +1039,7 @@ Items:
       FullName:        AVKit.AVPlayerViewController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
     InstanceMethods: 
@@ -1050,14 +1050,14 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPlayerViewController
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'playerViewControllerDidStopPictureInPicture:'
         JsName:          playerViewControllerDidStopPictureInPicture
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPlayerViewController.h
@@ -1065,14 +1065,14 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPlayerViewController
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'playerViewController:failedToStartPictureInPictureWithError:'
         JsName:          playerViewControllerFailedToStartPictureInPictureWithError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPlayerViewController.h
@@ -1080,17 +1080,17 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPlayerViewController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'playerViewController:restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:'
         JsName:          playerViewControllerRestoreUserInterfaceForPictureInPictureStopWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPlayerViewController.h
@@ -1098,14 +1098,14 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPlayerViewController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -1117,14 +1117,14 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          AVPlayerViewController
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'playerViewController:willBeginFullScreenPresentationWithAnimationCoordinator:'
         JsName:          playerViewControllerWillBeginFullScreenPresentationWithAnimationCoordinator
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPlayerViewController.h
@@ -1132,7 +1132,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    12.0
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
@@ -1140,7 +1140,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          AVPlayerViewController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
             WithProtocols:   
               - UIViewControllerTransitionCoordinator
@@ -1151,7 +1151,7 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    12.0
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
@@ -1159,7 +1159,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          AVPlayerViewController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
             WithProtocols:   
               - UIViewControllerTransitionCoordinator
@@ -1170,14 +1170,14 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPlayerViewController
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'playerViewControllerWillStopPictureInPicture:'
         JsName:          playerViewControllerWillStopPictureInPicture
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPlayerViewController.h
@@ -1185,17 +1185,17 @@ Items:
           FullName:        AVKit.AVPlayerViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVPlayerViewController
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            AVRoutePickerView
@@ -1205,12 +1205,12 @@ Items:
       FullName:        AVKit.AVRoutePickerView
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            activeTintColor
         JsName:          activeTintColor
@@ -1219,7 +1219,7 @@ Items:
           FullName:        AVKit.AVRoutePickerView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1230,13 +1230,13 @@ Items:
             FullName:        AVKit.AVRoutePickerView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIColor
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setActiveTintColor:'
           JsName:          setActiveTintColor
@@ -1245,14 +1245,14 @@ Items:
             FullName:        AVKit.AVRoutePickerView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          UIColor
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            delegate
         JsName:          delegate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVRoutePickerView.h
@@ -1260,7 +1260,7 @@ Items:
           FullName:        AVKit.AVRoutePickerView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1271,7 +1271,7 @@ Items:
             FullName:        AVKit.AVRoutePickerView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1286,7 +1286,7 @@ Items:
             FullName:        AVKit.AVRoutePickerView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1301,7 +1301,7 @@ Items:
           FullName:        AVKit.AVRoutePickerView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    13.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1313,7 +1313,7 @@ Items:
             FullName:        AVKit.AVRoutePickerView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    13.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1327,15 +1327,15 @@ Items:
             FullName:        AVKit.AVRoutePickerView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    13.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Bool
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            UIView
   - Name:            AVRoutePickerViewButtonStyleCustom
     JsName:          AVRoutePickerViewButtonStyleCustom
@@ -1344,7 +1344,7 @@ Items:
       FullName:        AVKit.AVRoutePickerView
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -1355,7 +1355,7 @@ Items:
       FullName:        AVKit.AVRoutePickerView
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -1366,7 +1366,7 @@ Items:
       FullName:        AVKit.AVRoutePickerView
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -1377,7 +1377,7 @@ Items:
       FullName:        AVKit.AVRoutePickerView
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
     InstanceMethods: 
@@ -1388,14 +1388,14 @@ Items:
           FullName:        AVKit.AVRoutePickerView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVRoutePickerView
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'routePickerViewWillBeginPresentingRoutes:'
         JsName:          routePickerViewWillBeginPresentingRoutes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVRoutePickerView.h
@@ -1403,17 +1403,17 @@ Items:
           FullName:        AVKit.AVRoutePickerView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          AVRoutePickerView
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
 ...

@@ -14,7 +14,7 @@ Items:
       FullName:        SafariServices.SFAuthenticationSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -29,7 +29,7 @@ Items:
       FullName:        SafariServices.SFAuthenticationSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -40,14 +40,14 @@ Items:
       FullName:        SafariServices.SFAuthenticationSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            SFAuthenticationSession
     JsName:          SFAuthenticationSession
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFAuthenticationSession.h
@@ -55,7 +55,7 @@ Items:
       FullName:        SafariServices.SFAuthenticationSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -67,7 +67,7 @@ Items:
           FullName:        SafariServices.SFAuthenticationSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -79,26 +79,26 @@ Items:
           FullName:        SafariServices.SFAuthenticationSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSURL
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            start
         JsName:          start
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFAuthenticationSession.h
@@ -106,15 +106,15 @@ Items:
           FullName:        SafariServices.SFAuthenticationSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            SFContentBlockerErrorCode
     JsName:          SFContentBlockerErrorCode
@@ -123,7 +123,7 @@ Items:
       FullName:        SafariServices.SFContentBlockerManager
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -142,14 +142,14 @@ Items:
       FullName:        SafariServices.SFContentBlockerManager
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            SFContentBlockerLoadingInterrupted
     JsName:          SFContentBlockerLoadingInterrupted
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFContentBlockerManager.h
@@ -157,7 +157,7 @@ Items:
       FullName:        SafariServices.SFContentBlockerManager
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -169,11 +169,11 @@ Items:
       FullName:        SafariServices.SFContentBlockerManager
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
+    InstanceMethods: 
     StaticMethods:   
       - Name:            'getStateOfContentBlockerWithIdentifier:completionHandler:'
         JsName:          getStateOfContentBlockerWithIdentifierCompletionHandler
@@ -182,7 +182,7 @@ Items:
           FullName:        SafariServices.SFContentBlockerManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -190,16 +190,16 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          SFContentBlockerState
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'reloadContentBlockerWithIdentifier:completionHandler:'
         JsName:          reloadContentBlockerWithIdentifierCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFContentBlockerManager.h
@@ -207,23 +207,23 @@ Items:
           FullName:        SafariServices.SFContentBlockerManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+                WithProtocols:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            SFContentBlockerNoAttachmentFound
     JsName:          SFContentBlockerNoAttachmentFound
@@ -232,7 +232,7 @@ Items:
       FullName:        SafariServices.SFContentBlockerManager
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -244,7 +244,7 @@ Items:
       FullName:        SafariServices.SFContentBlockerManager
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -256,12 +256,12 @@ Items:
       FullName:        SafariServices.SFContentBlockerState
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            enabled
         JsName:          enabled
@@ -270,7 +270,7 @@ Items:
           FullName:        SafariServices.SFContentBlockerState
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -281,13 +281,13 @@ Items:
             FullName:        SafariServices.SFContentBlockerState
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Bool
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            SFErrorCode
     JsName:          SFErrorCode
@@ -296,7 +296,7 @@ Items:
       FullName:        SafariServices.SFError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -315,14 +315,14 @@ Items:
       FullName:        SafariServices.SFError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            SFErrorLoadingInterrupted
     JsName:          SFErrorLoadingInterrupted
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFError.h
@@ -330,7 +330,7 @@ Items:
       FullName:        SafariServices.SFError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -341,7 +341,7 @@ Items:
       FullName:        SafariServices.SFError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -352,7 +352,7 @@ Items:
       FullName:        SafariServices.SFError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -363,7 +363,7 @@ Items:
       FullName:        SafariServices.SFSafariViewController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -375,14 +375,14 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithURL:configuration:'
         JsName:          initWithURLConfiguration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFSafariViewController.h
@@ -390,7 +390,7 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
@@ -398,10 +398,10 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          SFSafariViewControllerConfiguration
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithURL:entersReaderIfAvailable:'
         JsName:          initWithURLEntersReaderIfAvailable
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFSafariViewController.h
@@ -409,7 +409,7 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
@@ -417,9 +417,9 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            configuration
         JsName:          configuration
@@ -428,7 +428,7 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -440,14 +440,14 @@ Items:
             FullName:        SafariServices.SFSafariViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          SFSafariViewControllerConfiguration
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            delegate
         JsName:          delegate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFSafariViewController.h
@@ -455,7 +455,7 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -466,7 +466,7 @@ Items:
             FullName:        SafariServices.SFSafariViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -481,7 +481,7 @@ Items:
             FullName:        SafariServices.SFSafariViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -496,7 +496,7 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -508,7 +508,7 @@ Items:
             FullName:        SafariServices.SFSafariViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -523,7 +523,7 @@ Items:
             FullName:        SafariServices.SFSafariViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -538,7 +538,7 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -550,14 +550,14 @@ Items:
             FullName:        SafariServices.SFSafariViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    10.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIColor
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setPreferredBarTintColor:'
           JsName:          setPreferredBarTintColor
@@ -566,7 +566,7 @@ Items:
             FullName:        SafariServices.SFSafariViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    10.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -574,7 +574,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          UIColor
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            preferredControlTintColor
         JsName:          preferredControlTintColor
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFSafariViewController.h
@@ -582,7 +582,7 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -594,14 +594,14 @@ Items:
             FullName:        SafariServices.SFSafariViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    10.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIColor
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setPreferredControlTintColor:'
           JsName:          setPreferredControlTintColor
@@ -610,7 +610,7 @@ Items:
             FullName:        SafariServices.SFSafariViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    10.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -618,9 +618,9 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          UIColor
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            UIViewController
   - Name:            SFSafariViewControllerConfiguration
     JsName:          SFSafariViewControllerConfiguration
@@ -629,12 +629,12 @@ Items:
       FullName:        SafariServices.SFSafariViewControllerConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            barCollapsingEnabled
         JsName:          barCollapsingEnabled
@@ -643,7 +643,7 @@ Items:
           FullName:        SafariServices.SFSafariViewControllerConfiguration
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -654,7 +654,7 @@ Items:
             FullName:        SafariServices.SFSafariViewControllerConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -667,7 +667,7 @@ Items:
             FullName:        SafariServices.SFSafariViewControllerConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -680,7 +680,7 @@ Items:
           FullName:        SafariServices.SFSafariViewControllerConfiguration
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -691,7 +691,7 @@ Items:
             FullName:        SafariServices.SFSafariViewControllerConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -704,13 +704,13 @@ Items:
             FullName:        SafariServices.SFSafariViewControllerConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Bool
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
     Base:            NSObject
@@ -721,7 +721,7 @@ Items:
       FullName:        SafariServices.SFSafariViewController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -733,7 +733,7 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
@@ -742,17 +742,17 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          UIActivity
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          SFSafariViewController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'safariViewController:didCompleteInitialLoad:'
         JsName:          safariViewControllerDidCompleteInitialLoad
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFSafariViewController.h
@@ -760,14 +760,14 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          SFSafariViewController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'safariViewControllerDidFinish:'
         JsName:          safariViewControllerDidFinish
@@ -776,14 +776,14 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          SFSafariViewController
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'safariViewController:excludedActivityTypesForURL:title:'
         JsName:          safariViewControllerExcludedActivityTypesForURLTitle
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFSafariViewController.h
@@ -791,7 +791,7 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
@@ -801,17 +801,17 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          SFSafariViewController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'safariViewController:initialLoadDidRedirectToURL:'
         JsName:          safariViewControllerInitialLoadDidRedirectToURL
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SFSafariViewController.h
@@ -819,7 +819,7 @@ Items:
           FullName:        SafariServices.SFSafariViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
@@ -827,13 +827,13 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          SFSafariViewController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            SFSafariViewControllerDismissButtonStyle
@@ -843,7 +843,7 @@ Items:
       FullName:        SafariServices.SFSafariViewController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -862,7 +862,7 @@ Items:
       FullName:        SafariServices.SFSafariViewController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -873,7 +873,7 @@ Items:
       FullName:        SafariServices.SFSafariViewController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -884,7 +884,7 @@ Items:
       FullName:        SafariServices.SFSafariViewController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -895,7 +895,7 @@ Items:
       FullName:        SafariServices.SSReadingList
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -907,25 +907,25 @@ Items:
           FullName:        SafariServices.SSReadingList
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
     StaticMethods:   
       - Name:            defaultReadingList
         JsName:          defaultReadingList
@@ -934,13 +934,13 @@ Items:
           FullName:        SafariServices.SSReadingList
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          SSReadingList
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'supportsURL:'
         JsName:          supportsURL
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SSReadingList.h
@@ -948,17 +948,17 @@ Items:
           FullName:        SafariServices.SSReadingList
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+            WithProtocols:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            SSReadingListErrorCode
     JsName:          SSReadingListErrorCode
@@ -967,7 +967,7 @@ Items:
       FullName:        SafariServices.SSReadingList
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -982,14 +982,14 @@ Items:
       FullName:        SafariServices.SSReadingList
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            SSReadingListErrorURLSchemeNotAllowed
     JsName:          SSReadingListErrorURLSchemeNotAllowed
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SSReadingList.h
@@ -997,7 +997,7 @@ Items:
       FullName:        SafariServices.SSReadingList
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'

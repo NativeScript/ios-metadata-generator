@@ -14,7 +14,7 @@ Items:
       FullName:        DeviceCheck.DCDevice
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -26,7 +26,7 @@ Items:
           FullName:        DeviceCheck.DCDevice
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -36,11 +36,11 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            supported
         JsName:          supported
@@ -49,7 +49,7 @@ Items:
           FullName:        DeviceCheck.DCDevice
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -60,7 +60,7 @@ Items:
             FullName:        DeviceCheck.DCDevice
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -73,7 +73,7 @@ Items:
           FullName:        DeviceCheck.DCDevice
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -84,14 +84,14 @@ Items:
             FullName:        DeviceCheck.DCDevice
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          DCDevice
-              WithProtocols:   []
-    Protocols:       []
+              WithProtocols:   
+    Protocols:       
     Base:            NSObject
   - Name:            DCError
     JsName:          DCError
@@ -100,7 +100,7 @@ Items:
       FullName:        DeviceCheck.DCError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -117,14 +117,14 @@ Items:
       FullName:        DeviceCheck.DCError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            DCErrorFeatureUnsupported
     JsName:          DCErrorFeatureUnsupported
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/DeviceCheck.framework/Headers/DCError.h
@@ -132,7 +132,7 @@ Items:
       FullName:        DeviceCheck.DCError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -143,7 +143,7 @@ Items:
       FullName:        DeviceCheck.DCError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'

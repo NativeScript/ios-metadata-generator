@@ -14,7 +14,7 @@ Items:
       FullName:        JavaScriptCore.JSBase
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -41,7 +41,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -60,7 +60,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -298,7 +298,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -313,7 +313,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -330,7 +330,7 @@ Items:
       FullName:        JavaScriptCore.JSContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -342,16 +342,16 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'evaluateScript:withSourceURL:'
         JsName:          evaluateScriptWithSourceURL
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -359,20 +359,20 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithVirtualMachine:'
         JsName:          initWithVirtualMachine
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -380,14 +380,14 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          JSVirtualMachine
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'objectForKeyedSubscript:'
         JsName:          objectForKeyedSubscript
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -395,15 +395,15 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'setObject:forKeyedSubscript:'
         JsName:          setObjectForKeyedSubscript
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -411,13 +411,13 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSObject
             WithProtocols:   
@@ -430,13 +430,13 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSArray
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            currentCallee
         JsName:          currentCallee
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -444,14 +444,14 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            currentContext
         JsName:          currentContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -459,13 +459,13 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            currentThis
         JsName:          currentThis
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -473,13 +473,13 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'contextWithJSGlobalContextRef:'
         JsName:          contextWithJSGlobalContextRef
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -487,13 +487,13 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Void
@@ -505,7 +505,7 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -516,13 +516,13 @@ Items:
             FullName:        JavaScriptCore.JSContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          JSValue
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setException:'
           JsName:          setException
@@ -531,14 +531,14 @@ Items:
             FullName:        JavaScriptCore.JSContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          JSValue
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            exceptionHandler
         JsName:          exceptionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -546,7 +546,7 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -557,7 +557,7 @@ Items:
             FullName:        JavaScriptCore.JSContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -566,10 +566,10 @@ Items:
                 - Type:            Void
                 - Type:            Interface
                   JsName:          JSContext
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Interface
                   JsName:          JSValue
-                  WithProtocols:   []
+                  WithProtocols:   
         Setter:          
           Name:            'setExceptionHandler:'
           JsName:          setExceptionHandler
@@ -578,7 +578,7 @@ Items:
             FullName:        JavaScriptCore.JSContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -588,10 +588,10 @@ Items:
                 - Type:            Void
                 - Type:            Interface
                   JsName:          JSContext
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Interface
                   JsName:          JSValue
-                  WithProtocols:   []
+                  WithProtocols:   
       - Name:            globalObject
         JsName:          globalObject
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -599,7 +599,7 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -610,13 +610,13 @@ Items:
             FullName:        JavaScriptCore.JSContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          JSValue
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            name
         JsName:          name
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -624,7 +624,7 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -636,14 +636,14 @@ Items:
             FullName:        JavaScriptCore.JSContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setName:'
           JsName:          setName
@@ -652,7 +652,7 @@ Items:
             FullName:        JavaScriptCore.JSContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -660,7 +660,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            virtualMachine
         JsName:          virtualMachine
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -668,7 +668,7 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -679,13 +679,13 @@ Items:
             FullName:        JavaScriptCore.JSContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          JSVirtualMachine
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            JSGlobalContextRef
         JsName:          JSGlobalContextRef
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSContext.h
@@ -693,7 +693,7 @@ Items:
           FullName:        JavaScriptCore.JSContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -704,15 +704,15 @@ Items:
             FullName:        JavaScriptCore.JSContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Pointer
               PointerType:     
                 Type:            Void
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            JSContextGetGlobalContext
     JsName:          JSContextGetGlobalContext
@@ -721,7 +721,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -739,7 +739,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -756,7 +756,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -774,7 +774,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -789,7 +789,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -805,7 +805,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -823,7 +823,7 @@ Items:
       FullName:        JavaScriptCore.JSBase
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -855,14 +855,14 @@ Items:
       FullName:        JavaScriptCore.JSExport
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
-    InstanceMethods: []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    InstanceMethods: 
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
   - Name:            JSGarbageCollect
     JsName:          JSGarbageCollect
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSBase.h
@@ -870,7 +870,7 @@ Items:
       FullName:        JavaScriptCore.JSBase
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -885,7 +885,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -903,7 +903,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -921,7 +921,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -942,7 +942,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -957,7 +957,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -974,7 +974,7 @@ Items:
       FullName:        JavaScriptCore.JSContextRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -993,7 +993,7 @@ Items:
       FullName:        JavaScriptCore.JSManagedValue
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1005,14 +1005,14 @@ Items:
           FullName:        JavaScriptCore.JSManagedValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
     StaticMethods:   
       - Name:            'managedValueWithValue:'
         JsName:          managedValueWithValue
@@ -1021,16 +1021,16 @@ Items:
           FullName:        JavaScriptCore.JSManagedValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSManagedValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'managedValueWithValue:andOwner:'
         JsName:          managedValueWithValueAndOwner
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSManagedValue.h
@@ -1038,19 +1038,19 @@ Items:
           FullName:        JavaScriptCore.JSManagedValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSManagedValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            value
         JsName:          value
@@ -1059,7 +1059,7 @@ Items:
           FullName:        JavaScriptCore.JSManagedValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1070,15 +1070,15 @@ Items:
             FullName:        JavaScriptCore.JSManagedValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          JSValue
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            JSObjectCallAsConstructor
     JsName:          JSObjectCallAsConstructor
@@ -1087,7 +1087,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1118,7 +1118,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1152,7 +1152,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1172,7 +1172,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1198,7 +1198,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1222,7 +1222,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1248,7 +1248,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1265,7 +1265,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1293,7 +1293,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1319,7 +1319,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1339,7 +1339,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1365,7 +1365,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1389,7 +1389,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1413,7 +1413,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1439,7 +1439,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1463,7 +1463,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1484,7 +1484,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1502,7 +1502,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1520,7 +1520,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1543,7 +1543,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1572,7 +1572,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1611,7 +1611,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1653,7 +1653,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1682,7 +1682,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1711,7 +1711,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1749,7 +1749,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1794,7 +1794,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1823,7 +1823,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1849,7 +1849,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1877,7 +1877,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1907,7 +1907,7 @@ Items:
       FullName:        JavaScriptCore.JSTypedArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1948,7 +1948,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1966,7 +1966,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -1996,7 +1996,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2023,7 +2023,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2044,13 +2044,13 @@ Items:
       FullName:        JavaScriptCore.JSValue
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            JSPropertyDescriptorEnumerableKey
     JsName:          JSPropertyDescriptorEnumerableKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2058,13 +2058,13 @@ Items:
       FullName:        JavaScriptCore.JSValue
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            JSPropertyDescriptorGetKey
     JsName:          JSPropertyDescriptorGetKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2072,13 +2072,13 @@ Items:
       FullName:        JavaScriptCore.JSValue
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            JSPropertyDescriptorSetKey
     JsName:          JSPropertyDescriptorSetKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2086,13 +2086,13 @@ Items:
       FullName:        JavaScriptCore.JSValue
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            JSPropertyDescriptorValueKey
     JsName:          JSPropertyDescriptorValueKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2100,13 +2100,13 @@ Items:
       FullName:        JavaScriptCore.JSValue
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            JSPropertyDescriptorWritableKey
     JsName:          JSPropertyDescriptorWritableKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2114,13 +2114,13 @@ Items:
       FullName:        JavaScriptCore.JSValue
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            JSPropertyNameAccumulatorAddName
     JsName:          JSPropertyNameAccumulatorAddName
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSObjectRef.h
@@ -2128,7 +2128,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2146,7 +2146,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2161,7 +2161,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2179,7 +2179,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2194,7 +2194,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2211,7 +2211,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -2255,7 +2255,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -2315,7 +2315,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRefCF
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable, FunctionOwnsReturnedCocoaObject ]
     Type:            Function
     Signature:       
@@ -2335,7 +2335,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRefCF
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2352,7 +2352,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2370,7 +2370,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2385,7 +2385,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2402,7 +2402,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2417,7 +2417,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2432,7 +2432,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2449,7 +2449,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2467,7 +2467,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2483,7 +2483,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2498,7 +2498,7 @@ Items:
       FullName:        JavaScriptCore.JSStringRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -2515,7 +2515,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -2526,7 +2526,7 @@ Items:
       - kJSTypeString:   '4'
       - kJSTypeObject:   '5'
       - kJSTypeSymbol:   '6'
-    SwiftNameFields: []
+    SwiftNameFields: 
   - Name:            ''
     JsName:          JSTypedArrayType
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValueRef.h
@@ -2534,7 +2534,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -2549,7 +2549,7 @@ Items:
       - kJSTypedArrayTypeFloat64Array: '8'
       - kJSTypedArrayTypeArrayBuffer: '9'
       - kJSTypedArrayTypeNone: '10'
-    SwiftNameFields: []
+    SwiftNameFields: 
   - Name:            JSValue
     JsName:          JSValue
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2557,7 +2557,7 @@ Items:
       FullName:        JavaScriptCore.JSValue
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -2569,16 +2569,16 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'constructWithArguments:'
         JsName:          constructWithArguments
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2586,16 +2586,16 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'invokeMethod:withArguments:'
         JsName:          invokeMethodWithArguments
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2603,19 +2603,19 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'isEqualToObject:'
         JsName:          isEqualToObject
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2623,13 +2623,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'isEqualWithTypeCoercionToObject:'
         JsName:          isEqualWithTypeCoercionToObject
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2637,13 +2637,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'isInstanceOf:'
         JsName:          isInstanceOf
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2651,13 +2651,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            toArray
         JsName:          toArray
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2665,13 +2665,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSArray
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            toBool
         JsName:          toBool
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2679,7 +2679,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2691,13 +2691,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSDate
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            toDictionary
         JsName:          toDictionary
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2705,13 +2705,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSDictionary
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            toDouble
         JsName:          toDouble
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2719,7 +2719,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2731,7 +2731,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2743,13 +2743,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSNumber
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            toObject
         JsName:          toObject
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2757,12 +2757,12 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'toObjectOfClass:'
         JsName:          toObjectOfClass
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2770,12 +2770,12 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Class
       - Name:            toString
         JsName:          toString
@@ -2784,13 +2784,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            toUInt32
         JsName:          toUInt32
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2798,7 +2798,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2810,7 +2810,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2824,7 +2824,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2838,7 +2838,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2852,7 +2852,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2866,16 +2866,16 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'deleteProperty:'
         JsName:          deleteProperty
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2883,14 +2883,14 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'hasProperty:'
         JsName:          hasProperty
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2898,14 +2898,14 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'setValue:atIndex:'
         JsName:          setValueAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2913,13 +2913,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            ULong
       - Name:            'setValue:forProperty:'
         JsName:          setValueForProperty
@@ -2928,16 +2928,16 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueAtIndex:'
         JsName:          valueAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2945,13 +2945,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            ULong
       - Name:            'valueForProperty:'
         JsName:          valueForProperty
@@ -2960,16 +2960,16 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'objectAtIndexedSubscript:'
         JsName:          objectAtIndexedSubscript
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2977,13 +2977,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            ULong
       - Name:            'objectForKeyedSubscript:'
         JsName:          objectForKeyedSubscript
@@ -2992,15 +2992,15 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'setObject:atIndexedSubscript:'
         JsName:          setObjectAtIndexedSubscript
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3008,13 +3008,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            ULong
       - Name:            'setObject:forKeyedSubscript:'
         JsName:          setObjectForKeyedSubscript
@@ -3023,13 +3023,13 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSObject
             WithProtocols:   
@@ -3042,17 +3042,17 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithDouble:inContext:'
         JsName:          valueWithDoubleInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3060,17 +3060,17 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Double
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithInt32:inContext:'
         JsName:          valueWithInt32InContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3078,17 +3078,17 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Int
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithNewArrayInContext:'
         JsName:          valueWithNewArrayInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3096,16 +3096,16 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithNewErrorFromMessage:inContext:'
         JsName:          valueWithNewErrorFromMessageInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3113,19 +3113,19 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithNewObjectInContext:'
         JsName:          valueWithNewObjectInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3133,16 +3133,16 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithNewRegularExpressionFromPattern:flags:inContext:'
         JsName:          valueWithNewRegularExpressionFromPatternFlagsInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3150,22 +3150,22 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithNullInContext:'
         JsName:          valueWithNullInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3173,16 +3173,16 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithObject:inContext:'
         JsName:          valueWithObjectInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3190,18 +3190,18 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithUInt32:inContext:'
         JsName:          valueWithUInt32InContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3209,17 +3209,17 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            UInt
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithUndefinedInContext:'
         JsName:          valueWithUndefinedInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3227,16 +3227,16 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithPoint:inContext:'
         JsName:          valueWithPointInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3244,19 +3244,19 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
             JsName:          CGPoint
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithRange:inContext:'
         JsName:          valueWithRangeInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3264,19 +3264,19 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Struct
             Module:          Foundation.NSRange
             JsName:          NSRange
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithRect:inContext:'
         JsName:          valueWithRectInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3284,19 +3284,19 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
             JsName:          CGRect
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithSize:inContext:'
         JsName:          valueWithSizeInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3304,19 +3304,19 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
             JsName:          CGSize
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueWithJSValueRef:inContext:'
         JsName:          valueWithJSValueRefInContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3324,19 +3324,19 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          JSValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Void
           - Type:            Interface
             JsName:          JSContext
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            context
         JsName:          context
@@ -3345,7 +3345,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3356,13 +3356,13 @@ Items:
             FullName:        JavaScriptCore.JSValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          JSContext
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            isArray
         JsName:          isArray
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3370,7 +3370,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -3382,7 +3382,7 @@ Items:
             FullName:        JavaScriptCore.JSValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -3395,7 +3395,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3406,7 +3406,7 @@ Items:
             FullName:        JavaScriptCore.JSValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3418,7 +3418,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -3430,7 +3430,7 @@ Items:
             FullName:        JavaScriptCore.JSValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -3443,7 +3443,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3454,7 +3454,7 @@ Items:
             FullName:        JavaScriptCore.JSValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3466,7 +3466,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3477,7 +3477,7 @@ Items:
             FullName:        JavaScriptCore.JSValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3489,7 +3489,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3500,7 +3500,7 @@ Items:
             FullName:        JavaScriptCore.JSValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3512,7 +3512,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3523,7 +3523,7 @@ Items:
             FullName:        JavaScriptCore.JSValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3535,7 +3535,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3546,7 +3546,7 @@ Items:
             FullName:        JavaScriptCore.JSValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3558,7 +3558,7 @@ Items:
           FullName:        JavaScriptCore.JSValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3569,15 +3569,15 @@ Items:
             FullName:        JavaScriptCore.JSValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Pointer
               PointerType:     
                 Type:            Void
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            JSValueCreateJSONString
     JsName:          JSValueCreateJSONString
@@ -3586,7 +3586,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3613,7 +3613,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3632,7 +3632,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3657,7 +3657,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3676,7 +3676,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3694,7 +3694,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3713,7 +3713,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3739,7 +3739,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3765,7 +3765,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3783,7 +3783,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3801,7 +3801,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3819,7 +3819,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3840,7 +3840,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3861,7 +3861,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3879,7 +3879,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3897,7 +3897,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3915,7 +3915,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3936,7 +3936,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3953,7 +3953,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3971,7 +3971,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -3991,7 +3991,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4012,7 +4012,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -4029,7 +4029,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -4047,7 +4047,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -4065,7 +4065,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -4088,7 +4088,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -4113,7 +4113,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -4138,7 +4138,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
@@ -4156,7 +4156,7 @@ Items:
       FullName:        JavaScriptCore.JSVirtualMachine
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -4168,15 +4168,15 @@ Items:
           FullName:        JavaScriptCore.JSVirtualMachine
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'removeManagedReference:withOwner:'
         JsName:          removeManagedReferenceWithOwner
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSVirtualMachine.h
@@ -4184,19 +4184,19 @@ Items:
           FullName:        JavaScriptCore.JSVirtualMachine
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            kJSClassAttributeNoAutomaticPrototype
     JsName:          kJSClassAttributeNoAutomaticPrototype
@@ -4205,7 +4205,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -4216,7 +4216,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -4227,7 +4227,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
@@ -4241,7 +4241,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '8'
@@ -4252,7 +4252,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'
@@ -4263,7 +4263,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -4274,7 +4274,7 @@ Items:
       FullName:        JavaScriptCore.JSObjectRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -4285,7 +4285,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -4296,7 +4296,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -4307,7 +4307,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -4318,7 +4318,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '5'
@@ -4329,7 +4329,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'
@@ -4340,7 +4340,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -4352,7 +4352,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -4363,7 +4363,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '9'
@@ -4374,7 +4374,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '7'
@@ -4385,7 +4385,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '8'
@@ -4396,7 +4396,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -4407,7 +4407,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -4418,7 +4418,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -4429,7 +4429,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '10'
@@ -4440,7 +4440,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '5'
@@ -4451,7 +4451,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '6'
@@ -4462,7 +4462,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -4473,7 +4473,7 @@ Items:
       FullName:        JavaScriptCore.JSValueRef
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'

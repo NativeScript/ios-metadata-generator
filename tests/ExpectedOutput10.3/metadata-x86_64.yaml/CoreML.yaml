@@ -14,7 +14,7 @@ Items:
       FullName:        CoreML.MLArrayBatchProvider
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -26,7 +26,7 @@ Items:
           FullName:        CoreML.MLArrayBatchProvider
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -36,16 +36,16 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSArray
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'initWithFeatureProviderArray:'
         JsName:          initWithFeatureProviderArray
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLArrayBatchProvider.h
@@ -53,7 +53,7 @@ Items:
           FullName:        CoreML.MLArrayBatchProvider
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -64,8 +64,8 @@ Items:
               - Type:            Id
                 WithProtocols:   
                   - MLFeatureProvider
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            array
         JsName:          array
@@ -74,7 +74,7 @@ Items:
           FullName:        CoreML.MLArrayBatchProvider
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -85,7 +85,7 @@ Items:
             FullName:        CoreML.MLArrayBatchProvider
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -95,8 +95,8 @@ Items:
                 - Type:            Id
                   WithProtocols:   
                     - MLFeatureProvider
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - MLBatchProvider
     Base:            NSObject
@@ -107,7 +107,7 @@ Items:
       FullName:        CoreML.MLBatchProvider
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -119,7 +119,7 @@ Items:
           FullName:        CoreML.MLBatchProvider
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -127,7 +127,7 @@ Items:
             WithProtocols:   
               - MLFeatureProvider
           - Type:            Long
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            count
         JsName:          count
@@ -136,7 +136,7 @@ Items:
           FullName:        CoreML.MLBatchProvider
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -147,13 +147,13 @@ Items:
             FullName:        CoreML.MLBatchProvider
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Long
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
   - Name:            MLComputeUnits
     JsName:          MLComputeUnits
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModelConfiguration.h
@@ -161,7 +161,7 @@ Items:
       FullName:        CoreML.MLModelConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -180,7 +180,7 @@ Items:
       FullName:        CoreML.MLModelConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -191,7 +191,7 @@ Items:
       FullName:        CoreML.MLModelConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -202,7 +202,7 @@ Items:
       FullName:        CoreML.MLModelConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -213,7 +213,7 @@ Items:
       FullName:        CoreML.MLCustomLayer
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -225,7 +225,7 @@ Items:
           FullName:        CoreML.MLCustomLayer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -239,19 +239,19 @@ Items:
               - Type:            Id
                 WithProtocols:   
                   - MTLTexture
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
                   - MTLTexture
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'evaluateOnCPUWithInputs:outputs:error:'
         JsName:          evaluateOnCPUWithInputsOutputsError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLCustomLayer.h
@@ -259,7 +259,7 @@ Items:
           FullName:        CoreML.MLCustomLayer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -269,20 +269,20 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          MLMultiArray
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          MLMultiArray
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'initWithParameterDictionary:error:'
         JsName:          initWithParameterDictionaryError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLCustomLayer.h
@@ -290,7 +290,7 @@ Items:
           FullName:        CoreML.MLCustomLayer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -300,15 +300,15 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'outputShapesForInputShapes:error:'
         JsName:          outputShapesForInputShapesError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLCustomLayer.h
@@ -316,7 +316,7 @@ Items:
           FullName:        CoreML.MLCustomLayer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -328,9 +328,9 @@ Items:
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          NSNumber
-                    WithProtocols:   []
-                WithProtocols:   []
-            WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
@@ -339,14 +339,14 @@ Items:
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          NSNumber
-                    WithProtocols:   []
-                WithProtocols:   []
-            WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'setWeightData:error:'
         JsName:          setWeightDataError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLCustomLayer.h
@@ -354,7 +354,7 @@ Items:
           FullName:        CoreML.MLCustomLayer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -364,17 +364,17 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
   - Name:            MLCustomModel
     JsName:          MLCustomModel
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLCustomModel.h
@@ -382,7 +382,7 @@ Items:
       FullName:        CoreML.MLCustomModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -394,28 +394,28 @@ Items:
           FullName:        CoreML.MLCustomModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          MLModelDescription
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'predictionFromFeatures:options:error:'
         JsName:          predictionFromFeaturesOptionsError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLCustomModel.h
@@ -423,7 +423,7 @@ Items:
           FullName:        CoreML.MLCustomModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -435,12 +435,12 @@ Items:
               - MLFeatureProvider
           - Type:            Interface
             JsName:          MLPredictionOptions
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'predictionsFromBatch:options:error:'
         JsName:          predictionsFromBatchOptionsError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLCustomModel.h
@@ -448,7 +448,7 @@ Items:
           FullName:        CoreML.MLCustomModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -460,16 +460,16 @@ Items:
               - MLBatchProvider
           - Type:            Interface
             JsName:          MLPredictionOptions
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
   - Name:            MLDictionaryConstraint
     JsName:          MLDictionaryConstraint
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLDictionaryConstraint.h
@@ -477,12 +477,12 @@ Items:
       FullName:        CoreML.MLDictionaryConstraint
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            keyType
         JsName:          keyType
@@ -491,7 +491,7 @@ Items:
           FullName:        CoreML.MLDictionaryConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -502,14 +502,14 @@ Items:
             FullName:        CoreML.MLDictionaryConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Enum
               Name:            MLFeatureType
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MLDictionaryFeatureProvider
     JsName:          MLDictionaryFeatureProvider
@@ -518,7 +518,7 @@ Items:
       FullName:        CoreML.MLDictionaryFeatureProvider
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -530,7 +530,7 @@ Items:
           FullName:        CoreML.MLDictionaryFeatureProvider
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -540,15 +540,15 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'objectForKeyedSubscript:'
         JsName:          objectForKeyedSubscript
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLDictionaryFeatureProvider.h
@@ -556,17 +556,17 @@ Items:
           FullName:        CoreML.MLDictionaryFeatureProvider
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          MLFeatureValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            dictionary
         JsName:          dictionary
@@ -575,7 +575,7 @@ Items:
           FullName:        CoreML.MLDictionaryFeatureProvider
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -586,7 +586,7 @@ Items:
             FullName:        CoreML.MLDictionaryFeatureProvider
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -595,12 +595,12 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Interface
                   JsName:          MLFeatureValue
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - MLFeatureProvider
       - NSFastEnumeration
@@ -612,7 +612,7 @@ Items:
       FullName:        CoreML.MLFeatureDescription
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -624,15 +624,15 @@ Items:
           FullName:        CoreML.MLFeatureDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          MLFeatureValue
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            name
         JsName:          name
@@ -641,7 +641,7 @@ Items:
           FullName:        CoreML.MLFeatureDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -652,13 +652,13 @@ Items:
             FullName:        CoreML.MLFeatureDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            optional
         JsName:          optional
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureDescription.h
@@ -666,7 +666,7 @@ Items:
           FullName:        CoreML.MLFeatureDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -677,7 +677,7 @@ Items:
             FullName:        CoreML.MLFeatureDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -689,7 +689,7 @@ Items:
           FullName:        CoreML.MLFeatureDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -700,7 +700,7 @@ Items:
             FullName:        CoreML.MLFeatureDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -713,7 +713,7 @@ Items:
           FullName:        CoreML.MLFeatureDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -724,13 +724,13 @@ Items:
             FullName:        CoreML.MLFeatureDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MLDictionaryConstraint
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            imageConstraint
         JsName:          imageConstraint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureDescription.h
@@ -738,7 +738,7 @@ Items:
           FullName:        CoreML.MLFeatureDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -749,13 +749,13 @@ Items:
             FullName:        CoreML.MLFeatureDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MLImageConstraint
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            multiArrayConstraint
         JsName:          multiArrayConstraint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureDescription.h
@@ -763,7 +763,7 @@ Items:
           FullName:        CoreML.MLFeatureDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -774,13 +774,13 @@ Items:
             FullName:        CoreML.MLFeatureDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MLMultiArrayConstraint
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            sequenceConstraint
         JsName:          sequenceConstraint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureDescription.h
@@ -788,7 +788,7 @@ Items:
           FullName:        CoreML.MLFeatureDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    12.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -800,15 +800,15 @@ Items:
             FullName:        CoreML.MLFeatureDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    12.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MLSequenceConstraint
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
     Base:            NSObject
@@ -819,7 +819,7 @@ Items:
       FullName:        CoreML.MLFeatureProvider
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -831,17 +831,17 @@ Items:
           FullName:        CoreML.MLFeatureProvider
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          MLFeatureValue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            featureNames
         JsName:          featureNames
@@ -850,7 +850,7 @@ Items:
           FullName:        CoreML.MLFeatureProvider
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -861,7 +861,7 @@ Items:
             FullName:        CoreML.MLFeatureProvider
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -870,10 +870,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
   - Name:            MLFeatureType
     JsName:          MLFeatureType
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureType.h
@@ -881,7 +881,7 @@ Items:
       FullName:        CoreML.MLFeatureType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -910,7 +910,7 @@ Items:
       FullName:        CoreML.MLFeatureType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '6'
@@ -921,7 +921,7 @@ Items:
       FullName:        CoreML.MLFeatureType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -932,7 +932,7 @@ Items:
       FullName:        CoreML.MLFeatureType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'
@@ -943,7 +943,7 @@ Items:
       FullName:        CoreML.MLFeatureType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -954,7 +954,7 @@ Items:
       FullName:        CoreML.MLFeatureType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -965,7 +965,7 @@ Items:
       FullName:        CoreML.MLFeatureType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '5'
@@ -976,7 +976,7 @@ Items:
       FullName:        CoreML.MLFeatureType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -988,7 +988,7 @@ Items:
       FullName:        CoreML.MLFeatureType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -999,7 +999,7 @@ Items:
       FullName:        CoreML.MLFeatureValue
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1011,14 +1011,14 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          MLFeatureValue
-            WithProtocols:   []
+            WithProtocols:   
     StaticMethods:   
       - Name:            'featureValueWithDictionary:error:'
         JsName:          featureValueWithDictionaryError
@@ -1027,7 +1027,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -1036,16 +1036,16 @@ Items:
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Id
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSNumber
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'featureValueWithDouble:'
         JsName:          featureValueWithDouble
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureValue.h
@@ -1053,7 +1053,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1066,7 +1066,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1079,14 +1079,14 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          MLMultiArray
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'featureValueWithPixelBuffer:'
         JsName:          featureValueWithPixelBuffer
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureValue.h
@@ -1094,7 +1094,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1109,7 +1109,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    12.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1117,7 +1117,7 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          MLSequence
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'featureValueWithString:'
         JsName:          featureValueWithString
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureValue.h
@@ -1125,14 +1125,14 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'undefinedFeatureValueWithType:'
         JsName:          undefinedFeatureValueWithType
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureValue.h
@@ -1140,7 +1140,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1155,7 +1155,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1166,7 +1166,7 @@ Items:
             FullName:        CoreML.MLFeatureValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1174,11 +1174,11 @@ Items:
               JsName:          NSDictionary
               TypeParameters:  
                 - Type:            Id
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Interface
                   JsName:          NSNumber
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            doubleValue
         JsName:          doubleValue
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureValue.h
@@ -1186,7 +1186,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1197,7 +1197,7 @@ Items:
             FullName:        CoreML.MLFeatureValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1209,7 +1209,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1220,7 +1220,7 @@ Items:
             FullName:        CoreML.MLFeatureValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1234,7 +1234,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1245,7 +1245,7 @@ Items:
             FullName:        CoreML.MLFeatureValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1257,7 +1257,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1268,13 +1268,13 @@ Items:
             FullName:        CoreML.MLFeatureValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MLMultiArray
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            sequenceValue
         JsName:          sequenceValue
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureValue.h
@@ -1282,7 +1282,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    12.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1294,14 +1294,14 @@ Items:
             FullName:        CoreML.MLFeatureValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    12.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MLSequence
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            stringValue
         JsName:          stringValue
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureValue.h
@@ -1309,7 +1309,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1320,13 +1320,13 @@ Items:
             FullName:        CoreML.MLFeatureValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            type
         JsName:          type
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureValue.h
@@ -1334,7 +1334,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1345,7 +1345,7 @@ Items:
             FullName:        CoreML.MLFeatureValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1358,7 +1358,7 @@ Items:
           FullName:        CoreML.MLFeatureValue
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1369,12 +1369,12 @@ Items:
             FullName:        CoreML.MLFeatureValue
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Bool
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
     Base:            NSObject
@@ -1385,12 +1385,12 @@ Items:
       FullName:        CoreML.MLImageConstraint
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            pixelFormatType
         JsName:          pixelFormatType
@@ -1399,7 +1399,7 @@ Items:
           FullName:        CoreML.MLImageConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1410,7 +1410,7 @@ Items:
             FullName:        CoreML.MLImageConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1422,7 +1422,7 @@ Items:
           FullName:        CoreML.MLImageConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1433,7 +1433,7 @@ Items:
             FullName:        CoreML.MLImageConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1445,7 +1445,7 @@ Items:
           FullName:        CoreML.MLImageConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1456,7 +1456,7 @@ Items:
             FullName:        CoreML.MLImageConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1468,7 +1468,7 @@ Items:
           FullName:        CoreML.MLImageConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    12.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1480,16 +1480,16 @@ Items:
             FullName:        CoreML.MLImageConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    12.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MLImageSizeConstraint
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MLImageSize
     JsName:          MLImageSize
@@ -1498,12 +1498,12 @@ Items:
       FullName:        CoreML.MLImageSize
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            pixelsHigh
         JsName:          pixelsHigh
@@ -1512,7 +1512,7 @@ Items:
           FullName:        CoreML.MLImageSize
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1523,7 +1523,7 @@ Items:
             FullName:        CoreML.MLImageSize
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1535,7 +1535,7 @@ Items:
           FullName:        CoreML.MLImageSize
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1546,13 +1546,13 @@ Items:
             FullName:        CoreML.MLImageSize
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Long
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MLImageSizeConstraint
     JsName:          MLImageSizeConstraint
@@ -1561,12 +1561,12 @@ Items:
       FullName:        CoreML.MLImageSizeConstraint
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            enumeratedImageSizes
         JsName:          enumeratedImageSizes
@@ -1575,7 +1575,7 @@ Items:
           FullName:        CoreML.MLImageSizeConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1586,7 +1586,7 @@ Items:
             FullName:        CoreML.MLImageSizeConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1595,8 +1595,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          MLImageSize
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            pixelsHighRange
         JsName:          pixelsHighRange
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLImageSizeConstraint.h
@@ -1604,7 +1604,7 @@ Items:
           FullName:        CoreML.MLImageSizeConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1615,7 +1615,7 @@ Items:
             FullName:        CoreML.MLImageSizeConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1629,7 +1629,7 @@ Items:
           FullName:        CoreML.MLImageSizeConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1640,7 +1640,7 @@ Items:
             FullName:        CoreML.MLImageSizeConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1654,7 +1654,7 @@ Items:
           FullName:        CoreML.MLImageSizeConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1665,14 +1665,14 @@ Items:
             FullName:        CoreML.MLImageSizeConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Enum
               Name:            MLImageSizeConstraintType
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MLImageSizeConstraintType
     JsName:          MLImageSizeConstraintType
@@ -1681,7 +1681,7 @@ Items:
       FullName:        CoreML.MLImageSizeConstraintType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -1700,7 +1700,7 @@ Items:
       FullName:        CoreML.MLImageSizeConstraintType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -1711,7 +1711,7 @@ Items:
       FullName:        CoreML.MLImageSizeConstraintType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -1722,7 +1722,7 @@ Items:
       FullName:        CoreML.MLImageSizeConstraintType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -1733,7 +1733,7 @@ Items:
       FullName:        CoreML.MLModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1745,7 +1745,7 @@ Items:
           FullName:        CoreML.MLModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -1759,7 +1759,7 @@ Items:
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'predictionFromFeatures:options:error:'
         JsName:          predictionFromFeaturesOptionsError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModel.h
@@ -1767,7 +1767,7 @@ Items:
           FullName:        CoreML.MLModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -1779,12 +1779,12 @@ Items:
               - MLFeatureProvider
           - Type:            Interface
             JsName:          MLPredictionOptions
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'predictionsFromBatch:options:error:'
         JsName:          predictionsFromBatchOptionsError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModel.h
@@ -1792,7 +1792,7 @@ Items:
           FullName:        CoreML.MLModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    12.0
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
@@ -1805,12 +1805,12 @@ Items:
               - MLBatchProvider
           - Type:            Interface
             JsName:          MLPredictionOptions
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
     StaticMethods:   
       - Name:            'modelWithContentsOfURL:configuration:error:'
         JsName:          modelWithContentsOfURLConfigurationError
@@ -1819,7 +1819,7 @@ Items:
           FullName:        CoreML.MLModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    12.0
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
@@ -1827,15 +1827,15 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          MLModelConfiguration
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'modelWithContentsOfURL:error:'
         JsName:          modelWithContentsOfURLError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModel.h
@@ -1843,19 +1843,19 @@ Items:
           FullName:        CoreML.MLModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'compileModelAtURL:error:'
         JsName:          compileModelAtURLError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModel+MLModelCompilation.h
@@ -1863,22 +1863,22 @@ Items:
           FullName:        CoreML.MLModel_MLModelCompilation
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
     InstanceProperties: 
       - Name:            configuration
         JsName:          configuration
@@ -1887,7 +1887,7 @@ Items:
           FullName:        CoreML.MLModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    12.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1899,14 +1899,14 @@ Items:
             FullName:        CoreML.MLModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    12.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MLModelConfiguration
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            modelDescription
         JsName:          modelDescription
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModel.h
@@ -1914,7 +1914,7 @@ Items:
           FullName:        CoreML.MLModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1925,15 +1925,15 @@ Items:
             FullName:        CoreML.MLModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MLModelDescription
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MLModelAuthorKey
     JsName:          MLModelAuthorKey
@@ -1942,14 +1942,14 @@ Items:
       FullName:        CoreML.MLModelMetadataKeys
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MLModelConfiguration
     JsName:          MLModelConfiguration
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModelConfiguration.h
@@ -1957,12 +1957,12 @@ Items:
       FullName:        CoreML.MLModelConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            computeUnits
         JsName:          computeUnits
@@ -1971,7 +1971,7 @@ Items:
           FullName:        CoreML.MLModelConfiguration
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1982,7 +1982,7 @@ Items:
             FullName:        CoreML.MLModelConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1996,14 +1996,14 @@ Items:
             FullName:        CoreML.MLModelConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Enum
               Name:            MLComputeUnits
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
     Base:            NSObject
@@ -2014,14 +2014,14 @@ Items:
       FullName:        CoreML.MLModelMetadataKeys
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MLModelDescription
     JsName:          MLModelDescription
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModelDescription.h
@@ -2029,12 +2029,12 @@ Items:
       FullName:        CoreML.MLModelDescription
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            inputDescriptionsByName
         JsName:          inputDescriptionsByName
@@ -2043,7 +2043,7 @@ Items:
           FullName:        CoreML.MLModelDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2054,7 +2054,7 @@ Items:
             FullName:        CoreML.MLModelDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2063,11 +2063,11 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Interface
                   JsName:          MLFeatureDescription
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            metadata
         JsName:          metadata
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModelDescription.h
@@ -2075,7 +2075,7 @@ Items:
           FullName:        CoreML.MLModelDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2086,7 +2086,7 @@ Items:
             FullName:        CoreML.MLModelDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2095,10 +2095,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Id
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            outputDescriptionsByName
         JsName:          outputDescriptionsByName
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModelDescription.h
@@ -2106,7 +2106,7 @@ Items:
           FullName:        CoreML.MLModelDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2117,7 +2117,7 @@ Items:
             FullName:        CoreML.MLModelDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2126,11 +2126,11 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Interface
                   JsName:          MLFeatureDescription
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            predictedFeatureName
         JsName:          predictedFeatureName
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModelDescription.h
@@ -2138,7 +2138,7 @@ Items:
           FullName:        CoreML.MLModelDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2149,13 +2149,13 @@ Items:
             FullName:        CoreML.MLModelDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            predictedProbabilitiesName
         JsName:          predictedProbabilitiesName
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModelDescription.h
@@ -2163,7 +2163,7 @@ Items:
           FullName:        CoreML.MLModelDescription
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2174,15 +2174,15 @@ Items:
             FullName:        CoreML.MLModelDescription
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MLModelDescriptionKey
     JsName:          MLModelDescriptionKey
@@ -2191,14 +2191,14 @@ Items:
       FullName:        CoreML.MLModelMetadataKeys
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MLModelError
     JsName:          MLModelError
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModelError.h
@@ -2206,7 +2206,7 @@ Items:
       FullName:        CoreML.MLModelError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -2228,7 +2228,7 @@ Items:
       FullName:        CoreML.MLModelError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -2240,7 +2240,7 @@ Items:
       FullName:        CoreML.MLModelError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -2252,14 +2252,14 @@ Items:
       FullName:        CoreML.MLModelError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MLModelErrorFeatureType
     JsName:          MLModelErrorFeatureType
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModelError.h
@@ -2267,7 +2267,7 @@ Items:
       FullName:        CoreML.MLModelError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -2278,7 +2278,7 @@ Items:
       FullName:        CoreML.MLModelError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -2289,7 +2289,7 @@ Items:
       FullName:        CoreML.MLModelError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -2300,14 +2300,14 @@ Items:
       FullName:        CoreML.MLModelMetadataKeys
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MLModelVersionStringKey
     JsName:          MLModelVersionStringKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLModelMetadataKeys.h
@@ -2315,14 +2315,14 @@ Items:
       FullName:        CoreML.MLModelMetadataKeys
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MLMultiArray
     JsName:          MLMultiArray
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLMultiArray.h
@@ -2330,7 +2330,7 @@ Items:
       FullName:        CoreML.MLMultiArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -2342,7 +2342,7 @@ Items:
           FullName:        CoreML.MLMultiArray
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -2355,8 +2355,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSNumber
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Enum
             Name:            MLMultiArrayDataType
           - Type:            Interface
@@ -2364,8 +2364,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSNumber
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -2376,7 +2376,7 @@ Items:
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'initWithShape:dataType:error:'
         JsName:          initWithShapeDataTypeError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLMultiArray.h
@@ -2384,7 +2384,7 @@ Items:
           FullName:        CoreML.MLMultiArray
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -2394,15 +2394,15 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSNumber
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Enum
             Name:            MLMultiArrayDataType
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'objectAtIndexedSubscript:'
         JsName:          objectAtIndexedSubscript
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLMultiArray.h
@@ -2410,13 +2410,13 @@ Items:
           FullName:        CoreML.MLMultiArray
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSNumber
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Long
       - Name:            'objectForKeyedSubscript:'
         JsName:          objectForKeyedSubscript
@@ -2425,20 +2425,20 @@ Items:
           FullName:        CoreML.MLMultiArray
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSNumber
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSNumber
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'setObject:atIndexedSubscript:'
         JsName:          setObjectAtIndexedSubscript
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLMultiArray.h
@@ -2446,14 +2446,14 @@ Items:
           FullName:        CoreML.MLMultiArray
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSNumber
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Long
       - Name:            'setObject:forKeyedSubscript:'
         JsName:          setObjectForKeyedSubscript
@@ -2462,22 +2462,22 @@ Items:
           FullName:        CoreML.MLMultiArray
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSNumber
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSNumber
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            count
         JsName:          count
@@ -2486,7 +2486,7 @@ Items:
           FullName:        CoreML.MLMultiArray
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2497,7 +2497,7 @@ Items:
             FullName:        CoreML.MLMultiArray
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2509,7 +2509,7 @@ Items:
           FullName:        CoreML.MLMultiArray
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2520,7 +2520,7 @@ Items:
             FullName:        CoreML.MLMultiArray
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2534,7 +2534,7 @@ Items:
           FullName:        CoreML.MLMultiArray
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2545,7 +2545,7 @@ Items:
             FullName:        CoreML.MLMultiArray
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2558,7 +2558,7 @@ Items:
           FullName:        CoreML.MLMultiArray
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2569,7 +2569,7 @@ Items:
             FullName:        CoreML.MLMultiArray
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2578,8 +2578,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSNumber
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            strides
         JsName:          strides
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLMultiArray.h
@@ -2587,7 +2587,7 @@ Items:
           FullName:        CoreML.MLMultiArray
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2598,7 +2598,7 @@ Items:
             FullName:        CoreML.MLMultiArray
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2607,10 +2607,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSNumber
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MLMultiArrayConstraint
     JsName:          MLMultiArrayConstraint
@@ -2619,12 +2619,12 @@ Items:
       FullName:        CoreML.MLMultiArrayConstraint
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            dataType
         JsName:          dataType
@@ -2633,7 +2633,7 @@ Items:
           FullName:        CoreML.MLMultiArrayConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2644,7 +2644,7 @@ Items:
             FullName:        CoreML.MLMultiArrayConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2657,7 +2657,7 @@ Items:
           FullName:        CoreML.MLMultiArrayConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2668,7 +2668,7 @@ Items:
             FullName:        CoreML.MLMultiArrayConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2677,8 +2677,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSNumber
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            shapeConstraint
         JsName:          shapeConstraint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLMultiArrayConstraint.h
@@ -2686,7 +2686,7 @@ Items:
           FullName:        CoreML.MLMultiArrayConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    12.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2698,16 +2698,16 @@ Items:
             FullName:        CoreML.MLMultiArrayConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    12.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MLMultiArrayShapeConstraint
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MLMultiArrayDataType
     JsName:          MLMultiArrayDataType
@@ -2716,7 +2716,7 @@ Items:
       FullName:        CoreML.MLMultiArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -2735,7 +2735,7 @@ Items:
       FullName:        CoreML.MLMultiArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '65600'
@@ -2746,7 +2746,7 @@ Items:
       FullName:        CoreML.MLMultiArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '65568'
@@ -2757,7 +2757,7 @@ Items:
       FullName:        CoreML.MLMultiArray
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '131104'
@@ -2768,12 +2768,12 @@ Items:
       FullName:        CoreML.MLMultiArrayShapeConstraint
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            enumeratedShapes
         JsName:          enumeratedShapes
@@ -2782,7 +2782,7 @@ Items:
           FullName:        CoreML.MLMultiArrayShapeConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2793,7 +2793,7 @@ Items:
             FullName:        CoreML.MLMultiArrayShapeConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2805,9 +2805,9 @@ Items:
                   TypeParameters:  
                     - Type:            Interface
                       JsName:          NSNumber
-                      WithProtocols:   []
-                  WithProtocols:   []
-              WithProtocols:   []
+                      WithProtocols:   
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            sizeRangeForDimension
         JsName:          sizeRangeForDimension
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLMultiArrayShapeConstraint.h
@@ -2815,7 +2815,7 @@ Items:
           FullName:        CoreML.MLMultiArrayShapeConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2826,7 +2826,7 @@ Items:
             FullName:        CoreML.MLMultiArrayShapeConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2835,8 +2835,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSValue
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            type
         JsName:          type
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLMultiArrayShapeConstraint.h
@@ -2844,7 +2844,7 @@ Items:
           FullName:        CoreML.MLMultiArrayShapeConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2855,14 +2855,14 @@ Items:
             FullName:        CoreML.MLMultiArrayShapeConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Enum
               Name:            MLMultiArrayShapeConstraintType
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MLMultiArrayShapeConstraintType
     JsName:          MLMultiArrayShapeConstraintType
@@ -2871,7 +2871,7 @@ Items:
       FullName:        CoreML.MLMultiArrayShapeConstraintType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -2889,7 +2889,7 @@ Items:
       FullName:        CoreML.MLMultiArrayShapeConstraintType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -2900,7 +2900,7 @@ Items:
       FullName:        CoreML.MLMultiArrayShapeConstraintType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -2911,7 +2911,7 @@ Items:
       FullName:        CoreML.MLMultiArrayShapeConstraintType
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -2922,12 +2922,12 @@ Items:
       FullName:        CoreML.MLPredictionOptions
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            usesCPUOnly
         JsName:          usesCPUOnly
@@ -2936,7 +2936,7 @@ Items:
           FullName:        CoreML.MLPredictionOptions
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2947,7 +2947,7 @@ Items:
             FullName:        CoreML.MLPredictionOptions
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2960,14 +2960,14 @@ Items:
             FullName:        CoreML.MLPredictionOptions
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Bool
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MLSequence
     JsName:          MLSequence
@@ -2976,11 +2976,11 @@ Items:
       FullName:        CoreML.MLSequence
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
+    InstanceMethods: 
     StaticMethods:   
       - Name:            'emptySequenceWithType:'
         JsName:          emptySequenceWithType
@@ -2989,7 +2989,7 @@ Items:
           FullName:        CoreML.MLSequence
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -3003,7 +3003,7 @@ Items:
           FullName:        CoreML.MLSequence
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -3013,8 +3013,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSNumber
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'sequenceWithStringArray:'
         JsName:          sequenceWithStringArray
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLSequence.h
@@ -3022,7 +3022,7 @@ Items:
           FullName:        CoreML.MLSequence
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -3032,8 +3032,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
     InstanceProperties: 
       - Name:            int64Values
         JsName:          int64Values
@@ -3042,7 +3042,7 @@ Items:
           FullName:        CoreML.MLSequence
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3053,7 +3053,7 @@ Items:
             FullName:        CoreML.MLSequence
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3062,8 +3062,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSNumber
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            stringValues
         JsName:          stringValues
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLSequence.h
@@ -3071,7 +3071,7 @@ Items:
           FullName:        CoreML.MLSequence
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3082,7 +3082,7 @@ Items:
             FullName:        CoreML.MLSequence
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3091,8 +3091,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            type
         JsName:          type
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLSequence.h
@@ -3100,7 +3100,7 @@ Items:
           FullName:        CoreML.MLSequence
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3111,14 +3111,14 @@ Items:
             FullName:        CoreML.MLSequence
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Enum
               Name:            MLFeatureType
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MLSequenceConstraint
     JsName:          MLSequenceConstraint
@@ -3127,12 +3127,12 @@ Items:
       FullName:        CoreML.MLSequenceConstraint
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            countRange
         JsName:          countRange
@@ -3141,7 +3141,7 @@ Items:
           FullName:        CoreML.MLSequenceConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3152,7 +3152,7 @@ Items:
             FullName:        CoreML.MLSequenceConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3166,7 +3166,7 @@ Items:
           FullName:        CoreML.MLSequenceConstraint
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3177,14 +3177,14 @@ Items:
             FullName:        CoreML.MLSequenceConstraint
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MLFeatureDescription
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
 ...

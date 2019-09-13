@@ -23,7 +23,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NFCISO15693CustomCommandConfiguration
     JsName:          NFCISO15693CustomCommandConfiguration
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h
@@ -56,7 +56,7 @@ Items:
           - Type:            ULong
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithManufacturerCode:customCommandCode:requestParameters:maximumRetries:retryInterval:'
         JsName:          initWithManufacturerCodeCustomCommandCodeRequestParametersMaximumRetriesRetryInterval
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h
@@ -75,10 +75,10 @@ Items:
           - Type:            ULong
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            ULong
           - Type:            Double
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            customCommandCode
         JsName:          customCommandCode
@@ -194,7 +194,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setRequestParameters:'
           JsName:          setRequestParameters
@@ -212,9 +212,9 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NFCTagCommandConfiguration
   - Name:            NFCISO15693ReadMultipleBlocksConfiguration
     JsName:          NFCISO15693ReadMultipleBlocksConfiguration
@@ -268,7 +268,7 @@ Items:
           - Type:            ULong
           - Type:            ULong
           - Type:            Double
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            chunkSize
         JsName:          chunkSize
@@ -360,8 +360,8 @@ Items:
             - Type:            Struct
               Module:          Foundation.NSRange
               JsName:          NSRange
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NFCTagCommandConfiguration
   - Name:            NFCISO15693ReaderSession
     JsName:          NFCISO15693ReaderSession
@@ -412,8 +412,8 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Void
-    StaticMethods:   []
-    InstanceProperties: []
+    StaticMethods:   
+    InstanceProperties: 
     StaticProperties: 
       - Name:            readingAvailable
         JsName:          readingAvailable
@@ -442,7 +442,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Bool
-    Protocols:       []
+    Protocols:       
     Base:            NFCReaderSession
   - Name:            NFCISO15693Tag
     JsName:          NFCISO15693Tag
@@ -474,16 +474,16 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NFCISO15693ReadMultipleBlocksConfiguration
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'sendCustomCommandWithConfiguration:completionHandler:'
         JsName:          sendCustomCommandWithConfigurationCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h
@@ -500,17 +500,17 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NFCISO15693CustomCommandConfiguration
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            icManufacturerCode
         JsName:          icManufacturerCode
@@ -567,7 +567,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            identifier
         JsName:          identifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCISO15693Tag.h
@@ -596,8 +596,8 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NFCTag
   - Name:            NFCISO15693TagResponseErrorKey
@@ -616,7 +616,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NFCNDEFMessage
     JsName:          NFCNDEFMessage
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h
@@ -630,8 +630,8 @@ Items:
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            records
         JsName:          records
@@ -664,8 +664,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NFCNDEFPayload
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setRecords:'
           JsName:          setRecords
@@ -686,9 +686,9 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NFCNDEFPayload
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -705,8 +705,8 @@ Items:
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            identifier
         JsName:          identifier
@@ -736,7 +736,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setIdentifier:'
           JsName:          setIdentifier
@@ -754,7 +754,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            payload
         JsName:          payload
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h
@@ -783,7 +783,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setPayload:'
           JsName:          setPayload
@@ -801,7 +801,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            type
         JsName:          type
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h
@@ -830,7 +830,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setType:'
           JsName:          setType
@@ -848,7 +848,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            typeNameFormat
         JsName:          typeNameFormat
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h
@@ -894,7 +894,7 @@ Items:
             - Type:            Void
             - Type:            Enum
               Name:            NFCTypeNameFormat
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -934,8 +934,8 @@ Items:
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Bool
-    StaticMethods:   []
-    InstanceProperties: []
+    StaticMethods:   
+    InstanceProperties: 
     StaticProperties: 
       - Name:            readingAvailable
         JsName:          readingAvailable
@@ -964,7 +964,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Bool
-    Protocols:       []
+    Protocols:       
     Base:            NFCReaderSession
   - Name:            NFCNDEFReaderSessionDelegate
     JsName:          NFCNDEFReaderSessionDelegate
@@ -996,14 +996,14 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NFCNDEFReaderSession
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NFCNDEFMessage
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'readerSession:didInvalidateWithError:'
         JsName:          readerSessionDidInvalidateWithError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCNDEFReaderSession.h
@@ -1020,13 +1020,13 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NFCNDEFReaderSession
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            NFCReaderError
@@ -1104,8 +1104,8 @@ Items:
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            delegate
         JsName:          delegate
@@ -1134,7 +1134,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Id
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            sessionQueue
         JsName:          sessionQueue
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h
@@ -1165,7 +1165,7 @@ Items:
               JsName:          NSObject
               WithProtocols:   
                 - OS_dispatch_queue
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NFCReaderSessionProtocol
     Base:            NSObject
@@ -1199,7 +1199,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NFCReaderSession
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'readerSession:didDetectTags:'
         JsName:          readerSessionDidDetectTags
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h
@@ -1216,14 +1216,14 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NFCReaderSession
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
                   - NFCTag
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'readerSession:didInvalidateWithError:'
         JsName:          readerSessionDidInvalidateWithError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h
@@ -1240,13 +1240,13 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NFCReaderSession
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            NFCReaderSessionInvalidationErrorFirstNDEFTagRead
@@ -1356,7 +1356,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Void
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            alertMessage
         JsName:          alertMessage
@@ -1386,7 +1386,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setAlertMessage:'
           JsName:          setAlertMessage
@@ -1404,7 +1404,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            ready
         JsName:          ready
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreNFC.framework/Headers/NFCReaderSession.h
@@ -1432,7 +1432,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Bool
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            NFCReaderTransceiveErrorRetryExceeded
@@ -1487,8 +1487,8 @@ Items:
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            available
         JsName:          available
@@ -1574,7 +1574,7 @@ Items:
           Signature:       
             - Type:            Enum
               Name:            NFCTagType
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSObjectProtocol
@@ -1592,8 +1592,8 @@ Items:
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            maximumRetries
         JsName:          maximumRetries
@@ -1681,7 +1681,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Double
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
     Base:            NSObject

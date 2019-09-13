@@ -14,7 +14,7 @@ Items:
       FullName:        CoreMotion.CMAccelerometer
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -34,12 +34,12 @@ Items:
       FullName:        CoreMotion.CMAccelerometer
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            acceleration
         JsName:          acceleration
@@ -48,7 +48,7 @@ Items:
           FullName:        CoreMotion.CMAccelerometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -59,15 +59,15 @@ Items:
             FullName:        CoreMotion.CMAccelerometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Struct
               Module:          CoreMotion.CMAccelerometer
               JsName:          CMAcceleration
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            CMLogItem
   - Name:            CMAltimeter
     JsName:          CMAltimeter
@@ -76,7 +76,7 @@ Items:
       FullName:        CoreMotion.CMAltimeter
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -88,23 +88,23 @@ Items:
           FullName:        CoreMotion.CMAltimeter
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSOperationQueue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          CMAltitudeData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            stopRelativeAltitudeUpdates
         JsName:          stopRelativeAltitudeUpdates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMAltimeter.h
@@ -112,7 +112,7 @@ Items:
           FullName:        CoreMotion.CMAltimeter
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -125,7 +125,7 @@ Items:
           FullName:        CoreMotion.CMAltimeter
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -139,14 +139,14 @@ Items:
           FullName:        CoreMotion.CMAltimeter
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            CMAltitudeData
     JsName:          CMAltitudeData
@@ -155,12 +155,12 @@ Items:
       FullName:        CoreMotion.CMAltitude
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            pressure
         JsName:          pressure
@@ -169,7 +169,7 @@ Items:
           FullName:        CoreMotion.CMAltitude
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -180,13 +180,13 @@ Items:
             FullName:        CoreMotion.CMAltitude
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            relativeAltitude
         JsName:          relativeAltitude
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMAltitude.h
@@ -194,7 +194,7 @@ Items:
           FullName:        CoreMotion.CMAltitude
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -205,15 +205,15 @@ Items:
             FullName:        CoreMotion.CMAltitude
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            CMLogItem
   - Name:            CMAttitude
     JsName:          CMAttitude
@@ -222,7 +222,7 @@ Items:
       FullName:        CoreMotion.CMAttitude
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -234,15 +234,15 @@ Items:
           FullName:        CoreMotion.CMAttitude
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CMAttitude
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            pitch
         JsName:          pitch
@@ -251,7 +251,7 @@ Items:
           FullName:        CoreMotion.CMAttitude
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -262,7 +262,7 @@ Items:
             FullName:        CoreMotion.CMAttitude
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -274,7 +274,7 @@ Items:
           FullName:        CoreMotion.CMAttitude
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -285,7 +285,7 @@ Items:
             FullName:        CoreMotion.CMAttitude
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -299,7 +299,7 @@ Items:
           FullName:        CoreMotion.CMAttitude
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -310,7 +310,7 @@ Items:
             FullName:        CoreMotion.CMAttitude
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -322,7 +322,7 @@ Items:
           FullName:        CoreMotion.CMAttitude
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -333,7 +333,7 @@ Items:
             FullName:        CoreMotion.CMAttitude
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -347,7 +347,7 @@ Items:
           FullName:        CoreMotion.CMAttitude
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -358,12 +358,12 @@ Items:
             FullName:        CoreMotion.CMAttitude
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Double
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -375,7 +375,7 @@ Items:
       FullName:        CoreMotion.CMAttitude
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -395,7 +395,7 @@ Items:
       FullName:        CoreMotion.CMAttitude
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -406,7 +406,7 @@ Items:
       FullName:        CoreMotion.CMAttitude
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -417,7 +417,7 @@ Items:
       FullName:        CoreMotion.CMAttitude
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'
@@ -428,7 +428,7 @@ Items:
       FullName:        CoreMotion.CMAttitude
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '8'
@@ -439,7 +439,7 @@ Items:
       FullName:        CoreMotion.CMAuthorization
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -460,7 +460,7 @@ Items:
       FullName:        CoreMotion.CMAuthorization
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -471,7 +471,7 @@ Items:
       FullName:        CoreMotion.CMAuthorization
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -482,7 +482,7 @@ Items:
       FullName:        CoreMotion.CMAuthorization
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -493,7 +493,7 @@ Items:
       FullName:        CoreMotion.CMAuthorization
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -504,7 +504,7 @@ Items:
       FullName:        CoreMotion.CMDeviceMotion
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -524,12 +524,12 @@ Items:
       FullName:        CoreMotion.CMDeviceMotion
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            attitude
         JsName:          attitude
@@ -538,7 +538,7 @@ Items:
           FullName:        CoreMotion.CMDeviceMotion
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -549,13 +549,13 @@ Items:
             FullName:        CoreMotion.CMDeviceMotion
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CMAttitude
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            gravity
         JsName:          gravity
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMDeviceMotion.h
@@ -563,7 +563,7 @@ Items:
           FullName:        CoreMotion.CMDeviceMotion
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -574,7 +574,7 @@ Items:
             FullName:        CoreMotion.CMDeviceMotion
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -588,7 +588,7 @@ Items:
           FullName:        CoreMotion.CMDeviceMotion
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -600,7 +600,7 @@ Items:
             FullName:        CoreMotion.CMDeviceMotion
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -613,7 +613,7 @@ Items:
           FullName:        CoreMotion.CMDeviceMotion
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -625,7 +625,7 @@ Items:
             FullName:        CoreMotion.CMDeviceMotion
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -640,7 +640,7 @@ Items:
           FullName:        CoreMotion.CMDeviceMotion
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -651,7 +651,7 @@ Items:
             FullName:        CoreMotion.CMDeviceMotion
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -665,7 +665,7 @@ Items:
           FullName:        CoreMotion.CMDeviceMotion
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -676,15 +676,15 @@ Items:
             FullName:        CoreMotion.CMDeviceMotion
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Struct
               Module:          CoreMotion.CMAccelerometer
               JsName:          CMAcceleration
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            CMLogItem
   - Name:            CMDyskineticSymptomResult
     JsName:          CMDyskineticSymptomResult
@@ -693,12 +693,12 @@ Items:
       FullName:        CoreMotion.CMMovementDisorderManager
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            endDate
         JsName:          endDate
@@ -707,7 +707,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -718,13 +718,13 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            percentLikely
         JsName:          percentLikely
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMovementDisorderManager.h
@@ -732,7 +732,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -743,7 +743,7 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -755,7 +755,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -766,7 +766,7 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -778,7 +778,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -789,14 +789,14 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -808,7 +808,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -844,7 +844,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '101'
@@ -855,14 +855,14 @@ Items:
       FullName:        CoreMotion.CMErrorDomain
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            CMErrorInvalidAction
     JsName:          CMErrorInvalidAction
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMError.h
@@ -870,7 +870,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '108'
@@ -881,7 +881,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '107'
@@ -892,7 +892,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '105'
@@ -903,7 +903,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '104'
@@ -914,7 +914,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '106'
@@ -925,7 +925,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '100'
@@ -936,7 +936,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '111'
@@ -947,7 +947,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '109'
@@ -958,7 +958,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '110'
@@ -969,7 +969,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '102'
@@ -980,7 +980,7 @@ Items:
       FullName:        CoreMotion.CMError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '103'
@@ -991,12 +991,12 @@ Items:
       FullName:        CoreMotion.CMGyro
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            rotationRate
         JsName:          rotationRate
@@ -1005,7 +1005,7 @@ Items:
           FullName:        CoreMotion.CMGyro
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1016,15 +1016,15 @@ Items:
             FullName:        CoreMotion.CMGyro
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Struct
               Module:          CoreMotion.CMGyro
               JsName:          CMRotationRate
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            CMLogItem
   - Name:            CMLogItem
     JsName:          CMLogItem
@@ -1033,12 +1033,12 @@ Items:
       FullName:        CoreMotion.CMLogItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            timestamp
         JsName:          timestamp
@@ -1047,7 +1047,7 @@ Items:
           FullName:        CoreMotion.CMLogItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1058,12 +1058,12 @@ Items:
             FullName:        CoreMotion.CMLogItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Double
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -1075,7 +1075,7 @@ Items:
       FullName:        CoreMotion.CMMagnetometer
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -1095,7 +1095,7 @@ Items:
       FullName:        CoreMotion.CMDeviceMotion
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -1115,7 +1115,7 @@ Items:
       FullName:        CoreMotion.CMDeviceMotion
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -1126,7 +1126,7 @@ Items:
       FullName:        CoreMotion.CMDeviceMotion
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -1137,7 +1137,7 @@ Items:
       FullName:        CoreMotion.CMDeviceMotion
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -1148,7 +1148,7 @@ Items:
       FullName:        CoreMotion.CMDeviceMotion
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1'
@@ -1159,12 +1159,12 @@ Items:
       FullName:        CoreMotion.CMMagnetometer
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    5.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            magneticField
         JsName:          magneticField
@@ -1173,7 +1173,7 @@ Items:
           FullName:        CoreMotion.CMMagnetometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1184,15 +1184,15 @@ Items:
             FullName:        CoreMotion.CMMagnetometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Struct
               Module:          CoreMotion.CMMagnetometer
               JsName:          CMMagneticField
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            CMLogItem
   - Name:            CMMotionActivity
     JsName:          CMMotionActivity
@@ -1201,12 +1201,12 @@ Items:
       FullName:        CoreMotion.CMMotionActivity
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            automotive
         JsName:          automotive
@@ -1215,7 +1215,7 @@ Items:
           FullName:        CoreMotion.CMMotionActivity
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1226,7 +1226,7 @@ Items:
             FullName:        CoreMotion.CMMotionActivity
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1238,7 +1238,7 @@ Items:
           FullName:        CoreMotion.CMMotionActivity
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1249,7 +1249,7 @@ Items:
             FullName:        CoreMotion.CMMotionActivity
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1262,7 +1262,7 @@ Items:
           FullName:        CoreMotion.CMMotionActivity
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1274,7 +1274,7 @@ Items:
             FullName:        CoreMotion.CMMotionActivity
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1287,7 +1287,7 @@ Items:
           FullName:        CoreMotion.CMMotionActivity
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1298,7 +1298,7 @@ Items:
             FullName:        CoreMotion.CMMotionActivity
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1310,7 +1310,7 @@ Items:
           FullName:        CoreMotion.CMMotionActivity
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1321,13 +1321,13 @@ Items:
             FullName:        CoreMotion.CMMotionActivity
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            stationary
         JsName:          stationary
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionActivity.h
@@ -1335,7 +1335,7 @@ Items:
           FullName:        CoreMotion.CMMotionActivity
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1346,7 +1346,7 @@ Items:
             FullName:        CoreMotion.CMMotionActivity
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1358,7 +1358,7 @@ Items:
           FullName:        CoreMotion.CMMotionActivity
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1369,7 +1369,7 @@ Items:
             FullName:        CoreMotion.CMMotionActivity
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1381,7 +1381,7 @@ Items:
           FullName:        CoreMotion.CMMotionActivity
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1392,13 +1392,13 @@ Items:
             FullName:        CoreMotion.CMMotionActivity
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Bool
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            CMLogItem
   - Name:            CMMotionActivityConfidence
     JsName:          CMMotionActivityConfidence
@@ -1407,7 +1407,7 @@ Items:
       FullName:        CoreMotion.CMMotionActivity
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -1425,7 +1425,7 @@ Items:
       FullName:        CoreMotion.CMMotionActivity
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -1436,7 +1436,7 @@ Items:
       FullName:        CoreMotion.CMMotionActivity
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -1447,7 +1447,7 @@ Items:
       FullName:        CoreMotion.CMMotionActivity
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -1458,7 +1458,7 @@ Items:
       FullName:        CoreMotion.CMMotionActivityManager
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1470,20 +1470,20 @@ Items:
           FullName:        CoreMotion.CMMotionActivityManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSDate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSOperationQueue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -1492,11 +1492,11 @@ Items:
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          CMMotionActivity
-                    WithProtocols:   []
-                WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'startActivityUpdatesToQueue:withHandler:'
         JsName:          startActivityUpdatesToQueueWithHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionActivityManager.h
@@ -1504,20 +1504,20 @@ Items:
           FullName:        CoreMotion.CMMotionActivityManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSOperationQueue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          CMMotionActivity
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            stopActivityUpdates
         JsName:          stopActivityUpdates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionActivityManager.h
@@ -1525,7 +1525,7 @@ Items:
           FullName:        CoreMotion.CMMotionActivityManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1538,7 +1538,7 @@ Items:
           FullName:        CoreMotion.CMMotionActivityManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1552,14 +1552,14 @@ Items:
           FullName:        CoreMotion.CMMotionActivityManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            CMMotionManager
     JsName:          CMMotionManager
@@ -1568,7 +1568,7 @@ Items:
       FullName:        CoreMotion.CMMotionManager
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1580,7 +1580,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1592,23 +1592,23 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSOperationQueue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          CMAccelerometerData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            startDeviceMotionUpdates
         JsName:          startDeviceMotionUpdates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionManager.h
@@ -1616,7 +1616,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1628,23 +1628,23 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSOperationQueue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          CMDeviceMotion
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'startDeviceMotionUpdatesUsingReferenceFrame:'
         JsName:          startDeviceMotionUpdatesUsingReferenceFrame
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionManager.h
@@ -1652,7 +1652,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1667,7 +1667,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1677,16 +1677,16 @@ Items:
             Name:            CMAttitudeReferenceFrame
           - Type:            Interface
             JsName:          NSOperationQueue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          CMDeviceMotion
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            startGyroUpdates
         JsName:          startGyroUpdates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionManager.h
@@ -1694,7 +1694,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1706,23 +1706,23 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSOperationQueue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          CMGyroData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            startMagnetometerUpdates
         JsName:          startMagnetometerUpdates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionManager.h
@@ -1730,7 +1730,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1743,7 +1743,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1751,16 +1751,16 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSOperationQueue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          CMMagnetometerData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            stopAccelerometerUpdates
         JsName:          stopAccelerometerUpdates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionManager.h
@@ -1768,7 +1768,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1780,7 +1780,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1792,7 +1792,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1804,7 +1804,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1818,7 +1818,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1833,7 +1833,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1844,7 +1844,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1856,7 +1856,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1867,7 +1867,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1879,7 +1879,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1890,13 +1890,13 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CMAccelerometerData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            accelerometerUpdateInterval
         JsName:          accelerometerUpdateInterval
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionManager.h
@@ -1904,7 +1904,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1915,7 +1915,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1928,7 +1928,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1941,7 +1941,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1953,7 +1953,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1967,7 +1967,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1978,13 +1978,13 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CMDeviceMotion
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            deviceMotionActive
         JsName:          deviceMotionActive
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionManager.h
@@ -1992,7 +1992,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2003,7 +2003,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2015,7 +2015,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2026,7 +2026,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2038,7 +2038,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2049,7 +2049,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2062,7 +2062,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2075,7 +2075,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2086,7 +2086,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2098,7 +2098,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2109,7 +2109,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2121,7 +2121,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2132,13 +2132,13 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CMGyroData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            gyroUpdateInterval
         JsName:          gyroUpdateInterval
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionManager.h
@@ -2146,7 +2146,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2157,7 +2157,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2170,7 +2170,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2183,7 +2183,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2195,7 +2195,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2208,7 +2208,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2220,7 +2220,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2233,7 +2233,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2245,14 +2245,14 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CMMagnetometerData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            magnetometerUpdateInterval
         JsName:          magnetometerUpdateInterval
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMotionManager.h
@@ -2260,7 +2260,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2272,7 +2272,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2286,7 +2286,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2300,7 +2300,7 @@ Items:
           FullName:        CoreMotion.CMMotionManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2312,7 +2312,7 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2326,15 +2326,15 @@ Items:
             FullName:        CoreMotion.CMMotionManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Bool
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            CMPedometer
     JsName:          CMPedometer
@@ -2343,7 +2343,7 @@ Items:
       FullName:        CoreMotion.CMPedometer
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -2355,26 +2355,26 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSDate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          CMPedometerData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'startPedometerEventUpdatesWithHandler:'
         JsName:          startPedometerEventUpdatesWithHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2382,7 +2382,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -2393,10 +2393,10 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          CMPedometerEvent
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'startPedometerUpdatesFromDate:withHandler:'
         JsName:          startPedometerUpdatesFromDateWithHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2404,23 +2404,23 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSDate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          CMPedometerData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            stopPedometerEventUpdates
         JsName:          stopPedometerEventUpdates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2428,7 +2428,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -2441,7 +2441,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2454,7 +2454,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -2468,7 +2468,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -2481,7 +2481,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2493,7 +2493,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2505,7 +2505,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -2518,7 +2518,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -2531,14 +2531,14 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            CMPedometerData
     JsName:          CMPedometerData
@@ -2547,12 +2547,12 @@ Items:
       FullName:        CoreMotion.CMPedometer
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            averageActivePace
         JsName:          averageActivePace
@@ -2561,7 +2561,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2573,14 +2573,14 @@ Items:
             FullName:        CoreMotion.CMPedometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    10.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            currentCadence
         JsName:          currentCadence
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2588,7 +2588,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2600,14 +2600,14 @@ Items:
             FullName:        CoreMotion.CMPedometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            currentPace
         JsName:          currentPace
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2615,7 +2615,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2627,14 +2627,14 @@ Items:
             FullName:        CoreMotion.CMPedometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            distance
         JsName:          distance
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2642,7 +2642,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2653,13 +2653,13 @@ Items:
             FullName:        CoreMotion.CMPedometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            endDate
         JsName:          endDate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2667,7 +2667,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2678,13 +2678,13 @@ Items:
             FullName:        CoreMotion.CMPedometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            floorsAscended
         JsName:          floorsAscended
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2692,7 +2692,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2703,13 +2703,13 @@ Items:
             FullName:        CoreMotion.CMPedometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            floorsDescended
         JsName:          floorsDescended
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2717,7 +2717,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2728,13 +2728,13 @@ Items:
             FullName:        CoreMotion.CMPedometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            numberOfSteps
         JsName:          numberOfSteps
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2742,7 +2742,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2753,13 +2753,13 @@ Items:
             FullName:        CoreMotion.CMPedometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            startDate
         JsName:          startDate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2767,7 +2767,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2778,14 +2778,14 @@ Items:
             FullName:        CoreMotion.CMPedometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -2797,12 +2797,12 @@ Items:
       FullName:        CoreMotion.CMPedometer
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            date
         JsName:          date
@@ -2811,7 +2811,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2822,13 +2822,13 @@ Items:
             FullName:        CoreMotion.CMPedometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            type
         JsName:          type
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMPedometer.h
@@ -2836,7 +2836,7 @@ Items:
           FullName:        CoreMotion.CMPedometer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2847,13 +2847,13 @@ Items:
             FullName:        CoreMotion.CMPedometer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Enum
               Name:            CMPedometerEventType
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -2865,7 +2865,7 @@ Items:
       FullName:        CoreMotion.CMPedometer
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -2882,7 +2882,7 @@ Items:
       FullName:        CoreMotion.CMPedometer
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -2893,7 +2893,7 @@ Items:
       FullName:        CoreMotion.CMPedometer
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -2904,7 +2904,7 @@ Items:
       FullName:        CoreMotion.CMAttitude
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -2927,12 +2927,12 @@ Items:
       FullName:        CoreMotion.CMSensorRecorder
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            identifier
         JsName:          identifier
@@ -2941,7 +2941,7 @@ Items:
           FullName:        CoreMotion.CMSensorRecorder
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2952,7 +2952,7 @@ Items:
             FullName:        CoreMotion.CMSensorRecorder
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2964,7 +2964,7 @@ Items:
           FullName:        CoreMotion.CMSensorRecorder
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2975,15 +2975,15 @@ Items:
             FullName:        CoreMotion.CMSensorRecorder
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            CMAccelerometerData
   - Name:            ''
     JsName:          CMRotationMatrix
@@ -2992,7 +2992,7 @@ Items:
       FullName:        CoreMotion.CMAttitude
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -3030,7 +3030,7 @@ Items:
       FullName:        CoreMotion.CMGyro
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -3050,14 +3050,14 @@ Items:
       FullName:        CoreMotion.CMSensorRecorder
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+    InstanceMethods: 
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSFastEnumeration
     Base:            NSObject
@@ -3068,7 +3068,7 @@ Items:
       FullName:        CoreMotion.CMSensorRecorder
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -3080,19 +3080,19 @@ Items:
           FullName:        CoreMotion.CMSensorRecorder
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          CMSensorDataList
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDate
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'recordAccelerometerForDuration:'
         JsName:          recordAccelerometerForDuration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMSensorRecorder.h
@@ -3100,7 +3100,7 @@ Items:
           FullName:        CoreMotion.CMSensorRecorder
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -3114,7 +3114,7 @@ Items:
           FullName:        CoreMotion.CMSensorRecorder
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -3128,7 +3128,7 @@ Items:
           FullName:        CoreMotion.CMSensorRecorder
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -3140,15 +3140,15 @@ Items:
           FullName:        CoreMotion.CMSensorRecorder
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            CMStepCounter
     JsName:          CMStepCounter
@@ -3157,7 +3157,7 @@ Items:
       FullName:        CoreMotion.CMStepCounter
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    7.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -3169,27 +3169,27 @@ Items:
           FullName:        CoreMotion.CMStepCounter
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSDate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSOperationQueue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Long
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'startStepCountingUpdatesToQueue:updateOn:withHandler:'
         JsName:          startStepCountingUpdatesToQueueUpdateOnWithHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMStepCounter.h
@@ -3197,14 +3197,14 @@ Items:
           FullName:        CoreMotion.CMStepCounter
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSOperationQueue
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Long
           - Type:            Block
             Signature:       
@@ -3212,10 +3212,10 @@ Items:
               - Type:            Long
               - Type:            Interface
                 JsName:          NSDate
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            stopStepCountingUpdates
         JsName:          stopStepCountingUpdates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMStepCounter.h
@@ -3223,7 +3223,7 @@ Items:
           FullName:        CoreMotion.CMStepCounter
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -3236,14 +3236,14 @@ Items:
           FullName:        CoreMotion.CMStepCounter
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            CMTremorResult
     JsName:          CMTremorResult
@@ -3252,12 +3252,12 @@ Items:
       FullName:        CoreMotion.CMMovementDisorderManager
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            endDate
         JsName:          endDate
@@ -3266,7 +3266,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3277,13 +3277,13 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            percentMild
         JsName:          percentMild
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CMMovementDisorderManager.h
@@ -3291,7 +3291,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3302,7 +3302,7 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3314,7 +3314,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3325,7 +3325,7 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3337,7 +3337,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3348,7 +3348,7 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3360,7 +3360,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3371,7 +3371,7 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3383,7 +3383,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3394,7 +3394,7 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3406,7 +3406,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3417,7 +3417,7 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3429,7 +3429,7 @@ Items:
           FullName:        CoreMotion.CMMovementDisorderManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3440,14 +3440,14 @@ Items:
             FullName:        CoreMotion.CMMovementDisorderManager
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding

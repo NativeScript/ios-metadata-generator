@@ -14,7 +14,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -39,7 +39,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -50,7 +50,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -61,7 +61,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -72,7 +72,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -84,7 +84,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -96,7 +96,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -107,7 +107,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -119,7 +119,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -140,7 +140,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -151,7 +151,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -163,7 +163,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -174,7 +174,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -186,7 +186,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
@@ -198,7 +198,7 @@ Items:
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'evaluateAccessControl:operation:localizedReason:reply:'
         JsName:          evaluateAccessControlOperationLocalizedReasonReply
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LAContext.h
@@ -206,7 +206,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -219,14 +219,14 @@ Items:
             Name:            LAAccessControlOperation
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'evaluatePolicy:localizedReason:reply:'
         JsName:          evaluatePolicyLocalizedReasonReply
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LAContext.h
@@ -234,7 +234,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -244,14 +244,14 @@ Items:
             Name:            LAPolicy
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            invalidate
         JsName:          invalidate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LAContext.h
@@ -259,7 +259,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -272,7 +272,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -287,7 +287,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -295,10 +295,10 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            LACredentialType
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            biometryType
         JsName:          biometryType
@@ -307,7 +307,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -319,7 +319,7 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -333,7 +333,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -345,14 +345,14 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            interactionNotAllowed
         JsName:          interactionNotAllowed
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LAContext.h
@@ -360,7 +360,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -372,7 +372,7 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -386,7 +386,7 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -400,7 +400,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -412,14 +412,14 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    10.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setLocalizedCancelTitle:'
           JsName:          setLocalizedCancelTitle
@@ -428,7 +428,7 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    10.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -436,7 +436,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            localizedFallbackTitle
         JsName:          localizedFallbackTitle
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LAContext.h
@@ -444,7 +444,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -456,14 +456,14 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setLocalizedFallbackTitle:'
           JsName:          setLocalizedFallbackTitle
@@ -472,7 +472,7 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -480,7 +480,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            localizedReason
         JsName:          localizedReason
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LAContext.h
@@ -488,7 +488,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -500,14 +500,14 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setLocalizedReason:'
           JsName:          setLocalizedReason
@@ -516,7 +516,7 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -524,7 +524,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            maxBiometryFailures
         JsName:          maxBiometryFailures
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LAContext.h
@@ -532,7 +532,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.3
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -544,14 +544,14 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.3
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setMaxBiometryFailures:'
           JsName:          setMaxBiometryFailures
@@ -560,7 +560,7 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.3
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -568,7 +568,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            touchIDAuthenticationAllowableReuseDuration
         JsName:          touchIDAuthenticationAllowableReuseDuration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LAContext.h
@@ -576,7 +576,7 @@ Items:
           FullName:        LocalAuthentication.LAContext
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -588,7 +588,7 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -602,15 +602,15 @@ Items:
             FullName:        LocalAuthentication.LAContext
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    9.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Double
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            LACredentialType
     JsName:          LACredentialType
@@ -619,7 +619,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -634,7 +634,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -645,7 +645,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -688,7 +688,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -700,7 +700,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1'
@@ -711,7 +711,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -723,7 +723,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -735,7 +735,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -747,14 +747,14 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            LAErrorInvalidContext
     JsName:          LAErrorInvalidContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LAError.h
@@ -762,7 +762,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -774,7 +774,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -786,7 +786,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-5'
@@ -797,7 +797,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-4'
@@ -808,7 +808,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -820,7 +820,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -832,7 +832,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -844,7 +844,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-2'
@@ -855,7 +855,7 @@ Items:
       FullName:        LocalAuthentication.LAError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-3'
@@ -866,7 +866,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -887,7 +887,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -899,7 +899,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
@@ -911,7 +911,7 @@ Items:
       FullName:        LocalAuthentication.LAContext
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var

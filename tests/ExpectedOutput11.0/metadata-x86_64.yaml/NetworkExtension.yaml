@@ -23,7 +23,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEAppProxyFlow
     JsName:          NEAppProxyFlow
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEAppProxyFlow.h
@@ -55,7 +55,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'closeWriteWithError:'
         JsName:          closeWriteWithError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEAppProxyFlow.h
@@ -73,7 +73,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'openWithLocalEndpoint:completionHandler:'
         JsName:          openWithLocalEndpointCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEAppProxyFlow.h
@@ -91,14 +91,14 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NWHostEndpoint
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            metaData
         JsName:          metaData
@@ -130,9 +130,9 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEFlowMetaData
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NEAppProxyFlowError
     JsName:          NEAppProxyFlowError
@@ -332,7 +332,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'handleNewFlow:'
         JsName:          handleNewFlow
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEAppProxyProvider.h
@@ -350,7 +350,7 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NEAppProxyFlow
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'handleNewUDPFlow:initialRemoteEndpoint:'
         JsName:          handleNewUDPFlowInitialRemoteEndpoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEAppProxyProvider.h
@@ -368,10 +368,10 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NEAppProxyUDPFlow
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NWEndpoint
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'startProxyWithOptions:completionHandler:'
         JsName:          startProxyWithOptionsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEAppProxyProvider.h
@@ -392,16 +392,16 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'stopProxyWithReason:completionHandler:'
         JsName:          stopProxyWithReasonCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEAppProxyProvider.h
@@ -422,10 +422,10 @@ Items:
           - Type:            Block
             Signature:       
               - Type:            Void
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NETunnelProvider
   - Name:            NEAppProxyProviderManager
     JsName:          NEAppProxyProviderManager
@@ -440,11 +440,11 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    InstanceMethods: 
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NETunnelProviderManager
   - Name:            NEAppProxyTCPFlow
     JsName:          NEAppProxyTCPFlow
@@ -480,10 +480,10 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'writeData:withCompletionHandler:'
         JsName:          writeDataWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEAppProxyTCPFlow.h
@@ -501,14 +501,14 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            remoteEndpoint
         JsName:          remoteEndpoint
@@ -540,9 +540,9 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWEndpoint
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NEAppProxyFlow
   - Name:            NEAppProxyUDPFlow
     JsName:          NEAppProxyUDPFlow
@@ -581,18 +581,18 @@ Items:
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          NSData
-                    WithProtocols:   []
-                WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSArray
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          NWEndpoint
-                    WithProtocols:   []
-                WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'writeDatagrams:sentByEndpoints:completionHandler:'
         JsName:          writeDatagramsSentByEndpointsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEAppProxyUDPFlow.h
@@ -613,22 +613,22 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NWEndpoint
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            localEndpoint
         JsName:          localEndpoint
@@ -660,9 +660,9 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWEndpoint
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NEAppProxyFlow
   - Name:            NEAppRule
     JsName:          NEAppRule
@@ -695,8 +695,8 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            matchDomains
         JsName:          matchDomains
@@ -728,7 +728,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSArray
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setMatchDomains:'
           JsName:          setMatchDomains
@@ -747,7 +747,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSArray
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            matchPath
         JsName:          matchPath
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEAppRule.h
@@ -778,7 +778,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setMatchPath:'
           JsName:          setMatchPath
@@ -797,7 +797,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            matchSigningIdentifier
         JsName:          matchSigningIdentifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEAppRule.h
@@ -828,8 +828,8 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -850,7 +850,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEDNSProxyErrorDomain
     JsName:          NEDNSProxyErrorDomain
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSProxyManager.h
@@ -867,7 +867,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEDNSProxyManager
     JsName:          NEDNSProxyManager
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSProxyManager.h
@@ -902,7 +902,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'removeFromPreferencesWithCompletionHandler:'
         JsName:          removeFromPreferencesWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSProxyManager.h
@@ -923,7 +923,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'saveToPreferencesWithCompletionHandler:'
         JsName:          saveToPreferencesWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSProxyManager.h
@@ -944,7 +944,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
     StaticMethods:   
       - Name:            sharedManager
         JsName:          sharedManager
@@ -962,7 +962,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEDNSProxyManager
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            enabled
         JsName:          enabled
@@ -1040,7 +1040,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setLocalizedDescription:'
           JsName:          setLocalizedDescription
@@ -1059,7 +1059,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            providerProtocol
         JsName:          providerProtocol
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSProxyManager.h
@@ -1090,7 +1090,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEDNSProxyProviderProtocol
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProviderProtocol:'
           JsName:          setProviderProtocol
@@ -1109,9 +1109,9 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NEDNSProxyProviderProtocol
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NEDNSProxyManagerError
     JsName:          NEDNSProxyManagerError
@@ -1219,7 +1219,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'handleNewFlow:'
         JsName:          handleNewFlow
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSProxyProvider.h
@@ -1237,7 +1237,7 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NEAppProxyFlow
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'handleNewUDPFlow:initialRemoteEndpoint:'
         JsName:          handleNewUDPFlowInitialRemoteEndpoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSProxyProvider.h
@@ -1255,10 +1255,10 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NEAppProxyUDPFlow
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NWEndpoint
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'startProxyWithOptions:completionHandler:'
         JsName:          startProxyWithOptionsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSProxyProvider.h
@@ -1279,16 +1279,16 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'stopProxyWithReason:completionHandler:'
         JsName:          stopProxyWithReasonCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSProxyProvider.h
@@ -1309,7 +1309,7 @@ Items:
           - Type:            Block
             Signature:       
               - Type:            Void
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            systemDNSSettings
         JsName:          systemDNSSettings
@@ -1344,10 +1344,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEDNSSettings
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NEProvider
   - Name:            NEDNSProxyProviderProtocol
     JsName:          NEDNSProxyProviderProtocol
@@ -1362,8 +1362,8 @@ Items:
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            providerBundleIdentifier
         JsName:          providerBundleIdentifier
@@ -1395,7 +1395,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProviderBundleIdentifier:'
           JsName:          setProviderBundleIdentifier
@@ -1414,7 +1414,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            providerConfiguration
         JsName:          providerConfiguration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSProxyProviderProtocol.h
@@ -1448,10 +1448,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Id
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setProviderConfiguration:'
           JsName:          setProviderConfiguration
@@ -1473,12 +1473,12 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Id
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NEVPNProtocol
   - Name:            NEDNSSettings
     JsName:          NEDNSSettings
@@ -1514,9 +1514,9 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            domainName
         JsName:          domainName
@@ -1548,7 +1548,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setDomainName:'
           JsName:          setDomainName
@@ -1567,7 +1567,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            matchDomains
         JsName:          matchDomains
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSSettings.h
@@ -1601,8 +1601,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setMatchDomains:'
           JsName:          setMatchDomains
@@ -1624,8 +1624,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            matchDomainsNoSearch
         JsName:          matchDomainsNoSearch
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSSettings.h
@@ -1705,8 +1705,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setSearchDomains:'
           JsName:          setSearchDomains
@@ -1728,8 +1728,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            servers
         JsName:          servers
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEDNSSettings.h
@@ -1763,9 +1763,9 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -1804,11 +1804,11 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Enum
             Name:            NEEvaluateConnectionRuleAction
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            action
         JsName:          action
@@ -1873,8 +1873,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            probeURL
         JsName:          probeURL
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEOnDemandRule.h
@@ -1905,7 +1905,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSURL
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProbeURL:'
           JsName:          setProbeURL
@@ -1924,7 +1924,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSURL
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            useDNSServers
         JsName:          useDNSServers
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEOnDemandRule.h
@@ -1958,8 +1958,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setUseDNSServers:'
           JsName:          setUseDNSServers
@@ -1981,9 +1981,9 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -2141,8 +2141,8 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            parentURL
         JsName:          parentURL
@@ -2174,7 +2174,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSURL
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            request
         JsName:          request
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterFlow.h
@@ -2205,7 +2205,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSURLRequest
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            response
         JsName:          response
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterFlow.h
@@ -2236,8 +2236,8 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSURLResponse
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -2258,7 +2258,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEFilterControlProvider
     JsName:          NEFilterControlProvider
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterControlProvider.h
@@ -2290,13 +2290,13 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NEFilterFlow
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NEFilterControlVerdict
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'handleRemediationForFlow:completionHandler:'
         JsName:          handleRemediationForFlowCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterControlProvider.h
@@ -2314,13 +2314,13 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NEFilterFlow
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NEFilterControlVerdict
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            notifyRulesChanged
         JsName:          notifyRulesChanged
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterControlProvider.h
@@ -2336,7 +2336,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Void
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            remediationMap
         JsName:          remediationMap
@@ -2371,18 +2371,18 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Interface
                   JsName:          NSDictionary
                   TypeParameters:  
                     - Type:            Interface
                       JsName:          NSString
-                      WithProtocols:   []
+                      WithProtocols:   
                     - Type:            Interface
                       JsName:          NSObject
-                      WithProtocols:   []
-                  WithProtocols:   []
-              WithProtocols:   []
+                      WithProtocols:   
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setRemediationMap:'
           JsName:          setRemediationMap
@@ -2404,18 +2404,18 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Interface
                   JsName:          NSDictionary
                   TypeParameters:  
                     - Type:            Interface
                       JsName:          NSString
-                      WithProtocols:   []
+                      WithProtocols:   
                     - Type:            Interface
                       JsName:          NSObject
-                      WithProtocols:   []
-                  WithProtocols:   []
-              WithProtocols:   []
+                      WithProtocols:   
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            URLAppendStringMap
         JsName:          URLAppendStringMap
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterControlProvider.h
@@ -2449,11 +2449,11 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setURLAppendStringMap:'
           JsName:          setURLAppendStringMap
@@ -2475,13 +2475,13 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NEFilterProvider
   - Name:            NEFilterControlVerdict
     JsName:          NEFilterControlVerdict
@@ -2496,7 +2496,7 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
+    InstanceMethods: 
     StaticMethods:   
       - Name:            'allowVerdictWithUpdateRules:'
         JsName:          allowVerdictWithUpdateRules
@@ -2514,7 +2514,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterControlVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'dropVerdictWithUpdateRules:'
         JsName:          dropVerdictWithUpdateRules
@@ -2532,7 +2532,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterControlVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            updateRules
         JsName:          updateRules
@@ -2550,9 +2550,9 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterControlVerdict
-            WithProtocols:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -2587,10 +2587,10 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterDataVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NEFilterFlow
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'handleInboundDataFromFlow:readBytesStartOffset:readBytes:'
         JsName:          handleInboundDataFromFlowReadBytesStartOffsetReadBytes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -2607,14 +2607,14 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterDataVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NEFilterFlow
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            ULong
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'handleNewFlow:'
         JsName:          handleNewFlow
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -2631,10 +2631,10 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterNewFlowVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NEFilterFlow
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'handleOutboundDataCompleteForFlow:'
         JsName:          handleOutboundDataCompleteForFlow
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -2651,10 +2651,10 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterDataVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NEFilterFlow
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'handleOutboundDataFromFlow:readBytesStartOffset:readBytes:'
         JsName:          handleOutboundDataFromFlowReadBytesStartOffsetReadBytes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -2671,14 +2671,14 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterDataVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NEFilterFlow
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            ULong
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'handleRemediationForFlow:'
         JsName:          handleRemediationForFlow
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -2695,10 +2695,10 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterRemediationVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NEFilterFlow
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            handleRulesChanged
         JsName:          handleRulesChanged
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -2714,10 +2714,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Void
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NEFilterProvider
   - Name:            NEFilterDataVerdict
     JsName:          NEFilterDataVerdict
@@ -2732,7 +2732,7 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
+    InstanceMethods: 
     StaticMethods:   
       - Name:            allowVerdict
         JsName:          allowVerdict
@@ -2750,7 +2750,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterDataVerdict
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'dataVerdictWithPassBytes:peekBytes:'
         JsName:          dataVerdictWithPassBytesPeekBytes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -2767,7 +2767,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterDataVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            ULong
           - Type:            ULong
       - Name:            dropVerdict
@@ -2786,7 +2786,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterDataVerdict
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            needRulesVerdict
         JsName:          needRulesVerdict
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -2803,7 +2803,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterDataVerdict
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'remediateVerdictWithRemediationURLMapKey:remediationButtonTextMapKey:'
         JsName:          remediateVerdictWithRemediationURLMapKeyRemediationButtonTextMapKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -2820,15 +2820,15 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterDataVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -2849,7 +2849,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEFilterFlow
     JsName:          NEFilterFlow
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterFlow.h
@@ -2863,8 +2863,8 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            direction
         JsName:          direction
@@ -2926,7 +2926,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            sourceAppUniqueIdentifier
         JsName:          sourceAppUniqueIdentifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterFlow.h
@@ -2957,7 +2957,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            sourceAppVersion
         JsName:          sourceAppVersion
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterFlow.h
@@ -2988,7 +2988,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            URL
         JsName:          URL
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterFlow.h
@@ -3019,8 +3019,8 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSURL
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -3059,7 +3059,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'removeFromPreferencesWithCompletionHandler:'
         JsName:          removeFromPreferencesWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterManager.h
@@ -3080,7 +3080,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'saveToPreferencesWithCompletionHandler:'
         JsName:          saveToPreferencesWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterManager.h
@@ -3101,7 +3101,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
     StaticMethods:   
       - Name:            sharedManager
         JsName:          sharedManager
@@ -3119,7 +3119,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterManager
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            enabled
         JsName:          enabled
@@ -3197,7 +3197,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setLocalizedDescription:'
           JsName:          setLocalizedDescription
@@ -3216,7 +3216,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            providerConfiguration
         JsName:          providerConfiguration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterManager.h
@@ -3247,7 +3247,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEFilterProviderConfiguration
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProviderConfiguration:'
           JsName:          setProviderConfiguration
@@ -3266,9 +3266,9 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NEFilterProviderConfiguration
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NEFilterManagerError
     JsName:          NEFilterManagerError
@@ -3416,7 +3416,7 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
+    InstanceMethods: 
     StaticMethods:   
       - Name:            allowVerdict
         JsName:          allowVerdict
@@ -3434,7 +3434,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterNewFlowVerdict
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            dropVerdict
         JsName:          dropVerdict
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProvider.h
@@ -3451,7 +3451,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterNewFlowVerdict
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'filterDataVerdictWithFilterInbound:peekInboundBytes:filterOutbound:peekOutboundBytes:'
         JsName:          filterDataVerdictWithFilterInboundPeekInboundBytesFilterOutboundPeekOutboundBytes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProvider.h
@@ -3468,7 +3468,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterNewFlowVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
           - Type:            ULong
           - Type:            Bool
@@ -3489,7 +3489,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterNewFlowVerdict
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'remediateVerdictWithRemediationURLMapKey:remediationButtonTextMapKey:'
         JsName:          remediateVerdictWithRemediationURLMapKeyRemediationButtonTextMapKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProvider.h
@@ -3506,13 +3506,13 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterNewFlowVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'URLAppendStringVerdictWithMapKey:'
         JsName:          URLAppendStringVerdictWithMapKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProvider.h
@@ -3529,12 +3529,12 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterNewFlowVerdict
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -3609,7 +3609,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NEFilterReport
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'startFilterWithCompletionHandler:'
         JsName:          startFilterWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProvider.h
@@ -3630,7 +3630,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'stopFilterWithReason:completionHandler:'
         JsName:          stopFilterWithReasonCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProvider.h
@@ -3651,7 +3651,7 @@ Items:
           - Type:            Block
             Signature:       
               - Type:            Void
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            filterConfiguration
         JsName:          filterConfiguration
@@ -3683,9 +3683,9 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEFilterProviderConfiguration
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NEProvider
   - Name:            NEFilterProviderConfiguration
     JsName:          NEFilterProviderConfiguration
@@ -3700,8 +3700,8 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            filterBrowsers
         JsName:          filterBrowsers
@@ -3825,7 +3825,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setIdentityReference:'
           JsName:          setIdentityReference
@@ -3844,7 +3844,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            organization
         JsName:          organization
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProviderConfiguration.h
@@ -3875,7 +3875,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setOrganization:'
           JsName:          setOrganization
@@ -3894,7 +3894,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            passwordReference
         JsName:          passwordReference
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProviderConfiguration.h
@@ -3925,7 +3925,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setPasswordReference:'
           JsName:          setPasswordReference
@@ -3944,7 +3944,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            serverAddress
         JsName:          serverAddress
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProviderConfiguration.h
@@ -3975,7 +3975,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setServerAddress:'
           JsName:          setServerAddress
@@ -3994,7 +3994,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            username
         JsName:          username
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProviderConfiguration.h
@@ -4025,7 +4025,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setUsername:'
           JsName:          setUsername
@@ -4044,7 +4044,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            vendorConfiguration
         JsName:          vendorConfiguration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProviderConfiguration.h
@@ -4078,10 +4078,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Id
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setVendorConfiguration:'
           JsName:          setVendorConfiguration
@@ -4103,11 +4103,11 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Id
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -4128,7 +4128,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEFilterProviderRemediationMapRemediationURLs
     JsName:          NEFilterProviderRemediationMapRemediationURLs
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterProvider.h
@@ -4145,7 +4145,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEFilterRemediationVerdict
     JsName:          NEFilterRemediationVerdict
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -4159,7 +4159,7 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
+    InstanceMethods: 
     StaticMethods:   
       - Name:            allowVerdict
         JsName:          allowVerdict
@@ -4177,7 +4177,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterRemediationVerdict
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            dropVerdict
         JsName:          dropVerdict
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -4194,7 +4194,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterRemediationVerdict
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            needRulesVerdict
         JsName:          needRulesVerdict
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterDataProvider.h
@@ -4211,9 +4211,9 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEFilterRemediationVerdict
-            WithProtocols:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -4231,8 +4231,8 @@ Items:
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            action
         JsName:          action
@@ -4382,8 +4382,8 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEFilterFlow
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -4461,8 +4461,8 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            localEndpoint
         JsName:          localEndpoint
@@ -4494,7 +4494,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWEndpoint
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            remoteEndpoint
         JsName:          remoteEndpoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterFlow.h
@@ -4525,7 +4525,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWEndpoint
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            socketFamily
         JsName:          socketFamily
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFilterFlow.h
@@ -4613,7 +4613,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Int
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -4631,8 +4631,8 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            shouldReport
         JsName:          shouldReport
@@ -4680,7 +4680,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Bool
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -4698,8 +4698,8 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            sourceAppSigningIdentifier
         JsName:          sourceAppSigningIdentifier
@@ -4731,7 +4731,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            sourceAppUniqueIdentifier
         JsName:          sourceAppUniqueIdentifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEFlowMetaData.h
@@ -4762,8 +4762,8 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -4799,10 +4799,10 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NEHotspotHS20Settings
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NEHotspotEAPSettings
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithSSID:'
         JsName:          initWithSSID
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -4820,7 +4820,7 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithSSID:eapSettings:'
         JsName:          initWithSSIDEapSettings
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -4838,10 +4838,10 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NEHotspotEAPSettings
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithSSID:passphrase:isWEP:'
         JsName:          initWithSSIDPassphraseIsWEP
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -4859,10 +4859,10 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'initWithSSIDPrefix:'
         JsName:          initWithSSIDPrefix
@@ -4881,7 +4881,7 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithSSIDPrefix:passphrase:isWEP:'
         JsName:          initWithSSIDPrefixPassphraseIsWEP
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -4899,12 +4899,12 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            hidden
         JsName:          hidden
@@ -5028,7 +5028,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setLifeTimeInDays:'
           JsName:          setLifeTimeInDays
@@ -5047,7 +5047,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            SSID
         JsName:          SSID
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -5078,7 +5078,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            SSIDPrefix
         JsName:          SSIDPrefix
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -5109,8 +5109,8 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -5404,7 +5404,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEHotspotConfigurationErrorInternal
     JsName:          NEHotspotConfigurationErrorInternal
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -5618,13 +5618,13 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NEHotspotConfiguration
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'getConfiguredSSIDsWithCompletionHandler:'
         JsName:          getConfiguredSSIDsWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -5648,8 +5648,8 @@ Items:
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          NSString
-                    WithProtocols:   []
-                WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
       - Name:            'removeConfigurationForHS20DomainName:'
         JsName:          removeConfigurationForHS20DomainName
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -5667,7 +5667,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'removeConfigurationForSSID:'
         JsName:          removeConfigurationForSSID
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -5685,9 +5685,9 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
     StaticProperties: 
       - Name:            sharedManager
         JsName:          sharedManager
@@ -5717,8 +5717,8 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEHotspotConfigurationManager
-              WithProtocols:   []
-    Protocols:       []
+              WithProtocols:   
+    Protocols:       
     Base:            NSObject
   - Name:            NEHotspotConfigurationTTLSInnerAuthenticationType
     JsName:          NEHotspotConfigurationTTLSInnerAuthenticationType
@@ -5794,8 +5794,8 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NSArray
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            outerIdentity
         JsName:          outerIdentity
@@ -5827,7 +5827,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setOuterIdentity:'
           JsName:          setOuterIdentity
@@ -5846,7 +5846,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            password
         JsName:          password
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -5877,7 +5877,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setPassword:'
           JsName:          setPassword
@@ -5896,7 +5896,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            preferredTLSVersion
         JsName:          preferredTLSVersion
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -5978,8 +5978,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSNumber
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setSupportedEAPTypes:'
           JsName:          setSupportedEAPTypes
@@ -6001,8 +6001,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSNumber
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            tlsClientCertificateRequired
         JsName:          tlsClientCertificateRequired
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -6082,8 +6082,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setTrustedServerNames:'
           JsName:          setTrustedServerNames
@@ -6105,8 +6105,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            ttlsInnerAuthenticationType
         JsName:          ttlsInnerAuthenticationType
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -6185,7 +6185,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setUsername:'
           JsName:          setUsername
@@ -6204,8 +6204,8 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -6241,9 +6241,9 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            domainName
         JsName:          domainName
@@ -6275,7 +6275,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            MCCAndMNCs
         JsName:          MCCAndMNCs
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -6309,8 +6309,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setMCCAndMNCs:'
           JsName:          setMCCAndMNCs
@@ -6332,8 +6332,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            naiRealmNames
         JsName:          naiRealmNames
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -6367,8 +6367,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setNaiRealmNames:'
           JsName:          setNaiRealmNames
@@ -6390,8 +6390,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            roamingConsortiumOIs
         JsName:          roamingConsortiumOIs
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -6425,8 +6425,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setRoamingConsortiumOIs:'
           JsName:          setRoamingConsortiumOIs
@@ -6448,8 +6448,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            roamingEnabled
         JsName:          roamingEnabled
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotConfigurationManager.h
@@ -6496,7 +6496,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Bool
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -6514,7 +6514,7 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
+    InstanceMethods: 
     StaticMethods:   
       - Name:            'logoff:'
         JsName:          logoff
@@ -6533,7 +6533,7 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NEHotspotNetwork
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'registerWithOptions:queue:handler:'
         JsName:          registerWithOptionsQueueHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotHelper.h
@@ -6554,11 +6554,11 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSObject
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSObject
             WithProtocols:   
@@ -6568,7 +6568,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NEHotspotHelperCommand
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            supportedNetworkInterfaces
         JsName:          supportedNetworkInterfaces
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotHelper.h
@@ -6585,10 +6585,10 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NSArray
-            WithProtocols:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+            WithProtocols:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NEHotspotHelperCommand
     JsName:          NEHotspotHelperCommand
@@ -6620,7 +6620,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEHotspotHelperResponse
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            NEHotspotHelperResult
       - Name:            'createTCPConnection:'
@@ -6639,10 +6639,10 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NWTCPConnection
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NWEndpoint
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'createUDPSession:'
         JsName:          createUDPSession
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotHelper.h
@@ -6659,11 +6659,11 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NWUDPSession
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NWEndpoint
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            commandType
         JsName:          commandType
@@ -6725,7 +6725,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEHotspotNetwork
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            networkList
         JsName:          networkList
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotHelper.h
@@ -6759,10 +6759,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEHotspotNetwork
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NEHotspotHelperCommandType
     JsName:          NEHotspotHelperCommandType
@@ -6785,7 +6785,7 @@ Items:
       - kNEHotspotHelperCommandTypePresentUI: '4'
       - kNEHotspotHelperCommandTypeMaintain: '5'
       - kNEHotspotHelperCommandTypeLogoff: '6'
-    SwiftNameFields: []
+    SwiftNameFields: 
   - Name:            NEHotspotHelperConfidence
     JsName:          NEHotspotHelperConfidence
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotHelper.h
@@ -6803,7 +6803,7 @@ Items:
       - kNEHotspotHelperConfidenceNone: '0'
       - kNEHotspotHelperConfidenceLow: '1'
       - kNEHotspotHelperConfidenceHigh: '2'
-    SwiftNameFields: []
+    SwiftNameFields: 
   - Name:            NEHotspotHelperResponse
     JsName:          NEHotspotHelperResponse
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotHelper.h
@@ -6850,7 +6850,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NEHotspotNetwork
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'setNetworkList:'
         JsName:          setNetworkList
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotHelper.h
@@ -6871,12 +6871,12 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NEHotspotNetwork
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NEHotspotHelperResult
     JsName:          NEHotspotHelperResult
@@ -6899,7 +6899,7 @@ Items:
       - kNEHotspotHelperResultAuthenticationRequired: '4'
       - kNEHotspotHelperResultUnsupportedNetwork: '5'
       - kNEHotspotHelperResultTemporaryFailure: '6'
-    SwiftNameFields: []
+    SwiftNameFields: 
   - Name:            NEHotspotNetwork
     JsName:          NEHotspotNetwork
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotHelper.h
@@ -6948,8 +6948,8 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            autoJoined
         JsName:          autoJoined
@@ -7010,7 +7010,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            chosenHelper
         JsName:          chosenHelper
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotHelper.h
@@ -7157,9 +7157,9 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NEIPv4Route
     JsName:          NEIPv4Route
@@ -7192,10 +7192,10 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
     StaticMethods:   
       - Name:            defaultRoute
         JsName:          defaultRoute
@@ -7213,7 +7213,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEIPv4Route
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            destinationAddress
         JsName:          destinationAddress
@@ -7245,7 +7245,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            destinationSubnetMask
         JsName:          destinationSubnetMask
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEIPv4Settings.h
@@ -7276,7 +7276,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            gatewayAddress
         JsName:          gatewayAddress
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEIPv4Settings.h
@@ -7307,7 +7307,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setGatewayAddress:'
           JsName:          setGatewayAddress
@@ -7326,8 +7326,8 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -7366,16 +7366,16 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            addresses
         JsName:          addresses
@@ -7410,8 +7410,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            excludedRoutes
         JsName:          excludedRoutes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEIPv4Settings.h
@@ -7445,8 +7445,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEIPv4Route
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setExcludedRoutes:'
           JsName:          setExcludedRoutes
@@ -7468,8 +7468,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEIPv4Route
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            includedRoutes
         JsName:          includedRoutes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEIPv4Settings.h
@@ -7503,8 +7503,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEIPv4Route
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setIncludedRoutes:'
           JsName:          setIncludedRoutes
@@ -7526,8 +7526,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEIPv4Route
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            subnetMasks
         JsName:          subnetMasks
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEIPv4Settings.h
@@ -7561,9 +7561,9 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -7599,10 +7599,10 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSNumber
-            WithProtocols:   []
+            WithProtocols:   
     StaticMethods:   
       - Name:            defaultRoute
         JsName:          defaultRoute
@@ -7620,7 +7620,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEIPv6Route
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            destinationAddress
         JsName:          destinationAddress
@@ -7652,7 +7652,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            destinationNetworkPrefixLength
         JsName:          destinationNetworkPrefixLength
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEIPv6Settings.h
@@ -7683,7 +7683,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            gatewayAddress
         JsName:          gatewayAddress
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEIPv6Settings.h
@@ -7714,7 +7714,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setGatewayAddress:'
           JsName:          setGatewayAddress
@@ -7733,8 +7733,8 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -7773,16 +7773,16 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSNumber
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            addresses
         JsName:          addresses
@@ -7817,8 +7817,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            excludedRoutes
         JsName:          excludedRoutes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEIPv6Settings.h
@@ -7852,8 +7852,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEIPv6Route
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setExcludedRoutes:'
           JsName:          setExcludedRoutes
@@ -7875,8 +7875,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEIPv6Route
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            includedRoutes
         JsName:          includedRoutes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEIPv6Settings.h
@@ -7910,8 +7910,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEIPv6Route
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setIncludedRoutes:'
           JsName:          setIncludedRoutes
@@ -7933,8 +7933,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEIPv6Route
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            networkPrefixLengths
         JsName:          networkPrefixLengths
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEIPv6Settings.h
@@ -7968,9 +7968,9 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSNumber
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -8027,8 +8027,8 @@ Items:
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            action
         JsName:          action
@@ -8093,8 +8093,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setDNSSearchDomainMatch:'
           JsName:          setDNSSearchDomainMatch
@@ -8116,8 +8116,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            DNSServerAddressMatch
         JsName:          DNSServerAddressMatch
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEOnDemandRule.h
@@ -8151,8 +8151,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setDNSServerAddressMatch:'
           JsName:          setDNSServerAddressMatch
@@ -8174,8 +8174,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            interfaceTypeMatch
         JsName:          interfaceTypeMatch
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEOnDemandRule.h
@@ -8254,7 +8254,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSURL
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProbeURL:'
           JsName:          setProbeURL
@@ -8273,7 +8273,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSURL
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            SSIDMatch
         JsName:          SSIDMatch
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEOnDemandRule.h
@@ -8307,8 +8307,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setSSIDMatch:'
           JsName:          setSSIDMatch
@@ -8330,9 +8330,9 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -8425,11 +8425,11 @@ Items:
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    InstanceMethods: 
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NEOnDemandRule
   - Name:            NEOnDemandRuleDisconnect
     JsName:          NEOnDemandRuleDisconnect
@@ -8444,11 +8444,11 @@ Items:
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    InstanceMethods: 
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NEOnDemandRule
   - Name:            NEOnDemandRuleEvaluateConnection
     JsName:          NEOnDemandRuleEvaluateConnection
@@ -8463,8 +8463,8 @@ Items:
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            connectionRules
         JsName:          connectionRules
@@ -8499,8 +8499,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEEvaluateConnectionRule
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setConnectionRules:'
           JsName:          setConnectionRules
@@ -8522,10 +8522,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEEvaluateConnectionRule
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NEOnDemandRule
   - Name:            NEOnDemandRuleIgnore
     JsName:          NEOnDemandRuleIgnore
@@ -8540,11 +8540,11 @@ Items:
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    InstanceMethods: 
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NEOnDemandRule
   - Name:            NEOnDemandRuleInterfaceType
     JsName:          NEOnDemandRuleInterfaceType
@@ -8642,9 +8642,9 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            UChar
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            data
         JsName:          data
@@ -8676,7 +8676,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            metadata
         JsName:          metadata
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacket.h
@@ -8707,7 +8707,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEFlowMetaData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            protocolFamily
         JsName:          protocolFamily
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacket.h
@@ -8737,7 +8737,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            UChar
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -8779,8 +8779,8 @@ Items:
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          NEPacket
-                    WithProtocols:   []
-                WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
       - Name:            'readPacketsWithCompletionHandler:'
         JsName:          readPacketsWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacketTunnelFlow.h
@@ -8804,15 +8804,15 @@ Items:
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          NSData
-                    WithProtocols:   []
-                WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSArray
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          NSNumber
-                    WithProtocols:   []
-                WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
       - Name:            'writePacketObjects:'
         JsName:          writePacketObjects
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacketTunnelFlow.h
@@ -8833,8 +8833,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NEPacket
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'writePackets:withProtocols:'
         JsName:          writePacketsWithProtocols
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacketTunnelFlow.h
@@ -8855,19 +8855,19 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSNumber
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NEPacketTunnelNetworkSettings
     JsName:          NEPacketTunnelNetworkSettings
@@ -8882,8 +8882,8 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            IPv4Settings
         JsName:          IPv4Settings
@@ -8915,7 +8915,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEIPv4Settings
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setIPv4Settings:'
           JsName:          setIPv4Settings
@@ -8934,7 +8934,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NEIPv4Settings
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            IPv6Settings
         JsName:          IPv6Settings
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacketTunnelNetworkSettings.h
@@ -8965,7 +8965,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEIPv6Settings
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setIPv6Settings:'
           JsName:          setIPv6Settings
@@ -8984,7 +8984,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NEIPv6Settings
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            MTU
         JsName:          MTU
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacketTunnelNetworkSettings.h
@@ -9015,7 +9015,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setMTU:'
           JsName:          setMTU
@@ -9034,7 +9034,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            tunnelOverheadBytes
         JsName:          tunnelOverheadBytes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacketTunnelNetworkSettings.h
@@ -9065,7 +9065,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setTunnelOverheadBytes:'
           JsName:          setTunnelOverheadBytes
@@ -9084,9 +9084,9 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NETunnelNetworkSettings
   - Name:            NEPacketTunnelProvider
     JsName:          NEPacketTunnelProvider
@@ -9119,7 +9119,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'createTCPConnectionThroughTunnelToEndpoint:enableTLS:TLSParameters:delegate:'
         JsName:          createTCPConnectionThroughTunnelToEndpointEnableTLSTLSParametersDelegate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacketTunnelProvider.h
@@ -9136,16 +9136,16 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NWTCPConnection
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NWEndpoint
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
           - Type:            Interface
             JsName:          NWTLSParameters
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'createUDPSessionThroughTunnelToEndpoint:fromEndpoint:'
         JsName:          createUDPSessionThroughTunnelToEndpointFromEndpoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacketTunnelProvider.h
@@ -9162,13 +9162,13 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NWUDPSession
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NWEndpoint
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NWHostEndpoint
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'startTunnelWithOptions:completionHandler:'
         JsName:          startTunnelWithOptionsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacketTunnelProvider.h
@@ -9189,17 +9189,17 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSObject
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'stopTunnelWithReason:completionHandler:'
         JsName:          stopTunnelWithReasonCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEPacketTunnelProvider.h
@@ -9220,7 +9220,7 @@ Items:
           - Type:            Block
             Signature:       
               - Type:            Void
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            packetFlow
         JsName:          packetFlow
@@ -9252,9 +9252,9 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEPacketTunnelFlow
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NETunnelProvider
   - Name:            NEProvider
     JsName:          NEProvider
@@ -9286,16 +9286,16 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NWTCPConnection
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NWEndpoint
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
           - Type:            Interface
             JsName:          NWTLSParameters
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'createUDPSessionToEndpoint:fromEndpoint:'
         JsName:          createUDPSessionToEndpointFromEndpoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEProvider.h
@@ -9312,13 +9312,13 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NWUDPSession
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NWEndpoint
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NWHostEndpoint
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'displayMessage:completionHandler:'
         JsName:          displayMessageCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEProvider.h
@@ -9336,7 +9336,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -9374,7 +9374,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Void
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            defaultPath
         JsName:          defaultPath
@@ -9406,9 +9406,9 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWPath
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NEProviderStopReason
     JsName:          NEProviderStopReason
@@ -9713,9 +9713,9 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Long
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            address
         JsName:          address
@@ -9747,7 +9747,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            authenticationRequired
         JsName:          authenticationRequired
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEProxySettings.h
@@ -9824,7 +9824,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setPassword:'
           JsName:          setPassword
@@ -9843,7 +9843,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            port
         JsName:          port
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEProxySettings.h
@@ -9903,7 +9903,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setUsername:'
           JsName:          setUsername
@@ -9922,8 +9922,8 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -9941,8 +9941,8 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            autoProxyConfigurationEnabled
         JsName:          autoProxyConfigurationEnabled
@@ -10023,8 +10023,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setExceptionList:'
           JsName:          setExceptionList
@@ -10046,8 +10046,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            excludeSimpleHostnames
         JsName:          excludeSimpleHostnames
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEProxySettings.h
@@ -10216,7 +10216,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEProxyServer
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setHTTPServer:'
           JsName:          setHTTPServer
@@ -10235,7 +10235,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NEProxyServer
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            HTTPSServer
         JsName:          HTTPSServer
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEProxySettings.h
@@ -10266,7 +10266,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEProxyServer
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setHTTPSServer:'
           JsName:          setHTTPSServer
@@ -10285,7 +10285,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NEProxyServer
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            matchDomains
         JsName:          matchDomains
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEProxySettings.h
@@ -10319,8 +10319,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setMatchDomains:'
           JsName:          setMatchDomains
@@ -10342,8 +10342,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            proxyAutoConfigurationJavaScript
         JsName:          proxyAutoConfigurationJavaScript
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEProxySettings.h
@@ -10374,7 +10374,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProxyAutoConfigurationJavaScript:'
           JsName:          setProxyAutoConfigurationJavaScript
@@ -10393,7 +10393,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            proxyAutoConfigurationURL
         JsName:          proxyAutoConfigurationURL
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEProxySettings.h
@@ -10424,7 +10424,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSURL
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProxyAutoConfigurationURL:'
           JsName:          setProxyAutoConfigurationURL
@@ -10443,8 +10443,8 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSURL
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -10540,8 +10540,8 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            DNSSettings
         JsName:          DNSSettings
@@ -10573,7 +10573,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEDNSSettings
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setDNSSettings:'
           JsName:          setDNSSettings
@@ -10592,7 +10592,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NEDNSSettings
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            proxySettings
         JsName:          proxySettings
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NETunnelNetworkSettings.h
@@ -10623,7 +10623,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEProxySettings
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProxySettings:'
           JsName:          setProxySettings
@@ -10642,7 +10642,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NEProxySettings
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            tunnelRemoteAddress
         JsName:          tunnelRemoteAddress
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NETunnelNetworkSettings.h
@@ -10673,8 +10673,8 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -10710,13 +10710,13 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'setTunnelNetworkSettings:completionHandler:'
         JsName:          setTunnelNetworkSettingsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NETunnelProvider.h
@@ -10734,14 +10734,14 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NETunnelNetworkSettings
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            appRules
         JsName:          appRules
@@ -10776,8 +10776,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEAppRule
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            protocolConfiguration
         JsName:          protocolConfiguration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NETunnelProvider.h
@@ -10808,7 +10808,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEVPNProtocol
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            reasserting
         JsName:          reasserting
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NETunnelProvider.h
@@ -10885,8 +10885,8 @@ Items:
           Signature:       
             - Type:            Enum
               Name:            NETunnelProviderRoutingMethod
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NEProvider
   - Name:            NETunnelProviderError
     JsName:          NETunnelProviderError
@@ -10925,7 +10925,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NETunnelProviderErrorNetworkSettingsCanceled
     JsName:          NETunnelProviderErrorNetworkSettingsCanceled
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NETunnelProvider.h
@@ -10998,8 +10998,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NEAppRule
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
     StaticMethods:   
       - Name:            'loadAllFromPreferencesWithCompletionHandler:'
         JsName:          loadAllFromPreferencesWithCompletionHandler
@@ -11024,11 +11024,11 @@ Items:
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          NETunnelProviderManager
-                    WithProtocols:   []
-                WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
     InstanceProperties: 
       - Name:            routingMethod
         JsName:          routingMethod
@@ -11060,8 +11060,8 @@ Items:
           Signature:       
             - Type:            Enum
               Name:            NETunnelProviderRoutingMethod
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NEVPNManager
   - Name:            NETunnelProviderProtocol
     JsName:          NETunnelProviderProtocol
@@ -11076,8 +11076,8 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            providerBundleIdentifier
         JsName:          providerBundleIdentifier
@@ -11109,7 +11109,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProviderBundleIdentifier:'
           JsName:          setProviderBundleIdentifier
@@ -11128,7 +11128,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            providerConfiguration
         JsName:          providerConfiguration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NETunnelProviderProtocol.h
@@ -11162,10 +11162,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Id
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setProviderConfiguration:'
           JsName:          setProviderConfiguration
@@ -11187,12 +11187,12 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Id
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NEVPNProtocol
   - Name:            NETunnelProviderRoutingMethod
     JsName:          NETunnelProviderRoutingMethod
@@ -11272,18 +11272,18 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'startTunnelWithOptions:andReturnError:'
         JsName:          startTunnelWithOptionsAndReturnError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NETunnelProviderSession.h
@@ -11304,15 +11304,15 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            stopTunnel
         JsName:          stopTunnel
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NETunnelProviderSession.h
@@ -11328,10 +11328,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Void
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NEVPNConnection
   - Name:            NEVPNConfigurationChangeNotification
     JsName:          NEVPNConfigurationChangeNotification
@@ -11349,7 +11349,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEVPNConnection
     JsName:          NEVPNConnection
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNConnection.h
@@ -11383,7 +11383,7 @@ Items:
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'startVPNTunnelWithOptions:andReturnError:'
         JsName:          startVPNTunnelWithOptionsAndReturnError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNConnection.h
@@ -11404,16 +11404,16 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSObject
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            stopVPNTunnel
         JsName:          stopVPNTunnel
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNConnection.h
@@ -11429,7 +11429,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Void
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            connectedDate
         JsName:          connectedDate
@@ -11461,7 +11461,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            manager
         JsName:          manager
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNConnection.h
@@ -11492,7 +11492,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEVPNManager
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            status
         JsName:          status
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNConnection.h
@@ -11523,8 +11523,8 @@ Items:
           Signature:       
             - Type:            Enum
               Name:            NEVPNStatus
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NEVPNConnectionStartOptionPassword
     JsName:          NEVPNConnectionStartOptionPassword
@@ -11542,7 +11542,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEVPNConnectionStartOptionUsername
     JsName:          NEVPNConnectionStartOptionUsername
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNConnection.h
@@ -11559,7 +11559,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEVPNError
     JsName:          NEVPNError
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNManager.h
@@ -11681,7 +11681,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEVPNIKEAuthenticationMethod
     JsName:          NEVPNIKEAuthenticationMethod
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocolIPSec.h
@@ -12345,8 +12345,8 @@ Items:
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            diffieHellmanGroup
         JsName:          diffieHellmanGroup
@@ -12538,7 +12538,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Int
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -12652,7 +12652,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'removeFromPreferencesWithCompletionHandler:'
         JsName:          removeFromPreferencesWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNManager.h
@@ -12673,7 +12673,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'saveToPreferencesWithCompletionHandler:'
         JsName:          saveToPreferencesWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNManager.h
@@ -12694,7 +12694,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
     StaticMethods:   
       - Name:            sharedManager
         JsName:          sharedManager
@@ -12712,7 +12712,7 @@ Items:
         Signature:       
           - Type:            Interface
             JsName:          NEVPNManager
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            connection
         JsName:          connection
@@ -12744,7 +12744,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEVPNConnection
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            enabled
         JsName:          enabled
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNManager.h
@@ -12821,7 +12821,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setLocalizedDescription:'
           JsName:          setLocalizedDescription
@@ -12840,7 +12840,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            onDemandEnabled
         JsName:          onDemandEnabled
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNManager.h
@@ -12920,8 +12920,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEOnDemandRule
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setOnDemandRules:'
           JsName:          setOnDemandRules
@@ -12943,8 +12943,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NEOnDemandRule
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            protocol
         JsName:          protocol
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNManager.h
@@ -12975,7 +12975,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEVPNProtocol
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProtocol:'
           JsName:          setProtocol
@@ -12994,7 +12994,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NEVPNProtocol
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            protocolConfiguration
         JsName:          protocolConfiguration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNManager.h
@@ -13025,7 +13025,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEVPNProtocol
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProtocolConfiguration:'
           JsName:          setProtocolConfiguration
@@ -13044,9 +13044,9 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NEVPNProtocol
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NEVPNProtocol
     JsName:          NEVPNProtocol
@@ -13061,8 +13061,8 @@ Items:
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            disconnectOnSleep
         JsName:          disconnectOnSleep
@@ -13140,7 +13140,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setIdentityData:'
           JsName:          setIdentityData
@@ -13159,7 +13159,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            identityDataPassword
         JsName:          identityDataPassword
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocol.h
@@ -13190,7 +13190,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setIdentityDataPassword:'
           JsName:          setIdentityDataPassword
@@ -13209,7 +13209,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            identityReference
         JsName:          identityReference
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocol.h
@@ -13240,7 +13240,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setIdentityReference:'
           JsName:          setIdentityReference
@@ -13259,7 +13259,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            passwordReference
         JsName:          passwordReference
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocol.h
@@ -13290,7 +13290,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setPasswordReference:'
           JsName:          setPasswordReference
@@ -13309,7 +13309,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            proxySettings
         JsName:          proxySettings
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocol.h
@@ -13340,7 +13340,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEProxySettings
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setProxySettings:'
           JsName:          setProxySettings
@@ -13359,7 +13359,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NEProxySettings
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            serverAddress
         JsName:          serverAddress
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocol.h
@@ -13390,7 +13390,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setServerAddress:'
           JsName:          setServerAddress
@@ -13409,7 +13409,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            username
         JsName:          username
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocol.h
@@ -13440,7 +13440,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setUsername:'
           JsName:          setUsername
@@ -13459,8 +13459,8 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -13478,8 +13478,8 @@ Items:
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            certificateType
         JsName:          certificateType
@@ -13559,7 +13559,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEVPNIKEv2SecurityAssociationParameters
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            deadPeerDetectionRate
         JsName:          deadPeerDetectionRate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocolIKEv2.h
@@ -13868,7 +13868,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NEVPNIKEv2SecurityAssociationParameters
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            maximumTLSVersion
         JsName:          maximumTLSVersion
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocolIKEv2.h
@@ -13995,7 +13995,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setServerCertificateCommonName:'
           JsName:          setServerCertificateCommonName
@@ -14014,7 +14014,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            serverCertificateIssuerCommonName
         JsName:          serverCertificateIssuerCommonName
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocolIKEv2.h
@@ -14045,7 +14045,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setServerCertificateIssuerCommonName:'
           JsName:          setServerCertificateIssuerCommonName
@@ -14064,7 +14064,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            strictRevocationCheck
         JsName:          strictRevocationCheck
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocolIKEv2.h
@@ -14157,8 +14157,8 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Bool
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NEVPNProtocolIPSec
   - Name:            NEVPNProtocolIPSec
     JsName:          NEVPNProtocolIPSec
@@ -14173,8 +14173,8 @@ Items:
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            authenticationMethod
         JsName:          authenticationMethod
@@ -14254,7 +14254,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setLocalIdentifier:'
           JsName:          setLocalIdentifier
@@ -14273,7 +14273,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            remoteIdentifier
         JsName:          remoteIdentifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocolIPSec.h
@@ -14304,7 +14304,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setRemoteIdentifier:'
           JsName:          setRemoteIdentifier
@@ -14323,7 +14323,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            sharedSecretReference
         JsName:          sharedSecretReference
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocolIPSec.h
@@ -14354,7 +14354,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setSharedSecretReference:'
           JsName:          setSharedSecretReference
@@ -14373,7 +14373,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            useExtendedAuthentication
         JsName:          useExtendedAuthentication
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNProtocolIPSec.h
@@ -14420,8 +14420,8 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Bool
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NEVPNProtocol
   - Name:            NEVPNStatus
     JsName:          NEVPNStatus
@@ -14492,7 +14492,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NEVPNStatusDisconnected
     JsName:          NEVPNStatusDisconnected
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEVPNConnection.h
@@ -14558,7 +14558,7 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
+    InstanceMethods: 
     StaticMethods:   
       - Name:            'endpointWithName:type:domain:'
         JsName:          endpointWithNameTypeDomain
@@ -14577,13 +14577,13 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            domain
         JsName:          domain
@@ -14615,7 +14615,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            name
         JsName:          name
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWBonjourServiceEndpoint.h
@@ -14646,7 +14646,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            type
         JsName:          type
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWBonjourServiceEndpoint.h
@@ -14677,9 +14677,9 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NWEndpoint
   - Name:            NWEndpoint
     JsName:          NWEndpoint
@@ -14694,10 +14694,10 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+    InstanceMethods: 
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -14715,7 +14715,7 @@ Items:
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
+    InstanceMethods: 
     StaticMethods:   
       - Name:            'endpointWithHostname:port:'
         JsName:          endpointWithHostnamePort
@@ -14734,10 +14734,10 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            hostname
         JsName:          hostname
@@ -14769,7 +14769,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            port
         JsName:          port
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWHostEndpoint.h
@@ -14800,9 +14800,9 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NWEndpoint
   - Name:            NWPath
     JsName:          NWPath
@@ -14835,8 +14835,8 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NWPath
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            expensive
         JsName:          expensive
@@ -14897,8 +14897,8 @@ Items:
           Signature:       
             - Type:            Enum
               Name:            NWPathStatus
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NWPathStatus
     JsName:          NWPathStatus
@@ -15021,7 +15021,7 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NWTCPConnection
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'readLength:completionHandler:'
         JsName:          readLengthCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTCPConnection.h
@@ -15043,10 +15043,10 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'readMinimumLength:maximumLength:completionHandler:'
         JsName:          readMinimumLengthMaximumLengthCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTCPConnection.h
@@ -15069,10 +15069,10 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            writeClose
         JsName:          writeClose
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTCPConnection.h
@@ -15105,14 +15105,14 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            connectedPath
         JsName:          connectedPath
@@ -15144,7 +15144,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWPath
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            endpoint
         JsName:          endpoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTCPConnection.h
@@ -15175,7 +15175,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWEndpoint
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            error
         JsName:          error
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTCPConnection.h
@@ -15206,7 +15206,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            hasBetterPath
         JsName:          hasBetterPath
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTCPConnection.h
@@ -15266,7 +15266,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWEndpoint
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            remoteAddress
         JsName:          remoteAddress
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTCPConnection.h
@@ -15297,7 +15297,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWEndpoint
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            state
         JsName:          state
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTCPConnection.h
@@ -15358,7 +15358,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            viable
         JsName:          viable
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTCPConnection.h
@@ -15388,8 +15388,8 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Bool
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NWTCPConnectionAuthenticationDelegate
     JsName:          NWTCPConnectionAuthenticationDelegate
@@ -15420,13 +15420,13 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NWTCPConnection
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -15449,7 +15449,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NWTCPConnection
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -15460,8 +15460,8 @@ Items:
                 JsName:          NSArray
                 TypeParameters:  
                   - Type:            Id
-                    WithProtocols:   []
-                WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
       - Name:            'shouldEvaluateTrustForConnection:'
         JsName:          shouldEvaluateTrustForConnection
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTCPConnection.h
@@ -15478,7 +15478,7 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NWTCPConnection
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'shouldProvideIdentityForConnection:'
         JsName:          shouldProvideIdentityForConnection
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTCPConnection.h
@@ -15495,10 +15495,10 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NWTCPConnection
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            NWTCPConnectionState
@@ -15618,8 +15618,8 @@ Items:
           IsFramework:     true
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            maximumSSLProtocolVersion
         JsName:          maximumSSLProtocolVersion
@@ -15746,8 +15746,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSNumber
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setSSLCipherSuites:'
           JsName:          setSSLCipherSuites
@@ -15769,8 +15769,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSNumber
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            TLSSessionID
         JsName:          TLSSessionID
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWTLSParameters.h
@@ -15801,7 +15801,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setTLSSessionID:'
           JsName:          setTLSSessionID
@@ -15820,9 +15820,9 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NWUDPSession
     JsName:          NWUDPSession
@@ -15870,7 +15870,7 @@ Items:
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NWUDPSession
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'setReadHandler:maxDatagrams:'
         JsName:          setReadHandlerMaxDatagrams
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWUDPSession.h
@@ -15894,11 +15894,11 @@ Items:
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          NSData
-                    WithProtocols:   []
-                WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
           - Type:            ULong
       - Name:            tryNextResolvedEndpoint
         JsName:          tryNextResolvedEndpoint
@@ -15932,13 +15932,13 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'writeMultipleDatagrams:completionHandler:'
         JsName:          writeMultipleDatagramsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWUDPSession.h
@@ -15959,15 +15959,15 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            currentPath
         JsName:          currentPath
@@ -15999,7 +15999,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWPath
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            endpoint
         JsName:          endpoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWUDPSession.h
@@ -16030,7 +16030,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWEndpoint
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            hasBetterPath
         JsName:          hasBetterPath
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWUDPSession.h
@@ -16119,7 +16119,7 @@ Items:
           Signature:       
             - Type:            Interface
               JsName:          NWEndpoint
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            state
         JsName:          state
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NWUDPSession.h
@@ -16179,8 +16179,8 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Bool
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NWUDPSessionState
     JsName:          NWUDPSessionState
@@ -16433,7 +16433,7 @@ Items:
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            kNEHotspotHelperResultAuthenticationRequired
     JsName:          kNEHotspotHelperResultAuthenticationRequired
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NEHotspotHelper.h

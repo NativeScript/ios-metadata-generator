@@ -14,7 +14,7 @@ Items:
       FullName:        Twitter.TWRequest
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    5.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -26,20 +26,20 @@ Items:
           FullName:        Twitter.TWRequest
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithURL:parameters:requestMethod:'
         JsName:          initWithURLParametersRequestMethod
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Twitter.framework/Headers/TWRequest.h
@@ -47,17 +47,17 @@ Items:
           FullName:        Twitter.TWRequest
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            SLRequestMethod
       - Name:            'performRequestWithHandler:'
@@ -67,7 +67,7 @@ Items:
           FullName:        Twitter.TWRequest
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -77,13 +77,13 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSHTTPURLResponse
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            signedURLRequest
         JsName:          signedURLRequest
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Twitter.framework/Headers/TWRequest.h
@@ -91,14 +91,14 @@ Items:
           FullName:        Twitter.TWRequest
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSURLRequest
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            account
         JsName:          account
@@ -107,7 +107,7 @@ Items:
           FullName:        Twitter.TWRequest
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -118,13 +118,13 @@ Items:
             FullName:        Twitter.TWRequest
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          ACAccount
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setAccount:'
           JsName:          setAccount
@@ -133,14 +133,14 @@ Items:
             FullName:        Twitter.TWRequest
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          ACAccount
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            parameters
         JsName:          parameters
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Twitter.framework/Headers/TWRequest.h
@@ -148,7 +148,7 @@ Items:
           FullName:        Twitter.TWRequest
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -159,13 +159,13 @@ Items:
             FullName:        Twitter.TWRequest
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDictionary
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            requestMethod
         JsName:          requestMethod
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Twitter.framework/Headers/TWRequest.h
@@ -173,7 +173,7 @@ Items:
           FullName:        Twitter.TWRequest
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -184,7 +184,7 @@ Items:
             FullName:        Twitter.TWRequest
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -197,7 +197,7 @@ Items:
           FullName:        Twitter.TWRequest
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -208,15 +208,15 @@ Items:
             FullName:        Twitter.TWRequest
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSURL
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            TWRequestMethodDELETE
     JsName:          TWRequestMethodDELETE
@@ -225,7 +225,7 @@ Items:
       FullName:        Twitter.TWRequest
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -236,7 +236,7 @@ Items:
       FullName:        Twitter.TWRequest
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -247,7 +247,7 @@ Items:
       FullName:        Twitter.TWRequest
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -258,7 +258,7 @@ Items:
       FullName:        Twitter.TWTweetComposeViewController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    5.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -270,14 +270,14 @@ Items:
           FullName:        Twitter.TWTweetComposeViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          UIImage
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'addURL:'
         JsName:          addURL
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Twitter.framework/Headers/TWTweetComposeViewController.h
@@ -285,14 +285,14 @@ Items:
           FullName:        Twitter.TWTweetComposeViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            removeAllImages
         JsName:          removeAllImages
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Twitter.framework/Headers/TWTweetComposeViewController.h
@@ -300,7 +300,7 @@ Items:
           FullName:        Twitter.TWTweetComposeViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -312,7 +312,7 @@ Items:
           FullName:        Twitter.TWTweetComposeViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -324,14 +324,14 @@ Items:
           FullName:        Twitter.TWTweetComposeViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
     StaticMethods:   
       - Name:            canSendTweet
         JsName:          canSendTweet
@@ -340,7 +340,7 @@ Items:
           FullName:        Twitter.TWTweetComposeViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -353,7 +353,7 @@ Items:
           FullName:        Twitter.TWTweetComposeViewController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -364,7 +364,7 @@ Items:
             FullName:        Twitter.TWTweetComposeViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -381,7 +381,7 @@ Items:
             FullName:        Twitter.TWTweetComposeViewController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -391,8 +391,8 @@ Items:
                 - Type:            Void
                 - Type:            Enum
                   Name:            SLComposeViewControllerResult
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            UIViewController
   - Name:            TWTweetComposeViewControllerResultCancelled
     JsName:          TWTweetComposeViewControllerResultCancelled
@@ -401,7 +401,7 @@ Items:
       FullName:        Twitter.TWTweetComposeViewController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -412,7 +412,7 @@ Items:
       FullName:        Twitter.TWTweetComposeViewController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'

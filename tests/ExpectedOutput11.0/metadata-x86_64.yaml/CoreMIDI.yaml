@@ -14,7 +14,7 @@ Items:
       FullName:        CoreMIDI.MIDICapabilityInquiry
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -55,7 +55,7 @@ Items:
       FullName:        CoreMIDI.MIDICapabilityInquiry
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -67,18 +67,18 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            name
         JsName:          name
@@ -87,7 +87,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -98,13 +98,13 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            profileID
         JsName:          profileID
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDICapabilityInquiry.h
@@ -112,7 +112,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -123,14 +123,14 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -141,7 +141,7 @@ Items:
       FullName:        CoreMIDI.MIDICapabilityInquiry
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -153,7 +153,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -163,16 +163,16 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          MIDICIProfile
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          MIDICIProfile
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            disabledProfiles
         JsName:          disabledProfiles
@@ -181,7 +181,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -192,7 +192,7 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -201,8 +201,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          MIDICIProfile
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            enabledProfiles
         JsName:          enabledProfiles
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDICapabilityInquiry.h
@@ -210,7 +210,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -221,7 +221,7 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -230,9 +230,9 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          MIDICIProfile
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -243,7 +243,7 @@ Items:
       FullName:        CoreMIDI.MIDICapabilityInquiry
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -255,20 +255,20 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          MIDICIProfile
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            UChar
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'enableProfile:onChannel:error:'
         JsName:          enableProfileOnChannelError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDICapabilityInquiry.h
@@ -276,20 +276,20 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          MIDICIProfile
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            UChar
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'getProperty:onChannel:responseHandler:'
         JsName:          getPropertyOnChannelResponseHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDICapabilityInquiry.h
@@ -297,28 +297,28 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            UChar
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          MIDICISession
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            UChar
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'hasProperty:onChannel:responseHandler:'
         JsName:          hasPropertyOnChannelResponseHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDICapabilityInquiry.h
@@ -326,28 +326,28 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            UChar
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          MIDICISession
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            UChar
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'initWithMIDIEntity:dataReadyHandler:'
         JsName:          initWithMIDIEntityDataReadyHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDICapabilityInquiry.h
@@ -355,7 +355,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -371,13 +371,13 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          MIDICIProfileState
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            UChar
       - Name:            'setProperty:onChannel:responseHandler:'
         JsName:          setPropertyOnChannelResponseHandler
@@ -386,29 +386,29 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            UChar
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          MIDICISession
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            UChar
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            deviceIdentification
         JsName:          deviceIdentification
@@ -417,7 +417,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -428,7 +428,7 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -442,7 +442,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -453,7 +453,7 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -465,7 +465,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -476,7 +476,7 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -485,11 +485,11 @@ Items:
                 - Type:            Void
                 - Type:            Interface
                   JsName:          MIDICISession
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            UChar
                 - Type:            Interface
                   JsName:          MIDICIProfile
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Bool
         Setter:          
           Name:            'setProfileChangedCallback:'
@@ -499,7 +499,7 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -509,11 +509,11 @@ Items:
                 - Type:            Void
                 - Type:            Interface
                   JsName:          MIDICISession
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            UChar
                 - Type:            Interface
                   JsName:          MIDICIProfile
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            Bool
       - Name:            propertyChangedCallback
         JsName:          propertyChangedCallback
@@ -522,7 +522,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -533,7 +533,7 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -542,11 +542,11 @@ Items:
                 - Type:            Void
                 - Type:            Interface
                   JsName:          MIDICISession
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            UChar
                 - Type:            Interface
                   JsName:          NSData
-                  WithProtocols:   []
+                  WithProtocols:   
         Setter:          
           Name:            'setPropertyChangedCallback:'
           JsName:          setPropertyChangedCallback
@@ -555,7 +555,7 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -565,11 +565,11 @@ Items:
                 - Type:            Void
                 - Type:            Interface
                   JsName:          MIDICISession
-                  WithProtocols:   []
+                  WithProtocols:   
                 - Type:            UChar
                 - Type:            Interface
                   JsName:          NSData
-                  WithProtocols:   []
+                  WithProtocols:   
       - Name:            supportsProfileCapability
         JsName:          supportsProfileCapability
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDICapabilityInquiry.h
@@ -577,7 +577,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -588,7 +588,7 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -600,7 +600,7 @@ Items:
           FullName:        CoreMIDI.MIDICapabilityInquiry
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -611,13 +611,13 @@ Items:
             FullName:        CoreMIDI.MIDICapabilityInquiry
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Bool
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MIDIChannelsWholePort
     JsName:          MIDIChannelsWholePort
@@ -626,7 +626,7 @@ Items:
       FullName:        CoreMIDI.MIDICapabilityInquiry
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
@@ -639,7 +639,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -672,7 +672,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -699,7 +699,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -713,7 +713,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -742,7 +742,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -779,7 +779,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -810,7 +810,7 @@ Items:
       FullName:        CoreMIDI.MIDISetup
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -833,7 +833,7 @@ Items:
       FullName:        CoreMIDI.MIDIDriver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -865,7 +865,7 @@ Items:
       FullName:        CoreMIDI.MIDIDriver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -879,7 +879,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -894,7 +894,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -908,7 +908,7 @@ Items:
       FullName:        CoreMIDI.MIDIDriver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -923,7 +923,7 @@ Items:
       FullName:        CoreMIDI.MIDIDriver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -937,7 +937,7 @@ Items:
       FullName:        CoreMIDI.MIDIDriver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -952,7 +952,7 @@ Items:
       FullName:        CoreMIDI.MIDIDriver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -966,7 +966,7 @@ Items:
       FullName:        CoreMIDI.MIDISetup
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -981,7 +981,7 @@ Items:
       FullName:        CoreMIDI.MIDIDriver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -1154,7 +1154,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1168,7 +1168,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1185,7 +1185,7 @@ Items:
       FullName:        CoreMIDI.MIDIDriver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1209,7 +1209,7 @@ Items:
       FullName:        CoreMIDI.MIDIDriver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1229,7 +1229,7 @@ Items:
       FullName:        CoreMIDI.MIDISetup
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1245,7 +1245,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1260,7 +1260,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1277,7 +1277,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1291,7 +1291,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1305,7 +1305,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1320,7 +1320,7 @@ Items:
       FullName:        CoreMIDI.MIDISetup
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1345,7 +1345,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1359,7 +1359,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1373,7 +1373,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1387,7 +1387,7 @@ Items:
       FullName:        CoreMIDI.MIDIDriver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1407,7 +1407,7 @@ Items:
       FullName:        CoreMIDI.MIDIDriver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
     Type:            Function
@@ -1422,7 +1422,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1436,7 +1436,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1449,7 +1449,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1462,7 +1462,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1475,7 +1475,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1488,7 +1488,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1502,7 +1502,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -1526,7 +1526,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1563,7 +1563,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -1594,14 +1594,14 @@ Items:
       FullName:        CoreMIDI.MIDINetworkSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MIDINetworkConnection
     JsName:          MIDINetworkConnection
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -1609,11 +1609,11 @@ Items:
       FullName:        CoreMIDI.MIDINetworkSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
+    InstanceMethods: 
     StaticMethods:   
       - Name:            'connectionWithHost:'
         JsName:          connectionWithHost
@@ -1622,14 +1622,14 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          MIDINetworkHost
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            host
         JsName:          host
@@ -1638,7 +1638,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1649,15 +1649,15 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MIDINetworkHost
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MIDINetworkConnectionPolicy
     JsName:          MIDINetworkConnectionPolicy
@@ -1666,7 +1666,7 @@ Items:
       FullName:        CoreMIDI.MIDINetworkSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -1684,7 +1684,7 @@ Items:
       FullName:        CoreMIDI.MIDINetworkSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -1695,7 +1695,7 @@ Items:
       FullName:        CoreMIDI.MIDINetworkSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -1706,7 +1706,7 @@ Items:
       FullName:        CoreMIDI.MIDINetworkSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -1717,7 +1717,7 @@ Items:
       FullName:        CoreMIDI.MIDINetworkSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1729,14 +1729,14 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          MIDINetworkHost
-            WithProtocols:   []
+            WithProtocols:   
     StaticMethods:   
       - Name:            'hostWithName:address:port:'
         JsName:          hostWithNameAddressPort
@@ -1745,17 +1745,17 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            ULong
       - Name:            'hostWithName:netService:'
         JsName:          hostWithNameNetService
@@ -1764,17 +1764,17 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSNetService
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'hostWithName:netServiceName:netServiceDomain:'
         JsName:          hostWithNameNetServiceNameNetServiceDomain
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -1782,20 +1782,20 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            address
         JsName:          address
@@ -1804,7 +1804,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1815,13 +1815,13 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            name
         JsName:          name
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -1829,7 +1829,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1840,13 +1840,13 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            netServiceDomain
         JsName:          netServiceDomain
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -1854,7 +1854,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1865,13 +1865,13 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            netServiceName
         JsName:          netServiceName
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -1879,7 +1879,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1890,13 +1890,13 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            port
         JsName:          port
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -1904,7 +1904,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1915,13 +1915,13 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            ULong
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MIDINetworkNotificationContactsDidChange
     JsName:          MIDINetworkNotificationContactsDidChange
@@ -1930,14 +1930,14 @@ Items:
       FullName:        CoreMIDI.MIDINetworkSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MIDINetworkNotificationSessionDidChange
     JsName:          MIDINetworkNotificationSessionDidChange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -1945,14 +1945,14 @@ Items:
       FullName:        CoreMIDI.MIDINetworkSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MIDINetworkSession
     JsName:          MIDINetworkSession
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -1960,7 +1960,7 @@ Items:
       FullName:        CoreMIDI.MIDINetworkSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1972,14 +1972,14 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          MIDINetworkConnection
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'addContact:'
         JsName:          addContact
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -1987,14 +1987,14 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          MIDINetworkHost
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            connections
         JsName:          connections
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -2002,7 +2002,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2011,8 +2011,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          MIDINetworkConnection
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            contacts
         JsName:          contacts
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -2020,7 +2020,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2029,8 +2029,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          MIDINetworkHost
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            destinationEndpoint
         JsName:          destinationEndpoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -2038,7 +2038,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2050,14 +2050,14 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          MIDINetworkConnection
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'removeContact:'
         JsName:          removeContact
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -2065,14 +2065,14 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          MIDINetworkHost
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            sourceEndpoint
         JsName:          sourceEndpoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -2080,7 +2080,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2093,13 +2093,13 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          MIDINetworkSession
-            WithProtocols:   []
+            WithProtocols:   
     InstanceProperties: 
       - Name:            connectionPolicy
         JsName:          connectionPolicy
@@ -2108,7 +2108,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2119,7 +2119,7 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2133,7 +2133,7 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2147,7 +2147,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2158,7 +2158,7 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2171,7 +2171,7 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2184,7 +2184,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2195,13 +2195,13 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            networkName
         JsName:          networkName
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -2209,7 +2209,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2220,13 +2220,13 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            networkPort
         JsName:          networkPort
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDINetworkSession.h
@@ -2234,7 +2234,7 @@ Items:
           FullName:        CoreMIDI.MIDINetworkSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2245,13 +2245,13 @@ Items:
             FullName:        CoreMIDI.MIDINetworkSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            ULong
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MIDINotification
     JsName:          MIDINotification
@@ -2260,7 +2260,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -2278,7 +2278,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -2289,7 +2289,7 @@ Items:
       - kMIDIMsgThruConnectionsChanged: '5'
       - kMIDIMsgSerialPortOwnerChanged: '6'
       - kMIDIMsgIOError: '7'
-    SwiftNameFields: []
+    SwiftNameFields: 
   - Name:            MIDIObjectAddRemoveNotification
     JsName:          MIDIObjectAddRemoveNotification
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h
@@ -2297,7 +2297,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -2329,7 +2329,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2350,7 +2350,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2372,7 +2372,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2394,7 +2394,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2414,7 +2414,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2434,7 +2434,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2456,7 +2456,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -2486,7 +2486,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2503,7 +2503,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2523,7 +2523,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2543,7 +2543,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2561,7 +2561,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2581,7 +2581,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -2594,7 +2594,7 @@ Items:
       - kMIDIObjectType_ExternalEntity: '17'
       - kMIDIObjectType_ExternalSource: '18'
       - kMIDIObjectType_ExternalDestination: '19'
-    SwiftNameFields: []
+    SwiftNameFields: 
   - Name:            MIDIOutputPortCreate
     JsName:          MIDIOutputPortCreate
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h
@@ -2602,7 +2602,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2622,7 +2622,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -2645,7 +2645,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -2667,7 +2667,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2698,7 +2698,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2720,7 +2720,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2738,7 +2738,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2753,7 +2753,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2767,7 +2767,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2786,7 +2786,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2799,7 +2799,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2819,7 +2819,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2837,7 +2837,7 @@ Items:
       FullName:        CoreMIDI.MIDISetup
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2851,7 +2851,7 @@ Items:
       FullName:        CoreMIDI.MIDISetup
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2865,7 +2865,7 @@ Items:
       FullName:        CoreMIDI.MIDISetup
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2879,7 +2879,7 @@ Items:
       FullName:        CoreMIDI.MIDISetup
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2893,7 +2893,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2913,7 +2913,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -2957,7 +2957,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2979,7 +2979,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -2993,7 +2993,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -3010,7 +3010,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3031,7 +3031,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3050,7 +3050,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -3167,7 +3167,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3185,7 +3185,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3202,7 +3202,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -3220,7 +3220,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -3230,7 +3230,7 @@ Items:
       - kMIDIControlType_14BitRPN: '3'
       - kMIDIControlType_7BitNRPN: '4'
       - kMIDIControlType_14BitNRPN: '5'
-    SwiftNameFields: []
+    SwiftNameFields: 
   - Name:            MIDITransformType
     JsName:          MIDITransformType
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIThruConnection.h
@@ -3238,7 +3238,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -3250,7 +3250,7 @@ Items:
       - kMIDITransform_MinValue: '10'
       - kMIDITransform_MaxValue: '11'
       - kMIDITransform_MapValue: '12'
-    SwiftNameFields: []
+    SwiftNameFields: 
   - Name:            MIDIValueMap
     JsName:          MIDIValueMap
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIThruConnection.h
@@ -3258,7 +3258,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -3275,7 +3275,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -3286,7 +3286,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '5'
@@ -3297,7 +3297,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -3308,7 +3308,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -3319,7 +3319,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'
@@ -3330,7 +3330,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -3341,7 +3341,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10843'
@@ -3352,7 +3352,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10830'
@@ -3363,7 +3363,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10831'
@@ -3374,7 +3374,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -3385,7 +3385,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10838'
@@ -3396,7 +3396,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '7'
@@ -3407,7 +3407,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -3418,7 +3418,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -3429,7 +3429,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'
@@ -3440,7 +3440,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '6'
@@ -3451,7 +3451,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -3462,7 +3462,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '5'
@@ -3473,7 +3473,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10833'
@@ -3484,7 +3484,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10837'
@@ -3495,7 +3495,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10844'
@@ -3506,7 +3506,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10842'
@@ -3517,7 +3517,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -3528,7 +3528,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -3539,7 +3539,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -3550,7 +3550,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '19'
@@ -3561,7 +3561,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '16'
@@ -3572,7 +3572,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '17'
@@ -3583,7 +3583,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
@@ -3597,7 +3597,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '18'
@@ -3608,7 +3608,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1'
@@ -3619,7 +3619,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -3630,7 +3630,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3645,7 +3645,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3660,7 +3660,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3675,7 +3675,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3690,7 +3690,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3705,7 +3705,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3720,7 +3720,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3735,7 +3735,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3750,7 +3750,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3765,7 +3765,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3780,7 +3780,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3795,7 +3795,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3810,7 +3810,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3825,7 +3825,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3840,7 +3840,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3855,7 +3855,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3870,7 +3870,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3885,7 +3885,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3900,7 +3900,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3915,7 +3915,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3930,7 +3930,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3945,7 +3945,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3960,7 +3960,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    13.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3975,7 +3975,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -3990,7 +3990,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4005,7 +4005,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4020,7 +4020,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4035,7 +4035,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4050,7 +4050,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4065,7 +4065,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4080,7 +4080,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4095,7 +4095,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4110,7 +4110,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4125,7 +4125,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4140,7 +4140,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4155,7 +4155,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4170,7 +4170,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4185,7 +4185,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4200,7 +4200,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4215,7 +4215,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4230,7 +4230,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4245,7 +4245,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4260,7 +4260,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4275,7 +4275,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4290,7 +4290,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.2
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -4305,7 +4305,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10839'
@@ -4316,7 +4316,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10840'
@@ -4327,7 +4327,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '8'
@@ -4338,7 +4338,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '8'
@@ -4349,7 +4349,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -4360,7 +4360,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -4371,7 +4371,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '12'
@@ -4382,7 +4382,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '11'
@@ -4393,7 +4393,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '10'
@@ -4404,7 +4404,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -4415,7 +4415,7 @@ Items:
       FullName:        CoreMIDI.MIDIThruConnection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '9'
@@ -4426,7 +4426,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10834'
@@ -4437,7 +4437,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10845'
@@ -4448,7 +4448,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10835'
@@ -4459,7 +4459,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10832'
@@ -4470,7 +4470,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10836'
@@ -4481,7 +4481,7 @@ Items:
       FullName:        CoreMIDI.MIDIServices
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-10841'

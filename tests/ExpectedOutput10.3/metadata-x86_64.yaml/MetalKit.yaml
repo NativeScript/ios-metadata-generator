@@ -14,7 +14,7 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -26,14 +26,14 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          MDLMesh
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
             WithProtocols:   
               - MTLDevice
@@ -41,7 +41,7 @@ Items:
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
     StaticMethods:   
       - Name:            'newMeshesFromAsset:device:sourceMeshes:error:'
         JsName:          newMeshesFromAssetDeviceSourceMeshesError
@@ -50,7 +50,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -59,11 +59,11 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          MTKMesh
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          MDLAsset
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
             WithProtocols:   
               - MTLDevice
@@ -74,13 +74,13 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          MDLMesh
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
     InstanceProperties: 
       - Name:            name
         JsName:          name
@@ -89,7 +89,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -100,13 +100,13 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setName:'
           JsName:          setName
@@ -115,14 +115,14 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            submeshes
         JsName:          submeshes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -130,7 +130,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -141,7 +141,7 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -150,8 +150,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          MTKSubmesh
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            vertexBuffers
         JsName:          vertexBuffers
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -159,7 +159,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -170,7 +170,7 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -179,8 +179,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          MTKMeshBuffer
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            vertexCount
         JsName:          vertexCount
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -188,7 +188,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -199,7 +199,7 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -211,7 +211,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -222,15 +222,15 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MDLVertexDescriptor
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MTKMeshBuffer
     JsName:          MTKMeshBuffer
@@ -239,12 +239,12 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            allocator
         JsName:          allocator
@@ -253,7 +253,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -264,13 +264,13 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MTKMeshBufferAllocator
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            buffer
         JsName:          buffer
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -278,7 +278,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -289,7 +289,7 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -303,7 +303,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -314,12 +314,12 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            ULong
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - MDLMeshBuffer
       - MDLNamed
@@ -331,7 +331,7 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -343,7 +343,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -351,7 +351,7 @@ Items:
           - Type:            Id
             WithProtocols:   
               - MTLDevice
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            device
         JsName:          device
@@ -360,7 +360,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -371,14 +371,14 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Id
               WithProtocols:   
                 - MTLDevice
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - MDLMeshBufferAllocator
     Base:            NSObject
@@ -389,17 +389,17 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Interface
         JsName:          MTLVertexDescriptor
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Interface
         JsName:          MDLVertexDescriptor
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            MTKMetalVertexDescriptorFromModelIOWithError
     JsName:          MTKMetalVertexDescriptorFromModelIOWithError
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -407,22 +407,22 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Interface
         JsName:          MTLVertexDescriptor
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Interface
         JsName:          MDLVertexDescriptor
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Interface
           JsName:          NSError
-          WithProtocols:   []
+          WithProtocols:   
   - Name:            MTKMetalVertexFormatFromModelIO
     JsName:          MTKMetalVertexFormatFromModelIO
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -430,7 +430,7 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -446,14 +446,14 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKModelErrorKey
     JsName:          MTKModelErrorKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -461,14 +461,14 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKModelIOVertexDescriptorFromMetal
     JsName:          MTKModelIOVertexDescriptorFromMetal
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -476,17 +476,17 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Interface
         JsName:          MDLVertexDescriptor
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Interface
         JsName:          MTLVertexDescriptor
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            MTKModelIOVertexDescriptorFromMetalWithError
     JsName:          MTKModelIOVertexDescriptorFromMetalWithError
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -494,22 +494,22 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Interface
         JsName:          MDLVertexDescriptor
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Interface
         JsName:          MTLVertexDescriptor
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Interface
           JsName:          NSError
-          WithProtocols:   []
+          WithProtocols:   
   - Name:            MTKModelIOVertexFormatFromMetal
     JsName:          MTKModelIOVertexFormatFromMetal
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -517,7 +517,7 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -533,12 +533,12 @@ Items:
       FullName:        MetalKit.MTKModel
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            indexBuffer
         JsName:          indexBuffer
@@ -547,7 +547,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -558,13 +558,13 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MTKMeshBuffer
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            indexCount
         JsName:          indexCount
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -572,7 +572,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -583,7 +583,7 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -595,7 +595,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -606,7 +606,7 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -619,7 +619,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -630,13 +630,13 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MTKMesh
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            name
         JsName:          name
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -644,7 +644,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -655,13 +655,13 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setName:'
           JsName:          setName
@@ -670,14 +670,14 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            primitiveType
         JsName:          primitiveType
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKModel.h
@@ -685,7 +685,7 @@ Items:
           FullName:        MetalKit.MTKModel
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -696,14 +696,14 @@ Items:
             FullName:        MetalKit.MTKModel
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Enum
               Name:            MTLPrimitiveType
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MTKTextureLoader
     JsName:          MTKTextureLoader
@@ -712,7 +712,7 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -724,7 +724,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -739,7 +739,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -750,17 +750,17 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSURL
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -770,10 +770,10 @@ Items:
                   - Type:            Id
                     WithProtocols:   
                       - MTLTexture
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'newTexturesWithContentsOfURLs:options:error:'
         JsName:          newTexturesWithContentsOfURLsOptionsError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -781,7 +781,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject, MethodHasErrorOutParameter ]
         Type:            Method
@@ -792,28 +792,28 @@ Items:
               - Type:            Id
                 WithProtocols:   
                   - MTLTexture
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSURL
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'newTexturesWithNames:scaleFactor:bundle:options:completionHandler:'
         JsName:          newTexturesWithNamesScaleFactorBundleOptionsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -821,7 +821,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -832,21 +832,21 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Double
           - Type:            Interface
             JsName:          NSBundle
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -856,10 +856,10 @@ Items:
                   - Type:            Id
                     WithProtocols:   
                       - MTLTexture
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'newTextureWithCGImage:options:completionHandler:'
         JsName:          newTextureWithCGImageOptionsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -867,7 +867,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -880,10 +880,10 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -892,7 +892,7 @@ Items:
                   - MTLTexture
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'newTextureWithCGImage:options:error:'
         JsName:          newTextureWithCGImageOptionsError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -900,7 +900,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -915,15 +915,15 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'newTextureWithContentsOfURL:options:completionHandler:'
         JsName:          newTextureWithContentsOfURLOptionsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -931,23 +931,23 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -956,7 +956,7 @@ Items:
                   - MTLTexture
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'newTextureWithContentsOfURL:options:error:'
         JsName:          newTextureWithContentsOfURLOptionsError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -964,7 +964,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -973,21 +973,21 @@ Items:
               - MTLTexture
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'newTextureWithData:options:completionHandler:'
         JsName:          newTextureWithDataOptionsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -995,23 +995,23 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -1020,7 +1020,7 @@ Items:
                   - MTLTexture
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'newTextureWithData:options:error:'
         JsName:          newTextureWithDataOptionsError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1028,7 +1028,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -1037,21 +1037,21 @@ Items:
               - MTLTexture
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'newTextureWithMDLTexture:options:completionHandler:'
         JsName:          newTextureWithMDLTextureOptionsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1059,7 +1059,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1067,16 +1067,16 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          MDLTexture
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -1085,7 +1085,7 @@ Items:
                   - MTLTexture
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'newTextureWithMDLTexture:options:error:'
         JsName:          newTextureWithMDLTextureOptionsError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1093,7 +1093,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject, MethodHasErrorOutParameter ]
         Type:            Method
@@ -1103,21 +1103,21 @@ Items:
               - MTLTexture
           - Type:            Interface
             JsName:          MDLTexture
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'newTextureWithName:scaleFactor:bundle:options:completionHandler:'
         JsName:          newTextureWithNameScaleFactorBundleOptionsCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1125,7 +1125,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1133,20 +1133,20 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Double
           - Type:            Interface
             JsName:          NSBundle
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -1155,7 +1155,7 @@ Items:
                   - MTLTexture
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'newTextureWithName:scaleFactor:bundle:options:error:'
         JsName:          newTextureWithNameScaleFactorBundleOptionsError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1163,7 +1163,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject, MethodHasErrorOutParameter ]
         Type:            Method
@@ -1173,26 +1173,26 @@ Items:
               - MTLTexture
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Double
           - Type:            Interface
             JsName:          NSBundle
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
-    StaticMethods:   []
+              WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            device
         JsName:          device
@@ -1201,7 +1201,7 @@ Items:
           FullName:        MetalKit.MTKTextureLoader
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1212,15 +1212,15 @@ Items:
             FullName:        MetalKit.MTKTextureLoader
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Id
               WithProtocols:   
                 - MTLDevice
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            MTKTextureLoaderCubeLayoutVertical
     JsName:          MTKTextureLoaderCubeLayoutVertical
@@ -1229,14 +1229,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderErrorDomain
     JsName:          MTKTextureLoaderErrorDomain
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1244,14 +1244,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderErrorKey
     JsName:          MTKTextureLoaderErrorKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1259,14 +1259,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderOptionAllocateMipmaps
     JsName:          MTKTextureLoaderOptionAllocateMipmaps
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1274,14 +1274,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderOptionCubeLayout
     JsName:          MTKTextureLoaderOptionCubeLayout
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1289,14 +1289,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderOptionGenerateMipmaps
     JsName:          MTKTextureLoaderOptionGenerateMipmaps
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1304,14 +1304,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderOptionOrigin
     JsName:          MTKTextureLoaderOptionOrigin
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1319,14 +1319,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderOptionSRGB
     JsName:          MTKTextureLoaderOptionSRGB
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1334,14 +1334,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderOptionTextureCPUCacheMode
     JsName:          MTKTextureLoaderOptionTextureCPUCacheMode
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1349,14 +1349,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderOptionTextureStorageMode
     JsName:          MTKTextureLoaderOptionTextureStorageMode
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1364,14 +1364,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderOptionTextureUsage
     JsName:          MTKTextureLoaderOptionTextureUsage
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1379,14 +1379,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderOriginBottomLeft
     JsName:          MTKTextureLoaderOriginBottomLeft
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1394,14 +1394,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderOriginFlippedVertically
     JsName:          MTKTextureLoaderOriginFlippedVertically
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1409,14 +1409,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKTextureLoaderOriginTopLeft
     JsName:          MTKTextureLoaderOriginTopLeft
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKTextureLoader.h
@@ -1424,14 +1424,14 @@ Items:
       FullName:        MetalKit.MTKTextureLoader
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            MTKView
     JsName:          MTKView
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKView.h
@@ -1439,7 +1439,7 @@ Items:
       FullName:        MetalKit.MTKView
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1451,7 +1451,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1463,7 +1463,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -1481,12 +1481,12 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            autoResizeDrawable
         JsName:          autoResizeDrawable
@@ -1495,7 +1495,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1506,7 +1506,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1519,7 +1519,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1532,7 +1532,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1543,7 +1543,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1558,7 +1558,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1573,7 +1573,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1584,7 +1584,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1597,7 +1597,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1610,7 +1610,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1621,7 +1621,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1634,7 +1634,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1647,7 +1647,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1658,7 +1658,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1672,7 +1672,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1686,7 +1686,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1697,7 +1697,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1711,7 +1711,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1722,13 +1722,13 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MTLRenderPassDescriptor
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            delegate
         JsName:          delegate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKView.h
@@ -1736,7 +1736,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1747,7 +1747,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1762,7 +1762,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1777,7 +1777,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1788,7 +1788,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1802,7 +1802,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1816,7 +1816,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1827,7 +1827,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1841,7 +1841,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1852,7 +1852,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1867,7 +1867,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1882,7 +1882,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1893,7 +1893,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1908,7 +1908,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1923,7 +1923,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1934,7 +1934,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1947,7 +1947,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1960,7 +1960,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1971,7 +1971,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1984,7 +1984,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1997,7 +1997,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2008,7 +2008,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2022,7 +2022,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2033,7 +2033,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2046,7 +2046,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2059,7 +2059,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2070,7 +2070,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2083,7 +2083,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2096,7 +2096,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2107,7 +2107,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2120,7 +2120,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2133,7 +2133,7 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2144,7 +2144,7 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2157,13 +2157,13 @@ Items:
             FullName:        MetalKit.MTKView
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            ULong
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - CALayerDelegate
       - NSCoding
@@ -2175,7 +2175,7 @@ Items:
       FullName:        MetalKit.MTKView
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    9.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -2187,14 +2187,14 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          MTKView
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mtkView:drawableSizeWillChange:'
         JsName:          mtkViewDrawableSizeWillChange
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKView.h
@@ -2202,20 +2202,20 @@ Items:
           FullName:        MetalKit.MTKView
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          MTKView
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
             JsName:          CGSize
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
 ...

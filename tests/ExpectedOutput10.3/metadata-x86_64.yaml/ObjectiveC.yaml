@@ -3,7 +3,7 @@ Module:
   FullName:        ObjectiveC
   IsPartOfFramework: false
   IsSystemModule:  true
-  Libraries:       []
+  Libraries:       
 Items:           
   - Name:            NSObject
     JsName:          NSObject
@@ -12,7 +12,7 @@ Items:
       FullName:        ObjectiveC.NSObject
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -24,12 +24,12 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            dealloc
         JsName:          dealloc
         Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/NSObject.h
@@ -37,7 +37,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -49,7 +49,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -62,7 +62,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -74,13 +74,13 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    2.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Name:            'forwardInvocation:'
         JsName:          forwardInvocation
@@ -89,14 +89,14 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSInvocation
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            init
         JsName:          init
         Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/NSObject.h
@@ -104,7 +104,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -116,16 +116,16 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            FunctionPointer
             Signature:       
               - Type:            Id
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Selector
           - Type:            Selector
       - Name:            'methodSignatureForSelector:'
@@ -135,13 +135,13 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSMethodSignature
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Name:            mutableCopy
         JsName:          mutableCopy
@@ -150,12 +150,12 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'awakeAfterUsingCoder:'
         JsName:          awakeAfterUsingCoder
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h
@@ -163,15 +163,15 @@ Items:
           FullName:        Foundation.NSObject
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSCoder
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'replacementObjectForCoder:'
         JsName:          replacementObjectForCoder
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h
@@ -179,15 +179,15 @@ Items:
           FullName:        Foundation.NSObject
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSCoder
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'attemptRecoveryFromError:optionIndex:'
         JsName:          attemptRecoveryFromErrorOptionIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSError.h
@@ -195,14 +195,14 @@ Items:
           FullName:        Foundation.NSError
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            ULong
       - Name:            'attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:'
         JsName:          attemptRecoveryFromErrorOptionIndexDelegateDidRecoverSelectorContextInfo
@@ -211,17 +211,17 @@ Items:
           FullName:        Foundation.NSError
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            ULong
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
           - Type:            Pointer
             PointerType:     
@@ -233,14 +233,14 @@ Items:
           FullName:        Foundation.NSRunLoop
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Selector
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Double
       - Name:            'performSelector:withObject:afterDelay:inModes:'
         JsName:          performSelectorWithObjectAfterDelayInModes
@@ -249,22 +249,22 @@ Items:
           FullName:        Foundation.NSRunLoop
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Selector
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Double
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'fileManager:shouldProceedAfterError:'
         JsName:          fileManagerShouldProceedAfterError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h
@@ -272,7 +272,7 @@ Items:
           FullName:        Foundation.NSFileManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    2.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -280,10 +280,10 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NSFileManager
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'fileManager:willProcessPath:'
         JsName:          fileManagerWillProcessPath
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h
@@ -291,7 +291,7 @@ Items:
           FullName:        Foundation.NSFileManager
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    2.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -299,10 +299,10 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSFileManager
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'dictionaryWithValuesForKeys:'
         JsName:          dictionaryWithValuesForKeys
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -310,7 +310,7 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -319,17 +319,17 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'mutableArrayValueForKey:'
         JsName:          mutableArrayValueForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -337,16 +337,16 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSMutableArray
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mutableArrayValueForKeyPath:'
         JsName:          mutableArrayValueForKeyPath
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -354,16 +354,16 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSMutableArray
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mutableOrderedSetValueForKey:'
         JsName:          mutableOrderedSetValueForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -371,17 +371,17 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSMutableOrderedSet
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mutableOrderedSetValueForKeyPath:'
         JsName:          mutableOrderedSetValueForKeyPath
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -389,17 +389,17 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSMutableOrderedSet
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mutableSetValueForKey:'
         JsName:          mutableSetValueForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -407,16 +407,16 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSMutableSet
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mutableSetValueForKeyPath:'
         JsName:          mutableSetValueForKeyPath
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -424,16 +424,16 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSMutableSet
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'setNilValueForKey:'
         JsName:          setNilValueForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -441,14 +441,14 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'setValue:forKey:'
         JsName:          setValueForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -456,16 +456,16 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'setValue:forKeyPath:'
         JsName:          setValueForKeyPath
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -473,16 +473,16 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'setValue:forUndefinedKey:'
         JsName:          setValueForUndefinedKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -490,16 +490,16 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'setValuesForKeysWithDictionary:'
         JsName:          setValuesForKeysWithDictionary
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -507,7 +507,7 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -517,10 +517,10 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'validateValue:forKey:error:'
         JsName:          validateValueForKeyError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -528,7 +528,7 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -536,15 +536,15 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Id
-              WithProtocols:   []
+              WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'validateValue:forKeyPath:error:'
         JsName:          validateValueForKeyPathError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -552,7 +552,7 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -560,15 +560,15 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Id
-              WithProtocols:   []
+              WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'valueForKey:'
         JsName:          valueForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -576,15 +576,15 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueForKeyPath:'
         JsName:          valueForKeyPath
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -592,15 +592,15 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'valueForUndefinedKey:'
         JsName:          valueForUndefinedKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueCoding.h
@@ -608,15 +608,15 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'observeValueForKeyPath:ofObject:change:context:'
         JsName:          observeValueForKeyPathOfObjectChangeContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueObserving.h
@@ -624,25 +624,25 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Void
@@ -653,17 +653,17 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSObject
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            NSKeyValueObservingOptions
           - Type:            Pointer
@@ -676,17 +676,17 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSObject
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'removeObserver:forKeyPath:context:'
         JsName:          removeObserverForKeyPathContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueObserving.h
@@ -694,7 +694,7 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -702,10 +702,10 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSObject
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Void
@@ -716,14 +716,14 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'didChangeValueForKey:withSetMutation:usingObjects:'
         JsName:          didChangeValueForKeyWithSetMutationUsingObjects
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueObserving.h
@@ -731,19 +731,19 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            NSKeyValueSetMutationKind
           - Type:            Interface
             JsName:          NSSet
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'didChange:valuesAtIndexes:forKey:'
         JsName:          didChangeValuesAtIndexesForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueObserving.h
@@ -751,7 +751,7 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -760,10 +760,10 @@ Items:
             Name:            NSKeyValueChange
           - Type:            Interface
             JsName:          NSIndexSet
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'willChangeValueForKey:'
         JsName:          willChangeValueForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueObserving.h
@@ -771,14 +771,14 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'willChangeValueForKey:withSetMutation:usingObjects:'
         JsName:          willChangeValueForKeyWithSetMutationUsingObjects
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueObserving.h
@@ -786,19 +786,19 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            NSKeyValueSetMutationKind
           - Type:            Interface
             JsName:          NSSet
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'willChange:valuesAtIndexes:forKey:'
         JsName:          willChangeValuesAtIndexesForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueObserving.h
@@ -806,7 +806,7 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -815,10 +815,10 @@ Items:
             Name:            NSKeyValueChange
           - Type:            Interface
             JsName:          NSIndexSet
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'replacementObjectForKeyedArchiver:'
         JsName:          replacementObjectForKeyedArchiver
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyedArchiver.h
@@ -826,15 +826,15 @@ Items:
           FullName:        Foundation.NSKeyedArchiver
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSKeyedArchiver
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'performSelectorInBackground:withObject:'
         JsName:          performSelectorInBackgroundWithObject
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSThread.h
@@ -842,7 +842,7 @@ Items:
           FullName:        Foundation.NSThread
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    2.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -850,7 +850,7 @@ Items:
           - Type:            Void
           - Type:            Selector
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'performSelectorOnMainThread:withObject:waitUntilDone:'
         JsName:          performSelectorOnMainThreadWithObjectWaitUntilDone
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSThread.h
@@ -858,14 +858,14 @@ Items:
           FullName:        Foundation.NSThread
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Selector
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'performSelectorOnMainThread:withObject:waitUntilDone:modes:'
         JsName:          performSelectorOnMainThreadWithObjectWaitUntilDoneModes
@@ -874,22 +874,22 @@ Items:
           FullName:        Foundation.NSThread
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Selector
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'performSelector:onThread:withObject:waitUntilDone:'
         JsName:          performSelectorOnThreadWithObjectWaitUntilDone
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSThread.h
@@ -897,7 +897,7 @@ Items:
           FullName:        Foundation.NSThread
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    2.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -906,9 +906,9 @@ Items:
           - Type:            Selector
           - Type:            Interface
             JsName:          NSThread
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'performSelector:onThread:withObject:waitUntilDone:modes:'
         JsName:          performSelectorOnThreadWithObjectWaitUntilDoneModes
@@ -917,7 +917,7 @@ Items:
           FullName:        Foundation.NSThread
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    2.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -926,17 +926,17 @@ Items:
           - Type:            Selector
           - Type:            Interface
             JsName:          NSThread
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'provideImageData:bytesPerRow:origin::size::userInfo:'
         JsName:          provideImageDataBytesPerRowOriginSizeUserInfo
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIImageProvider.h
@@ -944,7 +944,7 @@ Items:
           FullName:        CoreImage.CIImageProvider
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -958,7 +958,7 @@ Items:
           - Type:            ULong
           - Type:            ULong
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'accessibilityElementAtIndex:'
         JsName:          accessibilityElementAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibilityContainer.h
@@ -966,12 +966,12 @@ Items:
           FullName:        UIKit.UIAccessibilityContainer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Long
       - Name:            accessibilityElementCount
         JsName:          accessibilityElementCount
@@ -980,7 +980,7 @@ Items:
           FullName:        UIKit.UIAccessibilityContainer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -992,13 +992,13 @@ Items:
           FullName:        UIKit.UIAccessibilityContainer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Long
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            accessibilityAssistiveTechnologyFocusedIdentifiers
         JsName:          accessibilityAssistiveTechnologyFocusedIdentifiers
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -1006,7 +1006,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    9.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1016,8 +1016,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            accessibilityElementDidBecomeFocused
         JsName:          accessibilityElementDidBecomeFocused
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -1025,7 +1025,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    4.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1038,7 +1038,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    4.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1051,7 +1051,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    4.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1064,7 +1064,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    7.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1077,7 +1077,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    4.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1090,7 +1090,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    4.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1103,7 +1103,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1116,7 +1116,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    6.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1129,7 +1129,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    4.2
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1144,7 +1144,7 @@ Items:
           FullName:        UIKit.UINibLoading
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1156,7 +1156,7 @@ Items:
           FullName:        UIKit.UINibLoading
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1170,7 +1170,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1182,7 +1182,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1197,7 +1197,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1209,7 +1209,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1222,12 +1222,12 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Void
@@ -1238,13 +1238,13 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            description
         JsName:          description
         Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/NSObject.h
@@ -1252,13 +1252,13 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            hash
         JsName:          hash
         Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/NSObject.h
@@ -1266,7 +1266,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1278,7 +1278,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1290,16 +1290,16 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            FunctionPointer
             Signature:       
               - Type:            Id
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Selector
           - Type:            Selector
       - Name:            'instanceMethodSignatureForSelector:'
@@ -1309,13 +1309,13 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSMethodSignature
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Name:            'instancesRespondToSelector:'
         JsName:          instancesRespondToSelector
@@ -1324,7 +1324,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1337,7 +1337,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1350,7 +1350,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1362,12 +1362,12 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Void
@@ -1378,7 +1378,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodOwnsReturnedCocoaObject ]
         Type:            Method
         Signature:       
@@ -1390,7 +1390,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    2.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1404,7 +1404,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    2.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1418,7 +1418,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1430,7 +1430,7 @@ Items:
           FullName:        Foundation.NSObject
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1443,7 +1443,7 @@ Items:
           FullName:        Foundation.NSObject
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1455,13 +1455,13 @@ Items:
           FullName:        Foundation.NSRunLoop
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'cancelPreviousPerformRequestsWithTarget:selector:object:'
         JsName:          cancelPreviousPerformRequestsWithTargetSelectorObject
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRunLoop.h
@@ -1469,16 +1469,16 @@ Items:
           FullName:        Foundation.NSRunLoop
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'automaticallyNotifiesObserversForKey:'
         JsName:          automaticallyNotifiesObserversForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueObserving.h
@@ -1486,14 +1486,14 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'keyPathsForValuesAffectingValueForKey:'
         JsName:          keyPathsForValuesAffectingValueForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueObserving.h
@@ -1501,7 +1501,7 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    2.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -1511,11 +1511,11 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            classFallbacksForKeyedArchiver
         JsName:          classFallbacksForKeyedArchiver
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyedArchiver.h
@@ -1523,7 +1523,7 @@ Items:
           FullName:        Foundation.NSKeyedArchiver
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1532,8 +1532,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            classForKeyedUnarchiver
         JsName:          classForKeyedUnarchiver
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyedArchiver.h
@@ -1541,7 +1541,7 @@ Items:
           FullName:        Foundation.NSKeyedArchiver
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1554,7 +1554,7 @@ Items:
           FullName:        Foundation.NSObject
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1565,7 +1565,7 @@ Items:
             FullName:        Foundation.NSObject
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1577,7 +1577,7 @@ Items:
           FullName:        Foundation.NSObject
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    4.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1589,13 +1589,13 @@ Items:
             FullName:        Foundation.NSObject
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    4.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Id
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            observationInfo
         JsName:          observationInfo
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyValueObserving.h
@@ -1603,7 +1603,7 @@ Items:
           FullName:        Foundation.NSKeyValueObserving
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1614,7 +1614,7 @@ Items:
             FullName:        Foundation.NSKeyValueObserving
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1629,7 +1629,7 @@ Items:
             FullName:        Foundation.NSKeyValueObserving
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1644,7 +1644,7 @@ Items:
           FullName:        Foundation.NSKeyedArchiver
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1655,7 +1655,7 @@ Items:
             FullName:        Foundation.NSKeyedArchiver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1667,7 +1667,7 @@ Items:
           FullName:        UIKit.UIAccessibilityContainer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1679,7 +1679,7 @@ Items:
             FullName:        UIKit.UIAccessibilityContainer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1694,7 +1694,7 @@ Items:
             FullName:        UIKit.UIAccessibilityContainer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1709,7 +1709,7 @@ Items:
           FullName:        UIKit.UIAccessibilityContainer
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1721,14 +1721,14 @@ Items:
             FullName:        UIKit.UIAccessibilityContainer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSArray
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityElements:'
           JsName:          setAccessibilityElements
@@ -1737,7 +1737,7 @@ Items:
             FullName:        UIKit.UIAccessibilityContainer
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1745,7 +1745,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSArray
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            accessibilityCustomRotors
         JsName:          accessibilityCustomRotors
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibilityCustomRotor.h
@@ -1753,7 +1753,7 @@ Items:
           FullName:        UIKit.UIAccessibilityCustomRotor
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    10.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1765,7 +1765,7 @@ Items:
             FullName:        UIKit.UIAccessibilityCustomRotor
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    10.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1775,8 +1775,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          UIAccessibilityCustomRotor
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityCustomRotors:'
           JsName:          setAccessibilityCustomRotors
@@ -1785,7 +1785,7 @@ Items:
             FullName:        UIKit.UIAccessibilityCustomRotor
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    10.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1796,8 +1796,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          UIAccessibilityCustomRotor
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            accessibilityActivationPoint
         JsName:          accessibilityActivationPoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -1805,7 +1805,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1817,7 +1817,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1833,7 +1833,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1849,7 +1849,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1861,14 +1861,14 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSAttributedString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityAttributedHint:'
           JsName:          setAccessibilityAttributedHint
@@ -1877,7 +1877,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1885,7 +1885,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSAttributedString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            accessibilityAttributedLabel
         JsName:          accessibilityAttributedLabel
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -1893,7 +1893,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1905,14 +1905,14 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSAttributedString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityAttributedLabel:'
           JsName:          setAccessibilityAttributedLabel
@@ -1921,7 +1921,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1929,7 +1929,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSAttributedString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            accessibilityAttributedValue
         JsName:          accessibilityAttributedValue
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -1937,7 +1937,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1949,14 +1949,14 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSAttributedString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityAttributedValue:'
           JsName:          setAccessibilityAttributedValue
@@ -1965,7 +1965,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -1973,7 +1973,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          NSAttributedString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            accessibilityElementsHidden
         JsName:          accessibilityElementsHidden
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -1981,7 +1981,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1993,7 +1993,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2007,7 +2007,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2021,7 +2021,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2032,7 +2032,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2047,7 +2047,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2062,7 +2062,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2073,13 +2073,13 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityHint:'
           JsName:          setAccessibilityHint
@@ -2088,14 +2088,14 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            accessibilityLabel
         JsName:          accessibilityLabel
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -2103,7 +2103,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2114,13 +2114,13 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityLabel:'
           JsName:          setAccessibilityLabel
@@ -2129,14 +2129,14 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            accessibilityLanguage
         JsName:          accessibilityLanguage
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -2144,7 +2144,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2155,13 +2155,13 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityLanguage:'
           JsName:          setAccessibilityLanguage
@@ -2170,14 +2170,14 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            accessibilityNavigationStyle
         JsName:          accessibilityNavigationStyle
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -2185,7 +2185,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2197,7 +2197,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2212,7 +2212,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2227,7 +2227,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    7.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2239,14 +2239,14 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    7.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIBezierPath
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityPath:'
           JsName:          setAccessibilityPath
@@ -2255,7 +2255,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    7.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2263,7 +2263,7 @@ Items:
             - Type:            Void
             - Type:            Interface
               JsName:          UIBezierPath
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            accessibilityTraits
         JsName:          accessibilityTraits
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -2271,7 +2271,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2282,7 +2282,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2295,7 +2295,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2308,7 +2308,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2319,13 +2319,13 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityValue:'
           JsName:          setAccessibilityValue
@@ -2334,14 +2334,14 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            accessibilityViewIsModal
         JsName:          accessibilityViewIsModal
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -2349,7 +2349,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    5.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2361,7 +2361,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2375,7 +2375,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    5.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2389,7 +2389,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2400,7 +2400,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2413,7 +2413,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2426,7 +2426,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    6.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2438,7 +2438,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    6.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2452,7 +2452,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    6.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2466,7 +2466,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2478,7 +2478,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2488,8 +2488,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          UIAccessibilityCustomAction
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityCustomActions:'
           JsName:          setAccessibilityCustomActions
@@ -2498,7 +2498,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2509,8 +2509,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          UIAccessibilityCustomAction
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            accessibilityDragSourceDescriptors
         JsName:          accessibilityDragSourceDescriptors
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -2518,7 +2518,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2530,7 +2530,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2540,8 +2540,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          UIAccessibilityLocationDescriptor
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityDragSourceDescriptors:'
           JsName:          setAccessibilityDragSourceDescriptors
@@ -2550,7 +2550,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2561,8 +2561,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          UIAccessibilityLocationDescriptor
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            accessibilityDropPointDescriptors
         JsName:          accessibilityDropPointDescriptors
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -2570,7 +2570,7 @@ Items:
           FullName:        UIKit.UIAccessibility
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -2582,7 +2582,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2592,8 +2592,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          UIAccessibilityLocationDescriptor
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setAccessibilityDropPointDescriptors:'
           JsName:          setAccessibilityDropPointDescriptors
@@ -2602,7 +2602,7 @@ Items:
             FullName:        UIKit.UIAccessibility
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    11.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
@@ -2613,8 +2613,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          UIAccessibilityLocationDescriptor
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
     StaticProperties: 
       - Name:            accessInstanceVariablesDirectly
         JsName:          accessInstanceVariablesDirectly
@@ -2623,7 +2623,7 @@ Items:
           FullName:        Foundation.NSKeyValueCoding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2634,7 +2634,7 @@ Items:
             FullName:        Foundation.NSKeyValueCoding
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2648,7 +2648,7 @@ Items:
       FullName:        ObjectiveC.NSObject
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
     InstanceMethods: 
@@ -2659,7 +2659,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2671,7 +2671,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2683,7 +2683,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2696,13 +2696,13 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'isKindOfClass:'
         JsName:          isKindOfClass
         Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/NSObject.h
@@ -2710,7 +2710,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2723,7 +2723,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2736,12 +2736,12 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Name:            'performSelector:withObject:'
         JsName:          performSelectorWithObject
@@ -2750,15 +2750,15 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'performSelector:withObject:withObject:'
         JsName:          performSelectorWithObjectWithObject
         Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/NSObject.h
@@ -2766,17 +2766,17 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            release
         JsName:          release
         Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/NSObject.h
@@ -2784,7 +2784,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2796,7 +2796,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2809,7 +2809,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2821,7 +2821,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2833,12 +2833,12 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            debugDescription
         JsName:          debugDescription
@@ -2847,7 +2847,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -2858,13 +2858,13 @@ Items:
             FullName:        ObjectiveC.NSObject
             IsPartOfFramework: false
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            description
         JsName:          description
         Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/NSObject.h
@@ -2872,7 +2872,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2883,13 +2883,13 @@ Items:
             FullName:        ObjectiveC.NSObject
             IsPartOfFramework: false
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            hash
         JsName:          hash
         Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/NSObject.h
@@ -2897,7 +2897,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2908,7 +2908,7 @@ Items:
             FullName:        ObjectiveC.NSObject
             IsPartOfFramework: false
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2920,7 +2920,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2931,7 +2931,7 @@ Items:
             FullName:        ObjectiveC.NSObject
             IsPartOfFramework: false
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2943,7 +2943,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2954,7 +2954,7 @@ Items:
             FullName:        ObjectiveC.NSObject
             IsPartOfFramework: false
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2966,7 +2966,7 @@ Items:
           FullName:        ObjectiveC.NSObject
           IsPartOfFramework: false
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2977,15 +2977,15 @@ Items:
             FullName:        ObjectiveC.NSObject
             IsPartOfFramework: false
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Pointer
               PointerType:     
                 Type:            Void
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
   - Name:            OBJC_ASSOCIATION_ASSIGN
     JsName:          OBJC_ASSOCIATION_ASSIGN
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -2993,7 +2993,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -3004,7 +3004,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '771'
@@ -3015,7 +3015,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -3026,7 +3026,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '769'
@@ -3037,7 +3037,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -3048,7 +3048,7 @@ Items:
       FullName:        ObjectiveC.objc_auto
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -3059,7 +3059,7 @@ Items:
       FullName:        ObjectiveC.objc_auto
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '8'
@@ -3070,7 +3070,7 @@ Items:
       FullName:        ObjectiveC.objc_auto
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -3081,7 +3081,7 @@ Items:
       FullName:        ObjectiveC.objc_auto
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -3092,7 +3092,7 @@ Items:
       FullName:        ObjectiveC.objc_auto
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -3103,7 +3103,7 @@ Items:
       FullName:        ObjectiveC.objc_auto
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -3114,7 +3114,7 @@ Items:
       FullName:        ObjectiveC.objc_sync
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1'
@@ -3125,7 +3125,7 @@ Items:
       FullName:        ObjectiveC.objc_sync
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -3136,7 +3136,7 @@ Items:
       FullName:        ObjectiveC.objc_auto
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '16'
@@ -3147,15 +3147,15 @@ Items:
       FullName:        ObjectiveC.Protocol
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
-    Protocols:       []
+    InstanceMethods: 
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            _objc_flush_caches
     JsName:          _objc_flush_caches
@@ -3164,7 +3164,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3178,7 +3178,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3195,7 +3195,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3213,7 +3213,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3224,9 +3224,9 @@ Items:
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Type:            CString
   - Name:            class_addProperty
@@ -3236,7 +3236,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3257,7 +3257,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3272,7 +3272,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3287,7 +3287,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3308,7 +3308,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3329,7 +3329,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3350,7 +3350,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3369,13 +3369,13 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable, FunctionOwnsReturnedCocoaObject ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Class
       - Type:            ULong
   - Name:            class_createInstance
@@ -3385,13 +3385,13 @@ Items:
       FullName:        ObjectiveC.objc_auto
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable, FunctionOwnsReturnedCocoaObject ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Class
       - Type:            ULong
   - Name:            class_getClassMethod
@@ -3401,7 +3401,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3418,7 +3418,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3435,7 +3435,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3449,7 +3449,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3466,7 +3466,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3480,7 +3480,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3497,7 +3497,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3511,7 +3511,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3519,9 +3519,9 @@ Items:
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Type:            Class
       - Type:            Selector
@@ -3532,7 +3532,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3540,9 +3540,9 @@ Items:
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Type:            Class
       - Type:            Selector
@@ -3553,7 +3553,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3567,7 +3567,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3584,7 +3584,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3598,7 +3598,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3612,7 +3612,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3626,7 +3626,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3640,7 +3640,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3648,9 +3648,9 @@ Items:
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Type:            Class
       - Type:            Selector
@@ -3661,7 +3661,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3669,18 +3669,18 @@ Items:
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Type:            Class
       - Type:            Selector
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Type:            CString
   - Name:            class_replaceProperty
@@ -3690,7 +3690,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3711,7 +3711,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3726,7 +3726,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3741,7 +3741,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3756,7 +3756,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3771,7 +3771,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3786,7 +3786,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3801,19 +3801,19 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
   - Name:            imp_implementationWithBlock
     JsName:          imp_implementationWithBlock
@@ -3822,7 +3822,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3830,12 +3830,12 @@ Items:
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            imp_removeBlock
     JsName:          imp_removeBlock
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -3843,7 +3843,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3852,9 +3852,9 @@ Items:
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
   - Name:            ivar_getName
     JsName:          ivar_getName
@@ -3863,7 +3863,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3879,7 +3879,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3895,7 +3895,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3911,7 +3911,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3928,7 +3928,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3944,7 +3944,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3963,7 +3963,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -3982,7 +3982,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4002,7 +4002,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4010,9 +4010,9 @@ Items:
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Type:            Pointer
         PointerType:     
@@ -4024,7 +4024,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4040,7 +4040,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4056,7 +4056,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4074,7 +4074,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4090,7 +4090,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4098,9 +4098,9 @@ Items:
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
       - Type:            Pointer
         PointerType:     
@@ -4108,9 +4108,9 @@ Items:
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Selector
   - Name:            objc_AssociationPolicy
     JsName:          objc_AssociationPolicy
@@ -4119,7 +4119,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -4128,7 +4128,7 @@ Items:
       - OBJC_ASSOCIATION_COPY_NONATOMIC: '3'
       - OBJC_ASSOCIATION_RETAIN: '769'
       - OBJC_ASSOCIATION_COPY: '771'
-    SwiftNameFields: []
+    SwiftNameFields: 
   - Name:            objc_allocateClassPair
     JsName:          objc_allocateClassPair
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -4136,7 +4136,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4152,7 +4152,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4166,13 +4166,13 @@ Items:
       FullName:        ObjectiveC.objc_exception
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -4183,13 +4183,13 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    3.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Class
       - Type:            Pointer
         PointerType:     
@@ -4201,7 +4201,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    3.1
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4219,7 +4219,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4238,7 +4238,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4256,7 +4256,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4274,7 +4274,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    3.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4283,7 +4283,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            objc_disposeClassPair
     JsName:          objc_disposeClassPair
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -4291,7 +4291,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4305,7 +4305,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4321,7 +4321,7 @@ Items:
       FullName:        ObjectiveC.objc_exception
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4334,14 +4334,14 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            objc_exception_rethrow
     JsName:          objc_exception_rethrow
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/objc-exception.h
@@ -4349,7 +4349,7 @@ Items:
       FullName:        ObjectiveC.objc_exception
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4362,14 +4362,14 @@ Items:
       FullName:        ObjectiveC.objc_exception
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            objc_getAssociatedObject
     JsName:          objc_getAssociatedObject
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -4377,15 +4377,15 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    3.1
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -4396,13 +4396,13 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            CString
   - Name:            objc_getClassList
     JsName:          objc_getClassList
@@ -4411,7 +4411,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4428,7 +4428,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4442,13 +4442,13 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            CString
   - Name:            objc_getProtocol
     JsName:          objc_getProtocol
@@ -4457,7 +4457,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4471,7 +4471,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4485,17 +4485,17 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    5.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Id
-          WithProtocols:   []
+          WithProtocols:   
   - Name:            objc_lookUpClass
     JsName:          objc_lookUpClass
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -4503,7 +4503,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4517,7 +4517,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -4534,7 +4534,7 @@ Items:
       FullName:        ObjectiveC.objc
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -4548,7 +4548,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
@@ -4565,7 +4565,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4579,7 +4579,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4593,14 +4593,14 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    3.1
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            objc_setAssociatedObject
     JsName:          objc_setAssociatedObject
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -4608,19 +4608,19 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    3.1
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Enum
         Name:            objc_AssociationPolicy
   - Name:            objc_setEnumerationMutationHandler
@@ -4630,7 +4630,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4640,7 +4640,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
   - Name:            objc_setExceptionMatcher
     JsName:          objc_setExceptionMatcher
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/objc-exception.h
@@ -4648,7 +4648,7 @@ Items:
       FullName:        ObjectiveC.objc_exception
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4658,13 +4658,13 @@ Items:
           - Type:            Int
           - Type:            Class
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Type:            FunctionPointer
         Signature:       
           - Type:            Int
           - Type:            Class
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
   - Name:            objc_setExceptionPreprocessor
     JsName:          objc_setExceptionPreprocessor
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/objc-exception.h
@@ -4672,7 +4672,7 @@ Items:
       FullName:        ObjectiveC.objc_exception
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4680,15 +4680,15 @@ Items:
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Type:            FunctionPointer
         Signature:       
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
   - Name:            objc_setForwardHandler
     JsName:          objc_setForwardHandler
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -4696,7 +4696,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4715,7 +4715,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4744,7 +4744,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4773,7 +4773,7 @@ Items:
       FullName:        ObjectiveC.objc_exception
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4782,12 +4782,12 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
       - Type:            FunctionPointer
         Signature:       
           - Type:            Void
           - Type:            Id
-            WithProtocols:   []
+            WithProtocols:   
   - Name:            objc_storeWeak
     JsName:          objc_storeWeak
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -4795,19 +4795,19 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    5.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Id
-          WithProtocols:   []
+          WithProtocols:   
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            objc_super
     JsName:          objc_super
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/message.h
@@ -4815,14 +4815,14 @@ Items:
       FullName:        ObjectiveC.message
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Struct
     Fields:          
       - Name:            receiver
         Signature:       
           Type:            Id
-          WithProtocols:   []
+          WithProtocols:   
       - Name:            super_class
         Signature:       
           Type:            Class
@@ -4833,14 +4833,14 @@ Items:
       FullName:        ObjectiveC.objc_sync
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Int
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            objc_sync_exit
     JsName:          objc_sync_exit
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/objc-sync.h
@@ -4848,14 +4848,14 @@ Items:
       FullName:        ObjectiveC.objc_sync
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Int
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            objc_terminate
     JsName:          objc_terminate
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/objc-exception.h
@@ -4863,7 +4863,7 @@ Items:
       FullName:        ObjectiveC.objc_exception
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    6.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4876,15 +4876,15 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            ULong
   - Name:            object_dispose
     JsName:          object_dispose
@@ -4893,15 +4893,15 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            object_getClass
     JsName:          object_getClass
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -4909,14 +4909,14 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Class
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            object_getClassName
     JsName:          object_getClassName
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/objc.h
@@ -4924,14 +4924,14 @@ Items:
       FullName:        ObjectiveC.objc
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            CString
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            object_getIndexedIvars
     JsName:          object_getIndexedIvars
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/objc.h
@@ -4939,7 +4939,7 @@ Items:
       FullName:        ObjectiveC.objc
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4948,7 +4948,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            object_getInstanceVariable
     JsName:          object_getInstanceVariable
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -4956,7 +4956,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -4965,7 +4965,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            CString
       - Type:            Pointer
         PointerType:     
@@ -4979,15 +4979,15 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -4998,14 +4998,14 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Bool
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            object_setClass
     JsName:          object_setClass
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -5013,14 +5013,14 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Class
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Class
   - Name:            object_setInstanceVariable
     JsName:          object_setInstanceVariable
@@ -5029,7 +5029,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5038,7 +5038,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            CString
       - Type:            Pointer
         PointerType:     
@@ -5050,7 +5050,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5059,7 +5059,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            CString
       - Type:            Pointer
         PointerType:     
@@ -5071,19 +5071,19 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            object_setIvarWithStrongDefault
     JsName:          object_setIvarWithStrongDefault
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -5091,19 +5091,19 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
     Signature:       
       - Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Void
       - Type:            Id
-        WithProtocols:   []
+        WithProtocols:   
   - Name:            property_copyAttributeList
     JsName:          property_copyAttributeList
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -5111,7 +5111,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5134,7 +5134,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5151,7 +5151,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5167,7 +5167,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5183,7 +5183,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5201,7 +5201,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5224,7 +5224,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    4.3
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5239,7 +5239,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5254,7 +5254,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5277,7 +5277,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5298,7 +5298,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    10.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5321,7 +5321,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5340,7 +5340,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5359,7 +5359,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5373,7 +5373,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5392,7 +5392,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5407,7 +5407,7 @@ Items:
       FullName:        ObjectiveC.objc
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5421,7 +5421,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5435,7 +5435,7 @@ Items:
       FullName:        ObjectiveC.objc
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5449,7 +5449,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5464,7 +5464,7 @@ Items:
       FullName:        ObjectiveC.objc
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5478,7 +5478,7 @@ Items:
       FullName:        ObjectiveC.objc
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function
@@ -5492,7 +5492,7 @@ Items:
       FullName:        ObjectiveC.runtime
       IsPartOfFramework: false
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    2.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Function

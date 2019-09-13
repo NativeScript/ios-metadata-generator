@@ -14,7 +14,7 @@ Items:
       FullName:        FileProvider.NSFileProviderEnumerating
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
     InstanceMethods: 
@@ -25,7 +25,7 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -35,8 +35,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'didUpdateItems:'
         JsName:          didUpdateItems
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderEnumerating.h
@@ -44,7 +44,7 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -55,7 +55,7 @@ Items:
               - Type:            Id
                 WithProtocols:   
                   - NSFileProviderItem
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'finishEnumeratingChangesUpToSyncAnchor:moreComing:'
         JsName:          finishEnumeratingChangesUpToSyncAnchorMoreComing
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderEnumerating.h
@@ -63,14 +63,14 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'finishEnumeratingWithError:'
         JsName:          finishEnumeratingWithError
@@ -79,17 +79,17 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            NSFileProviderDomain
@@ -99,7 +99,7 @@ Items:
       FullName:        FileProvider.NSFileProviderDomain
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -111,21 +111,21 @@ Items:
           FullName:        FileProvider.NSFileProviderDomain
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            displayName
         JsName:          displayName
@@ -134,7 +134,7 @@ Items:
           FullName:        FileProvider.NSFileProviderDomain
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -145,13 +145,13 @@ Items:
             FullName:        FileProvider.NSFileProviderDomain
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            identifier
         JsName:          identifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderDomain.h
@@ -159,7 +159,7 @@ Items:
           FullName:        FileProvider.NSFileProviderDomain
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -170,13 +170,13 @@ Items:
             FullName:        FileProvider.NSFileProviderDomain
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            pathRelativeToDocumentStorage
         JsName:          pathRelativeToDocumentStorage
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderDomain.h
@@ -184,7 +184,7 @@ Items:
           FullName:        FileProvider.NSFileProviderDomain
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -195,15 +195,15 @@ Items:
             FullName:        FileProvider.NSFileProviderDomain
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NSFileProviderEnumerationObserver
     JsName:          NSFileProviderEnumerationObserver
@@ -212,7 +212,7 @@ Items:
       FullName:        FileProvider.NSFileProviderEnumerating
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
     InstanceMethods: 
@@ -223,7 +223,7 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -234,7 +234,7 @@ Items:
               - Type:            Id
                 WithProtocols:   
                   - NSFileProviderItem
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'finishEnumeratingUpToPage:'
         JsName:          finishEnumeratingUpToPage
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderEnumerating.h
@@ -242,14 +242,14 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'finishEnumeratingWithError:'
         JsName:          finishEnumeratingWithError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderEnumerating.h
@@ -257,17 +257,17 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSError
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            NSFileProviderEnumerator
@@ -277,7 +277,7 @@ Items:
       FullName:        FileProvider.NSFileProviderEnumerating
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
     InstanceMethods: 
@@ -288,7 +288,7 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
@@ -298,7 +298,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'enumerateChangesForObserver:fromSyncAnchor:'
         JsName:          enumerateChangesForObserverFromSyncAnchor
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderEnumerating.h
@@ -306,7 +306,7 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
@@ -316,7 +316,7 @@ Items:
               - NSFileProviderChangeObserver
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'enumerateItemsForObserver:startingAtPage:'
         JsName:          enumerateItemsForObserverStartingAtPage
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderEnumerating.h
@@ -324,7 +324,7 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -334,7 +334,7 @@ Items:
               - NSFileProviderEnumerationObserver
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            invalidate
         JsName:          invalidate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderEnumerating.h
@@ -342,14 +342,14 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            NSFileProviderErrorCode
@@ -359,7 +359,7 @@ Items:
       FullName:        FileProvider.NSFileProviderError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -386,14 +386,14 @@ Items:
       FullName:        FileProvider.NSFileProviderError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NSFileProviderErrorDomain
     JsName:          NSFileProviderErrorDomain
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderError.h
@@ -401,14 +401,14 @@ Items:
       FullName:        FileProvider.NSFileProviderError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NSFileProviderErrorFilenameCollision
     JsName:          NSFileProviderErrorFilenameCollision
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderError.h
@@ -416,7 +416,7 @@ Items:
       FullName:        FileProvider.NSFileProviderError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1001'
@@ -427,7 +427,7 @@ Items:
       FullName:        FileProvider.NSFileProviderError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1003'
@@ -438,7 +438,7 @@ Items:
       FullName:        FileProvider.NSFileProviderError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1005'
@@ -449,14 +449,14 @@ Items:
       FullName:        FileProvider.NSFileProviderError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NSFileProviderErrorNotAuthenticated
     JsName:          NSFileProviderErrorNotAuthenticated
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderError.h
@@ -464,7 +464,7 @@ Items:
       FullName:        FileProvider.NSFileProviderError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1000'
@@ -475,7 +475,7 @@ Items:
       FullName:        FileProvider.NSFileProviderError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1002'
@@ -486,7 +486,7 @@ Items:
       FullName:        FileProvider.NSFileProviderError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1004'
@@ -497,7 +497,7 @@ Items:
       FullName:        FileProvider.NSFileProviderError
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '-1002'
@@ -508,7 +508,7 @@ Items:
       FullName:        FileProvider.Extension
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    8.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -520,14 +520,14 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'itemForIdentifier:error:'
         JsName:          itemForIdentifierError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderExtension.h
@@ -535,7 +535,7 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
@@ -545,12 +545,12 @@ Items:
               - NSFileProviderItem
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'persistentIdentifierForItemAtURL:'
         JsName:          persistentIdentifierForItemAtURL
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderExtension.h
@@ -558,16 +558,16 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'providePlaceholderAtURL:completionHandler:'
         JsName:          providePlaceholderAtURLCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderExtension.h
@@ -575,20 +575,20 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'startProvidingItemAtURL:completionHandler:'
         JsName:          startProvidingItemAtURLCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderExtension.h
@@ -596,20 +596,20 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'stopProvidingItemAtURL:'
         JsName:          stopProvidingItemAtURL
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderExtension.h
@@ -617,14 +617,14 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'URLForItemWithPersistentIdentifier:'
         JsName:          URLForItemWithPersistentIdentifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderExtension.h
@@ -632,16 +632,16 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'enumeratorForContainerItemIdentifier:error:'
         JsName:          enumeratorForContainerItemIdentifierError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderEnumerating.h
@@ -649,7 +649,7 @@ Items:
           FullName:        FileProvider.NSFileProviderEnumerating
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
@@ -658,12 +658,12 @@ Items:
               - NSFileProviderEnumerator
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'createDirectoryWithName:inParentItemIdentifier:completionHandler:'
         JsName:          createDirectoryWithNameInParentItemIdentifierCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderActions.h
@@ -671,7 +671,7 @@ Items:
           FullName:        FileProvider.NSFileProviderActions
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -679,10 +679,10 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -691,7 +691,7 @@ Items:
                   - NSFileProviderItem
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'deleteItemWithIdentifier:completionHandler:'
         JsName:          deleteItemWithIdentifierCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderActions.h
@@ -699,7 +699,7 @@ Items:
           FullName:        FileProvider.NSFileProviderActions
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -707,13 +707,13 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'importDocumentAtURL:toParentItemIdentifier:completionHandler:'
         JsName:          importDocumentAtURLToParentItemIdentifierCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderActions.h
@@ -721,7 +721,7 @@ Items:
           FullName:        FileProvider.NSFileProviderActions
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -729,10 +729,10 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -741,7 +741,7 @@ Items:
                   - NSFileProviderItem
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'renameItemWithIdentifier:toName:completionHandler:'
         JsName:          renameItemWithIdentifierToNameCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderActions.h
@@ -749,7 +749,7 @@ Items:
           FullName:        FileProvider.NSFileProviderActions
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -757,10 +757,10 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -769,7 +769,7 @@ Items:
                   - NSFileProviderItem
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'reparentItemWithIdentifier:toParentItemWithIdentifier:newName:completionHandler:'
         JsName:          reparentItemWithIdentifierToParentItemWithIdentifierNewNameCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderActions.h
@@ -777,7 +777,7 @@ Items:
           FullName:        FileProvider.NSFileProviderActions
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -785,13 +785,13 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -800,7 +800,7 @@ Items:
                   - NSFileProviderItem
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'setFavoriteRank:forItemIdentifier:completionHandler:'
         JsName:          setFavoriteRankForItemIdentifierCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderActions.h
@@ -808,7 +808,7 @@ Items:
           FullName:        FileProvider.NSFileProviderActions
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -816,10 +816,10 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSNumber
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -828,7 +828,7 @@ Items:
                   - NSFileProviderItem
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'setLastUsedDate:forItemIdentifier:completionHandler:'
         JsName:          setLastUsedDateForItemIdentifierCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderActions.h
@@ -836,7 +836,7 @@ Items:
           FullName:        FileProvider.NSFileProviderActions
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -844,10 +844,10 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSDate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -856,7 +856,7 @@ Items:
                   - NSFileProviderItem
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'setTagData:forItemIdentifier:completionHandler:'
         JsName:          setTagDataForItemIdentifierCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderActions.h
@@ -864,7 +864,7 @@ Items:
           FullName:        FileProvider.NSFileProviderActions
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -872,10 +872,10 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSData
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -884,7 +884,7 @@ Items:
                   - NSFileProviderItem
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'trashItemWithIdentifier:completionHandler:'
         JsName:          trashItemWithIdentifierCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderActions.h
@@ -892,7 +892,7 @@ Items:
           FullName:        FileProvider.NSFileProviderActions
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -900,7 +900,7 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -909,7 +909,7 @@ Items:
                   - NSFileProviderItem
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'untrashItemWithIdentifier:toParentItemIdentifier:completionHandler:'
         JsName:          untrashItemWithIdentifierToParentItemIdentifierCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderActions.h
@@ -917,7 +917,7 @@ Items:
           FullName:        FileProvider.NSFileProviderActions
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
@@ -925,10 +925,10 @@ Items:
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -937,7 +937,7 @@ Items:
                   - NSFileProviderItem
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'supportedServiceSourcesForItemIdentifier:error:'
         JsName:          supportedServiceSourcesForItemIdentifierError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderService.h
@@ -945,7 +945,7 @@ Items:
           FullName:        FileProvider.NSFileProviderService
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
@@ -956,15 +956,15 @@ Items:
               - Type:            Id
                 WithProtocols:   
                   - NSFileProviderServiceSource
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            'fetchThumbnailsForItemIdentifiers:requestedSize:perThumbnailCompletionHandler:completionHandler:'
         JsName:          fetchThumbnailsForItemIdentifiersRequestedSizePerThumbnailCompletionHandlerCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderThumbnailing.h
@@ -972,21 +972,21 @@ Items:
           FullName:        FileProvider.NSFileProviderThumbnailing
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    11.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSProgress
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
             JsName:          CGSize
@@ -995,19 +995,19 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSData
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
     StaticMethods:   
       - Name:            'placeholderURLForURL:'
         JsName:          placeholderURLForURL
@@ -1016,17 +1016,17 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'writePlaceholderAtURL:withMetadata:error:'
         JsName:          writePlaceholderAtURLWithMetadataError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderExtension.h
@@ -1034,7 +1034,7 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
@@ -1042,21 +1042,21 @@ Items:
           - Type:            Bool
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSDictionary
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
+                WithProtocols:   
               - Type:            Id
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
     InstanceProperties: 
       - Name:            documentStorageURL
         JsName:          documentStorageURL
@@ -1065,7 +1065,7 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1077,14 +1077,14 @@ Items:
             FullName:        FileProvider.Extension
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSURL
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            providerIdentifier
         JsName:          providerIdentifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderExtension.h
@@ -1092,7 +1092,7 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         IntroducedIn:    8.0
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
@@ -1104,14 +1104,14 @@ Items:
             FullName:        FileProvider.Extension
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           IntroducedIn:    8.0
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            domain
         JsName:          domain
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderDomain.h
@@ -1119,7 +1119,7 @@ Items:
           FullName:        FileProvider.NSFileProviderDomain
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1130,15 +1130,15 @@ Items:
             FullName:        FileProvider.NSFileProviderDomain
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSFileProviderDomain
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            NSFileProviderFavoriteRankUnranked
     JsName:          NSFileProviderFavoriteRankUnranked
@@ -1147,7 +1147,7 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
@@ -1160,14 +1160,14 @@ Items:
       FullName:        FileProvider.NSFileProviderEnumerating
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSData
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NSFileProviderInitialPageSortedByName
     JsName:          NSFileProviderInitialPageSortedByName
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderEnumerating.h
@@ -1175,14 +1175,14 @@ Items:
       FullName:        FileProvider.NSFileProviderEnumerating
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSData
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NSFileProviderItem
     JsName:          NSFileProviderItem
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1190,11 +1190,11 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            capabilities
         JsName:          capabilities
@@ -1203,7 +1203,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1214,7 +1214,7 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
@@ -1227,7 +1227,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1238,13 +1238,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            contentModificationDate
         JsName:          contentModificationDate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1252,7 +1252,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1263,13 +1263,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            creationDate
         JsName:          creationDate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1277,7 +1277,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1288,13 +1288,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            documentSize
         JsName:          documentSize
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1302,7 +1302,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1313,13 +1313,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            downloaded
         JsName:          downloaded
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1327,7 +1327,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1338,7 +1338,7 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
@@ -1350,7 +1350,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1361,7 +1361,7 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
@@ -1373,7 +1373,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1384,13 +1384,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            favoriteRank
         JsName:          favoriteRank
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1398,7 +1398,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1409,13 +1409,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSNumber
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            filename
         JsName:          filename
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1423,7 +1423,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1434,13 +1434,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            itemIdentifier
         JsName:          itemIdentifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1448,7 +1448,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1459,13 +1459,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            lastUsedDate
         JsName:          lastUsedDate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1473,7 +1473,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1484,13 +1484,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDate
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            mostRecentEditorNameComponents
         JsName:          mostRecentEditorNameComponents
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1498,7 +1498,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1509,13 +1509,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSPersonNameComponents
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            mostRecentVersionDownloaded
         JsName:          mostRecentVersionDownloaded
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1523,7 +1523,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1534,7 +1534,7 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
@@ -1546,7 +1546,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1557,13 +1557,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSPersonNameComponents
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            parentItemIdentifier
         JsName:          parentItemIdentifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1571,7 +1571,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1582,13 +1582,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            shared
         JsName:          shared
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1596,7 +1596,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1607,7 +1607,7 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
@@ -1619,7 +1619,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1630,7 +1630,7 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
@@ -1642,7 +1642,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1653,13 +1653,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            trashed
         JsName:          trashed
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1667,7 +1667,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1678,7 +1678,7 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
@@ -1690,7 +1690,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1701,13 +1701,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            uploaded
         JsName:          uploaded
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1715,7 +1715,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1726,7 +1726,7 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
@@ -1738,7 +1738,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1749,7 +1749,7 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
@@ -1761,7 +1761,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1772,13 +1772,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1786,7 +1786,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1797,13 +1797,13 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSDictionary
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            versionIdentifier
         JsName:          versionIdentifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -1811,7 +1811,7 @@ Items:
           FullName:        FileProvider.NSFileProviderItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Property
         Getter:          
@@ -1822,14 +1822,14 @@ Items:
             FullName:        FileProvider.NSFileProviderItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSData
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            NSFileProviderItemCapabilities
@@ -1839,7 +1839,7 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
     FullNameFields:  
@@ -1869,7 +1869,7 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -1880,7 +1880,7 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '63'
@@ -1891,7 +1891,7 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -1902,7 +1902,7 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '32'
@@ -1913,7 +1913,7 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -1924,7 +1924,7 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '8'
@@ -1935,7 +1935,7 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'
@@ -1946,7 +1946,7 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '16'
@@ -1957,7 +1957,7 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -1968,7 +1968,7 @@ Items:
       FullName:        FileProvider.Extension
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1980,23 +1980,23 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSURLSessionTask
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'signalEnumeratorForContainerItemIdentifier:completionHandler:'
         JsName:          signalEnumeratorForContainerItemIdentifierCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderManager.h
@@ -2004,20 +2004,20 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
     StaticMethods:   
       - Name:            'addDomain:completionHandler:'
         JsName:          addDomainCompletionHandler
@@ -2026,20 +2026,20 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSFileProviderDomain
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'getDomainsWithCompletionHandler:'
         JsName:          getDomainsWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderManager.h
@@ -2047,7 +2047,7 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2060,11 +2060,11 @@ Items:
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          NSFileProviderDomain
-                    WithProtocols:   []
-                WithProtocols:   []
+                    WithProtocols:   
+                WithProtocols:   
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'managerForDomain:'
         JsName:          managerForDomain
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderManager.h
@@ -2072,14 +2072,14 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSFileProviderDomain
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'placeholderURLForURL:'
         JsName:          placeholderURLForURL
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderManager.h
@@ -2087,16 +2087,16 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'removeAllDomainsWithCompletionHandler:'
         JsName:          removeAllDomainsWithCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderManager.h
@@ -2104,7 +2104,7 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2114,7 +2114,7 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'removeDomain:completionHandler:'
         JsName:          removeDomainCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderManager.h
@@ -2122,20 +2122,20 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSFileProviderDomain
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          NSError
-                WithProtocols:   []
+                WithProtocols:   
       - Name:            'writePlaceholderAtURL:withMetadata:error:'
         JsName:          writePlaceholderAtURLWithMetadataError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderManager.h
@@ -2143,14 +2143,14 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          NSURL
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Id
             WithProtocols:   
               - NSFileProviderItem
@@ -2158,7 +2158,7 @@ Items:
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
+              WithProtocols:   
     InstanceProperties: 
       - Name:            documentStorageURL
         JsName:          documentStorageURL
@@ -2167,7 +2167,7 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2178,13 +2178,13 @@ Items:
             FullName:        FileProvider.Extension
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSURL
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            providerIdentifier
         JsName:          providerIdentifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderManager.h
@@ -2192,7 +2192,7 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2203,13 +2203,13 @@ Items:
             FullName:        FileProvider.Extension
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
     StaticProperties: 
       - Name:            defaultManager
         JsName:          defaultManager
@@ -2218,7 +2218,7 @@ Items:
           FullName:        FileProvider.Extension
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2229,14 +2229,14 @@ Items:
             FullName:        FileProvider.Extension
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSFileProviderManager
-              WithProtocols:   []
-    Protocols:       []
+              WithProtocols:   
+    Protocols:       
     Base:            NSObject
   - Name:            NSFileProviderRootContainerItemIdentifier
     JsName:          NSFileProviderRootContainerItemIdentifier
@@ -2245,14 +2245,14 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
   - Name:            NSFileProviderServiceSource
     JsName:          NSFileProviderServiceSource
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderService.h
@@ -2260,7 +2260,7 @@ Items:
       FullName:        FileProvider.NSFileProviderService
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -2272,19 +2272,19 @@ Items:
           FullName:        FileProvider.NSFileProviderService
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodHasErrorOutParameter ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          NSXPCListenerEndpoint
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
               JsName:          NSError
-              WithProtocols:   []
-    StaticMethods:   []
+              WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            serviceName
         JsName:          serviceName
@@ -2293,7 +2293,7 @@ Items:
           FullName:        FileProvider.NSFileProviderService
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2304,15 +2304,15 @@ Items:
             FullName:        FileProvider.NSFileProviderService
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
   - Name:            NSFileProviderWorkingSetContainerItemIdentifier
     JsName:          NSFileProviderWorkingSetContainerItemIdentifier
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h
@@ -2320,12 +2320,12 @@ Items:
       FullName:        FileProvider.NSFileProviderItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    11.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
       Type:            Interface
       JsName:          NSString
-      WithProtocols:   []
+      WithProtocols:   
 ...

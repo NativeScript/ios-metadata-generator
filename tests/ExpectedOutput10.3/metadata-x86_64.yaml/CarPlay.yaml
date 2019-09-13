@@ -14,7 +14,7 @@ Items:
       FullName:        CarPlay.CPActionSheetTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -26,25 +26,25 @@ Items:
           FullName:        CarPlay.CPActionSheetTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          CPAlertAction
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            actions
         JsName:          actions
@@ -53,7 +53,7 @@ Items:
           FullName:        CarPlay.CPActionSheetTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -64,7 +64,7 @@ Items:
             FullName:        CarPlay.CPActionSheetTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -73,8 +73,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPAlertAction
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            message
         JsName:          message
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPActionSheetTemplate.h
@@ -82,7 +82,7 @@ Items:
           FullName:        CarPlay.CPActionSheetTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -93,13 +93,13 @@ Items:
             FullName:        CarPlay.CPActionSheetTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            title
         JsName:          title
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPActionSheetTemplate.h
@@ -107,7 +107,7 @@ Items:
           FullName:        CarPlay.CPActionSheetTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -118,15 +118,15 @@ Items:
             FullName:        CarPlay.CPActionSheetTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            CPTemplate
   - Name:            CPAlertAction
     JsName:          CPAlertAction
@@ -135,7 +135,7 @@ Items:
       FullName:        CarPlay.CPAlertAction
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -147,14 +147,14 @@ Items:
           FullName:        CarPlay.CPAlertAction
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            CPAlertActionStyle
           - Type:            Block
@@ -162,8 +162,8 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          CPAlertAction
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            handler
         JsName:          handler
@@ -172,7 +172,7 @@ Items:
           FullName:        CarPlay.CPAlertAction
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -183,7 +183,7 @@ Items:
             FullName:        CarPlay.CPAlertAction
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -192,7 +192,7 @@ Items:
                 - Type:            Void
                 - Type:            Interface
                   JsName:          CPAlertAction
-                  WithProtocols:   []
+                  WithProtocols:   
       - Name:            style
         JsName:          style
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPAlertAction.h
@@ -200,7 +200,7 @@ Items:
           FullName:        CarPlay.CPAlertAction
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -211,7 +211,7 @@ Items:
             FullName:        CarPlay.CPAlertAction
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -224,7 +224,7 @@ Items:
           FullName:        CarPlay.CPAlertAction
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -235,14 +235,14 @@ Items:
             FullName:        CarPlay.CPAlertAction
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -253,7 +253,7 @@ Items:
       FullName:        CarPlay.CPAlertAction
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -272,7 +272,7 @@ Items:
       FullName:        CarPlay.CPAlertAction
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -283,7 +283,7 @@ Items:
       FullName:        CarPlay.CPAlertAction
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -294,7 +294,7 @@ Items:
       FullName:        CarPlay.CPAlertAction
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -305,7 +305,7 @@ Items:
       FullName:        CarPlay.CPAlertTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -317,7 +317,7 @@ Items:
           FullName:        CarPlay.CPAlertTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -327,16 +327,16 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          CPAlertAction
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            actions
         JsName:          actions
@@ -345,7 +345,7 @@ Items:
           FullName:        CarPlay.CPAlertTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -356,7 +356,7 @@ Items:
             FullName:        CarPlay.CPAlertTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -365,8 +365,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPAlertAction
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            titleVariants
         JsName:          titleVariants
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPAlertTemplate.h
@@ -374,7 +374,7 @@ Items:
           FullName:        CarPlay.CPAlertTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -385,7 +385,7 @@ Items:
             FullName:        CarPlay.CPAlertTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -394,10 +394,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            CPTemplate
   - Name:            CPApplicationDelegate
     JsName:          CPApplicationDelegate
@@ -406,7 +406,7 @@ Items:
       FullName:        CarPlay.CPInterfaceController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -418,20 +418,20 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          UIApplication
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPInterfaceController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPWindow
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'application:didDisconnectCarInterfaceController:fromWindow:'
         JsName:          applicationDidDisconnectCarInterfaceControllerFromWindow
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPInterfaceController.h
@@ -439,20 +439,20 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          UIApplication
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPInterfaceController
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPWindow
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'application:didSelectManeuver:'
         JsName:          applicationDidSelectManeuver
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPInterfaceController.h
@@ -460,17 +460,17 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          UIApplication
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPManeuver
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'application:didSelectNavigationAlert:'
         JsName:          applicationDidSelectNavigationAlert
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPInterfaceController.h
@@ -478,20 +478,20 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          UIApplication
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPNavigationAlert
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - UIApplicationDelegate
   - Name:            CPBarButton
@@ -501,7 +501,7 @@ Items:
       FullName:        CarPlay.CPBarButton
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -513,7 +513,7 @@ Items:
           FullName:        CarPlay.CPBarButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -525,8 +525,8 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          CPBarButton
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            buttonType
         JsName:          buttonType
@@ -535,7 +535,7 @@ Items:
           FullName:        CarPlay.CPBarButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -546,7 +546,7 @@ Items:
             FullName:        CarPlay.CPBarButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -559,7 +559,7 @@ Items:
           FullName:        CarPlay.CPBarButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -570,7 +570,7 @@ Items:
             FullName:        CarPlay.CPBarButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -583,7 +583,7 @@ Items:
             FullName:        CarPlay.CPBarButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -596,7 +596,7 @@ Items:
           FullName:        CarPlay.CPBarButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -607,13 +607,13 @@ Items:
             FullName:        CarPlay.CPBarButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setImage:'
           JsName:          setImage
@@ -622,14 +622,14 @@ Items:
             FullName:        CarPlay.CPBarButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            title
         JsName:          title
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPBarButton.h
@@ -637,7 +637,7 @@ Items:
           FullName:        CarPlay.CPBarButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -648,13 +648,13 @@ Items:
             FullName:        CarPlay.CPBarButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setTitle:'
           JsName:          setTitle
@@ -663,15 +663,15 @@ Items:
             FullName:        CarPlay.CPBarButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -682,12 +682,12 @@ Items:
       FullName:        CarPlay.CPBarButtonProviding
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            backButton
         JsName:          backButton
@@ -696,7 +696,7 @@ Items:
           FullName:        CarPlay.CPBarButtonProviding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -707,13 +707,13 @@ Items:
             FullName:        CarPlay.CPBarButtonProviding
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CPBarButton
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setBackButton:'
           JsName:          setBackButton
@@ -722,14 +722,14 @@ Items:
             FullName:        CarPlay.CPBarButtonProviding
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          CPBarButton
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            leadingNavigationBarButtons
         JsName:          leadingNavigationBarButtons
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPBarButtonProviding.h
@@ -737,7 +737,7 @@ Items:
           FullName:        CarPlay.CPBarButtonProviding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -748,7 +748,7 @@ Items:
             FullName:        CarPlay.CPBarButtonProviding
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -757,8 +757,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPBarButton
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setLeadingNavigationBarButtons:'
           JsName:          setLeadingNavigationBarButtons
@@ -767,7 +767,7 @@ Items:
             FullName:        CarPlay.CPBarButtonProviding
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -777,8 +777,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPBarButton
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            trailingNavigationBarButtons
         JsName:          trailingNavigationBarButtons
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPBarButtonProviding.h
@@ -786,7 +786,7 @@ Items:
           FullName:        CarPlay.CPBarButtonProviding
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -797,7 +797,7 @@ Items:
             FullName:        CarPlay.CPBarButtonProviding
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -806,8 +806,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPBarButton
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setTrailingNavigationBarButtons:'
           JsName:          setTrailingNavigationBarButtons
@@ -816,7 +816,7 @@ Items:
             FullName:        CarPlay.CPBarButtonProviding
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -826,9 +826,9 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPBarButton
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            CPBarButtonType
@@ -838,7 +838,7 @@ Items:
       FullName:        CarPlay.CPBarButton
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -855,7 +855,7 @@ Items:
       FullName:        CarPlay.CPBarButton
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -866,7 +866,7 @@ Items:
       FullName:        CarPlay.CPBarButton
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -877,7 +877,7 @@ Items:
       FullName:        CarPlay.CPGridButton
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -889,7 +889,7 @@ Items:
           FullName:        CarPlay.CPGridButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -899,18 +899,18 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          UIImage
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
                 JsName:          CPGridButton
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            enabled
         JsName:          enabled
@@ -919,7 +919,7 @@ Items:
           FullName:        CarPlay.CPGridButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -930,7 +930,7 @@ Items:
             FullName:        CarPlay.CPGridButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -943,7 +943,7 @@ Items:
             FullName:        CarPlay.CPGridButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -956,7 +956,7 @@ Items:
           FullName:        CarPlay.CPGridButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -967,13 +967,13 @@ Items:
             FullName:        CarPlay.CPGridButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            titleVariants
         JsName:          titleVariants
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPGridButton.h
@@ -981,7 +981,7 @@ Items:
           FullName:        CarPlay.CPGridButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -992,7 +992,7 @@ Items:
             FullName:        CarPlay.CPGridButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1001,9 +1001,9 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -1014,7 +1014,7 @@ Items:
       FullName:        CarPlay.CPGridTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1026,22 +1026,22 @@ Items:
           FullName:        CarPlay.CPGridTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          CPGridButton
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            gridButtons
         JsName:          gridButtons
@@ -1050,7 +1050,7 @@ Items:
           FullName:        CarPlay.CPGridTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1061,7 +1061,7 @@ Items:
             FullName:        CarPlay.CPGridTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1070,8 +1070,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPGridButton
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            title
         JsName:          title
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPGridTemplate.h
@@ -1079,7 +1079,7 @@ Items:
           FullName:        CarPlay.CPGridTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1090,14 +1090,14 @@ Items:
             FullName:        CarPlay.CPGridTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - CPBarButtonProviding
     Base:            CPTemplate
@@ -1108,7 +1108,7 @@ Items:
       FullName:        CarPlay.CPImageSet
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1120,18 +1120,18 @@ Items:
           FullName:        CarPlay.CPImageSet
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          UIImage
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          UIImage
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            darkContentImage
         JsName:          darkContentImage
@@ -1140,7 +1140,7 @@ Items:
           FullName:        CarPlay.CPImageSet
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1151,13 +1151,13 @@ Items:
             FullName:        CarPlay.CPImageSet
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            lightContentImage
         JsName:          lightContentImage
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPImageSet.h
@@ -1165,7 +1165,7 @@ Items:
           FullName:        CarPlay.CPImageSet
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1176,14 +1176,14 @@ Items:
             FullName:        CarPlay.CPImageSet
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -1194,7 +1194,7 @@ Items:
       FullName:        CarPlay.CPInterfaceController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1206,7 +1206,7 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1219,7 +1219,7 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1232,7 +1232,7 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1245,14 +1245,14 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'presentTemplate:animated:'
         JsName:          presentTemplateAnimated
@@ -1261,14 +1261,14 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'pushTemplate:animated:'
         JsName:          pushTemplateAnimated
@@ -1277,14 +1277,14 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'setRootTemplate:animated:'
         JsName:          setRootTemplateAnimated
@@ -1293,16 +1293,16 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            delegate
         JsName:          delegate
@@ -1311,7 +1311,7 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1322,7 +1322,7 @@ Items:
             FullName:        CarPlay.CPInterfaceController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1337,7 +1337,7 @@ Items:
             FullName:        CarPlay.CPInterfaceController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1352,7 +1352,7 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1363,13 +1363,13 @@ Items:
             FullName:        CarPlay.CPInterfaceController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CPTemplate
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            rootTemplate
         JsName:          rootTemplate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPInterfaceController.h
@@ -1377,7 +1377,7 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1388,13 +1388,13 @@ Items:
             FullName:        CarPlay.CPInterfaceController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CPTemplate
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            templates
         JsName:          templates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPInterfaceController.h
@@ -1402,7 +1402,7 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1413,7 +1413,7 @@ Items:
             FullName:        CarPlay.CPInterfaceController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1422,8 +1422,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPTemplate
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            topTemplate
         JsName:          topTemplate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPInterfaceController.h
@@ -1431,7 +1431,7 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1442,15 +1442,15 @@ Items:
             FullName:        CarPlay.CPInterfaceController
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CPTemplate
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            CPInterfaceControllerDelegate
     JsName:          CPInterfaceControllerDelegate
@@ -1459,7 +1459,7 @@ Items:
       FullName:        CarPlay.CPInterfaceController
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -1471,14 +1471,14 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'templateDidDisappear:animated:'
         JsName:          templateDidDisappearAnimated
@@ -1487,14 +1487,14 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'templateWillAppear:animated:'
         JsName:          templateWillAppearAnimated
@@ -1503,14 +1503,14 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'templateWillDisappear:animated:'
         JsName:          templateWillDisappearAnimated
@@ -1519,18 +1519,18 @@ Items:
           FullName:        CarPlay.CPInterfaceController
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            CPLimitableUserInterface
@@ -1540,7 +1540,7 @@ Items:
       FullName:        CarPlay.CPSessionConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -1557,7 +1557,7 @@ Items:
       FullName:        CarPlay.CPSessionConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -1568,7 +1568,7 @@ Items:
       FullName:        CarPlay.CPSessionConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -1579,7 +1579,7 @@ Items:
       FullName:        CarPlay.CPListItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1591,17 +1591,17 @@ Items:
           FullName:        CarPlay.CPListItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithText:detailText:image:'
         JsName:          initWithTextDetailTextImage
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPListItem.h
@@ -1609,20 +1609,20 @@ Items:
           FullName:        CarPlay.CPListItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          UIImage
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithText:detailText:image:showsDisclosureIndicator:'
         JsName:          initWithTextDetailTextImageShowsDisclosureIndicator
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPListItem.h
@@ -1630,22 +1630,22 @@ Items:
           FullName:        CarPlay.CPListItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          UIImage
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            detailText
         JsName:          detailText
@@ -1654,7 +1654,7 @@ Items:
           FullName:        CarPlay.CPListItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1665,13 +1665,13 @@ Items:
             FullName:        CarPlay.CPListItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            image
         JsName:          image
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPListItem.h
@@ -1679,7 +1679,7 @@ Items:
           FullName:        CarPlay.CPListItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1690,13 +1690,13 @@ Items:
             FullName:        CarPlay.CPListItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            showsDisclosureIndicator
         JsName:          showsDisclosureIndicator
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPListItem.h
@@ -1704,7 +1704,7 @@ Items:
           FullName:        CarPlay.CPListItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1715,7 +1715,7 @@ Items:
             FullName:        CarPlay.CPListItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1727,7 +1727,7 @@ Items:
           FullName:        CarPlay.CPListItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1738,13 +1738,13 @@ Items:
             FullName:        CarPlay.CPListItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPListItem.h
@@ -1752,7 +1752,7 @@ Items:
           FullName:        CarPlay.CPListItem
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1763,12 +1763,12 @@ Items:
             FullName:        CarPlay.CPListItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Id
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setUserInfo:'
           JsName:          setUserInfo
@@ -1777,14 +1777,14 @@ Items:
             FullName:        CarPlay.CPListItem
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Id
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -1795,7 +1795,7 @@ Items:
       FullName:        CarPlay.CPListSection
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1807,7 +1807,7 @@ Items:
           FullName:        CarPlay.CPListSection
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -1817,8 +1817,8 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          CPListItem
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'initWithItems:header:sectionIndexTitle:'
         JsName:          initWithItemsHeaderSectionIndexTitle
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPListSection.h
@@ -1826,7 +1826,7 @@ Items:
           FullName:        CarPlay.CPListSection
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -1836,15 +1836,15 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          CPListItem
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            header
         JsName:          header
@@ -1853,7 +1853,7 @@ Items:
           FullName:        CarPlay.CPListSection
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1864,13 +1864,13 @@ Items:
             FullName:        CarPlay.CPListSection
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            items
         JsName:          items
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPListSection.h
@@ -1878,7 +1878,7 @@ Items:
           FullName:        CarPlay.CPListSection
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1889,7 +1889,7 @@ Items:
             FullName:        CarPlay.CPListSection
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -1898,8 +1898,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPListItem
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            sectionIndexTitle
         JsName:          sectionIndexTitle
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPListSection.h
@@ -1907,7 +1907,7 @@ Items:
           FullName:        CarPlay.CPListSection
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -1918,14 +1918,14 @@ Items:
             FullName:        CarPlay.CPListSection
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -1936,7 +1936,7 @@ Items:
       FullName:        CarPlay.CPListTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -1948,21 +1948,21 @@ Items:
           FullName:        CarPlay.CPListTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          CPListSection
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
       - Name:            'updateSections:'
         JsName:          updateSections
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPListTemplate.h
@@ -1970,7 +1970,7 @@ Items:
           FullName:        CarPlay.CPListTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -1980,9 +1980,9 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          CPListSection
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            delegate
         JsName:          delegate
@@ -1991,7 +1991,7 @@ Items:
           FullName:        CarPlay.CPListTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2002,7 +2002,7 @@ Items:
             FullName:        CarPlay.CPListTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2017,7 +2017,7 @@ Items:
             FullName:        CarPlay.CPListTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2032,7 +2032,7 @@ Items:
           FullName:        CarPlay.CPListTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2043,7 +2043,7 @@ Items:
             FullName:        CarPlay.CPListTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2052,8 +2052,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPListSection
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            title
         JsName:          title
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPListTemplate.h
@@ -2061,7 +2061,7 @@ Items:
           FullName:        CarPlay.CPListTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2072,14 +2072,14 @@ Items:
             FullName:        CarPlay.CPListTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - CPBarButtonProviding
     Base:            CPTemplate
@@ -2090,7 +2090,7 @@ Items:
       FullName:        CarPlay.CPListTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -2102,23 +2102,23 @@ Items:
           FullName:        CarPlay.CPListTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPListTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPListItem
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            CPManeuver
@@ -2128,12 +2128,12 @@ Items:
       FullName:        CarPlay.CPManeuver
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            attributedInstructionVariants
         JsName:          attributedInstructionVariants
@@ -2142,7 +2142,7 @@ Items:
           FullName:        CarPlay.CPManeuver
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2153,7 +2153,7 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2162,8 +2162,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSAttributedString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setAttributedInstructionVariants:'
           JsName:          setAttributedInstructionVariants
@@ -2172,7 +2172,7 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2182,8 +2182,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSAttributedString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            initialTravelEstimates
         JsName:          initialTravelEstimates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPManeuver.h
@@ -2191,7 +2191,7 @@ Items:
           FullName:        CarPlay.CPManeuver
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2202,13 +2202,13 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CPTravelEstimates
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setInitialTravelEstimates:'
           JsName:          setInitialTravelEstimates
@@ -2217,14 +2217,14 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          CPTravelEstimates
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            instructionVariants
         JsName:          instructionVariants
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPManeuver.h
@@ -2232,7 +2232,7 @@ Items:
           FullName:        CarPlay.CPManeuver
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2243,7 +2243,7 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2252,8 +2252,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setInstructionVariants:'
           JsName:          setInstructionVariants
@@ -2262,7 +2262,7 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2272,8 +2272,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            junctionImage
         JsName:          junctionImage
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPManeuver.h
@@ -2281,7 +2281,7 @@ Items:
           FullName:        CarPlay.CPManeuver
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2292,13 +2292,13 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setJunctionImage:'
           JsName:          setJunctionImage
@@ -2307,14 +2307,14 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            symbolSet
         JsName:          symbolSet
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPManeuver.h
@@ -2322,7 +2322,7 @@ Items:
           FullName:        CarPlay.CPManeuver
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2333,13 +2333,13 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CPImageSet
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setSymbolSet:'
           JsName:          setSymbolSet
@@ -2348,14 +2348,14 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          CPImageSet
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPManeuver.h
@@ -2363,7 +2363,7 @@ Items:
           FullName:        CarPlay.CPManeuver
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2374,12 +2374,12 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Id
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setUserInfo:'
           JsName:          setUserInfo
@@ -2388,14 +2388,14 @@ Items:
             FullName:        CarPlay.CPManeuver
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Id
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -2407,7 +2407,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -2430,7 +2430,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -2441,7 +2441,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'
@@ -2452,7 +2452,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -2463,7 +2463,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -2474,7 +2474,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -2485,7 +2485,7 @@ Items:
       FullName:        CarPlay.CPMapButton
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -2497,7 +2497,7 @@ Items:
           FullName:        CarPlay.CPMapButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -2507,8 +2507,8 @@ Items:
               - Type:            Void
               - Type:            Interface
                 JsName:          CPMapButton
-                WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            enabled
         JsName:          enabled
@@ -2517,7 +2517,7 @@ Items:
           FullName:        CarPlay.CPMapButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2528,7 +2528,7 @@ Items:
             FullName:        CarPlay.CPMapButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2541,7 +2541,7 @@ Items:
             FullName:        CarPlay.CPMapButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2554,7 +2554,7 @@ Items:
           FullName:        CarPlay.CPMapButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2565,13 +2565,13 @@ Items:
             FullName:        CarPlay.CPMapButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setFocusedImage:'
           JsName:          setFocusedImage
@@ -2580,14 +2580,14 @@ Items:
             FullName:        CarPlay.CPMapButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            hidden
         JsName:          hidden
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapButton.h
@@ -2595,7 +2595,7 @@ Items:
           FullName:        CarPlay.CPMapButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2606,7 +2606,7 @@ Items:
             FullName:        CarPlay.CPMapButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2619,7 +2619,7 @@ Items:
             FullName:        CarPlay.CPMapButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2632,7 +2632,7 @@ Items:
           FullName:        CarPlay.CPMapButton
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2643,13 +2643,13 @@ Items:
             FullName:        CarPlay.CPMapButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setImage:'
           JsName:          setImage
@@ -2658,15 +2658,15 @@ Items:
             FullName:        CarPlay.CPMapButton
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -2677,7 +2677,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -2689,7 +2689,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2706,7 +2706,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2719,7 +2719,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2731,14 +2731,14 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPNavigationAlert
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
       - Name:            'showPanningInterfaceAnimated:'
         JsName:          showPanningInterfaceAnimated
@@ -2747,7 +2747,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2760,17 +2760,17 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTrip
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPTripPreviewTextConfiguration
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'showTripPreviews:textConfiguration:'
         JsName:          showTripPreviewsTextConfiguration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -2778,7 +2778,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -2788,11 +2788,11 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          CPTrip
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPTripPreviewTextConfiguration
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'startNavigationSessionForTrip:'
         JsName:          startNavigationSessionForTrip
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -2800,16 +2800,16 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Interface
             JsName:          CPNavigationSession
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPTrip
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'updateTravelEstimates:forTrip:'
         JsName:          updateTravelEstimatesForTrip
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -2817,17 +2817,17 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTravelEstimates
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPTrip
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'updateTravelEstimates:forTrip:withTimeRemainingColor:'
         JsName:          updateTravelEstimatesForTripWithTimeRemainingColor
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -2835,20 +2835,20 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTravelEstimates
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPTrip
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            CPTimeRemainingColor
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            automaticallyHidesNavigationBar
         JsName:          automaticallyHidesNavigationBar
@@ -2857,7 +2857,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2868,7 +2868,7 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2881,7 +2881,7 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2894,7 +2894,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2905,13 +2905,13 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CPNavigationAlert
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            guidanceBackgroundColor
         JsName:          guidanceBackgroundColor
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -2919,7 +2919,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2930,13 +2930,13 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIColor
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setGuidanceBackgroundColor:'
           JsName:          setGuidanceBackgroundColor
@@ -2945,14 +2945,14 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Interface
               JsName:          UIColor
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            hidesButtonsWithNavigationBar
         JsName:          hidesButtonsWithNavigationBar
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -2960,7 +2960,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -2971,7 +2971,7 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2984,7 +2984,7 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -2997,7 +2997,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3008,7 +3008,7 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3017,8 +3017,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPMapButton
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setMapButtons:'
           JsName:          setMapButtons
@@ -3027,7 +3027,7 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3037,8 +3037,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPMapButton
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            mapDelegate
         JsName:          mapDelegate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3046,7 +3046,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3057,7 +3057,7 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3072,7 +3072,7 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3087,7 +3087,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3098,7 +3098,7 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3110,7 +3110,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3121,7 +3121,7 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3135,14 +3135,14 @@ Items:
             FullName:        CarPlay.CPMapTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Enum
               Name:            CPTripEstimateStyle
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - CPBarButtonProviding
     Base:            CPTemplate
@@ -3153,7 +3153,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -3165,14 +3165,14 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplateDidCancelNavigation:'
         JsName:          mapTemplateDidCancelNavigation
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3180,14 +3180,14 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplate:didDismissNavigationAlert:dismissalContext:'
         JsName:          mapTemplateDidDismissNavigationAlertDismissalContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3195,17 +3195,17 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPNavigationAlert
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            CPNavigationAlertDismissalContext
       - Name:            'mapTemplateDidDismissPanningInterface:'
@@ -3215,14 +3215,14 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplate:didEndPanGestureWithVelocity:'
         JsName:          mapTemplateDidEndPanGestureWithVelocity
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3230,14 +3230,14 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
             JsName:          CGPoint
@@ -3248,17 +3248,17 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPNavigationAlert
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplateDidShowPanningInterface:'
         JsName:          mapTemplateDidShowPanningInterface
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3266,14 +3266,14 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplate:didUpdatePanGestureWithTranslation:velocity:'
         JsName:          mapTemplateDidUpdatePanGestureWithTranslationVelocity
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3281,14 +3281,14 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
             JsName:          CGPoint
@@ -3302,7 +3302,7 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
@@ -3310,10 +3310,10 @@ Items:
             Name:            CPManeuverDisplayStyle
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPManeuver
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplate:panBeganWithDirection:'
         JsName:          mapTemplatePanBeganWithDirection
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3321,14 +3321,14 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            CPPanDirection
       - Name:            'mapTemplate:panEndedWithDirection:'
@@ -3338,14 +3338,14 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            CPPanDirection
       - Name:            'mapTemplate:panWithDirection:'
@@ -3355,14 +3355,14 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            CPPanDirection
       - Name:            'mapTemplate:selectedPreviewForTrip:usingRouteChoice:'
@@ -3372,20 +3372,20 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPTrip
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPRouteChoice
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplate:shouldShowNotificationForManeuver:'
         JsName:          mapTemplateShouldShowNotificationForManeuver
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3393,17 +3393,17 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPManeuver
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplate:shouldShowNotificationForNavigationAlert:'
         JsName:          mapTemplateShouldShowNotificationForNavigationAlert
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3411,17 +3411,17 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPNavigationAlert
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplate:shouldUpdateNotificationForManeuver:withTravelEstimates:'
         JsName:          mapTemplateShouldUpdateNotificationForManeuverWithTravelEstimates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3429,20 +3429,20 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Bool
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPManeuver
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPTravelEstimates
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplate:startedTrip:usingRouteChoice:'
         JsName:          mapTemplateStartedTripUsingRouteChoice
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3450,20 +3450,20 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPTrip
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPRouteChoice
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplate:willDismissNavigationAlert:dismissalContext:'
         JsName:          mapTemplateWillDismissNavigationAlertDismissalContext
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3471,17 +3471,17 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPNavigationAlert
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            CPNavigationAlertDismissalContext
       - Name:            'mapTemplateWillDismissPanningInterface:'
@@ -3491,14 +3491,14 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'mapTemplate:willShowNavigationAlert:'
         JsName:          mapTemplateWillShowNavigationAlert
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3506,20 +3506,20 @@ Items:
           FullName:        CarPlay.CPMapTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPMapTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPNavigationAlert
-            WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            CPMaximumListItemImageSize
@@ -3529,7 +3529,7 @@ Items:
       FullName:        CarPlay.CPListItem
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
@@ -3543,7 +3543,7 @@ Items:
       FullName:        CarPlay.CPNavigationAlert
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -3555,7 +3555,7 @@ Items:
           FullName:        CarPlay.CPNavigationAlert
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -3565,24 +3565,24 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPImageSet
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPAlertAction
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPAlertAction
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Double
       - Name:            'updateTitleVariants:subtitleVariants:'
         JsName:          updateTitleVariantsSubtitleVariants
@@ -3591,7 +3591,7 @@ Items:
           FullName:        CarPlay.CPNavigationAlert
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -3601,16 +3601,16 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            duration
         JsName:          duration
@@ -3619,7 +3619,7 @@ Items:
           FullName:        CarPlay.CPNavigationAlert
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3630,7 +3630,7 @@ Items:
             FullName:        CarPlay.CPNavigationAlert
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3642,7 +3642,7 @@ Items:
           FullName:        CarPlay.CPNavigationAlert
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3653,13 +3653,13 @@ Items:
             FullName:        CarPlay.CPNavigationAlert
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CPImageSet
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            primaryAction
         JsName:          primaryAction
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPNavigationAlert.h
@@ -3667,7 +3667,7 @@ Items:
           FullName:        CarPlay.CPNavigationAlert
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3678,13 +3678,13 @@ Items:
             FullName:        CarPlay.CPNavigationAlert
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CPAlertAction
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            secondaryAction
         JsName:          secondaryAction
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPNavigationAlert.h
@@ -3692,7 +3692,7 @@ Items:
           FullName:        CarPlay.CPNavigationAlert
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3703,13 +3703,13 @@ Items:
             FullName:        CarPlay.CPNavigationAlert
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CPAlertAction
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            subtitleVariants
         JsName:          subtitleVariants
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPNavigationAlert.h
@@ -3717,7 +3717,7 @@ Items:
           FullName:        CarPlay.CPNavigationAlert
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3728,7 +3728,7 @@ Items:
             FullName:        CarPlay.CPNavigationAlert
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3737,8 +3737,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            titleVariants
         JsName:          titleVariants
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPNavigationAlert.h
@@ -3746,7 +3746,7 @@ Items:
           FullName:        CarPlay.CPNavigationAlert
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3757,7 +3757,7 @@ Items:
             FullName:        CarPlay.CPNavigationAlert
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3766,9 +3766,9 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -3779,7 +3779,7 @@ Items:
       FullName:        CarPlay.CPNavigationAlert
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -3798,7 +3798,7 @@ Items:
       FullName:        CarPlay.CPNavigationAlert
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -3809,7 +3809,7 @@ Items:
       FullName:        CarPlay.CPNavigationAlert
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -3820,7 +3820,7 @@ Items:
       FullName:        CarPlay.CPNavigationAlert
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -3831,7 +3831,7 @@ Items:
       FullName:        CarPlay.CPNavigationAlert
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Var
     Signature:       
@@ -3844,7 +3844,7 @@ Items:
       FullName:        CarPlay.CPNavigationSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -3856,7 +3856,7 @@ Items:
           FullName:        CarPlay.CPNavigationSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -3868,7 +3868,7 @@ Items:
           FullName:        CarPlay.CPNavigationSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -3880,7 +3880,7 @@ Items:
           FullName:        CarPlay.CPNavigationSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
@@ -3889,7 +3889,7 @@ Items:
             Name:            CPTripPauseReason
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'updateTravelEstimates:forManeuver:'
         JsName:          updateTravelEstimatesForManeuver
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPNavigationSession.h
@@ -3897,18 +3897,18 @@ Items:
           FullName:        CarPlay.CPNavigationSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPTravelEstimates
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPManeuver
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            trip
         JsName:          trip
@@ -3917,7 +3917,7 @@ Items:
           FullName:        CarPlay.CPNavigationSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3928,13 +3928,13 @@ Items:
             FullName:        CarPlay.CPNavigationSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          CPTrip
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            upcomingManeuvers
         JsName:          upcomingManeuvers
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPNavigationSession.h
@@ -3942,7 +3942,7 @@ Items:
           FullName:        CarPlay.CPNavigationSession
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -3953,7 +3953,7 @@ Items:
             FullName:        CarPlay.CPNavigationSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3962,8 +3962,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPManeuver
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
         Setter:          
           Name:            'setUpcomingManeuvers:'
           JsName:          setUpcomingManeuvers
@@ -3972,7 +3972,7 @@ Items:
             FullName:        CarPlay.CPNavigationSession
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -3982,10 +3982,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPManeuver
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            CPPanDirection
     JsName:          CPPanDirection
@@ -3994,7 +3994,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -4017,7 +4017,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '8'
@@ -4028,7 +4028,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -4039,7 +4039,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -4050,7 +4050,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -4061,7 +4061,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'
@@ -4072,7 +4072,7 @@ Items:
       FullName:        CarPlay.CPTrip
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -4084,7 +4084,7 @@ Items:
           FullName:        CarPlay.CPTrip
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -4094,23 +4094,23 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            additionalInformationVariants
         JsName:          additionalInformationVariants
@@ -4119,7 +4119,7 @@ Items:
           FullName:        CarPlay.CPTrip
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4130,7 +4130,7 @@ Items:
             FullName:        CarPlay.CPTrip
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -4139,8 +4139,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            selectionSummaryVariants
         JsName:          selectionSummaryVariants
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPTrip.h
@@ -4148,7 +4148,7 @@ Items:
           FullName:        CarPlay.CPTrip
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4159,7 +4159,7 @@ Items:
             FullName:        CarPlay.CPTrip
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -4168,8 +4168,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            summaryVariants
         JsName:          summaryVariants
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPTrip.h
@@ -4177,7 +4177,7 @@ Items:
           FullName:        CarPlay.CPTrip
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4188,7 +4188,7 @@ Items:
             FullName:        CarPlay.CPTrip
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -4197,8 +4197,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPTrip.h
@@ -4206,7 +4206,7 @@ Items:
           FullName:        CarPlay.CPTrip
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4217,12 +4217,12 @@ Items:
             FullName:        CarPlay.CPTrip
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Id
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setUserInfo:'
           JsName:          setUserInfo
@@ -4231,14 +4231,14 @@ Items:
             FullName:        CarPlay.CPTrip
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Id
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSCopying
       - NSSecureCoding
@@ -4250,12 +4250,12 @@ Items:
       FullName:        CarPlay.CPSearchTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            delegate
         JsName:          delegate
@@ -4264,7 +4264,7 @@ Items:
           FullName:        CarPlay.CPSearchTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4275,7 +4275,7 @@ Items:
             FullName:        CarPlay.CPSearchTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -4290,7 +4290,7 @@ Items:
             FullName:        CarPlay.CPSearchTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -4298,8 +4298,8 @@ Items:
             - Type:            Id
               WithProtocols:   
                 - CPSearchTemplateDelegate
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            CPTemplate
   - Name:            CPSearchTemplateDelegate
     JsName:          CPSearchTemplateDelegate
@@ -4308,7 +4308,7 @@ Items:
       FullName:        CarPlay.CPSearchTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -4320,14 +4320,14 @@ Items:
           FullName:        CarPlay.CPSearchTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPSearchTemplate
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'searchTemplate:selectedResult:completionHandler:'
         JsName:          searchTemplateSelectedResultCompletionHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPSearchTemplate.h
@@ -4335,17 +4335,17 @@ Items:
           FullName:        CarPlay.CPSearchTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPSearchTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          CPListItem
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -4356,17 +4356,17 @@ Items:
           FullName:        CarPlay.CPSearchTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPSearchTemplate
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
@@ -4375,11 +4375,11 @@ Items:
                 TypeParameters:  
                   - Type:            Interface
                     JsName:          CPListItem
-                    WithProtocols:   []
-                WithProtocols:   []
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+                    WithProtocols:   
+                WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            CPSessionConfiguration
@@ -4389,7 +4389,7 @@ Items:
       FullName:        CarPlay.CPSessionConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -4401,7 +4401,7 @@ Items:
           FullName:        CarPlay.CPSessionConfiguration
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -4409,7 +4409,7 @@ Items:
           - Type:            Id
             WithProtocols:   
               - CPSessionConfigurationDelegate
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            delegate
         JsName:          delegate
@@ -4418,7 +4418,7 @@ Items:
           FullName:        CarPlay.CPSessionConfiguration
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4429,7 +4429,7 @@ Items:
             FullName:        CarPlay.CPSessionConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -4444,7 +4444,7 @@ Items:
             FullName:        CarPlay.CPSessionConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -4459,7 +4459,7 @@ Items:
           FullName:        CarPlay.CPSessionConfiguration
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4470,14 +4470,14 @@ Items:
             FullName:        CarPlay.CPSessionConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Enum
               Name:            CPLimitableUserInterface
-    StaticProperties: []
-    Protocols:       []
+    StaticProperties: 
+    Protocols:       
     Base:            NSObject
   - Name:            CPSessionConfigurationDelegate
     JsName:          CPSessionConfigurationDelegate
@@ -4486,7 +4486,7 @@ Items:
       FullName:        CarPlay.CPSessionConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Protocol
@@ -4498,19 +4498,19 @@ Items:
           FullName:        CarPlay.CPSessionConfiguration
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          CPSessionConfiguration
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Enum
             Name:            CPLimitableUserInterface
-    StaticMethods:   []
-    InstanceProperties: []
-    StaticProperties: []
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
     Protocols:       
       - NSObjectProtocol
   - Name:            CPTemplate
@@ -4520,12 +4520,12 @@ Items:
       FullName:        CarPlay.CPTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            userInfo
         JsName:          userInfo
@@ -4534,7 +4534,7 @@ Items:
           FullName:        CarPlay.CPTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4545,12 +4545,12 @@ Items:
             FullName:        CarPlay.CPTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Id
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setUserInfo:'
           JsName:          setUserInfo
@@ -4559,14 +4559,14 @@ Items:
             FullName:        CarPlay.CPTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Id
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -4577,7 +4577,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -4598,7 +4598,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -4609,7 +4609,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -4620,7 +4620,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -4631,7 +4631,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -4642,7 +4642,7 @@ Items:
       FullName:        CarPlay.CPTravelEstimates
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -4654,7 +4654,7 @@ Items:
           FullName:        CarPlay.CPTravelEstimates
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -4664,10 +4664,10 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSUnitLength
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Double
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            distanceRemaining
         JsName:          distanceRemaining
@@ -4676,7 +4676,7 @@ Items:
           FullName:        CarPlay.CPTravelEstimates
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4687,7 +4687,7 @@ Items:
             FullName:        CarPlay.CPTravelEstimates
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -4696,8 +4696,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSUnitLength
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            timeRemaining
         JsName:          timeRemaining
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPTravelEstimates.h
@@ -4705,7 +4705,7 @@ Items:
           FullName:        CarPlay.CPTravelEstimates
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4716,12 +4716,12 @@ Items:
             FullName:        CarPlay.CPTravelEstimates
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Double
-    StaticProperties: []
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -4732,7 +4732,7 @@ Items:
       FullName:        CarPlay.CPTrip
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -4744,25 +4744,25 @@ Items:
           FullName:        CarPlay.CPTrip
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          MKMapItem
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          MKMapItem
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          CPRouteChoice
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            destination
         JsName:          destination
@@ -4771,7 +4771,7 @@ Items:
           FullName:        CarPlay.CPTrip
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4782,13 +4782,13 @@ Items:
             FullName:        CarPlay.CPTrip
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MKMapItem
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            origin
         JsName:          origin
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPTrip.h
@@ -4796,7 +4796,7 @@ Items:
           FullName:        CarPlay.CPTrip
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4807,13 +4807,13 @@ Items:
             FullName:        CarPlay.CPTrip
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          MKMapItem
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            routeChoices
         JsName:          routeChoices
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPTrip.h
@@ -4821,7 +4821,7 @@ Items:
           FullName:        CarPlay.CPTrip
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4832,7 +4832,7 @@ Items:
             FullName:        CarPlay.CPTrip
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -4841,8 +4841,8 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPRouteChoice
-                  WithProtocols:   []
-              WithProtocols:   []
+                  WithProtocols:   
+              WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPTrip.h
@@ -4850,7 +4850,7 @@ Items:
           FullName:        CarPlay.CPTrip
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -4861,12 +4861,12 @@ Items:
             FullName:        CarPlay.CPTrip
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Id
-              WithProtocols:   []
+              WithProtocols:   
         Setter:          
           Name:            'setUserInfo:'
           JsName:          setUserInfo
@@ -4875,14 +4875,14 @@ Items:
             FullName:        CarPlay.CPTrip
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Void
             - Type:            Id
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -4893,7 +4893,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -4910,7 +4910,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -4921,7 +4921,7 @@ Items:
       FullName:        CarPlay.CPMapTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
@@ -4932,7 +4932,7 @@ Items:
       FullName:        CarPlay.CPNavigationSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Enum
@@ -4955,7 +4955,7 @@ Items:
       FullName:        CarPlay.CPNavigationSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
@@ -4966,7 +4966,7 @@ Items:
       FullName:        CarPlay.CPNavigationSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
@@ -4977,7 +4977,7 @@ Items:
       FullName:        CarPlay.CPNavigationSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
@@ -4988,7 +4988,7 @@ Items:
       FullName:        CarPlay.CPNavigationSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '5'
@@ -4999,7 +4999,7 @@ Items:
       FullName:        CarPlay.CPNavigationSession
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'
@@ -5010,7 +5010,7 @@ Items:
       FullName:        CarPlay.CPTripPreviewTextConfiguration
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -5022,21 +5022,21 @@ Items:
           FullName:        CarPlay.CPTripPreviewTextConfiguration
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
-    StaticMethods:   []
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            additionalRoutesButtonTitle
         JsName:          additionalRoutesButtonTitle
@@ -5045,7 +5045,7 @@ Items:
           FullName:        CarPlay.CPTripPreviewTextConfiguration
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -5056,13 +5056,13 @@ Items:
             FullName:        CarPlay.CPTripPreviewTextConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            overviewButtonTitle
         JsName:          overviewButtonTitle
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPTripPreviewTextConfiguration.h
@@ -5070,7 +5070,7 @@ Items:
           FullName:        CarPlay.CPTripPreviewTextConfiguration
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -5081,13 +5081,13 @@ Items:
             FullName:        CarPlay.CPTripPreviewTextConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            startButtonTitle
         JsName:          startButtonTitle
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPTripPreviewTextConfiguration.h
@@ -5095,7 +5095,7 @@ Items:
           FullName:        CarPlay.CPTripPreviewTextConfiguration
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -5106,14 +5106,14 @@ Items:
             FullName:        CarPlay.CPTripPreviewTextConfiguration
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
-    StaticProperties: []
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -5124,7 +5124,7 @@ Items:
       FullName:        CarPlay.CPVoiceControlTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -5136,26 +5136,26 @@ Items:
           FullName:        CarPlay.CPVoiceControlTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Interface
             JsName:          NSArray
             TypeParameters:  
               - Type:            Interface
                 JsName:          NSString
-                WithProtocols:   []
-            WithProtocols:   []
+                WithProtocols:   
+            WithProtocols:   
           - Type:            Interface
             JsName:          UIImage
-            WithProtocols:   []
+            WithProtocols:   
           - Type:            Bool
-    StaticMethods:   []
+    StaticMethods:   
     InstanceProperties: 
       - Name:            identifier
         JsName:          identifier
@@ -5164,7 +5164,7 @@ Items:
           FullName:        CarPlay.CPVoiceControlTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -5175,13 +5175,13 @@ Items:
             FullName:        CarPlay.CPVoiceControlTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            image
         JsName:          image
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPVoiceControlTemplate.h
@@ -5189,7 +5189,7 @@ Items:
           FullName:        CarPlay.CPVoiceControlTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -5200,13 +5200,13 @@ Items:
             FullName:        CarPlay.CPVoiceControlTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UIImage
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            repeats
         JsName:          repeats
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPVoiceControlTemplate.h
@@ -5214,7 +5214,7 @@ Items:
           FullName:        CarPlay.CPVoiceControlTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -5225,7 +5225,7 @@ Items:
             FullName:        CarPlay.CPVoiceControlTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -5237,7 +5237,7 @@ Items:
           FullName:        CarPlay.CPVoiceControlTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -5248,7 +5248,7 @@ Items:
             FullName:        CarPlay.CPVoiceControlTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -5257,9 +5257,9 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          NSString
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
     Protocols:       
       - NSSecureCoding
     Base:            NSObject
@@ -5270,7 +5270,7 @@ Items:
       FullName:        CarPlay.CPVoiceControlTemplate
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
@@ -5282,14 +5282,14 @@ Items:
           FullName:        CarPlay.CPVoiceControlTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Method
         Signature:       
           - Type:            Void
           - Type:            Interface
             JsName:          NSString
-            WithProtocols:   []
+            WithProtocols:   
       - Name:            'initWithVoiceControlStates:'
         JsName:          initWithVoiceControlStates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPVoiceControlTemplate.h
@@ -5297,7 +5297,7 @@ Items:
           FullName:        CarPlay.CPVoiceControlTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable, MethodIsInitializer ]
         Type:            Method
         Signature:       
@@ -5307,9 +5307,9 @@ Items:
             TypeParameters:  
               - Type:            Interface
                 JsName:          CPVoiceControlState
-                WithProtocols:   []
-            WithProtocols:   []
-    StaticMethods:   []
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
     InstanceProperties: 
       - Name:            activeStateIdentifier
         JsName:          activeStateIdentifier
@@ -5318,7 +5318,7 @@ Items:
           FullName:        CarPlay.CPVoiceControlTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -5329,13 +5329,13 @@ Items:
             FullName:        CarPlay.CPVoiceControlTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          NSString
-              WithProtocols:   []
+              WithProtocols:   
       - Name:            voiceControlStates
         JsName:          voiceControlStates
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPVoiceControlTemplate.h
@@ -5343,7 +5343,7 @@ Items:
           FullName:        CarPlay.CPVoiceControlTemplate
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -5354,7 +5354,7 @@ Items:
             FullName:        CarPlay.CPVoiceControlTemplate
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
@@ -5363,10 +5363,10 @@ Items:
               TypeParameters:  
                 - Type:            Interface
                   JsName:          CPVoiceControlState
-                  WithProtocols:   []
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+                  WithProtocols:   
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            CPTemplate
   - Name:            CPWindow
     JsName:          CPWindow
@@ -5375,12 +5375,12 @@ Items:
       FullName:        CarPlay.CPWindow
       IsPartOfFramework: true
       IsSystemModule:  true
-      Libraries:       []
+      Libraries:       
     IntroducedIn:    12.0
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            Interface
-    InstanceMethods: []
-    StaticMethods:   []
+    InstanceMethods: 
+    StaticMethods:   
     InstanceProperties: 
       - Name:            mapButtonSafeAreaLayoutGuide
         JsName:          mapButtonSafeAreaLayoutGuide
@@ -5389,7 +5389,7 @@ Items:
           FullName:        CarPlay.CPWindow
           IsPartOfFramework: true
           IsSystemModule:  true
-          Libraries:       []
+          Libraries:       
         Flags:           [ IsIosAppExtensionAvailable ]
         Type:            Property
         Getter:          
@@ -5400,14 +5400,14 @@ Items:
             FullName:        CarPlay.CPWindow
             IsPartOfFramework: true
             IsSystemModule:  true
-            Libraries:       []
+            Libraries:       
           Flags:           [ IsIosAppExtensionAvailable ]
           Type:            Method
           Signature:       
             - Type:            Interface
               JsName:          UILayoutGuide
-              WithProtocols:   []
-    StaticProperties: []
-    Protocols:       []
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
     Base:            UIWindow
 ...

@@ -28,8 +28,12 @@ function GenerateMetadata() {
         -isysroot $SYSROOT -arch x86_64 -mios-simulator-version-min=9.0 -std=gnu99 -DDEBUG=1 2>&1 | \
         tee "$(dirname $OUTDIR)/verbose.out" | grep -v "verbose: "
 
+        # Omit built-in intrinsics module from comparison (contains entities specific to the LLVM version installed on the machine)
+        find $OUTDIR -name _Builtin_intrinsics.yaml -type f -delete
         # Unify paths to SDK stripping quotes
         find $OUTDIR -name \*.yaml -type f -exec perl -pi -e "s|(: *)['\"]?.*(/SDKs/.*?)['\"]? *$|\1/...\2|g" {} \;
+        # Remove empty []
+        find $OUTDIR -name \*.yaml -type f -exec perl -pi -e "s|\[\] *||g" {} \;
     )
 }
 
