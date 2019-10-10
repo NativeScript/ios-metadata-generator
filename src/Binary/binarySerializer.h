@@ -6,6 +6,47 @@
 #include <map>
 
 namespace binary {
+    
+struct CachedSignature {
+    
+    MetaFileOffset offset;
+    std::vector<::Meta::FFIType> types;
+    
+};
+    
+struct SignatureHash {
+    
+    std::size_t operator()(std::vector<::Meta::FFIType> signature) const {
+        std::size_t seed = 0;
+        for(size_t i = 0; i < signature.size(); i++) {
+            seed <<= 4;
+            seed |= signature[i];
+        }
+        return seed;
+    }
+    
+};
+    
+struct SignatureEq {
+    
+    bool operator() (const std::vector<::Meta::FFIType>& l, const std::vector<::Meta::FFIType>& r) const {
+        if (l.size() != r.size()) {
+            return false;
+        } else {
+            for (size_t i = 0; i < l.size(); i++) {
+                
+                if (l[i] != r[i]) {
+                    return false;
+                }
+                    
+            }
+        }
+        return true;
+    }
+    
+};
+    
+    
 /*
      * \class BinarySerializer
      * \brief Applies the Visitor pattern for serializing \c Meta::Meta objects in binary format.
@@ -15,6 +56,11 @@ private:
     MetaFile* file;
     BinaryWriter heapWriter;
     BinaryTypeEncodingSerializer typeEncodingSerializer;
+    
+    std::vector<CachedSignature> cachedSignatures;
+    std::unordered_map<std::vector<::Meta::FFIType>, MetaFileOffset, SignatureHash, SignatureEq>signatureCache;
+
+    binary::MetaFileOffset getOffset(std::vector<::Meta::Type*> signature, std::vector<::Meta::FFIType> ffiSignature);
 
     void serializeBase(::Meta::Meta* Meta, binary::Meta& binaryMetaStruct);
 

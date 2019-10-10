@@ -11,6 +11,24 @@ class InterfaceMeta;
 class StructMeta;
 class UnionMeta;
 class EnumMeta;
+    
+    enum FFIType : uint8_t {
+        FFIVoid,
+        FFIPointer,
+        FFISint8,
+        FFIUint8,
+        FFIUint16,
+        FFISint16,
+        FFIUint32,
+        FFISint32,
+        FFIUint64,
+        FFISint64,
+        FFIUshort,
+        FFIDouble,
+        FFIStruct,
+        FFIFloat
+    };
+    
 
 enum TypeType {
     TypeVoid,
@@ -159,6 +177,48 @@ public:
         case TypeExtVector:
             return visitor.visitExtVector(as<ExtVectorType>());
                 
+        }
+    }
+    
+    FFIType toFFIType() const {
+
+        switch (this->type) {
+            case TypeBool:
+                return FFIUint8;
+            case TypeULongLong:
+                return FFIUint64;
+            case TypeStruct:
+                return FFIStruct;
+            case TypeUnsignedChar:
+                return FFIUshort;
+            case TypeSignedChar:
+                return FFIUshort;
+            case TypeUnichar:
+                return FFIUshort;
+            case TypeUShort:
+                return FFIUint16;
+            case TypeShort:
+                return FFISint16;
+            case TypeDouble:
+                return FFIDouble;
+            case TypeFloat:
+                return FFIFloat;
+            case TypeLongLong:
+                return FFISint64;
+            case TypeULong:
+                return FFIUint32;
+            case TypeLong:
+                return FFISint32;
+            case TypeUInt:
+                return FFIUint32;
+            case TypeInt:
+                return FFISint32;
+            case TypeVoid:
+                return FFIVoid;
+            case TypeUnion:
+                return FFIStruct;
+            default:
+                return FFIPointer;
         }
     }
 

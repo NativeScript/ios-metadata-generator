@@ -27,6 +27,17 @@ void Meta::MethodMeta::visit(MetaVisitor* visitor)
     visitor->visit(this);
 }
 
+std::vector<Meta::FFIType> Meta::MethodMeta::getFFISignature()
+{
+    std::vector<FFIType> types;
+    
+    for (size_t i = 0; i < this->signature.size(); i++) {
+        types.push_back(signature[i]->toFFIType());
+    }
+    
+    return types;
+}
+
 void Meta::PropertyMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
@@ -68,6 +79,17 @@ void Meta::UnionMeta::visit(MetaVisitor* visitor)
 void Meta::FunctionMeta::visit(MetaVisitor* visitor)
 {
     visitor->visit(this);
+}
+
+std::vector<Meta::FFIType> Meta::FunctionMeta::getFFISignature()
+{
+    std::vector<FFIType> types;
+    
+    for (size_t i = 0; i < this->signature.size(); i++) {
+        types.push_back(signature[i]->toFFIType());
+    }
+    
+    return types;
 }
 
 void Meta::EnumMeta::visit(MetaVisitor* visitor)

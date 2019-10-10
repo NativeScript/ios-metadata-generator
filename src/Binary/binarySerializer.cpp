@@ -148,8 +148,24 @@ void binary::BinarySerializer::serializeMethod(::Meta::MethodMeta* meta, binary:
     if (meta->getFlags(::Meta::MetaFlags::MethodIsInitializer))
         binaryMetaStruct._flags |= BinaryFlags::MethodIsInitializer;
 
-    binaryMetaStruct._encoding = this->typeEncodingSerializer.visit(meta->signature);
+    binaryMetaStruct._encoding = this->getOffset(meta->signature, meta->getFFISignature());
     binaryMetaStruct._constructorTokens = this->heapWriter.push_string(meta->constructorTokens);
+}
+
+binary::MetaFileOffset binary::BinarySerializer::getOffset(std::vector<::Meta::Type*> signature, std::vector<::Meta::FFIType> ffiSignature) {
+    
+    static int invocations = 0;
+    std::unordered_map<std::vector<::Meta::FFIType>, MetaFileOffset, SignatureHash, SignatureEq>::const_iterator it = signatureCache.find(ffiSignature);
+    
+    if (it == signatureCache.end()) {
+        invocations += 1;
+        signatureCache[ffiSignature] = this->typeEncodingSerializer.visit(signature);
+    }
+
+    printf("%d\n", invocations);
+    
+    return signatureCache[ffiSignature];
+    
 }
 
 void binary::BinarySerializer::serializeProperty(::Meta::PropertyMeta* meta, binary::PropertyMeta& binaryMetaStruct)
@@ -362,7 +378,8 @@ void binary::BinarySerializer::visit(::Meta::FunctionMeta* meta)
     if (meta->getFlags(::Meta::MetaFlags::FunctionReturnsUnmanaged))
         binaryStruct._flags |= BinaryFlags::FunctionReturnsUnmanaged;
 
-    binaryStruct._encoding = this->typeEncodingSerializer.visit(meta->signature);
+    binaryStruct._encoding = this->getOffset(meta->signature, meta->getFFISignature());;
+    
     this->file->registerInGlobalTable(meta->jsName, binaryStruct.save(this->heapWriter));
 }
 
