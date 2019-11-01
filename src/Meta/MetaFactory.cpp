@@ -5,6 +5,7 @@
 #include "ValidateMetaTypeVisitor.h"
 
 #include <sstream>
+#include "Utils/pstream.h"
 
 using namespace std;
 
@@ -485,12 +486,40 @@ void MetaFactory::createFromProperty(const clang::ObjCPropertyDecl& property, Pr
     propertyMeta.setter = setter ? &create(*setter)->as<MethodMeta>() : nullptr;
 }
 
+
+// Objective-C runtime APIs (e.g. `class_getName` and similar) return the demangled
+// names of Swift classes. Searching in metadata doesn't work if we keep the mangled ones.
+std::string demangleSwiftName(std::string name) {
+    // Start a long running `swift demangle` process in interactive mode.
+    // Use `script` to force a PTY as suggested in https://unix.stackexchange.com/a/61833/347331
+    // Otherwise, `swift demange` starts bufferring its stdout when it discovers that its not
+    // in an interactive terminal.
+    using namespace redi;
+    static const std::string cmd = "script -q /dev/null xcrun swift demangle";
+    static pstream ps(cmd, pstreams::pstdin|pstreams::pstdout|pstreams::pstderr);
+    
+    // Send the name to child process
+    ps << name << std::endl;
+    
+    std::string result;
+    // `script` prints both the input and output. Discard the input.
+    getline(ps.out(), result);
+    // Read the demangled name
+    getline(ps.out(), result);
+    // Strip any trailing whitespace
+    result.erase(std::find_if(result.rbegin(), result.rend(), [](int ch) {
+        return !std::isspace(ch);
+    }).base(), result.end());
+    
+    return result;
+}
+
 void MetaFactory::populateIdentificationFields(const clang::NamedDecl& decl, Meta& meta)
 {
     meta.declaration = &decl;
     // calculate name
     clang::ObjCRuntimeNameAttr* objCRuntimeNameAttribute = decl.getAttr<clang::ObjCRuntimeNameAttr>();
-    meta.name = !objCRuntimeNameAttribute ? decl.getNameAsString() : objCRuntimeNameAttribute->getMetadataName().str();
+    meta.name = !objCRuntimeNameAttribute ? decl.getNameAsString() : demangleSwiftName(objCRuntimeNameAttribute->getMetadataName().str());
 
     // calculate file name and module
     clang::SourceLocation location = _sourceManager.getFileLoc(decl.getLocation());
