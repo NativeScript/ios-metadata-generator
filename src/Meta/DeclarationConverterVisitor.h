@@ -12,9 +12,9 @@
 namespace Meta {
 class DeclarationConverterVisitor : public clang::RecursiveASTVisitor<DeclarationConverterVisitor> {
 public:
-    explicit DeclarationConverterVisitor(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch, bool verbose)
+    explicit DeclarationConverterVisitor(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch, bool verbose, bool demangleSwiftNames)
         : _metaContainer()
-        , _metaFactory(sourceManager, headerSearch)
+        , _metaFactory(sourceManager, headerSearch, demangleSwiftNames)
         , _verbose(verbose)
     {
     }

@@ -16,10 +16,11 @@ typedef std::unordered_map<const Meta*, const clang::Decl*> MetaToDeclMap;
 
 class MetaFactory {
 public:
-    MetaFactory(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch)
+    MetaFactory(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch, bool demangleSwiftNames)
         : _sourceManager(sourceManager)
         , _headerSearch(headerSearch)
         , _typeFactory(this)
+        , _demangleSwiftNames(demangleSwiftNames)
     {
     }
 
@@ -79,6 +80,7 @@ private:
     clang::SourceManager& _sourceManager;
     clang::HeaderSearch& _headerSearch;
     TypeFactory _typeFactory;
+    bool _demangleSwiftNames;
 
     Cache _cache;
     MetaToDeclMap _metaToDecl;

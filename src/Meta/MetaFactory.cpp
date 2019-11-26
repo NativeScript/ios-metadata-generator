@@ -519,7 +519,15 @@ void MetaFactory::populateIdentificationFields(const clang::NamedDecl& decl, Met
     meta.declaration = &decl;
     // calculate name
     clang::ObjCRuntimeNameAttr* objCRuntimeNameAttribute = decl.getAttr<clang::ObjCRuntimeNameAttr>();
-    meta.name = !objCRuntimeNameAttribute ? decl.getNameAsString() : demangleSwiftName(objCRuntimeNameAttribute->getMetadataName().str());
+    if (objCRuntimeNameAttribute) {
+        meta.name = objCRuntimeNameAttribute->getMetadataName().str();
+        
+        if (this->_demangleSwiftNames) {
+            meta.name = demangleSwiftName(meta.name);
+        }
+    } else {
+        meta.name = decl.getNameAsString();
+    }
 
     // calculate file name and module
     clang::SourceLocation location = _sourceManager.getFileLoc(decl.getLocation());

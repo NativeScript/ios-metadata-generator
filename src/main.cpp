@@ -32,9 +32,9 @@ llvm::cl::list<string> cla_clangArguments(llvm::cl::ConsumeAfter, llvm::cl::desc
 
 class MetaGenerationConsumer : public clang::ASTConsumer {
 public:
-    explicit MetaGenerationConsumer(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch)
+    explicit MetaGenerationConsumer(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch, bool demangleSwiftNames)
         : _headerSearch(headerSearch)
-        , _visitor(sourceManager, _headerSearch, cla_verbose)
+        , _visitor(sourceManager, _headerSearch, cla_verbose, demangleSwiftNames)
     {
     }
 
@@ -138,7 +138,11 @@ public:
         // here we set this explicitly in order to keep the same behavior
         Compiler.getPreprocessor().SetSuppressIncludeNotFoundError(!cla_strictIncludes);
         
-        return std::unique_ptr<clang::ASTConsumer>(new MetaGenerationConsumer(Compiler.getASTContext().getSourceManager(), Compiler.getPreprocessor().getHeaderSearchInfo()));
+        auto sdkVersion = Compiler.getTargetOpts().SDKVersion;
+        bool macOS = sdkVersion.getMajor() == 10 && sdkVersion.getMinor() && sdkVersion.getMinor().getValue() > 10;
+        bool demangeSwiftNames = !macOS; //Match Objective-C runtime behavior differences on both platforms (iOS and Catalyst/macOS)
+        
+        return std::unique_ptr<clang::ASTConsumer>(new MetaGenerationConsumer(Compiler.getASTContext().getSourceManager(), Compiler.getPreprocessor().getHeaderSearchInfo(), demangeSwiftNames));
     }
 };
 
