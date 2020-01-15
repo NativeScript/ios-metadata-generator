@@ -2,6 +2,7 @@
 
 #include "CreationException.h"
 #include "MetaFactory.h"
+#include "Filters/ModulesBlacklist.h"
 #include <clang/AST/RecursiveASTVisitor.h>
 #include <clang/Frontend/ASTUnit.h>
 #include <clang/Lex/HeaderSearch.h>
@@ -12,10 +13,11 @@
 namespace Meta {
 class DeclarationConverterVisitor : public clang::RecursiveASTVisitor<DeclarationConverterVisitor> {
 public:
-    explicit DeclarationConverterVisitor(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch, bool verbose)
+    explicit DeclarationConverterVisitor(clang::SourceManager& sourceManager, clang::HeaderSearch& headerSearch, bool verbose, ModulesBlacklist& modulesBlacklist)
         : _metaContainer()
         , _metaFactory(sourceManager, headerSearch)
         , _verbose(verbose)
+        , _modulesBlacklist(modulesBlacklist)
     {
     }
 
@@ -71,8 +73,13 @@ private:
             // if accessed at runtime.
 
             Meta* meta = this->_metaFactory.create(*decl, /*resetCached*/ true);
-            _metaContainer.push_back(meta);
-            log(std::stringstream() << "verbose: Included " << meta->jsName << " from " << meta->module->getFullModuleName());
+            // Never blacklist NSObject - it's special and always needed by both the {N} runtime and the MDG
+            if (meta->name != "NSObject" && meta->module && _modulesBlacklist.shouldBlacklist(meta->module->getFullModuleName(), meta->name.empty() ? meta->jsName : meta->name)) {
+                log(std::stringstream() << "verbose: Blacklisted " << meta->jsName << " from " << meta->module->getFullModuleName());
+            } else {
+                _metaContainer.push_back(meta);
+                log(std::stringstream() << "verbose: Included " << meta->jsName << " from " << meta->module->getFullModuleName());
+            }
         } catch (MetaCreationException& e) {
             if (e.isError()) {
                 log(std::stringstream() << "verbose: Exception " << e.getDetailedMessage());
@@ -99,5 +106,6 @@ private:
     std::list<Meta*> _metaContainer;
     MetaFactory _metaFactory;
     bool _verbose;
+    ModulesBlacklist& _modulesBlacklist;
 };
-}
+} // namespace Meta
