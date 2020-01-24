@@ -73,33 +73,62 @@ private:
             // if accessed at runtime.
 
             Meta* meta = this->_metaFactory.create(*decl, /*resetCached*/ true);
+            std::string whitelistRule, blacklistRule;
             // Never blacklist NSObject - it's special and always needed by both the {N} runtime and the MDG
-            if (meta->name != "NSObject" && meta->module && _modulesBlacklist.shouldBlacklist(meta->module->getFullModuleName(), meta->name.empty() ? meta->jsName : meta->name)) {
-                log(std::stringstream() << "verbose: Blacklisted " << meta->jsName << " from " << meta->module->getFullModuleName());
+            if (meta->name != "NSObject" && meta->module && _modulesBlacklist.shouldBlacklist(meta->module->getFullModuleName(), meta->name.empty() ? meta->jsName : meta->name, /*r*/whitelistRule, /*r*/blacklistRule)) {
+                logSymbolAction("Blacklisted", meta, whitelistRule, blacklistRule);
             } else {
                 _metaContainer.push_back(meta);
-                log(std::stringstream() << "verbose: Included " << meta->jsName << " from " << meta->module->getFullModuleName());
+                logSymbolAction("Included", meta, whitelistRule, blacklistRule);
             }
         } catch (MetaCreationException& e) {
             if (e.isError()) {
-                log(std::stringstream() << "verbose: Exception " << e.getDetailedMessage());
+                log(std::stringstream() << "Exception " << e.getDetailedMessage());
             } else {
                   // Uncomment for maximum verbosity when debugging metadata generation issues
 //                auto namedDecl = clang::dyn_cast<clang::NamedDecl>(decl);
 //                auto name = namedDecl ? namedDecl->getNameAsString() : "<unknown>";
-//                log(std::stringstream() << "verbose: Skipping " << name << ": " << e.getMessage());
+//                log(std::stringstream() << "Skipping " << name << ": " << e.getMessage());
             }
         }
         return true;
     }
 
+    void logSymbolAction(const std::string& action, const Meta *meta, const std::string &whitelistRule, const std::string &blacklistRule) {
+        std::stringstream ss;
+        ss << action << " ";
+        
+        if (!meta->name.empty() && meta->name != meta->jsName) {
+            ss << meta->name << " (JS: " << meta->jsName << ")";
+        } else {
+            ss << meta->jsName;
+        }
+        
+        ss << " from " << meta->module->getFullModuleName();
+
+        if (!whitelistRule.empty() || !blacklistRule.empty()) {
+            ss << " (";
+            if (!whitelistRule.empty()) {
+                ss << "enabled by '" << whitelistRule << "'";
+                if (!blacklistRule.empty()) {
+                    ss << ", ";
+                }
+            }
+            if (!blacklistRule.empty()) {
+                ss << "disabled by '" << blacklistRule << "'";
+            }
+            ss << ")";
+        }
+        log(ss);
+    }
+    
     inline void log(const std::stringstream& s) {
         this->log(s.str());
     }
     
     inline void log(std::string str) {
         if (this->_verbose) {
-            std::cerr << str << std::endl;
+            std::cerr << "verbose: " << str << std::endl;
         }
     }
     

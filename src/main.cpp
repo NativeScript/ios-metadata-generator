@@ -30,6 +30,7 @@ llvm::cl::opt<string> cla_outputDtsFolder("output-typescript", llvm::cl::desc("S
 llvm::cl::opt<string> cla_docSetFile("docset-path", llvm::cl::desc("Specify the path to the iOS SDK docset package"), llvm::cl::value_desc("<file_path>"));
 llvm::cl::opt<string> cla_blackListModuleRegexesFile("blacklist-modules-file", llvm::cl::desc("Specify the metadata entries blacklist file containing regexes of module names on each line"), llvm::cl::value_desc("file_path"));
 llvm::cl::opt<string> cla_whiteListModuleRegexesFile("whitelist-modules-file", llvm::cl::desc("Specify the metadata entries whitelist file containing regexes of module names on each line"), llvm::cl::value_desc("file_path"));
+llvm::cl::opt<bool>   cla_applyManualDtsChanges("apply-manual-dts-changes", llvm::cl::desc("Specify whether to disable manual adjustments to generated .d.ts files for specific erroneous cases in the iOS SDK"), llvm::cl::init(true));
 llvm::cl::opt<string> cla_clangArgumentsDelimiter(llvm::cl::Positional, llvm::cl::desc("Xclang"), llvm::cl::init("-"));
 llvm::cl::list<string> cla_clangArguments(llvm::cl::ConsumeAfter, llvm::cl::desc("<clang arguments>..."));
 
@@ -159,6 +160,15 @@ std::string replaceString(std::string subject, const std::string& search, const 
     return subject;
 }
 
+static void dumpArgs(std::ostream& os, int argc, const char **argv) {
+    os << "Metadata Generator Arguments: " << std::endl;
+    for (int i = 0; i < argc; ++i) {
+        std::string arg = *(argv + i);
+        os << arg << " ";
+    }
+    os << std::endl;
+}
+
 int main(int argc, const char** argv)
 {
     try {
@@ -168,16 +178,10 @@ int main(int argc, const char** argv)
         assert(cla_clangArgumentsDelimiter.getValue() == "Xclang");
 
         // Log Metadata Genrator Arguments
-        std::cout << "Metadata Generator Arguments: " << std::endl;
-        TypeScript::DefinitionWriter::applyManualChanges = true;
-        for (int i = 0; i < argc; ++i) {
-            std::string arg = *(argv + i);
-            std::cout << "\"" << arg << "\", ";
-            if (arg == "--no-apply-manual-changes") {
-                TypeScript::DefinitionWriter::applyManualChanges = false;
-            }
-        }
-        std::cout << std::endl;
+        dumpArgs(std::cout, argc, argv);
+        dumpArgs(std::cerr, argc, argv);
+
+        TypeScript::DefinitionWriter::applyManualChanges = cla_applyManualDtsChanges;
 
         std::vector<std::string> clangArgs{
             "-v",

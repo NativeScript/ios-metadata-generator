@@ -21,6 +21,10 @@ private:
     struct ModuleAndSymbolNamePatterns {
         std::string modulePattern;
         std::string symbolPattern;
+        
+        std::string toString() {
+            return this->modulePattern + ":" + this->symbolPattern;
+        }
     };
     typedef std::vector<ModuleAndSymbolNamePatterns> ModuleAndSymbolNamePatternsList;
 
@@ -31,8 +35,8 @@ public:
         fillPatternsFromFile(blacklistFileName, /*r*/this->_blacklist);
     }
 
-    bool shouldBlacklist(std::string moduleName, std::string symbolName) {
-        auto matchesPatternInList = [&moduleName, &symbolName](ModuleAndSymbolNamePatternsList& v) {
+    bool shouldBlacklist(std::string moduleName, std::string symbolName, std::string& enabledBy, std::string& disabledBy) {
+        auto findMatchingPattern = [&moduleName, &symbolName](ModuleAndSymbolNamePatternsList& v) {
             return std::find_if(v.begin(), v.end(), [&moduleName, &symbolName](ModuleAndSymbolNamePatterns& item) {
                 return
                     (item.modulePattern.empty() ||
@@ -40,11 +44,23 @@ public:
                 &&
                     (item.symbolPattern.empty() ||
                      match(item.symbolPattern.c_str(), symbolName.c_str()));
-            }) != v.end();
+            });
         };
         
-        bool enabledByWhitelist = !this->_whitelistDefined || matchesPatternInList(this->_whitelist);
-        bool disabledByBlacklist = matchesPatternInList(this->_blacklist);
+        bool enabledByWhitelist = true;
+        if (this->_whitelistDefined) {
+            auto it = findMatchingPattern(this->_whitelist);
+            enabledByWhitelist = it != this->_whitelist.end();
+            if (enabledByWhitelist) {
+                enabledBy = it->toString();
+            }
+        }
+        
+        auto itBlacklist = findMatchingPattern(this->_blacklist);
+        bool disabledByBlacklist = itBlacklist != this->_blacklist.end();
+        if (disabledByBlacklist) {
+            disabledBy = itBlacklist->toString();
+        }
 
         return disabledByBlacklist || !enabledByWhitelist;
     }
