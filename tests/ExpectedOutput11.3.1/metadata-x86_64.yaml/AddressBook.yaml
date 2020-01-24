@@ -1,0 +1,3051 @@
+---
+Module:          
+  FullName:        AddressBook
+  IsPartOfFramework: true
+  IsSystemModule:  true
+  Libraries:       
+    - Library:         AddressBook
+      IsFramework:     true
+Items:           
+  - Name:            ABAddressBookAddRecord
+    JsName:          ABAddressBookAddRecord
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Pointer
+        PointerType:     
+          Type:            BridgedInterface
+          Name:            NSError
+          BridgedTo:       NSError
+  - Name:            ABAddressBookCopyArrayOfAllGroups
+    JsName:          ABAddressBookCopyArrayOfAllGroups
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABAddressBookCopyArrayOfAllGroupsInSource
+    JsName:          ABAddressBookCopyArrayOfAllGroupsInSource
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABAddressBookCopyArrayOfAllPeople
+    JsName:          ABAddressBookCopyArrayOfAllPeople
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABAddressBookCopyArrayOfAllPeopleInSource
+    JsName:          ABAddressBookCopyArrayOfAllPeopleInSource
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABAddressBookCopyArrayOfAllPeopleInSourceWithSortOrdering
+    JsName:          ABAddressBookCopyArrayOfAllPeopleInSourceWithSortOrdering
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            UInt
+  - Name:            ABAddressBookCopyArrayOfAllSources
+    JsName:          ABAddressBookCopyArrayOfAllSources
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABAddressBookCopyDefaultSource
+    JsName:          ABAddressBookCopyDefaultSource
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABAddressBookCopyLocalizedLabel
+    JsName:          ABAddressBookCopyLocalizedLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSString
+        BridgedTo:       NSString
+      - Type:            BridgedInterface
+        Name:            NSString
+        BridgedTo:       NSString
+  - Name:            ABAddressBookCopyPeopleWithName
+    JsName:          ABAddressBookCopyPeopleWithName
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            NSString
+        BridgedTo:       NSString
+  - Name:            ABAddressBookCreate
+    JsName:          ABAddressBookCreate
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABAddressBookCreateWithOptions
+    JsName:          ABAddressBookCreateWithOptions
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            NSDictionary
+        BridgedTo:       NSDictionary
+      - Type:            Pointer
+        PointerType:     
+          Type:            BridgedInterface
+          Name:            NSError
+          BridgedTo:       NSError
+  - Name:            ABAddressBookErrorDomain
+    JsName:          ABAddressBookErrorDomain
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            ABAddressBookGetAuthorizationStatus
+    JsName:          ABAddressBookGetAuthorizationStatus
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Enum
+        Name:            ABAuthorizationStatus
+  - Name:            ABAddressBookGetGroupCount
+    JsName:          ABAddressBookGetGroupCount
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Long
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABAddressBookGetGroupWithRecordID
+    JsName:          ABAddressBookGetGroupWithRecordID
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Int
+  - Name:            ABAddressBookGetPersonCount
+    JsName:          ABAddressBookGetPersonCount
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Long
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABAddressBookGetPersonWithRecordID
+    JsName:          ABAddressBookGetPersonWithRecordID
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Int
+  - Name:            ABAddressBookGetSourceWithRecordID
+    JsName:          ABAddressBookGetSourceWithRecordID
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Int
+  - Name:            ABAddressBookHasUnsavedChanges
+    JsName:          ABAddressBookHasUnsavedChanges
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABAddressBookRegisterExternalChangeCallback
+    JsName:          ABAddressBookRegisterExternalChangeCallback
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Void
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            FunctionPointer
+        Signature:       
+          - Type:            Void
+          - Type:            BridgedInterface
+            Name:            id
+            BridgedTo:       id
+          - Type:            BridgedInterface
+            Name:            NSDictionary
+            BridgedTo:       NSDictionary
+          - Type:            Pointer
+            PointerType:     
+              Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            ABAddressBookRemoveRecord
+    JsName:          ABAddressBookRemoveRecord
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Pointer
+        PointerType:     
+          Type:            BridgedInterface
+          Name:            NSError
+          BridgedTo:       NSError
+  - Name:            ABAddressBookRequestAccessWithCompletion
+    JsName:          ABAddressBookRequestAccessWithCompletion
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Void
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Block
+        Signature:       
+          - Type:            Void
+          - Type:            Bool
+          - Type:            BridgedInterface
+            Name:            NSError
+            BridgedTo:       NSError
+  - Name:            ABAddressBookRevert
+    JsName:          ABAddressBookRevert
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Void
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABAddressBookSave
+    JsName:          ABAddressBookSave
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Pointer
+        PointerType:     
+          Type:            BridgedInterface
+          Name:            NSError
+          BridgedTo:       NSError
+  - Name:            ABAddressBookUnregisterExternalChangeCallback
+    JsName:          ABAddressBookUnregisterExternalChangeCallback
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Void
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            FunctionPointer
+        Signature:       
+          - Type:            Void
+          - Type:            BridgedInterface
+            Name:            id
+            BridgedTo:       id
+          - Type:            BridgedInterface
+            Name:            NSDictionary
+            BridgedTo:       NSDictionary
+          - Type:            Pointer
+            PointerType:     
+              Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            ABAuthorizationStatus
+    JsName:          ABAuthorizationStatus
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - kABAuthorizationStatusNotDetermined: '0'
+      - kABAuthorizationStatusRestricted: '1'
+      - kABAuthorizationStatusDenied: '2'
+      - kABAuthorizationStatusAuthorized: '3'
+    SwiftNameFields: 
+  - Name:            ABGroupAddMember
+    JsName:          ABGroupAddMember
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Pointer
+        PointerType:     
+          Type:            BridgedInterface
+          Name:            NSError
+          BridgedTo:       NSError
+  - Name:            ABGroupCopyArrayOfAllMembers
+    JsName:          ABGroupCopyArrayOfAllMembers
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABGroupCopyArrayOfAllMembersWithSortOrdering
+    JsName:          ABGroupCopyArrayOfAllMembersWithSortOrdering
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            UInt
+  - Name:            ABGroupCopySource
+    JsName:          ABGroupCopySource
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABGroupCreate
+    JsName:          ABGroupCreate
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABGroupCreateInSource
+    JsName:          ABGroupCreateInSource
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABGroupRemoveMember
+    JsName:          ABGroupRemoveMember
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Pointer
+        PointerType:     
+          Type:            BridgedInterface
+          Name:            NSError
+          BridgedTo:       NSError
+  - Name:            ABMultiValueAddValueAndLabel
+    JsName:          ABMultiValueAddValueAndLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            NSString
+        BridgedTo:       NSString
+      - Type:            Pointer
+        PointerType:     
+          Type:            Int
+  - Name:            ABMultiValueCopyArrayOfAllValues
+    JsName:          ABMultiValueCopyArrayOfAllValues
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABMultiValueCopyLabelAtIndex
+    JsName:          ABMultiValueCopyLabelAtIndex
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSString
+        BridgedTo:       NSString
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Long
+  - Name:            ABMultiValueCopyValueAtIndex
+    JsName:          ABMultiValueCopyValueAtIndex
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Long
+  - Name:            ABMultiValueCreateMutable
+    JsName:          ABMultiValueCreateMutable
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            UInt
+  - Name:            ABMultiValueCreateMutableCopy
+    JsName:          ABMultiValueCreateMutableCopy
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABMultiValueGetCount
+    JsName:          ABMultiValueGetCount
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Long
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABMultiValueGetFirstIndexOfValue
+    JsName:          ABMultiValueGetFirstIndexOfValue
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Long
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABMultiValueGetIdentifierAtIndex
+    JsName:          ABMultiValueGetIdentifierAtIndex
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Int
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Long
+  - Name:            ABMultiValueGetIndexForIdentifier
+    JsName:          ABMultiValueGetIndexForIdentifier
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Long
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Int
+  - Name:            ABMultiValueGetPropertyType
+    JsName:          ABMultiValueGetPropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            UInt
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABMultiValueInsertValueAndLabelAtIndex
+    JsName:          ABMultiValueInsertValueAndLabelAtIndex
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            NSString
+        BridgedTo:       NSString
+      - Type:            Long
+      - Type:            Pointer
+        PointerType:     
+          Type:            Int
+  - Name:            ABMultiValueRemoveValueAndLabelAtIndex
+    JsName:          ABMultiValueRemoveValueAndLabelAtIndex
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Long
+  - Name:            ABMultiValueReplaceLabelAtIndex
+    JsName:          ABMultiValueReplaceLabelAtIndex
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            NSString
+        BridgedTo:       NSString
+      - Type:            Long
+  - Name:            ABMultiValueReplaceValueAtIndex
+    JsName:          ABMultiValueReplaceValueAtIndex
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABMultiValue.h
+    Module:          
+      FullName:        AddressBook.ABMultiValue
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Long
+  - Name:            ABPersonComparePeopleByName
+    JsName:          ABPersonComparePeopleByName
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Enum
+        Name:            CFComparisonResult
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            UInt
+  - Name:            ABPersonCopyArrayOfAllLinkedPeople
+    JsName:          ABPersonCopyArrayOfAllLinkedPeople
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABPersonCopyCompositeNameDelimiterForRecord
+    JsName:          ABPersonCopyCompositeNameDelimiterForRecord
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSString
+        BridgedTo:       NSString
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABPersonCopyImageData
+    JsName:          ABPersonCopyImageData
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSData
+        BridgedTo:       NSData
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABPersonCopyImageDataWithFormat
+    JsName:          ABPersonCopyImageDataWithFormat
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSData
+        BridgedTo:       NSData
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Enum
+        Name:            ABPersonImageFormat
+  - Name:            ABPersonCopyLocalizedPropertyName
+    JsName:          ABPersonCopyLocalizedPropertyName
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSString
+        BridgedTo:       NSString
+      - Type:            Int
+  - Name:            ABPersonCopySource
+    JsName:          ABPersonCopySource
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABPersonCreate
+    JsName:          ABPersonCreate
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABPersonCreateInSource
+    JsName:          ABPersonCreateInSource
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABPersonCreatePeopleInSourceWithVCardRepresentation
+    JsName:          ABPersonCreatePeopleInSourceWithVCardRepresentation
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            NSData
+        BridgedTo:       NSData
+  - Name:            ABPersonCreateVCardRepresentationWithPeople
+    JsName:          ABPersonCreateVCardRepresentationWithPeople
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSData
+        BridgedTo:       NSData
+      - Type:            BridgedInterface
+        Name:            NSArray
+        BridgedTo:       NSArray
+  - Name:            ABPersonGetCompositeNameFormat
+    JsName:          ABPersonGetCompositeNameFormat
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            UInt
+  - Name:            ABPersonGetCompositeNameFormatForRecord
+    JsName:          ABPersonGetCompositeNameFormatForRecord
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            UInt
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABPersonGetSortOrdering
+    JsName:          ABPersonGetSortOrdering
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            UInt
+  - Name:            ABPersonGetTypeOfProperty
+    JsName:          ABPersonGetTypeOfProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            UInt
+      - Type:            Int
+  - Name:            ABPersonHasImageData
+    JsName:          ABPersonHasImageData
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ''
+    JsName:          ABPersonImageFormat
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - kABPersonImageFormatThumbnail: '0'
+      - kABPersonImageFormatOriginalSize: '2'
+    SwiftNameFields: 
+  - Name:            ABPersonRemoveImageData
+    JsName:          ABPersonRemoveImageData
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Pointer
+        PointerType:     
+          Type:            BridgedInterface
+          Name:            NSError
+          BridgedTo:       NSError
+  - Name:            ABPersonSetImageData
+    JsName:          ABPersonSetImageData
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            NSData
+        BridgedTo:       NSData
+      - Type:            Pointer
+        PointerType:     
+          Type:            BridgedInterface
+          Name:            NSError
+          BridgedTo:       NSError
+  - Name:            ABRecordCopyCompositeName
+    JsName:          ABRecordCopyCompositeName
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            NSString
+        BridgedTo:       NSString
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABRecordCopyValue
+    JsName:          ABRecordCopyValue
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable, FunctionReturnsUnmanaged ]
+    Type:            Function
+    Signature:       
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Int
+  - Name:            ABRecordGetRecordID
+    JsName:          ABRecordGetRecordID
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Int
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABRecordGetRecordType
+    JsName:          ABRecordGetRecordType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            UInt
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+  - Name:            ABRecordRemoveValue
+    JsName:          ABRecordRemoveValue
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Int
+      - Type:            Pointer
+        PointerType:     
+          Type:            BridgedInterface
+          Name:            NSError
+          BridgedTo:       NSError
+  - Name:            ABRecordSetValue
+    JsName:          ABRecordSetValue
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Int
+      - Type:            BridgedInterface
+        Name:            id
+        BridgedTo:       id
+      - Type:            Pointer
+        PointerType:     
+          Type:            BridgedInterface
+          Name:            NSError
+          BridgedTo:       NSError
+  - Name:            kABAuthorizationStatusAuthorized
+    JsName:          kABAuthorizationStatusAuthorized
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '3'
+  - Name:            kABAuthorizationStatusDenied
+    JsName:          kABAuthorizationStatusDenied
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            kABAuthorizationStatusNotDetermined
+    JsName:          kABAuthorizationStatusNotDetermined
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            kABAuthorizationStatusRestricted
+    JsName:          kABAuthorizationStatusRestricted
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            kABDateTimePropertyType
+    JsName:          kABDateTimePropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '4'
+  - Name:            kABDictionaryPropertyType
+    JsName:          kABDictionaryPropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '5'
+  - Name:            kABGroupNameProperty
+    JsName:          kABGroupNameProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABGroup.h
+    Module:          
+      FullName:        AddressBook.ABGroup
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABGroupType
+    JsName:          kABGroupType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            kABHomeLabel
+    JsName:          kABHomeLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABIntegerPropertyType
+    JsName:          kABIntegerPropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            kABInvalidPropertyType
+    JsName:          kABInvalidPropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            kABMultiDateTimePropertyType
+    JsName:          kABMultiDateTimePropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '260'
+  - Name:            kABMultiDictionaryPropertyType
+    JsName:          kABMultiDictionaryPropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '261'
+  - Name:            kABMultiIntegerPropertyType
+    JsName:          kABMultiIntegerPropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '258'
+  - Name:            kABMultiRealPropertyType
+    JsName:          kABMultiRealPropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '259'
+  - Name:            kABMultiStringPropertyType
+    JsName:          kABMultiStringPropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '257'
+  - Name:            kABOperationNotPermittedByStoreError
+    JsName:          kABOperationNotPermittedByStoreError
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            kABOperationNotPermittedByUserError
+    JsName:          kABOperationNotPermittedByUserError
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABAddressBook.h
+    Module:          
+      FullName:        AddressBook.ABAddressBook
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            kABOtherLabel
+    JsName:          kABOtherLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAddressCityKey
+    JsName:          kABPersonAddressCityKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAddressCountryCodeKey
+    JsName:          kABPersonAddressCountryCodeKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAddressCountryKey
+    JsName:          kABPersonAddressCountryKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAddressProperty
+    JsName:          kABPersonAddressProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonAddressStateKey
+    JsName:          kABPersonAddressStateKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAddressStreetKey
+    JsName:          kABPersonAddressStreetKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAddressZIPKey
+    JsName:          kABPersonAddressZIPKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAlternateBirthdayCalendarIdentifierKey
+    JsName:          kABPersonAlternateBirthdayCalendarIdentifierKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAlternateBirthdayDayKey
+    JsName:          kABPersonAlternateBirthdayDayKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAlternateBirthdayEraKey
+    JsName:          kABPersonAlternateBirthdayEraKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAlternateBirthdayIsLeapMonthKey
+    JsName:          kABPersonAlternateBirthdayIsLeapMonthKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAlternateBirthdayMonthKey
+    JsName:          kABPersonAlternateBirthdayMonthKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAlternateBirthdayProperty
+    JsName:          kABPersonAlternateBirthdayProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonAlternateBirthdayYearKey
+    JsName:          kABPersonAlternateBirthdayYearKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAnniversaryLabel
+    JsName:          kABPersonAnniversaryLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonAssistantLabel
+    JsName:          kABPersonAssistantLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonBirthdayProperty
+    JsName:          kABPersonBirthdayProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonBrotherLabel
+    JsName:          kABPersonBrotherLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonChildLabel
+    JsName:          kABPersonChildLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonCompositeNameFormatFirstNameFirst
+    JsName:          kABPersonCompositeNameFormatFirstNameFirst
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            kABPersonCompositeNameFormatLastNameFirst
+    JsName:          kABPersonCompositeNameFormatLastNameFirst
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            kABPersonCreationDateProperty
+    JsName:          kABPersonCreationDateProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonDateProperty
+    JsName:          kABPersonDateProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonDepartmentProperty
+    JsName:          kABPersonDepartmentProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonEmailProperty
+    JsName:          kABPersonEmailProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonFatherLabel
+    JsName:          kABPersonFatherLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonFirstNamePhoneticProperty
+    JsName:          kABPersonFirstNamePhoneticProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonFirstNameProperty
+    JsName:          kABPersonFirstNameProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonFriendLabel
+    JsName:          kABPersonFriendLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonHomePageLabel
+    JsName:          kABPersonHomePageLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonImageFormatOriginalSize
+    JsName:          kABPersonImageFormatOriginalSize
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            kABPersonImageFormatThumbnail
+    JsName:          kABPersonImageFormatThumbnail
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            kABPersonInstantMessageProperty
+    JsName:          kABPersonInstantMessageProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonInstantMessageServiceAIM
+    JsName:          kABPersonInstantMessageServiceAIM
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonInstantMessageServiceFacebook
+    JsName:          kABPersonInstantMessageServiceFacebook
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonInstantMessageServiceGaduGadu
+    JsName:          kABPersonInstantMessageServiceGaduGadu
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonInstantMessageServiceGoogleTalk
+    JsName:          kABPersonInstantMessageServiceGoogleTalk
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonInstantMessageServiceICQ
+    JsName:          kABPersonInstantMessageServiceICQ
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonInstantMessageServiceJabber
+    JsName:          kABPersonInstantMessageServiceJabber
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonInstantMessageServiceKey
+    JsName:          kABPersonInstantMessageServiceKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonInstantMessageServiceMSN
+    JsName:          kABPersonInstantMessageServiceMSN
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonInstantMessageServiceQQ
+    JsName:          kABPersonInstantMessageServiceQQ
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonInstantMessageServiceSkype
+    JsName:          kABPersonInstantMessageServiceSkype
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonInstantMessageServiceYahoo
+    JsName:          kABPersonInstantMessageServiceYahoo
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonInstantMessageUsernameKey
+    JsName:          kABPersonInstantMessageUsernameKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonJobTitleProperty
+    JsName:          kABPersonJobTitleProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonKindOrganization
+    JsName:          kABPersonKindOrganization
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSNumber
+      BridgedTo:       NSNumber
+  - Name:            kABPersonKindPerson
+    JsName:          kABPersonKindPerson
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSNumber
+      BridgedTo:       NSNumber
+  - Name:            kABPersonKindProperty
+    JsName:          kABPersonKindProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonLastNamePhoneticProperty
+    JsName:          kABPersonLastNamePhoneticProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonLastNameProperty
+    JsName:          kABPersonLastNameProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonManagerLabel
+    JsName:          kABPersonManagerLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonMiddleNamePhoneticProperty
+    JsName:          kABPersonMiddleNamePhoneticProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonMiddleNameProperty
+    JsName:          kABPersonMiddleNameProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonModificationDateProperty
+    JsName:          kABPersonModificationDateProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonMotherLabel
+    JsName:          kABPersonMotherLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonNicknameProperty
+    JsName:          kABPersonNicknameProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonNoteProperty
+    JsName:          kABPersonNoteProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonOrganizationProperty
+    JsName:          kABPersonOrganizationProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonParentLabel
+    JsName:          kABPersonParentLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonPartnerLabel
+    JsName:          kABPersonPartnerLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonPhoneHomeFAXLabel
+    JsName:          kABPersonPhoneHomeFAXLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonPhoneIPhoneLabel
+    JsName:          kABPersonPhoneIPhoneLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonPhoneMainLabel
+    JsName:          kABPersonPhoneMainLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonPhoneMobileLabel
+    JsName:          kABPersonPhoneMobileLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonPhoneOtherFAXLabel
+    JsName:          kABPersonPhoneOtherFAXLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonPhonePagerLabel
+    JsName:          kABPersonPhonePagerLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonPhoneProperty
+    JsName:          kABPersonPhoneProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonPhoneWorkFAXLabel
+    JsName:          kABPersonPhoneWorkFAXLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonPrefixProperty
+    JsName:          kABPersonPrefixProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonRelatedNamesProperty
+    JsName:          kABPersonRelatedNamesProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonSisterLabel
+    JsName:          kABPersonSisterLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSocialProfileProperty
+    JsName:          kABPersonSocialProfileProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonSocialProfileServiceFacebook
+    JsName:          kABPersonSocialProfileServiceFacebook
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSocialProfileServiceFlickr
+    JsName:          kABPersonSocialProfileServiceFlickr
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSocialProfileServiceGameCenter
+    JsName:          kABPersonSocialProfileServiceGameCenter
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSocialProfileServiceKey
+    JsName:          kABPersonSocialProfileServiceKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSocialProfileServiceLinkedIn
+    JsName:          kABPersonSocialProfileServiceLinkedIn
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSocialProfileServiceMyspace
+    JsName:          kABPersonSocialProfileServiceMyspace
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSocialProfileServiceSinaWeibo
+    JsName:          kABPersonSocialProfileServiceSinaWeibo
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSocialProfileServiceTwitter
+    JsName:          kABPersonSocialProfileServiceTwitter
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSocialProfileURLKey
+    JsName:          kABPersonSocialProfileURLKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSocialProfileUserIdentifierKey
+    JsName:          kABPersonSocialProfileUserIdentifierKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSocialProfileUsernameKey
+    JsName:          kABPersonSocialProfileUsernameKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSortByFirstName
+    JsName:          kABPersonSortByFirstName
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            kABPersonSortByLastName
+    JsName:          kABPersonSortByLastName
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            kABPersonSpouseLabel
+    JsName:          kABPersonSpouseLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+  - Name:            kABPersonSuffixProperty
+    JsName:          kABPersonSuffixProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABPersonType
+    JsName:          kABPersonType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            kABPersonURLProperty
+    JsName:          kABPersonURLProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABRealPropertyType
+    JsName:          kABRealPropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '3'
+  - Name:            kABSourceNameProperty
+    JsName:          kABSourceNameProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABSourceType
+    JsName:          kABSourceType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            kABSourceTypeCardDAV
+    JsName:          kABSourceTypeCardDAV
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '4'
+  - Name:            kABSourceTypeCardDAVSearch
+    JsName:          kABSourceTypeCardDAVSearch
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '16777220'
+  - Name:            kABSourceTypeExchange
+    JsName:          kABSourceTypeExchange
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            kABSourceTypeExchangeGAL
+    JsName:          kABSourceTypeExchangeGAL
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '16777217'
+  - Name:            kABSourceTypeLDAP
+    JsName:          kABSourceTypeLDAP
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '16777219'
+  - Name:            kABSourceTypeLocal
+    JsName:          kABSourceTypeLocal
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            kABSourceTypeMobileMe
+    JsName:          kABSourceTypeMobileMe
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            kABSourceTypeProperty
+    JsName:          kABSourceTypeProperty
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABSource.h
+    Module:          
+      FullName:        AddressBook.ABSource
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Int
+  - Name:            kABStringPropertyType
+    JsName:          kABStringPropertyType
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABRecord.h
+    Module:          
+      FullName:        AddressBook.ABRecord
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            kABWorkLabel
+    JsName:          kABWorkLabel
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AddressBook.framework/Headers/ABPerson.h
+    Module:          
+      FullName:        AddressBook.ABPerson
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            BridgedInterface
+      Name:            NSString
+      BridgedTo:       NSString
+...

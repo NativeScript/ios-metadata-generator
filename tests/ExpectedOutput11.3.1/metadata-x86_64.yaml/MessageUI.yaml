@@ -1,0 +1,878 @@
+---
+Module:          
+  FullName:        MessageUI
+  IsPartOfFramework: true
+  IsSystemModule:  true
+  Libraries:       
+    - Library:         MessageUI
+      IsFramework:     true
+Items:           
+  - Name:            MFMailComposeErrorCode
+    JsName:          MFMailComposeErrorCode
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMailComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    3.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - MFMailComposeErrorCodeSaveFailed: '0'
+      - MFMailComposeErrorCodeSendFailed: '1'
+    SwiftNameFields: 
+      - SaveFailed:      '0'
+      - SendFailed:      '1'
+  - Name:            MFMailComposeErrorCodeSaveFailed
+    JsName:          MFMailComposeErrorCodeSaveFailed
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMailComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            MFMailComposeErrorCodeSendFailed
+    JsName:          MFMailComposeErrorCodeSendFailed
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMailComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            MFMailComposeErrorDomain
+    JsName:          MFMailComposeErrorDomain
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMailComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    3.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   
+  - Name:            MFMailComposeResult
+    JsName:          MFMailComposeResult
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMailComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    3.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - MFMailComposeResultCancelled: '0'
+      - MFMailComposeResultSaved: '1'
+      - MFMailComposeResultSent: '2'
+      - MFMailComposeResultFailed: '3'
+    SwiftNameFields: 
+      - Cancelled:       '0'
+      - Saved:           '1'
+      - Sent:            '2'
+      - Failed:          '3'
+  - Name:            MFMailComposeResultCancelled
+    JsName:          MFMailComposeResultCancelled
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMailComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            MFMailComposeResultFailed
+    JsName:          MFMailComposeResultFailed
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMailComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '3'
+  - Name:            MFMailComposeResultSaved
+    JsName:          MFMailComposeResultSaved
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMailComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            MFMailComposeResultSent
+    JsName:          MFMailComposeResultSent
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMailComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            MFMailComposeViewController
+    JsName:          MFMailComposeViewController
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMailComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    3.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'addAttachmentData:mimeType:fileName:'
+        JsName:          addAttachmentDataMimeTypeFileName
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMailComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSData
+            WithProtocols:   
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   
+      - Name:            'setBccRecipients:'
+        JsName:          setBccRecipients
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMailComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          NSString
+                WithProtocols:   
+            WithProtocols:   
+      - Name:            'setCcRecipients:'
+        JsName:          setCcRecipients
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMailComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          NSString
+                WithProtocols:   
+            WithProtocols:   
+      - Name:            'setMessageBody:isHTML:'
+        JsName:          setMessageBodyIsHTML
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMailComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   
+          - Type:            Bool
+      - Name:            'setPreferredSendingEmailAddress:'
+        JsName:          setPreferredSendingEmailAddress
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMailComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        IntroducedIn:    11.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   
+      - Name:            'setSubject:'
+        JsName:          setSubject
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMailComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   
+      - Name:            'setToRecipients:'
+        JsName:          setToRecipients
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMailComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          NSArray
+            TypeParameters:  
+              - Type:            Interface
+                JsName:          NSString
+                WithProtocols:   
+            WithProtocols:   
+    StaticMethods:   
+      - Name:            canSendMail
+        JsName:          canSendMail
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMailComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Bool
+    InstanceProperties: 
+      - Name:            mailComposeDelegate
+        JsName:          mailComposeDelegate
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMailComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            mailComposeDelegate
+          JsName:          mailComposeDelegate
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMailComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Id
+              WithProtocols:   
+                - MFMailComposeViewControllerDelegate
+        Setter:          
+          Name:            'setMailComposeDelegate:'
+          JsName:          setMailComposeDelegate
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMailComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Id
+              WithProtocols:   
+                - MFMailComposeViewControllerDelegate
+    StaticProperties: 
+    Protocols:       
+    Base:            UINavigationController
+  - Name:            MFMailComposeViewControllerDelegate
+    JsName:          MFMailComposeViewControllerDelegate
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMailComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Protocol
+    InstanceMethods: 
+      - Name:            'mailComposeController:didFinishWithResult:error:'
+        JsName:          mailComposeControllerDidFinishWithResultError
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMailComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMailComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable, MemberIsOptional ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          MFMailComposeViewController
+            WithProtocols:   
+          - Type:            Enum
+            Name:            MFMailComposeResult
+          - Type:            Interface
+            JsName:          NSError
+            WithProtocols:   
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
+      - NSObjectProtocol
+  - Name:            MFMessageComposeViewController
+    JsName:          MFMessageComposeViewController
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMessageComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    4.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Interface
+    InstanceMethods: 
+      - Name:            'addAttachmentData:typeIdentifier:filename:'
+        JsName:          addAttachmentDataTypeIdentifierFilename
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        IntroducedIn:    7.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Bool
+          - Type:            Interface
+            JsName:          NSData
+            WithProtocols:   
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   
+      - Name:            'addAttachmentURL:withAlternateFilename:'
+        JsName:          addAttachmentURLWithAlternateFilename
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        IntroducedIn:    7.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Bool
+          - Type:            Interface
+            JsName:          NSURL
+            WithProtocols:   
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   
+      - Name:            disableUserAttachments
+        JsName:          disableUserAttachments
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        IntroducedIn:    7.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+    StaticMethods:   
+      - Name:            canSendAttachments
+        JsName:          canSendAttachments
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        IntroducedIn:    7.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Bool
+      - Name:            canSendSubject
+        JsName:          canSendSubject
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        IntroducedIn:    7.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Bool
+      - Name:            canSendText
+        JsName:          canSendText
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Bool
+      - Name:            'isSupportedAttachmentUTI:'
+        JsName:          isSupportedAttachmentUTI
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        IntroducedIn:    7.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Bool
+          - Type:            Interface
+            JsName:          NSString
+            WithProtocols:   
+    InstanceProperties: 
+      - Name:            attachments
+        JsName:          attachments
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        IntroducedIn:    7.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            attachments
+          JsName:          attachments
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMessageComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          IntroducedIn:    7.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSArray
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          NSDictionary
+                  WithProtocols:   
+              WithProtocols:   
+      - Name:            body
+        JsName:          body
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            body
+          JsName:          body
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMessageComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   
+        Setter:          
+          Name:            'setBody:'
+          JsName:          setBody
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMessageComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   
+      - Name:            message
+        JsName:          message
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        IntroducedIn:    10.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            message
+          JsName:          message
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMessageComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          IntroducedIn:    10.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          MSMessage
+              WithProtocols:   
+        Setter:          
+          Name:            'setMessage:'
+          JsName:          setMessage
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMessageComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          IntroducedIn:    10.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          MSMessage
+              WithProtocols:   
+      - Name:            messageComposeDelegate
+        JsName:          messageComposeDelegate
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            messageComposeDelegate
+          JsName:          messageComposeDelegate
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMessageComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Id
+              WithProtocols:   
+                - MFMessageComposeViewControllerDelegate
+        Setter:          
+          Name:            'setMessageComposeDelegate:'
+          JsName:          setMessageComposeDelegate
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMessageComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Id
+              WithProtocols:   
+                - MFMessageComposeViewControllerDelegate
+      - Name:            recipients
+        JsName:          recipients
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            recipients
+          JsName:          recipients
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMessageComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSArray
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          NSString
+                  WithProtocols:   
+              WithProtocols:   
+        Setter:          
+          Name:            'setRecipients:'
+          JsName:          setRecipients
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMessageComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSArray
+              TypeParameters:  
+                - Type:            Interface
+                  JsName:          NSString
+                  WithProtocols:   
+              WithProtocols:   
+      - Name:            subject
+        JsName:          subject
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        IntroducedIn:    7.0
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Property
+        Getter:          
+          Name:            subject
+          JsName:          subject
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMessageComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          IntroducedIn:    7.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   
+        Setter:          
+          Name:            'setSubject:'
+          JsName:          setSubject
+          Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+          Module:          
+            FullName:        MessageUI.MFMessageComposeViewController
+            IsPartOfFramework: true
+            IsSystemModule:  true
+            Libraries:       
+          IntroducedIn:    7.0
+          Flags:           [ IsIosAppExtensionAvailable ]
+          Type:            Method
+          Signature:       
+            - Type:            Void
+            - Type:            Interface
+              JsName:          NSString
+              WithProtocols:   
+    StaticProperties: 
+    Protocols:       
+    Base:            UINavigationController
+  - Name:            MFMessageComposeViewControllerAttachmentAlternateFilename
+    JsName:          MFMessageComposeViewControllerAttachmentAlternateFilename
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMessageComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   
+  - Name:            MFMessageComposeViewControllerAttachmentURL
+    JsName:          MFMessageComposeViewControllerAttachmentURL
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMessageComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   
+  - Name:            MFMessageComposeViewControllerDelegate
+    JsName:          MFMessageComposeViewControllerDelegate
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMessageComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Protocol
+    InstanceMethods: 
+      - Name:            'messageComposeViewController:didFinishWithResult:'
+        JsName:          messageComposeViewControllerDidFinishWithResult
+        Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+        Module:          
+          FullName:        MessageUI.MFMessageComposeViewController
+          IsPartOfFramework: true
+          IsSystemModule:  true
+          Libraries:       
+        Flags:           [ IsIosAppExtensionAvailable ]
+        Type:            Method
+        Signature:       
+          - Type:            Void
+          - Type:            Interface
+            JsName:          MFMessageComposeViewController
+            WithProtocols:   
+          - Type:            Enum
+            Name:            MessageComposeResult
+    StaticMethods:   
+    InstanceProperties: 
+    StaticProperties: 
+    Protocols:       
+      - NSObjectProtocol
+  - Name:            MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification
+    JsName:          MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMessageComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    5.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   
+  - Name:            MFMessageComposeViewControllerTextMessageAvailabilityKey
+    JsName:          MFMessageComposeViewControllerTextMessageAvailabilityKey
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMessageComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    5.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Var
+    Signature:       
+      Type:            Interface
+      JsName:          NSString
+      WithProtocols:   
+  - Name:            MessageComposeResult
+    JsName:          MessageComposeResult
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMessageComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    4.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - MessageComposeResultCancelled: '0'
+      - MessageComposeResultSent: '1'
+      - MessageComposeResultFailed: '2'
+    SwiftNameFields: 
+      - Cancelled:       '0'
+      - Sent:            '1'
+      - Failed:          '2'
+  - Name:            MessageComposeResultCancelled
+    JsName:          MessageComposeResultCancelled
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMessageComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '0'
+  - Name:            MessageComposeResultFailed
+    JsName:          MessageComposeResultFailed
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMessageComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            MessageComposeResultSent
+    JsName:          MessageComposeResultSent
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MFMessageComposeViewController.h
+    Module:          
+      FullName:        MessageUI.MFMessageComposeViewController
+      IsPartOfFramework: true
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+...

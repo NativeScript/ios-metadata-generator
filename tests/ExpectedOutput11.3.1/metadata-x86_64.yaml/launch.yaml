@@ -1,0 +1,800 @@
+---
+Module:          
+  FullName:        launch
+  IsPartOfFramework: false
+  IsSystemModule:  true
+  Libraries:       
+Items:           
+  - Name:            LAUNCH_DATA_ARRAY
+    JsName:          LAUNCH_DATA_ARRAY
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '2'
+  - Name:            LAUNCH_DATA_BOOL
+    JsName:          LAUNCH_DATA_BOOL
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '6'
+  - Name:            LAUNCH_DATA_DICTIONARY
+    JsName:          LAUNCH_DATA_DICTIONARY
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '1'
+  - Name:            LAUNCH_DATA_ERRNO
+    JsName:          LAUNCH_DATA_ERRNO
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '9'
+  - Name:            LAUNCH_DATA_FD
+    JsName:          LAUNCH_DATA_FD
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '3'
+  - Name:            LAUNCH_DATA_INTEGER
+    JsName:          LAUNCH_DATA_INTEGER
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '4'
+  - Name:            LAUNCH_DATA_MACHPORT
+    JsName:          LAUNCH_DATA_MACHPORT
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '10'
+  - Name:            LAUNCH_DATA_OPAQUE
+    JsName:          LAUNCH_DATA_OPAQUE
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '8'
+  - Name:            LAUNCH_DATA_REAL
+    JsName:          LAUNCH_DATA_REAL
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '5'
+  - Name:            LAUNCH_DATA_STRING
+    JsName:          LAUNCH_DATA_STRING
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            EnumConstant
+    Value:           '7'
+  - Name:            launch_activate_socket
+    JsName:          launch_activate_socket
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    8.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Int
+      - Type:            CString
+      - Type:            Pointer
+        PointerType:     
+          Type:            Pointer
+          PointerType:     
+            Type:            Int
+      - Type:            Pointer
+        PointerType:     
+          Type:            ULong
+  - Name:            launch_data_alloc
+    JsName:          launch_data_alloc
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Enum
+        Name:            launch_data_type_t
+  - Name:            launch_data_array_get_count
+    JsName:          launch_data_array_get_count
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            ULong
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_array_get_index
+    JsName:          launch_data_array_get_index
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            ULong
+  - Name:            launch_data_array_set_index
+    JsName:          launch_data_array_set_index
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            ULong
+  - Name:            launch_data_copy
+    JsName:          launch_data_copy
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_dict_get_count
+    JsName:          launch_data_dict_get_count
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            ULong
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_dict_insert
+    JsName:          launch_data_dict_insert
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            CString
+  - Name:            launch_data_dict_iterate
+    JsName:          launch_data_dict_iterate
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            FunctionPointer
+        Signature:       
+          - Type:            Void
+          - Type:            Pointer
+            PointerType:     
+              Type:            Void
+          - Type:            CString
+          - Type:            Pointer
+            PointerType:     
+              Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_dict_lookup
+    JsName:          launch_data_dict_lookup
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            CString
+  - Name:            launch_data_dict_remove
+    JsName:          launch_data_dict_remove
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            CString
+  - Name:            launch_data_free
+    JsName:          launch_data_free
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_get_bool
+    JsName:          launch_data_get_bool
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_get_errno
+    JsName:          launch_data_get_errno
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Int
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_get_fd
+    JsName:          launch_data_get_fd
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Int
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_get_integer
+    JsName:          launch_data_get_integer
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            LongLong
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_get_machport
+    JsName:          launch_data_get_machport
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            UInt
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_get_opaque
+    JsName:          launch_data_get_opaque
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_get_opaque_size
+    JsName:          launch_data_get_opaque_size
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            ULong
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_get_real
+    JsName:          launch_data_get_real
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Double
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_get_string
+    JsName:          launch_data_get_string
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            CString
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_get_type
+    JsName:          launch_data_get_type
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Enum
+        Name:            launch_data_type_t
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+  - Name:            launch_data_new_bool
+    JsName:          launch_data_new_bool
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Bool
+  - Name:            launch_data_new_fd
+    JsName:          launch_data_new_fd
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Int
+  - Name:            launch_data_new_integer
+    JsName:          launch_data_new_integer
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            LongLong
+  - Name:            launch_data_new_machport
+    JsName:          launch_data_new_machport
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            UInt
+  - Name:            launch_data_new_opaque
+    JsName:          launch_data_new_opaque
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            ULong
+  - Name:            launch_data_new_real
+    JsName:          launch_data_new_real
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Double
+  - Name:            launch_data_new_string
+    JsName:          launch_data_new_string
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            CString
+  - Name:            launch_data_set_bool
+    JsName:          launch_data_set_bool
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Bool
+  - Name:            launch_data_set_fd
+    JsName:          launch_data_set_fd
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Int
+  - Name:            launch_data_set_integer
+    JsName:          launch_data_set_integer
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            LongLong
+  - Name:            launch_data_set_machport
+    JsName:          launch_data_set_machport
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            UInt
+  - Name:            launch_data_set_opaque
+    JsName:          launch_data_set_opaque
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            ULong
+  - Name:            launch_data_set_real
+    JsName:          launch_data_set_real
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Double
+  - Name:            launch_data_set_string
+    JsName:          launch_data_set_string
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Bool
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            CString
+  - Name:            ''
+    JsName:          launch_data_type_t
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Enum
+    FullNameFields:  
+      - LAUNCH_DATA_DICTIONARY: '1'
+      - LAUNCH_DATA_ARRAY: '2'
+      - LAUNCH_DATA_FD:  '3'
+      - LAUNCH_DATA_INTEGER: '4'
+      - LAUNCH_DATA_REAL: '5'
+      - LAUNCH_DATA_BOOL: '6'
+      - LAUNCH_DATA_STRING: '7'
+      - LAUNCH_DATA_OPAQUE: '8'
+      - LAUNCH_DATA_ERRNO: '9'
+      - LAUNCH_DATA_MACHPORT: '10'
+    SwiftNameFields: 
+  - Name:            launch_get_fd
+    JsName:          launch_get_fd
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Int
+  - Name:            launch_msg
+    JsName:          launch_msg
+    Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/launch.h
+    Module:          
+      FullName:        launch
+      IsPartOfFramework: false
+      IsSystemModule:  true
+      Libraries:       
+    IntroducedIn:    2.0
+    Flags:           [ IsIosAppExtensionAvailable ]
+    Type:            Function
+    Signature:       
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+      - Type:            Pointer
+        PointerType:     
+          Type:            Void
+...
