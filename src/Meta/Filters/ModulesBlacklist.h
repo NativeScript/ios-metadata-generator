@@ -72,7 +72,11 @@ private:
         // If we reach at the end of both strings, we are done
         if (*pattern == '\0' && *string == '\0')
             return true;
-      
+        
+        // pattern "*" matches everything, done checking
+        if (pattern[0] == '*' && pattern[1] == '\0')
+            return true;
+        
         // Make sure that the characters after '*' are present
         // in second string. This function assumes that the first
         // string will not contain two consecutive '*'
