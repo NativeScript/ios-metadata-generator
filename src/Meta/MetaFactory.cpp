@@ -556,7 +556,7 @@ void MetaFactory::populateIdentificationFields(const clang::NamedDecl& decl, Met
     case clang::Decl::Kind::Record:
     case clang::Decl::Kind::Enum: {
         const clang::TagDecl* tagDecl = clang::dyn_cast<clang::TagDecl>(&decl);
-        meta.jsName = getTypedefOrOwnName(tagDecl);
+        meta.name = meta.jsName = getTypedefOrOwnName(tagDecl);
         break;
     }
     default:
