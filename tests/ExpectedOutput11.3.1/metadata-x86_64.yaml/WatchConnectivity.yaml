@@ -284,7 +284,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WCSession
     JsName:          WCSession
@@ -323,19 +323,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendMessage:replyHandler:errorHandler:'
         JsName:          sendMessageReplyHandlerErrorHandler
@@ -350,10 +350,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -362,10 +362,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                   - Type:            Id
                     WithProtocols:   
@@ -374,7 +374,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'transferCurrentComplicationUserInfo:'
         JsName:          transferCurrentComplicationUserInfo
@@ -388,13 +388,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WCSessionUserInfoTransfer
+            Name:            WCSessionUserInfoTransfer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -411,16 +411,16 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WCSessionFileTransfer
+            Name:            WCSessionFileTransfer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -437,13 +437,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WCSessionUserInfoTransfer
+            Name:            WCSessionUserInfoTransfer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -461,10 +461,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -472,7 +472,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
       - Name:            isSupported
@@ -537,10 +537,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -657,10 +657,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          WCSessionFileTransfer
+                  Name:            WCSessionFileTransfer
                   WithProtocols:   
               WithProtocols:   
       - Name:            outstandingUserInfoTransfers
@@ -686,10 +686,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          WCSessionUserInfoTransfer
+                  Name:            WCSessionUserInfoTransfer
                   WithProtocols:   
               WithProtocols:   
       - Name:            paired
@@ -761,10 +761,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -840,7 +840,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
       - Name:            defaultSession
@@ -866,7 +866,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WCSession
+              Name:            WCSession
               WithProtocols:   
     Protocols:       
     Base:            NSObject
@@ -947,12 +947,12 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
           - Type:            Enum
             Name:            WCSessionActivationState
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'sessionDidBecomeInactive:'
         JsName:          sessionDidBecomeInactive
@@ -968,7 +968,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
       - Name:            'sessionDidDeactivate:'
         JsName:          sessionDidDeactivate
@@ -984,7 +984,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
       - Name:            'session:didFinishFileTransfer:error:'
         JsName:          sessionDidFinishFileTransferError
@@ -999,13 +999,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          WCSessionFileTransfer
+            Name:            WCSessionFileTransfer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'session:didFinishUserInfoTransfer:error:'
         JsName:          sessionDidFinishUserInfoTransferError
@@ -1020,13 +1020,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          WCSessionUserInfoTransfer
+            Name:            WCSessionUserInfoTransfer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'session:didReceiveApplicationContext:'
         JsName:          sessionDidReceiveApplicationContext
@@ -1041,13 +1041,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1065,10 +1065,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          WCSessionFile
+            Name:            WCSessionFile
             WithProtocols:   
       - Name:            'session:didReceiveMessage:'
         JsName:          sessionDidReceiveMessage
@@ -1083,13 +1083,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1107,10 +1107,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'session:didReceiveMessageData:replyHandler:'
         JsName:          sessionDidReceiveMessageDataReplyHandler
@@ -1125,16 +1125,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
       - Name:            'session:didReceiveMessage:replyHandler:'
         JsName:          sessionDidReceiveMessageReplyHandler
@@ -1149,13 +1149,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1164,10 +1164,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                   - Type:            Id
                     WithProtocols:   
@@ -1185,13 +1185,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1209,7 +1209,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
       - Name:            'sessionWatchStateDidChange:'
         JsName:          sessionWatchStateDidChange
@@ -1224,7 +1224,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WCSession
+            Name:            WCSession
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1268,7 +1268,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            metadata
         JsName:          metadata
@@ -1293,10 +1293,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -1353,7 +1353,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WCSessionFile
+              Name:            WCSessionFile
               WithProtocols:   
       - Name:            progress
         JsName:          progress
@@ -1380,7 +1380,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSProgress
+              Name:            NSProgress
               WithProtocols:   
       - Name:            transferring
         JsName:          transferring
@@ -1503,10 +1503,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   

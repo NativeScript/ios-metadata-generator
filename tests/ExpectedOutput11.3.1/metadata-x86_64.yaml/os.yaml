@@ -155,7 +155,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          MachO.loader
-      JsName:          mach_header
+      Name:            mach_header
   - Name:            _os_activity_initiate
     JsName:          _os_activity_initiate
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/os/activity.h
@@ -272,7 +272,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
       - Type:            Pointer
@@ -297,7 +297,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
       - Type:            Enum
@@ -335,7 +335,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
       - Type:            Enum
@@ -360,7 +360,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
       - Type:            Enum
@@ -385,7 +385,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
       - Type:            Enum
@@ -410,7 +410,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
       - Type:            Enum
@@ -434,7 +434,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            ULongLong
-  - Name:            ''
+  - Name:            os_activity_flag_t
     JsName:          os_activity_flag_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/os/activity.h
     Module:          
@@ -515,7 +515,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
       - Type:            CString
@@ -534,7 +534,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
   - Name:            os_log_is_enabled
@@ -551,7 +551,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
   - Name:            os_log_type_enabled
@@ -568,12 +568,12 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
       - Type:            Enum
         Name:            os_log_type_t
-  - Name:            ''
+  - Name:            os_log_type_t
     JsName:          os_log_type_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/os/log.h
     Module:          
@@ -604,7 +604,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
   - Name:            os_signpost_id_generate
@@ -621,7 +621,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
   - Name:            os_signpost_id_make_with_pointer
@@ -638,13 +638,13 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_os_log
       - Type:            Pointer
         PointerType:     
           Type:            Void
-  - Name:            ''
+  - Name:            os_signpost_type_t
     JsName:          os_signpost_type_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/os/signpost.h
     Module:          

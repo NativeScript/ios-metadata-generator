@@ -32,10 +32,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKShareMetadata
+                Name:            CKShareMetadata
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -66,7 +66,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setAcceptSharesCompletionBlock:'
@@ -85,7 +85,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            perShareCompletionBlock
         JsName:          perShareCompletionBlock
@@ -113,13 +113,13 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKShareMetadata
+                  Name:            CKShareMetadata
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKShare
+                  Name:            CKShare
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setPerShareCompletionBlock:'
@@ -138,13 +138,13 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKShareMetadata
+                  Name:            CKShareMetadata
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKShare
+                  Name:            CKShare
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            shareMetadatas
         JsName:          shareMetadatas
@@ -169,10 +169,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKShareMetadata
+                  Name:            CKShareMetadata
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -189,10 +189,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKShareMetadata
+                  Name:            CKShareMetadata
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -211,7 +211,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKAccountStatus
     JsName:          CKAccountStatus
@@ -394,7 +394,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -421,7 +421,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -452,7 +452,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKOperation
+            Name:            CKOperation
             WithProtocols:   
       - Name:            'databaseWithDatabaseScope:'
         JsName:          databaseWithDatabaseScope
@@ -467,7 +467,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CKDatabase
+            Name:            CKDatabase
             WithProtocols:   
           - Type:            Enum
             Name:            CKDatabaseScope
@@ -489,7 +489,7 @@ Items:
               - Type:            Enum
                 Name:            CKAccountStatus
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestApplicationPermission:completionHandler:'
         JsName:          requestApplicationPermissionCompletionHandler
@@ -511,7 +511,7 @@ Items:
               - Type:            Enum
                 Name:            CKApplicationPermissionStatus
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'statusForApplicationPermission:completionHandler:'
         JsName:          statusForApplicationPermissionCompletionHandler
@@ -533,7 +533,7 @@ Items:
               - Type:            Enum
                 Name:            CKApplicationPermissionStatus
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'discoverAllContactUserInfosWithCompletionHandler:'
         JsName:          discoverAllContactUserInfosWithCompletionHandler
@@ -552,14 +552,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CKDiscoveredUserInfo
+                    Name:            CKDiscoveredUserInfo
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'discoverAllIdentitiesWithCompletionHandler:'
         JsName:          discoverAllIdentitiesWithCompletionHandler
@@ -578,14 +578,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CKUserIdentity
+                    Name:            CKUserIdentity
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'discoverUserIdentityWithEmailAddress:completionHandler:'
         JsName:          discoverUserIdentityWithEmailAddressCompletionHandler
@@ -601,16 +601,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKUserIdentity
+                Name:            CKUserIdentity
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'discoverUserIdentityWithPhoneNumber:completionHandler:'
         JsName:          discoverUserIdentityWithPhoneNumberCompletionHandler
@@ -626,16 +626,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKUserIdentity
+                Name:            CKUserIdentity
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'discoverUserIdentityWithUserRecordID:completionHandler:'
         JsName:          discoverUserIdentityWithUserRecordIDCompletionHandler
@@ -651,16 +651,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKRecordID
+            Name:            CKRecordID
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKUserIdentity
+                Name:            CKUserIdentity
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'discoverUserInfoWithEmailAddress:completionHandler:'
         JsName:          discoverUserInfoWithEmailAddressCompletionHandler
@@ -676,16 +676,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKDiscoveredUserInfo
+                Name:            CKDiscoveredUserInfo
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'discoverUserInfoWithUserRecordID:completionHandler:'
         JsName:          discoverUserInfoWithUserRecordIDCompletionHandler
@@ -701,16 +701,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKRecordID
+            Name:            CKRecordID
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKDiscoveredUserInfo
+                Name:            CKDiscoveredUserInfo
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchUserRecordIDWithCompletionHandler:'
         JsName:          fetchUserRecordIDWithCompletionHandler
@@ -728,10 +728,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKRecordID
+                Name:            CKRecordID
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'acceptShareMetadata:completionHandler:'
         JsName:          acceptShareMetadataCompletionHandler
@@ -747,16 +747,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKShareMetadata
+            Name:            CKShareMetadata
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKShare
+                Name:            CKShare
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchShareMetadataWithURL:completionHandler:'
         JsName:          fetchShareMetadataWithURLCompletionHandler
@@ -772,16 +772,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKShareMetadata
+                Name:            CKShareMetadata
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchShareParticipantWithEmailAddress:completionHandler:'
         JsName:          fetchShareParticipantWithEmailAddressCompletionHandler
@@ -797,16 +797,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKShareParticipant
+                Name:            CKShareParticipant
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchShareParticipantWithPhoneNumber:completionHandler:'
         JsName:          fetchShareParticipantWithPhoneNumberCompletionHandler
@@ -822,16 +822,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKShareParticipant
+                Name:            CKShareParticipant
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchShareParticipantWithUserRecordID:completionHandler:'
         JsName:          fetchShareParticipantWithUserRecordIDCompletionHandler
@@ -847,16 +847,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKRecordID
+            Name:            CKRecordID
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKShareParticipant
+                Name:            CKShareParticipant
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchAllLongLivedOperationIDsWithCompletionHandler:'
         JsName:          fetchAllLongLivedOperationIDsWithCompletionHandler
@@ -875,14 +875,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchLongLivedOperationWithID:completionHandler:'
         JsName:          fetchLongLivedOperationWithIDCompletionHandler
@@ -898,16 +898,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKOperation
+                Name:            CKOperation
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'containerWithIdentifier:'
@@ -922,10 +922,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CKContainer
+            Name:            CKContainer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            defaultContainer
         JsName:          defaultContainer
@@ -939,7 +939,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CKContainer
+            Name:            CKContainer
             WithProtocols:   
     InstanceProperties: 
       - Name:            containerIdentifier
@@ -965,7 +965,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            privateCloudDatabase
         JsName:          privateCloudDatabase
@@ -990,7 +990,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKDatabase
+              Name:            CKDatabase
               WithProtocols:   
       - Name:            publicCloudDatabase
         JsName:          publicCloudDatabase
@@ -1015,7 +1015,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKDatabase
+              Name:            CKDatabase
               WithProtocols:   
       - Name:            sharedCloudDatabase
         JsName:          sharedCloudDatabase
@@ -1042,7 +1042,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKDatabase
+              Name:            CKDatabase
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1060,7 +1060,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKDatabase
     JsName:          CKDatabase
@@ -1087,7 +1087,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKDatabaseOperation
+            Name:            CKDatabaseOperation
             WithProtocols:   
       - Name:            'deleteRecordWithID:completionHandler:'
         JsName:          deleteRecordWithIDCompletionHandler
@@ -1102,16 +1102,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKRecordID
+            Name:            CKRecordID
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKRecordID
+                Name:            CKRecordID
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'deleteRecordZoneWithID:completionHandler:'
         JsName:          deleteRecordZoneWithIDCompletionHandler
@@ -1126,16 +1126,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKRecordZoneID
+            Name:            CKRecordZoneID
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKRecordZoneID
+                Name:            CKRecordZoneID
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'deleteSubscriptionWithID:completionHandler:'
         JsName:          deleteSubscriptionWithIDCompletionHandler
@@ -1151,16 +1151,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchAllRecordZonesWithCompletionHandler:'
         JsName:          fetchAllRecordZonesWithCompletionHandler
@@ -1178,14 +1178,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CKRecordZone
+                    Name:            CKRecordZone
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchAllSubscriptionsWithCompletionHandler:'
         JsName:          fetchAllSubscriptionsWithCompletionHandler
@@ -1204,14 +1204,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CKSubscription
+                    Name:            CKSubscription
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchRecordWithID:completionHandler:'
         JsName:          fetchRecordWithIDCompletionHandler
@@ -1226,16 +1226,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKRecordID
+            Name:            CKRecordID
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKRecord
+                Name:            CKRecord
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchRecordZoneWithID:completionHandler:'
         JsName:          fetchRecordZoneWithIDCompletionHandler
@@ -1250,16 +1250,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKRecordZoneID
+            Name:            CKRecordZoneID
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKRecordZone
+                Name:            CKRecordZone
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchSubscriptionWithID:completionHandler:'
         JsName:          fetchSubscriptionWithIDCompletionHandler
@@ -1275,16 +1275,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKSubscription
+                Name:            CKSubscription
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'performQuery:inZoneWithID:completionHandler:'
         JsName:          performQueryInZoneWithIDCompletionHandler
@@ -1299,23 +1299,23 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKQuery
+            Name:            CKQuery
             WithProtocols:   
           - Type:            Interface
-            JsName:          CKRecordZoneID
+            Name:            CKRecordZoneID
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CKRecord
+                    Name:            CKRecord
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveRecord:completionHandler:'
         JsName:          saveRecordCompletionHandler
@@ -1330,16 +1330,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKRecord
+            Name:            CKRecord
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKRecord
+                Name:            CKRecord
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveRecordZone:completionHandler:'
         JsName:          saveRecordZoneCompletionHandler
@@ -1354,16 +1354,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKRecordZone
+            Name:            CKRecordZone
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKRecordZone
+                Name:            CKRecordZone
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveSubscription:completionHandler:'
         JsName:          saveSubscriptionCompletionHandler
@@ -1379,16 +1379,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKSubscription
+            Name:            CKSubscription
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CKSubscription
+                Name:            CKSubscription
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1499,7 +1499,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKDatabase
+              Name:            CKDatabase
               WithProtocols:   
         Setter:          
           Name:            'setDatabase:'
@@ -1515,7 +1515,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKDatabase
+              Name:            CKDatabase
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1597,7 +1597,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1624,7 +1624,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setRecordType:'
@@ -1640,7 +1640,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1687,14 +1687,14 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKDiscoveredUserInfo
+                      Name:            CKDiscoveredUserInfo
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setDiscoverAllContactsCompletionBlock:'
@@ -1713,14 +1713,14 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKDiscoveredUserInfo
+                      Name:            CKDiscoveredUserInfo
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1765,7 +1765,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setDiscoverAllUserIdentitiesCompletionBlock:'
@@ -1784,7 +1784,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            userIdentityDiscoveredBlock
         JsName:          userIdentityDiscoveredBlock
@@ -1812,7 +1812,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKUserIdentity
+                  Name:            CKUserIdentity
                   WithProtocols:   
         Setter:          
           Name:            'setUserIdentityDiscoveredBlock:'
@@ -1831,7 +1831,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKUserIdentity
+                  Name:            CKUserIdentity
                   WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1861,10 +1861,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKUserIdentityLookupInfo
+                Name:            CKUserIdentityLookupInfo
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -1895,7 +1895,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setDiscoverUserIdentitiesCompletionBlock:'
@@ -1914,7 +1914,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            userIdentityDiscoveredBlock
         JsName:          userIdentityDiscoveredBlock
@@ -1942,10 +1942,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKUserIdentity
+                  Name:            CKUserIdentity
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKUserIdentityLookupInfo
+                  Name:            CKUserIdentityLookupInfo
                   WithProtocols:   
         Setter:          
           Name:            'setUserIdentityDiscoveredBlock:'
@@ -1964,10 +1964,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKUserIdentity
+                  Name:            CKUserIdentity
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKUserIdentityLookupInfo
+                  Name:            CKUserIdentityLookupInfo
                   WithProtocols:   
       - Name:            userIdentityLookupInfos
         JsName:          userIdentityLookupInfos
@@ -1992,10 +1992,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKUserIdentityLookupInfo
+                  Name:            CKUserIdentityLookupInfo
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2012,10 +2012,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKUserIdentityLookupInfo
+                  Name:            CKUserIdentityLookupInfo
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2046,17 +2046,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecordID
+                Name:            CKRecordID
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -2087,27 +2087,27 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          CKDiscoveredUserInfo
+                      Name:            CKDiscoveredUserInfo
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordID
+                      Name:            CKRecordID
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          CKDiscoveredUserInfo
+                      Name:            CKDiscoveredUserInfo
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setDiscoverUserInfosCompletionBlock:'
@@ -2126,27 +2126,27 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          CKDiscoveredUserInfo
+                      Name:            CKDiscoveredUserInfo
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordID
+                      Name:            CKRecordID
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          CKDiscoveredUserInfo
+                      Name:            CKDiscoveredUserInfo
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            emailAddresses
         JsName:          emailAddresses
@@ -2171,10 +2171,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2191,10 +2191,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            userRecordIDs
@@ -2220,10 +2220,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2240,10 +2240,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2288,7 +2288,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNContact
+              Name:            CNContact
               WithProtocols:   
       - Name:            firstName
         JsName:          firstName
@@ -2315,7 +2315,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            lastName
         JsName:          lastName
@@ -2342,7 +2342,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            userRecordID
         JsName:          userRecordID
@@ -2367,7 +2367,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordID
+              Name:            CKRecordID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2569,7 +2569,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKErrorIncompatibleVersion
     JsName:          CKErrorIncompatibleVersion
@@ -2775,7 +2775,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKErrorServerRecordChanged
     JsName:          CKErrorServerRecordChanged
@@ -2903,7 +2903,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKServerChangeToken
+            Name:            CKServerChangeToken
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2933,7 +2933,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
         Setter:          
           Name:            'setChangeTokenUpdatedBlock:'
@@ -2952,7 +2952,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
       - Name:            fetchAllChanges
         JsName:          fetchAllChanges
@@ -3017,11 +3017,11 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
                 - Type:            Bool
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setFetchDatabaseChangesCompletionBlock:'
@@ -3040,11 +3040,11 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
                 - Type:            Bool
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            previousServerChangeToken
         JsName:          previousServerChangeToken
@@ -3069,7 +3069,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKServerChangeToken
+              Name:            CKServerChangeToken
               WithProtocols:   
         Setter:          
           Name:            'setPreviousServerChangeToken:'
@@ -3085,7 +3085,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKServerChangeToken
+              Name:            CKServerChangeToken
               WithProtocols:   
       - Name:            recordZoneWithIDChangedBlock
         JsName:          recordZoneWithIDChangedBlock
@@ -3113,7 +3113,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
         Setter:          
           Name:            'setRecordZoneWithIDChangedBlock:'
@@ -3132,7 +3132,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
       - Name:            recordZoneWithIDWasDeletedBlock
         JsName:          recordZoneWithIDWasDeletedBlock
@@ -3160,7 +3160,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
         Setter:          
           Name:            'setRecordZoneWithIDWasDeletedBlock:'
@@ -3179,7 +3179,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
       - Name:            recordZoneWithIDWasPurgedBlock
         JsName:          recordZoneWithIDWasPurgedBlock
@@ -3209,7 +3209,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
         Setter:          
           Name:            'setRecordZoneWithIDWasPurgedBlock:'
@@ -3229,7 +3229,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
       - Name:            resultsLimit
         JsName:          resultsLimit
@@ -3296,7 +3296,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKServerChangeToken
+            Name:            CKServerChangeToken
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3326,10 +3326,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setFetchNotificationChangesCompletionBlock:'
@@ -3348,10 +3348,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            moreComing
         JsName:          moreComing
@@ -3402,7 +3402,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKNotification
+                  Name:            CKNotification
                   WithProtocols:   
         Setter:          
           Name:            'setNotificationChangedBlock:'
@@ -3421,7 +3421,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKNotification
+                  Name:            CKNotification
                   WithProtocols:   
       - Name:            previousServerChangeToken
         JsName:          previousServerChangeToken
@@ -3446,7 +3446,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKServerChangeToken
+              Name:            CKServerChangeToken
               WithProtocols:   
         Setter:          
           Name:            'setPreviousServerChangeToken:'
@@ -3462,7 +3462,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKServerChangeToken
+              Name:            CKServerChangeToken
               WithProtocols:   
       - Name:            resultsLimit
         JsName:          resultsLimit
@@ -3529,10 +3529,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKRecordZoneID
+            Name:            CKRecordZoneID
             WithProtocols:   
           - Type:            Interface
-            JsName:          CKServerChangeToken
+            Name:            CKServerChangeToken
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3559,10 +3559,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3579,10 +3579,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            fetchRecordChangesCompletionBlock
@@ -3611,13 +3611,13 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSData
+                  Name:            NSData
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setFetchRecordChangesCompletionBlock:'
@@ -3636,13 +3636,13 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSData
+                  Name:            NSData
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            moreComing
         JsName:          moreComing
@@ -3690,7 +3690,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKServerChangeToken
+              Name:            CKServerChangeToken
               WithProtocols:   
         Setter:          
           Name:            'setPreviousServerChangeToken:'
@@ -3706,7 +3706,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKServerChangeToken
+              Name:            CKServerChangeToken
               WithProtocols:   
       - Name:            recordChangedBlock
         JsName:          recordChangedBlock
@@ -3734,7 +3734,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
         Setter:          
           Name:            'setRecordChangedBlock:'
@@ -3753,7 +3753,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
       - Name:            recordWithIDWasDeletedBlock
         JsName:          recordWithIDWasDeletedBlock
@@ -3781,7 +3781,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
         Setter:          
           Name:            'setRecordWithIDWasDeletedBlock:'
@@ -3800,7 +3800,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
       - Name:            recordZoneID
         JsName:          recordZoneID
@@ -3825,7 +3825,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordZoneID
+              Name:            CKRecordZoneID
               WithProtocols:   
         Setter:          
           Name:            'setRecordZoneID:'
@@ -3841,7 +3841,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKRecordZoneID
+              Name:            CKRecordZoneID
               WithProtocols:   
       - Name:            resultsLimit
         JsName:          resultsLimit
@@ -3920,10 +3920,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3940,10 +3940,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            previousServerChangeToken
@@ -3969,7 +3969,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKServerChangeToken
+              Name:            CKServerChangeToken
               WithProtocols:   
         Setter:          
           Name:            'setPreviousServerChangeToken:'
@@ -3985,7 +3985,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKServerChangeToken
+              Name:            CKServerChangeToken
               WithProtocols:   
       - Name:            resultsLimit
         JsName:          resultsLimit
@@ -4054,20 +4054,20 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecordZoneID
+                Name:            CKRecordZoneID
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecordZoneID
+                Name:            CKRecordZoneID
                 WithProtocols:   
               - Type:            Interface
-                JsName:          CKFetchRecordZoneChangesConfiguration
+                Name:            CKFetchRecordZoneChangesConfiguration
                 WithProtocols:   
             WithProtocols:   
       - Name:            'initWithRecordZoneIDs:optionsByRecordZoneID:'
@@ -4084,20 +4084,20 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecordZoneID
+                Name:            CKRecordZoneID
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecordZoneID
+                Name:            CKRecordZoneID
                 WithProtocols:   
               - Type:            Interface
-                JsName:          CKFetchRecordZoneChangesOptions
+                Name:            CKFetchRecordZoneChangesOptions
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -4125,13 +4125,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKFetchRecordZoneChangesConfiguration
+                  Name:            CKFetchRecordZoneChangesConfiguration
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4148,13 +4148,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKFetchRecordZoneChangesConfiguration
+                  Name:            CKFetchRecordZoneChangesConfiguration
                   WithProtocols:   
               WithProtocols:   
       - Name:            fetchAllChanges
@@ -4220,7 +4220,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setFetchRecordZoneChangesCompletionBlock:'
@@ -4239,7 +4239,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            recordChangedBlock
         JsName:          recordChangedBlock
@@ -4267,7 +4267,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
         Setter:          
           Name:            'setRecordChangedBlock:'
@@ -4286,7 +4286,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
       - Name:            recordWithIDWasDeletedBlock
         JsName:          recordWithIDWasDeletedBlock
@@ -4314,10 +4314,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
         Setter:          
           Name:            'setRecordWithIDWasDeletedBlock:'
@@ -4336,10 +4336,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
       - Name:            recordZoneChangeTokensUpdatedBlock
         JsName:          recordZoneChangeTokensUpdatedBlock
@@ -4367,13 +4367,13 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSData
+                  Name:            NSData
                   WithProtocols:   
         Setter:          
           Name:            'setRecordZoneChangeTokensUpdatedBlock:'
@@ -4392,13 +4392,13 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSData
+                  Name:            NSData
                   WithProtocols:   
       - Name:            recordZoneFetchCompletionBlock
         JsName:          recordZoneFetchCompletionBlock
@@ -4426,17 +4426,17 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSData
+                  Name:            NSData
                   WithProtocols:   
                 - Type:            Bool
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setRecordZoneFetchCompletionBlock:'
@@ -4455,17 +4455,17 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKServerChangeToken
+                  Name:            CKServerChangeToken
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSData
+                  Name:            NSData
                   WithProtocols:   
                 - Type:            Bool
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            recordZoneIDs
         JsName:          recordZoneIDs
@@ -4490,10 +4490,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4510,10 +4510,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
               WithProtocols:   
       - Name:            optionsByRecordZoneID
@@ -4541,13 +4541,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKFetchRecordZoneChangesOptions
+                  Name:            CKFetchRecordZoneChangesOptions
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4565,13 +4565,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKFetchRecordZoneChangesOptions
+                  Name:            CKFetchRecordZoneChangesOptions
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -4614,10 +4614,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4634,10 +4634,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            previousServerChangeToken
@@ -4663,7 +4663,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKServerChangeToken
+              Name:            CKServerChangeToken
               WithProtocols:   
         Setter:          
           Name:            'setPreviousServerChangeToken:'
@@ -4679,7 +4679,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKServerChangeToken
+              Name:            CKServerChangeToken
               WithProtocols:   
       - Name:            resultsLimit
         JsName:          resultsLimit
@@ -4748,10 +4748,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecordZoneID
+                Name:            CKRecordZoneID
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -4794,17 +4794,17 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordZoneID
+                      Name:            CKRecordZoneID
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          CKRecordZone
+                      Name:            CKRecordZone
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setFetchRecordZonesCompletionBlock:'
@@ -4823,17 +4823,17 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordZoneID
+                      Name:            CKRecordZoneID
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          CKRecordZone
+                      Name:            CKRecordZone
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            recordZoneIDs
         JsName:          recordZoneIDs
@@ -4858,10 +4858,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4878,10 +4878,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -4912,10 +4912,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecordID
+                Name:            CKRecordID
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -4955,10 +4955,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4975,10 +4975,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            fetchRecordsCompletionBlock
@@ -5007,17 +5007,17 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordID
+                      Name:            CKRecordID
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          CKRecord
+                      Name:            CKRecord
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setFetchRecordsCompletionBlock:'
@@ -5036,17 +5036,17 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordID
+                      Name:            CKRecordID
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          CKRecord
+                      Name:            CKRecord
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            perRecordCompletionBlock
         JsName:          perRecordCompletionBlock
@@ -5074,13 +5074,13 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setPerRecordCompletionBlock:'
@@ -5099,13 +5099,13 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            perRecordProgressBlock
         JsName:          perRecordProgressBlock
@@ -5133,7 +5133,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
                 - Type:            Double
         Setter:          
@@ -5153,7 +5153,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
                 - Type:            Double
       - Name:            recordIDs
@@ -5179,10 +5179,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5199,10 +5199,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -5233,10 +5233,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -5267,7 +5267,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setFetchShareMetadataCompletionBlock:'
@@ -5286,7 +5286,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            perShareMetadataBlock
         JsName:          perShareMetadataBlock
@@ -5314,13 +5314,13 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSURL
+                  Name:            NSURL
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKShareMetadata
+                  Name:            CKShareMetadata
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setPerShareMetadataBlock:'
@@ -5339,13 +5339,13 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSURL
+                  Name:            NSURL
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          CKShareMetadata
+                  Name:            CKShareMetadata
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            rootRecordDesiredKeys
         JsName:          rootRecordDesiredKeys
@@ -5370,10 +5370,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5390,10 +5390,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            shareURLs
@@ -5419,10 +5419,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSURL
+                  Name:            NSURL
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5439,10 +5439,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSURL
+                  Name:            NSURL
                   WithProtocols:   
               WithProtocols:   
       - Name:            shouldFetchRootRecord
@@ -5510,10 +5510,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKUserIdentityLookupInfo
+                Name:            CKUserIdentityLookupInfo
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -5544,7 +5544,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setFetchShareParticipantsCompletionBlock:'
@@ -5563,7 +5563,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            shareParticipantFetchedBlock
         JsName:          shareParticipantFetchedBlock
@@ -5591,7 +5591,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKShareParticipant
+                  Name:            CKShareParticipant
                   WithProtocols:   
         Setter:          
           Name:            'setShareParticipantFetchedBlock:'
@@ -5610,7 +5610,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKShareParticipant
+                  Name:            CKShareParticipant
                   WithProtocols:   
       - Name:            userIdentityLookupInfos
         JsName:          userIdentityLookupInfos
@@ -5635,10 +5635,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKUserIdentityLookupInfo
+                  Name:            CKUserIdentityLookupInfo
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5655,10 +5655,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKUserIdentityLookupInfo
+                  Name:            CKUserIdentityLookupInfo
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -5689,10 +5689,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -5735,17 +5735,17 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          CKSubscription
+                      Name:            CKSubscription
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setFetchSubscriptionCompletionBlock:'
@@ -5764,17 +5764,17 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          CKSubscription
+                      Name:            CKSubscription
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            subscriptionIDs
         JsName:          subscriptionIDs
@@ -5799,10 +5799,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5819,10 +5819,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -5853,7 +5853,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -5880,7 +5880,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAPIToken:'
@@ -5896,7 +5896,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            fetchWebAuthTokenCompletionBlock
         JsName:          fetchWebAuthTokenCompletionBlock
@@ -5924,10 +5924,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setFetchWebAuthTokenCompletionBlock:'
@@ -5946,10 +5946,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5979,10 +5979,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLLocation
+            Name:            CLLocation
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -6009,7 +6009,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLLocation
+              Name:            CLLocation
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -6040,10 +6040,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKNotificationID
+                Name:            CKNotificationID
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -6074,14 +6074,14 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKNotificationID
+                      Name:            CKNotificationID
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setMarkNotificationsReadCompletionBlock:'
@@ -6100,14 +6100,14 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKNotificationID
+                      Name:            CKNotificationID
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            notificationIDs
         JsName:          notificationIDs
@@ -6132,10 +6132,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKNotificationID
+                  Name:            CKNotificationID
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6152,10 +6152,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKNotificationID
+                  Name:            CKNotificationID
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -6251,7 +6251,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setModifyBadgeCompletionBlock:'
@@ -6270,7 +6270,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -6300,17 +6300,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecordZone
+                Name:            CKRecordZone
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecordZoneID
+                Name:            CKRecordZoneID
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -6341,21 +6341,21 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordZone
+                      Name:            CKRecordZone
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordZoneID
+                      Name:            CKRecordZoneID
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setModifyRecordZonesCompletionBlock:'
@@ -6374,21 +6374,21 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordZone
+                      Name:            CKRecordZone
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordZoneID
+                      Name:            CKRecordZoneID
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            recordZoneIDsToDelete
         JsName:          recordZoneIDsToDelete
@@ -6413,10 +6413,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6433,10 +6433,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZoneID
+                  Name:            CKRecordZoneID
                   WithProtocols:   
               WithProtocols:   
       - Name:            recordZonesToSave
@@ -6462,10 +6462,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZone
+                  Name:            CKRecordZone
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6482,10 +6482,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordZone
+                  Name:            CKRecordZone
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -6516,17 +6516,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecord
+                Name:            CKRecord
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecordID
+                Name:            CKRecordID
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -6591,7 +6591,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setClientChangeTokenData:'
@@ -6607,7 +6607,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            modifyRecordsCompletionBlock
         JsName:          modifyRecordsCompletionBlock
@@ -6635,21 +6635,21 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecord
+                      Name:            CKRecord
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordID
+                      Name:            CKRecordID
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setModifyRecordsCompletionBlock:'
@@ -6668,21 +6668,21 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecord
+                      Name:            CKRecord
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKRecordID
+                      Name:            CKRecordID
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            perRecordCompletionBlock
         JsName:          perRecordCompletionBlock
@@ -6710,10 +6710,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setPerRecordCompletionBlock:'
@@ -6732,10 +6732,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            perRecordProgressBlock
         JsName:          perRecordProgressBlock
@@ -6763,7 +6763,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
                 - Type:            Double
         Setter:          
@@ -6783,7 +6783,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
                 - Type:            Double
       - Name:            recordIDsToDelete
@@ -6809,10 +6809,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6829,10 +6829,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecordID
+                  Name:            CKRecordID
                   WithProtocols:   
               WithProtocols:   
       - Name:            recordsToSave
@@ -6858,10 +6858,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6878,10 +6878,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
               WithProtocols:   
       - Name:            savePolicy
@@ -6951,17 +6951,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKSubscription
+                Name:            CKSubscription
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -6992,21 +6992,21 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKSubscription
+                      Name:            CKSubscription
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setModifySubscriptionsCompletionBlock:'
@@ -7025,21 +7025,21 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CKSubscription
+                      Name:            CKSubscription
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            subscriptionIDsToDelete
         JsName:          subscriptionIDsToDelete
@@ -7064,10 +7064,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -7084,10 +7084,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            subscriptionsToSave
@@ -7113,10 +7113,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKSubscription
+                  Name:            CKSubscription
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -7133,10 +7133,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKSubscription
+                  Name:            CKSubscription
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -7168,7 +7168,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
     InstanceProperties: 
       - Name:            alertActionLocalizationKey
@@ -7194,7 +7194,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            alertBody
         JsName:          alertBody
@@ -7219,7 +7219,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            alertLaunchImage
         JsName:          alertLaunchImage
@@ -7244,7 +7244,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            alertLocalizationArgs
         JsName:          alertLocalizationArgs
@@ -7269,10 +7269,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            alertLocalizationKey
@@ -7298,7 +7298,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            badge
         JsName:          badge
@@ -7323,7 +7323,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            category
         JsName:          category
@@ -7350,7 +7350,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            containerIdentifier
         JsName:          containerIdentifier
@@ -7375,7 +7375,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            isPruned
         JsName:          isPruned
@@ -7423,7 +7423,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKNotificationID
+              Name:            CKNotificationID
               WithProtocols:   
       - Name:            notificationType
         JsName:          notificationType
@@ -7472,7 +7472,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subscriptionID
         JsName:          subscriptionID
@@ -7499,7 +7499,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subtitle
         JsName:          subtitle
@@ -7526,7 +7526,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subtitleLocalizationArgs
         JsName:          subtitleLocalizationArgs
@@ -7553,10 +7553,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            subtitleLocalizationKey
@@ -7584,7 +7584,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -7611,7 +7611,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            titleLocalizationArgs
         JsName:          titleLocalizationArgs
@@ -7638,10 +7638,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            titleLocalizationKey
@@ -7669,7 +7669,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7730,7 +7730,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAlertActionLocalizationKey:'
@@ -7746,7 +7746,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            alertBody
         JsName:          alertBody
@@ -7771,7 +7771,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAlertBody:'
@@ -7787,7 +7787,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            alertLaunchImage
         JsName:          alertLaunchImage
@@ -7812,7 +7812,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAlertLaunchImage:'
@@ -7828,7 +7828,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            alertLocalizationArgs
         JsName:          alertLocalizationArgs
@@ -7853,10 +7853,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -7873,10 +7873,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            alertLocalizationKey
@@ -7902,7 +7902,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAlertLocalizationKey:'
@@ -7918,7 +7918,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            category
         JsName:          category
@@ -7945,7 +7945,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCategory:'
@@ -7962,7 +7962,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            collapseIDKey
         JsName:          collapseIDKey
@@ -7989,7 +7989,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCollapseIDKey:'
@@ -8006,7 +8006,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            desiredKeys
         JsName:          desiredKeys
@@ -8031,10 +8031,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -8051,10 +8051,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            shouldBadge
@@ -8194,7 +8194,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSoundName:'
@@ -8210,7 +8210,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subtitle
         JsName:          subtitle
@@ -8237,7 +8237,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSubtitle:'
@@ -8254,7 +8254,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subtitleLocalizationArgs
         JsName:          subtitleLocalizationArgs
@@ -8281,10 +8281,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -8302,10 +8302,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            subtitleLocalizationKey
@@ -8333,7 +8333,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSubtitleLocalizationKey:'
@@ -8350,7 +8350,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -8377,7 +8377,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -8394,7 +8394,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            titleLocalizationArgs
         JsName:          titleLocalizationArgs
@@ -8421,10 +8421,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -8442,10 +8442,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            titleLocalizationKey
@@ -8473,7 +8473,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitleLocalizationKey:'
@@ -8490,7 +8490,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -8602,7 +8602,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKOperationConfiguration
+              Name:            CKOperationConfiguration
               WithProtocols:   
         Setter:          
           Name:            'setConfiguration:'
@@ -8619,7 +8619,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKOperationConfiguration
+              Name:            CKOperationConfiguration
               WithProtocols:   
       - Name:            group
         JsName:          group
@@ -8646,7 +8646,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKOperationGroup
+              Name:            CKOperationGroup
               WithProtocols:   
         Setter:          
           Name:            'setGroup:'
@@ -8663,7 +8663,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKOperationGroup
+              Name:            CKOperationGroup
               WithProtocols:   
       - Name:            longLivedOperationWasPersistedBlock
         JsName:          longLivedOperationWasPersistedBlock
@@ -8734,7 +8734,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            allowsCellularAccess
         JsName:          allowsCellularAccess
@@ -8801,7 +8801,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKContainer
+              Name:            CKContainer
               WithProtocols:   
         Setter:          
           Name:            'setContainer:'
@@ -8818,7 +8818,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKContainer
+              Name:            CKContainer
               WithProtocols:   
       - Name:            longLived
         JsName:          longLived
@@ -9017,7 +9017,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKContainer
+              Name:            CKContainer
               WithProtocols:   
         Setter:          
           Name:            'setContainer:'
@@ -9033,7 +9033,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKContainer
+              Name:            CKContainer
               WithProtocols:   
       - Name:            longLived
         JsName:          longLived
@@ -9225,7 +9225,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKOperationConfiguration
+              Name:            CKOperationConfiguration
               WithProtocols:   
         Setter:          
           Name:            'setDefaultConfiguration:'
@@ -9241,7 +9241,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKOperationConfiguration
+              Name:            CKOperationConfiguration
               WithProtocols:   
       - Name:            expectedReceiveSize
         JsName:          expectedReceiveSize
@@ -9344,7 +9344,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -9360,7 +9360,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            operationGroupID
         JsName:          operationGroupID
@@ -9385,7 +9385,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            quantity
         JsName:          quantity
@@ -9558,7 +9558,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKPartialErrorsByItemIDKey
     JsName:          CKPartialErrorsByItemIDKey
@@ -9573,7 +9573,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKQuery
     JsName:          CKQuery
@@ -9600,10 +9600,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -9630,7 +9630,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
       - Name:            recordType
         JsName:          recordType
@@ -9655,7 +9655,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sortDescriptors
         JsName:          sortDescriptors
@@ -9680,10 +9680,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSSortDescriptor
+                  Name:            NSSortDescriptor
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -9700,10 +9700,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSSortDescriptor
+                  Name:            NSSortDescriptor
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -9842,10 +9842,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -9873,7 +9873,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordID
+              Name:            CKRecordID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9955,7 +9955,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKQueryCursor
+            Name:            CKQueryCursor
             WithProtocols:   
       - Name:            'initWithQuery:'
         JsName:          initWithQuery
@@ -9970,7 +9970,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKQuery
+            Name:            CKQuery
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -9997,7 +9997,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKQueryCursor
+              Name:            CKQueryCursor
               WithProtocols:   
         Setter:          
           Name:            'setCursor:'
@@ -10013,7 +10013,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKQueryCursor
+              Name:            CKQueryCursor
               WithProtocols:   
       - Name:            desiredKeys
         JsName:          desiredKeys
@@ -10038,10 +10038,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -10058,10 +10058,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            query
@@ -10087,7 +10087,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKQuery
+              Name:            CKQuery
               WithProtocols:   
         Setter:          
           Name:            'setQuery:'
@@ -10103,7 +10103,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKQuery
+              Name:            CKQuery
               WithProtocols:   
       - Name:            queryCompletionBlock
         JsName:          queryCompletionBlock
@@ -10131,10 +10131,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKQueryCursor
+                  Name:            CKQueryCursor
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setQueryCompletionBlock:'
@@ -10153,10 +10153,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKQueryCursor
+                  Name:            CKQueryCursor
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            recordFetchedBlock
         JsName:          recordFetchedBlock
@@ -10184,7 +10184,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
         Setter:          
           Name:            'setRecordFetchedBlock:'
@@ -10203,7 +10203,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CKRecord
+                  Name:            CKRecord
                   WithProtocols:   
       - Name:            resultsLimit
         JsName:          resultsLimit
@@ -10265,7 +10265,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordZoneID
+              Name:            CKRecordZoneID
               WithProtocols:   
         Setter:          
           Name:            'setZoneID:'
@@ -10281,7 +10281,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKRecordZoneID
+              Name:            CKRecordZoneID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10431,10 +10431,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'encodeSystemFieldsWithCoder:'
@@ -10450,7 +10450,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSCoder
+            Name:            NSCoder
             WithProtocols:   
       - Name:            'initWithRecordType:'
         JsName:          initWithRecordType
@@ -10465,7 +10465,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithRecordType:recordID:'
         JsName:          initWithRecordTypeRecordID
@@ -10480,10 +10480,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CKRecordID
+            Name:            CKRecordID
             WithProtocols:   
       - Name:            'initWithRecordType:zoneID:'
         JsName:          initWithRecordTypeZoneID
@@ -10498,10 +10498,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CKRecordZoneID
+            Name:            CKRecordZoneID
             WithProtocols:   
       - Name:            'setParentReferenceFromRecord:'
         JsName:          setParentReferenceFromRecord
@@ -10517,7 +10517,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKRecord
+            Name:            CKRecord
             WithProtocols:   
       - Name:            'setParentReferenceFromRecordID:'
         JsName:          setParentReferenceFromRecordID
@@ -10533,7 +10533,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKRecordID
+            Name:            CKRecordID
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -10560,7 +10560,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            creatorUserRecordID
         JsName:          creatorUserRecordID
@@ -10585,7 +10585,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordID
+              Name:            CKRecordID
               WithProtocols:   
       - Name:            lastModifiedUserRecordID
         JsName:          lastModifiedUserRecordID
@@ -10610,7 +10610,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordID
+              Name:            CKRecordID
               WithProtocols:   
       - Name:            modificationDate
         JsName:          modificationDate
@@ -10635,7 +10635,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            parent
         JsName:          parent
@@ -10662,7 +10662,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKReference
+              Name:            CKReference
               WithProtocols:   
         Setter:          
           Name:            'setParent:'
@@ -10679,7 +10679,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKReference
+              Name:            CKReference
               WithProtocols:   
       - Name:            recordChangeTag
         JsName:          recordChangeTag
@@ -10704,7 +10704,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            recordID
         JsName:          recordID
@@ -10729,7 +10729,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordID
+              Name:            CKRecordID
               WithProtocols:   
       - Name:            recordType
         JsName:          recordType
@@ -10754,7 +10754,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            share
         JsName:          share
@@ -10781,7 +10781,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKReference
+              Name:            CKReference
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10802,7 +10802,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKRecordChangedErrorClientRecordKey
     JsName:          CKRecordChangedErrorClientRecordKey
@@ -10817,7 +10817,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKRecordChangedErrorServerRecordKey
     JsName:          CKRecordChangedErrorServerRecordKey
@@ -10832,7 +10832,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKRecordID
     JsName:          CKRecordID
@@ -10859,7 +10859,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithRecordName:zoneID:'
         JsName:          initWithRecordNameZoneID
@@ -10874,10 +10874,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CKRecordZoneID
+            Name:            CKRecordZoneID
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -10904,7 +10904,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            zoneID
         JsName:          zoneID
@@ -10929,7 +10929,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordZoneID
+              Name:            CKRecordZoneID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10960,10 +10960,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            changedKeys
@@ -10978,10 +10978,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'objectForKey:'
@@ -10999,7 +10999,7 @@ Items:
             WithProtocols:   
               - CKRecordValue
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'objectForKeyedSubscript:'
         JsName:          objectForKeyedSubscript
@@ -11016,7 +11016,7 @@ Items:
             WithProtocols:   
               - CKRecordValue
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setObject:forKey:'
         JsName:          setObjectForKey
@@ -11034,7 +11034,7 @@ Items:
             WithProtocols:   
               - CKRecordValue
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setObject:forKeyedSubscript:'
         JsName:          setObjectForKeyedSubscript
@@ -11052,7 +11052,7 @@ Items:
             WithProtocols:   
               - CKRecordValue
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -11072,7 +11072,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKRecordSaveAllKeys
     JsName:          CKRecordSaveAllKeys
@@ -11139,7 +11139,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKRecordTypeShare
     JsName:          CKRecordTypeShare
@@ -11154,7 +11154,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKRecordTypeUserRecord
     JsName:          CKRecordTypeUserRecord
@@ -11169,7 +11169,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKRecordValue
     JsName:          CKRecordValue
@@ -11212,7 +11212,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKRecordZoneID
+            Name:            CKRecordZoneID
             WithProtocols:   
       - Name:            'initWithZoneName:'
         JsName:          initWithZoneName
@@ -11227,7 +11227,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            defaultRecordZone
@@ -11242,7 +11242,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CKRecordZone
+            Name:            CKRecordZone
             WithProtocols:   
     InstanceProperties: 
       - Name:            capabilities
@@ -11292,7 +11292,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordZoneID
+              Name:            CKRecordZoneID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -11365,7 +11365,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKRecordZoneID
     JsName:          CKRecordZoneID
@@ -11392,10 +11392,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -11422,7 +11422,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            zoneName
         JsName:          zoneName
@@ -11447,7 +11447,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -11517,7 +11517,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordZoneID
+              Name:            CKRecordZoneID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -11547,7 +11547,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKRecordZoneID
+            Name:            CKRecordZoneID
             WithProtocols:   
       - Name:            'initWithZoneID:subscriptionID:'
         JsName:          initWithZoneIDSubscriptionID
@@ -11562,10 +11562,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKRecordZoneID
+            Name:            CKRecordZoneID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -11592,7 +11592,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setRecordType:'
@@ -11608,7 +11608,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            zoneID
         JsName:          zoneID
@@ -11633,7 +11633,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordZoneID
+              Name:            CKRecordZoneID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -11665,7 +11665,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKRecord
+            Name:            CKRecord
             WithProtocols:   
           - Type:            Enum
             Name:            CKReferenceAction
@@ -11682,7 +11682,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKRecordID
+            Name:            CKRecordID
             WithProtocols:   
           - Type:            Enum
             Name:            CKReferenceAction
@@ -11711,7 +11711,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordID
+              Name:            CKRecordID
               WithProtocols:   
       - Name:            referenceAction
         JsName:          referenceAction
@@ -11826,7 +11826,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKShareParticipant
+            Name:            CKShareParticipant
             WithProtocols:   
       - Name:            'initWithRootRecord:'
         JsName:          initWithRootRecord
@@ -11841,7 +11841,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKRecord
+            Name:            CKRecord
             WithProtocols:   
       - Name:            'initWithRootRecord:shareID:'
         JsName:          initWithRootRecordShareID
@@ -11856,10 +11856,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKRecord
+            Name:            CKRecord
             WithProtocols:   
           - Type:            Interface
-            JsName:          CKRecordID
+            Name:            CKRecordID
             WithProtocols:   
       - Name:            'removeParticipant:'
         JsName:          removeParticipant
@@ -11874,7 +11874,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CKShareParticipant
+            Name:            CKShareParticipant
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -11901,7 +11901,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKShareParticipant
+              Name:            CKShareParticipant
               WithProtocols:   
       - Name:            owner
         JsName:          owner
@@ -11926,7 +11926,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKShareParticipant
+              Name:            CKShareParticipant
               WithProtocols:   
       - Name:            participants
         JsName:          participants
@@ -11951,10 +11951,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CKShareParticipant
+                  Name:            CKShareParticipant
                   WithProtocols:   
               WithProtocols:   
       - Name:            publicPermission
@@ -12019,7 +12019,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -12062,7 +12062,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            ownerIdentity
         JsName:          ownerIdentity
@@ -12087,7 +12087,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKUserIdentity
+              Name:            CKUserIdentity
               WithProtocols:   
       - Name:            participantPermission
         JsName:          participantPermission
@@ -12212,7 +12212,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecord
+              Name:            CKRecord
               WithProtocols:   
       - Name:            rootRecordID
         JsName:          rootRecordID
@@ -12237,7 +12237,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordID
+              Name:            CKRecordID
               WithProtocols:   
       - Name:            share
         JsName:          share
@@ -12262,7 +12262,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKShare
+              Name:            CKShare
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -12453,7 +12453,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKUserIdentity
+              Name:            CKUserIdentity
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -12733,7 +12733,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKShareTitleKey
     JsName:          CKShareTitleKey
@@ -12748,7 +12748,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKShareTypeKey
     JsName:          CKShareTypeKey
@@ -12763,7 +12763,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CKSubscription
     JsName:          CKSubscription
@@ -12791,10 +12791,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Enum
             Name:            CKSubscriptionOptions
@@ -12812,13 +12812,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            CKSubscriptionOptions
@@ -12836,7 +12836,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKRecordZoneID
+            Name:            CKRecordZoneID
             WithProtocols:   
           - Type:            Enum
             Name:            CKSubscriptionOptions
@@ -12854,10 +12854,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKRecordZoneID
+            Name:            CKRecordZoneID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            CKSubscriptionOptions
@@ -12886,7 +12886,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKNotificationInfo
+              Name:            CKNotificationInfo
               WithProtocols:   
         Setter:          
           Name:            'setNotificationInfo:'
@@ -12902,7 +12902,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKNotificationInfo
+              Name:            CKNotificationInfo
               WithProtocols:   
       - Name:            subscriptionID
         JsName:          subscriptionID
@@ -12927,7 +12927,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subscriptionType
         JsName:          subscriptionType
@@ -12978,7 +12978,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
       - Name:            recordType
         JsName:          recordType
@@ -13005,7 +13005,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subscriptionOptions
         JsName:          subscriptionOptions
@@ -13058,7 +13058,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordZoneID
+              Name:            CKRecordZoneID
               WithProtocols:   
         Setter:          
           Name:            'setZoneID:'
@@ -13075,7 +13075,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CKRecordZoneID
+              Name:            CKRecordZoneID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -13239,10 +13239,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            hasiCloudAccount
@@ -13291,7 +13291,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKUserIdentityLookupInfo
+              Name:            CKUserIdentityLookupInfo
               WithProtocols:   
       - Name:            nameComponents
         JsName:          nameComponents
@@ -13316,7 +13316,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPersonNameComponents
+              Name:            NSPersonNameComponents
               WithProtocols:   
       - Name:            userRecordID
         JsName:          userRecordID
@@ -13341,7 +13341,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordID
+              Name:            CKRecordID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -13373,7 +13373,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithPhoneNumber:'
         JsName:          initWithPhoneNumber
@@ -13388,7 +13388,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithUserRecordID:'
         JsName:          initWithUserRecordID
@@ -13403,7 +13403,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CKRecordID
+            Name:            CKRecordID
             WithProtocols:   
     StaticMethods:   
       - Name:            'lookupInfosWithEmails:'
@@ -13418,17 +13418,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKUserIdentityLookupInfo
+                Name:            CKUserIdentityLookupInfo
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'lookupInfosWithPhoneNumbers:'
@@ -13443,17 +13443,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKUserIdentityLookupInfo
+                Name:            CKUserIdentityLookupInfo
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'lookupInfosWithRecordIDs:'
@@ -13468,17 +13468,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKUserIdentityLookupInfo
+                Name:            CKUserIdentityLookupInfo
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CKRecordID
+                Name:            CKRecordID
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -13505,7 +13505,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            phoneNumber
         JsName:          phoneNumber
@@ -13530,7 +13530,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            userRecordID
         JsName:          userRecordID
@@ -13555,7 +13555,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CKRecordID
+              Name:            CKRecordID
               WithProtocols:   
     StaticProperties: 
     Protocols:       

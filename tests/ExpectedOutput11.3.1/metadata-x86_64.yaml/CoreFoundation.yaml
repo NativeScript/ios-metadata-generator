@@ -26,7 +26,7 @@ Items:
         BridgedTo:       NSTimeZone
       - Type:            Struct
         Module:          CoreFoundation.CFDate
-        JsName:          CFGregorianUnits
+        Name:            CFGregorianUnits
   - Name:            CFAbsoluteTimeGetCurrent
     JsName:          CFAbsoluteTimeGetCurrent
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDate.h
@@ -87,7 +87,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFDate
-        JsName:          CFGregorianUnits
+        Name:            CFGregorianUnits
       - Type:            Double
       - Type:            Double
       - Type:            BridgedInterface
@@ -108,7 +108,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFDate
-        JsName:          CFGregorianDate
+        Name:            CFGregorianDate
       - Type:            Double
       - Type:            BridgedInterface
         Name:            NSTimeZone
@@ -149,7 +149,7 @@ Items:
         BridgedTo:       id
       - Type:            Long
       - Type:            ULong
-  - Name:            ''
+  - Name:            CFAllocatorContext
     JsName:          CFAllocatorContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h
     Module:          
@@ -265,7 +265,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFAllocatorContext
+          Name:            CFAllocatorContext
   - Name:            CFAllocatorDeallocate
     JsName:          CFAllocatorDeallocate
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h
@@ -303,7 +303,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFAllocatorContext
+          Name:            CFAllocatorContext
   - Name:            CFAllocatorGetDefault
     JsName:          CFAllocatorGetDefault
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h
@@ -404,7 +404,7 @@ Items:
         BridgedTo:       NSArray
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CFArrayAppendValue
     JsName:          CFArrayAppendValue
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFArray.h
@@ -440,7 +440,7 @@ Items:
         BridgedTo:       NSArray
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            FunctionPointer
         Signature:       
           - Type:            Void
@@ -470,7 +470,7 @@ Items:
         BridgedTo:       NSArray
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -490,7 +490,7 @@ Items:
       - Type:            Pointer
         PointerType:     
           Type:            Void
-  - Name:            ''
+  - Name:            CFArrayCallBacks
     JsName:          CFArrayCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFArray.h
     Module:          
@@ -566,7 +566,7 @@ Items:
         BridgedTo:       NSArray
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -597,7 +597,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFArray
-          JsName:          CFArrayCallBacks
+          Name:            CFArrayCallBacks
   - Name:            CFArrayCreateCopy
     JsName:          CFArrayCreateCopy
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFArray.h
@@ -640,7 +640,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFArray
-          JsName:          CFArrayCallBacks
+          Name:            CFArrayCallBacks
   - Name:            CFArrayCreateMutableCopy
     JsName:          CFArrayCreateMutableCopy
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFArray.h
@@ -711,7 +711,7 @@ Items:
         BridgedTo:       NSArray
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -732,7 +732,7 @@ Items:
         BridgedTo:       NSArray
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -753,7 +753,7 @@ Items:
         BridgedTo:       NSArray
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -804,7 +804,7 @@ Items:
         BridgedTo:       NSArray
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Pointer
@@ -877,7 +877,7 @@ Items:
         BridgedTo:       NSArray
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Pointer
@@ -920,7 +920,7 @@ Items:
         BridgedTo:       NSArray
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            FunctionPointer
         Signature:       
           - Type:            Enum
@@ -1056,7 +1056,7 @@ Items:
         BridgedTo:       NSAttributedString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CFAttributedStringEndEditing
     JsName:          CFAttributedStringEndEditing
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAttributedString.h
@@ -1097,7 +1097,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
   - Name:            CFAttributedStringGetAttributeAndLongestEffectiveRange
     JsName:          CFAttributedStringGetAttributeAndLongestEffectiveRange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAttributedString.h
@@ -1121,12 +1121,12 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
   - Name:            CFAttributedStringGetAttributes
     JsName:          CFAttributedStringGetAttributes
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAttributedString.h
@@ -1149,7 +1149,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
   - Name:            CFAttributedStringGetAttributesAndLongestEffectiveRange
     JsName:          CFAttributedStringGetAttributesAndLongestEffectiveRange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAttributedString.h
@@ -1170,12 +1170,12 @@ Items:
       - Type:            Long
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
   - Name:            CFAttributedStringGetLength
     JsName:          CFAttributedStringGetLength
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAttributedString.h
@@ -1254,7 +1254,7 @@ Items:
         BridgedTo:       NSAttributedString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -1275,7 +1275,7 @@ Items:
         BridgedTo:       NSAttributedString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSAttributedString
         BridgedTo:       NSAttributedString
@@ -1296,7 +1296,7 @@ Items:
         BridgedTo:       NSAttributedString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -1317,7 +1317,7 @@ Items:
         BridgedTo:       NSAttributedString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -1341,7 +1341,7 @@ Items:
         BridgedTo:       NSAttributedString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSDictionary
         BridgedTo:       NSDictionary
@@ -1409,7 +1409,7 @@ Items:
       - Type:            Pointer
         PointerType:     
           Type:            Void
-  - Name:            ''
+  - Name:            CFBagCallBacks
     JsName:          CFBagCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBag.h
     Module:          
@@ -1521,7 +1521,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBag
-          JsName:          CFBagCallBacks
+          Name:            CFBagCallBacks
   - Name:            CFBagCreateCopy
     JsName:          CFBagCreateCopy
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBag.h
@@ -1564,7 +1564,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBag
-          JsName:          CFBagCallBacks
+          Name:            CFBagCallBacks
   - Name:            CFBagCreateMutableCopy
     JsName:          CFBagCreateMutableCopy
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBag.h
@@ -1808,7 +1808,7 @@ Items:
       - Type:            Pointer
         PointerType:     
           Type:            Void
-  - Name:            ''
+  - Name:            CFBinaryHeapCallBacks
     JsName:          CFBinaryHeapCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBinaryHeap.h
     Module:          
@@ -1871,7 +1871,7 @@ Items:
             - Type:            Pointer
               PointerType:     
                 Type:            Void
-  - Name:            ''
+  - Name:            CFBinaryHeapCompareContext
     JsName:          CFBinaryHeapCompareContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBinaryHeap.h
     Module:          
@@ -1958,12 +1958,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBinaryHeap
-          JsName:          CFBinaryHeapCallBacks
+          Name:            CFBinaryHeapCallBacks
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBinaryHeap
-          JsName:          CFBinaryHeapCompareContext
+          Name:            CFBinaryHeapCompareContext
   - Name:            CFBinaryHeapCreateCopy
     JsName:          CFBinaryHeapCreateCopy
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBinaryHeap.h
@@ -2134,7 +2134,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            UInt
   - Name:            CFBitVectorCreate
     JsName:          CFBitVectorCreate
@@ -2247,7 +2247,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CFBitVectorGetBitAtIndex
     JsName:          CFBitVectorGetBitAtIndex
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBitVector.h
@@ -2281,7 +2281,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            CString
   - Name:            CFBitVectorGetCount
     JsName:          CFBitVectorGetCount
@@ -2315,7 +2315,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            UInt
   - Name:            CFBitVectorGetFirstIndexOfBit
     JsName:          CFBitVectorGetFirstIndexOfBit
@@ -2334,7 +2334,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            UInt
   - Name:            CFBitVectorGetLastIndexOfBit
     JsName:          CFBitVectorGetLastIndexOfBit
@@ -2353,7 +2353,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            UInt
   - Name:            CFBitVectorGetTypeID
     JsName:          CFBitVectorGetTypeID
@@ -2417,7 +2417,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            UInt
   - Name:            CFBitVectorSetCount
     JsName:          CFBitVectorSetCount
@@ -3519,7 +3519,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSCalendar
         BridgedTo:       NSCalendar
@@ -3553,7 +3553,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSCalendar
         BridgedTo:       NSCalendar
@@ -3592,7 +3592,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSCalendar
         BridgedTo:       NSCalendar
@@ -3749,7 +3749,7 @@ Items:
         BridgedTo:       NSCharacterSet
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CFCharacterSetAddCharactersInString
     JsName:          CFCharacterSetAddCharactersInString
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFCharacterSet.h
@@ -3904,7 +3904,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CFCharacterSetCreateWithCharactersInString
     JsName:          CFCharacterSetCreateWithCharactersInString
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFCharacterSet.h
@@ -4096,7 +4096,7 @@ Items:
         BridgedTo:       NSCharacterSet
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CFCharacterSetRemoveCharactersInString
     JsName:          CFCharacterSetRemoveCharactersInString
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFCharacterSet.h
@@ -4329,7 +4329,7 @@ Items:
         BridgedTo:       NSData
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CFDataFind
     JsName:          CFDataFind
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFData.h
@@ -4344,7 +4344,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSData
         BridgedTo:       NSData
@@ -4353,7 +4353,7 @@ Items:
         BridgedTo:       NSData
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Enum
         Name:            CFDataSearchFlags
   - Name:            CFDataGetBytePtr
@@ -4388,7 +4388,7 @@ Items:
         BridgedTo:       NSData
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            CString
   - Name:            CFDataGetLength
     JsName:          CFDataGetLength
@@ -4465,7 +4465,7 @@ Items:
         BridgedTo:       NSData
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            CString
       - Type:            Long
   - Name:            CFDataSearchFlags
@@ -4635,7 +4635,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
   - Name:            CFDateFormatterCreateISO8601Formatter
     JsName:          CFDateFormatterCreateISO8601Formatter
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h
@@ -4722,7 +4722,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Double
@@ -5024,12 +5024,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFDictionary
-          JsName:          CFDictionaryKeyCallBacks
+          Name:            CFDictionaryKeyCallBacks
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFDictionary
-          JsName:          CFDictionaryValueCallBacks
+          Name:            CFDictionaryValueCallBacks
   - Name:            CFDictionaryCreateCopy
     JsName:          CFDictionaryCreateCopy
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDictionary.h
@@ -5072,12 +5072,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFDictionary
-          JsName:          CFDictionaryKeyCallBacks
+          Name:            CFDictionaryKeyCallBacks
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFDictionary
-          JsName:          CFDictionaryValueCallBacks
+          Name:            CFDictionaryValueCallBacks
   - Name:            CFDictionaryCreateMutableCopy
     JsName:          CFDictionaryCreateMutableCopy
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDictionary.h
@@ -5230,7 +5230,7 @@ Items:
           Type:            Pointer
           PointerType:     
             Type:            Void
-  - Name:            ''
+  - Name:            CFDictionaryKeyCallBacks
     JsName:          CFDictionaryKeyCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDictionary.h
     Module:          
@@ -5372,7 +5372,7 @@ Items:
       - Type:            Pointer
         PointerType:     
           Type:            Void
-  - Name:            ''
+  - Name:            CFDictionaryValueCallBacks
     JsName:          CFDictionaryValueCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDictionary.h
     Module:          
@@ -5626,7 +5626,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            ULong
-  - Name:            ''
+  - Name:            CFFileDescriptorContext
     JsName:          CFFileDescriptorContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFFileDescriptor.h
     Module:          
@@ -5707,7 +5707,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFFileDescriptor
-          JsName:          CFFileDescriptorContext
+          Name:            CFFileDescriptorContext
   - Name:            CFFileDescriptorCreateRunLoopSource
     JsName:          CFFileDescriptorCreateRunLoopSource
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFFileDescriptor.h
@@ -5784,7 +5784,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFFileDescriptor
-          JsName:          CFFileDescriptorContext
+          Name:            CFFileDescriptorContext
   - Name:            CFFileDescriptorGetNativeDescriptor
     JsName:          CFFileDescriptorGetNativeDescriptor
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFFileDescriptor.h
@@ -6210,7 +6210,7 @@ Items:
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
-  - Name:            ''
+  - Name:            CFGregorianDate
     JsName:          CFGregorianDate
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDate.h
     Module:          
@@ -6254,7 +6254,7 @@ Items:
       - Type:            Double
       - Type:            Struct
         Module:          CoreFoundation.CFDate
-        JsName:          CFGregorianDate
+        Name:            CFGregorianDate
       - Type:            BridgedInterface
         Name:            NSTimeZone
         BridgedTo:       NSTimeZone
@@ -6273,7 +6273,7 @@ Items:
       - Type:            Bool
       - Type:            Struct
         Module:          CoreFoundation.CFDate
-        JsName:          CFGregorianDate
+        Name:            CFGregorianDate
       - Type:            ULong
   - Name:            CFGregorianUnitFlags
     JsName:          CFGregorianUnitFlags
@@ -6294,7 +6294,7 @@ Items:
       - kCFGregorianUnitsSeconds: '32'
       - kCFGregorianAllUnits: '16777215'
     SwiftNameFields: 
-  - Name:            ''
+  - Name:            CFGregorianUnits
     JsName:          CFGregorianUnits
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDate.h
     Module:          
@@ -6775,7 +6775,7 @@ Items:
       - kCFLocaleLanguageDirectionTopToBottom: '3'
       - kCFLocaleLanguageDirectionBottomToTop: '4'
     SwiftNameFields: 
-  - Name:            ''
+  - Name:            CFMachPortContext
     JsName:          CFMachPortContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFMachPort.h
     Module:          
@@ -6856,7 +6856,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFMachPort
-          JsName:          CFMachPortContext
+          Name:            CFMachPortContext
       - Type:            CString
   - Name:            CFMachPortCreateRunLoopSource
     JsName:          CFMachPortCreateRunLoopSource
@@ -6914,7 +6914,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFMachPort
-          JsName:          CFMachPortContext
+          Name:            CFMachPortContext
       - Type:            CString
   - Name:            CFMachPortGetContext
     JsName:          CFMachPortGetContext
@@ -6935,7 +6935,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFMachPort
-          JsName:          CFMachPortContext
+          Name:            CFMachPortContext
   - Name:            CFMachPortGetInvalidationCallBack
     JsName:          CFMachPortGetInvalidationCallBack
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFMachPort.h
@@ -7057,7 +7057,7 @@ Items:
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
-  - Name:            ''
+  - Name:            CFMessagePortContext
     JsName:          CFMessagePortContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFMessagePort.h
     Module:          
@@ -7143,7 +7143,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFMessagePort
-          JsName:          CFMessagePortContext
+          Name:            CFMessagePortContext
       - Type:            CString
   - Name:            CFMessagePortCreateRemote
     JsName:          CFMessagePortCreateRemote
@@ -7205,7 +7205,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFMessagePort
-          JsName:          CFMessagePortContext
+          Name:            CFMessagePortContext
   - Name:            CFMessagePortGetInvalidationCallBack
     JsName:          CFMessagePortGetInvalidationCallBack
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFMessagePort.h
@@ -7349,7 +7349,7 @@ Items:
         Name:            NSMessagePort
         BridgedTo:       NSMessagePort
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            CFMessagePortSetInvalidationCallBack
@@ -7759,7 +7759,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
       - Type:            ULong
   - Name:            CFNumberFormatterCreateStringWithNumber
     JsName:          CFNumberFormatterCreateStringWithNumber
@@ -7914,7 +7914,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
       - Type:            Enum
         Name:            CFNumberType
       - Type:            Pointer
@@ -9126,7 +9126,7 @@ Items:
           Type:            BridgedInterface
           Name:            NSString
           BridgedTo:       NSString
-  - Name:            ''
+  - Name:            CFRange
     JsName:          CFRange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h
     Module:          
@@ -9171,7 +9171,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            BridgedInterface
@@ -9289,7 +9289,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFStream
-        JsName:          CFStreamError
+        Name:            CFStreamError
       - Type:            BridgedInterface
         Name:            NSInputStream
         BridgedTo:       NSInputStream
@@ -9420,7 +9420,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFStream
-          JsName:          CFStreamClientContext
+          Name:            CFStreamClientContext
   - Name:            CFReadStreamSetDispatchQueue
     JsName:          CFReadStreamSetDispatchQueue
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFStream.h
@@ -9438,7 +9438,7 @@ Items:
         Name:            NSInputStream
         BridgedTo:       NSInputStream
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            CFReadStreamSetProperty
@@ -9785,7 +9785,7 @@ Items:
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
-  - Name:            ''
+  - Name:            CFRunLoopObserverContext
     JsName:          CFRunLoopObserverContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFRunLoop.h
     Module:          
@@ -9867,7 +9867,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFRunLoop
-          JsName:          CFRunLoopObserverContext
+          Name:            CFRunLoopObserverContext
   - Name:            CFRunLoopObserverCreateWithHandler
     JsName:          CFRunLoopObserverCreateWithHandler
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFRunLoop.h
@@ -9946,7 +9946,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFRunLoop
-          JsName:          CFRunLoopObserverContext
+          Name:            CFRunLoopObserverContext
   - Name:            CFRunLoopObserverGetOrder
     JsName:          CFRunLoopObserverGetOrder
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFRunLoop.h
@@ -10135,7 +10135,7 @@ Items:
       - kCFRunLoopRunTimedOut: '3'
       - kCFRunLoopRunHandledSource: '4'
     SwiftNameFields: 
-  - Name:            ''
+  - Name:            CFRunLoopSourceContext
     JsName:          CFRunLoopSourceContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFRunLoop.h
     Module:          
@@ -10237,7 +10237,7 @@ Items:
             - Type:            Pointer
               PointerType:     
                 Type:            Void
-  - Name:            ''
+  - Name:            CFRunLoopSourceContext1
     JsName:          CFRunLoopSourceContext1
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFRunLoop.h
     Module:          
@@ -10350,7 +10350,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFRunLoop
-          JsName:          CFRunLoopSourceContext
+          Name:            CFRunLoopSourceContext
   - Name:            CFRunLoopSourceGetContext
     JsName:          CFRunLoopSourceGetContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFRunLoop.h
@@ -10370,7 +10370,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFRunLoop
-          JsName:          CFRunLoopSourceContext
+          Name:            CFRunLoopSourceContext
   - Name:            CFRunLoopSourceGetOrder
     JsName:          CFRunLoopSourceGetOrder
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFRunLoop.h
@@ -10458,7 +10458,7 @@ Items:
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
-  - Name:            ''
+  - Name:            CFRunLoopTimerContext
     JsName:          CFRunLoopTimerContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFRunLoop.h
     Module:          
@@ -10539,7 +10539,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFRunLoop
-          JsName:          CFRunLoopTimerContext
+          Name:            CFRunLoopTimerContext
   - Name:            CFRunLoopTimerCreateWithHandler
     JsName:          CFRunLoopTimerCreateWithHandler
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFRunLoop.h
@@ -10602,7 +10602,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFRunLoop
-          JsName:          CFRunLoopTimerContext
+          Name:            CFRunLoopTimerContext
   - Name:            CFRunLoopTimerGetInterval
     JsName:          CFRunLoopTimerGetInterval
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFRunLoop.h
@@ -10799,7 +10799,7 @@ Items:
       - Type:            Pointer
         PointerType:     
           Type:            Void
-  - Name:            ''
+  - Name:            CFSetCallBacks
     JsName:          CFSetCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSet.h
     Module:          
@@ -10911,7 +10911,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSet
-          JsName:          CFSetCallBacks
+          Name:            CFSetCallBacks
   - Name:            CFSetCreateCopy
     JsName:          CFSetCreateCopy
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSet.h
@@ -10954,7 +10954,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSet
-          JsName:          CFSetCallBacks
+          Name:            CFSetCallBacks
   - Name:            CFSetCreateMutableCopy
     JsName:          CFSetCreateMutableCopy
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSet.h
@@ -11221,7 +11221,7 @@ Items:
         Name:            NSData
         BridgedTo:       NSData
       - Type:            Double
-  - Name:            ''
+  - Name:            CFSocketContext
     JsName:          CFSocketContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSocket.h
     Module:          
@@ -11319,7 +11319,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketSignature
+          Name:            CFSocketSignature
       - Type:            Double
       - Type:            BridgedInterface
         Name:            NSString
@@ -11328,7 +11328,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketSignature
+          Name:            CFSocketSignature
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -11351,7 +11351,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketSignature
+          Name:            CFSocketSignature
       - Type:            Double
       - Type:            BridgedInterface
         Name:            NSString
@@ -11408,7 +11408,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketContext
+          Name:            CFSocketContext
   - Name:            CFSocketCreateConnectedToSocketSignature
     JsName:          CFSocketCreateConnectedToSocketSignature
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSocket.h
@@ -11430,7 +11430,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketSignature
+          Name:            CFSocketSignature
       - Type:            ULong
       - Type:            FunctionPointer
         Signature:       
@@ -11453,7 +11453,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketContext
+          Name:            CFSocketContext
       - Type:            Double
   - Name:            CFSocketCreateRunLoopSource
     JsName:          CFSocketCreateRunLoopSource
@@ -11516,7 +11516,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketContext
+          Name:            CFSocketContext
   - Name:            CFSocketCreateWithSocketSignature
     JsName:          CFSocketCreateWithSocketSignature
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSocket.h
@@ -11538,7 +11538,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketSignature
+          Name:            CFSocketSignature
       - Type:            ULong
       - Type:            FunctionPointer
         Signature:       
@@ -11561,7 +11561,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketContext
+          Name:            CFSocketContext
   - Name:            CFSocketDisableCallBacks
     JsName:          CFSocketDisableCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSocket.h
@@ -11628,7 +11628,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketContext
+          Name:            CFSocketContext
   - Name:            CFSocketGetDefaultNameRegistryPortNumber
     JsName:          CFSocketGetDefaultNameRegistryPortNumber
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSocket.h
@@ -11730,7 +11730,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketSignature
+          Name:            CFSocketSignature
       - Type:            Double
       - Type:            BridgedInterface
         Name:            NSString
@@ -11739,7 +11739,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketSignature
+          Name:            CFSocketSignature
   - Name:            CFSocketRegisterValue
     JsName:          CFSocketRegisterValue
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSocket.h
@@ -11757,7 +11757,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketSignature
+          Name:            CFSocketSignature
       - Type:            Double
       - Type:            BridgedInterface
         Name:            NSString
@@ -11836,7 +11836,7 @@ Items:
         Name:            id
         BridgedTo:       id
       - Type:            ULong
-  - Name:            ''
+  - Name:            CFSocketSignature
     JsName:          CFSocketSignature
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSocket.h
     Module:          
@@ -11878,12 +11878,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketSignature
+          Name:            CFSocketSignature
       - Type:            Double
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
-  - Name:            ''
+  - Name:            CFStreamClientContext
     JsName:          CFStreamClientContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFStream.h
     Module:          
@@ -11975,7 +11975,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFSocket
-          JsName:          CFSocketSignature
+          Name:            CFSocketSignature
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -12041,7 +12041,7 @@ Items:
           Type:            BridgedInterface
           Name:            NSOutputStream
           BridgedTo:       NSOutputStream
-  - Name:            ''
+  - Name:            CFStreamError
     JsName:          CFStreamError
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFStream.h
     Module:          
@@ -12289,7 +12289,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Enum
         Name:            CFStringCompareFlags
   - Name:            CFStringCompareWithOptionsAndLocale
@@ -12314,7 +12314,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Enum
         Name:            CFStringCompareFlags
       - Type:            BridgedInterface
@@ -12450,7 +12450,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Enum
         Name:            CFStringCompareFlags
   - Name:            CFStringCreateByCombiningStrings
@@ -12815,7 +12815,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CFStringDelete
     JsName:          CFStringDelete
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFString.h
@@ -12833,7 +12833,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CFStringEncodings
     JsName:          CFStringEncodings
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFStringEncodingExt.h
@@ -12988,7 +12988,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -13020,7 +13020,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Enum
         Name:            CFStringCompareFlags
   - Name:            CFStringFindCharacterFromSet
@@ -13043,14 +13043,14 @@ Items:
         BridgedTo:       NSCharacterSet
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Enum
         Name:            CFStringCompareFlags
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
   - Name:            CFStringFindWithOptions
     JsName:          CFStringFindWithOptions
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFString.h
@@ -13071,14 +13071,14 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Enum
         Name:            CFStringCompareFlags
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
   - Name:            CFStringFindWithOptionsAndLocale
     JsName:          CFStringFindWithOptionsAndLocale
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFString.h
@@ -13100,7 +13100,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Enum
         Name:            CFStringCompareFlags
       - Type:            BridgedInterface
@@ -13110,7 +13110,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
   - Name:            CFStringFold
     JsName:          CFStringFold
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFString.h
@@ -13149,7 +13149,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            UInt
       - Type:            UChar
       - Type:            Bool
@@ -13225,7 +13225,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Ushort
@@ -13312,7 +13312,7 @@ Items:
       - Type:            Long
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            ULong
       - Type:            BridgedInterface
         Name:            NSLocale
@@ -13367,7 +13367,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Long
@@ -13466,7 +13466,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Long
@@ -13523,7 +13523,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -13603,7 +13603,7 @@ Items:
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
-  - Name:            ''
+  - Name:            CFStringInlineBuffer
     JsName:          CFStringInlineBuffer
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFString.h
     Module:          
@@ -13637,7 +13637,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
       - Name:            bufferedRangeStart
         Signature:       
           Type:            Long
@@ -13780,7 +13780,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -13859,7 +13859,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CFStringTokenizerCopyCurrentTokenAttribute
     JsName:          CFStringTokenizerCopyCurrentTokenAttribute
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFStringTokenizer.h
@@ -13902,7 +13902,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            ULong
       - Type:            BridgedInterface
         Name:            NSLocale
@@ -13927,7 +13927,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
       - Type:            Long
       - Type:            BridgedInterface
         Name:            NSArray
@@ -13946,7 +13946,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -14002,7 +14002,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CFStringTokenizerTokenType
     JsName:          CFStringTokenizerTokenType
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFStringTokenizer.h
@@ -14041,7 +14041,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -14097,7 +14097,7 @@ Items:
       - Type:            BridgedInterface
         Name:            NSLocale
         BridgedTo:       NSLocale
-  - Name:            ''
+  - Name:            CFSwappedFloat32
     JsName:          CFSwappedFloat32
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFByteOrder.h
     Module:          
@@ -14111,7 +14111,7 @@ Items:
       - Name:            v
         Signature:       
           Type:            UInt
-  - Name:            ''
+  - Name:            CFSwappedFloat64
     JsName:          CFSwappedFloat64
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFByteOrder.h
     Module:          
@@ -14502,7 +14502,7 @@ Items:
       - Type:            Pointer
         PointerType:     
           Type:            Void
-  - Name:            ''
+  - Name:            CFTreeContext
     JsName:          CFTreeContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFTree.h
     Module:          
@@ -14570,7 +14570,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFTree
-          JsName:          CFTreeContext
+          Name:            CFTreeContext
   - Name:            CFTreeFindRoot
     JsName:          CFTreeFindRoot
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFTree.h
@@ -14660,7 +14660,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFTree
-          JsName:          CFTreeContext
+          Name:            CFTreeContext
   - Name:            CFTreeGetFirstChild
     JsName:          CFTreeGetFirstChild
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFTree.h
@@ -14809,7 +14809,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFTree
-          JsName:          CFTreeContext
+          Name:            CFTreeContext
   - Name:            CFTreeSortChildren
     JsName:          CFTreeSortChildren
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFTree.h
@@ -16141,7 +16141,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSURL
         BridgedTo:       NSURL
@@ -16151,7 +16151,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
   - Name:            CFURLGetBytes
     JsName:          CFURLGetBytes
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h
@@ -16472,7 +16472,7 @@ Items:
       - Type:            Pointer
         PointerType:     
           Type:            Int
-  - Name:            ''
+  - Name:            CFUUIDBytes
     JsName:          CFUUIDBytes
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFUUID.h
     Module:          
@@ -16587,7 +16587,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFUUID
-        JsName:          CFUUIDBytes
+        Name:            CFUUIDBytes
   - Name:            CFUUIDCreateString
     JsName:          CFUUIDCreateString
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFUUID.h
@@ -16699,7 +16699,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFUUID
-        JsName:          CFUUIDBytes
+        Name:            CFUUIDBytes
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -16746,7 +16746,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            BridgedInterface
@@ -16862,7 +16862,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFStream
-        JsName:          CFStreamError
+        Name:            CFStreamError
       - Type:            BridgedInterface
         Name:            NSOutputStream
         BridgedTo:       NSOutputStream
@@ -16961,7 +16961,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFStream
-          JsName:          CFStreamClientContext
+          Name:            CFStreamClientContext
   - Name:            CFWriteStreamSetDispatchQueue
     JsName:          CFWriteStreamSetDispatchQueue
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFStream.h
@@ -16979,7 +16979,7 @@ Items:
         Name:            NSOutputStream
         BridgedTo:       NSOutputStream
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            CFWriteStreamSetProperty
@@ -17067,7 +17067,7 @@ Items:
                 Type:            Void
             - Type:            Struct
               Module:          CoreFoundation.CFUUID
-              JsName:          CFUUIDBytes
+              Name:            CFUUIDBytes
             - Type:            Pointer
               PointerType:     
                 Type:            Pointer
@@ -17117,7 +17117,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Long
       - Type:            Long
   - Name:            __CFStringMakeConstantString
@@ -17947,7 +17947,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreFoundation.CFBag
-      JsName:          CFBagCallBacks
+      Name:            CFBagCallBacks
   - Name:            kCFCopyStringDictionaryKeyCallBacks
     JsName:          kCFCopyStringDictionaryKeyCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDictionary.h
@@ -17961,7 +17961,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreFoundation.CFDictionary
-      JsName:          CFDictionaryKeyCallBacks
+      Name:            CFDictionaryKeyCallBacks
   - Name:            kCFCopyStringSetCallBacks
     JsName:          kCFCopyStringSetCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSet.h
@@ -17975,7 +17975,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreFoundation.CFSet
-      JsName:          CFSetCallBacks
+      Name:            CFSetCallBacks
   - Name:            kCFCoreFoundationVersionNumber
     JsName:          kCFCoreFoundationVersionNumber
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h
@@ -21862,7 +21862,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreFoundation.CFBinaryHeap
-      JsName:          CFBinaryHeapCallBacks
+      Name:            CFBinaryHeapCallBacks
   - Name:            kCFStringEncodingANSEL
     JsName:          kCFStringEncodingANSEL
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFStringEncodingExt.h
@@ -23956,7 +23956,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreFoundation.CFArray
-      JsName:          CFArrayCallBacks
+      Name:            CFArrayCallBacks
   - Name:            kCFTypeBagCallBacks
     JsName:          kCFTypeBagCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBag.h
@@ -23970,7 +23970,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreFoundation.CFBag
-      JsName:          CFBagCallBacks
+      Name:            CFBagCallBacks
   - Name:            kCFTypeDictionaryKeyCallBacks
     JsName:          kCFTypeDictionaryKeyCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDictionary.h
@@ -23984,7 +23984,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreFoundation.CFDictionary
-      JsName:          CFDictionaryKeyCallBacks
+      Name:            CFDictionaryKeyCallBacks
   - Name:            kCFTypeDictionaryValueCallBacks
     JsName:          kCFTypeDictionaryValueCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDictionary.h
@@ -23998,7 +23998,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreFoundation.CFDictionary
-      JsName:          CFDictionaryValueCallBacks
+      Name:            CFDictionaryValueCallBacks
   - Name:            kCFTypeSetCallBacks
     JsName:          kCFTypeSetCallBacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSet.h
@@ -24012,7 +24012,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreFoundation.CFSet
-      JsName:          CFSetCallBacks
+      Name:            CFSetCallBacks
   - Name:            kCFURLAddedToDirectoryDateKey
     JsName:          kCFURLAddedToDirectoryDateKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h

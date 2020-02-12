@@ -37,7 +37,7 @@ Items:
           - Type:            Enum
             Name:            EKEntityType
           - Type:            Interface
-            JsName:          EKEventStore
+            Name:            EKEventStore
             WithProtocols:   
       - Name:            'initWithSelectionStyle:displayStyle:eventStore:'
         JsName:          initWithSelectionStyleDisplayStyleEventStore
@@ -56,7 +56,7 @@ Items:
           - Type:            Enum
             Name:            EKCalendarChooserDisplayStyle
           - Type:            Interface
-            JsName:          EKEventStore
+            Name:            EKEventStore
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -124,10 +124,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKCalendar
+                  Name:            EKCalendar
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -144,10 +144,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKCalendar
+                  Name:            EKCalendar
                   WithProtocols:   
               WithProtocols:   
       - Name:            selectionStyle
@@ -275,7 +275,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EKCalendarChooser
+            Name:            EKCalendarChooser
             WithProtocols:   
       - Name:            'calendarChooserDidFinish:'
         JsName:          calendarChooserDidFinish
@@ -290,7 +290,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EKCalendarChooser
+            Name:            EKCalendarChooser
             WithProtocols:   
       - Name:            'calendarChooserSelectionDidChange:'
         JsName:          calendarChooserSelectionDidChange
@@ -305,7 +305,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EKCalendarChooser
+            Name:            EKCalendarChooser
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -542,7 +542,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EKEvent
+              Name:            EKEvent
               WithProtocols:   
         Setter:          
           Name:            'setEvent:'
@@ -558,7 +558,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          EKEvent
+              Name:            EKEvent
               WithProtocols:   
       - Name:            eventStore
         JsName:          eventStore
@@ -583,7 +583,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EKEventStore
+              Name:            EKEventStore
               WithProtocols:   
         Setter:          
           Name:            'setEventStore:'
@@ -599,7 +599,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          EKEventStore
+              Name:            EKEventStore
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -627,10 +627,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKCalendar
+            Name:            EKCalendar
             WithProtocols:   
           - Type:            Interface
-            JsName:          EKEventEditViewController
+            Name:            EKEventEditViewController
             WithProtocols:   
       - Name:            'eventEditViewController:didCompleteWithAction:'
         JsName:          eventEditViewControllerDidCompleteWithAction
@@ -645,7 +645,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EKEventEditViewController
+            Name:            EKEventEditViewController
             WithProtocols:   
           - Type:            Enum
             Name:            EKEventEditViewAction
@@ -860,7 +860,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EKEvent
+              Name:            EKEvent
               WithProtocols:   
         Setter:          
           Name:            'setEvent:'
@@ -876,7 +876,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          EKEvent
+              Name:            EKEvent
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -906,7 +906,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EKEventViewController
+            Name:            EKEventViewController
             WithProtocols:   
           - Type:            Enum
             Name:            EKEventViewAction
@@ -927,6 +927,6 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSBundle
+        Name:            NSBundle
         WithProtocols:   
 ...

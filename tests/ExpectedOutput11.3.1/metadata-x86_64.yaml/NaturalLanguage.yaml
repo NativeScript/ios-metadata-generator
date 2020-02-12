@@ -58,7 +58,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'distanceBetweenString:andString:distanceType:'
         JsName:          distanceBetweenStringAndStringDistanceType
@@ -74,10 +74,10 @@ Items:
         Signature:       
           - Type:            Double
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            NLDistanceType
@@ -95,7 +95,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            ULong
           - Type:            Enum
@@ -104,7 +104,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Double
               - Type:            Pointer
@@ -124,7 +124,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            ULong
           - Type:            Double
@@ -134,7 +134,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Double
               - Type:            Pointer
@@ -154,10 +154,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            ULong
@@ -167,7 +167,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Double
               - Type:            Pointer
@@ -187,10 +187,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            ULong
@@ -201,7 +201,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Double
               - Type:            Pointer
@@ -224,7 +224,7 @@ Items:
             PointerType:     
               Type:            Float
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'neighborsForString:maximumCount:distanceType:'
         JsName:          neighborsForStringMaximumCountDistanceType
@@ -239,14 +239,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            ULong
           - Type:            Enum
@@ -264,14 +264,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            ULong
           - Type:            Double
@@ -290,17 +290,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            ULong
@@ -319,17 +319,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            ULong
@@ -349,14 +349,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'currentRevisionForLanguage:'
@@ -373,7 +373,7 @@ Items:
         Signature:       
           - Type:            ULong
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'embeddingWithContentsOfURL:error:'
         JsName:          embeddingWithContentsOfURLError
@@ -389,12 +389,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'supportedRevisionsForLanguage:'
         JsName:          supportedRevisionsForLanguage
@@ -409,10 +409,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'wordEmbeddingForLanguage:'
         JsName:          wordEmbeddingForLanguage
@@ -427,10 +427,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NLEmbedding
+            Name:            NLEmbedding
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'wordEmbeddingForLanguage:revision:'
         JsName:          wordEmbeddingForLanguageRevision
@@ -445,10 +445,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NLEmbedding
+            Name:            NLEmbedding
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            ULong
       - Name:            'writeEmbeddingForDictionary:language:revision:toURL:error:'
@@ -465,30 +465,30 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSNumber
+                    Name:            NSNumber
                     WithProtocols:   
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            ULong
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
       - Name:            dimension
@@ -541,7 +541,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            revision
         JsName:          revision
@@ -622,12 +622,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'initWithData:error:'
         JsName:          initWithDataError
@@ -643,12 +643,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'initWithDictionary:language:error:'
         JsName:          initWithDictionaryLanguageError
@@ -664,26 +664,26 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'labelForString:'
         JsName:          labelForString
@@ -698,10 +698,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'gazetteerWithContentsOfURL:error:'
@@ -718,12 +718,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'writeGazetteerForDictionary:language:toURL:error:'
         JsName:          writeGazetteerForDictionaryLanguageToURLError
@@ -739,29 +739,29 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
       - Name:            data
@@ -789,7 +789,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            language
         JsName:          language
@@ -816,7 +816,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -834,7 +834,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageArabic
     JsName:          NLLanguageArabic
@@ -849,7 +849,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageArmenian
     JsName:          NLLanguageArmenian
@@ -864,7 +864,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageBengali
     JsName:          NLLanguageBengali
@@ -879,7 +879,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageBulgarian
     JsName:          NLLanguageBulgarian
@@ -894,7 +894,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageBurmese
     JsName:          NLLanguageBurmese
@@ -909,7 +909,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageCatalan
     JsName:          NLLanguageCatalan
@@ -924,7 +924,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageCherokee
     JsName:          NLLanguageCherokee
@@ -939,7 +939,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageCroatian
     JsName:          NLLanguageCroatian
@@ -954,7 +954,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageCzech
     JsName:          NLLanguageCzech
@@ -969,7 +969,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageDanish
     JsName:          NLLanguageDanish
@@ -984,7 +984,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageDutch
     JsName:          NLLanguageDutch
@@ -999,7 +999,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageEnglish
     JsName:          NLLanguageEnglish
@@ -1014,7 +1014,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageFinnish
     JsName:          NLLanguageFinnish
@@ -1029,7 +1029,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageFrench
     JsName:          NLLanguageFrench
@@ -1044,7 +1044,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageGeorgian
     JsName:          NLLanguageGeorgian
@@ -1059,7 +1059,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageGerman
     JsName:          NLLanguageGerman
@@ -1074,7 +1074,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageGreek
     JsName:          NLLanguageGreek
@@ -1089,7 +1089,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageGujarati
     JsName:          NLLanguageGujarati
@@ -1104,7 +1104,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageHebrew
     JsName:          NLLanguageHebrew
@@ -1119,7 +1119,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageHindi
     JsName:          NLLanguageHindi
@@ -1134,7 +1134,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageHungarian
     JsName:          NLLanguageHungarian
@@ -1149,7 +1149,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageIcelandic
     JsName:          NLLanguageIcelandic
@@ -1164,7 +1164,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageIndonesian
     JsName:          NLLanguageIndonesian
@@ -1179,7 +1179,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageItalian
     JsName:          NLLanguageItalian
@@ -1194,7 +1194,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageJapanese
     JsName:          NLLanguageJapanese
@@ -1209,7 +1209,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageKannada
     JsName:          NLLanguageKannada
@@ -1224,7 +1224,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageKhmer
     JsName:          NLLanguageKhmer
@@ -1239,7 +1239,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageKorean
     JsName:          NLLanguageKorean
@@ -1254,7 +1254,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageLao
     JsName:          NLLanguageLao
@@ -1269,7 +1269,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageMalay
     JsName:          NLLanguageMalay
@@ -1284,7 +1284,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageMalayalam
     JsName:          NLLanguageMalayalam
@@ -1299,7 +1299,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageMarathi
     JsName:          NLLanguageMarathi
@@ -1314,7 +1314,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageMongolian
     JsName:          NLLanguageMongolian
@@ -1329,7 +1329,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageNorwegian
     JsName:          NLLanguageNorwegian
@@ -1344,7 +1344,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageOriya
     JsName:          NLLanguageOriya
@@ -1359,7 +1359,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguagePersian
     JsName:          NLLanguagePersian
@@ -1374,7 +1374,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguagePolish
     JsName:          NLLanguagePolish
@@ -1389,7 +1389,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguagePortuguese
     JsName:          NLLanguagePortuguese
@@ -1404,7 +1404,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguagePunjabi
     JsName:          NLLanguagePunjabi
@@ -1419,7 +1419,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageRecognizer
     JsName:          NLLanguageRecognizer
@@ -1446,13 +1446,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            ULong
@@ -1470,7 +1470,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            reset
         JsName:          reset
@@ -1499,10 +1499,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            dominantLanguage
@@ -1530,7 +1530,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            languageConstraints
         JsName:          languageConstraints
@@ -1557,10 +1557,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1578,10 +1578,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            languageHints
@@ -1609,13 +1609,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1633,13 +1633,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -1658,7 +1658,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageRussian
     JsName:          NLLanguageRussian
@@ -1673,7 +1673,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageSimplifiedChinese
     JsName:          NLLanguageSimplifiedChinese
@@ -1688,7 +1688,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageSinhalese
     JsName:          NLLanguageSinhalese
@@ -1703,7 +1703,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageSlovak
     JsName:          NLLanguageSlovak
@@ -1718,7 +1718,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageSpanish
     JsName:          NLLanguageSpanish
@@ -1733,7 +1733,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageSwedish
     JsName:          NLLanguageSwedish
@@ -1748,7 +1748,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageTamil
     JsName:          NLLanguageTamil
@@ -1763,7 +1763,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageTelugu
     JsName:          NLLanguageTelugu
@@ -1778,7 +1778,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageThai
     JsName:          NLLanguageThai
@@ -1793,7 +1793,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageTibetan
     JsName:          NLLanguageTibetan
@@ -1808,7 +1808,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageTraditionalChinese
     JsName:          NLLanguageTraditionalChinese
@@ -1823,7 +1823,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageTurkish
     JsName:          NLLanguageTurkish
@@ -1838,7 +1838,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageUkrainian
     JsName:          NLLanguageUkrainian
@@ -1853,7 +1853,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageUndetermined
     JsName:          NLLanguageUndetermined
@@ -1868,7 +1868,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageUrdu
     JsName:          NLLanguageUrdu
@@ -1883,7 +1883,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLLanguageVietnamese
     JsName:          NLLanguageVietnamese
@@ -1898,7 +1898,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLModel
     JsName:          NLModel
@@ -1925,10 +1925,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'predictedLabelsForTokens:'
         JsName:          predictedLabelsForTokens
@@ -1943,17 +1943,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -1971,12 +1971,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'modelWithMLModel:error:'
         JsName:          modelWithMLModelError
@@ -1992,12 +1992,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MLModel
+            Name:            MLModel
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
       - Name:            configuration
@@ -2025,7 +2025,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NLModelConfiguration
+              Name:            NLModelConfiguration
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2071,7 +2071,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
           - Type:            Enum
             Name:            NLModelType
@@ -2101,7 +2101,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            revision
         JsName:          revision
@@ -2210,7 +2210,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagAdverb
     JsName:          NLTagAdverb
@@ -2225,7 +2225,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagClassifier
     JsName:          NLTagClassifier
@@ -2240,7 +2240,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagCloseParenthesis
     JsName:          NLTagCloseParenthesis
@@ -2255,7 +2255,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagCloseQuote
     JsName:          NLTagCloseQuote
@@ -2270,7 +2270,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagConjunction
     JsName:          NLTagConjunction
@@ -2285,7 +2285,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagDash
     JsName:          NLTagDash
@@ -2300,7 +2300,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagDeterminer
     JsName:          NLTagDeterminer
@@ -2315,7 +2315,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagIdiom
     JsName:          NLTagIdiom
@@ -2330,7 +2330,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagInterjection
     JsName:          NLTagInterjection
@@ -2345,7 +2345,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagNoun
     JsName:          NLTagNoun
@@ -2360,7 +2360,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagNumber
     JsName:          NLTagNumber
@@ -2375,7 +2375,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagOpenParenthesis
     JsName:          NLTagOpenParenthesis
@@ -2390,7 +2390,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagOpenQuote
     JsName:          NLTagOpenQuote
@@ -2405,7 +2405,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagOrganizationName
     JsName:          NLTagOrganizationName
@@ -2420,7 +2420,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagOther
     JsName:          NLTagOther
@@ -2435,7 +2435,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagOtherPunctuation
     JsName:          NLTagOtherPunctuation
@@ -2450,7 +2450,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagOtherWhitespace
     JsName:          NLTagOtherWhitespace
@@ -2465,7 +2465,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagOtherWord
     JsName:          NLTagOtherWord
@@ -2480,7 +2480,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagParagraphBreak
     JsName:          NLTagParagraphBreak
@@ -2495,7 +2495,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagParticle
     JsName:          NLTagParticle
@@ -2510,7 +2510,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagPersonalName
     JsName:          NLTagPersonalName
@@ -2525,7 +2525,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagPlaceName
     JsName:          NLTagPlaceName
@@ -2540,7 +2540,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagPreposition
     JsName:          NLTagPreposition
@@ -2555,7 +2555,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagPronoun
     JsName:          NLTagPronoun
@@ -2570,7 +2570,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagPunctuation
     JsName:          NLTagPunctuation
@@ -2585,7 +2585,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagSchemeLanguage
     JsName:          NLTagSchemeLanguage
@@ -2600,7 +2600,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagSchemeLemma
     JsName:          NLTagSchemeLemma
@@ -2615,7 +2615,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagSchemeLexicalClass
     JsName:          NLTagSchemeLexicalClass
@@ -2630,7 +2630,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagSchemeNameType
     JsName:          NLTagSchemeNameType
@@ -2645,7 +2645,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagSchemeNameTypeOrLexicalClass
     JsName:          NLTagSchemeNameTypeOrLexicalClass
@@ -2660,7 +2660,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagSchemeScript
     JsName:          NLTagSchemeScript
@@ -2675,7 +2675,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagSchemeSentimentScore
     JsName:          NLTagSchemeSentimentScore
@@ -2690,7 +2690,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagSchemeTokenType
     JsName:          NLTagSchemeTokenType
@@ -2705,7 +2705,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagSentenceTerminator
     JsName:          NLTagSentenceTerminator
@@ -2720,7 +2720,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagVerb
     JsName:          NLTagVerb
@@ -2735,7 +2735,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagWhitespace
     JsName:          NLTagWhitespace
@@ -2750,7 +2750,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagWord
     JsName:          NLTagWord
@@ -2765,7 +2765,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagWordJoiner
     JsName:          NLTagWordJoiner
@@ -2780,7 +2780,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NLTagger
     JsName:          NLTagger
@@ -2809,11 +2809,11 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Enum
             Name:            NLTokenUnit
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            NLTaggerOptions
@@ -2821,11 +2821,11 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Struct
                 Module:          Foundation.NSRange
-                JsName:          NSRange
+                Name:            NSRange
               - Type:            Pointer
                 PointerType:     
                   Type:            Bool
@@ -2842,14 +2842,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NLGazetteer
+                Name:            NLGazetteer
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithTagSchemes:'
         JsName:          initWithTagSchemes
@@ -2865,10 +2865,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'modelsForTagScheme:'
@@ -2884,14 +2884,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NLModel
+                Name:            NLModel
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setGazetteers:forTagScheme:'
         JsName:          setGazetteersForTagScheme
@@ -2907,14 +2907,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NLGazetteer
+                Name:            NLGazetteer
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setLanguage:range:'
         JsName:          setLanguageRange
@@ -2930,11 +2930,11 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setModels:forTagScheme:'
         JsName:          setModelsForTagScheme
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NaturalLanguage.framework/Headers/NLTagger.h
@@ -2949,14 +2949,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NLModel
+                Name:            NLModel
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setOrthography:range:'
         JsName:          setOrthographyRange
@@ -2972,11 +2972,11 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSOrthography
+            Name:            NSOrthography
             WithProtocols:   
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'tagAtIndex:unit:scheme:tokenRange:'
         JsName:          tagAtIndexUnitSchemeTokenRange
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NaturalLanguage.framework/Headers/NLTagger.h
@@ -2990,19 +2990,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            ULong
           - Type:            Enum
             Name:            NLTokenUnit
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Struct
               Module:          Foundation.NSRange
-              JsName:          NSRange
+              Name:            NSRange
       - Name:            'tagsInRange:unit:scheme:options:tokenRanges:'
         JsName:          tagsInRangeUnitSchemeOptionsTokenRanges
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/NaturalLanguage.framework/Headers/NLTagger.h
@@ -3016,29 +3016,29 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Enum
             Name:            NLTokenUnit
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            NLTaggerOptions
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSValue
+                  Name:            NSValue
                   WithProtocols:   
               WithProtocols:   
       - Name:            'tokenRangeAtIndex:unit:'
@@ -3055,7 +3055,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            ULong
           - Type:            Enum
             Name:            NLTokenUnit
@@ -3073,16 +3073,16 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
             Name:            NLTokenUnit
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'requestAssetsForLanguage:tagScheme:completionHandler:'
         JsName:          requestAssetsForLanguageTagSchemeCompletionHandler
@@ -3098,10 +3098,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -3109,7 +3109,7 @@ Items:
               - Type:            Enum
                 Name:            NLTaggerAssetsResult
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
       - Name:            dominantLanguage
@@ -3137,7 +3137,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            string
         JsName:          string
@@ -3164,7 +3164,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setString:'
@@ -3181,7 +3181,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            tagSchemes
         JsName:          tagSchemes
@@ -3208,10 +3208,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -3449,13 +3449,13 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Struct
                 Module:          Foundation.NSRange
-                JsName:          NSRange
+                Name:            NSRange
               - Type:            Enum
                 Name:            NLTokenizerAttributes
               - Type:            Pointer
@@ -3490,7 +3490,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'tokenRangeAtIndex:'
         JsName:          tokenRangeAtIndex
@@ -3506,7 +3506,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            ULong
       - Name:            'tokensForRange:'
         JsName:          tokensForRange
@@ -3521,15 +3521,15 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSValue
+                Name:            NSValue
                 WithProtocols:   
             WithProtocols:   
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
     StaticMethods:   
     InstanceProperties: 
       - Name:            string
@@ -3557,7 +3557,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setString:'
@@ -3574,7 +3574,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            unit
         JsName:          unit

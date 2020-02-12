@@ -150,7 +150,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '517'
-  - Name:            ''
+  - Name:            compression_algorithm
     JsName:          compression_algorithm
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/compression.h
     Module:          
@@ -251,7 +251,7 @@ Items:
       - Type:            ULong
       - Type:            Enum
         Name:            compression_algorithm
-  - Name:            ''
+  - Name:            compression_status
     JsName:          compression_status
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/compression.h
     Module:          
@@ -268,7 +268,7 @@ Items:
       - COMPRESSION_STATUS_ERROR: '-1'
       - COMPRESSION_STATUS_END: '1'
     SwiftNameFields: 
-  - Name:            ''
+  - Name:            compression_stream
     JsName:          compression_stream
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/compression.h
     Module:          
@@ -318,8 +318,8 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          Compression
-          JsName:          compression_stream
-  - Name:            ''
+          Name:            compression_stream
+  - Name:            compression_stream_flags
     JsName:          compression_stream_flags
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/compression.h
     Module:          
@@ -354,12 +354,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          Compression
-          JsName:          compression_stream
+          Name:            compression_stream
       - Type:            Enum
         Name:            compression_stream_operation
       - Type:            Enum
         Name:            compression_algorithm
-  - Name:            ''
+  - Name:            compression_stream_operation
     JsName:          compression_stream_operation
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/compression.h
     Module:          
@@ -395,6 +395,6 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          Compression
-          JsName:          compression_stream
+          Name:            compression_stream
       - Type:            Int
 ...

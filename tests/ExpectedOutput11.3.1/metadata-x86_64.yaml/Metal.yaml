@@ -188,7 +188,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLPointerType
+              Name:            MTLPointerType
               WithProtocols:   
       - Name:            bufferStructType
         JsName:          bufferStructType
@@ -213,7 +213,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLStructType
+              Name:            MTLStructType
               WithProtocols:   
       - Name:            index
         JsName:          index
@@ -286,7 +286,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            textureDataType
         JsName:          textureDataType
@@ -525,7 +525,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLArgumentDescriptor
+            Name:            MTLArgumentDescriptor
             WithProtocols:   
     InstanceProperties: 
       - Name:            access
@@ -875,7 +875,7 @@ Items:
               Type:            ULong
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setComputePipelineState:atIndex:'
         JsName:          setComputePipelineStateAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLArgumentEncoder.h
@@ -913,7 +913,7 @@ Items:
                 - MTLComputePipelineState
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setIndirectCommandBuffer:atIndex:'
         JsName:          setIndirectCommandBufferAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLArgumentEncoder.h
@@ -951,7 +951,7 @@ Items:
                 - MTLIndirectCommandBuffer
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setRenderPipelineState:atIndex:'
         JsName:          setRenderPipelineStateAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLArgumentEncoder.h
@@ -989,7 +989,7 @@ Items:
                 - MTLRenderPipelineState
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setSamplerState:atIndex:'
         JsName:          setSamplerStateAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLArgumentEncoder.h
@@ -1025,7 +1025,7 @@ Items:
                 - MTLSamplerState
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setTexture:atIndex:'
         JsName:          setTextureAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLArgumentEncoder.h
@@ -1061,7 +1061,7 @@ Items:
                 - MTLTexture
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
     StaticMethods:   
     InstanceProperties: 
       - Name:            alignment
@@ -1158,7 +1158,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -1174,7 +1174,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1296,7 +1296,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLArrayType
+            Name:            MTLArrayType
             WithProtocols:   
       - Name:            elementPointerType
         JsName:          elementPointerType
@@ -1311,7 +1311,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLPointerType
+            Name:            MTLPointerType
             WithProtocols:   
       - Name:            elementStructType
         JsName:          elementStructType
@@ -1325,7 +1325,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLStructType
+            Name:            MTLStructType
             WithProtocols:   
       - Name:            elementTextureReferenceType
         JsName:          elementTextureReferenceType
@@ -1340,7 +1340,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLTextureReferenceType
+            Name:            MTLTextureReferenceType
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1549,7 +1549,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            patchControlPointData
         JsName:          patchControlPointData
@@ -1759,7 +1759,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLAttributeDescriptor
+            Name:            MTLAttributeDescriptor
             WithProtocols:   
           - Type:            ULong
       - Name:            'setObject:atIndexedSubscript:'
@@ -1775,7 +1775,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLAttributeDescriptor
+            Name:            MTLAttributeDescriptor
             WithProtocols:   
           - Type:            ULong
     StaticMethods:   
@@ -2897,7 +2897,7 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Id
             WithProtocols:   
               - MTLTexture
@@ -2905,7 +2905,7 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLOrigin
+            Name:            MTLOrigin
       - Name:            'copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:'
         JsName:          copyFromBufferSourceOffsetSourceBytesPerRowSourceBytesPerImageSourceSizeToTextureDestinationSliceDestinationLevelDestinationOriginOptions
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLBlitCommandEncoder.h
@@ -2927,7 +2927,7 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Id
             WithProtocols:   
               - MTLTexture
@@ -2935,7 +2935,7 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLOrigin
+            Name:            MTLOrigin
           - Type:            Enum
             Name:            MTLBlitOption
       - Name:            'copyFromBuffer:sourceOffset:toBuffer:destinationOffset:size:'
@@ -2978,10 +2978,10 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLOrigin
+            Name:            MTLOrigin
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Id
             WithProtocols:   
               - MTLBuffer
@@ -3008,10 +3008,10 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLOrigin
+            Name:            MTLOrigin
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Id
             WithProtocols:   
               - MTLBuffer
@@ -3039,10 +3039,10 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLOrigin
+            Name:            MTLOrigin
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Id
             WithProtocols:   
               - MTLTexture
@@ -3050,7 +3050,7 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLOrigin
+            Name:            MTLOrigin
       - Name:            'copyFromTexture:sourceSlice:sourceLevel:toTexture:destinationSlice:destinationLevel:sliceCount:levelCount:'
         JsName:          copyFromTextureSourceSliceSourceLevelToTextureDestinationSliceDestinationLevelSliceCountLevelCount
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLBlitCommandEncoder.h
@@ -3113,7 +3113,7 @@ Items:
               - MTLIndirectCommandBuffer
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Id
             WithProtocols:   
               - MTLIndirectCommandBuffer
@@ -3135,7 +3135,7 @@ Items:
               - MTLBuffer
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            UChar
       - Name:            'generateMipmapsForTexture:'
         JsName:          generateMipmapsForTexture
@@ -3170,7 +3170,7 @@ Items:
               - MTLTexture
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLRegion
+            Name:            MTLRegion
           - Type:            ULong
           - Type:            ULong
           - Type:            Bool
@@ -3264,7 +3264,7 @@ Items:
               - MTLIndirectCommandBuffer
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'resetCommandsInBuffer:withRange:'
         JsName:          resetCommandsInBufferWithRange
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLBlitCommandEncoder.h
@@ -3283,7 +3283,7 @@ Items:
               - MTLIndirectCommandBuffer
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'resetTextureAccessCounters:region:mipLevel:slice:'
         JsName:          resetTextureAccessCountersRegionMipLevelSlice
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLBlitCommandEncoder.h
@@ -3302,7 +3302,7 @@ Items:
               - MTLTexture
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLRegion
+            Name:            MTLRegion
           - Type:            ULong
           - Type:            ULong
       - Name:            'updateFence:'
@@ -3434,11 +3434,11 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            contents
         JsName:          contents
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLBuffer.h
@@ -3469,7 +3469,7 @@ Items:
             WithProtocols:   
               - MTLTexture
           - Type:            Interface
-            JsName:          MTLTextureDescriptor
+            Name:            MTLTextureDescriptor
             WithProtocols:   
           - Type:            ULong
           - Type:            ULong
@@ -3669,7 +3669,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLBufferLayoutDescriptor
+            Name:            MTLBufferLayoutDescriptor
             WithProtocols:   
           - Type:            ULong
       - Name:            'setObject:atIndexedSubscript:'
@@ -3685,7 +3685,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLBufferLayoutDescriptor
+            Name:            MTLBufferLayoutDescriptor
             WithProtocols:   
           - Type:            ULong
     StaticMethods:   
@@ -3847,7 +3847,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setOutputURL:'
@@ -3863,7 +3863,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3951,7 +3951,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTLCaptureErrorInvalidDescriptor
     JsName:          MTLCaptureErrorInvalidDescriptor
@@ -4051,12 +4051,12 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MTLCaptureDescriptor
+            Name:            MTLCaptureDescriptor
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'startCaptureWithDevice:'
         JsName:          startCaptureWithDevice
@@ -4130,7 +4130,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLCaptureManager
+            Name:            MTLCaptureManager
             WithProtocols:   
     InstanceProperties: 
       - Name:            defaultCaptureScope
@@ -4311,7 +4311,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -4327,12 +4327,12 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
       - NSObjectProtocol
-  - Name:            ''
+  - Name:            MTLClearColor
     JsName:          MTLClearColor
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderPass.h
     Module:          
@@ -4368,7 +4368,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          Metal.MTLRenderPass
-        JsName:          MTLClearColor
+        Name:            MTLClearColor
       - Type:            Double
       - Type:            Double
       - Type:            Double
@@ -4630,7 +4630,7 @@ Items:
             WithProtocols:   
               - MTLParallelRenderCommandEncoder
           - Type:            Interface
-            JsName:          MTLRenderPassDescriptor
+            Name:            MTLRenderPassDescriptor
             WithProtocols:   
       - Name:            popDebugGroup
         JsName:          popDebugGroup
@@ -4706,7 +4706,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'renderCommandEncoderWithDescriptor:'
         JsName:          renderCommandEncoderWithDescriptor
@@ -4723,7 +4723,7 @@ Items:
             WithProtocols:   
               - MTLRenderCommandEncoder
           - Type:            Interface
-            JsName:          MTLRenderPassDescriptor
+            Name:            MTLRenderPassDescriptor
             WithProtocols:   
       - Name:            resourceStateCommandEncoder
         JsName:          resourceStateCommandEncoder
@@ -4839,7 +4839,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            GPUEndTime
         JsName:          GPUEndTime
@@ -4964,7 +4964,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -4980,7 +4980,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            retainedReferences
         JsName:          retainedReferences
@@ -5089,7 +5089,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTLCommandBufferErrorInternal
     JsName:          MTLCommandBufferErrorInternal
@@ -5308,7 +5308,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            popDebugGroup
         JsName:          popDebugGroup
@@ -5335,7 +5335,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -5387,7 +5387,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -5403,7 +5403,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5511,7 +5511,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -5527,7 +5527,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5765,13 +5765,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSObject
+                  Name:            NSObject
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5788,13 +5788,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSObject
+                  Name:            NSObject
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -5827,10 +5827,10 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
       - Name:            'dispatchThreadgroupsWithIndirectBuffer:indirectBufferOffset:threadsPerThreadgroup:'
         JsName:          dispatchThreadgroupsWithIndirectBufferIndirectBufferOffsetThreadsPerThreadgroup
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputeCommandEncoder.h
@@ -5850,7 +5850,7 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
       - Name:            'dispatchThreads:threadsPerThreadgroup:'
         JsName:          dispatchThreadsThreadsPerThreadgroup
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputeCommandEncoder.h
@@ -5866,10 +5866,10 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
       - Name:            'executeCommandsInBuffer:indirectBuffer:indirectBufferOffset:'
         JsName:          executeCommandsInBufferIndirectBufferIndirectBufferOffset
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputeCommandEncoder.h
@@ -5908,7 +5908,7 @@ Items:
               - MTLIndirectCommandBuffer
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'memoryBarrierWithResources:count:'
         JsName:          memoryBarrierWithResourcesCount
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputeCommandEncoder.h
@@ -5997,7 +5997,7 @@ Items:
               Type:            ULong
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setBytes:length:atIndex:'
         JsName:          setBytesLengthAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputeCommandEncoder.h
@@ -6105,7 +6105,7 @@ Items:
               Type:            Float
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setSamplerStates:withRange:'
         JsName:          setSamplerStatesWithRange
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputeCommandEncoder.h
@@ -6125,7 +6125,7 @@ Items:
                 - MTLSamplerState
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setStageInRegion:'
         JsName:          setStageInRegion
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputeCommandEncoder.h
@@ -6141,7 +6141,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLRegion
+            Name:            MTLRegion
       - Name:            'setStageInRegionWithIndirectBuffer:indirectBufferOffset:'
         JsName:          setStageInRegionWithIndirectBufferIndirectBufferOffset
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputeCommandEncoder.h
@@ -6194,7 +6194,7 @@ Items:
                 - MTLTexture
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setThreadgroupMemoryLength:atIndex:'
         JsName:          setThreadgroupMemoryLengthAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputeCommandEncoder.h
@@ -6397,7 +6397,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLPipelineBufferDescriptorArray
+              Name:            MTLPipelineBufferDescriptorArray
               WithProtocols:   
       - Name:            computeFunction
         JsName:          computeFunction
@@ -6463,7 +6463,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -6479,7 +6479,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maxTotalThreadsPerThreadgroup
         JsName:          maxTotalThreadsPerThreadgroup
@@ -6546,7 +6546,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLStageInputOutputDescriptor
+              Name:            MTLStageInputOutputDescriptor
               WithProtocols:   
         Setter:          
           Name:            'setStageInputDescriptor:'
@@ -6563,7 +6563,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MTLStageInputOutputDescriptor
+              Name:            MTLStageInputOutputDescriptor
               WithProtocols:   
       - Name:            supportIndirectCommandBuffers
         JsName:          supportIndirectCommandBuffers
@@ -6683,10 +6683,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MTLArgument
+                  Name:            MTLArgument
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -6719,7 +6719,7 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
     StaticMethods:   
     InstanceProperties: 
       - Name:            device
@@ -6772,7 +6772,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maxTotalThreadsPerThreadgroup
         JsName:          maxTotalThreadsPerThreadgroup
@@ -8078,7 +8078,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLStencilDescriptor
+              Name:            MTLStencilDescriptor
               WithProtocols:   
         Setter:          
           Name:            'setBackFaceStencil:'
@@ -8094,7 +8094,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MTLStencilDescriptor
+              Name:            MTLStencilDescriptor
               WithProtocols:   
       - Name:            depthCompareFunction
         JsName:          depthCompareFunction
@@ -8195,7 +8195,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLStencilDescriptor
+              Name:            MTLStencilDescriptor
               WithProtocols:   
         Setter:          
           Name:            'setFrontFaceStencil:'
@@ -8211,7 +8211,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MTLStencilDescriptor
+              Name:            MTLStencilDescriptor
               WithProtocols:   
       - Name:            label
         JsName:          label
@@ -8236,7 +8236,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -8252,7 +8252,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -8320,7 +8320,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -8354,15 +8354,15 @@ Items:
             ArrayType:       
               Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLRegion
+              Name:            MTLRegion
           - Type:            IncompleteArray
             ArrayType:       
               Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLRegion
+              Name:            MTLRegion
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Enum
             Name:            MTLSparseTextureRegionAlignmentMode
           - Type:            ULong
@@ -8383,15 +8383,15 @@ Items:
             ArrayType:       
               Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLRegion
+              Name:            MTLRegion
           - Type:            IncompleteArray
             ArrayType:       
               Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLRegion
+              Name:            MTLRegion
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            ULong
       - Name:            'getDefaultSamplePositions:count:'
         JsName:          getDefaultSamplePositionsCount
@@ -8410,7 +8410,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLSamplePosition
+              Name:            MTLSamplePosition
           - Type:            ULong
       - Name:            'heapBufferSizeAndAlignWithLength:options:'
         JsName:          heapBufferSizeAndAlignWithLengthOptions
@@ -8426,7 +8426,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          Metal.MTLDevice
-            JsName:          MTLSizeAndAlign
+            Name:            MTLSizeAndAlign
           - Type:            ULong
           - Type:            Enum
             Name:            MTLResourceOptions
@@ -8444,9 +8444,9 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          Metal.MTLDevice
-            JsName:          MTLSizeAndAlign
+            Name:            MTLSizeAndAlign
           - Type:            Interface
-            JsName:          MTLTextureDescriptor
+            Name:            MTLTextureDescriptor
             WithProtocols:   
       - Name:            'minimumLinearTextureAlignmentForPixelFormat:'
         JsName:          minimumLinearTextureAlignmentForPixelFormat
@@ -8494,10 +8494,10 @@ Items:
             WithProtocols:   
               - MTLArgumentEncoder
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MTLArgumentDescriptor
+                Name:            MTLArgumentDescriptor
                 WithProtocols:   
             WithProtocols:   
       - Name:            'newBufferWithBytes:length:options:'
@@ -8607,7 +8607,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLComputePipelineDescriptor
+            Name:            MTLComputePipelineDescriptor
             WithProtocols:   
           - Type:            Enum
             Name:            MTLPipelineOption
@@ -8618,10 +8618,10 @@ Items:
                 WithProtocols:   
                   - MTLComputePipelineState
               - Type:            Interface
-                JsName:          MTLComputePipelineReflection
+                Name:            MTLComputePipelineReflection
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newComputePipelineStateWithDescriptor:options:reflection:error:'
         JsName:          newComputePipelineStateWithDescriptorOptionsReflectionError
@@ -8639,19 +8639,19 @@ Items:
             WithProtocols:   
               - MTLComputePipelineState
           - Type:            Interface
-            JsName:          MTLComputePipelineDescriptor
+            Name:            MTLComputePipelineDescriptor
             WithProtocols:   
           - Type:            Enum
             Name:            MTLPipelineOption
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          MTLComputePipelineReflection
+              Name:            MTLComputePipelineReflection
               WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newComputePipelineStateWithFunction:completionHandler:'
         JsName:          newComputePipelineStateWithFunctionCompletionHandler
@@ -8675,7 +8675,7 @@ Items:
                 WithProtocols:   
                   - MTLComputePipelineState
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newComputePipelineStateWithFunction:error:'
         JsName:          newComputePipelineStateWithFunctionError
@@ -8697,7 +8697,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newComputePipelineStateWithFunction:options:completionHandler:'
         JsName:          newComputePipelineStateWithFunctionOptionsCompletionHandler
@@ -8723,10 +8723,10 @@ Items:
                 WithProtocols:   
                   - MTLComputePipelineState
               - Type:            Interface
-                JsName:          MTLComputePipelineReflection
+                Name:            MTLComputePipelineReflection
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newComputePipelineStateWithFunction:options:reflection:error:'
         JsName:          newComputePipelineStateWithFunctionOptionsReflectionError
@@ -8750,12 +8750,12 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          MTLComputePipelineReflection
+              Name:            MTLComputePipelineReflection
               WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            newDefaultLibrary
         JsName:          newDefaultLibrary
@@ -8787,12 +8787,12 @@ Items:
             WithProtocols:   
               - MTLLibrary
           - Type:            Interface
-            JsName:          NSBundle
+            Name:            NSBundle
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newDepthStencilStateWithDescriptor:'
         JsName:          newDepthStencilStateWithDescriptor
@@ -8809,7 +8809,7 @@ Items:
             WithProtocols:   
               - MTLDepthStencilState
           - Type:            Interface
-            JsName:          MTLDepthStencilDescriptor
+            Name:            MTLDepthStencilDescriptor
             WithProtocols:   
       - Name:            newEvent
         JsName:          newEvent
@@ -8857,7 +8857,7 @@ Items:
             WithProtocols:   
               - MTLHeap
           - Type:            Interface
-            JsName:          MTLHeapDescriptor
+            Name:            MTLHeapDescriptor
             WithProtocols:   
       - Name:            'newIndirectCommandBufferWithDescriptor:maxCommandCount:options:'
         JsName:          newIndirectCommandBufferWithDescriptorMaxCommandCountOptions
@@ -8875,7 +8875,7 @@ Items:
             WithProtocols:   
               - MTLIndirectCommandBuffer
           - Type:            Interface
-            JsName:          MTLIndirectCommandBufferDescriptor
+            Name:            MTLIndirectCommandBufferDescriptor
             WithProtocols:   
           - Type:            ULong
           - Type:            Enum
@@ -8895,13 +8895,13 @@ Items:
             WithProtocols:   
               - MTLLibrary
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newLibraryWithFile:error:'
         JsName:          newLibraryWithFileError
@@ -8918,12 +8918,12 @@ Items:
             WithProtocols:   
               - MTLLibrary
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newLibraryWithSource:options:completionHandler:'
         JsName:          newLibraryWithSourceOptionsCompletionHandler
@@ -8938,10 +8938,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MTLCompileOptions
+            Name:            MTLCompileOptions
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -8950,7 +8950,7 @@ Items:
                 WithProtocols:   
                   - MTLLibrary
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newLibraryWithSource:options:error:'
         JsName:          newLibraryWithSourceOptionsError
@@ -8967,15 +8967,15 @@ Items:
             WithProtocols:   
               - MTLLibrary
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MTLCompileOptions
+            Name:            MTLCompileOptions
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newLibraryWithURL:error:'
         JsName:          newLibraryWithURLError
@@ -8993,12 +8993,12 @@ Items:
             WithProtocols:   
               - MTLLibrary
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newRasterizationRateMapWithDescriptor:'
         JsName:          newRasterizationRateMapWithDescriptor
@@ -9016,7 +9016,7 @@ Items:
             WithProtocols:   
               - MTLRasterizationRateMap
           - Type:            Interface
-            JsName:          MTLRasterizationRateMapDescriptor
+            Name:            MTLRasterizationRateMapDescriptor
             WithProtocols:   
       - Name:            'newRenderPipelineStateWithDescriptor:completionHandler:'
         JsName:          newRenderPipelineStateWithDescriptorCompletionHandler
@@ -9031,7 +9031,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLRenderPipelineDescriptor
+            Name:            MTLRenderPipelineDescriptor
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -9040,7 +9040,7 @@ Items:
                 WithProtocols:   
                   - MTLRenderPipelineState
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newRenderPipelineStateWithDescriptor:error:'
         JsName:          newRenderPipelineStateWithDescriptorError
@@ -9057,12 +9057,12 @@ Items:
             WithProtocols:   
               - MTLRenderPipelineState
           - Type:            Interface
-            JsName:          MTLRenderPipelineDescriptor
+            Name:            MTLRenderPipelineDescriptor
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newRenderPipelineStateWithDescriptor:options:completionHandler:'
         JsName:          newRenderPipelineStateWithDescriptorOptionsCompletionHandler
@@ -9077,7 +9077,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLRenderPipelineDescriptor
+            Name:            MTLRenderPipelineDescriptor
             WithProtocols:   
           - Type:            Enum
             Name:            MTLPipelineOption
@@ -9088,10 +9088,10 @@ Items:
                 WithProtocols:   
                   - MTLRenderPipelineState
               - Type:            Interface
-                JsName:          MTLRenderPipelineReflection
+                Name:            MTLRenderPipelineReflection
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newRenderPipelineStateWithDescriptor:options:reflection:error:'
         JsName:          newRenderPipelineStateWithDescriptorOptionsReflectionError
@@ -9108,19 +9108,19 @@ Items:
             WithProtocols:   
               - MTLRenderPipelineState
           - Type:            Interface
-            JsName:          MTLRenderPipelineDescriptor
+            Name:            MTLRenderPipelineDescriptor
             WithProtocols:   
           - Type:            Enum
             Name:            MTLPipelineOption
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          MTLRenderPipelineReflection
+              Name:            MTLRenderPipelineReflection
               WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newRenderPipelineStateWithTileDescriptor:options:completionHandler:'
         JsName:          newRenderPipelineStateWithTileDescriptorOptionsCompletionHandler
@@ -9136,7 +9136,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLTileRenderPipelineDescriptor
+            Name:            MTLTileRenderPipelineDescriptor
             WithProtocols:   
           - Type:            Enum
             Name:            MTLPipelineOption
@@ -9147,10 +9147,10 @@ Items:
                 WithProtocols:   
                   - MTLRenderPipelineState
               - Type:            Interface
-                JsName:          MTLRenderPipelineReflection
+                Name:            MTLRenderPipelineReflection
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newRenderPipelineStateWithTileDescriptor:options:reflection:error:'
         JsName:          newRenderPipelineStateWithTileDescriptorOptionsReflectionError
@@ -9168,19 +9168,19 @@ Items:
             WithProtocols:   
               - MTLRenderPipelineState
           - Type:            Interface
-            JsName:          MTLTileRenderPipelineDescriptor
+            Name:            MTLTileRenderPipelineDescriptor
             WithProtocols:   
           - Type:            Enum
             Name:            MTLPipelineOption
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          MTLRenderPipelineReflection
+              Name:            MTLRenderPipelineReflection
               WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newSamplerStateWithDescriptor:'
         JsName:          newSamplerStateWithDescriptor
@@ -9197,7 +9197,7 @@ Items:
             WithProtocols:   
               - MTLSamplerState
           - Type:            Interface
-            JsName:          MTLSamplerDescriptor
+            Name:            MTLSamplerDescriptor
             WithProtocols:   
       - Name:            newSharedEvent
         JsName:          newSharedEvent
@@ -9230,7 +9230,7 @@ Items:
             WithProtocols:   
               - MTLSharedEvent
           - Type:            Interface
-            JsName:          MTLSharedEventHandle
+            Name:            MTLSharedEventHandle
             WithProtocols:   
       - Name:            'newTextureWithDescriptor:'
         JsName:          newTextureWithDescriptor
@@ -9247,7 +9247,7 @@ Items:
             WithProtocols:   
               - MTLTexture
           - Type:            Interface
-            JsName:          MTLTextureDescriptor
+            Name:            MTLTextureDescriptor
             WithProtocols:   
       - Name:            'newTextureWithDescriptor:iosurface:plane:'
         JsName:          newTextureWithDescriptorIosurfacePlane
@@ -9265,7 +9265,7 @@ Items:
             WithProtocols:   
               - MTLTexture
           - Type:            Interface
-            JsName:          MTLTextureDescriptor
+            Name:            MTLTextureDescriptor
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -9285,7 +9285,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Enum
             Name:            MTLTextureType
           - Type:            Enum
@@ -9541,7 +9541,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLSize
+              Name:            MTLSize
       - Name:            name
         JsName:          name
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLDevice.h
@@ -9565,7 +9565,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            programmableSamplePositionsSupported
         JsName:          programmableSamplePositionsSupported
@@ -9696,7 +9696,7 @@ Items:
     StaticProperties: 
     Protocols:       
       - NSObjectProtocol
-  - Name:            ''
+  - Name:            MTLDispatchThreadgroupsIndirectArguments
     JsName:          MTLDispatchThreadgroupsIndirectArguments
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputeCommandEncoder.h
     Module:          
@@ -9752,7 +9752,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
-  - Name:            ''
+  - Name:            MTLDrawIndexedPrimitivesIndirectArguments
     JsName:          MTLDrawIndexedPrimitivesIndirectArguments
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
     Module:          
@@ -9778,7 +9778,7 @@ Items:
       - Name:            baseInstance
         Signature:       
           Type:            UInt
-  - Name:            ''
+  - Name:            MTLDrawPatchIndirectArguments
     JsName:          MTLDrawPatchIndirectArguments
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
     Module:          
@@ -9801,7 +9801,7 @@ Items:
       - Name:            baseInstance
         Signature:       
           Type:            UInt
-  - Name:            ''
+  - Name:            MTLDrawPrimitivesIndirectArguments
     JsName:          MTLDrawPrimitivesIndirectArguments
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
     Module:          
@@ -10011,7 +10011,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -10027,7 +10027,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10373,7 +10373,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -10389,7 +10389,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10441,7 +10441,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          MTLArgument
+              Name:            MTLArgument
               WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -10495,13 +10495,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          MTLFunctionConstant
+                  Name:            MTLFunctionConstant
                   WithProtocols:   
               WithProtocols:   
       - Name:            functionType
@@ -10553,7 +10553,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -10570,7 +10570,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -10595,7 +10595,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            patchControlPointCount
         JsName:          patchControlPointCount
@@ -10673,10 +10673,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MTLAttribute
+                  Name:            MTLAttribute
                   WithProtocols:   
               WithProtocols:   
       - Name:            vertexAttributes
@@ -10702,10 +10702,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MTLVertexAttribute
+                  Name:            MTLVertexAttribute
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -10771,7 +10771,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            required
         JsName:          required
@@ -10866,7 +10866,7 @@ Items:
             Name:            MTLDataType
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setConstantValue:type:atIndex:'
         JsName:          setConstantValueTypeAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLFunctionConstantValues.h
@@ -10903,7 +10903,7 @@ Items:
           - Type:            Enum
             Name:            MTLDataType
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -11273,7 +11273,7 @@ Items:
             WithProtocols:   
               - MTLTexture
           - Type:            Interface
-            JsName:          MTLTextureDescriptor
+            Name:            MTLTextureDescriptor
             WithProtocols:   
       - Name:            'newTextureWithDescriptor:offset:'
         JsName:          newTextureWithDescriptorOffset
@@ -11291,7 +11291,7 @@ Items:
             WithProtocols:   
               - MTLTexture
           - Type:            Interface
-            JsName:          MTLTextureDescriptor
+            Name:            MTLTextureDescriptor
             WithProtocols:   
           - Type:            ULong
       - Name:            'setPurgeableState:'
@@ -11434,7 +11434,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -11450,7 +11450,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            resourceOptions
         JsName:          resourceOptions
@@ -11984,7 +11984,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
     StaticMethods:   
     InstanceProperties: 
       - Name:            size
@@ -12260,7 +12260,7 @@ Items:
     StaticProperties: 
     Protocols:       
     Base:            NSObject
-  - Name:            ''
+  - Name:            MTLIndirectCommandBufferExecutionRange
     JsName:          MTLIndirectCommandBufferExecutionRange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLIndirectCommandBuffer.h
     Module:          
@@ -12408,10 +12408,10 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
       - Name:            'concurrentDispatchThreads:threadsPerThreadgroup:'
         JsName:          concurrentDispatchThreadsThreadsPerThreadgroup
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLIndirectCommandEncoder.h
@@ -12426,10 +12426,10 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
       - Name:            reset
         JsName:          reset
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLIndirectCommandEncoder.h
@@ -12501,7 +12501,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLRegion
+            Name:            MTLRegion
       - Name:            'setThreadgroupMemoryLength:atIndex:'
         JsName:          setThreadgroupMemoryLengthAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLIndirectCommandEncoder.h
@@ -12822,7 +12822,7 @@ Items:
             WithProtocols:   
               - MTLFunction
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'newFunctionWithName:constantValues:completionHandler:'
         JsName:          newFunctionWithNameConstantValuesCompletionHandler
@@ -12838,10 +12838,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MTLFunctionConstantValues
+            Name:            MTLFunctionConstantValues
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -12850,7 +12850,7 @@ Items:
                 WithProtocols:   
                   - MTLFunction
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newFunctionWithName:constantValues:error:'
         JsName:          newFunctionWithNameConstantValuesError
@@ -12868,15 +12868,15 @@ Items:
             WithProtocols:   
               - MTLFunction
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MTLFunctionConstantValues
+            Name:            MTLFunctionConstantValues
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -12928,10 +12928,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            label
@@ -12957,7 +12957,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -12973,7 +12973,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -13038,7 +13038,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTLLibraryErrorFileNotFound
     JsName:          MTLLibraryErrorFileNotFound
@@ -13138,7 +13138,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
-  - Name:            ''
+  - Name:            MTLMapIndirectArguments
     JsName:          MTLMapIndirectArguments
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLResourceStateCommandEncoder.h
     Module:          
@@ -13316,7 +13316,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
-  - Name:            ''
+  - Name:            MTLOrigin
     JsName:          MTLOrigin
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTypes.h
     Module:          
@@ -13592,7 +13592,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLPipelineBufferDescriptor
+            Name:            MTLPipelineBufferDescriptor
             WithProtocols:   
           - Type:            ULong
       - Name:            'setObject:atIndexedSubscript:'
@@ -13608,7 +13608,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLPipelineBufferDescriptor
+            Name:            MTLPipelineBufferDescriptor
             WithProtocols:   
           - Type:            ULong
     StaticMethods:   
@@ -15411,7 +15411,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLArrayType
+            Name:            MTLArrayType
             WithProtocols:   
       - Name:            elementStructType
         JsName:          elementStructType
@@ -15426,7 +15426,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLStructType
+            Name:            MTLStructType
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -15760,7 +15760,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
-  - Name:            ''
+  - Name:            MTLQuadTessellationFactorsHalf
     JsName:          MTLQuadTessellationFactorsHalf
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
     Module:          
@@ -15807,7 +15807,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLRasterizationRateLayerDescriptor
+            Name:            MTLRasterizationRateLayerDescriptor
             WithProtocols:   
           - Type:            ULong
       - Name:            'setObject:atIndexedSubscript:'
@@ -15823,7 +15823,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLRasterizationRateLayerDescriptor
+            Name:            MTLRasterizationRateLayerDescriptor
             WithProtocols:   
           - Type:            ULong
     StaticMethods:   
@@ -15857,7 +15857,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
       - Name:            'initWithSampleCount:horizontal:vertical:'
         JsName:          initWithSampleCountHorizontalVertical
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRasterizationRate.h
@@ -15872,7 +15872,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Pointer
             PointerType:     
               Type:            Float
@@ -15904,7 +15904,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLRasterizationRateSampleArray
+              Name:            MTLRasterizationRateSampleArray
               WithProtocols:   
       - Name:            horizontalSampleStorage
         JsName:          horizontalSampleStorage
@@ -15955,7 +15955,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLSize
+              Name:            MTLSize
       - Name:            vertical
         JsName:          vertical
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRasterizationRate.h
@@ -15979,7 +15979,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLRasterizationRateSampleArray
+              Name:            MTLRasterizationRateSampleArray
               WithProtocols:   
       - Name:            verticalSampleStorage
         JsName:          verticalSampleStorage
@@ -16051,10 +16051,10 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSamplePosition
+            Name:            MTLSamplePosition
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSamplePosition
+            Name:            MTLSamplePosition
           - Type:            ULong
       - Name:            'mapScreenToPhysicalCoordinates:forLayer:'
         JsName:          mapScreenToPhysicalCoordinatesForLayer
@@ -16069,10 +16069,10 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSamplePosition
+            Name:            MTLSamplePosition
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSamplePosition
+            Name:            MTLSamplePosition
           - Type:            ULong
       - Name:            'physicalSizeForLayer:'
         JsName:          physicalSizeForLayer
@@ -16087,7 +16087,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            ULong
     StaticMethods:   
     InstanceProperties: 
@@ -16139,7 +16139,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            layerCount
         JsName:          layerCount
@@ -16188,7 +16188,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Metal.MTLDevice
-              JsName:          MTLSizeAndAlign
+              Name:            MTLSizeAndAlign
       - Name:            physicalGranularity
         JsName:          physicalGranularity
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRasterizationRate.h
@@ -16213,7 +16213,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLSize
+              Name:            MTLSize
       - Name:            screenSize
         JsName:          screenSize
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRasterizationRate.h
@@ -16238,7 +16238,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLSize
+              Name:            MTLSize
     StaticProperties: 
     Protocols:       
       - NSObjectProtocol
@@ -16266,7 +16266,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLRasterizationRateLayerDescriptor
+            Name:            MTLRasterizationRateLayerDescriptor
             WithProtocols:   
           - Type:            ULong
       - Name:            'setLayer:atIndex:'
@@ -16282,7 +16282,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLRasterizationRateLayerDescriptor
+            Name:            MTLRasterizationRateLayerDescriptor
             WithProtocols:   
           - Type:            ULong
     StaticMethods:   
@@ -16298,11 +16298,11 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLRasterizationRateMapDescriptor
+            Name:            MTLRasterizationRateMapDescriptor
             WithProtocols:   
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
       - Name:            'rasterizationRateMapDescriptorWithScreenSize:layer:'
         JsName:          rasterizationRateMapDescriptorWithScreenSizeLayer
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRasterizationRate.h
@@ -16315,13 +16315,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLRasterizationRateMapDescriptor
+            Name:            MTLRasterizationRateMapDescriptor
             WithProtocols:   
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            Interface
-            JsName:          MTLRasterizationRateLayerDescriptor
+            Name:            MTLRasterizationRateLayerDescriptor
             WithProtocols:   
       - Name:            'rasterizationRateMapDescriptorWithScreenSize:layerCount:layers:'
         JsName:          rasterizationRateMapDescriptorWithScreenSizeLayerCountLayers
@@ -16335,16 +16335,16 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLRasterizationRateMapDescriptor
+            Name:            MTLRasterizationRateMapDescriptor
             WithProtocols:   
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
           - Type:            ULong
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          MTLRasterizationRateLayerDescriptor
+              Name:            MTLRasterizationRateLayerDescriptor
               WithProtocols:   
     InstanceProperties: 
       - Name:            label
@@ -16370,7 +16370,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -16386,7 +16386,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            layerCount
         JsName:          layerCount
@@ -16434,7 +16434,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLRasterizationRateLayerArray
+              Name:            MTLRasterizationRateLayerArray
               WithProtocols:   
       - Name:            screenSize
         JsName:          screenSize
@@ -16460,7 +16460,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLSize
+              Name:            MTLSize
         Setter:          
           Name:            'setScreenSize:'
           JsName:          setScreenSize
@@ -16476,7 +16476,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLSize
+              Name:            MTLSize
     StaticProperties: 
     Protocols:       
       - NSCopying
@@ -16505,7 +16505,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            ULong
       - Name:            'setObject:atIndexedSubscript:'
@@ -16521,7 +16521,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            ULong
     StaticMethods:   
@@ -16581,7 +16581,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
-  - Name:            ''
+  - Name:            MTLRegion
     JsName:          MTLRegion
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTypes.h
     Module:          
@@ -16596,12 +16596,12 @@ Items:
         Signature:       
           Type:            Struct
           Module:          Metal.MTLTypes
-          JsName:          MTLOrigin
+          Name:            MTLOrigin
       - Name:            size
         Signature:       
           Type:            Struct
           Module:          Metal.MTLTypes
-          JsName:          MTLSize
+          Name:            MTLSize
   - Name:            MTLRenderCommandEncoder
     JsName:          MTLRenderCommandEncoder
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -16628,7 +16628,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
       - Name:            'drawIndexedPatches:patchIndexBuffer:patchIndexBufferOffset:controlPointIndexBuffer:controlPointIndexBufferOffset:indirectBuffer:indirectBufferOffset:'
         JsName:          drawIndexedPatchesPatchIndexBufferPatchIndexBufferOffsetControlPointIndexBufferControlPointIndexBufferOffsetIndirectBufferIndirectBufferOffset
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -16927,7 +16927,7 @@ Items:
               - MTLIndirectCommandBuffer
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setBlendColorRed:green:blue:alpha:'
         JsName:          setBlendColorRedGreenBlueAlpha
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17119,7 +17119,7 @@ Items:
               Type:            ULong
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setFragmentBytes:length:atIndex:'
         JsName:          setFragmentBytesLengthAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17197,7 +17197,7 @@ Items:
               Type:            Float
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setFragmentSamplerStates:withRange:'
         JsName:          setFragmentSamplerStatesWithRange
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17217,7 +17217,7 @@ Items:
                 - MTLSamplerState
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setFragmentTexture:atIndex:'
         JsName:          setFragmentTextureAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17253,7 +17253,7 @@ Items:
                 - MTLTexture
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setFrontFacingWinding:'
         JsName:          setFrontFacingWinding
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17297,7 +17297,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Metal.MTLRenderCommandEncoder
-            JsName:          MTLScissorRect
+            Name:            MTLScissorRect
       - Name:            'setScissorRects:count:'
         JsName:          setScissorRectsCount
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17315,7 +17315,7 @@ Items:
             ArrayType:       
               Type:            Struct
               Module:          Metal.MTLRenderCommandEncoder
-              JsName:          MTLScissorRect
+              Name:            MTLScissorRect
           - Type:            ULong
       - Name:            'setStencilFrontReferenceValue:backReferenceValue:'
         JsName:          setStencilFrontReferenceValueBackReferenceValue
@@ -17478,7 +17478,7 @@ Items:
               Type:            ULong
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setTileBytes:length:atIndex:'
         JsName:          setTileBytesLengthAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17559,7 +17559,7 @@ Items:
               Type:            Float
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setTileSamplerStates:withRange:'
         JsName:          setTileSamplerStatesWithRange
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17580,7 +17580,7 @@ Items:
                 - MTLSamplerState
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setTileTexture:atIndex:'
         JsName:          setTileTextureAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17618,7 +17618,7 @@ Items:
                 - MTLTexture
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setTriangleFillMode:'
         JsName:          setTriangleFillMode
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17651,7 +17651,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          Metal.MTLRenderCommandEncoder
-              JsName:          MTLVertexAmplificationViewMapping
+              Name:            MTLVertexAmplificationViewMapping
       - Name:            'setVertexBufferOffset:atIndex:'
         JsName:          setVertexBufferOffsetAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17706,7 +17706,7 @@ Items:
               Type:            ULong
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setVertexBytes:length:atIndex:'
         JsName:          setVertexBytesLengthAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17784,7 +17784,7 @@ Items:
               Type:            Float
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setVertexSamplerStates:withRange:'
         JsName:          setVertexSamplerStatesWithRange
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17804,7 +17804,7 @@ Items:
                 - MTLSamplerState
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setVertexTexture:atIndex:'
         JsName:          setVertexTextureAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17840,7 +17840,7 @@ Items:
                 - MTLTexture
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'setViewport:'
         JsName:          setViewport
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17855,7 +17855,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Metal.MTLRenderCommandEncoder
-            JsName:          MTLViewport
+            Name:            MTLViewport
       - Name:            'setViewports:count:'
         JsName:          setViewportsCount
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
@@ -17873,7 +17873,7 @@ Items:
             ArrayType:       
               Type:            Struct
               Module:          Metal.MTLRenderCommandEncoder
-              JsName:          MTLViewport
+              Name:            MTLViewport
           - Type:            ULong
       - Name:            'setVisibilityResultMode:offset:'
         JsName:          setVisibilityResultModeOffset
@@ -18617,7 +18617,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Metal.MTLRenderPass
-              JsName:          MTLClearColor
+              Name:            MTLClearColor
         Setter:          
           Name:            'setClearColor:'
           JsName:          setClearColor
@@ -18633,7 +18633,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          Metal.MTLRenderPass
-              JsName:          MTLClearColor
+              Name:            MTLClearColor
     StaticProperties: 
     Protocols:       
     Base:            MTLRenderPassAttachmentDescriptor
@@ -18661,7 +18661,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLRenderPassColorAttachmentDescriptor
+            Name:            MTLRenderPassColorAttachmentDescriptor
             WithProtocols:   
           - Type:            ULong
       - Name:            'setObject:atIndexedSubscript:'
@@ -18677,7 +18677,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLRenderPassColorAttachmentDescriptor
+            Name:            MTLRenderPassColorAttachmentDescriptor
             WithProtocols:   
           - Type:            ULong
     StaticMethods:   
@@ -18810,7 +18810,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLSamplePosition
+              Name:            MTLSamplePosition
           - Type:            ULong
       - Name:            'setSamplePositions:count:'
         JsName:          setSamplePositionsCount
@@ -18829,7 +18829,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLSamplePosition
+              Name:            MTLSamplePosition
           - Type:            ULong
     StaticMethods:   
       - Name:            renderPassDescriptor
@@ -18844,7 +18844,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLRenderPassDescriptor
+            Name:            MTLRenderPassDescriptor
             WithProtocols:   
     InstanceProperties: 
       - Name:            colorAttachments
@@ -18870,7 +18870,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLRenderPassColorAttachmentDescriptorArray
+              Name:            MTLRenderPassColorAttachmentDescriptorArray
               WithProtocols:   
       - Name:            defaultRasterSampleCount
         JsName:          defaultRasterSampleCount
@@ -18935,7 +18935,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLRenderPassDepthAttachmentDescriptor
+              Name:            MTLRenderPassDepthAttachmentDescriptor
               WithProtocols:   
         Setter:          
           Name:            'setDepthAttachment:'
@@ -18951,7 +18951,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MTLRenderPassDepthAttachmentDescriptor
+              Name:            MTLRenderPassDepthAttachmentDescriptor
               WithProtocols:   
       - Name:            imageblockSampleLength
         JsName:          imageblockSampleLength
@@ -19180,7 +19180,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLRenderPassStencilAttachmentDescriptor
+              Name:            MTLRenderPassStencilAttachmentDescriptor
               WithProtocols:   
         Setter:          
           Name:            'setStencilAttachment:'
@@ -19196,7 +19196,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MTLRenderPassStencilAttachmentDescriptor
+              Name:            MTLRenderPassStencilAttachmentDescriptor
               WithProtocols:   
       - Name:            threadgroupMemoryLength
         JsName:          threadgroupMemoryLength
@@ -19850,7 +19850,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLRenderPipelineColorAttachmentDescriptor
+            Name:            MTLRenderPipelineColorAttachmentDescriptor
             WithProtocols:   
           - Type:            ULong
       - Name:            'setObject:atIndexedSubscript:'
@@ -19866,7 +19866,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLRenderPipelineColorAttachmentDescriptor
+            Name:            MTLRenderPipelineColorAttachmentDescriptor
             WithProtocols:   
           - Type:            ULong
     StaticMethods:   
@@ -19997,7 +19997,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLRenderPipelineColorAttachmentDescriptorArray
+              Name:            MTLRenderPipelineColorAttachmentDescriptorArray
               WithProtocols:   
       - Name:            depthAttachmentPixelFormat
         JsName:          depthAttachmentPixelFormat
@@ -20063,7 +20063,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLPipelineBufferDescriptorArray
+              Name:            MTLPipelineBufferDescriptorArray
               WithProtocols:   
       - Name:            fragmentFunction
         JsName:          fragmentFunction
@@ -20171,7 +20171,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -20187,7 +20187,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maxTessellationFactor
         JsName:          maxTessellationFactor
@@ -20734,7 +20734,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLPipelineBufferDescriptorArray
+              Name:            MTLPipelineBufferDescriptorArray
               WithProtocols:   
       - Name:            vertexDescriptor
         JsName:          vertexDescriptor
@@ -20759,7 +20759,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLVertexDescriptor
+              Name:            MTLVertexDescriptor
               WithProtocols:   
         Setter:          
           Name:            'setVertexDescriptor:'
@@ -20775,7 +20775,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MTLVertexDescriptor
+              Name:            MTLVertexDescriptor
               WithProtocols:   
       - Name:            vertexFunction
         JsName:          vertexFunction
@@ -20859,10 +20859,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MTLArgument
+                  Name:            MTLArgument
                   WithProtocols:   
               WithProtocols:   
       - Name:            tileArguments
@@ -20890,10 +20890,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MTLArgument
+                  Name:            MTLArgument
                   WithProtocols:   
               WithProtocols:   
       - Name:            vertexArguments
@@ -20919,10 +20919,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MTLArgument
+                  Name:            MTLArgument
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -20955,7 +20955,7 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLSize
+            Name:            MTLSize
     StaticMethods:   
     InstanceProperties: 
       - Name:            device
@@ -21031,7 +21031,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maxTotalThreadsPerThreadgroup
         JsName:          maxTotalThreadsPerThreadgroup
@@ -21380,7 +21380,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -21396,7 +21396,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            resourceOptions
         JsName:          resourceOptions
@@ -21638,7 +21638,7 @@ Items:
             Name:            MTLSparseTextureMappingMode
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLRegion
+            Name:            MTLRegion
           - Type:            ULong
           - Type:            ULong
       - Name:            'updateTextureMappings:mode:regions:mipLevels:slices:numRegions:'
@@ -21663,7 +21663,7 @@ Items:
             ArrayType:       
               Type:            Struct
               Module:          Metal.MTLTypes
-              JsName:          MTLRegion
+              Name:            MTLRegion
           - Type:            IncompleteArray
             ArrayType:       
               Type:            ULong
@@ -21780,7 +21780,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
-  - Name:            ''
+  - Name:            MTLSamplePosition
     JsName:          MTLSamplePosition
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTypes.h
     Module:          
@@ -21978,7 +21978,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -21994,7 +21994,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            lodAverage
         JsName:          lodAverage
@@ -22615,12 +22615,12 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
       - NSObjectProtocol
-  - Name:            ''
+  - Name:            MTLScissorRect
     JsName:          MTLScissorRect
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
     Module:          
@@ -22667,7 +22667,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLSharedEventHandle
+            Name:            MTLSharedEventHandle
             WithProtocols:   
       - Name:            'notifyListener:atValue:block:'
         JsName:          notifyListenerAtValueBlock
@@ -22682,7 +22682,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLSharedEventListener
+            Name:            MTLSharedEventListener
             WithProtocols:   
           - Type:            ULongLong
           - Type:            Block
@@ -22771,7 +22771,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -22802,7 +22802,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
     StaticMethods:   
@@ -22830,13 +22830,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - OS_dispatch_queue
     StaticProperties: 
     Protocols:       
     Base:            NSObject
-  - Name:            ''
+  - Name:            MTLSize
     JsName:          MTLSize
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTypes.h
     Module:          
@@ -22856,7 +22856,7 @@ Items:
       - Name:            depth
         Signature:       
           Type:            ULong
-  - Name:            ''
+  - Name:            MTLSizeAndAlign
     JsName:          MTLSizeAndAlign
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLDevice.h
     Module:          
@@ -22951,7 +22951,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
-  - Name:            ''
+  - Name:            MTLStageInRegionIndirectArguments
     JsName:          MTLStageInRegionIndirectArguments
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputeCommandEncoder.h
     Module:          
@@ -23011,7 +23011,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLStageInputOutputDescriptor
+            Name:            MTLStageInputOutputDescriptor
             WithProtocols:   
     InstanceProperties: 
       - Name:            attributes
@@ -23037,7 +23037,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLAttributeDescriptorArray
+              Name:            MTLAttributeDescriptorArray
               WithProtocols:   
       - Name:            indexBufferIndex
         JsName:          indexBufferIndex
@@ -23138,7 +23138,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLBufferLayoutDescriptorArray
+              Name:            MTLBufferLayoutDescriptorArray
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -23853,7 +23853,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLArrayType
+            Name:            MTLArrayType
             WithProtocols:   
       - Name:            pointerType
         JsName:          pointerType
@@ -23868,7 +23868,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLPointerType
+            Name:            MTLPointerType
             WithProtocols:   
       - Name:            structType
         JsName:          structType
@@ -23882,7 +23882,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLStructType
+            Name:            MTLStructType
             WithProtocols:   
       - Name:            textureReferenceType
         JsName:          textureReferenceType
@@ -23897,7 +23897,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLTextureReferenceType
+            Name:            MTLTextureReferenceType
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -23973,7 +23973,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            offset
         JsName:          offset
@@ -24025,10 +24025,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLStructMember
+            Name:            MTLStructMember
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -24055,10 +24055,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MTLStructMember
+                  Name:            MTLStructMember
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -24303,7 +24303,7 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLRegion
+            Name:            MTLRegion
           - Type:            ULong
           - Type:            ULong
       - Name:            'getBytes:bytesPerRow:fromRegion:mipmapLevel:'
@@ -24324,7 +24324,7 @@ Items:
           - Type:            ULong
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLRegion
+            Name:            MTLRegion
           - Type:            ULong
       - Name:            'newTextureViewWithPixelFormat:'
         JsName:          newTextureViewWithPixelFormat
@@ -24363,10 +24363,10 @@ Items:
             Name:            MTLTextureType
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'newTextureViewWithPixelFormat:textureType:levels:slices:swizzle:'
         JsName:          newTextureViewWithPixelFormatTextureTypeLevelsSlicesSwizzle
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTexture.h
@@ -24388,13 +24388,13 @@ Items:
             Name:            MTLTextureType
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Struct
             Module:          Metal.MTLTexture
-            JsName:          MTLTextureSwizzleChannels
+            Name:            MTLTextureSwizzleChannels
       - Name:            'replaceRegion:mipmapLevel:slice:withBytes:bytesPerRow:bytesPerImage:'
         JsName:          replaceRegionMipmapLevelSliceWithBytesBytesPerRowBytesPerImage
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTexture.h
@@ -24409,7 +24409,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLRegion
+            Name:            MTLRegion
           - Type:            ULong
           - Type:            ULong
           - Type:            Pointer
@@ -24431,7 +24431,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          Metal.MTLTypes
-            JsName:          MTLRegion
+            Name:            MTLRegion
           - Type:            ULong
           - Type:            Pointer
             PointerType:     
@@ -24935,7 +24935,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Metal.MTLTexture
-              JsName:          MTLTextureSwizzleChannels
+              Name:            MTLTextureSwizzleChannels
       - Name:            tailSizeInBytes
         JsName:          tailSizeInBytes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTexture.h
@@ -25060,7 +25060,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLTextureDescriptor
+            Name:            MTLTextureDescriptor
             WithProtocols:   
           - Type:            Enum
             Name:            MTLPixelFormat
@@ -25080,7 +25080,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLTextureDescriptor
+            Name:            MTLTextureDescriptor
             WithProtocols:   
           - Type:            Enum
             Name:            MTLPixelFormat
@@ -25101,7 +25101,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLTextureDescriptor
+            Name:            MTLTextureDescriptor
             WithProtocols:   
           - Type:            Enum
             Name:            MTLPixelFormat
@@ -25563,7 +25563,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Metal.MTLTexture
-              JsName:          MTLTextureSwizzleChannels
+              Name:            MTLTextureSwizzleChannels
         Setter:          
           Name:            'setSwizzle:'
           JsName:          setSwizzle
@@ -25580,7 +25580,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          Metal.MTLTexture
-              JsName:          MTLTextureSwizzleChannels
+              Name:            MTLTextureSwizzleChannels
       - Name:            textureType
         JsName:          textureType
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTexture.h
@@ -25862,7 +25862,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '4'
-  - Name:            ''
+  - Name:            MTLTextureSwizzleChannels
     JsName:          MTLTextureSwizzleChannels
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTexture.h
     Module:          
@@ -26226,7 +26226,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLTileRenderPipelineColorAttachmentDescriptor
+            Name:            MTLTileRenderPipelineColorAttachmentDescriptor
             WithProtocols:   
           - Type:            ULong
       - Name:            'setObject:atIndexedSubscript:'
@@ -26242,7 +26242,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLTileRenderPipelineColorAttachmentDescriptor
+            Name:            MTLTileRenderPipelineColorAttachmentDescriptor
             WithProtocols:   
           - Type:            ULong
     StaticMethods:   
@@ -26299,7 +26299,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLTileRenderPipelineColorAttachmentDescriptorArray
+              Name:            MTLTileRenderPipelineColorAttachmentDescriptorArray
               WithProtocols:   
       - Name:            label
         JsName:          label
@@ -26324,7 +26324,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -26340,7 +26340,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maxTotalThreadsPerThreadgroup
         JsName:          maxTotalThreadsPerThreadgroup
@@ -26481,7 +26481,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLPipelineBufferDescriptorArray
+              Name:            MTLPipelineBufferDescriptorArray
               WithProtocols:   
       - Name:            tileFunction
         JsName:          tileFunction
@@ -26567,7 +26567,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
-  - Name:            ''
+  - Name:            MTLTriangleTessellationFactorsHalf
     JsName:          MTLTriangleTessellationFactorsHalf
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
     Module:          
@@ -26628,7 +26628,7 @@ Items:
     StaticProperties: 
     Protocols:       
     Base:            NSObject
-  - Name:            ''
+  - Name:            MTLVertexAmplificationViewMapping
     JsName:          MTLVertexAmplificationViewMapping
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
     Module:          
@@ -26754,7 +26754,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            patchControlPointData
         JsName:          patchControlPointData
@@ -26964,7 +26964,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLVertexAttributeDescriptor
+            Name:            MTLVertexAttributeDescriptor
             WithProtocols:   
           - Type:            ULong
       - Name:            'setObject:atIndexedSubscript:'
@@ -26980,7 +26980,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLVertexAttributeDescriptor
+            Name:            MTLVertexAttributeDescriptor
             WithProtocols:   
           - Type:            ULong
     StaticMethods:   
@@ -27143,7 +27143,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLVertexBufferLayoutDescriptor
+            Name:            MTLVertexBufferLayoutDescriptor
             WithProtocols:   
           - Type:            ULong
       - Name:            'setObject:atIndexedSubscript:'
@@ -27159,7 +27159,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTLVertexBufferLayoutDescriptor
+            Name:            MTLVertexBufferLayoutDescriptor
             WithProtocols:   
           - Type:            ULong
     StaticMethods:   
@@ -27204,7 +27204,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MTLVertexDescriptor
+            Name:            MTLVertexDescriptor
             WithProtocols:   
     InstanceProperties: 
       - Name:            attributes
@@ -27230,7 +27230,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLVertexAttributeDescriptorArray
+              Name:            MTLVertexAttributeDescriptorArray
               WithProtocols:   
       - Name:            layouts
         JsName:          layouts
@@ -27255,7 +27255,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLVertexBufferLayoutDescriptorArray
+              Name:            MTLVertexBufferLayoutDescriptorArray
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -28040,7 +28040,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
-  - Name:            ''
+  - Name:            MTLViewport
     JsName:          MTLViewport
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderCommandEncoder.h
     Module:          

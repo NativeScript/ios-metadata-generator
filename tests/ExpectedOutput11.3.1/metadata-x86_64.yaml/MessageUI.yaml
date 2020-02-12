@@ -59,7 +59,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MFMailComposeResult
     JsName:          MFMailComposeResult
@@ -151,13 +151,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setBccRecipients:'
         JsName:          setBccRecipients
@@ -172,10 +172,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'setCcRecipients:'
@@ -191,10 +191,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'setMessageBody:isHTML:'
@@ -210,7 +210,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
       - Name:            'setPreferredSendingEmailAddress:'
@@ -227,7 +227,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setSubject:'
         JsName:          setSubject
@@ -242,7 +242,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setToRecipients:'
         JsName:          setToRecipients
@@ -257,10 +257,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -345,12 +345,12 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MFMailComposeViewController
+            Name:            MFMailComposeViewController
             WithProtocols:   
           - Type:            Enum
             Name:            MFMailComposeResult
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -383,13 +383,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'addAttachmentURL:withAlternateFilename:'
         JsName:          addAttachmentURLWithAlternateFilename
@@ -405,10 +405,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            disableUserAttachments
         JsName:          disableUserAttachments
@@ -476,7 +476,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            attachments
@@ -504,10 +504,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   WithProtocols:   
               WithProtocols:   
       - Name:            body
@@ -533,7 +533,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setBody:'
@@ -549,7 +549,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            message
         JsName:          message
@@ -576,7 +576,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MSMessage
+              Name:            MSMessage
               WithProtocols:   
         Setter:          
           Name:            'setMessage:'
@@ -593,7 +593,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MSMessage
+              Name:            MSMessage
               WithProtocols:   
       - Name:            messageComposeDelegate
         JsName:          messageComposeDelegate
@@ -659,10 +659,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -679,10 +679,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            subject
@@ -710,7 +710,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSubject:'
@@ -727,7 +727,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -744,7 +744,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MFMessageComposeViewControllerAttachmentURL
     JsName:          MFMessageComposeViewControllerAttachmentURL
@@ -758,7 +758,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MFMessageComposeViewControllerDelegate
     JsName:          MFMessageComposeViewControllerDelegate
@@ -784,7 +784,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MFMessageComposeViewController
+            Name:            MFMessageComposeViewController
             WithProtocols:   
           - Type:            Enum
             Name:            MessageComposeResult
@@ -806,7 +806,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MFMessageComposeViewControllerTextMessageAvailabilityKey
     JsName:          MFMessageComposeViewControllerTextMessageAvailabilityKey
@@ -821,7 +821,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MessageComposeResult
     JsName:          MessageComposeResult

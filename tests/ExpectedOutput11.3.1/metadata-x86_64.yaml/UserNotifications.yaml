@@ -285,7 +285,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
     StaticMethods:   
       - Name:            'triggerWithDateMatchingComponents:repeats:'
@@ -301,7 +301,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
           - Type:            Bool
     InstanceProperties: 
@@ -328,7 +328,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -476,7 +476,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            UNLocationNotificationTrigger
     JsName:          UNLocationNotificationTrigger
@@ -504,7 +504,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
           - Type:            Bool
     InstanceProperties: 
@@ -531,7 +531,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLRegion
+              Name:            CLRegion
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -573,10 +573,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UNNotificationAttachment
+                  Name:            UNNotificationAttachment
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -593,10 +593,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UNNotificationAttachment
+                  Name:            UNNotificationAttachment
                   WithProtocols:   
               WithProtocols:   
       - Name:            badge
@@ -622,7 +622,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setBadge:'
@@ -638,7 +638,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            body
         JsName:          body
@@ -663,7 +663,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setBody:'
@@ -679,7 +679,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            categoryIdentifier
         JsName:          categoryIdentifier
@@ -704,7 +704,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCategoryIdentifier:'
@@ -720,7 +720,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            launchImageName
         JsName:          launchImageName
@@ -745,7 +745,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLaunchImageName:'
@@ -761,7 +761,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sound
         JsName:          sound
@@ -786,7 +786,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UNNotificationSound
+              Name:            UNNotificationSound
               WithProtocols:   
         Setter:          
           Name:            'setSound:'
@@ -802,7 +802,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UNNotificationSound
+              Name:            UNNotificationSound
               WithProtocols:   
       - Name:            subtitle
         JsName:          subtitle
@@ -827,7 +827,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSubtitle:'
@@ -843,7 +843,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            summaryArgument
         JsName:          summaryArgument
@@ -870,7 +870,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSummaryArgument:'
@@ -887,7 +887,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            summaryArgumentCount
         JsName:          summaryArgumentCount
@@ -954,7 +954,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTargetContentIdentifier:'
@@ -971,7 +971,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            threadIdentifier
         JsName:          threadIdentifier
@@ -996,7 +996,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setThreadIdentifier:'
@@ -1012,7 +1012,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -1037,7 +1037,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -1053,7 +1053,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
@@ -1078,7 +1078,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
         Setter:          
           Name:            'setUserInfo:'
@@ -1094,7 +1094,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1136,7 +1136,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            request
         JsName:          request
@@ -1161,7 +1161,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UNNotificationRequest
+              Name:            UNNotificationRequest
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1194,10 +1194,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            UNNotificationActionOptions
@@ -1225,7 +1225,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            options
         JsName:          options
@@ -1274,7 +1274,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1374,18 +1374,18 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
       - Name:            identifier
@@ -1411,7 +1411,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -1436,7 +1436,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            URL
         JsName:          URL
@@ -1461,7 +1461,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1481,7 +1481,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            UNNotificationAttachmentOptionsThumbnailHiddenKey
     JsName:          UNNotificationAttachmentOptionsThumbnailHiddenKey
@@ -1496,7 +1496,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            UNNotificationAttachmentOptionsThumbnailTimeKey
     JsName:          UNNotificationAttachmentOptionsThumbnailTimeKey
@@ -1511,7 +1511,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            UNNotificationAttachmentOptionsTypeHintKey
     JsName:          UNNotificationAttachmentOptionsTypeHintKey
@@ -1526,7 +1526,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            UNNotificationCategory
     JsName:          UNNotificationCategory
@@ -1555,27 +1555,27 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          UNNotificationAction
+                Name:            UNNotificationAction
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            UNNotificationCategoryOptions
@@ -1593,24 +1593,24 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          UNNotificationAction
+                Name:            UNNotificationAction
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            UNNotificationCategoryOptions
@@ -1627,20 +1627,20 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          UNNotificationAction
+                Name:            UNNotificationAction
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -1669,10 +1669,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UNNotificationAction
+                  Name:            UNNotificationAction
                   WithProtocols:   
               WithProtocols:   
       - Name:            categorySummaryFormat
@@ -1700,7 +1700,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            hiddenPreviewsBodyPlaceholder
         JsName:          hiddenPreviewsBodyPlaceholder
@@ -1727,7 +1727,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -1752,7 +1752,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            intentIdentifiers
         JsName:          intentIdentifiers
@@ -1777,10 +1777,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            options
@@ -1945,10 +1945,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UNNotificationAttachment
+                  Name:            UNNotificationAttachment
                   WithProtocols:   
               WithProtocols:   
       - Name:            badge
@@ -1974,7 +1974,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            body
         JsName:          body
@@ -1999,7 +1999,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            categoryIdentifier
         JsName:          categoryIdentifier
@@ -2024,7 +2024,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            launchImageName
         JsName:          launchImageName
@@ -2049,7 +2049,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sound
         JsName:          sound
@@ -2074,7 +2074,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UNNotificationSound
+              Name:            UNNotificationSound
               WithProtocols:   
       - Name:            subtitle
         JsName:          subtitle
@@ -2099,7 +2099,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            summaryArgument
         JsName:          summaryArgument
@@ -2126,7 +2126,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            summaryArgumentCount
         JsName:          summaryArgumentCount
@@ -2178,7 +2178,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            threadIdentifier
         JsName:          threadIdentifier
@@ -2203,7 +2203,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -2228,7 +2228,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
@@ -2253,7 +2253,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2274,7 +2274,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            UNNotificationDismissActionIdentifier
     JsName:          UNNotificationDismissActionIdentifier
@@ -2289,7 +2289,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            UNNotificationPresentationOptionAlert
     JsName:          UNNotificationPresentationOptionAlert
@@ -2384,13 +2384,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          UNNotificationContent
+            Name:            UNNotificationContent
             WithProtocols:   
           - Type:            Interface
-            JsName:          UNNotificationTrigger
+            Name:            UNNotificationTrigger
             WithProtocols:   
     InstanceProperties: 
       - Name:            content
@@ -2416,7 +2416,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UNNotificationContent
+              Name:            UNNotificationContent
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -2441,7 +2441,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            trigger
         JsName:          trigger
@@ -2466,7 +2466,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UNNotificationTrigger
+              Name:            UNNotificationTrigger
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2510,7 +2510,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            notification
         JsName:          notification
@@ -2535,7 +2535,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UNNotification
+              Name:            UNNotification
               WithProtocols:   
       - Name:            targetScene
         JsName:          targetScene
@@ -2562,7 +2562,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIScene
+              Name:            UIScene
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2594,13 +2594,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UNNotificationRequest
+            Name:            UNNotificationRequest
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UNNotificationContent
+                Name:            UNNotificationContent
                 WithProtocols:   
       - Name:            serviceExtensionTimeWillExpire
         JsName:          serviceExtensionTimeWillExpire
@@ -3012,7 +3012,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'criticalSoundNamed:withAudioVolume:'
         JsName:          criticalSoundNamedWithAudioVolume
@@ -3028,7 +3028,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Float
       - Name:            'defaultCriticalSoundWithAudioVolume:'
@@ -3058,7 +3058,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -3087,7 +3087,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UNNotificationSound
+              Name:            UNNotificationSound
               WithProtocols:   
       - Name:            defaultSound
         JsName:          defaultSound
@@ -3112,7 +3112,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UNNotificationSound
+              Name:            UNNotificationSound
               WithProtocols:   
     Protocols:       
       - NSCopying
@@ -3255,18 +3255,18 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            UNNotificationActionOptions
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            textInputButtonTitle
@@ -3292,7 +3292,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            textInputPlaceholder
         JsName:          textInputPlaceholder
@@ -3317,7 +3317,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3359,7 +3359,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3388,7 +3388,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
     StaticMethods:   
       - Name:            'triggerWithTimeInterval:repeats:'
@@ -3457,13 +3457,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UNNotificationRequest
+            Name:            UNNotificationRequest
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'getDeliveredNotificationsWithCompletionHandler:'
         JsName:          getDeliveredNotificationsWithCompletionHandler
@@ -3481,10 +3481,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          UNNotification
+                    Name:            UNNotification
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'getNotificationCategoriesWithCompletionHandler:'
@@ -3503,10 +3503,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSSet
+                Name:            NSSet
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          UNNotificationCategory
+                    Name:            UNNotificationCategory
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'getNotificationSettingsWithCompletionHandler:'
@@ -3525,7 +3525,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UNNotificationSettings
+                Name:            UNNotificationSettings
                 WithProtocols:   
       - Name:            'getPendingNotificationRequestsWithCompletionHandler:'
         JsName:          getPendingNotificationRequestsWithCompletionHandler
@@ -3543,10 +3543,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          UNNotificationRequest
+                    Name:            UNNotificationRequest
                     WithProtocols:   
                 WithProtocols:   
       - Name:            removeAllDeliveredNotifications
@@ -3586,10 +3586,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'removePendingNotificationRequestsWithIdentifiers:'
@@ -3605,10 +3605,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'requestAuthorizationWithOptions:completionHandler:'
@@ -3630,7 +3630,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'setNotificationCategories:'
         JsName:          setNotificationCategories
@@ -3645,10 +3645,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          UNNotificationCategory
+                Name:            UNNotificationCategory
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -3664,7 +3664,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UNUserNotificationCenter
+            Name:            UNUserNotificationCenter
             WithProtocols:   
     InstanceProperties: 
       - Name:            delegate
@@ -3760,10 +3760,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UNUserNotificationCenter
+            Name:            UNUserNotificationCenter
             WithProtocols:   
           - Type:            Interface
-            JsName:          UNNotificationResponse
+            Name:            UNNotificationResponse
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -3782,10 +3782,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UNUserNotificationCenter
+            Name:            UNUserNotificationCenter
             WithProtocols:   
           - Type:            Interface
-            JsName:          UNNotification
+            Name:            UNNotification
             WithProtocols:   
       - Name:            'userNotificationCenter:willPresentNotification:withCompletionHandler:'
         JsName:          userNotificationCenterWillPresentNotificationWithCompletionHandler
@@ -3801,10 +3801,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UNUserNotificationCenter
+            Name:            UNUserNotificationCenter
             WithProtocols:   
           - Type:            Interface
-            JsName:          UNNotification
+            Name:            UNNotification
             WithProtocols:   
           - Type:            Block
             Signature:       

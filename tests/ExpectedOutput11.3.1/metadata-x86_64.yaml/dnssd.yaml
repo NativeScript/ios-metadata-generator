@@ -191,7 +191,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          Darwin.POSIX.sys.socket
-              JsName:          sockaddr
+              Name:            sockaddr
           - Type:            UInt
           - Type:            Pointer
             PointerType:     
@@ -541,7 +541,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            DNSServiceSleepKeepalive

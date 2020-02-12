@@ -32,7 +32,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLMesh
+            Name:            MDLMesh
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -40,7 +40,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
       - Name:            'newMeshesFromAsset:device:sourceMeshes:error:'
@@ -55,14 +55,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MTKMesh
+                Name:            MTKMesh
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLAsset
+            Name:            MDLAsset
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -70,16 +70,16 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLMesh
+                  Name:            MDLMesh
                   WithProtocols:   
               WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
       - Name:            name
@@ -105,7 +105,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -121,7 +121,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            submeshes
         JsName:          submeshes
@@ -146,10 +146,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MTKSubmesh
+                  Name:            MTKSubmesh
                   WithProtocols:   
               WithProtocols:   
       - Name:            vertexBuffers
@@ -175,10 +175,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MTKMeshBuffer
+                  Name:            MTKMeshBuffer
                   WithProtocols:   
               WithProtocols:   
       - Name:            vertexCount
@@ -227,7 +227,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLVertexDescriptor
+              Name:            MDLVertexDescriptor
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -269,7 +269,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTKMeshBufferAllocator
+              Name:            MTKMeshBufferAllocator
               WithProtocols:   
       - Name:            buffer
         JsName:          buffer
@@ -395,10 +395,10 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          MTLVertexDescriptor
+        Name:            MTLVertexDescriptor
         WithProtocols:   
       - Type:            Interface
-        JsName:          MDLVertexDescriptor
+        Name:            MDLVertexDescriptor
         WithProtocols:   
   - Name:            MTKMetalVertexDescriptorFromModelIOWithError
     JsName:          MTKMetalVertexDescriptorFromModelIOWithError
@@ -413,15 +413,15 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          MTLVertexDescriptor
+        Name:            MTLVertexDescriptor
         WithProtocols:   
       - Type:            Interface
-        JsName:          MDLVertexDescriptor
+        Name:            MDLVertexDescriptor
         WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Interface
-          JsName:          NSError
+          Name:            NSError
           WithProtocols:   
   - Name:            MTKMetalVertexFormatFromModelIO
     JsName:          MTKMetalVertexFormatFromModelIO
@@ -452,7 +452,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKModelErrorKey
     JsName:          MTKModelErrorKey
@@ -467,7 +467,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKModelIOVertexDescriptorFromMetal
     JsName:          MTKModelIOVertexDescriptorFromMetal
@@ -482,10 +482,10 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          MDLVertexDescriptor
+        Name:            MDLVertexDescriptor
         WithProtocols:   
       - Type:            Interface
-        JsName:          MTLVertexDescriptor
+        Name:            MTLVertexDescriptor
         WithProtocols:   
   - Name:            MTKModelIOVertexDescriptorFromMetalWithError
     JsName:          MTKModelIOVertexDescriptorFromMetalWithError
@@ -500,15 +500,15 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          MDLVertexDescriptor
+        Name:            MDLVertexDescriptor
         WithProtocols:   
       - Type:            Interface
-        JsName:          MTLVertexDescriptor
+        Name:            MTLVertexDescriptor
         WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Interface
-          JsName:          NSError
+          Name:            NSError
           WithProtocols:   
   - Name:            MTKModelIOVertexFormatFromMetal
     JsName:          MTKModelIOVertexFormatFromMetal
@@ -563,7 +563,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTKMeshBuffer
+              Name:            MTKMeshBuffer
               WithProtocols:   
       - Name:            indexCount
         JsName:          indexCount
@@ -635,7 +635,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTKMesh
+              Name:            MTKMesh
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -660,7 +660,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -676,7 +676,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            primitiveType
         JsName:          primitiveType
@@ -746,17 +746,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -765,14 +765,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Id
                     WithProtocols:   
                       - MTLTexture
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newTexturesWithContentsOfURLs:options:error:'
         JsName:          newTexturesWithContentsOfURLsOptionsError
@@ -787,24 +787,24 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
                   - MTLTexture
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -812,7 +812,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newTexturesWithNames:scaleFactor:bundle:options:completionHandler:'
         JsName:          newTexturesWithNamesScaleFactorBundleOptionsCompletionHandler
@@ -828,21 +828,21 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Double
           - Type:            Interface
-            JsName:          NSBundle
+            Name:            NSBundle
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -851,14 +851,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Id
                     WithProtocols:   
                       - MTLTexture
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newTextureWithCGImage:options:completionHandler:'
         JsName:          newTextureWithCGImageOptionsCompletionHandler
@@ -876,10 +876,10 @@ Items:
             Name:            id
             BridgedTo:       id
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -891,7 +891,7 @@ Items:
                 WithProtocols:   
                   - MTLTexture
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newTextureWithCGImage:options:error:'
         JsName:          newTextureWithCGImageOptionsError
@@ -911,10 +911,10 @@ Items:
             Name:            id
             BridgedTo:       id
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -922,7 +922,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newTextureWithContentsOfURL:options:completionHandler:'
         JsName:          newTextureWithContentsOfURLOptionsCompletionHandler
@@ -937,13 +937,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -955,7 +955,7 @@ Items:
                 WithProtocols:   
                   - MTLTexture
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newTextureWithContentsOfURL:options:error:'
         JsName:          newTextureWithContentsOfURLOptionsError
@@ -972,13 +972,13 @@ Items:
             WithProtocols:   
               - MTLTexture
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -986,7 +986,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newTextureWithData:options:completionHandler:'
         JsName:          newTextureWithDataOptionsCompletionHandler
@@ -1001,13 +1001,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1019,7 +1019,7 @@ Items:
                 WithProtocols:   
                   - MTLTexture
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newTextureWithData:options:error:'
         JsName:          newTextureWithDataOptionsError
@@ -1036,13 +1036,13 @@ Items:
             WithProtocols:   
               - MTLTexture
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1050,7 +1050,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newTextureWithMDLTexture:options:completionHandler:'
         JsName:          newTextureWithMDLTextureOptionsCompletionHandler
@@ -1066,13 +1066,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLTexture
+            Name:            MDLTexture
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1084,7 +1084,7 @@ Items:
                 WithProtocols:   
                   - MTLTexture
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newTextureWithMDLTexture:options:error:'
         JsName:          newTextureWithMDLTextureOptionsError
@@ -1102,13 +1102,13 @@ Items:
             WithProtocols:   
               - MTLTexture
           - Type:            Interface
-            JsName:          MDLTexture
+            Name:            MDLTexture
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1116,7 +1116,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'newTextureWithName:scaleFactor:bundle:options:completionHandler:'
         JsName:          newTextureWithNameScaleFactorBundleOptionsCompletionHandler
@@ -1132,17 +1132,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Double
           - Type:            Interface
-            JsName:          NSBundle
+            Name:            NSBundle
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1154,7 +1154,7 @@ Items:
                 WithProtocols:   
                   - MTLTexture
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'newTextureWithName:scaleFactor:bundle:options:error:'
         JsName:          newTextureWithNameScaleFactorBundleOptionsError
@@ -1172,17 +1172,17 @@ Items:
             WithProtocols:   
               - MTLTexture
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Double
           - Type:            Interface
-            JsName:          NSBundle
+            Name:            NSBundle
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1190,7 +1190,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1235,7 +1235,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderErrorDomain
     JsName:          MTKTextureLoaderErrorDomain
@@ -1250,7 +1250,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderErrorKey
     JsName:          MTKTextureLoaderErrorKey
@@ -1265,7 +1265,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderOptionAllocateMipmaps
     JsName:          MTKTextureLoaderOptionAllocateMipmaps
@@ -1280,7 +1280,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderOptionCubeLayout
     JsName:          MTKTextureLoaderOptionCubeLayout
@@ -1295,7 +1295,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderOptionGenerateMipmaps
     JsName:          MTKTextureLoaderOptionGenerateMipmaps
@@ -1310,7 +1310,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderOptionOrigin
     JsName:          MTKTextureLoaderOptionOrigin
@@ -1325,7 +1325,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderOptionSRGB
     JsName:          MTKTextureLoaderOptionSRGB
@@ -1340,7 +1340,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderOptionTextureCPUCacheMode
     JsName:          MTKTextureLoaderOptionTextureCPUCacheMode
@@ -1355,7 +1355,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderOptionTextureStorageMode
     JsName:          MTKTextureLoaderOptionTextureStorageMode
@@ -1370,7 +1370,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderOptionTextureUsage
     JsName:          MTKTextureLoaderOptionTextureUsage
@@ -1385,7 +1385,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderOriginBottomLeft
     JsName:          MTKTextureLoaderOriginBottomLeft
@@ -1400,7 +1400,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderOriginFlippedVertically
     JsName:          MTKTextureLoaderOriginFlippedVertically
@@ -1415,7 +1415,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKTextureLoaderOriginTopLeft
     JsName:          MTKTextureLoaderOriginTopLeft
@@ -1430,7 +1430,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MTKView
     JsName:          MTKView
@@ -1470,7 +1470,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Id
             WithProtocols:   
               - MTLDevice
@@ -1549,7 +1549,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Metal.MTLRenderPass
-              JsName:          MTLClearColor
+              Name:            MTLClearColor
         Setter:          
           Name:            'setClearColor:'
           JsName:          setClearColor
@@ -1565,7 +1565,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          Metal.MTLRenderPass
-              JsName:          MTLClearColor
+              Name:            MTLClearColor
       - Name:            clearDepth
         JsName:          clearDepth
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKView.h
@@ -1727,7 +1727,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MTLRenderPassDescriptor
+              Name:            MTLRenderPassDescriptor
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -1941,7 +1941,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
         Setter:          
           Name:            'setDrawableSize:'
           JsName:          setDrawableSize
@@ -1957,7 +1957,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
       - Name:            enableSetNeedsDisplay
         JsName:          enableSetNeedsDisplay
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKView.h
@@ -2187,7 +2187,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
       - Name:            preferredFramesPerSecond
         JsName:          preferredFramesPerSecond
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MetalKit.framework/Headers/MTKView.h
@@ -2329,7 +2329,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTKView
+            Name:            MTKView
             WithProtocols:   
       - Name:            'mtkView:drawableSizeWillChange:'
         JsName:          mtkViewDrawableSizeWillChange
@@ -2344,11 +2344,11 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MTKView
+            Name:            MTKView
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
     StaticMethods:   
     InstanceProperties: 
     StaticProperties: 

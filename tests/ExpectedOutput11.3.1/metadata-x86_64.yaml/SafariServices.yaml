@@ -46,7 +46,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SFAuthenticationSession
     JsName:          SFAuthenticationSession
@@ -85,19 +85,19 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            start
         JsName:          start
@@ -148,7 +148,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SFContentBlockerLoadingInterrupted
     JsName:          SFContentBlockerLoadingInterrupted
@@ -189,16 +189,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          SFContentBlockerState
+                Name:            SFContentBlockerState
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'reloadContentBlockerWithIdentifier:completionHandler:'
         JsName:          reloadContentBlockerWithIdentifierCompletionHandler
@@ -213,13 +213,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -321,7 +321,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SFErrorLoadingInterrupted
     JsName:          SFErrorLoadingInterrupted
@@ -381,7 +381,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'initWithURL:configuration:'
         JsName:          initWithURLConfiguration
@@ -397,10 +397,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          SFSafariViewControllerConfiguration
+            Name:            SFSafariViewControllerConfiguration
             WithProtocols:   
       - Name:            'initWithURL:entersReaderIfAvailable:'
         JsName:          initWithURLEntersReaderIfAvailable
@@ -416,7 +416,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -446,7 +446,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SFSafariViewControllerConfiguration
+              Name:            SFSafariViewControllerConfiguration
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -556,7 +556,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIColor
+              Name:            UIColor
               WithProtocols:   
         Setter:          
           Name:            'setPreferredBarTintColor:'
@@ -573,7 +573,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIColor
+              Name:            UIColor
               WithProtocols:   
       - Name:            preferredControlTintColor
         JsName:          preferredControlTintColor
@@ -600,7 +600,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIColor
+              Name:            UIColor
               WithProtocols:   
         Setter:          
           Name:            'setPreferredControlTintColor:'
@@ -617,7 +617,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIColor
+              Name:            UIColor
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -738,20 +738,20 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          UIActivity
+                Name:            UIActivity
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          SFSafariViewController
+            Name:            SFSafariViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'safariViewController:didCompleteInitialLoad:'
         JsName:          safariViewControllerDidCompleteInitialLoad
@@ -766,7 +766,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SFSafariViewController
+            Name:            SFSafariViewController
             WithProtocols:   
           - Type:            Bool
       - Name:            'safariViewControllerDidFinish:'
@@ -782,7 +782,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SFSafariViewController
+            Name:            SFSafariViewController
             WithProtocols:   
       - Name:            'safariViewController:excludedActivityTypesForURL:title:'
         JsName:          safariViewControllerExcludedActivityTypesForURLTitle
@@ -797,20 +797,20 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          SFSafariViewController
+            Name:            SFSafariViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'safariViewController:initialLoadDidRedirectToURL:'
         JsName:          safariViewControllerInitialLoadDidRedirectToURL
@@ -826,10 +826,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SFSafariViewController
+            Name:            SFSafariViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -913,18 +913,18 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
       - Name:            defaultReadingList
@@ -939,7 +939,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          SSReadingList
+            Name:            SSReadingList
             WithProtocols:   
       - Name:            'supportsURL:'
         JsName:          supportsURL
@@ -954,7 +954,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -988,7 +988,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SSReadingListErrorURLSchemeNotAllowed
     JsName:          SSReadingListErrorURLSchemeNotAllowed

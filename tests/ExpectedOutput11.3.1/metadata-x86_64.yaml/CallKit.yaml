@@ -91,7 +91,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            UUID
         JsName:          UUID
@@ -116,7 +116,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -148,7 +148,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -180,7 +180,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          CXCall
+            Name:            CXCall
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -299,7 +299,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -329,7 +329,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -356,7 +356,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -386,7 +386,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
       - Name:            'requestTransaction:completion:'
@@ -402,13 +402,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXTransaction
+            Name:            CXTransaction
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestTransactionWithAction:completion:'
         JsName:          requestTransactionWithActionCompletion
@@ -424,13 +424,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXAction
+            Name:            CXAction
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestTransactionWithActions:completion:'
         JsName:          requestTransactionWithActionsCompletion
@@ -446,17 +446,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CXAction
+                Name:            CXAction
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -483,7 +483,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CXCallObserver
+              Name:            CXCallObserver
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -579,7 +579,7 @@ Items:
           - Type:            Void
           - Type:            LongLong
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'completeRequestWithCompletionHandler:'
         JsName:          completeRequestWithCompletionHandler
@@ -747,10 +747,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXCallDirectoryExtensionContext
+            Name:            CXCallDirectoryExtensionContext
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -782,7 +782,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -790,7 +790,7 @@ Items:
               - Type:            Enum
                 Name:            CXCallDirectoryEnabledStatus
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'reloadExtensionWithIdentifier:completionHandler:'
         JsName:          reloadExtensionWithIdentifierCompletionHandler
@@ -805,13 +805,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -839,7 +839,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CXCallDirectoryManager
+              Name:            CXCallDirectoryManager
               WithProtocols:   
     Protocols:       
     Base:            NSObject
@@ -881,7 +881,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXCallDirectoryExtensionContext
+            Name:            CXCallDirectoryExtensionContext
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -995,7 +995,7 @@ Items:
             WithProtocols:   
               - CXCallObserverDelegate
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
     StaticMethods:   
@@ -1023,10 +1023,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CXCall
+                  Name:            CXCall
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -1057,10 +1057,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXCallObserver
+            Name:            CXCallObserver
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXCall
+            Name:            CXCall
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1141,7 +1141,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalizedCallerName:'
@@ -1157,7 +1157,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            remoteHandle
         JsName:          remoteHandle
@@ -1182,7 +1182,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CXHandle
+              Name:            CXHandle
               WithProtocols:   
         Setter:          
           Name:            'setRemoteHandle:'
@@ -1198,7 +1198,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CXHandle
+              Name:            CXHandle
               WithProtocols:   
       - Name:            supportsDTMF
         JsName:          supportsDTMF
@@ -1377,7 +1377,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1778,7 +1778,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CXErrorDomainCallDirectoryManager
     JsName:          CXErrorDomainCallDirectoryManager
@@ -1793,7 +1793,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CXErrorDomainIncomingCall
     JsName:          CXErrorDomainIncomingCall
@@ -1808,7 +1808,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CXErrorDomainRequestTransaction
     JsName:          CXErrorDomainRequestTransaction
@@ -1823,7 +1823,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CXHandle
     JsName:          CXHandle
@@ -1852,7 +1852,7 @@ Items:
           - Type:            Enum
             Name:            CXHandleType
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'isEqualToHandle:'
         JsName:          isEqualToHandle
@@ -1867,7 +1867,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          CXHandle
+            Name:            CXHandle
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1918,7 +1918,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2002,10 +2002,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            CXPlayDTMFCallActionType
@@ -2034,7 +2034,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setDigits:'
@@ -2050,7 +2050,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -2171,7 +2171,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CXProviderConfiguration
+            Name:            CXProviderConfiguration
             WithProtocols:   
       - Name:            invalidate
         JsName:          invalidate
@@ -2197,15 +2197,15 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CXCallAction
+                Name:            CXCallAction
                 WithProtocols:   
             WithProtocols:   
           - Type:            Class
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
       - Name:            'reportCallWithUUID:endedAtDate:reason:'
         JsName:          reportCallWithUUIDEndedAtDateReason
@@ -2220,10 +2220,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
           - Type:            Enum
             Name:            CXCallEndedReason
@@ -2240,10 +2240,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXCallUpdate
+            Name:            CXCallUpdate
             WithProtocols:   
       - Name:            'reportNewIncomingCallWithUUID:update:completion:'
         JsName:          reportNewIncomingCallWithUUIDUpdateCompletion
@@ -2258,16 +2258,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXCallUpdate
+            Name:            CXCallUpdate
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'reportOutgoingCallWithUUID:connectedAtDate:'
         JsName:          reportOutgoingCallWithUUIDConnectedAtDate
@@ -2282,10 +2282,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
       - Name:            'reportOutgoingCallWithUUID:startedConnectingAtDate:'
         JsName:          reportOutgoingCallWithUUIDStartedConnectingAtDate
@@ -2300,10 +2300,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
       - Name:            'setDelegate:queue:'
         JsName:          setDelegateQueue
@@ -2321,7 +2321,7 @@ Items:
             WithProtocols:   
               - CXProviderDelegate
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
     StaticMethods:   
@@ -2349,7 +2349,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CXProviderConfiguration
+              Name:            CXProviderConfiguration
               WithProtocols:   
         Setter:          
           Name:            'setConfiguration:'
@@ -2365,7 +2365,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CXProviderConfiguration
+              Name:            CXProviderConfiguration
               WithProtocols:   
       - Name:            pendingTransactions
         JsName:          pendingTransactions
@@ -2390,10 +2390,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CXTransaction
+                  Name:            CXTransaction
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2424,7 +2424,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2451,7 +2451,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setIconTemplateImageData:'
@@ -2467,7 +2467,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            includesCallsInRecents
         JsName:          includesCallsInRecents
@@ -2532,7 +2532,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maximumCallGroups
         JsName:          maximumCallGroups
@@ -2631,7 +2631,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setRingtoneSound:'
@@ -2647,7 +2647,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            supportedHandleTypes
         JsName:          supportedHandleTypes
@@ -2672,10 +2672,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2692,10 +2692,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            supportsVideo
@@ -2764,10 +2764,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
           - Type:            Interface
-            JsName:          AVAudioSession
+            Name:            AVAudioSession
             WithProtocols:   
       - Name:            'providerDidBegin:'
         JsName:          providerDidBegin
@@ -2782,7 +2782,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
       - Name:            'provider:didDeactivateAudioSession:'
         JsName:          providerDidDeactivateAudioSession
@@ -2797,10 +2797,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
           - Type:            Interface
-            JsName:          AVAudioSession
+            Name:            AVAudioSession
             WithProtocols:   
       - Name:            'providerDidReset:'
         JsName:          providerDidReset
@@ -2815,7 +2815,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
       - Name:            'provider:executeTransaction:'
         JsName:          providerExecuteTransaction
@@ -2830,10 +2830,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXTransaction
+            Name:            CXTransaction
             WithProtocols:   
       - Name:            'provider:performAnswerCallAction:'
         JsName:          providerPerformAnswerCallAction
@@ -2848,10 +2848,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXAnswerCallAction
+            Name:            CXAnswerCallAction
             WithProtocols:   
       - Name:            'provider:performEndCallAction:'
         JsName:          providerPerformEndCallAction
@@ -2866,10 +2866,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXEndCallAction
+            Name:            CXEndCallAction
             WithProtocols:   
       - Name:            'provider:performPlayDTMFCallAction:'
         JsName:          providerPerformPlayDTMFCallAction
@@ -2884,10 +2884,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXPlayDTMFCallAction
+            Name:            CXPlayDTMFCallAction
             WithProtocols:   
       - Name:            'provider:performSetGroupCallAction:'
         JsName:          providerPerformSetGroupCallAction
@@ -2902,10 +2902,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXSetGroupCallAction
+            Name:            CXSetGroupCallAction
             WithProtocols:   
       - Name:            'provider:performSetHeldCallAction:'
         JsName:          providerPerformSetHeldCallAction
@@ -2920,10 +2920,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXSetHeldCallAction
+            Name:            CXSetHeldCallAction
             WithProtocols:   
       - Name:            'provider:performSetMutedCallAction:'
         JsName:          providerPerformSetMutedCallAction
@@ -2938,10 +2938,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXSetMutedCallAction
+            Name:            CXSetMutedCallAction
             WithProtocols:   
       - Name:            'provider:performStartCallAction:'
         JsName:          providerPerformStartCallAction
@@ -2956,10 +2956,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXStartCallAction
+            Name:            CXStartCallAction
             WithProtocols:   
       - Name:            'provider:timedOutPerformingAction:'
         JsName:          providerTimedOutPerformingAction
@@ -2974,10 +2974,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXProvider
+            Name:            CXProvider
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXAction
+            Name:            CXAction
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3009,10 +3009,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3039,7 +3039,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
         Setter:          
           Name:            'setCallUUIDToGroupWith:'
@@ -3055,7 +3055,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3085,7 +3085,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -3155,7 +3155,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -3225,7 +3225,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
       - Name:            'initWithCallUUID:handle:'
         JsName:          initWithCallUUIDHandle
@@ -3240,10 +3240,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          CXHandle
+            Name:            CXHandle
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3270,7 +3270,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setContactIdentifier:'
@@ -3286,7 +3286,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            handle
         JsName:          handle
@@ -3311,7 +3311,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CXHandle
+              Name:            CXHandle
               WithProtocols:   
         Setter:          
           Name:            'setHandle:'
@@ -3327,7 +3327,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CXHandle
+              Name:            CXHandle
               WithProtocols:   
       - Name:            video
         JsName:          video
@@ -3394,7 +3394,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CXAction
+            Name:            CXAction
             WithProtocols:   
       - Name:            'initWithAction:'
         JsName:          initWithAction
@@ -3409,7 +3409,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CXAction
+            Name:            CXAction
             WithProtocols:   
       - Name:            'initWithActions:'
         JsName:          initWithActions
@@ -3424,10 +3424,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CXAction
+                Name:            CXAction
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -3455,10 +3455,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CXAction
+                  Name:            CXAction
                   WithProtocols:   
               WithProtocols:   
       - Name:            complete
@@ -3507,7 +3507,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       

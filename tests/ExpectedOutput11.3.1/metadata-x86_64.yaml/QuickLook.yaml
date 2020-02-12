@@ -231,7 +231,7 @@ Items:
         Signature:       
           - Type:            Long
           - Type:            Interface
-            JsName:          QLPreviewController
+            Name:            QLPreviewController
             WithProtocols:   
       - Name:            'previewController:previewItemAtIndex:'
         JsName:          previewControllerPreviewItemAtIndex
@@ -248,7 +248,7 @@ Items:
             WithProtocols:   
               - QLPreviewItem
           - Type:            Interface
-            JsName:          QLPreviewController
+            Name:            QLPreviewController
             WithProtocols:   
           - Type:            Long
     StaticMethods:   
@@ -279,7 +279,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          QLPreviewController
+            Name:            QLPreviewController
             WithProtocols:   
       - Name:            'previewController:didSaveEditedCopyOfPreviewItem:atURL:'
         JsName:          previewControllerDidSaveEditedCopyOfPreviewItemAtURL
@@ -295,13 +295,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          QLPreviewController
+            Name:            QLPreviewController
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
               - QLPreviewItem
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'previewController:didUpdateContentsOfPreviewItem:'
         JsName:          previewControllerDidUpdateContentsOfPreviewItem
@@ -317,7 +317,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          QLPreviewController
+            Name:            QLPreviewController
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -337,7 +337,7 @@ Items:
           - Type:            Enum
             Name:            QLPreviewItemEditingMode
           - Type:            Interface
-            JsName:          QLPreviewController
+            Name:            QLPreviewController
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -355,9 +355,9 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Interface
-            JsName:          QLPreviewController
+            Name:            QLPreviewController
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -365,7 +365,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          UIView
+              Name:            UIView
               WithProtocols:   
       - Name:            'previewController:shouldOpenURL:forPreviewItem:'
         JsName:          previewControllerShouldOpenURLForPreviewItem
@@ -380,10 +380,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          QLPreviewController
+            Name:            QLPreviewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -400,10 +400,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Interface
-            JsName:          QLPreviewController
+            Name:            QLPreviewController
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -412,7 +412,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
       - Name:            'previewController:transitionViewForPreviewItem:'
         JsName:          previewControllerTransitionViewForPreviewItem
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuickLook.framework/Headers/QLPreviewController.h
@@ -426,10 +426,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIView
+            Name:            UIView
             WithProtocols:   
           - Type:            Interface
-            JsName:          QLPreviewController
+            Name:            QLPreviewController
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -447,7 +447,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          QLPreviewController
+            Name:            QLPreviewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -490,7 +490,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            previewItemURL
         JsName:          previewItemURL
@@ -515,7 +515,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -596,13 +596,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'preparePreviewOfSearchableItemWithIdentifier:queryString:completionHandler:'
         JsName:          preparePreviewOfSearchableItemWithIdentifierQueryStringCompletionHandler
@@ -617,16 +617,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 

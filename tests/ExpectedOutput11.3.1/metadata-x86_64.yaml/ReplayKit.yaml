@@ -20,7 +20,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            RPBroadcastActivityViewController
     JsName:          RPBroadcastActivityViewController
@@ -51,10 +51,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          RPBroadcastActivityViewController
+                Name:            RPBroadcastActivityViewController
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadBroadcastActivityViewControllerWithPreferredExtension:handler:'
         JsName:          loadBroadcastActivityViewControllerWithPreferredExtensionHandler
@@ -70,16 +70,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          RPBroadcastActivityViewController
+                Name:            RPBroadcastActivityViewController
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
       - Name:            delegate
@@ -152,13 +152,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          RPBroadcastActivityViewController
+            Name:            RPBroadcastActivityViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          RPBroadcastController
+            Name:            RPBroadcastController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -239,13 +239,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSObject
+                  Name:            NSObject
                   WithProtocols:   
                     - NSCoding
                     - NSSecureCoding
@@ -264,13 +264,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSObject
+                  Name:            NSObject
                   WithProtocols:   
                     - NSCoding
                     - NSSecureCoding
@@ -308,7 +308,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            pauseBroadcast
         JsName:          pauseBroadcast
@@ -350,7 +350,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -379,7 +379,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            broadcasting
         JsName:          broadcasting
@@ -427,7 +427,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -516,13 +516,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSObject
+                  Name:            NSObject
                   WithProtocols:   
                     - NSCoding
               WithProtocols:   
@@ -554,10 +554,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          RPBroadcastController
+            Name:            RPBroadcastController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'broadcastController:didUpdateBroadcastURL:'
         JsName:          broadcastControllerDidUpdateBroadcastURL
@@ -573,10 +573,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          RPBroadcastController
+            Name:            RPBroadcastController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'broadcastController:didUpdateServiceInfo:'
         JsName:          broadcastControllerDidUpdateServiceInfo
@@ -591,16 +591,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          RPBroadcastController
+            Name:            RPBroadcastController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSObject
+                Name:            NSObject
                 WithProtocols:   
                   - NSCoding
             WithProtocols:   
@@ -635,7 +635,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'updateServiceInfo:'
         JsName:          updateServiceInfo
@@ -650,13 +650,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSObject
+                Name:            NSObject
                 WithProtocols:   
                   - NSCoding
             WithProtocols:   
@@ -691,10 +691,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          RPBroadcastConfiguration
+            Name:            RPBroadcastConfiguration
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'processMP4ClipWithURL:setupInfo:finished:'
         JsName:          processMP4ClipWithURLSetupInfoFinished
@@ -709,16 +709,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSObject
+                Name:            NSObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Bool
@@ -753,7 +753,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
       - Name:            broadcastFinished
         JsName:          broadcastFinished
@@ -804,13 +804,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSObject
+                Name:            NSObject
                 WithProtocols:   
             WithProtocols:   
       - Name:            'finishBroadcastWithError:'
@@ -826,7 +826,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'processSampleBuffer:withType:'
         JsName:          processSampleBufferWithType
@@ -969,7 +969,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          RPPreviewViewController
+            Name:            RPPreviewViewController
             WithProtocols:   
       - Name:            'previewController:didFinishWithActivityTypes:'
         JsName:          previewControllerDidFinishWithActivityTypes
@@ -984,13 +984,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          RPPreviewViewController
+            Name:            RPPreviewViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -1229,7 +1229,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            RPRecordingErrorEntitlements
     JsName:          RPRecordingErrorEntitlements
@@ -1616,13 +1616,13 @@ Items:
               - Type:            Enum
                 Name:            RPSampleBufferType
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'startRecordingWithHandler:'
         JsName:          startRecordingWithHandler
@@ -1641,7 +1641,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'startRecordingWithMicrophoneEnabled:handler:'
         JsName:          startRecordingWithMicrophoneEnabledHandler
@@ -1661,7 +1661,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'stopCaptureWithHandler:'
         JsName:          stopCaptureWithHandler
@@ -1680,7 +1680,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'stopRecordingWithHandler:'
         JsName:          stopRecordingWithHandler
@@ -1698,10 +1698,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          RPPreviewViewController
+                Name:            RPPreviewViewController
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            sharedRecorder
@@ -1716,7 +1716,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          RPScreenRecorder
+            Name:            RPScreenRecorder
             WithProtocols:   
     InstanceProperties: 
       - Name:            available
@@ -1849,7 +1849,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIView
+              Name:            UIView
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -1980,7 +1980,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          RPScreenRecorder
+            Name:            RPScreenRecorder
             WithProtocols:   
       - Name:            'screenRecorder:didStopRecordingWithError:previewViewController:'
         JsName:          screenRecorderDidStopRecordingWithErrorPreviewViewController
@@ -1996,13 +1996,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          RPScreenRecorder
+            Name:            RPScreenRecorder
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
           - Type:            Interface
-            JsName:          RPPreviewViewController
+            Name:            RPPreviewViewController
             WithProtocols:   
       - Name:            'screenRecorder:didStopRecordingWithPreviewViewController:error:'
         JsName:          screenRecorderDidStopRecordingWithPreviewViewControllerError
@@ -2018,13 +2018,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          RPScreenRecorder
+            Name:            RPScreenRecorder
             WithProtocols:   
           - Type:            Interface
-            JsName:          RPPreviewViewController
+            Name:            RPPreviewViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2068,7 +2068,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPreferredExtension:'
@@ -2084,7 +2084,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            showsMicrophoneButton
         JsName:          showsMicrophoneButton
@@ -2140,6 +2140,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

@@ -32,7 +32,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_double4x4
+            Name:            simd_double4x4
           - Type:            Double
       - Name:            'float4x4AtTime:'
         JsName:          float4x4AtTime
@@ -47,7 +47,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Double
       - Name:            'getDouble4x4Array:maxCount:'
         JsName:          getDouble4x4ArrayMaxCount
@@ -65,7 +65,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_double4x4
+              Name:            simd_double4x4
           - Type:            ULong
       - Name:            'getFloat4x4Array:maxCount:'
         JsName:          getFloat4x4ArrayMaxCount
@@ -83,7 +83,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
           - Type:            ULong
       - Name:            'resetWithDouble4x4Array:atTimes:count:'
         JsName:          resetWithDouble4x4ArrayAtTimesCount
@@ -101,7 +101,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_double4x4
+              Name:            simd_double4x4
           - Type:            Pointer
             PointerType:     
               Type:            Double
@@ -122,7 +122,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
           - Type:            Pointer
             PointerType:     
               Type:            Double
@@ -141,7 +141,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_double4x4
+            Name:            simd_double4x4
           - Type:            Double
       - Name:            'setFloat4x4:atTime:'
         JsName:          setFloat4x4AtTime
@@ -157,7 +157,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Double
     StaticMethods:   
     InstanceProperties: 
@@ -189,7 +189,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_quatd
+            Name:            simd_quatd
           - Type:            Double
       - Name:            'floatQuaternionAtTime:'
         JsName:          floatQuaternionAtTime
@@ -204,7 +204,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_quatf
+            Name:            simd_quatf
           - Type:            Double
       - Name:            'getDoubleQuaternionArray:maxCount:'
         JsName:          getDoubleQuaternionArrayMaxCount
@@ -222,7 +222,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatd
+              Name:            simd_quatd
           - Type:            ULong
       - Name:            'getFloatQuaternionArray:maxCount:'
         JsName:          getFloatQuaternionArrayMaxCount
@@ -240,7 +240,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatf
+              Name:            simd_quatf
           - Type:            ULong
       - Name:            'resetWithDoubleQuaternionArray:atTimes:count:'
         JsName:          resetWithDoubleQuaternionArrayAtTimesCount
@@ -258,7 +258,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatd
+              Name:            simd_quatd
           - Type:            Pointer
             PointerType:     
               Type:            Double
@@ -279,7 +279,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatf
+              Name:            simd_quatf
           - Type:            Pointer
             PointerType:     
               Type:            Double
@@ -298,7 +298,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_quatd
+            Name:            simd_quatd
           - Type:            Double
       - Name:            'setFloatQuaternion:atTime:'
         JsName:          setFloatQuaternionAtTime
@@ -314,7 +314,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_quatf
+            Name:            simd_quatf
           - Type:            Double
     StaticMethods:   
     InstanceProperties: 
@@ -349,7 +349,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatd
+              Name:            simd_quatd
           - Type:            ULong
       - Name:            'getDoubleQuaternionArray:maxCount:atTime:'
         JsName:          getDoubleQuaternionArrayMaxCountAtTime
@@ -367,7 +367,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatd
+              Name:            simd_quatd
           - Type:            ULong
           - Type:            Double
       - Name:            'getFloatQuaternionArray:maxCount:'
@@ -386,7 +386,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatf
+              Name:            simd_quatf
           - Type:            ULong
       - Name:            'getFloatQuaternionArray:maxCount:atTime:'
         JsName:          getFloatQuaternionArrayMaxCountAtTime
@@ -404,7 +404,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatf
+              Name:            simd_quatf
           - Type:            ULong
           - Type:            Double
       - Name:            'initWithElementCount:'
@@ -436,7 +436,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatd
+              Name:            simd_quatd
           - Type:            ULong
           - Type:            Pointer
             PointerType:     
@@ -458,7 +458,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatf
+              Name:            simd_quatf
           - Type:            ULong
           - Type:            Pointer
             PointerType:     
@@ -480,7 +480,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatd
+              Name:            simd_quatd
           - Type:            ULong
           - Type:            Double
       - Name:            'setFloatQuaternionArray:count:atTime:'
@@ -499,7 +499,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_quatf
+              Name:            simd_quatf
           - Type:            ULong
           - Type:            Double
     StaticMethods:   
@@ -980,10 +980,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            maximumTime
@@ -1775,7 +1775,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_double4x4
+              Name:            simd_double4x4
         Setter:          
           Name:            'setGeometryBindTransform:'
           JsName:          setGeometryBindTransform
@@ -1791,7 +1791,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_double4x4
+              Name:            simd_double4x4
       - Name:            jointAnimation
         JsName:          jointAnimation
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLAnimation.h
@@ -1856,10 +1856,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1876,10 +1876,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            skeleton
@@ -1905,7 +1905,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLSkeleton
+              Name:            MDLSkeleton
               WithProtocols:   
         Setter:          
           Name:            'setSkeleton:'
@@ -1921,7 +1921,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLSkeleton
+              Name:            MDLSkeleton
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2079,7 +2079,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
       - Name:            'boundingBoxAtTime:'
         JsName:          boundingBoxAtTime
@@ -2094,7 +2094,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          ModelIO.MDLTypes
-            JsName:          MDLAxisAlignedBoundingBox
+            Name:            MDLAxisAlignedBoundingBox
           - Type:            Double
       - Name:            'childObjectsOfClass:'
         JsName:          childObjectsOfClass
@@ -2108,10 +2108,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLObject
+                Name:            MDLObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Class
@@ -2128,7 +2128,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'exportAssetToURL:error:'
         JsName:          exportAssetToURLError
@@ -2143,12 +2143,12 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'initWithBufferAllocator:'
         JsName:          initWithBufferAllocator
@@ -2178,7 +2178,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'initWithURL:vertexDescriptor:bufferAllocator:'
         JsName:          initWithURLVertexDescriptorBufferAllocator
@@ -2193,10 +2193,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLVertexDescriptor
+            Name:            MDLVertexDescriptor
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -2214,10 +2214,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLVertexDescriptor
+            Name:            MDLVertexDescriptor
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -2226,7 +2226,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            loadTextures
         JsName:          loadTextures
@@ -2253,7 +2253,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
           - Type:            ULong
       - Name:            'objectAtIndexedSubscript:'
@@ -2268,7 +2268,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
           - Type:            ULong
       - Name:            'objectAtPath:'
@@ -2284,10 +2284,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'removeObject:'
         JsName:          removeObject
@@ -2302,7 +2302,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
     StaticMethods:   
       - Name:            'canExportFileExtension:'
@@ -2318,7 +2318,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'canImportFileExtension:'
         JsName:          canImportFileExtension
@@ -2333,7 +2333,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'placeLightProbesWithDensity:heuristic:usingIrradianceDataSource:'
         JsName:          placeLightProbesWithDensityHeuristicUsingIrradianceDataSource
@@ -2347,10 +2347,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLLightProbe
+                Name:            MDLLightProbe
                 WithProtocols:   
             WithProtocols:   
           - Type:            Float
@@ -2373,7 +2373,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNScene
+            Name:            SCNScene
             WithProtocols:   
       - Name:            'assetWithSCNScene:bufferAllocator:'
         JsName:          assetWithSCNSceneBufferAllocator
@@ -2389,7 +2389,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNScene
+            Name:            SCNScene
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -2463,7 +2463,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          ModelIO.MDLTypes
-              JsName:          MDLAxisAlignedBoundingBox
+              Name:            MDLAxisAlignedBoundingBox
       - Name:            bufferAllocator
         JsName:          bufferAllocator
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLAsset.h
@@ -2770,7 +2770,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            vertexDescriptor
         JsName:          vertexDescriptor
@@ -2795,7 +2795,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLVertexDescriptor
+              Name:            MDLVertexDescriptor
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2827,7 +2827,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'resolveAssetNamed:'
         JsName:          resolveAssetNamed
@@ -2841,17 +2841,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
     StaticProperties: 
     Protocols:       
       - NSObjectProtocol
-  - Name:            ''
+  - Name:            MDLAxisAlignedBoundingBox
     JsName:          MDLAxisAlignedBoundingBox
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLTypes.h
     Module:          
@@ -2893,7 +2893,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2920,7 +2920,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPath:'
@@ -2936,7 +2936,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2966,7 +2966,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLTexture
+            Name:            MDLTexture
             WithProtocols:   
           - Type:            
       - Name:            'frameBoundingBox:setNearAndFar:'
@@ -2983,7 +2983,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          ModelIO.MDLTypes
-            JsName:          MDLAxisAlignedBoundingBox
+            Name:            MDLAxisAlignedBoundingBox
           - Type:            Bool
       - Name:            'lookAt:'
         JsName:          lookAt
@@ -3040,7 +3040,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNCamera
+            Name:            SCNCamera
             WithProtocols:   
     InstanceProperties: 
       - Name:            apertureBladeCount
@@ -3658,7 +3658,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
       - Name:            sensorAspect
         JsName:          sensorAspect
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLCamera.h
@@ -3946,7 +3946,7 @@ Items:
           - Type:            Instancetype
           - Type:            Float
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            
           - Type:            Int
@@ -4113,7 +4113,7 @@ Items:
             Name:            id
             BridgedTo:       id
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            
       - Name:            'initWithColorTemperatureGradientFrom:toColorTemperature:name:textureDimensions:'
@@ -4131,7 +4131,7 @@ Items:
           - Type:            Float
           - Type:            Float
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            StaticMethods:   
     InstanceProperties: 
@@ -4476,7 +4476,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNLight
+            Name:            SCNLight
             WithProtocols:   
     InstanceProperties: 
       - Name:            colorSpace
@@ -4502,7 +4502,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setColorSpace:'
@@ -4518,7 +4518,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            lightType
         JsName:          lightType
@@ -4600,10 +4600,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLTexture
+            Name:            MDLTexture
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLTexture
+            Name:            MDLTexture
             WithProtocols:   
     StaticMethods:   
       - Name:            'lightProbeWithTextureSize:forLocation:lightsToConsider:objectsToConsider:reflectiveCubemap:irradianceCubemap:'
@@ -4618,31 +4618,31 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLLightProbe
+            Name:            MDLLightProbe
             WithProtocols:   
           - Type:            Long
           - Type:            Interface
-            JsName:          MDLTransform
+            Name:            MDLTransform
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLLight
+                Name:            MDLLight
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLObject
+                Name:            MDLObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLTexture
+            Name:            MDLTexture
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLTexture
+            Name:            MDLTexture
             WithProtocols:   
     InstanceProperties: 
       - Name:            irradianceTexture
@@ -4668,7 +4668,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLTexture
+              Name:            MDLTexture
               WithProtocols:   
       - Name:            reflectiveTexture
         JsName:          reflectiveTexture
@@ -4693,7 +4693,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLTexture
+              Name:            MDLTexture
               WithProtocols:   
       - Name:            sphericalHarmonicsCoefficients
         JsName:          sphericalHarmonicsCoefficients
@@ -4718,7 +4718,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            sphericalHarmonicsLevel
         JsName:          sphericalHarmonicsLevel
@@ -4769,7 +4769,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            StaticMethods:   
     InstanceProperties: 
@@ -4797,7 +4797,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          ModelIO.MDLTypes
-              JsName:          MDLAxisAlignedBoundingBox
+              Name:            MDLAxisAlignedBoundingBox
         Setter:          
           Name:            'setBoundingBox:'
           JsName:          setBoundingBox
@@ -4813,7 +4813,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          ModelIO.MDLTypes
-              JsName:          MDLAxisAlignedBoundingBox
+              Name:            MDLAxisAlignedBoundingBox
       - Name:            sphericalHarmonicsLevel
         JsName:          sphericalHarmonicsLevel
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLAsset.h
@@ -5047,10 +5047,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLScatteringFunction
+            Name:            MDLScatteringFunction
             WithProtocols:   
       - Name:            'loadTexturesUsingResolver:'
         JsName:          loadTexturesUsingResolver
@@ -5080,7 +5080,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLMaterialProperty
+            Name:            MDLMaterialProperty
             WithProtocols:   
           - Type:            ULong
       - Name:            'objectForKeyedSubscript:'
@@ -5095,10 +5095,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLMaterialProperty
+            Name:            MDLMaterialProperty
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'propertiesWithSemantic:'
         JsName:          propertiesWithSemantic
@@ -5113,10 +5113,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLMaterialProperty
+                Name:            MDLMaterialProperty
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -5133,10 +5133,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLMaterialProperty
+            Name:            MDLMaterialProperty
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'propertyWithSemantic:'
         JsName:          propertyWithSemantic
@@ -5150,7 +5150,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLMaterialProperty
+            Name:            MDLMaterialProperty
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMaterialSemantic
@@ -5179,7 +5179,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLMaterialProperty
+            Name:            MDLMaterialProperty
             WithProtocols:   
       - Name:            'resolveTexturesWithResolver:'
         JsName:          resolveTexturesWithResolver
@@ -5210,7 +5210,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLMaterialProperty
+            Name:            MDLMaterialProperty
             WithProtocols:   
     StaticMethods:   
       - Name:            'materialWithSCNMaterial:'
@@ -5227,7 +5227,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNMaterial
+            Name:            SCNMaterial
             WithProtocols:   
     InstanceProperties: 
       - Name:            baseMaterial
@@ -5253,7 +5253,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterial
+              Name:            MDLMaterial
               WithProtocols:   
         Setter:          
           Name:            'setBaseMaterial:'
@@ -5269,7 +5269,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLMaterial
+              Name:            MDLMaterial
               WithProtocols:   
       - Name:            count
         JsName:          count
@@ -5356,7 +5356,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLScatteringFunction
+              Name:            MDLScatteringFunction
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5477,7 +5477,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMaterialSemantic
@@ -5494,7 +5494,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMaterialSemantic
@@ -5514,7 +5514,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMaterialSemantic
@@ -5532,7 +5532,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMaterialSemantic
@@ -5550,7 +5550,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMaterialSemantic
@@ -5568,7 +5568,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMaterialSemantic
@@ -5586,13 +5586,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMaterialSemantic
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
       - Name:            'initWithName:semantic:string:'
         JsName:          initWithNameSemanticString
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLMaterial.h
@@ -5606,12 +5606,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMaterialSemantic
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithName:semantic:textureSampler:'
         JsName:          initWithNameSemanticTextureSampler
@@ -5626,12 +5626,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMaterialSemantic
           - Type:            Interface
-            JsName:          MDLTextureSampler
+            Name:            MDLTextureSampler
             WithProtocols:   
       - Name:            'initWithName:semantic:URL:'
         JsName:          initWithNameSemanticURL
@@ -5646,12 +5646,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMaterialSemantic
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'setProperties:'
         JsName:          setProperties
@@ -5666,7 +5666,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLMaterialProperty
+            Name:            MDLMaterialProperty
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -5917,7 +5917,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
         Setter:          
           Name:            'setMatrix4x4:'
           JsName:          setMatrix4x4
@@ -5933,7 +5933,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
       - Name:            semantic
         JsName:          semantic
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLMaterial.h
@@ -5996,7 +5996,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setStringValue:'
@@ -6012,7 +6012,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            textureSamplerValue
         JsName:          textureSamplerValue
@@ -6037,7 +6037,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLTextureSampler
+              Name:            MDLTextureSampler
               WithProtocols:   
         Setter:          
           Name:            'setTextureSamplerValue:'
@@ -6053,7 +6053,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLTextureSampler
+              Name:            MDLTextureSampler
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -6117,7 +6117,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setURLValue:'
@@ -6133,7 +6133,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -6165,10 +6165,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLMaterialProperty
+            Name:            MDLMaterialProperty
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLMaterialProperty
+            Name:            MDLMaterialProperty
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -6195,7 +6195,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            output
         JsName:          output
@@ -6220,7 +6220,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -6263,17 +6263,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLMaterialPropertyNode
+                Name:            MDLMaterialPropertyNode
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLMaterialPropertyConnection
+                Name:            MDLMaterialPropertyConnection
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -6301,10 +6301,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLMaterialPropertyConnection
+                  Name:            MDLMaterialPropertyConnection
                   WithProtocols:   
               WithProtocols:   
       - Name:            nodes
@@ -6330,10 +6330,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLMaterialPropertyNode
+                  Name:            MDLMaterialPropertyNode
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -6364,24 +6364,24 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLMaterialProperty
+                Name:            MDLMaterialProperty
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLMaterialProperty
+                Name:            MDLMaterialProperty
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MDLMaterialPropertyNode
+                Name:            MDLMaterialPropertyNode
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -6411,7 +6411,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          MDLMaterialPropertyNode
+                  Name:            MDLMaterialPropertyNode
                   WithProtocols:   
         Setter:          
           Name:            'setEvaluationFunction:'
@@ -6430,7 +6430,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          MDLMaterialPropertyNode
+                  Name:            MDLMaterialPropertyNode
                   WithProtocols:   
       - Name:            inputs
         JsName:          inputs
@@ -6455,10 +6455,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLMaterialProperty
+                  Name:            MDLMaterialProperty
                   WithProtocols:   
               WithProtocols:   
       - Name:            outputs
@@ -6484,10 +6484,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLMaterialProperty
+                  Name:            MDLMaterialProperty
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -7115,7 +7115,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_double4x4
+              Name:            simd_double4x4
           - Type:            ULong
       - Name:            'getFloat4x4Array:maxCount:'
         JsName:          getFloat4x4ArrayMaxCount
@@ -7133,7 +7133,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
           - Type:            ULong
       - Name:            'initWithElementCount:'
         JsName:          initWithElementCount
@@ -7164,7 +7164,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_double4x4
+              Name:            simd_double4x4
           - Type:            ULong
       - Name:            'setFloat4x4Array:count:'
         JsName:          setFloat4x4ArrayCount
@@ -7182,7 +7182,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
           - Type:            ULong
     StaticMethods:   
     InstanceProperties: 
@@ -7277,7 +7277,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -7285,13 +7285,13 @@ Items:
             WithProtocols:   
           - Type:            ULong
           - Type:            Interface
-            JsName:          MDLVertexDescriptor
+            Name:            MDLVertexDescriptor
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLSubmesh
+                Name:            MDLSubmesh
                 WithProtocols:   
             WithProtocols:   
       - Name:            'initWithVertexBuffer:vertexCount:descriptor:submeshes:'
@@ -7311,13 +7311,13 @@ Items:
               - MDLMeshBuffer
           - Type:            ULong
           - Type:            Interface
-            JsName:          MDLVertexDescriptor
+            Name:            MDLVertexDescriptor
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLSubmesh
+                Name:            MDLSubmesh
                 WithProtocols:   
             WithProtocols:   
       - Name:            'vertexAttributeDataForAttributeNamed:'
@@ -7332,10 +7332,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLVertexAttributeData
+            Name:            MDLVertexAttributeData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'vertexAttributeDataForAttributeNamed:asFormat:'
         JsName:          vertexAttributeDataForAttributeNamedAsFormat
@@ -7349,10 +7349,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLVertexAttributeData
+            Name:            MDLVertexAttributeData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLVertexFormat
@@ -7369,7 +7369,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLVertexFormat
@@ -7386,15 +7386,15 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLVertexFormat
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Long
       - Name:            'addAttributeWithName:format:type:data:stride:time:'
@@ -7410,15 +7410,15 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLVertexFormat
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Long
           - Type:            Double
@@ -7435,7 +7435,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Float
       - Name:            'addOrthTanBasisForTextureCoordinateAttributeNamed:normalAttributeNamed:tangentAttributeNamed:'
@@ -7452,13 +7452,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'addTangentBasisForTextureCoordinateAttributeNamed:normalAttributeNamed:tangentAttributeNamed:'
         JsName:          addTangentBasisForTextureCoordinateAttributeNamedNormalAttributeNamedTangentAttributeNamed
@@ -7473,13 +7473,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'addTangentBasisForTextureCoordinateAttributeNamed:tangentAttributeNamed:bitangentAttributeNamed:'
         JsName:          addTangentBasisForTextureCoordinateAttributeNamedTangentAttributeNamedBitangentAttributeNamed
@@ -7494,13 +7494,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'addUnwrappedTextureCoordinatesForAttributeNamed:'
         JsName:          addUnwrappedTextureCoordinatesForAttributeNamed
@@ -7515,7 +7515,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'flipTextureCoordinatesInAttributeNamed:'
         JsName:          flipTextureCoordinatesInAttributeNamed
@@ -7531,7 +7531,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            makeVerticesUnique
         JsName:          makeVerticesUnique
@@ -7562,7 +7562,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'removeAttributeNamed:'
         JsName:          removeAttributeNamed
@@ -7577,7 +7577,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'replaceAttributeNamed:withData:'
         JsName:          replaceAttributeNamedWithData
@@ -7592,10 +7592,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLVertexAttributeData
+            Name:            MDLVertexAttributeData
             WithProtocols:   
       - Name:            'updateAttributeNamed:withData:'
         JsName:          updateAttributeNamedWithData
@@ -7610,10 +7610,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLVertexAttributeData
+            Name:            MDLVertexAttributeData
             WithProtocols:   
       - Name:            'initBoxWithExtent:segments:inwardNormals:geometryType:allocator:'
         JsName:          initBoxWithExtentSegmentsInwardNormalsGeometryTypeAllocator
@@ -7752,7 +7752,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLMesh
+            Name:            MDLMesh
             WithProtocols:   
           - Type:            Int
           - Type:            UInt
@@ -7813,17 +7813,17 @@ Items:
           - Type:            Float
           - Type:            Float
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLObject
+                Name:            MDLObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'generateAmbientOcclusionTextureWithSize:raysPerSample:attenuationFactor:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:'
         JsName:          generateAmbientOcclusionTextureWithSizeRaysPerSampleAttenuationFactorObjectsToConsiderVertexAttributeNamedMaterialPropertyNamed
@@ -7841,17 +7841,17 @@ Items:
           - Type:            Long
           - Type:            Float
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLObject
+                Name:            MDLObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'generateAmbientOcclusionVertexColorsWithQuality:attenuationFactor:objectsToConsider:vertexAttributeNamed:'
         JsName:          generateAmbientOcclusionVertexColorsWithQualityAttenuationFactorObjectsToConsiderVertexAttributeNamed
@@ -7868,14 +7868,14 @@ Items:
           - Type:            Float
           - Type:            Float
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLObject
+                Name:            MDLObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'generateAmbientOcclusionVertexColorsWithRaysPerSample:attenuationFactor:objectsToConsider:vertexAttributeNamed:'
         JsName:          generateAmbientOcclusionVertexColorsWithRaysPerSampleAttenuationFactorObjectsToConsiderVertexAttributeNamed
@@ -7892,14 +7892,14 @@ Items:
           - Type:            Long
           - Type:            Float
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLObject
+                Name:            MDLObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'generateLightMapTextureWithQuality:lightsToConsider:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:'
         JsName:          generateLightMapTextureWithQualityLightsToConsiderObjectsToConsiderVertexAttributeNamedMaterialPropertyNamed
@@ -7915,24 +7915,24 @@ Items:
           - Type:            Bool
           - Type:            Float
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLLight
+                Name:            MDLLight
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLObject
+                Name:            MDLObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'generateLightMapTextureWithTextureSize:lightsToConsider:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:'
         JsName:          generateLightMapTextureWithTextureSizeLightsToConsiderObjectsToConsiderVertexAttributeNamedMaterialPropertyNamed
@@ -7948,24 +7948,24 @@ Items:
           - Type:            Bool
           - Type:            
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLLight
+                Name:            MDLLight
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLObject
+                Name:            MDLObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'generateLightMapVertexColorsWithLightsToConsider:objectsToConsider:vertexAttributeNamed:'
         JsName:          generateLightMapVertexColorsWithLightsToConsiderObjectsToConsiderVertexAttributeNamed
@@ -7980,21 +7980,21 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLLight
+                Name:            MDLLight
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MDLObject
+                Name:            MDLObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'newBoxWithDimensions:segments:geometryType:inwardNormals:allocator:'
@@ -8176,7 +8176,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLMesh
+            Name:            MDLMesh
             WithProtocols:   
           - Type:            ULong
           - Type:            ULong
@@ -8194,7 +8194,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNGeometry
+            Name:            SCNGeometry
             WithProtocols:   
       - Name:            'meshWithSCNGeometry:bufferAllocator:'
         JsName:          meshWithSCNGeometryBufferAllocator
@@ -8210,7 +8210,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNGeometry
+            Name:            SCNGeometry
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -8265,7 +8265,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          ModelIO.MDLTypes
-              JsName:          MDLAxisAlignedBoundingBox
+              Name:            MDLAxisAlignedBoundingBox
       - Name:            submeshes
         JsName:          submeshes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLMesh.h
@@ -8289,10 +8289,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSMutableArray
+              Name:            NSMutableArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLSubmesh
+                  Name:            MDLSubmesh
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -8309,10 +8309,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSMutableArray
+              Name:            NSMutableArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLSubmesh
+                  Name:            MDLSubmesh
                   WithProtocols:   
               WithProtocols:   
       - Name:            vertexBuffers
@@ -8338,7 +8338,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Id
                   WithProtocols:   
@@ -8358,7 +8358,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Id
                   WithProtocols:   
@@ -8424,7 +8424,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLVertexDescriptor
+              Name:            MDLVertexDescriptor
               WithProtocols:   
         Setter:          
           Name:            'setVertexDescriptor:'
@@ -8440,7 +8440,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLVertexDescriptor
+              Name:            MDLVertexDescriptor
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -8470,7 +8470,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            ULong
       - Name:            map
@@ -8485,7 +8485,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLMeshBufferMap
+            Name:            MDLMeshBufferMap
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8620,7 +8620,7 @@ Items:
             WithProtocols:   
               - MDLMeshBufferZone
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMeshBufferType
@@ -8676,7 +8676,7 @@ Items:
             WithProtocols:   
               - MDLMeshBuffer
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Enum
             Name:            MDLMeshBufferType
@@ -8710,17 +8710,17 @@ Items:
             WithProtocols:   
               - MDLMeshBufferZone
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -8755,7 +8755,7 @@ Items:
           - Type:            Enum
             Name:            MDLMeshBufferType
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'initWithType:length:'
         JsName:          initWithTypeLength
@@ -8797,7 +8797,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9039,7 +9039,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -9055,7 +9055,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9086,7 +9086,7 @@ Items:
           - Type:            Instancetype
           - Type:            Float
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            
           - Type:            Enum
@@ -9105,7 +9105,7 @@ Items:
           - Type:            Instancetype
           - Type:            Float
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            
           - Type:            Int
@@ -9126,7 +9126,7 @@ Items:
           - Type:            Instancetype
           - Type:            Float
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            
           - Type:            Enum
@@ -9161,10 +9161,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLTexture
+            Name:            MDLTexture
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Float
           - Type:            Float
@@ -9198,7 +9198,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
       - Name:            'boundingBoxAtTime:'
         JsName:          boundingBoxAtTime
@@ -9213,7 +9213,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          ModelIO.MDLTypes
-            JsName:          MDLAxisAlignedBoundingBox
+            Name:            MDLAxisAlignedBoundingBox
           - Type:            Double
       - Name:            'componentConformingToProtocol:'
         JsName:          componentConformingToProtocol
@@ -9245,13 +9245,13 @@ Items:
           - Type:            Void
           - Type:            Class
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MDLObject
+                Name:            MDLObject
                 WithProtocols:   
               - Type:            Pointer
                 PointerType:     
@@ -9271,10 +9271,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'objectForKeyedSubscript:'
         JsName:          objectForKeyedSubscript
@@ -9338,7 +9338,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNNode
+            Name:            SCNNode
             WithProtocols:   
       - Name:            'objectWithSCNNode:bufferAllocator:'
         JsName:          objectWithSCNNodeBufferAllocator
@@ -9354,7 +9354,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNNode
+            Name:            SCNNode
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -9424,7 +9424,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Id
                   WithProtocols:   
@@ -9490,7 +9490,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLObject
+              Name:            MDLObject
               WithProtocols:   
         Setter:          
           Name:            'setInstance:'
@@ -9506,7 +9506,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLObject
+              Name:            MDLObject
               WithProtocols:   
       - Name:            parent
         JsName:          parent
@@ -9531,7 +9531,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLObject
+              Name:            MDLObject
               WithProtocols:   
         Setter:          
           Name:            'setParent:'
@@ -9547,7 +9547,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLObject
+              Name:            MDLObject
               WithProtocols:   
       - Name:            path
         JsName:          path
@@ -9572,7 +9572,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            transform
         JsName:          transform
@@ -9662,7 +9662,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
       - Name:            'objectAtIndexedSubscript:'
         JsName:          objectAtIndexedSubscript
@@ -9677,7 +9677,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
           - Type:            ULong
       - Name:            'removeObject:'
@@ -9693,7 +9693,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -9745,10 +9745,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLObject
+                  Name:            MDLObject
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -9780,13 +9780,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -9814,10 +9814,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            rotations
@@ -9843,7 +9843,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAnimatedQuaternionArray
+              Name:            MDLAnimatedQuaternionArray
               WithProtocols:   
       - Name:            scales
         JsName:          scales
@@ -9868,7 +9868,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAnimatedVector3Array
+              Name:            MDLAnimatedVector3Array
               WithProtocols:   
       - Name:            translations
         JsName:          translations
@@ -9893,7 +9893,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAnimatedVector3Array
+              Name:            MDLAnimatedVector3Array
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9925,7 +9925,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -9952,7 +9952,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPath:'
@@ -9968,7 +9968,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10025,7 +10025,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLTexture
+            Name:            MDLTexture
             WithProtocols:   
           - Type:            ULong
       - Name:            'initWithIESProfile:'
@@ -10041,7 +10041,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -10068,7 +10068,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLTexture
+              Name:            MDLTexture
               WithProtocols:   
       - Name:            sphericalHarmonicsCoefficients
         JsName:          sphericalHarmonicsCoefficients
@@ -10093,7 +10093,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            sphericalHarmonicsLevel
         JsName:          sphericalHarmonicsLevel
@@ -10414,7 +10414,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            anisotropicRotation
         JsName:          anisotropicRotation
@@ -10439,7 +10439,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            clearcoat
         JsName:          clearcoat
@@ -10464,7 +10464,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            clearcoatGloss
         JsName:          clearcoatGloss
@@ -10489,7 +10489,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            metallic
         JsName:          metallic
@@ -10514,7 +10514,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            roughness
         JsName:          roughness
@@ -10539,7 +10539,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            sheen
         JsName:          sheen
@@ -10564,7 +10564,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            sheenTint
         JsName:          sheenTint
@@ -10589,7 +10589,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            specularAmount
         JsName:          specularAmount
@@ -10614,7 +10614,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            specularTint
         JsName:          specularTint
@@ -10639,7 +10639,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            subsurface
         JsName:          subsurface
@@ -10664,7 +10664,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            version
         JsName:          version
@@ -10755,7 +10755,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLAsset
+            Name:            MDLAsset
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -10782,7 +10782,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAsset
+              Name:            MDLAsset
               WithProtocols:   
         Setter:          
           Name:            'setAsset:'
@@ -10798,7 +10798,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLAsset
+              Name:            MDLAsset
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10841,7 +10841,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            ambientOcclusionScale
         JsName:          ambientOcclusionScale
@@ -10866,7 +10866,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            baseColor
         JsName:          baseColor
@@ -10891,7 +10891,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            emission
         JsName:          emission
@@ -10916,7 +10916,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            interfaceIndexOfRefraction
         JsName:          interfaceIndexOfRefraction
@@ -10941,7 +10941,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            materialIndexOfRefraction
         JsName:          materialIndexOfRefraction
@@ -10966,7 +10966,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            normal
         JsName:          normal
@@ -10991,7 +10991,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
       - Name:            specular
         JsName:          specular
@@ -11016,7 +11016,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterialProperty
+              Name:            MDLMaterialProperty
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -11047,13 +11047,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -11081,7 +11081,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMatrix4x4Array
+              Name:            MDLMatrix4x4Array
               WithProtocols:   
       - Name:            jointPaths
         JsName:          jointPaths
@@ -11106,10 +11106,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            jointRestTransforms
@@ -11135,7 +11135,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMatrix4x4Array
+              Name:            MDLMatrix4x4Array
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -11167,7 +11167,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLTextureChannelEncoding
@@ -11190,7 +11190,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLTextureChannelEncoding
@@ -11778,7 +11778,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
       - Name:            leftVergence
         JsName:          leftVergence
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLCamera.h
@@ -11840,7 +11840,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
       - Name:            overlap
         JsName:          overlap
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLCamera.h
@@ -11902,7 +11902,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
       - Name:            rightVergence
         JsName:          rightVergence
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLCamera.h
@@ -11964,7 +11964,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
     StaticProperties: 
     Protocols:       
     Base:            MDLCamera
@@ -12017,7 +12017,7 @@ Items:
           - Type:            Enum
             Name:            MDLGeometryType
           - Type:            Interface
-            JsName:          MDLMaterial
+            Name:            MDLMaterial
             WithProtocols:   
       - Name:            'initWithMDLSubmesh:indexType:geometryType:'
         JsName:          initWithMDLSubmeshIndexTypeGeometryType
@@ -12032,7 +12032,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLSubmesh
+            Name:            MDLSubmesh
             WithProtocols:   
           - Type:            Enum
             Name:            MDLIndexBitDepth
@@ -12051,7 +12051,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -12062,7 +12062,7 @@ Items:
           - Type:            Enum
             Name:            MDLGeometryType
           - Type:            Interface
-            JsName:          MDLMaterial
+            Name:            MDLMaterial
             WithProtocols:   
       - Name:            'initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:'
         JsName:          initWithNameIndexBufferIndexCountIndexTypeGeometryTypeMaterialTopology
@@ -12077,7 +12077,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -12088,10 +12088,10 @@ Items:
           - Type:            Enum
             Name:            MDLGeometryType
           - Type:            Interface
-            JsName:          MDLMaterial
+            Name:            MDLMaterial
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLSubmeshTopology
+            Name:            MDLSubmeshTopology
             WithProtocols:   
     StaticMethods:   
       - Name:            'submeshWithSCNGeometryElement:'
@@ -12108,7 +12108,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNGeometryElement
+            Name:            SCNGeometryElement
             WithProtocols:   
       - Name:            'submeshWithSCNGeometryElement:bufferAllocator:'
         JsName:          submeshWithSCNGeometryElementBufferAllocator
@@ -12124,7 +12124,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNGeometryElement
+            Name:            SCNGeometryElement
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -12249,7 +12249,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMaterial
+              Name:            MDLMaterial
               WithProtocols:   
         Setter:          
           Name:            'setMaterial:'
@@ -12265,7 +12265,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLMaterial
+              Name:            MDLMaterial
               WithProtocols:   
       - Name:            topology
         JsName:          topology
@@ -12290,7 +12290,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLSubmeshTopology
+              Name:            MDLSubmeshTopology
               WithProtocols:   
         Setter:          
           Name:            'setTopology:'
@@ -12306,7 +12306,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLSubmeshTopology
+              Name:            MDLSubmeshTopology
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -12337,7 +12337,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLSubmesh
+            Name:            MDLSubmesh
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -12793,11 +12793,11 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            
           - Type:            Long
@@ -12817,7 +12817,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'texelDataWithBottomLeftOriginAtMipLevel:create:'
         JsName:          texelDataWithBottomLeftOriginAtMipLevelCreate
@@ -12831,7 +12831,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Long
           - Type:            Bool
@@ -12847,7 +12847,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'texelDataWithTopLeftOriginAtMipLevel:create:'
         JsName:          texelDataWithTopLeftOriginAtMipLevelCreate
@@ -12861,7 +12861,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Long
           - Type:            Bool
@@ -12878,7 +12878,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'writeToURL:level:'
         JsName:          writeToURLLevel
@@ -12894,7 +12894,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            ULong
       - Name:            'writeToURL:type:'
@@ -12910,7 +12910,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            NSString
@@ -12929,7 +12929,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            NSString
@@ -12949,10 +12949,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLTexture
+            Name:            MDLTexture
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            
       - Name:            'irradianceTextureCubeWithTexture:name:dimensions:roughness:'
@@ -12968,10 +12968,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLTexture
+            Name:            MDLTexture
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            
           - Type:            Float
@@ -12988,10 +12988,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'textureCubeWithImagesNamed:bundle:'
@@ -13007,14 +13007,14 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSBundle
+            Name:            NSBundle
             WithProtocols:   
       - Name:            'textureNamed:'
         JsName:          textureNamed
@@ -13029,7 +13029,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'textureNamed:assetResolver:'
         JsName:          textureNamedAssetResolver
@@ -13045,7 +13045,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -13063,10 +13063,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSBundle
+            Name:            NSBundle
             WithProtocols:   
     InstanceProperties: 
       - Name:            channelCount
@@ -13706,7 +13706,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLTextureFilter
+              Name:            MDLTextureFilter
               WithProtocols:   
         Setter:          
           Name:            'setHardwareFilter:'
@@ -13722,7 +13722,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLTextureFilter
+              Name:            MDLTextureFilter
               WithProtocols:   
       - Name:            texture
         JsName:          texture
@@ -13747,7 +13747,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLTexture
+              Name:            MDLTexture
               WithProtocols:   
         Setter:          
           Name:            'setTexture:'
@@ -13763,7 +13763,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLTexture
+              Name:            MDLTexture
               WithProtocols:   
       - Name:            transform
         JsName:          transform
@@ -13788,7 +13788,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLTransform
+              Name:            MDLTransform
               WithProtocols:   
         Setter:          
           Name:            'setTransform:'
@@ -13804,7 +13804,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLTransform
+              Name:            MDLTransform
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -13848,7 +13848,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
       - Name:            'initWithMatrix:resetsTransform:'
         JsName:          initWithMatrixResetsTransform
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLTransform.h
@@ -13863,7 +13863,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Bool
       - Name:            'initWithTransformComponent:'
         JsName:          initWithTransformComponent
@@ -13922,7 +13922,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Double
       - Name:            'scaleAtTime:'
         JsName:          scaleAtTime
@@ -13964,7 +13964,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Double
       - Name:            'setRotation:forTime:'
         JsName:          setRotationForTime
@@ -14223,7 +14223,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Double
       - Name:            'setLocalTransform:'
         JsName:          setLocalTransform
@@ -14239,7 +14239,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
       - Name:            'setLocalTransform:forTime:'
         JsName:          setLocalTransformForTime
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLTransform.h
@@ -14254,7 +14254,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Double
     StaticMethods:   
       - Name:            'globalTransformWithObject:atTime:'
@@ -14270,9 +14270,9 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Interface
-            JsName:          MDLObject
+            Name:            MDLObject
             WithProtocols:   
           - Type:            Double
     InstanceProperties: 
@@ -14299,10 +14299,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            matrix
@@ -14329,7 +14329,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
         Setter:          
           Name:            'setMatrix:'
           JsName:          setMatrix
@@ -14345,7 +14345,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
       - Name:            maximumTime
         JsName:          maximumTime
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLTransform.h
@@ -14469,7 +14469,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAnimatedMatrix4x4
+              Name:            MDLAnimatedMatrix4x4
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -14500,7 +14500,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_double4x4
+            Name:            simd_double4x4
           - Type:            Double
       - Name:            'float4x4AtTime:'
         JsName:          float4x4AtTime
@@ -14515,7 +14515,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Double
       - Name:            IsInverseOp
         JsName:          IsInverseOp
@@ -14554,7 +14554,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -14685,7 +14685,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAnimatedQuaternion
+              Name:            MDLAnimatedQuaternion
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -14728,7 +14728,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAnimatedVector3
+              Name:            MDLAnimatedVector3
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -14771,7 +14771,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAnimatedScalar
+              Name:            MDLAnimatedScalar
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -14814,7 +14814,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAnimatedScalar
+              Name:            MDLAnimatedScalar
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -14857,7 +14857,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAnimatedScalar
+              Name:            MDLAnimatedScalar
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -14900,7 +14900,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAnimatedVector3
+              Name:            MDLAnimatedVector3
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -14930,10 +14930,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLTransformMatrixOp
+            Name:            MDLTransformMatrixOp
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
       - Name:            'addOrientOp:inverse:'
@@ -14948,10 +14948,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLTransformOrientOp
+            Name:            MDLTransformOrientOp
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
       - Name:            'addRotateOp:order:inverse:'
@@ -14966,10 +14966,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLTransformRotateOp
+            Name:            MDLTransformRotateOp
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLTransformOpRotationOrder
@@ -14986,10 +14986,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLTransformRotateXOp
+            Name:            MDLTransformRotateXOp
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
       - Name:            'addRotateYOp:inverse:'
@@ -15004,10 +15004,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLTransformRotateYOp
+            Name:            MDLTransformRotateYOp
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
       - Name:            'addRotateZOp:inverse:'
@@ -15022,10 +15022,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLTransformRotateZOp
+            Name:            MDLTransformRotateZOp
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
       - Name:            'addScaleOp:inverse:'
@@ -15040,10 +15040,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLTransformScaleOp
+            Name:            MDLTransformScaleOp
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
       - Name:            'addTranslateOp:inverse:'
@@ -15058,10 +15058,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLTransformTranslateOp
+            Name:            MDLTransformTranslateOp
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
       - Name:            'animatedValueWithName:'
@@ -15076,10 +15076,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLAnimatedValue
+            Name:            MDLAnimatedValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            count
         JsName:          count
@@ -15106,7 +15106,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_double4x4
+            Name:            simd_double4x4
           - Type:            Double
       - Name:            'float4x4AtTime:'
         JsName:          float4x4AtTime
@@ -15121,7 +15121,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Double
     StaticMethods:   
     InstanceProperties: 
@@ -15148,7 +15148,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Id
                   WithProtocols:   
@@ -15196,7 +15196,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLAnimatedVector3
+              Name:            MDLAnimatedVector3
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -15227,10 +15227,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -15257,7 +15257,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setURL:'
@@ -15273,7 +15273,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -15303,7 +15303,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MDLVertexFormat
@@ -15446,7 +15446,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -15462,7 +15462,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            offset
         JsName:          offset
@@ -15554,7 +15554,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeBinormal
     JsName:          MDLVertexAttributeBinormal
@@ -15568,7 +15568,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeBitangent
     JsName:          MDLVertexAttributeBitangent
@@ -15582,7 +15582,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeColor
     JsName:          MDLVertexAttributeColor
@@ -15596,7 +15596,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeData
     JsName:          MDLVertexAttributeData
@@ -15755,7 +15755,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLMeshBufferMap
+              Name:            MDLMeshBufferMap
               WithProtocols:   
         Setter:          
           Name:            'setMap:'
@@ -15771,7 +15771,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MDLMeshBufferMap
+              Name:            MDLMeshBufferMap
               WithProtocols:   
       - Name:            stride
         JsName:          stride
@@ -15825,7 +15825,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeJointIndices
     JsName:          MDLVertexAttributeJointIndices
@@ -15839,7 +15839,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeJointWeights
     JsName:          MDLVertexAttributeJointWeights
@@ -15853,7 +15853,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeNormal
     JsName:          MDLVertexAttributeNormal
@@ -15867,7 +15867,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeOcclusionValue
     JsName:          MDLVertexAttributeOcclusionValue
@@ -15881,7 +15881,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributePosition
     JsName:          MDLVertexAttributePosition
@@ -15895,7 +15895,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeShadingBasisU
     JsName:          MDLVertexAttributeShadingBasisU
@@ -15909,7 +15909,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeShadingBasisV
     JsName:          MDLVertexAttributeShadingBasisV
@@ -15923,7 +15923,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeSubdivisionStencil
     JsName:          MDLVertexAttributeSubdivisionStencil
@@ -15937,7 +15937,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeTangent
     JsName:          MDLVertexAttributeTangent
@@ -15951,7 +15951,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexAttributeTextureCoordinate
     JsName:          MDLVertexAttributeTextureCoordinate
@@ -15965,7 +15965,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MDLVertexBufferLayout
     JsName:          MDLVertexBufferLayout
@@ -16060,7 +16060,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLVertexAttribute
+            Name:            MDLVertexAttribute
             WithProtocols:   
       - Name:            'attributeNamed:'
         JsName:          attributeNamed
@@ -16074,10 +16074,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLVertexAttribute
+            Name:            MDLVertexAttribute
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithVertexDescriptor:'
         JsName:          initWithVertexDescriptor
@@ -16092,7 +16092,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLVertexDescriptor
+            Name:            MDLVertexDescriptor
             WithProtocols:   
       - Name:            'removeAttributeNamed:'
         JsName:          removeAttributeNamed
@@ -16107,7 +16107,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            reset
         JsName:          reset
@@ -16170,10 +16170,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSMutableArray
+              Name:            NSMutableArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLVertexAttribute
+                  Name:            MDLVertexAttribute
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -16190,10 +16190,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSMutableArray
+              Name:            NSMutableArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLVertexAttribute
+                  Name:            MDLVertexAttribute
                   WithProtocols:   
               WithProtocols:   
       - Name:            layouts
@@ -16219,10 +16219,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSMutableArray
+              Name:            NSMutableArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLVertexBufferLayout
+                  Name:            MDLVertexBufferLayout
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -16239,10 +16239,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSMutableArray
+              Name:            NSMutableArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLVertexBufferLayout
+                  Name:            MDLVertexBufferLayout
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -17117,7 +17117,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLMesh
+            Name:            MDLMesh
             WithProtocols:   
       - Name:            'coarseMeshUsingAllocator:'
         JsName:          coarseMeshUsingAllocator
@@ -17131,7 +17131,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLMesh
+            Name:            MDLMesh
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -17161,7 +17161,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLVoxelArray
+            Name:            MDLVoxelArray
             WithProtocols:   
       - Name:            'indexOfSpatialLocation:'
         JsName:          indexOfSpatialLocation
@@ -17189,7 +17189,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLAsset
+            Name:            MDLAsset
             WithProtocols:   
           - Type:            Int
           - Type:            Float
@@ -17206,11 +17206,11 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Struct
             Module:          ModelIO.MDLTypes
-            JsName:          MDLAxisAlignedBoundingBox
+            Name:            MDLAxisAlignedBoundingBox
           - Type:            Float
       - Name:            'intersectWithVoxels:'
         JsName:          intersectWithVoxels
@@ -17225,7 +17225,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLVoxelArray
+            Name:            MDLVoxelArray
             WithProtocols:   
       - Name:            'meshUsingAllocator:'
         JsName:          meshUsingAllocator
@@ -17239,7 +17239,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MDLMesh
+            Name:            MDLMesh
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -17270,7 +17270,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLMesh
+            Name:            MDLMesh
             WithProtocols:   
           - Type:            Int
           - Type:            Float
@@ -17300,7 +17300,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MDLVoxelArray
+            Name:            MDLVoxelArray
             WithProtocols:   
       - Name:            'voxelBoundingBoxAtIndex:'
         JsName:          voxelBoundingBoxAtIndex
@@ -17315,7 +17315,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          ModelIO.MDLTypes
-            JsName:          MDLAxisAlignedBoundingBox
+            Name:            MDLAxisAlignedBoundingBox
           - Type:            
       - Name:            'voxelExistsAtIndex:allowAnyX:allowAnyY:allowAnyZ:allowAnyShell:'
         JsName:          voxelExistsAtIndexAllowAnyXAllowAnyYAllowAnyZAllowAnyShell
@@ -17346,7 +17346,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'voxelsWithinExtent:'
         JsName:          voxelsWithinExtent
@@ -17360,11 +17360,11 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Struct
             Module:          ModelIO.MDLVoxelArray
-            JsName:          MDLVoxelIndexExtent
+            Name:            MDLVoxelIndexExtent
     StaticMethods:   
     InstanceProperties: 
       - Name:            boundingBox
@@ -17391,7 +17391,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          ModelIO.MDLTypes
-              JsName:          MDLAxisAlignedBoundingBox
+              Name:            MDLAxisAlignedBoundingBox
       - Name:            count
         JsName:          count
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLVoxelArray.h
@@ -17536,11 +17536,11 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          ModelIO.MDLVoxelArray
-              JsName:          MDLVoxelIndexExtent
+              Name:            MDLVoxelIndexExtent
     StaticProperties: 
     Protocols:       
     Base:            MDLObject
-  - Name:            ''
+  - Name:            MDLVoxelIndexExtent
     JsName:          MDLVoxelIndexExtent
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ModelIO.framework/Headers/MDLVoxelArray.h
     Module:          
@@ -17570,7 +17570,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kUTTypeAlembic
     JsName:          kUTTypeAlembic
@@ -17585,7 +17585,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kUTTypePolygon
     JsName:          kUTTypePolygon
@@ -17600,7 +17600,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kUTTypeStereolithography
     JsName:          kUTTypeStereolithography
@@ -17615,7 +17615,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kUTTypeUniversalSceneDescription
     JsName:          kUTTypeUniversalSceneDescription
@@ -17630,6 +17630,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

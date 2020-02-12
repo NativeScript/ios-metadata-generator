@@ -32,7 +32,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithKeyName:searchable:searchableByDefault:unique:multiValued:'
         JsName:          initWithKeyNameSearchableSearchableByDefaultUniqueMultiValued
@@ -47,7 +47,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
           - Type:            Bool
@@ -78,7 +78,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            multiValued
         JsName:          multiValued
@@ -294,7 +294,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSIndexExtensionRequestHandler
     JsName:          CSIndexExtensionRequestHandler
@@ -339,7 +339,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
       - Name:            localizedString
         JsName:          localizedString
@@ -353,7 +353,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -373,7 +373,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSMailboxDrafts
     JsName:          CSMailboxDrafts
@@ -388,7 +388,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSMailboxInbox
     JsName:          CSMailboxInbox
@@ -403,7 +403,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSMailboxJunk
     JsName:          CSMailboxJunk
@@ -418,7 +418,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSMailboxSent
     JsName:          CSMailboxSent
@@ -433,7 +433,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSMailboxTrash
     JsName:          CSMailboxTrash
@@ -448,7 +448,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSPerson
     JsName:          CSPerson
@@ -475,17 +475,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -512,7 +512,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setContactIdentifier:'
@@ -528,7 +528,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            displayName
         JsName:          displayName
@@ -553,7 +553,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            handleIdentifier
         JsName:          handleIdentifier
@@ -578,7 +578,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            handles
         JsName:          handles
@@ -603,10 +603,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -627,7 +627,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSSearchQuery
     JsName:          CSSearchQuery
@@ -666,13 +666,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            start
@@ -738,7 +738,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setCompletionHandler:'
@@ -757,7 +757,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            foundItemCount
         JsName:          foundItemCount
@@ -808,10 +808,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CSSearchableItem
+                      Name:            CSSearchableItem
                       WithProtocols:   
                   WithProtocols:   
         Setter:          
@@ -831,10 +831,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CSSearchableItem
+                      Name:            CSSearchableItem
                       WithProtocols:   
                   WithProtocols:   
       - Name:            protectionClasses
@@ -860,10 +860,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -880,10 +880,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -967,7 +967,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSSearchQueryString
     JsName:          CSSearchQueryString
@@ -982,7 +982,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSSearchableIndex
     JsName:          CSSearchableIndex
@@ -1012,7 +1012,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'deleteSearchableItemsWithDomainIdentifiers:completionHandler:'
         JsName:          deleteSearchableItemsWithDomainIdentifiersCompletionHandler
@@ -1027,17 +1027,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'deleteSearchableItemsWithIdentifiers:completionHandler:'
         JsName:          deleteSearchableItemsWithIdentifiersCompletionHandler
@@ -1052,17 +1052,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'indexSearchableItems:completionHandler:'
         JsName:          indexSearchableItemsCompletionHandler
@@ -1077,17 +1077,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CSSearchableItem
+                Name:            CSSearchableItem
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'initWithName:'
         JsName:          initWithName
@@ -1102,7 +1102,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithName:protectionClass:'
         JsName:          initWithNameProtectionClass
@@ -1117,10 +1117,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            beginIndexBatch
         JsName:          beginIndexBatch
@@ -1147,13 +1147,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchLastClientStateWithCompletionHandler:'
         JsName:          fetchLastClientStateWithCompletionHandler
@@ -1171,10 +1171,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            defaultSearchableIndex
@@ -1271,21 +1271,21 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          CSSearchableIndex
+            Name:            CSSearchableIndex
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'fileURLForSearchableIndex:itemIdentifier:typeIdentifier:inPlace:error:'
         JsName:          fileURLForSearchableIndexItemIdentifierTypeIdentifierInPlaceError
@@ -1300,22 +1300,22 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          CSSearchableIndex
+            Name:            CSSearchableIndex
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'searchableIndexDidFinishThrottle:'
         JsName:          searchableIndexDidFinishThrottle
@@ -1330,7 +1330,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CSSearchableIndex
+            Name:            CSSearchableIndex
             WithProtocols:   
       - Name:            'searchableIndexDidThrottle:'
         JsName:          searchableIndexDidThrottle
@@ -1345,7 +1345,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CSSearchableIndex
+            Name:            CSSearchableIndex
             WithProtocols:   
       - Name:            'searchableIndex:reindexAllSearchableItemsWithAcknowledgementHandler:'
         JsName:          searchableIndexReindexAllSearchableItemsWithAcknowledgementHandler
@@ -1360,7 +1360,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CSSearchableIndex
+            Name:            CSSearchableIndex
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -1378,13 +1378,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CSSearchableIndex
+            Name:            CSSearchableIndex
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
@@ -1420,13 +1420,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CSSearchableItemAttributeSet
+            Name:            CSSearchableItemAttributeSet
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1453,7 +1453,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CSSearchableItemAttributeSet
+              Name:            CSSearchableItemAttributeSet
               WithProtocols:   
         Setter:          
           Name:            'setAttributeSet:'
@@ -1469,7 +1469,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CSSearchableItemAttributeSet
+              Name:            CSSearchableItemAttributeSet
               WithProtocols:   
       - Name:            domainIdentifier
         JsName:          domainIdentifier
@@ -1494,7 +1494,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setDomainIdentifier:'
@@ -1510,7 +1510,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            expirationDate
         JsName:          expirationDate
@@ -1535,7 +1535,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setExpirationDate:'
@@ -1551,7 +1551,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            uniqueIdentifier
         JsName:          uniqueIdentifier
@@ -1576,7 +1576,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setUniqueIdentifier:'
@@ -1592,7 +1592,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1612,7 +1612,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSSearchableItemActivityIdentifier
     JsName:          CSSearchableItemActivityIdentifier
@@ -1627,7 +1627,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CSSearchableItemAttributeSet
     JsName:          CSSearchableItemAttributeSet
@@ -1654,7 +1654,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setValue:forCustomKey:'
         JsName:          setValueForCustomKey
@@ -1672,7 +1672,7 @@ Items:
             WithProtocols:   
               - NSSecureCoding
           - Type:            Interface
-            JsName:          CSCustomAttributeKey
+            Name:            CSCustomAttributeKey
             WithProtocols:   
       - Name:            'valueForCustomKey:'
         JsName:          valueForCustomKey
@@ -1689,7 +1689,7 @@ Items:
             WithProtocols:   
               - NSSecureCoding
           - Type:            Interface
-            JsName:          CSCustomAttributeKey
+            Name:            CSCustomAttributeKey
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1716,10 +1716,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1736,10 +1736,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            contentType
@@ -1765,7 +1765,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setContentType:'
@@ -1781,7 +1781,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            contentTypeTree
         JsName:          contentTypeTree
@@ -1806,10 +1806,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1826,10 +1826,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            contentURL
@@ -1855,7 +1855,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setContentURL:'
@@ -1871,7 +1871,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            displayName
         JsName:          displayName
@@ -1896,7 +1896,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setDisplayName:'
@@ -1912,7 +1912,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            domainIdentifier
         JsName:          domainIdentifier
@@ -1939,7 +1939,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setDomainIdentifier:'
@@ -1956,7 +1956,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            keywords
         JsName:          keywords
@@ -1981,10 +1981,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2001,10 +2001,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            metadataModificationDate
@@ -2030,7 +2030,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setMetadataModificationDate:'
@@ -2046,7 +2046,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            path
         JsName:          path
@@ -2071,7 +2071,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPath:'
@@ -2087,7 +2087,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            rankingHint
         JsName:          rankingHint
@@ -2114,7 +2114,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setRankingHint:'
@@ -2131,7 +2131,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            relatedUniqueIdentifier
         JsName:          relatedUniqueIdentifier
@@ -2156,7 +2156,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setRelatedUniqueIdentifier:'
@@ -2172,7 +2172,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            thumbnailData
         JsName:          thumbnailData
@@ -2197,7 +2197,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setThumbnailData:'
@@ -2213,7 +2213,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            thumbnailURL
         JsName:          thumbnailURL
@@ -2238,7 +2238,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setThumbnailURL:'
@@ -2254,7 +2254,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -2279,7 +2279,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -2295,7 +2295,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            userCreated
         JsName:          userCreated
@@ -2322,7 +2322,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setUserCreated:'
@@ -2339,7 +2339,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            userCurated
         JsName:          userCurated
@@ -2366,7 +2366,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setUserCurated:'
@@ -2383,7 +2383,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            userOwned
         JsName:          userOwned
@@ -2410,7 +2410,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setUserOwned:'
@@ -2427,7 +2427,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            version
         JsName:          version
@@ -2452,7 +2452,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setVersion:'
@@ -2468,7 +2468,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            weakRelatedUniqueIdentifier
         JsName:          weakRelatedUniqueIdentifier
@@ -2495,7 +2495,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setWeakRelatedUniqueIdentifier:'
@@ -2512,7 +2512,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            supportsNavigation
         JsName:          supportsNavigation
@@ -2537,7 +2537,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setSupportsNavigation:'
@@ -2553,7 +2553,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            supportsPhoneCall
         JsName:          supportsPhoneCall
@@ -2578,7 +2578,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setSupportsPhoneCall:'
@@ -2594,7 +2594,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            containerDisplayName
         JsName:          containerDisplayName
@@ -2619,7 +2619,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setContainerDisplayName:'
@@ -2635,7 +2635,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            containerIdentifier
         JsName:          containerIdentifier
@@ -2660,7 +2660,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setContainerIdentifier:'
@@ -2676,7 +2676,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            containerOrder
         JsName:          containerOrder
@@ -2701,7 +2701,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setContainerOrder:'
@@ -2717,7 +2717,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            containerTitle
         JsName:          containerTitle
@@ -2742,7 +2742,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setContainerTitle:'
@@ -2758,7 +2758,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            providerDataTypeIdentifiers
         JsName:          providerDataTypeIdentifiers
@@ -2785,10 +2785,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2806,10 +2806,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            providerFileTypeIdentifiers
@@ -2837,10 +2837,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2858,10 +2858,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            providerInPlaceFileTypeIdentifiers
@@ -2889,10 +2889,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2910,10 +2910,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            audiences
@@ -2939,10 +2939,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2959,10 +2959,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            contentDescription
@@ -2988,7 +2988,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setContentDescription:'
@@ -3004,7 +3004,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            creator
         JsName:          creator
@@ -3029,7 +3029,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCreator:'
@@ -3045,7 +3045,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            encodingApplications
         JsName:          encodingApplications
@@ -3070,10 +3070,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3090,10 +3090,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            fileSize
@@ -3119,7 +3119,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setFileSize:'
@@ -3135,7 +3135,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            fontNames
         JsName:          fontNames
@@ -3160,10 +3160,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3180,10 +3180,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            identifier
@@ -3209,7 +3209,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setIdentifier:'
@@ -3225,7 +3225,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            kind
         JsName:          kind
@@ -3250,7 +3250,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setKind:'
@@ -3266,7 +3266,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            pageCount
         JsName:          pageCount
@@ -3291,7 +3291,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setPageCount:'
@@ -3307,7 +3307,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            pageHeight
         JsName:          pageHeight
@@ -3332,7 +3332,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setPageHeight:'
@@ -3348,7 +3348,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            pageWidth
         JsName:          pageWidth
@@ -3373,7 +3373,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setPageWidth:'
@@ -3389,7 +3389,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            securityMethod
         JsName:          securityMethod
@@ -3414,7 +3414,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSecurityMethod:'
@@ -3430,7 +3430,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subject
         JsName:          subject
@@ -3455,7 +3455,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSubject:'
@@ -3471,7 +3471,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            theme
         JsName:          theme
@@ -3496,7 +3496,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTheme:'
@@ -3512,7 +3512,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            allDay
         JsName:          allDay
@@ -3537,7 +3537,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setAllDay:'
@@ -3553,7 +3553,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            completionDate
         JsName:          completionDate
@@ -3578,7 +3578,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setCompletionDate:'
@@ -3594,7 +3594,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            dueDate
         JsName:          dueDate
@@ -3619,7 +3619,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setDueDate:'
@@ -3635,7 +3635,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            endDate
         JsName:          endDate
@@ -3660,7 +3660,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setEndDate:'
@@ -3676,7 +3676,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            importantDates
         JsName:          importantDates
@@ -3701,10 +3701,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSDate
+                  Name:            NSDate
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3721,10 +3721,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSDate
+                  Name:            NSDate
                   WithProtocols:   
               WithProtocols:   
       - Name:            startDate
@@ -3750,7 +3750,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setStartDate:'
@@ -3766,7 +3766,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            accountHandles
         JsName:          accountHandles
@@ -3791,10 +3791,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3811,10 +3811,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            accountIdentifier
@@ -3840,7 +3840,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAccountIdentifier:'
@@ -3856,7 +3856,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            additionalRecipients
         JsName:          additionalRecipients
@@ -3881,10 +3881,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CSPerson
+                  Name:            CSPerson
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3901,10 +3901,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CSPerson
+                  Name:            CSPerson
                   WithProtocols:   
               WithProtocols:   
       - Name:            authorAddresses
@@ -3930,10 +3930,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3950,10 +3950,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            authorEmailAddresses
@@ -3979,10 +3979,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3999,10 +3999,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            authorNames
@@ -4028,10 +4028,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4048,10 +4048,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            authors
@@ -4077,10 +4077,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CSPerson
+                  Name:            CSPerson
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4097,10 +4097,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CSPerson
+                  Name:            CSPerson
                   WithProtocols:   
               WithProtocols:   
       - Name:            emailAddresses
@@ -4126,10 +4126,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4146,10 +4146,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            emailHeaders
@@ -4175,13 +4175,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4198,13 +4198,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   WithProtocols:   
               WithProtocols:   
       - Name:            hiddenAdditionalRecipients
@@ -4230,10 +4230,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CSPerson
+                  Name:            CSPerson
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4250,10 +4250,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CSPerson
+                  Name:            CSPerson
                   WithProtocols:   
               WithProtocols:   
       - Name:            HTMLContentData
@@ -4279,7 +4279,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setHTMLContentData:'
@@ -4295,7 +4295,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            instantMessageAddresses
         JsName:          instantMessageAddresses
@@ -4320,10 +4320,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4340,10 +4340,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            likelyJunk
@@ -4369,7 +4369,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setLikelyJunk:'
@@ -4385,7 +4385,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            mailboxIdentifiers
         JsName:          mailboxIdentifiers
@@ -4410,10 +4410,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4430,10 +4430,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            phoneNumbers
@@ -4459,10 +4459,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4479,10 +4479,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            primaryRecipients
@@ -4508,10 +4508,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CSPerson
+                  Name:            CSPerson
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4528,10 +4528,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CSPerson
+                  Name:            CSPerson
                   WithProtocols:   
               WithProtocols:   
       - Name:            recipientAddresses
@@ -4557,10 +4557,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4577,10 +4577,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            recipientEmailAddresses
@@ -4606,10 +4606,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4626,10 +4626,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            recipientNames
@@ -4655,10 +4655,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4675,10 +4675,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            textContent
@@ -4704,7 +4704,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTextContent:'
@@ -4720,7 +4720,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            addedDate
         JsName:          addedDate
@@ -4745,7 +4745,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setAddedDate:'
@@ -4761,7 +4761,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            audioBitRate
         JsName:          audioBitRate
@@ -4786,7 +4786,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setAudioBitRate:'
@@ -4802,7 +4802,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            codecs
         JsName:          codecs
@@ -4827,10 +4827,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4847,10 +4847,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            comment
@@ -4876,7 +4876,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setComment:'
@@ -4892,7 +4892,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            contactKeywords
         JsName:          contactKeywords
@@ -4917,10 +4917,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4937,10 +4937,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            contentCreationDate
@@ -4966,7 +4966,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setContentCreationDate:'
@@ -4982,7 +4982,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            contentModificationDate
         JsName:          contentModificationDate
@@ -5007,7 +5007,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setContentModificationDate:'
@@ -5023,7 +5023,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            contentRating
         JsName:          contentRating
@@ -5048,7 +5048,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setContentRating:'
@@ -5064,7 +5064,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            contentSources
         JsName:          contentSources
@@ -5089,10 +5089,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5109,10 +5109,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            contributors
@@ -5138,10 +5138,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5158,10 +5158,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            copyright
@@ -5187,7 +5187,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCopyright:'
@@ -5203,7 +5203,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            coverage
         JsName:          coverage
@@ -5228,10 +5228,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5248,10 +5248,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            deliveryType
@@ -5277,7 +5277,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setDeliveryType:'
@@ -5293,7 +5293,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            director
         JsName:          director
@@ -5318,7 +5318,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setDirector:'
@@ -5334,7 +5334,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            downloadedDate
         JsName:          downloadedDate
@@ -5359,7 +5359,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setDownloadedDate:'
@@ -5375,7 +5375,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            duration
         JsName:          duration
@@ -5400,7 +5400,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setDuration:'
@@ -5416,7 +5416,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            editors
         JsName:          editors
@@ -5441,10 +5441,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5461,10 +5461,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            genre
@@ -5490,7 +5490,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setGenre:'
@@ -5506,7 +5506,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            information
         JsName:          information
@@ -5531,7 +5531,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setInformation:'
@@ -5547,7 +5547,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            languages
         JsName:          languages
@@ -5572,10 +5572,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5592,10 +5592,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            lastUsedDate
@@ -5621,7 +5621,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setLastUsedDate:'
@@ -5637,7 +5637,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            local
         JsName:          local
@@ -5662,7 +5662,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setLocal:'
@@ -5678,7 +5678,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            mediaTypes
         JsName:          mediaTypes
@@ -5703,10 +5703,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5723,10 +5723,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            organizations
@@ -5752,10 +5752,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5772,10 +5772,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            originalFormat
@@ -5801,7 +5801,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setOriginalFormat:'
@@ -5817,7 +5817,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            originalSource
         JsName:          originalSource
@@ -5842,7 +5842,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setOriginalSource:'
@@ -5858,7 +5858,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            participants
         JsName:          participants
@@ -5883,10 +5883,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5903,10 +5903,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            performers
@@ -5932,10 +5932,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5952,10 +5952,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            playCount
@@ -5981,7 +5981,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setPlayCount:'
@@ -5997,7 +5997,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            producer
         JsName:          producer
@@ -6022,7 +6022,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setProducer:'
@@ -6038,7 +6038,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            projects
         JsName:          projects
@@ -6063,10 +6063,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6083,10 +6083,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            publishers
@@ -6112,10 +6112,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6132,10 +6132,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            rating
@@ -6161,7 +6161,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setRating:'
@@ -6177,7 +6177,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            ratingDescription
         JsName:          ratingDescription
@@ -6202,7 +6202,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setRatingDescription:'
@@ -6218,7 +6218,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            rights
         JsName:          rights
@@ -6243,7 +6243,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setRights:'
@@ -6259,7 +6259,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            role
         JsName:          role
@@ -6284,7 +6284,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setRole:'
@@ -6300,7 +6300,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            streamable
         JsName:          streamable
@@ -6325,7 +6325,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setStreamable:'
@@ -6341,7 +6341,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            totalBitRate
         JsName:          totalBitRate
@@ -6366,7 +6366,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setTotalBitRate:'
@@ -6382,7 +6382,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            URL
         JsName:          URL
@@ -6407,7 +6407,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setURL:'
@@ -6423,7 +6423,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            videoBitRate
         JsName:          videoBitRate
@@ -6448,7 +6448,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setVideoBitRate:'
@@ -6464,7 +6464,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            album
         JsName:          album
@@ -6489,7 +6489,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAlbum:'
@@ -6505,7 +6505,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            artist
         JsName:          artist
@@ -6530,7 +6530,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setArtist:'
@@ -6546,7 +6546,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            audioChannelCount
         JsName:          audioChannelCount
@@ -6571,7 +6571,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setAudioChannelCount:'
@@ -6587,7 +6587,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            audioEncodingApplication
         JsName:          audioEncodingApplication
@@ -6612,7 +6612,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAudioEncodingApplication:'
@@ -6628,7 +6628,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            audioSampleRate
         JsName:          audioSampleRate
@@ -6653,7 +6653,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setAudioSampleRate:'
@@ -6669,7 +6669,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            audioTrackNumber
         JsName:          audioTrackNumber
@@ -6694,7 +6694,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setAudioTrackNumber:'
@@ -6710,7 +6710,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            composer
         JsName:          composer
@@ -6735,7 +6735,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setComposer:'
@@ -6751,7 +6751,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            generalMIDISequence
         JsName:          generalMIDISequence
@@ -6776,7 +6776,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setGeneralMIDISequence:'
@@ -6792,7 +6792,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            keySignature
         JsName:          keySignature
@@ -6817,7 +6817,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setKeySignature:'
@@ -6833,7 +6833,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            lyricist
         JsName:          lyricist
@@ -6858,7 +6858,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLyricist:'
@@ -6874,7 +6874,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            musicalGenre
         JsName:          musicalGenre
@@ -6899,7 +6899,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMusicalGenre:'
@@ -6915,7 +6915,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            musicalInstrumentCategory
         JsName:          musicalInstrumentCategory
@@ -6940,7 +6940,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMusicalInstrumentCategory:'
@@ -6956,7 +6956,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            musicalInstrumentName
         JsName:          musicalInstrumentName
@@ -6981,7 +6981,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMusicalInstrumentName:'
@@ -6997,7 +6997,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            recordingDate
         JsName:          recordingDate
@@ -7022,7 +7022,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setRecordingDate:'
@@ -7038,7 +7038,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            tempo
         JsName:          tempo
@@ -7063,7 +7063,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setTempo:'
@@ -7079,7 +7079,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            timeSignature
         JsName:          timeSignature
@@ -7104,7 +7104,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTimeSignature:'
@@ -7120,7 +7120,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            acquisitionMake
         JsName:          acquisitionMake
@@ -7145,7 +7145,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAcquisitionMake:'
@@ -7161,7 +7161,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            acquisitionModel
         JsName:          acquisitionModel
@@ -7186,7 +7186,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAcquisitionModel:'
@@ -7202,7 +7202,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            aperture
         JsName:          aperture
@@ -7227,7 +7227,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setAperture:'
@@ -7243,7 +7243,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            bitsPerSample
         JsName:          bitsPerSample
@@ -7268,7 +7268,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setBitsPerSample:'
@@ -7284,7 +7284,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            cameraOwner
         JsName:          cameraOwner
@@ -7309,7 +7309,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCameraOwner:'
@@ -7325,7 +7325,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            colorSpace
         JsName:          colorSpace
@@ -7350,7 +7350,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setColorSpace:'
@@ -7366,7 +7366,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            EXIFGPSVersion
         JsName:          EXIFGPSVersion
@@ -7391,7 +7391,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setEXIFGPSVersion:'
@@ -7407,7 +7407,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            EXIFVersion
         JsName:          EXIFVersion
@@ -7432,7 +7432,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setEXIFVersion:'
@@ -7448,7 +7448,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            exposureMode
         JsName:          exposureMode
@@ -7473,7 +7473,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setExposureMode:'
@@ -7489,7 +7489,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            exposureProgram
         JsName:          exposureProgram
@@ -7514,7 +7514,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setExposureProgram:'
@@ -7530,7 +7530,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            exposureTime
         JsName:          exposureTime
@@ -7555,7 +7555,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setExposureTime:'
@@ -7571,7 +7571,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            exposureTimeString
         JsName:          exposureTimeString
@@ -7596,7 +7596,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setExposureTimeString:'
@@ -7612,7 +7612,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            flashOn
         JsName:          flashOn
@@ -7637,7 +7637,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setFlashOn:'
@@ -7653,7 +7653,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            fNumber
         JsName:          fNumber
@@ -7678,7 +7678,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setFNumber:'
@@ -7694,7 +7694,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            focalLength
         JsName:          focalLength
@@ -7719,7 +7719,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setFocalLength:'
@@ -7735,7 +7735,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            focalLength35mm
         JsName:          focalLength35mm
@@ -7760,7 +7760,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setFocalLength35mm:'
@@ -7776,7 +7776,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            hasAlphaChannel
         JsName:          hasAlphaChannel
@@ -7801,7 +7801,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setHasAlphaChannel:'
@@ -7817,7 +7817,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            ISOSpeed
         JsName:          ISOSpeed
@@ -7842,7 +7842,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setISOSpeed:'
@@ -7858,7 +7858,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            layerNames
         JsName:          layerNames
@@ -7883,10 +7883,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -7903,10 +7903,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            lensModel
@@ -7932,7 +7932,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLensModel:'
@@ -7948,7 +7948,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maxAperture
         JsName:          maxAperture
@@ -7973,7 +7973,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setMaxAperture:'
@@ -7989,7 +7989,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            meteringMode
         JsName:          meteringMode
@@ -8014,7 +8014,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMeteringMode:'
@@ -8030,7 +8030,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            orientation
         JsName:          orientation
@@ -8055,7 +8055,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setOrientation:'
@@ -8071,7 +8071,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            pixelCount
         JsName:          pixelCount
@@ -8096,7 +8096,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setPixelCount:'
@@ -8112,7 +8112,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            pixelHeight
         JsName:          pixelHeight
@@ -8137,7 +8137,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setPixelHeight:'
@@ -8153,7 +8153,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            pixelWidth
         JsName:          pixelWidth
@@ -8178,7 +8178,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setPixelWidth:'
@@ -8194,7 +8194,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            profileName
         JsName:          profileName
@@ -8219,7 +8219,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setProfileName:'
@@ -8235,7 +8235,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            redEyeOn
         JsName:          redEyeOn
@@ -8260,7 +8260,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setRedEyeOn:'
@@ -8276,7 +8276,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            resolutionHeightDPI
         JsName:          resolutionHeightDPI
@@ -8301,7 +8301,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setResolutionHeightDPI:'
@@ -8317,7 +8317,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            resolutionWidthDPI
         JsName:          resolutionWidthDPI
@@ -8342,7 +8342,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setResolutionWidthDPI:'
@@ -8358,7 +8358,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            whiteBalance
         JsName:          whiteBalance
@@ -8383,7 +8383,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setWhiteBalance:'
@@ -8399,7 +8399,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            altitude
         JsName:          altitude
@@ -8424,7 +8424,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setAltitude:'
@@ -8440,7 +8440,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            city
         JsName:          city
@@ -8465,7 +8465,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCity:'
@@ -8481,7 +8481,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            country
         JsName:          country
@@ -8506,7 +8506,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCountry:'
@@ -8522,7 +8522,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            fullyFormattedAddress
         JsName:          fullyFormattedAddress
@@ -8547,7 +8547,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setFullyFormattedAddress:'
@@ -8563,7 +8563,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            GPSAreaInformation
         JsName:          GPSAreaInformation
@@ -8588,7 +8588,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setGPSAreaInformation:'
@@ -8604,7 +8604,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            GPSDateStamp
         JsName:          GPSDateStamp
@@ -8629,7 +8629,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setGPSDateStamp:'
@@ -8645,7 +8645,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            GPSDestBearing
         JsName:          GPSDestBearing
@@ -8670,7 +8670,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setGPSDestBearing:'
@@ -8686,7 +8686,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            GPSDestDistance
         JsName:          GPSDestDistance
@@ -8711,7 +8711,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setGPSDestDistance:'
@@ -8727,7 +8727,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            GPSDestLatitude
         JsName:          GPSDestLatitude
@@ -8752,7 +8752,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setGPSDestLatitude:'
@@ -8768,7 +8768,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            GPSDestLongitude
         JsName:          GPSDestLongitude
@@ -8793,7 +8793,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setGPSDestLongitude:'
@@ -8809,7 +8809,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            GPSDifferental
         JsName:          GPSDifferental
@@ -8834,7 +8834,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setGPSDifferental:'
@@ -8850,7 +8850,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            GPSDOP
         JsName:          GPSDOP
@@ -8875,7 +8875,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setGPSDOP:'
@@ -8891,7 +8891,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            GPSMapDatum
         JsName:          GPSMapDatum
@@ -8916,7 +8916,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setGPSMapDatum:'
@@ -8932,7 +8932,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            GPSMeasureMode
         JsName:          GPSMeasureMode
@@ -8957,7 +8957,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setGPSMeasureMode:'
@@ -8973,7 +8973,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            GPSProcessingMethod
         JsName:          GPSProcessingMethod
@@ -8998,7 +8998,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setGPSProcessingMethod:'
@@ -9014,7 +9014,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            GPSStatus
         JsName:          GPSStatus
@@ -9039,7 +9039,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setGPSStatus:'
@@ -9055,7 +9055,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            GPSTrack
         JsName:          GPSTrack
@@ -9080,7 +9080,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setGPSTrack:'
@@ -9096,7 +9096,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            headline
         JsName:          headline
@@ -9121,7 +9121,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setHeadline:'
@@ -9137,7 +9137,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            imageDirection
         JsName:          imageDirection
@@ -9162,7 +9162,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setImageDirection:'
@@ -9178,7 +9178,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            instructions
         JsName:          instructions
@@ -9203,7 +9203,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setInstructions:'
@@ -9219,7 +9219,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            latitude
         JsName:          latitude
@@ -9244,7 +9244,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setLatitude:'
@@ -9260,7 +9260,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            longitude
         JsName:          longitude
@@ -9285,7 +9285,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setLongitude:'
@@ -9301,7 +9301,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            namedLocation
         JsName:          namedLocation
@@ -9326,7 +9326,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setNamedLocation:'
@@ -9342,7 +9342,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            postalCode
         JsName:          postalCode
@@ -9367,7 +9367,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPostalCode:'
@@ -9383,7 +9383,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            speed
         JsName:          speed
@@ -9408,7 +9408,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setSpeed:'
@@ -9424,7 +9424,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            stateOrProvince
         JsName:          stateOrProvince
@@ -9449,7 +9449,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setStateOrProvince:'
@@ -9465,7 +9465,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subThoroughfare
         JsName:          subThoroughfare
@@ -9490,7 +9490,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSubThoroughfare:'
@@ -9506,7 +9506,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            thoroughfare
         JsName:          thoroughfare
@@ -9531,7 +9531,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setThoroughfare:'
@@ -9547,7 +9547,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            timestamp
         JsName:          timestamp
@@ -9572,7 +9572,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setTimestamp:'
@@ -9588,7 +9588,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
     StaticProperties: 
     Protocols:       

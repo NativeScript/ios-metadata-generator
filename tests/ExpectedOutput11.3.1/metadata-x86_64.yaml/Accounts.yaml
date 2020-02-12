@@ -32,7 +32,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          ACAccountType
+            Name:            ACAccountType
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -59,7 +59,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAccountDescription:'
@@ -75,7 +75,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            accountType
         JsName:          accountType
@@ -100,7 +100,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ACAccountType
+              Name:            ACAccountType
               WithProtocols:   
         Setter:          
           Name:            'setAccountType:'
@@ -116,7 +116,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          ACAccountType
+              Name:            ACAccountType
               WithProtocols:   
       - Name:            credential
         JsName:          credential
@@ -141,7 +141,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ACAccountCredential
+              Name:            ACAccountCredential
               WithProtocols:   
         Setter:          
           Name:            'setCredential:'
@@ -157,7 +157,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          ACAccountCredential
+              Name:            ACAccountCredential
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -182,7 +182,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            userFullName
         JsName:          userFullName
@@ -209,7 +209,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            username
         JsName:          username
@@ -234,7 +234,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setUsername:'
@@ -250,7 +250,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -280,13 +280,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
       - Name:            'initWithOAuthToken:tokenSecret:'
         JsName:          initWithOAuthTokenTokenSecret
@@ -301,10 +301,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -331,7 +331,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setOauthToken:'
@@ -347,7 +347,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -427,10 +427,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
           - Type:            Interface
-            JsName:          ACAccountType
+            Name:            ACAccountType
             WithProtocols:   
       - Name:            'accountTypeWithAccountTypeIdentifier:'
         JsName:          accountTypeWithAccountTypeIdentifier
@@ -444,10 +444,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ACAccountType
+            Name:            ACAccountType
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'accountWithIdentifier:'
         JsName:          accountWithIdentifier
@@ -461,10 +461,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ACAccount
+            Name:            ACAccount
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'removeAccount:withCompletionHandler:'
         JsName:          removeAccountWithCompletionHandler
@@ -479,14 +479,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ACAccount
+            Name:            ACAccount
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'renewCredentialsForAccount:completion:'
         JsName:          renewCredentialsForAccountCompletion
@@ -501,7 +501,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ACAccount
+            Name:            ACAccount
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -509,7 +509,7 @@ Items:
               - Type:            Enum
                 Name:            ACAccountCredentialRenewResult
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestAccessToAccountsWithType:options:completion:'
         JsName:          requestAccessToAccountsWithTypeOptionsCompletion
@@ -524,17 +524,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ACAccountType
+            Name:            ACAccountType
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestAccessToAccountsWithType:withCompletionHandler:'
         JsName:          requestAccessToAccountsWithTypeWithCompletionHandler
@@ -550,14 +550,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ACAccountType
+            Name:            ACAccountType
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveAccount:withCompletionHandler:'
         JsName:          saveAccountWithCompletionHandler
@@ -572,14 +572,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ACAccount
+            Name:            ACAccount
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -606,7 +606,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -624,7 +624,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACAccountType
     JsName:          ACAccountType
@@ -686,7 +686,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -711,7 +711,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -729,7 +729,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACAccountTypeIdentifierSinaWeibo
     JsName:          ACAccountTypeIdentifierSinaWeibo
@@ -744,7 +744,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACAccountTypeIdentifierTencentWeibo
     JsName:          ACAccountTypeIdentifierTencentWeibo
@@ -759,7 +759,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACAccountTypeIdentifierTwitter
     JsName:          ACAccountTypeIdentifierTwitter
@@ -774,7 +774,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACErrorAccessDeniedByProtectionPolicy
     JsName:          ACErrorAccessDeniedByProtectionPolicy
@@ -990,7 +990,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACErrorFailedSerializingAccountInfo
     JsName:          ACErrorFailedSerializingAccountInfo
@@ -1115,7 +1115,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACFacebookAudienceEveryone
     JsName:          ACFacebookAudienceEveryone
@@ -1130,7 +1130,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACFacebookAudienceFriends
     JsName:          ACFacebookAudienceFriends
@@ -1145,7 +1145,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACFacebookAudienceKey
     JsName:          ACFacebookAudienceKey
@@ -1160,7 +1160,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACFacebookAudienceOnlyMe
     JsName:          ACFacebookAudienceOnlyMe
@@ -1175,7 +1175,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACFacebookPermissionsKey
     JsName:          ACFacebookPermissionsKey
@@ -1190,7 +1190,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ACTencentWeiboAppIdKey
     JsName:          ACTencentWeiboAppIdKey
@@ -1205,6 +1205,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

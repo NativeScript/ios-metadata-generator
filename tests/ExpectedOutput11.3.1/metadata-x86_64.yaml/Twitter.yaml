@@ -32,13 +32,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithURL:parameters:requestMethod:'
         JsName:          initWithURLParametersRequestMethod
@@ -53,10 +53,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
           - Type:            Enum
             Name:            SLRequestMethod
@@ -76,13 +76,13 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSHTTPURLResponse
+                Name:            NSHTTPURLResponse
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            signedURLRequest
         JsName:          signedURLRequest
@@ -96,7 +96,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSURLRequest
+            Name:            NSURLRequest
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -123,7 +123,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ACAccount
+              Name:            ACAccount
               WithProtocols:   
         Setter:          
           Name:            'setAccount:'
@@ -139,7 +139,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          ACAccount
+              Name:            ACAccount
               WithProtocols:   
       - Name:            parameters
         JsName:          parameters
@@ -164,7 +164,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
       - Name:            requestMethod
         JsName:          requestMethod
@@ -213,7 +213,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -276,7 +276,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
       - Name:            'addURL:'
         JsName:          addURL
@@ -291,7 +291,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            removeAllImages
         JsName:          removeAllImages
@@ -330,7 +330,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            canSendTweet

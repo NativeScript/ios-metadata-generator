@@ -185,7 +185,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
   - Name:            deflateBound
     JsName:          deflateBound
@@ -205,7 +205,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            ULong
   - Name:            deflateCopy
     JsName:          deflateCopy
@@ -225,12 +225,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            deflateEnd
     JsName:          deflateEnd
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -249,7 +249,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            deflateGetDictionary
     JsName:          deflateGetDictionary
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -269,7 +269,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            CString
       - Type:            Pointer
         PointerType:     
@@ -292,7 +292,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
       - Type:            Int
       - Type:            Int
@@ -318,7 +318,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
       - Type:            CString
       - Type:            Int
@@ -340,7 +340,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
       - Type:            Int
   - Name:            deflatePending
@@ -362,7 +362,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Pointer
         PointerType:     
           Type:            UInt
@@ -387,7 +387,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
       - Type:            Int
   - Name:            deflateReset
@@ -408,7 +408,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            deflateResetKeep
     JsName:          deflateResetKeep
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -428,7 +428,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            deflateSetDictionary
     JsName:          deflateSetDictionary
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -447,7 +447,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            CString
       - Type:            UInt
   - Name:            deflateSetHeader
@@ -468,12 +468,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gz_header
+          Name:            gz_header
   - Name:            deflateTune
     JsName:          deflateTune
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -492,7 +492,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
       - Type:            Int
       - Type:            Int
@@ -535,7 +535,7 @@ Items:
       - Name:            pos
         Signature:       
           Type:            LongLong
-  - Name:            gz_header_s
+  - Name:            gz_header
     JsName:          gz_header
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
     Module:          
@@ -606,7 +606,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            UInt
   - Name:            gzclearerr
     JsName:          gzclearerr
@@ -626,7 +626,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzclose
     JsName:          gzclose
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -645,7 +645,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzclose_r
     JsName:          gzclose_r
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -665,7 +665,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzclose_w
     JsName:          gzclose_w
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -685,7 +685,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzdirect
     JsName:          gzdirect
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -704,7 +704,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzdopen
     JsName:          gzdopen
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -722,7 +722,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            Int
       - Type:            CString
   - Name:            gzeof
@@ -743,7 +743,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzerror
     JsName:          gzerror
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -762,7 +762,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            Pointer
         PointerType:     
           Type:            Int
@@ -784,7 +784,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            Int
   - Name:            gzfread
     JsName:          gzfread
@@ -810,7 +810,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzfwrite
     JsName:          gzfwrite
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -835,7 +835,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzgetc
     JsName:          gzgetc
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -854,7 +854,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzgetc_
     JsName:          gzgetc_
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -874,7 +874,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzgets
     JsName:          gzgets
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -893,7 +893,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            CString
       - Type:            Int
   - Name:            gzoffset
@@ -915,7 +915,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzopen
     JsName:          gzopen
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -933,7 +933,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            CString
       - Type:            CString
   - Name:            gzputc
@@ -954,7 +954,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            Int
   - Name:            gzputs
     JsName:          gzputs
@@ -974,7 +974,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            CString
   - Name:            gzread
     JsName:          gzread
@@ -994,7 +994,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -1017,7 +1017,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzseek
     JsName:          gzseek
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1036,7 +1036,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            Long
       - Type:            Int
   - Name:            gzsetparams
@@ -1057,7 +1057,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            Int
       - Type:            Int
   - Name:            gztell
@@ -1078,7 +1078,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzungetc
     JsName:          gzungetc
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1098,7 +1098,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
   - Name:            gzwrite
     JsName:          gzwrite
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1117,7 +1117,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gzFile_s
+          Name:            gzFile_s
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -1140,7 +1140,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
   - Name:            inflateBack
     JsName:          inflateBack
@@ -1160,7 +1160,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            FunctionPointer
         Signature:       
           - Type:            UInt
@@ -1202,7 +1202,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            inflateBackInit_
     JsName:          inflateBackInit_
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1221,7 +1221,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
       - Type:            CString
       - Type:            CString
@@ -1245,7 +1245,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            inflateCopy
     JsName:          inflateCopy
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1264,12 +1264,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            inflateEnd
     JsName:          inflateEnd
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1288,7 +1288,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            inflateGetDictionary
     JsName:          inflateGetDictionary
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1308,7 +1308,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            CString
       - Type:            Pointer
         PointerType:     
@@ -1331,12 +1331,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          gz_header
+          Name:            gz_header
   - Name:            inflateInit2_
     JsName:          inflateInit2_
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1355,7 +1355,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
       - Type:            CString
       - Type:            Int
@@ -1377,7 +1377,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            CString
       - Type:            Int
   - Name:            inflateMark
@@ -1399,7 +1399,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            inflatePrime
     JsName:          inflatePrime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1418,7 +1418,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
       - Type:            Int
   - Name:            inflateReset
@@ -1439,7 +1439,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            inflateReset2
     JsName:          inflateReset2
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1459,7 +1459,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
   - Name:            inflateResetKeep
     JsName:          inflateResetKeep
@@ -1480,7 +1480,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            inflateSetDictionary
     JsName:          inflateSetDictionary
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1499,7 +1499,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            CString
       - Type:            UInt
   - Name:            inflateSync
@@ -1520,7 +1520,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            inflateSyncPoint
     JsName:          inflateSyncPoint
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1539,7 +1539,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
   - Name:            inflateUndermine
     JsName:          inflateUndermine
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
@@ -1559,7 +1559,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
   - Name:            inflateValidate
     JsName:          inflateValidate
@@ -1580,7 +1580,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          zlib
-          JsName:          z_stream
+          Name:            z_stream
       - Type:            Int
   - Name:            uncompress
     JsName:          uncompress
@@ -1640,7 +1640,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Int
-  - Name:            z_stream_s
+  - Name:            z_stream
     JsName:          z_stream
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/zlib.h
     Module:          

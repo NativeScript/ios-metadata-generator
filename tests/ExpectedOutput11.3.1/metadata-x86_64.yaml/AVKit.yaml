@@ -89,7 +89,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            AVKitErrorPictureInPictureStartFailed
     JsName:          AVKitErrorPictureInPictureStartFailed
@@ -138,7 +138,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          AVPlayerLayer
+            Name:            AVPlayerLayer
             WithProtocols:   
       - Name:            startPictureInPicture
         JsName:          startPictureInPicture
@@ -189,10 +189,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Interface
-            JsName:          UITraitCollection
+            Name:            UITraitCollection
             WithProtocols:   
       - Name:            'pictureInPictureButtonStopImageCompatibleWithTraitCollection:'
         JsName:          pictureInPictureButtonStopImageCompatibleWithTraitCollection
@@ -206,10 +206,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Interface
-            JsName:          UITraitCollection
+            Name:            UITraitCollection
             WithProtocols:   
     InstanceProperties: 
       - Name:            delegate
@@ -345,7 +345,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AVPlayerLayer
+              Name:            AVPlayerLayer
               WithProtocols:   
     StaticProperties: 
       - Name:            pictureInPictureButtonStartImage
@@ -373,7 +373,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            pictureInPictureButtonStopImage
         JsName:          pictureInPictureButtonStopImage
@@ -400,7 +400,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
     Protocols:       
     Base:            NSObject
@@ -429,7 +429,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPictureInPictureController
+            Name:            AVPictureInPictureController
             WithProtocols:   
       - Name:            'pictureInPictureControllerDidStopPictureInPicture:'
         JsName:          pictureInPictureControllerDidStopPictureInPicture
@@ -444,7 +444,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPictureInPictureController
+            Name:            AVPictureInPictureController
             WithProtocols:   
       - Name:            'pictureInPictureController:failedToStartPictureInPictureWithError:'
         JsName:          pictureInPictureControllerFailedToStartPictureInPictureWithError
@@ -459,10 +459,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPictureInPictureController
+            Name:            AVPictureInPictureController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'pictureInPictureController:restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:'
         JsName:          pictureInPictureControllerRestoreUserInterfaceForPictureInPictureStopWithCompletionHandler
@@ -477,7 +477,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPictureInPictureController
+            Name:            AVPictureInPictureController
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -496,7 +496,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPictureInPictureController
+            Name:            AVPictureInPictureController
             WithProtocols:   
       - Name:            'pictureInPictureControllerWillStopPictureInPicture:'
         JsName:          pictureInPictureControllerWillStopPictureInPicture
@@ -511,7 +511,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPictureInPictureController
+            Name:            AVPictureInPictureController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -560,7 +560,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            preparePrerollAds
@@ -640,7 +640,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIView
+              Name:            UIView
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -791,10 +791,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -814,10 +814,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -845,7 +845,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AVPlayer
+              Name:            AVPlayer
               WithProtocols:   
         Setter:          
           Name:            'setPlayer:'
@@ -861,7 +861,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          AVPlayer
+              Name:            AVPlayer
               WithProtocols:   
       - Name:            readyForDisplay
         JsName:          readyForDisplay
@@ -987,7 +987,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
       - Name:            videoGravity
         JsName:          videoGravity
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AVKit.framework/Headers/AVPlayerViewController.h
@@ -1011,7 +1011,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setVideoGravity:'
@@ -1027,7 +1027,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1056,7 +1056,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPlayerViewController
+            Name:            AVPlayerViewController
             WithProtocols:   
       - Name:            'playerViewControllerDidStopPictureInPicture:'
         JsName:          playerViewControllerDidStopPictureInPicture
@@ -1071,7 +1071,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPlayerViewController
+            Name:            AVPlayerViewController
             WithProtocols:   
       - Name:            'playerViewController:failedToStartPictureInPictureWithError:'
         JsName:          playerViewControllerFailedToStartPictureInPictureWithError
@@ -1086,10 +1086,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPlayerViewController
+            Name:            AVPlayerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'playerViewController:restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:'
         JsName:          playerViewControllerRestoreUserInterfaceForPictureInPictureStopWithCompletionHandler
@@ -1104,7 +1104,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPlayerViewController
+            Name:            AVPlayerViewController
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -1123,7 +1123,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          AVPlayerViewController
+            Name:            AVPlayerViewController
             WithProtocols:   
       - Name:            'playerViewController:willBeginFullScreenPresentationWithAnimationCoordinator:'
         JsName:          playerViewControllerWillBeginFullScreenPresentationWithAnimationCoordinator
@@ -1139,7 +1139,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPlayerViewController
+            Name:            AVPlayerViewController
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -1158,7 +1158,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPlayerViewController
+            Name:            AVPlayerViewController
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -1176,7 +1176,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPlayerViewController
+            Name:            AVPlayerViewController
             WithProtocols:   
       - Name:            'playerViewControllerWillStopPictureInPicture:'
         JsName:          playerViewControllerWillStopPictureInPicture
@@ -1191,7 +1191,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVPlayerViewController
+            Name:            AVPlayerViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1235,7 +1235,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIColor
+              Name:            UIColor
               WithProtocols:   
         Setter:          
           Name:            'setActiveTintColor:'
@@ -1251,7 +1251,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIColor
+              Name:            UIColor
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -1394,7 +1394,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVRoutePickerView
+            Name:            AVRoutePickerView
             WithProtocols:   
       - Name:            'routePickerViewWillBeginPresentingRoutes:'
         JsName:          routePickerViewWillBeginPresentingRoutes
@@ -1409,7 +1409,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVRoutePickerView
+            Name:            AVRoutePickerView
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 

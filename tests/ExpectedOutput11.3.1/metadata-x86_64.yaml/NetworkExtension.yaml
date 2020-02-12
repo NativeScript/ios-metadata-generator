@@ -22,7 +22,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEAppProxyFlow
     JsName:          NEAppProxyFlow
@@ -54,7 +54,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'closeWriteWithError:'
         JsName:          closeWriteWithError
@@ -72,7 +72,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'openWithLocalEndpoint:completionHandler:'
         JsName:          openWithLocalEndpointCompletionHandler
@@ -90,13 +90,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NWHostEndpoint
+            Name:            NWHostEndpoint
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -129,7 +129,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEFlowMetaData
+              Name:            NEFlowMetaData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -331,7 +331,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'handleNewFlow:'
         JsName:          handleNewFlow
@@ -349,7 +349,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NEAppProxyFlow
+            Name:            NEAppProxyFlow
             WithProtocols:   
       - Name:            'handleNewUDPFlow:initialRemoteEndpoint:'
         JsName:          handleNewUDPFlowInitialRemoteEndpoint
@@ -367,10 +367,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NEAppProxyUDPFlow
+            Name:            NEAppProxyUDPFlow
             WithProtocols:   
           - Type:            Interface
-            JsName:          NWEndpoint
+            Name:            NWEndpoint
             WithProtocols:   
       - Name:            'startProxyWithOptions:completionHandler:'
         JsName:          startProxyWithOptionsCompletionHandler
@@ -388,10 +388,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -400,7 +400,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'stopProxyWithReason:completionHandler:'
         JsName:          stopProxyWithReasonCompletionHandler
@@ -479,10 +479,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeData:withCompletionHandler:'
         JsName:          writeDataWithCompletionHandler
@@ -500,13 +500,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -539,7 +539,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWEndpoint
+              Name:            NWEndpoint
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -577,21 +577,21 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSData
+                    Name:            NSData
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NWEndpoint
+                    Name:            NWEndpoint
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeDatagrams:sentByEndpoints:completionHandler:'
         JsName:          writeDatagramsSentByEndpointsCompletionHandler
@@ -609,24 +609,24 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NWEndpoint
+                Name:            NWEndpoint
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -659,7 +659,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWEndpoint
+              Name:            NWEndpoint
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -694,7 +694,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -727,7 +727,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
         Setter:          
           Name:            'setMatchDomains:'
@@ -746,7 +746,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
       - Name:            matchPath
         JsName:          matchPath
@@ -777,7 +777,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMatchPath:'
@@ -796,7 +796,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            matchSigningIdentifier
         JsName:          matchSigningIdentifier
@@ -827,7 +827,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -849,7 +849,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEDNSProxyErrorDomain
     JsName:          NEDNSProxyErrorDomain
@@ -866,7 +866,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEDNSProxyManager
     JsName:          NEDNSProxyManager
@@ -901,7 +901,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeFromPreferencesWithCompletionHandler:'
         JsName:          removeFromPreferencesWithCompletionHandler
@@ -922,7 +922,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveToPreferencesWithCompletionHandler:'
         JsName:          saveToPreferencesWithCompletionHandler
@@ -943,7 +943,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            sharedManager
@@ -961,7 +961,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEDNSProxyManager
+            Name:            NEDNSProxyManager
             WithProtocols:   
     InstanceProperties: 
       - Name:            enabled
@@ -1039,7 +1039,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalizedDescription:'
@@ -1058,7 +1058,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            providerProtocol
         JsName:          providerProtocol
@@ -1089,7 +1089,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEDNSProxyProviderProtocol
+              Name:            NEDNSProxyProviderProtocol
               WithProtocols:   
         Setter:          
           Name:            'setProviderProtocol:'
@@ -1108,7 +1108,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NEDNSProxyProviderProtocol
+              Name:            NEDNSProxyProviderProtocol
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1218,7 +1218,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'handleNewFlow:'
         JsName:          handleNewFlow
@@ -1236,7 +1236,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NEAppProxyFlow
+            Name:            NEAppProxyFlow
             WithProtocols:   
       - Name:            'handleNewUDPFlow:initialRemoteEndpoint:'
         JsName:          handleNewUDPFlowInitialRemoteEndpoint
@@ -1254,10 +1254,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NEAppProxyUDPFlow
+            Name:            NEAppProxyUDPFlow
             WithProtocols:   
           - Type:            Interface
-            JsName:          NWEndpoint
+            Name:            NWEndpoint
             WithProtocols:   
       - Name:            'startProxyWithOptions:completionHandler:'
         JsName:          startProxyWithOptionsCompletionHandler
@@ -1275,10 +1275,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1287,7 +1287,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'stopProxyWithReason:completionHandler:'
         JsName:          stopProxyWithReasonCompletionHandler
@@ -1340,10 +1340,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEDNSSettings
+                  Name:            NEDNSSettings
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -1394,7 +1394,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setProviderBundleIdentifier:'
@@ -1413,7 +1413,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            providerConfiguration
         JsName:          providerConfiguration
@@ -1444,10 +1444,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -1469,10 +1469,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -1510,10 +1510,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -1547,7 +1547,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setDomainName:'
@@ -1566,7 +1566,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            matchDomains
         JsName:          matchDomains
@@ -1597,10 +1597,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1620,10 +1620,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            matchDomainsNoSearch
@@ -1701,10 +1701,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1724,10 +1724,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            servers
@@ -1759,10 +1759,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -1800,10 +1800,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -1869,10 +1869,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            probeURL
@@ -1904,7 +1904,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setProbeURL:'
@@ -1923,7 +1923,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            useDNSServers
         JsName:          useDNSServers
@@ -1954,10 +1954,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1977,10 +1977,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2173,7 +2173,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            request
         JsName:          request
@@ -2204,7 +2204,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURLRequest
+              Name:            NSURLRequest
               WithProtocols:   
       - Name:            response
         JsName:          response
@@ -2235,7 +2235,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURLResponse
+              Name:            NSURLResponse
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2257,7 +2257,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEFilterControlProvider
     JsName:          NEFilterControlProvider
@@ -2289,13 +2289,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NEFilterFlow
+            Name:            NEFilterFlow
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NEFilterControlVerdict
+                Name:            NEFilterControlVerdict
                 WithProtocols:   
       - Name:            'handleRemediationForFlow:completionHandler:'
         JsName:          handleRemediationForFlowCompletionHandler
@@ -2313,13 +2313,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NEFilterFlow
+            Name:            NEFilterFlow
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NEFilterControlVerdict
+                Name:            NEFilterControlVerdict
                 WithProtocols:   
       - Name:            notifyRulesChanged
         JsName:          notifyRulesChanged
@@ -2367,19 +2367,19 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          NSObject
+                      Name:            NSObject
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -2400,19 +2400,19 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                     - Type:            Interface
-                      JsName:          NSObject
+                      Name:            NSObject
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -2445,13 +2445,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2471,13 +2471,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2513,7 +2513,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterControlVerdict
+            Name:            NEFilterControlVerdict
             WithProtocols:   
           - Type:            Bool
       - Name:            'dropVerdictWithUpdateRules:'
@@ -2531,7 +2531,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterControlVerdict
+            Name:            NEFilterControlVerdict
             WithProtocols:   
           - Type:            Bool
       - Name:            updateRules
@@ -2549,7 +2549,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterControlVerdict
+            Name:            NEFilterControlVerdict
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -2586,10 +2586,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterDataVerdict
+            Name:            NEFilterDataVerdict
             WithProtocols:   
           - Type:            Interface
-            JsName:          NEFilterFlow
+            Name:            NEFilterFlow
             WithProtocols:   
       - Name:            'handleInboundDataFromFlow:readBytesStartOffset:readBytes:'
         JsName:          handleInboundDataFromFlowReadBytesStartOffsetReadBytes
@@ -2606,14 +2606,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterDataVerdict
+            Name:            NEFilterDataVerdict
             WithProtocols:   
           - Type:            Interface
-            JsName:          NEFilterFlow
+            Name:            NEFilterFlow
             WithProtocols:   
           - Type:            ULong
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'handleNewFlow:'
         JsName:          handleNewFlow
@@ -2630,10 +2630,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterNewFlowVerdict
+            Name:            NEFilterNewFlowVerdict
             WithProtocols:   
           - Type:            Interface
-            JsName:          NEFilterFlow
+            Name:            NEFilterFlow
             WithProtocols:   
       - Name:            'handleOutboundDataCompleteForFlow:'
         JsName:          handleOutboundDataCompleteForFlow
@@ -2650,10 +2650,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterDataVerdict
+            Name:            NEFilterDataVerdict
             WithProtocols:   
           - Type:            Interface
-            JsName:          NEFilterFlow
+            Name:            NEFilterFlow
             WithProtocols:   
       - Name:            'handleOutboundDataFromFlow:readBytesStartOffset:readBytes:'
         JsName:          handleOutboundDataFromFlowReadBytesStartOffsetReadBytes
@@ -2670,14 +2670,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterDataVerdict
+            Name:            NEFilterDataVerdict
             WithProtocols:   
           - Type:            Interface
-            JsName:          NEFilterFlow
+            Name:            NEFilterFlow
             WithProtocols:   
           - Type:            ULong
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'handleRemediationForFlow:'
         JsName:          handleRemediationForFlow
@@ -2694,10 +2694,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterRemediationVerdict
+            Name:            NEFilterRemediationVerdict
             WithProtocols:   
           - Type:            Interface
-            JsName:          NEFilterFlow
+            Name:            NEFilterFlow
             WithProtocols:   
       - Name:            handleRulesChanged
         JsName:          handleRulesChanged
@@ -2749,7 +2749,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterDataVerdict
+            Name:            NEFilterDataVerdict
             WithProtocols:   
       - Name:            'dataVerdictWithPassBytes:peekBytes:'
         JsName:          dataVerdictWithPassBytesPeekBytes
@@ -2766,7 +2766,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterDataVerdict
+            Name:            NEFilterDataVerdict
             WithProtocols:   
           - Type:            ULong
           - Type:            ULong
@@ -2785,7 +2785,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterDataVerdict
+            Name:            NEFilterDataVerdict
             WithProtocols:   
       - Name:            needRulesVerdict
         JsName:          needRulesVerdict
@@ -2802,7 +2802,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterDataVerdict
+            Name:            NEFilterDataVerdict
             WithProtocols:   
       - Name:            'remediateVerdictWithRemediationURLMapKey:remediationButtonTextMapKey:'
         JsName:          remediateVerdictWithRemediationURLMapKeyRemediationButtonTextMapKey
@@ -2819,13 +2819,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterDataVerdict
+            Name:            NEFilterDataVerdict
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -2848,7 +2848,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEFilterFlow
     JsName:          NEFilterFlow
@@ -2925,7 +2925,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            sourceAppIdentifier
         JsName:          sourceAppIdentifier
@@ -2956,7 +2956,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sourceAppUniqueIdentifier
         JsName:          sourceAppUniqueIdentifier
@@ -2987,7 +2987,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            sourceAppVersion
         JsName:          sourceAppVersion
@@ -3018,7 +3018,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            URL
         JsName:          URL
@@ -3049,7 +3049,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3089,7 +3089,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeFromPreferencesWithCompletionHandler:'
         JsName:          removeFromPreferencesWithCompletionHandler
@@ -3110,7 +3110,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveToPreferencesWithCompletionHandler:'
         JsName:          saveToPreferencesWithCompletionHandler
@@ -3131,7 +3131,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            sharedManager
@@ -3149,7 +3149,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterManager
+            Name:            NEFilterManager
             WithProtocols:   
     InstanceProperties: 
       - Name:            enabled
@@ -3227,7 +3227,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalizedDescription:'
@@ -3246,7 +3246,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            providerConfiguration
         JsName:          providerConfiguration
@@ -3277,7 +3277,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEFilterProviderConfiguration
+              Name:            NEFilterProviderConfiguration
               WithProtocols:   
         Setter:          
           Name:            'setProviderConfiguration:'
@@ -3296,7 +3296,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NEFilterProviderConfiguration
+              Name:            NEFilterProviderConfiguration
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3464,7 +3464,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterNewFlowVerdict
+            Name:            NEFilterNewFlowVerdict
             WithProtocols:   
       - Name:            dropVerdict
         JsName:          dropVerdict
@@ -3481,7 +3481,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterNewFlowVerdict
+            Name:            NEFilterNewFlowVerdict
             WithProtocols:   
       - Name:            'filterDataVerdictWithFilterInbound:peekInboundBytes:filterOutbound:peekOutboundBytes:'
         JsName:          filterDataVerdictWithFilterInboundPeekInboundBytesFilterOutboundPeekOutboundBytes
@@ -3498,7 +3498,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterNewFlowVerdict
+            Name:            NEFilterNewFlowVerdict
             WithProtocols:   
           - Type:            Bool
           - Type:            ULong
@@ -3519,7 +3519,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterNewFlowVerdict
+            Name:            NEFilterNewFlowVerdict
             WithProtocols:   
       - Name:            'remediateVerdictWithRemediationURLMapKey:remediationButtonTextMapKey:'
         JsName:          remediateVerdictWithRemediationURLMapKeyRemediationButtonTextMapKey
@@ -3536,13 +3536,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterNewFlowVerdict
+            Name:            NEFilterNewFlowVerdict
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'URLAppendStringVerdictWithMapKey:'
         JsName:          URLAppendStringVerdictWithMapKey
@@ -3559,10 +3559,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterNewFlowVerdict
+            Name:            NEFilterNewFlowVerdict
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -3639,7 +3639,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NEFilterReport
+            Name:            NEFilterReport
             WithProtocols:   
       - Name:            'startFilterWithCompletionHandler:'
         JsName:          startFilterWithCompletionHandler
@@ -3660,7 +3660,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'stopFilterWithReason:completionHandler:'
         JsName:          stopFilterWithReasonCompletionHandler
@@ -3713,7 +3713,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEFilterProviderConfiguration
+              Name:            NEFilterProviderConfiguration
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3855,7 +3855,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setIdentityReference:'
@@ -3874,7 +3874,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            organization
         JsName:          organization
@@ -3905,7 +3905,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setOrganization:'
@@ -3924,7 +3924,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            passwordReference
         JsName:          passwordReference
@@ -3955,7 +3955,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setPasswordReference:'
@@ -3974,7 +3974,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            serverAddress
         JsName:          serverAddress
@@ -4005,7 +4005,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setServerAddress:'
@@ -4024,7 +4024,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            username
         JsName:          username
@@ -4055,7 +4055,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setUsername:'
@@ -4074,7 +4074,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            vendorConfiguration
         JsName:          vendorConfiguration
@@ -4105,10 +4105,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -4130,10 +4130,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -4158,7 +4158,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEFilterProviderRemediationMapRemediationURLs
     JsName:          NEFilterProviderRemediationMapRemediationURLs
@@ -4175,7 +4175,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEFilterRemediationVerdict
     JsName:          NEFilterRemediationVerdict
@@ -4207,7 +4207,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterRemediationVerdict
+            Name:            NEFilterRemediationVerdict
             WithProtocols:   
       - Name:            dropVerdict
         JsName:          dropVerdict
@@ -4224,7 +4224,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterRemediationVerdict
+            Name:            NEFilterRemediationVerdict
             WithProtocols:   
       - Name:            needRulesVerdict
         JsName:          needRulesVerdict
@@ -4241,7 +4241,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEFilterRemediationVerdict
+            Name:            NEFilterRemediationVerdict
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -4412,7 +4412,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEFilterFlow
+              Name:            NEFilterFlow
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4524,7 +4524,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWEndpoint
+              Name:            NWEndpoint
               WithProtocols:   
       - Name:            remoteEndpoint
         JsName:          remoteEndpoint
@@ -4555,7 +4555,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWEndpoint
+              Name:            NWEndpoint
               WithProtocols:   
       - Name:            socketFamily
         JsName:          socketFamily
@@ -4761,7 +4761,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sourceAppUniqueIdentifier
         JsName:          sourceAppUniqueIdentifier
@@ -4792,7 +4792,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4829,10 +4829,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NEHotspotHS20Settings
+            Name:            NEHotspotHS20Settings
             WithProtocols:   
           - Type:            Interface
-            JsName:          NEHotspotEAPSettings
+            Name:            NEHotspotEAPSettings
             WithProtocols:   
       - Name:            'initWithSSID:'
         JsName:          initWithSSID
@@ -4850,7 +4850,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithSSID:eapSettings:'
         JsName:          initWithSSIDEapSettings
@@ -4868,10 +4868,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NEHotspotEAPSettings
+            Name:            NEHotspotEAPSettings
             WithProtocols:   
       - Name:            'initWithSSID:passphrase:isWEP:'
         JsName:          initWithSSIDPassphraseIsWEP
@@ -4889,10 +4889,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
       - Name:            'initWithSSIDPrefix:'
@@ -4911,7 +4911,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithSSIDPrefix:passphrase:isWEP:'
         JsName:          initWithSSIDPrefixPassphraseIsWEP
@@ -4929,10 +4929,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -5058,7 +5058,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setLifeTimeInDays:'
@@ -5077,7 +5077,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            SSID
         JsName:          SSID
@@ -5108,7 +5108,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            SSIDPrefix
         JsName:          SSIDPrefix
@@ -5139,7 +5139,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5434,7 +5434,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEHotspotConfigurationErrorInternal
     JsName:          NEHotspotConfigurationErrorInternal
@@ -5648,13 +5648,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NEHotspotConfiguration
+            Name:            NEHotspotConfiguration
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'getConfiguredSSIDsWithCompletionHandler:'
         JsName:          getConfiguredSSIDsWithCompletionHandler
@@ -5675,10 +5675,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'removeConfigurationForHS20DomainName:'
@@ -5697,7 +5697,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'removeConfigurationForSSID:'
         JsName:          removeConfigurationForSSID
@@ -5715,7 +5715,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -5747,7 +5747,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEHotspotConfigurationManager
+              Name:            NEHotspotConfigurationManager
               WithProtocols:   
     Protocols:       
     Base:            NSObject
@@ -5824,7 +5824,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -5857,7 +5857,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setOuterIdentity:'
@@ -5876,7 +5876,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            password
         JsName:          password
@@ -5907,7 +5907,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPassword:'
@@ -5926,7 +5926,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            preferredTLSVersion
         JsName:          preferredTLSVersion
@@ -6005,10 +6005,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6028,10 +6028,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            tlsClientCertificateRequired
@@ -6109,10 +6109,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6132,10 +6132,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            ttlsInnerAuthenticationType
@@ -6215,7 +6215,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setUsername:'
@@ -6234,7 +6234,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -6271,7 +6271,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -6305,7 +6305,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            MCCAndMNCs
         JsName:          MCCAndMNCs
@@ -6336,10 +6336,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6359,10 +6359,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            naiRealmNames
@@ -6394,10 +6394,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6417,10 +6417,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            roamingConsortiumOIs
@@ -6452,10 +6452,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6475,10 +6475,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            roamingEnabled
@@ -6563,7 +6563,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NEHotspotNetwork
+            Name:            NEHotspotNetwork
             WithProtocols:   
       - Name:            'registerWithOptions:queue:handler:'
         JsName:          registerWithOptionsQueueHandler
@@ -6581,24 +6581,24 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSObject
+                Name:            NSObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NEHotspotHelperCommand
+                Name:            NEHotspotHelperCommand
                 WithProtocols:   
       - Name:            supportedNetworkInterfaces
         JsName:          supportedNetworkInterfaces
@@ -6615,7 +6615,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -6650,7 +6650,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEHotspotHelperResponse
+            Name:            NEHotspotHelperResponse
             WithProtocols:   
           - Type:            Enum
             Name:            NEHotspotHelperResult
@@ -6669,10 +6669,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NWTCPConnection
+            Name:            NWTCPConnection
             WithProtocols:   
           - Type:            Interface
-            JsName:          NWEndpoint
+            Name:            NWEndpoint
             WithProtocols:   
       - Name:            'createUDPSession:'
         JsName:          createUDPSession
@@ -6689,10 +6689,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NWUDPSession
+            Name:            NWUDPSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NWEndpoint
+            Name:            NWEndpoint
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -6755,7 +6755,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEHotspotNetwork
+              Name:            NEHotspotNetwork
               WithProtocols:   
       - Name:            networkList
         JsName:          networkList
@@ -6786,10 +6786,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEHotspotNetwork
+                  Name:            NEHotspotNetwork
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -6880,7 +6880,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NEHotspotNetwork
+            Name:            NEHotspotNetwork
             WithProtocols:   
       - Name:            'setNetworkList:'
         JsName:          setNetworkList
@@ -6898,10 +6898,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NEHotspotNetwork
+                Name:            NEHotspotNetwork
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -6978,7 +6978,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -7040,7 +7040,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            chosenHelper
         JsName:          chosenHelper
@@ -7187,7 +7187,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7222,10 +7222,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            defaultRoute
@@ -7243,7 +7243,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEIPv4Route
+            Name:            NEIPv4Route
             WithProtocols:   
     InstanceProperties: 
       - Name:            destinationAddress
@@ -7275,7 +7275,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            destinationSubnetMask
         JsName:          destinationSubnetMask
@@ -7306,7 +7306,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            gatewayAddress
         JsName:          gatewayAddress
@@ -7337,7 +7337,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setGatewayAddress:'
@@ -7356,7 +7356,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7393,17 +7393,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -7437,10 +7437,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            excludedRoutes
@@ -7472,10 +7472,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEIPv4Route
+                  Name:            NEIPv4Route
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -7495,10 +7495,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEIPv4Route
+                  Name:            NEIPv4Route
                   WithProtocols:   
               WithProtocols:   
       - Name:            includedRoutes
@@ -7530,10 +7530,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEIPv4Route
+                  Name:            NEIPv4Route
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -7553,10 +7553,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEIPv4Route
+                  Name:            NEIPv4Route
                   WithProtocols:   
               WithProtocols:   
       - Name:            subnetMasks
@@ -7588,10 +7588,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -7629,10 +7629,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
     StaticMethods:   
       - Name:            defaultRoute
@@ -7650,7 +7650,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEIPv6Route
+            Name:            NEIPv6Route
             WithProtocols:   
     InstanceProperties: 
       - Name:            destinationAddress
@@ -7682,7 +7682,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            destinationNetworkPrefixLength
         JsName:          destinationNetworkPrefixLength
@@ -7713,7 +7713,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            gatewayAddress
         JsName:          gatewayAddress
@@ -7744,7 +7744,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setGatewayAddress:'
@@ -7763,7 +7763,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7800,17 +7800,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -7844,10 +7844,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            excludedRoutes
@@ -7879,10 +7879,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEIPv6Route
+                  Name:            NEIPv6Route
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -7902,10 +7902,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEIPv6Route
+                  Name:            NEIPv6Route
                   WithProtocols:   
               WithProtocols:   
       - Name:            includedRoutes
@@ -7937,10 +7937,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEIPv6Route
+                  Name:            NEIPv6Route
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -7960,10 +7960,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEIPv6Route
+                  Name:            NEIPv6Route
                   WithProtocols:   
               WithProtocols:   
       - Name:            networkPrefixLengths
@@ -7995,10 +7995,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -8120,10 +8120,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -8143,10 +8143,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            DNSServerAddressMatch
@@ -8178,10 +8178,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -8201,10 +8201,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            interfaceTypeMatch
@@ -8284,7 +8284,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setProbeURL:'
@@ -8303,7 +8303,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            SSIDMatch
         JsName:          SSIDMatch
@@ -8334,10 +8334,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -8357,10 +8357,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -8526,10 +8526,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEEvaluateConnectionRule
+                  Name:            NEEvaluateConnectionRule
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -8549,10 +8549,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEEvaluateConnectionRule
+                  Name:            NEEvaluateConnectionRule
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -8672,7 +8672,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            UChar
     StaticMethods:   
@@ -8706,7 +8706,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            metadata
         JsName:          metadata
@@ -8737,7 +8737,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEFlowMetaData
+              Name:            NEFlowMetaData
               WithProtocols:   
       - Name:            protocolFamily
         JsName:          protocolFamily
@@ -8806,10 +8806,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NEPacket
+                    Name:            NEPacket
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'readPacketsWithCompletionHandler:'
@@ -8831,17 +8831,17 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSData
+                    Name:            NSData
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSNumber
+                    Name:            NSNumber
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'writePacketObjects:'
@@ -8860,10 +8860,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NEPacket
+                Name:            NEPacket
                 WithProtocols:   
             WithProtocols:   
       - Name:            'writePackets:withProtocols:'
@@ -8882,17 +8882,17 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -8945,7 +8945,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEIPv4Settings
+              Name:            NEIPv4Settings
               WithProtocols:   
         Setter:          
           Name:            'setIPv4Settings:'
@@ -8964,7 +8964,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NEIPv4Settings
+              Name:            NEIPv4Settings
               WithProtocols:   
       - Name:            IPv6Settings
         JsName:          IPv6Settings
@@ -8995,7 +8995,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEIPv6Settings
+              Name:            NEIPv6Settings
               WithProtocols:   
         Setter:          
           Name:            'setIPv6Settings:'
@@ -9014,7 +9014,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NEIPv6Settings
+              Name:            NEIPv6Settings
               WithProtocols:   
       - Name:            MTU
         JsName:          MTU
@@ -9045,7 +9045,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setMTU:'
@@ -9064,7 +9064,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            tunnelOverheadBytes
         JsName:          tunnelOverheadBytes
@@ -9095,7 +9095,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setTunnelOverheadBytes:'
@@ -9114,7 +9114,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9149,7 +9149,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'createTCPConnectionThroughTunnelToEndpoint:enableTLS:TLSParameters:delegate:'
         JsName:          createTCPConnectionThroughTunnelToEndpointEnableTLSTLSParametersDelegate
@@ -9166,14 +9166,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NWTCPConnection
+            Name:            NWTCPConnection
             WithProtocols:   
           - Type:            Interface
-            JsName:          NWEndpoint
+            Name:            NWEndpoint
             WithProtocols:   
           - Type:            Bool
           - Type:            Interface
-            JsName:          NWTLSParameters
+            Name:            NWTLSParameters
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -9192,13 +9192,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NWUDPSession
+            Name:            NWUDPSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NWEndpoint
+            Name:            NWEndpoint
             WithProtocols:   
           - Type:            Interface
-            JsName:          NWHostEndpoint
+            Name:            NWHostEndpoint
             WithProtocols:   
       - Name:            'startTunnelWithOptions:completionHandler:'
         JsName:          startTunnelWithOptionsCompletionHandler
@@ -9216,20 +9216,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSObject
+                Name:            NSObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'stopTunnelWithReason:completionHandler:'
         JsName:          stopTunnelWithReasonCompletionHandler
@@ -9282,7 +9282,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEPacketTunnelFlow
+              Name:            NEPacketTunnelFlow
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9316,14 +9316,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NWTCPConnection
+            Name:            NWTCPConnection
             WithProtocols:   
           - Type:            Interface
-            JsName:          NWEndpoint
+            Name:            NWEndpoint
             WithProtocols:   
           - Type:            Bool
           - Type:            Interface
-            JsName:          NWTLSParameters
+            Name:            NWTLSParameters
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -9342,13 +9342,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NWUDPSession
+            Name:            NWUDPSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NWEndpoint
+            Name:            NWEndpoint
             WithProtocols:   
           - Type:            Interface
-            JsName:          NWHostEndpoint
+            Name:            NWHostEndpoint
             WithProtocols:   
       - Name:            'displayMessage:completionHandler:'
         JsName:          displayMessageCompletionHandler
@@ -9366,7 +9366,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -9436,7 +9436,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWPath
+              Name:            NWPath
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9743,7 +9743,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Long
     StaticMethods:   
@@ -9777,7 +9777,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            authenticationRequired
         JsName:          authenticationRequired
@@ -9854,7 +9854,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPassword:'
@@ -9873,7 +9873,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            port
         JsName:          port
@@ -9933,7 +9933,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setUsername:'
@@ -9952,7 +9952,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10050,10 +10050,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -10073,10 +10073,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            excludeSimpleHostnames
@@ -10246,7 +10246,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEProxyServer
+              Name:            NEProxyServer
               WithProtocols:   
         Setter:          
           Name:            'setHTTPServer:'
@@ -10265,7 +10265,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NEProxyServer
+              Name:            NEProxyServer
               WithProtocols:   
       - Name:            HTTPSServer
         JsName:          HTTPSServer
@@ -10296,7 +10296,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEProxyServer
+              Name:            NEProxyServer
               WithProtocols:   
         Setter:          
           Name:            'setHTTPSServer:'
@@ -10315,7 +10315,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NEProxyServer
+              Name:            NEProxyServer
               WithProtocols:   
       - Name:            matchDomains
         JsName:          matchDomains
@@ -10346,10 +10346,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -10369,10 +10369,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            proxyAutoConfigurationJavaScript
@@ -10404,7 +10404,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setProxyAutoConfigurationJavaScript:'
@@ -10423,7 +10423,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            proxyAutoConfigurationURL
         JsName:          proxyAutoConfigurationURL
@@ -10454,7 +10454,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setProxyAutoConfigurationURL:'
@@ -10473,7 +10473,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10570,7 +10570,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -10603,7 +10603,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEDNSSettings
+              Name:            NEDNSSettings
               WithProtocols:   
         Setter:          
           Name:            'setDNSSettings:'
@@ -10622,7 +10622,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NEDNSSettings
+              Name:            NEDNSSettings
               WithProtocols:   
       - Name:            proxySettings
         JsName:          proxySettings
@@ -10653,7 +10653,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEProxySettings
+              Name:            NEProxySettings
               WithProtocols:   
         Setter:          
           Name:            'setProxySettings:'
@@ -10672,7 +10672,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NEProxySettings
+              Name:            NEProxySettings
               WithProtocols:   
       - Name:            tunnelRemoteAddress
         JsName:          tunnelRemoteAddress
@@ -10703,7 +10703,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10740,13 +10740,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
       - Name:            'setTunnelNetworkSettings:completionHandler:'
         JsName:          setTunnelNetworkSettingsCompletionHandler
@@ -10764,13 +10764,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NETunnelNetworkSettings
+            Name:            NETunnelNetworkSettings
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -10803,10 +10803,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEAppRule
+                  Name:            NEAppRule
                   WithProtocols:   
               WithProtocols:   
       - Name:            protocolConfiguration
@@ -10838,7 +10838,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEVPNProtocol
+              Name:            NEVPNProtocol
               WithProtocols:   
       - Name:            reasserting
         JsName:          reasserting
@@ -10955,7 +10955,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NETunnelProviderErrorNetworkSettingsCanceled
     JsName:          NETunnelProviderErrorNetworkSettingsCanceled
@@ -11025,10 +11025,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NEAppRule
+                Name:            NEAppRule
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -11051,14 +11051,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NETunnelProviderManager
+                    Name:            NETunnelProviderManager
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
       - Name:            routingMethod
@@ -11139,7 +11139,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setProviderBundleIdentifier:'
@@ -11158,7 +11158,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            providerConfiguration
         JsName:          providerConfiguration
@@ -11189,10 +11189,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -11214,10 +11214,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -11302,18 +11302,18 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
       - Name:            'startTunnelWithOptions:andReturnError:'
         JsName:          startTunnelWithOptionsAndReturnError
@@ -11331,10 +11331,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -11342,7 +11342,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            stopTunnel
         JsName:          stopTunnel
@@ -11379,7 +11379,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEVPNConnection
     JsName:          NEVPNConnection
@@ -11413,7 +11413,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'startVPNTunnelWithOptions:andReturnError:'
         JsName:          startVPNTunnelWithOptionsAndReturnError
@@ -11431,19 +11431,19 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSObject
+                Name:            NSObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            stopVPNTunnel
         JsName:          stopVPNTunnel
@@ -11491,7 +11491,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            manager
         JsName:          manager
@@ -11522,7 +11522,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEVPNManager
+              Name:            NEVPNManager
               WithProtocols:   
       - Name:            status
         JsName:          status
@@ -11572,7 +11572,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEVPNConnectionStartOptionUsername
     JsName:          NEVPNConnectionStartOptionUsername
@@ -11589,7 +11589,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEVPNError
     JsName:          NEVPNError
@@ -11711,7 +11711,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEVPNIKEAuthenticationMethod
     JsName:          NEVPNIKEAuthenticationMethod
@@ -12682,7 +12682,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeFromPreferencesWithCompletionHandler:'
         JsName:          removeFromPreferencesWithCompletionHandler
@@ -12703,7 +12703,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveToPreferencesWithCompletionHandler:'
         JsName:          saveToPreferencesWithCompletionHandler
@@ -12724,7 +12724,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            sharedManager
@@ -12742,7 +12742,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NEVPNManager
+            Name:            NEVPNManager
             WithProtocols:   
     InstanceProperties: 
       - Name:            connection
@@ -12774,7 +12774,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEVPNConnection
+              Name:            NEVPNConnection
               WithProtocols:   
       - Name:            enabled
         JsName:          enabled
@@ -12851,7 +12851,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalizedDescription:'
@@ -12870,7 +12870,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            onDemandEnabled
         JsName:          onDemandEnabled
@@ -12947,10 +12947,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEOnDemandRule
+                  Name:            NEOnDemandRule
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -12970,10 +12970,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NEOnDemandRule
+                  Name:            NEOnDemandRule
                   WithProtocols:   
               WithProtocols:   
       - Name:            protocol
@@ -13005,7 +13005,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEVPNProtocol
+              Name:            NEVPNProtocol
               WithProtocols:   
         Setter:          
           Name:            'setProtocol:'
@@ -13024,7 +13024,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NEVPNProtocol
+              Name:            NEVPNProtocol
               WithProtocols:   
       - Name:            protocolConfiguration
         JsName:          protocolConfiguration
@@ -13055,7 +13055,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEVPNProtocol
+              Name:            NEVPNProtocol
               WithProtocols:   
         Setter:          
           Name:            'setProtocolConfiguration:'
@@ -13074,7 +13074,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NEVPNProtocol
+              Name:            NEVPNProtocol
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -13170,7 +13170,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setIdentityData:'
@@ -13189,7 +13189,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            identityDataPassword
         JsName:          identityDataPassword
@@ -13220,7 +13220,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setIdentityDataPassword:'
@@ -13239,7 +13239,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identityReference
         JsName:          identityReference
@@ -13270,7 +13270,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setIdentityReference:'
@@ -13289,7 +13289,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            passwordReference
         JsName:          passwordReference
@@ -13320,7 +13320,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setPasswordReference:'
@@ -13339,7 +13339,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            proxySettings
         JsName:          proxySettings
@@ -13370,7 +13370,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEProxySettings
+              Name:            NEProxySettings
               WithProtocols:   
         Setter:          
           Name:            'setProxySettings:'
@@ -13389,7 +13389,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NEProxySettings
+              Name:            NEProxySettings
               WithProtocols:   
       - Name:            serverAddress
         JsName:          serverAddress
@@ -13420,7 +13420,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setServerAddress:'
@@ -13439,7 +13439,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            username
         JsName:          username
@@ -13470,7 +13470,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setUsername:'
@@ -13489,7 +13489,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -13589,7 +13589,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEVPNIKEv2SecurityAssociationParameters
+              Name:            NEVPNIKEv2SecurityAssociationParameters
               WithProtocols:   
       - Name:            deadPeerDetectionRate
         JsName:          deadPeerDetectionRate
@@ -13898,7 +13898,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NEVPNIKEv2SecurityAssociationParameters
+              Name:            NEVPNIKEv2SecurityAssociationParameters
               WithProtocols:   
       - Name:            maximumTLSVersion
         JsName:          maximumTLSVersion
@@ -14025,7 +14025,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setServerCertificateCommonName:'
@@ -14044,7 +14044,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            serverCertificateIssuerCommonName
         JsName:          serverCertificateIssuerCommonName
@@ -14075,7 +14075,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setServerCertificateIssuerCommonName:'
@@ -14094,7 +14094,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            strictRevocationCheck
         JsName:          strictRevocationCheck
@@ -14284,7 +14284,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalIdentifier:'
@@ -14303,7 +14303,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            remoteIdentifier
         JsName:          remoteIdentifier
@@ -14334,7 +14334,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setRemoteIdentifier:'
@@ -14353,7 +14353,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sharedSecretReference
         JsName:          sharedSecretReference
@@ -14384,7 +14384,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setSharedSecretReference:'
@@ -14403,7 +14403,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            useExtendedAuthentication
         JsName:          useExtendedAuthentication
@@ -14522,7 +14522,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NEVPNStatusDisconnected
     JsName:          NEVPNStatusDisconnected
@@ -14607,13 +14607,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            domain
@@ -14645,7 +14645,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -14676,7 +14676,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -14707,7 +14707,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -14764,10 +14764,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            hostname
@@ -14799,7 +14799,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            port
         JsName:          port
@@ -14830,7 +14830,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -14865,7 +14865,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NWPath
+            Name:            NWPath
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -15051,7 +15051,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NWTCPConnection
+            Name:            NWTCPConnection
             WithProtocols:   
       - Name:            'readLength:completionHandler:'
         JsName:          readLengthCompletionHandler
@@ -15073,10 +15073,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'readMinimumLength:maximumLength:completionHandler:'
         JsName:          readMinimumLengthMaximumLengthCompletionHandler
@@ -15099,10 +15099,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            writeClose
         JsName:          writeClose
@@ -15135,13 +15135,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -15174,7 +15174,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWPath
+              Name:            NWPath
               WithProtocols:   
       - Name:            endpoint
         JsName:          endpoint
@@ -15205,7 +15205,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWEndpoint
+              Name:            NWEndpoint
               WithProtocols:   
       - Name:            error
         JsName:          error
@@ -15236,7 +15236,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            hasBetterPath
         JsName:          hasBetterPath
@@ -15296,7 +15296,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWEndpoint
+              Name:            NWEndpoint
               WithProtocols:   
       - Name:            remoteAddress
         JsName:          remoteAddress
@@ -15327,7 +15327,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWEndpoint
+              Name:            NWEndpoint
               WithProtocols:   
       - Name:            state
         JsName:          state
@@ -15388,7 +15388,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            viable
         JsName:          viable
@@ -15450,10 +15450,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NWTCPConnection
+            Name:            NWTCPConnection
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -15479,7 +15479,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NWTCPConnection
+            Name:            NWTCPConnection
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -15488,7 +15488,7 @@ Items:
                 Name:            id
                 BridgedTo:       id
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Id
                     WithProtocols:   
@@ -15508,7 +15508,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NWTCPConnection
+            Name:            NWTCPConnection
             WithProtocols:   
       - Name:            'shouldProvideIdentityForConnection:'
         JsName:          shouldProvideIdentityForConnection
@@ -15525,7 +15525,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NWTCPConnection
+            Name:            NWTCPConnection
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -15773,10 +15773,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -15796,10 +15796,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            TLSSessionID
@@ -15831,7 +15831,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setTLSSessionID:'
@@ -15850,7 +15850,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -15900,7 +15900,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NWUDPSession
+            Name:            NWUDPSession
             WithProtocols:   
       - Name:            'setReadHandler:maxDatagrams:'
         JsName:          setReadHandlerMaxDatagrams
@@ -15921,14 +15921,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSData
+                    Name:            NSData
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
           - Type:            ULong
       - Name:            tryNextResolvedEndpoint
@@ -15962,13 +15962,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeMultipleDatagrams:completionHandler:'
         JsName:          writeMultipleDatagramsCompletionHandler
@@ -15986,17 +15986,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -16029,7 +16029,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWPath
+              Name:            NWPath
               WithProtocols:   
       - Name:            endpoint
         JsName:          endpoint
@@ -16060,7 +16060,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWEndpoint
+              Name:            NWEndpoint
               WithProtocols:   
       - Name:            hasBetterPath
         JsName:          hasBetterPath
@@ -16149,7 +16149,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NWEndpoint
+              Name:            NWEndpoint
               WithProtocols:   
       - Name:            state
         JsName:          state
@@ -16463,7 +16463,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kNEHotspotHelperResultAuthenticationRequired
     JsName:          kNEHotspotHelperResultAuthenticationRequired

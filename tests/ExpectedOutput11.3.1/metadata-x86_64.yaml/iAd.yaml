@@ -59,7 +59,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ADBannerContentSizeIdentifier480x32
     JsName:          ADBannerContentSizeIdentifier480x32
@@ -74,7 +74,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ADBannerContentSizeIdentifierLandscape
     JsName:          ADBannerContentSizeIdentifierLandscape
@@ -89,7 +89,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ADBannerContentSizeIdentifierPortrait
     JsName:          ADBannerContentSizeIdentifierPortrait
@@ -104,7 +104,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ADBannerView
     JsName:          ADBannerView
@@ -160,9 +160,9 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            adType
@@ -214,7 +214,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAdvertisingSection:'
@@ -230,7 +230,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            bannerLoaded
         JsName:          bannerLoaded
@@ -344,7 +344,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCurrentContentSizeIdentifier:'
@@ -361,7 +361,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            requiredContentSizeIdentifiers
         JsName:          requiredContentSizeIdentifiers
@@ -388,7 +388,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               WithProtocols:   
         Setter:          
           Name:            'setRequiredContentSizeIdentifiers:'
@@ -405,7 +405,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -435,7 +435,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ADBannerView
+            Name:            ADBannerView
             WithProtocols:   
       - Name:            'bannerViewActionShouldBegin:willLeaveApplication:'
         JsName:          bannerViewActionShouldBeginWillLeaveApplication
@@ -450,7 +450,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          ADBannerView
+            Name:            ADBannerView
             WithProtocols:   
           - Type:            Bool
       - Name:            'bannerView:didFailToReceiveAdWithError:'
@@ -466,10 +466,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ADBannerView
+            Name:            ADBannerView
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'bannerViewDidLoadAd:'
         JsName:          bannerViewDidLoadAd
@@ -484,7 +484,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ADBannerView
+            Name:            ADBannerView
             WithProtocols:   
       - Name:            'bannerViewWillLoadAd:'
         JsName:          bannerViewWillLoadAd
@@ -500,7 +500,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ADBannerView
+            Name:            ADBannerView
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -521,10 +521,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGSize
+        Name:            CGSize
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGSize
+        Name:            CGSize
   - Name:            ADClient
     JsName:          ADClient
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/iAd.framework/Headers/ADClient.h
@@ -551,10 +551,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Bool
@@ -592,10 +592,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSDate
+                Name:            NSDate
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSDate
+                Name:            NSDate
                 WithProtocols:   
       - Name:            'requestAttributionDetailsWithBlock:'
         JsName:          requestAttributionDetailsWithBlock
@@ -614,17 +614,17 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                   - Type:            Interface
-                    JsName:          NSObject
+                    Name:            NSObject
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            sharedClient
@@ -640,7 +640,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ADClient
+            Name:            ADClient
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -691,7 +691,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ADClientErrorLimitAdTracking
     JsName:          ADClientErrorLimitAdTracking
@@ -851,7 +851,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ADErrorInventoryUnavailable
     JsName:          ADErrorInventoryUnavailable
@@ -934,7 +934,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UIViewController
+            Name:            UIViewController
             WithProtocols:   
       - Name:            'presentInView:'
         JsName:          presentInView
@@ -949,7 +949,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          UIView
+            Name:            UIView
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1068,7 +1068,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ADInterstitialAd
+            Name:            ADInterstitialAd
             WithProtocols:   
       - Name:            'interstitialAdActionShouldBegin:willLeaveApplication:'
         JsName:          interstitialAdActionShouldBeginWillLeaveApplication
@@ -1083,7 +1083,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          ADInterstitialAd
+            Name:            ADInterstitialAd
             WithProtocols:   
           - Type:            Bool
       - Name:            'interstitialAd:didFailWithError:'
@@ -1099,10 +1099,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ADInterstitialAd
+            Name:            ADInterstitialAd
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'interstitialAdDidLoad:'
         JsName:          interstitialAdDidLoad
@@ -1117,7 +1117,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ADInterstitialAd
+            Name:            ADInterstitialAd
             WithProtocols:   
       - Name:            'interstitialAdDidUnload:'
         JsName:          interstitialAdDidUnload
@@ -1132,7 +1132,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ADInterstitialAd
+            Name:            ADInterstitialAd
             WithProtocols:   
       - Name:            'interstitialAdWillLoad:'
         JsName:          interstitialAdWillLoad
@@ -1148,7 +1148,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ADInterstitialAd
+            Name:            ADInterstitialAd
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1180,7 +1180,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          ADInterstitialAd
+            Name:            ADInterstitialAd
             WithProtocols:   
       - Name:            'shouldTestVisibilityAtPoint:'
         JsName:          shouldTestVisibilityAtPoint
@@ -1196,7 +1196,7 @@ Items:
           - Type:            Bool
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
     StaticMethods:   
     InstanceProperties: 
     StaticProperties: 

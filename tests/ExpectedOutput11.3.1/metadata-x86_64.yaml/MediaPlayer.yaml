@@ -44,7 +44,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPNowPlayingInfoLanguageOption
+              Name:            MPNowPlayingInfoLanguageOption
               WithProtocols:   
       - Name:            setting
         JsName:          setting
@@ -219,10 +219,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -239,10 +239,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -553,7 +553,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -580,7 +580,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMediaItemArtwork
+              Name:            MPMediaItemArtwork
               WithProtocols:   
         Setter:          
           Name:            'setArtwork:'
@@ -596,7 +596,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MPMediaItemArtwork
+              Name:            MPMediaItemArtwork
               WithProtocols:   
       - Name:            container
         JsName:          container
@@ -698,7 +698,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            playable
         JsName:          playable
@@ -837,7 +837,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSubtitle:'
@@ -853,7 +853,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -878,7 +878,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -894,7 +894,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -964,7 +964,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPErrorNetworkConnectionFailed
     JsName:          MPErrorNetworkConnectionFailed
@@ -1109,7 +1109,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalizedShortTitle:'
@@ -1126,7 +1126,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            localizedTitle
         JsName:          localizedTitle
@@ -1151,7 +1151,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalizedTitle:'
@@ -1167,7 +1167,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1225,7 +1225,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPLanguageOptionCharacteristicDescribesMusicAndSound
     JsName:          MPLanguageOptionCharacteristicDescribesMusicAndSound
@@ -1240,7 +1240,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPLanguageOptionCharacteristicDescribesVideo
     JsName:          MPLanguageOptionCharacteristicDescribesVideo
@@ -1255,7 +1255,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPLanguageOptionCharacteristicDubbedTranslation
     JsName:          MPLanguageOptionCharacteristicDubbedTranslation
@@ -1270,7 +1270,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPLanguageOptionCharacteristicEasyToRead
     JsName:          MPLanguageOptionCharacteristicEasyToRead
@@ -1285,7 +1285,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPLanguageOptionCharacteristicIsAuxiliaryContent
     JsName:          MPLanguageOptionCharacteristicIsAuxiliaryContent
@@ -1300,7 +1300,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPLanguageOptionCharacteristicIsMainProgramContent
     JsName:          MPLanguageOptionCharacteristicIsMainProgramContent
@@ -1315,7 +1315,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPLanguageOptionCharacteristicLanguageTranslation
     JsName:          MPLanguageOptionCharacteristicLanguageTranslation
@@ -1330,7 +1330,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPLanguageOptionCharacteristicTranscribesSpokenDialog
     JsName:          MPLanguageOptionCharacteristicTranscribesSpokenDialog
@@ -1345,7 +1345,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPLanguageOptionCharacteristicVoiceOverTranslation
     JsName:          MPLanguageOptionCharacteristicVoiceOverTranslation
@@ -1360,7 +1360,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaEntity
     JsName:          MPMediaEntity
@@ -1388,17 +1388,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1435,7 +1435,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'canFilterByProperty:'
@@ -1451,7 +1451,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            persistentID
@@ -1496,7 +1496,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaGrouping
     JsName:          MPMediaGrouping
@@ -1641,7 +1641,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MPMediaGrouping
@@ -1658,7 +1658,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MPMediaGrouping
@@ -1688,7 +1688,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            albumArtistPersistentID
         JsName:          albumArtistPersistentID
@@ -1765,7 +1765,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            albumTrackCount
         JsName:          albumTrackCount
@@ -1842,7 +1842,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            artistPersistentID
         JsName:          artistPersistentID
@@ -1894,7 +1894,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMediaItemArtwork
+              Name:            MPMediaItemArtwork
               WithProtocols:   
       - Name:            assetURL
         JsName:          assetURL
@@ -1921,7 +1921,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            beatsPerMinute
         JsName:          beatsPerMinute
@@ -2023,7 +2023,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            compilation
         JsName:          compilation
@@ -2075,7 +2075,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            composerPersistentID
         JsName:          composerPersistentID
@@ -2127,7 +2127,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            discCount
         JsName:          discCount
@@ -2229,7 +2229,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            genrePersistentID
         JsName:          genrePersistentID
@@ -2281,7 +2281,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            lyrics
         JsName:          lyrics
@@ -2308,7 +2308,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            mediaType
         JsName:          mediaType
@@ -2386,7 +2386,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            playCount
         JsName:          playCount
@@ -2463,7 +2463,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            protectedAsset
         JsName:          protectedAsset
@@ -2540,7 +2540,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            skipCount
         JsName:          skipCount
@@ -2592,7 +2592,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            userGrouping
         JsName:          userGrouping
@@ -2619,7 +2619,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2648,11 +2648,11 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
       - Name:            'initWithBoundsSize:requestHandler:'
         JsName:          initWithBoundsSizeRequestHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MPMediaItem.h
@@ -2668,15 +2668,15 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Block
             Signature:       
               - Type:            Interface
-                JsName:          UIImage
+                Name:            UIImage
                 WithProtocols:   
               - Type:            Struct
                 Module:          CoreGraphics.CGGeometry
-                JsName:          CGSize
+                Name:            CGSize
       - Name:            'initWithImage:'
         JsName:          initWithImage
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MPMediaItem.h
@@ -2691,7 +2691,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2719,7 +2719,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
       - Name:            imageCropRect
         JsName:          imageCropRect
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MPMediaItem.h
@@ -2746,7 +2746,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
     StaticProperties: 
     Protocols:       
     Base:            NSObject
@@ -2775,10 +2775,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MPMediaItem
+                Name:            MPMediaItem
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -2794,13 +2794,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaItemCollection
+            Name:            MPMediaItemCollection
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MPMediaItem
+                Name:            MPMediaItem
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -2850,10 +2850,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPMediaItem
+                  Name:            MPMediaItem
                   WithProtocols:   
               WithProtocols:   
       - Name:            mediaTypes
@@ -2903,7 +2903,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMediaItem
+              Name:            MPMediaItem
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2920,7 +2920,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyAlbumArtistPersistentID
     JsName:          MPMediaItemPropertyAlbumArtistPersistentID
@@ -2935,7 +2935,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyAlbumPersistentID
     JsName:          MPMediaItemPropertyAlbumPersistentID
@@ -2950,7 +2950,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyAlbumTitle
     JsName:          MPMediaItemPropertyAlbumTitle
@@ -2964,7 +2964,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyAlbumTrackCount
     JsName:          MPMediaItemPropertyAlbumTrackCount
@@ -2978,7 +2978,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyAlbumTrackNumber
     JsName:          MPMediaItemPropertyAlbumTrackNumber
@@ -2992,7 +2992,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyArtist
     JsName:          MPMediaItemPropertyArtist
@@ -3006,7 +3006,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyArtistPersistentID
     JsName:          MPMediaItemPropertyArtistPersistentID
@@ -3021,7 +3021,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyArtwork
     JsName:          MPMediaItemPropertyArtwork
@@ -3036,7 +3036,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyAssetURL
     JsName:          MPMediaItemPropertyAssetURL
@@ -3051,7 +3051,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyBeatsPerMinute
     JsName:          MPMediaItemPropertyBeatsPerMinute
@@ -3066,7 +3066,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyBookmarkTime
     JsName:          MPMediaItemPropertyBookmarkTime
@@ -3081,7 +3081,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyComments
     JsName:          MPMediaItemPropertyComments
@@ -3096,7 +3096,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyComposer
     JsName:          MPMediaItemPropertyComposer
@@ -3110,7 +3110,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyComposerPersistentID
     JsName:          MPMediaItemPropertyComposerPersistentID
@@ -3125,7 +3125,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyDateAdded
     JsName:          MPMediaItemPropertyDateAdded
@@ -3140,7 +3140,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyDiscCount
     JsName:          MPMediaItemPropertyDiscCount
@@ -3154,7 +3154,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyDiscNumber
     JsName:          MPMediaItemPropertyDiscNumber
@@ -3168,7 +3168,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyGenre
     JsName:          MPMediaItemPropertyGenre
@@ -3182,7 +3182,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyGenrePersistentID
     JsName:          MPMediaItemPropertyGenrePersistentID
@@ -3197,7 +3197,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyHasProtectedAsset
     JsName:          MPMediaItemPropertyHasProtectedAsset
@@ -3212,7 +3212,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyIsCloudItem
     JsName:          MPMediaItemPropertyIsCloudItem
@@ -3227,7 +3227,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyIsCompilation
     JsName:          MPMediaItemPropertyIsCompilation
@@ -3241,7 +3241,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyIsExplicit
     JsName:          MPMediaItemPropertyIsExplicit
@@ -3256,7 +3256,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyLastPlayedDate
     JsName:          MPMediaItemPropertyLastPlayedDate
@@ -3270,7 +3270,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyLyrics
     JsName:          MPMediaItemPropertyLyrics
@@ -3284,7 +3284,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyMediaType
     JsName:          MPMediaItemPropertyMediaType
@@ -3298,7 +3298,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyPersistentID
     JsName:          MPMediaItemPropertyPersistentID
@@ -3313,7 +3313,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyPlayCount
     JsName:          MPMediaItemPropertyPlayCount
@@ -3327,7 +3327,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyPlaybackDuration
     JsName:          MPMediaItemPropertyPlaybackDuration
@@ -3341,7 +3341,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyPlaybackStoreID
     JsName:          MPMediaItemPropertyPlaybackStoreID
@@ -3356,7 +3356,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyPodcastPersistentID
     JsName:          MPMediaItemPropertyPodcastPersistentID
@@ -3371,7 +3371,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyPodcastTitle
     JsName:          MPMediaItemPropertyPodcastTitle
@@ -3385,7 +3385,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyRating
     JsName:          MPMediaItemPropertyRating
@@ -3399,7 +3399,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyReleaseDate
     JsName:          MPMediaItemPropertyReleaseDate
@@ -3414,7 +3414,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertySkipCount
     JsName:          MPMediaItemPropertySkipCount
@@ -3428,7 +3428,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyTitle
     JsName:          MPMediaItemPropertyTitle
@@ -3442,7 +3442,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaItemPropertyUserGrouping
     JsName:          MPMediaItemPropertyUserGrouping
@@ -3457,7 +3457,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaLibrary
     JsName:          MPMediaLibrary
@@ -3485,20 +3485,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          MPMediaEntity
+                    Name:            MPMediaEntity
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            beginGeneratingLibraryChangeNotifications
         JsName:          beginGeneratingLibraryChangeNotifications
@@ -3538,19 +3538,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          MPMediaPlaylistCreationMetadata
+            Name:            MPMediaPlaylistCreationMetadata
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MPMediaPlaylist
+                Name:            MPMediaPlaylist
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            authorizationStatus
@@ -3579,7 +3579,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaLibrary
+            Name:            MPMediaLibrary
             WithProtocols:   
       - Name:            'requestAuthorization:'
         JsName:          requestAuthorization
@@ -3623,7 +3623,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3706,7 +3706,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaPickerController
     JsName:          MPMediaPickerController
@@ -3861,7 +3861,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPrompt:'
@@ -3877,7 +3877,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            showsCloudItems
         JsName:          showsCloudItems
@@ -3986,7 +3986,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMediaPickerController
+            Name:            MPMediaPickerController
             WithProtocols:   
       - Name:            'mediaPicker:didPickMediaItems:'
         JsName:          mediaPickerDidPickMediaItems
@@ -4001,10 +4001,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMediaPickerController
+            Name:            MPMediaPickerController
             WithProtocols:   
           - Type:            Interface
-            JsName:          MPMediaItemCollection
+            Name:            MPMediaItemCollection
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4220,7 +4220,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaPlaylist
     JsName:          MPMediaPlaylist
@@ -4248,13 +4248,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'addMediaItems:completionHandler:'
         JsName:          addMediaItemsCompletionHandler
@@ -4270,17 +4270,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MPMediaItem
+                Name:            MPMediaItem
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4309,7 +4309,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            descriptionText
         JsName:          descriptionText
@@ -4336,7 +4336,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -4363,7 +4363,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            playlistAttributes
         JsName:          playlistAttributes
@@ -4416,10 +4416,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPMediaItem
+                  Name:            MPMediaItem
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -4515,7 +4515,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4542,7 +4542,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAuthorDisplayName:'
@@ -4558,7 +4558,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            descriptionText
         JsName:          descriptionText
@@ -4583,7 +4583,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setDescriptionText:'
@@ -4599,7 +4599,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -4624,7 +4624,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4642,7 +4642,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaPlaylistPropertyDescriptionText
     JsName:          MPMediaPlaylistPropertyDescriptionText
@@ -4657,7 +4657,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaPlaylistPropertyName
     JsName:          MPMediaPlaylistPropertyName
@@ -4671,7 +4671,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaPlaylistPropertyPersistentID
     JsName:          MPMediaPlaylistPropertyPersistentID
@@ -4685,7 +4685,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaPlaylistPropertyPlaylistAttributes
     JsName:          MPMediaPlaylistPropertyPlaylistAttributes
@@ -4699,7 +4699,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaPlaylistPropertySeedItems
     JsName:          MPMediaPlaylistPropertySeedItems
@@ -4713,7 +4713,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMediaPredicate
     JsName:          MPMediaPredicate
@@ -4797,12 +4797,12 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaPropertyPredicate
+            Name:            MPMediaPropertyPredicate
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'predicateWithValue:forProperty:comparisonType:'
         JsName:          predicateWithValueForPropertyComparisonType
@@ -4816,12 +4816,12 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaPropertyPredicate
+            Name:            MPMediaPropertyPredicate
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            MPMediaPredicateComparison
@@ -4873,7 +4873,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            value
         JsName:          value
@@ -4927,7 +4927,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMediaPredicate
+            Name:            MPMediaPredicate
             WithProtocols:   
       - Name:            'initWithFilterPredicates:'
         JsName:          initWithFilterPredicates
@@ -4942,10 +4942,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          MPMediaPredicate
+                Name:            MPMediaPredicate
                 WithProtocols:   
             WithProtocols:   
       - Name:            'removeFilterPredicate:'
@@ -4961,7 +4961,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMediaPredicate
+            Name:            MPMediaPredicate
             WithProtocols:   
     StaticMethods:   
       - Name:            albumsQuery
@@ -4976,7 +4976,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaQuery
+            Name:            MPMediaQuery
             WithProtocols:   
       - Name:            artistsQuery
         JsName:          artistsQuery
@@ -4990,7 +4990,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaQuery
+            Name:            MPMediaQuery
             WithProtocols:   
       - Name:            audiobooksQuery
         JsName:          audiobooksQuery
@@ -5004,7 +5004,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaQuery
+            Name:            MPMediaQuery
             WithProtocols:   
       - Name:            compilationsQuery
         JsName:          compilationsQuery
@@ -5018,7 +5018,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaQuery
+            Name:            MPMediaQuery
             WithProtocols:   
       - Name:            composersQuery
         JsName:          composersQuery
@@ -5032,7 +5032,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaQuery
+            Name:            MPMediaQuery
             WithProtocols:   
       - Name:            genresQuery
         JsName:          genresQuery
@@ -5046,7 +5046,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaQuery
+            Name:            MPMediaQuery
             WithProtocols:   
       - Name:            playlistsQuery
         JsName:          playlistsQuery
@@ -5060,7 +5060,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaQuery
+            Name:            MPMediaQuery
             WithProtocols:   
       - Name:            podcastsQuery
         JsName:          podcastsQuery
@@ -5074,7 +5074,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaQuery
+            Name:            MPMediaQuery
             WithProtocols:   
       - Name:            songsQuery
         JsName:          songsQuery
@@ -5088,7 +5088,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPMediaQuery
+            Name:            MPMediaQuery
             WithProtocols:   
     InstanceProperties: 
       - Name:            collections
@@ -5114,10 +5114,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPMediaItemCollection
+                  Name:            MPMediaItemCollection
                   WithProtocols:   
               WithProtocols:   
       - Name:            collectionSections
@@ -5145,10 +5145,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPMediaQuerySection
+                  Name:            MPMediaQuerySection
                   WithProtocols:   
               WithProtocols:   
       - Name:            filterPredicates
@@ -5174,10 +5174,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPMediaPredicate
+                  Name:            MPMediaPredicate
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5194,10 +5194,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPMediaPredicate
+                  Name:            MPMediaPredicate
                   WithProtocols:   
               WithProtocols:   
       - Name:            groupingType
@@ -5262,10 +5262,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPMediaItem
+                  Name:            MPMediaItem
                   WithProtocols:   
               WithProtocols:   
       - Name:            itemSections
@@ -5293,10 +5293,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPMediaQuerySection
+                  Name:            MPMediaQuerySection
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -5342,7 +5342,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Foundation.NSRange
-              JsName:          NSRange
+              Name:            NSRange
       - Name:            title
         JsName:          title
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MPMediaQuerySection.h
@@ -5366,7 +5366,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5600,7 +5600,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
       - Name:            extendedLogData
         JsName:          extendedLogData
@@ -5625,7 +5625,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            extendedLogDataStringEncoding
         JsName:          extendedLogDataStringEncoding
@@ -5875,7 +5875,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            playbackStartDate
         JsName:          playbackStartDate
@@ -5900,7 +5900,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            playbackStartOffset
         JsName:          playbackStartOffset
@@ -5971,7 +5971,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            URI
         JsName:          URI
@@ -5996,7 +5996,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -6080,7 +6080,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMovieErrorLog
     JsName:          MPMovieErrorLog
@@ -6119,7 +6119,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
       - Name:            extendedLogData
         JsName:          extendedLogData
@@ -6144,7 +6144,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            extendedLogDataStringEncoding
         JsName:          extendedLogDataStringEncoding
@@ -6210,7 +6210,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            errorComment
         JsName:          errorComment
@@ -6235,7 +6235,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            errorDomain
         JsName:          errorDomain
@@ -6260,7 +6260,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            errorStatusCode
         JsName:          errorStatusCode
@@ -6308,7 +6308,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            serverAddress
         JsName:          serverAddress
@@ -6333,7 +6333,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            URI
         JsName:          URI
@@ -6358,7 +6358,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -6546,7 +6546,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMovieNaturalSizeAvailableNotification
     JsName:          MPMovieNaturalSizeAvailableNotification
@@ -6561,7 +6561,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlaybackState
     JsName:          MPMoviePlaybackState
@@ -6679,7 +6679,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'setFullscreen:animated:'
         JsName:          setFullscreenAnimated
@@ -6722,7 +6722,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
           - Type:            Enum
             Name:            MPMovieTimeOption
@@ -6739,7 +6739,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Double
           - Type:            Enum
@@ -6829,7 +6829,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIView
+              Name:            UIView
               WithProtocols:   
       - Name:            contentURL
         JsName:          contentURL
@@ -6854,7 +6854,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setContentURL:'
@@ -6870,7 +6870,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            controlStyle
         JsName:          controlStyle
@@ -7156,7 +7156,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
       - Name:            playableDuration
         JsName:          playableDuration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MPMoviePlayerController.h
@@ -7367,7 +7367,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIView
+              Name:            UIView
               WithProtocols:   
       - Name:            timedMetadata
         JsName:          timedMetadata
@@ -7394,7 +7394,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
       - Name:            accessLog
         JsName:          accessLog
@@ -7421,7 +7421,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMovieAccessLog
+              Name:            MPMovieAccessLog
               WithProtocols:   
       - Name:            errorLog
         JsName:          errorLog
@@ -7448,7 +7448,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMovieErrorLog
+              Name:            MPMovieErrorLog
               WithProtocols:   
       - Name:            useApplicationAudioSession
         JsName:          useApplicationAudioSession
@@ -7507,7 +7507,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerDidExitFullscreenNotification
     JsName:          MPMoviePlayerDidExitFullscreenNotification
@@ -7522,7 +7522,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerFullscreenAnimationCurveUserInfoKey
     JsName:          MPMoviePlayerFullscreenAnimationCurveUserInfoKey
@@ -7537,7 +7537,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerFullscreenAnimationDurationUserInfoKey
     JsName:          MPMoviePlayerFullscreenAnimationDurationUserInfoKey
@@ -7552,7 +7552,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerIsAirPlayVideoActiveDidChangeNotification
     JsName:          MPMoviePlayerIsAirPlayVideoActiveDidChangeNotification
@@ -7567,7 +7567,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerLoadStateDidChangeNotification
     JsName:          MPMoviePlayerLoadStateDidChangeNotification
@@ -7582,7 +7582,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerNowPlayingMovieDidChangeNotification
     JsName:          MPMoviePlayerNowPlayingMovieDidChangeNotification
@@ -7597,7 +7597,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerPlaybackDidFinishNotification
     JsName:          MPMoviePlayerPlaybackDidFinishNotification
@@ -7612,7 +7612,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerPlaybackDidFinishReasonUserInfoKey
     JsName:          MPMoviePlayerPlaybackDidFinishReasonUserInfoKey
@@ -7627,7 +7627,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerPlaybackStateDidChangeNotification
     JsName:          MPMoviePlayerPlaybackStateDidChangeNotification
@@ -7642,7 +7642,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerReadyForDisplayDidChangeNotification
     JsName:          MPMoviePlayerReadyForDisplayDidChangeNotification
@@ -7657,7 +7657,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerScalingModeDidChangeNotification
     JsName:          MPMoviePlayerScalingModeDidChangeNotification
@@ -7672,7 +7672,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerThumbnailErrorKey
     JsName:          MPMoviePlayerThumbnailErrorKey
@@ -7687,7 +7687,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerThumbnailImageKey
     JsName:          MPMoviePlayerThumbnailImageKey
@@ -7702,7 +7702,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerThumbnailImageRequestDidFinishNotification
     JsName:          MPMoviePlayerThumbnailImageRequestDidFinishNotification
@@ -7717,7 +7717,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerThumbnailTimeKey
     JsName:          MPMoviePlayerThumbnailTimeKey
@@ -7732,7 +7732,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerTimedMetadataKeyDataType
     JsName:          MPMoviePlayerTimedMetadataKeyDataType
@@ -7747,7 +7747,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerTimedMetadataKeyInfo
     JsName:          MPMoviePlayerTimedMetadataKeyInfo
@@ -7762,7 +7762,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerTimedMetadataKeyLanguageCode
     JsName:          MPMoviePlayerTimedMetadataKeyLanguageCode
@@ -7777,7 +7777,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerTimedMetadataKeyMIMEType
     JsName:          MPMoviePlayerTimedMetadataKeyMIMEType
@@ -7792,7 +7792,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerTimedMetadataKeyName
     JsName:          MPMoviePlayerTimedMetadataKeyName
@@ -7807,7 +7807,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerTimedMetadataUpdatedNotification
     JsName:          MPMoviePlayerTimedMetadataUpdatedNotification
@@ -7822,7 +7822,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerTimedMetadataUserInfoKey
     JsName:          MPMoviePlayerTimedMetadataUserInfoKey
@@ -7837,7 +7837,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerViewController
     JsName:          MPMoviePlayerViewController
@@ -7864,7 +7864,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -7891,7 +7891,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMoviePlayerController
+              Name:            MPMoviePlayerController
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7909,7 +7909,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMoviePlayerWillExitFullscreenNotification
     JsName:          MPMoviePlayerWillExitFullscreenNotification
@@ -7924,7 +7924,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMovieRepeatMode
     JsName:          MPMovieRepeatMode
@@ -8062,7 +8062,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMovieSourceTypeFile
     JsName:          MPMovieSourceTypeFile
@@ -8255,16 +8255,16 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MPMusicPlayerControllerMutableQueue
+                Name:            MPMusicPlayerControllerMutableQueue
                 WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MPMusicPlayerControllerQueue
+                Name:            MPMusicPlayerControllerQueue
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8297,7 +8297,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMusicPlayerQueueDescriptor
+            Name:            MPMusicPlayerQueueDescriptor
             WithProtocols:   
       - Name:            beginGeneratingPlaybackNotifications
         JsName:          beginGeneratingPlaybackNotifications
@@ -8340,7 +8340,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'prependQueueDescriptor:'
         JsName:          prependQueueDescriptor
@@ -8356,7 +8356,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMusicPlayerQueueDescriptor
+            Name:            MPMusicPlayerQueueDescriptor
             WithProtocols:   
       - Name:            'setQueueWithDescriptor:'
         JsName:          setQueueWithDescriptor
@@ -8372,7 +8372,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMusicPlayerQueueDescriptor
+            Name:            MPMusicPlayerQueueDescriptor
             WithProtocols:   
       - Name:            'setQueueWithItemCollection:'
         JsName:          setQueueWithItemCollection
@@ -8387,7 +8387,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMediaItemCollection
+            Name:            MPMediaItemCollection
             WithProtocols:   
       - Name:            'setQueueWithQuery:'
         JsName:          setQueueWithQuery
@@ -8402,7 +8402,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMediaQuery
+            Name:            MPMediaQuery
             WithProtocols:   
       - Name:            'setQueueWithStoreIDs:'
         JsName:          setQueueWithStoreIDs
@@ -8418,10 +8418,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            skipToBeginning
@@ -8510,7 +8510,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMediaItem
+              Name:            MPMediaItem
               WithProtocols:   
         Setter:          
           Name:            'setNowPlayingItem:'
@@ -8526,7 +8526,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MPMediaItem
+              Name:            MPMediaItem
               WithProtocols:   
       - Name:            playbackState
         JsName:          playbackState
@@ -8694,7 +8694,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMusicPlayerController
+              Name:            MPMusicPlayerController
               WithProtocols:   
       - Name:            applicationQueuePlayer
         JsName:          applicationQueuePlayer
@@ -8721,7 +8721,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMusicPlayerApplicationController
+              Name:            MPMusicPlayerApplicationController
               WithProtocols:   
       - Name:            iPodMusicPlayer
         JsName:          iPodMusicPlayer
@@ -8748,7 +8748,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMusicPlayerController
+              Name:            MPMusicPlayerController
               WithProtocols:   
       - Name:            systemMusicPlayer
         JsName:          systemMusicPlayer
@@ -8773,7 +8773,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMusicPlayerController
+              Name:            MPMusicPlayerController
               WithProtocols:   
                 - MPSystemMusicPlayerController
     Protocols:       
@@ -8804,10 +8804,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMusicPlayerQueueDescriptor
+            Name:            MPMusicPlayerQueueDescriptor
             WithProtocols:   
           - Type:            Interface
-            JsName:          MPMediaItem
+            Name:            MPMediaItem
             WithProtocols:   
       - Name:            'removeItem:'
         JsName:          removeItem
@@ -8822,7 +8822,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMediaItem
+            Name:            MPMediaItem
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8841,7 +8841,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMusicPlayerControllerPlaybackStateDidChangeNotification
     JsName:          MPMusicPlayerControllerPlaybackStateDidChangeNotification
@@ -8855,7 +8855,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMusicPlayerControllerQueue
     JsName:          MPMusicPlayerControllerQueue
@@ -8894,10 +8894,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPMediaItem
+                  Name:            MPMediaItem
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -8915,7 +8915,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMusicPlayerControllerVolumeDidChangeNotification
     JsName:          MPMusicPlayerControllerVolumeDidChangeNotification
@@ -8929,7 +8929,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPMusicPlayerMediaItemQueueDescriptor
     JsName:          MPMusicPlayerMediaItemQueueDescriptor
@@ -8956,7 +8956,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MPMediaItemCollection
+            Name:            MPMediaItemCollection
             WithProtocols:   
       - Name:            'initWithQuery:'
         JsName:          initWithQuery
@@ -8971,7 +8971,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MPMediaQuery
+            Name:            MPMediaQuery
             WithProtocols:   
       - Name:            'setEndTime:forItem:'
         JsName:          setEndTimeForItem
@@ -8987,7 +8987,7 @@ Items:
           - Type:            Void
           - Type:            Double
           - Type:            Interface
-            JsName:          MPMediaItem
+            Name:            MPMediaItem
             WithProtocols:   
       - Name:            'setStartTime:forItem:'
         JsName:          setStartTimeForItem
@@ -9003,7 +9003,7 @@ Items:
           - Type:            Void
           - Type:            Double
           - Type:            Interface
-            JsName:          MPMediaItem
+            Name:            MPMediaItem
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -9030,7 +9030,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMediaItemCollection
+              Name:            MPMediaItemCollection
               WithProtocols:   
       - Name:            query
         JsName:          query
@@ -9055,7 +9055,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMediaQuery
+              Name:            MPMediaQuery
               WithProtocols:   
       - Name:            startItem
         JsName:          startItem
@@ -9080,7 +9080,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMediaItem
+              Name:            MPMediaItem
               WithProtocols:   
         Setter:          
           Name:            'setStartItem:'
@@ -9096,7 +9096,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MPMediaItem
+              Name:            MPMediaItem
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9126,10 +9126,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -9159,10 +9159,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -9195,10 +9195,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MPMusicPlayerPlayParameters
+                Name:            MPMusicPlayerPlayParameters
                 WithProtocols:   
             WithProtocols:   
       - Name:            'setEndTime:forItemWithPlayParameters:'
@@ -9215,7 +9215,7 @@ Items:
           - Type:            Void
           - Type:            Double
           - Type:            Interface
-            JsName:          MPMusicPlayerPlayParameters
+            Name:            MPMusicPlayerPlayParameters
             WithProtocols:   
       - Name:            'setStartTime:forItemWithPlayParameters:'
         JsName:          setStartTimeForItemWithPlayParameters
@@ -9231,7 +9231,7 @@ Items:
           - Type:            Void
           - Type:            Double
           - Type:            Interface
-            JsName:          MPMusicPlayerPlayParameters
+            Name:            MPMusicPlayerPlayParameters
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -9258,10 +9258,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPMusicPlayerPlayParameters
+                  Name:            MPMusicPlayerPlayParameters
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -9278,10 +9278,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPMusicPlayerPlayParameters
+                  Name:            MPMusicPlayerPlayParameters
                   WithProtocols:   
               WithProtocols:   
       - Name:            startItemPlayParameters
@@ -9307,7 +9307,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPMusicPlayerPlayParameters
+              Name:            MPMusicPlayerPlayParameters
               WithProtocols:   
         Setter:          
           Name:            'setStartItemPlayParameters:'
@@ -9323,7 +9323,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MPMusicPlayerPlayParameters
+              Name:            MPMusicPlayerPlayParameters
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9370,10 +9370,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'setEndTime:forItemWithStoreID:'
@@ -9390,7 +9390,7 @@ Items:
           - Type:            Void
           - Type:            Double
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setStartTime:forItemWithStoreID:'
         JsName:          setStartTimeForItemWithStoreID
@@ -9406,7 +9406,7 @@ Items:
           - Type:            Void
           - Type:            Double
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -9433,7 +9433,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setStartItemID:'
@@ -9449,7 +9449,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            storeIDs
         JsName:          storeIDs
@@ -9474,10 +9474,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -9494,10 +9494,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -9658,7 +9658,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPNowPlayingInfoCenter
+            Name:            MPNowPlayingInfoCenter
             WithProtocols:   
     InstanceProperties: 
       - Name:            nowPlayingInfo
@@ -9684,10 +9684,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -9706,10 +9706,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -9772,7 +9772,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoLanguageOption
     JsName:          MPNowPlayingInfoLanguageOption
@@ -9801,20 +9801,20 @@ Items:
           - Type:            Enum
             Name:            MPNowPlayingInfoLanguageOptionType
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            isAutomaticAudibleLanguageOption
         JsName:          isAutomaticAudibleLanguageOption
@@ -9865,7 +9865,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -9890,7 +9890,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            languageOptionCharacteristics
         JsName:          languageOptionCharacteristics
@@ -9915,10 +9915,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            languageOptionType
@@ -9968,7 +9968,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9998,14 +9998,14 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MPNowPlayingInfoLanguageOption
+                Name:            MPNowPlayingInfoLanguageOption
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          MPNowPlayingInfoLanguageOption
+            Name:            MPNowPlayingInfoLanguageOption
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -10056,7 +10056,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPNowPlayingInfoLanguageOption
+              Name:            MPNowPlayingInfoLanguageOption
               WithProtocols:   
       - Name:            languageOptions
         JsName:          languageOptions
@@ -10081,10 +10081,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MPNowPlayingInfoLanguageOption
+                  Name:            MPNowPlayingInfoLanguageOption
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -10194,7 +10194,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyAvailableLanguageOptions
     JsName:          MPNowPlayingInfoPropertyAvailableLanguageOptions
@@ -10209,7 +10209,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyChapterCount
     JsName:          MPNowPlayingInfoPropertyChapterCount
@@ -10224,7 +10224,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyChapterNumber
     JsName:          MPNowPlayingInfoPropertyChapterNumber
@@ -10239,7 +10239,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyCurrentLanguageOptions
     JsName:          MPNowPlayingInfoPropertyCurrentLanguageOptions
@@ -10254,7 +10254,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyCurrentPlaybackDate
     JsName:          MPNowPlayingInfoPropertyCurrentPlaybackDate
@@ -10269,7 +10269,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyDefaultPlaybackRate
     JsName:          MPNowPlayingInfoPropertyDefaultPlaybackRate
@@ -10284,7 +10284,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyElapsedPlaybackTime
     JsName:          MPNowPlayingInfoPropertyElapsedPlaybackTime
@@ -10299,7 +10299,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyExternalContentIdentifier
     JsName:          MPNowPlayingInfoPropertyExternalContentIdentifier
@@ -10314,7 +10314,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyExternalUserProfileIdentifier
     JsName:          MPNowPlayingInfoPropertyExternalUserProfileIdentifier
@@ -10329,7 +10329,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyIsLiveStream
     JsName:          MPNowPlayingInfoPropertyIsLiveStream
@@ -10344,7 +10344,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyMediaType
     JsName:          MPNowPlayingInfoPropertyMediaType
@@ -10359,7 +10359,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyPlaybackProgress
     JsName:          MPNowPlayingInfoPropertyPlaybackProgress
@@ -10374,7 +10374,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyPlaybackQueueCount
     JsName:          MPNowPlayingInfoPropertyPlaybackQueueCount
@@ -10389,7 +10389,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyPlaybackQueueIndex
     JsName:          MPNowPlayingInfoPropertyPlaybackQueueIndex
@@ -10404,7 +10404,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyPlaybackRate
     JsName:          MPNowPlayingInfoPropertyPlaybackRate
@@ -10419,7 +10419,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingInfoPropertyServiceIdentifier
     JsName:          MPNowPlayingInfoPropertyServiceIdentifier
@@ -10434,7 +10434,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPNowPlayingPlaybackState
     JsName:          MPNowPlayingPlaybackState
@@ -10539,13 +10539,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSIndexPath
+            Name:            NSIndexPath
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'childItemsDisplayPlaybackProgressAtIndexPath:'
         JsName:          childItemsDisplayPlaybackProgressAtIndexPath
@@ -10560,7 +10560,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSIndexPath
+            Name:            NSIndexPath
             WithProtocols:   
       - Name:            'contentItemAtIndexPath:'
         JsName:          contentItemAtIndexPath
@@ -10574,10 +10574,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPContentItem
+            Name:            MPContentItem
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSIndexPath
+            Name:            NSIndexPath
             WithProtocols:   
       - Name:            'contentItemForIdentifier:completionHandler:'
         JsName:          contentItemForIdentifierCompletionHandler
@@ -10593,16 +10593,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MPContentItem
+                Name:            MPContentItem
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'numberOfChildItemsAtIndexPath:'
         JsName:          numberOfChildItemsAtIndexPath
@@ -10617,7 +10617,7 @@ Items:
         Signature:       
           - Type:            Long
           - Type:            Interface
-            JsName:          NSIndexPath
+            Name:            NSIndexPath
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -10650,10 +10650,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPPlayableContentManager
+            Name:            MPPlayableContentManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          MPPlayableContentManagerContext
+            Name:            MPPlayableContentManagerContext
             WithProtocols:   
       - Name:            'playableContentManager:initializePlaybackQueueWithCompletionHandler:'
         JsName:          playableContentManagerInitializePlaybackQueueWithCompletionHandler
@@ -10669,13 +10669,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPPlayableContentManager
+            Name:            MPPlayableContentManager
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'playableContentManager:initializePlaybackQueueWithContentItems:completionHandler:'
         JsName:          playableContentManagerInitializePlaybackQueueWithContentItemsCompletionHandler
@@ -10691,16 +10691,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPPlayableContentManager
+            Name:            MPPlayableContentManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'playableContentManager:initiatePlaybackOfContentItemAtIndexPath:completionHandler:'
         JsName:          playableContentManagerInitiatePlaybackOfContentItemAtIndexPathCompletionHandler
@@ -10716,16 +10716,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPPlayableContentManager
+            Name:            MPPlayableContentManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSIndexPath
+            Name:            NSIndexPath
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -10819,7 +10819,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPPlayableContentManagerContext
+              Name:            MPPlayableContentManagerContext
               WithProtocols:   
       - Name:            dataSource
         JsName:          dataSource
@@ -10928,10 +10928,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -10949,10 +10949,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -11268,7 +11268,7 @@ Items:
               - Type:            Enum
                 Name:            MPRemoteCommandHandlerStatus
               - Type:            Interface
-                JsName:          MPRemoteCommandEvent
+                Name:            MPRemoteCommandEvent
                 WithProtocols:   
       - Name:            'removeTarget:'
         JsName:          removeTarget
@@ -11366,7 +11366,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MPRemoteCommandCenter
+            Name:            MPRemoteCommandCenter
             WithProtocols:   
     InstanceProperties: 
       - Name:            bookmarkCommand
@@ -11392,7 +11392,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPFeedbackCommand
+              Name:            MPFeedbackCommand
               WithProtocols:   
       - Name:            changePlaybackPositionCommand
         JsName:          changePlaybackPositionCommand
@@ -11419,7 +11419,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPChangePlaybackPositionCommand
+              Name:            MPChangePlaybackPositionCommand
               WithProtocols:   
       - Name:            changePlaybackRateCommand
         JsName:          changePlaybackRateCommand
@@ -11444,7 +11444,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPChangePlaybackRateCommand
+              Name:            MPChangePlaybackRateCommand
               WithProtocols:   
       - Name:            changeRepeatModeCommand
         JsName:          changeRepeatModeCommand
@@ -11469,7 +11469,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPChangeRepeatModeCommand
+              Name:            MPChangeRepeatModeCommand
               WithProtocols:   
       - Name:            changeShuffleModeCommand
         JsName:          changeShuffleModeCommand
@@ -11494,7 +11494,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPChangeShuffleModeCommand
+              Name:            MPChangeShuffleModeCommand
               WithProtocols:   
       - Name:            disableLanguageOptionCommand
         JsName:          disableLanguageOptionCommand
@@ -11521,7 +11521,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRemoteCommand
+              Name:            MPRemoteCommand
               WithProtocols:   
       - Name:            dislikeCommand
         JsName:          dislikeCommand
@@ -11546,7 +11546,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPFeedbackCommand
+              Name:            MPFeedbackCommand
               WithProtocols:   
       - Name:            enableLanguageOptionCommand
         JsName:          enableLanguageOptionCommand
@@ -11573,7 +11573,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRemoteCommand
+              Name:            MPRemoteCommand
               WithProtocols:   
       - Name:            likeCommand
         JsName:          likeCommand
@@ -11598,7 +11598,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPFeedbackCommand
+              Name:            MPFeedbackCommand
               WithProtocols:   
       - Name:            nextTrackCommand
         JsName:          nextTrackCommand
@@ -11623,7 +11623,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRemoteCommand
+              Name:            MPRemoteCommand
               WithProtocols:   
       - Name:            pauseCommand
         JsName:          pauseCommand
@@ -11648,7 +11648,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRemoteCommand
+              Name:            MPRemoteCommand
               WithProtocols:   
       - Name:            playCommand
         JsName:          playCommand
@@ -11673,7 +11673,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRemoteCommand
+              Name:            MPRemoteCommand
               WithProtocols:   
       - Name:            previousTrackCommand
         JsName:          previousTrackCommand
@@ -11698,7 +11698,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRemoteCommand
+              Name:            MPRemoteCommand
               WithProtocols:   
       - Name:            ratingCommand
         JsName:          ratingCommand
@@ -11723,7 +11723,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRatingCommand
+              Name:            MPRatingCommand
               WithProtocols:   
       - Name:            seekBackwardCommand
         JsName:          seekBackwardCommand
@@ -11748,7 +11748,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRemoteCommand
+              Name:            MPRemoteCommand
               WithProtocols:   
       - Name:            seekForwardCommand
         JsName:          seekForwardCommand
@@ -11773,7 +11773,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRemoteCommand
+              Name:            MPRemoteCommand
               WithProtocols:   
       - Name:            skipBackwardCommand
         JsName:          skipBackwardCommand
@@ -11798,7 +11798,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPSkipIntervalCommand
+              Name:            MPSkipIntervalCommand
               WithProtocols:   
       - Name:            skipForwardCommand
         JsName:          skipForwardCommand
@@ -11823,7 +11823,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPSkipIntervalCommand
+              Name:            MPSkipIntervalCommand
               WithProtocols:   
       - Name:            stopCommand
         JsName:          stopCommand
@@ -11848,7 +11848,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRemoteCommand
+              Name:            MPRemoteCommand
               WithProtocols:   
       - Name:            togglePlayPauseCommand
         JsName:          togglePlayPauseCommand
@@ -11873,7 +11873,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRemoteCommand
+              Name:            MPRemoteCommand
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -11915,7 +11915,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MPRemoteCommand
+              Name:            MPRemoteCommand
               WithProtocols:   
       - Name:            timestamp
         JsName:          timestamp
@@ -12244,10 +12244,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -12264,10 +12264,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -12338,7 +12338,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MPMusicPlayerQueueDescriptor
+            Name:            MPMusicPlayerQueueDescriptor
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -12382,7 +12382,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
       - Name:            key
         JsName:          key
@@ -12407,7 +12407,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            keyspace
         JsName:          keyspace
@@ -12432,7 +12432,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            timestamp
         JsName:          timestamp
@@ -12548,7 +12548,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Enum
             Name:            UIControlState
@@ -12565,7 +12565,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Enum
             Name:            UIControlState
@@ -12582,7 +12582,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Enum
             Name:            UIControlState
@@ -12600,10 +12600,10 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
       - Name:            'setMaximumVolumeSliderImage:forState:'
         JsName:          setMaximumVolumeSliderImageForState
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MPVolumeView.h
@@ -12618,7 +12618,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Enum
             Name:            UIControlState
@@ -12636,7 +12636,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Enum
             Name:            UIControlState
@@ -12654,7 +12654,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Enum
             Name:            UIControlState
@@ -12672,7 +12672,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Enum
             Name:            UIControlState
@@ -12690,10 +12690,10 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
       - Name:            'volumeThumbImageForState:'
         JsName:          volumeThumbImageForState
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MPVolumeView.h
@@ -12707,7 +12707,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Enum
             Name:            UIControlState
@@ -12725,13 +12725,13 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Float
     StaticMethods:   
     InstanceProperties: 
@@ -12840,7 +12840,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
         Setter:          
           Name:            'setVolumeWarningSliderImage:'
@@ -12857,7 +12857,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            wirelessRouteActive
         JsName:          wirelessRouteActive
@@ -12926,7 +12926,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MPVolumeViewWirelessRoutesAvailableDidChangeNotification
     JsName:          MPVolumeViewWirelessRoutesAvailableDidChangeNotification
@@ -12941,6 +12941,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

@@ -31,7 +31,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSURLConnection
+            Name:            NSURLConnection
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -61,7 +61,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            issue
         JsName:          issue
@@ -86,7 +86,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NKIssue
+              Name:            NKIssue
               WithProtocols:   
       - Name:            URLRequest
         JsName:          URLRequest
@@ -111,7 +111,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURLRequest
+              Name:            NSURLRequest
               WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
@@ -136,7 +136,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
         Setter:          
           Name:            'setUserInfo:'
@@ -152,7 +152,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -181,10 +181,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NKAssetDownload
+            Name:            NKAssetDownload
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURLRequest
+            Name:            NSURLRequest
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -211,7 +211,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            date
         JsName:          date
@@ -236,7 +236,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            downloadingAssets
         JsName:          downloadingAssets
@@ -261,10 +261,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NKAssetDownload
+                  Name:            NKAssetDownload
                   WithProtocols:   
               WithProtocols:   
       - Name:            name
@@ -290,7 +290,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            status
         JsName:          status
@@ -384,7 +384,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NKLibrary
     JsName:          NKLibrary
@@ -410,13 +410,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NKIssue
+            Name:            NKIssue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
       - Name:            'issueWithName:'
         JsName:          issueWithName
@@ -430,10 +430,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NKIssue
+            Name:            NKIssue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'removeIssue:'
         JsName:          removeIssue
@@ -448,7 +448,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NKIssue
+            Name:            NKIssue
             WithProtocols:   
     StaticMethods:   
       - Name:            sharedLibrary
@@ -463,7 +463,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NKLibrary
+            Name:            NKLibrary
             WithProtocols:   
     InstanceProperties: 
       - Name:            currentlyReadingIssue
@@ -489,7 +489,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NKIssue
+              Name:            NKIssue
               WithProtocols:   
         Setter:          
           Name:            'setCurrentlyReadingIssue:'
@@ -505,7 +505,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NKIssue
+              Name:            NKIssue
               WithProtocols:   
       - Name:            downloadingAssets
         JsName:          downloadingAssets
@@ -530,10 +530,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NKAssetDownload
+                  Name:            NKAssetDownload
                   WithProtocols:   
               WithProtocols:   
       - Name:            issues
@@ -559,10 +559,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NKIssue
+                  Name:            NKIssue
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 

@@ -44,7 +44,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -69,7 +69,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -111,7 +111,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -136,7 +136,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -166,7 +166,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
       - Name:            'pushTokenForType:'
@@ -181,10 +181,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -252,10 +252,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -272,10 +272,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -305,10 +305,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPushRegistry
+            Name:            PKPushRegistry
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'pushRegistry:didReceiveIncomingPushWithPayload:forType:'
         JsName:          pushRegistryDidReceiveIncomingPushWithPayloadForType
@@ -324,13 +324,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPushRegistry
+            Name:            PKPushRegistry
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPushPayload
+            Name:            PKPushPayload
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'pushRegistry:didReceiveIncomingPushWithPayload:forType:withCompletionHandler:'
         JsName:          pushRegistryDidReceiveIncomingPushWithPayloadForTypeWithCompletionHandler
@@ -346,13 +346,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPushRegistry
+            Name:            PKPushRegistry
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPushPayload
+            Name:            PKPushPayload
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -370,13 +370,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPushRegistry
+            Name:            PKPushRegistry
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPushCredentials
+            Name:            PKPushCredentials
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -396,7 +396,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPushTypeFileProvider
     JsName:          PKPushTypeFileProvider
@@ -411,7 +411,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPushTypeVoIP
     JsName:          PKPushTypeVoIP
@@ -426,6 +426,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

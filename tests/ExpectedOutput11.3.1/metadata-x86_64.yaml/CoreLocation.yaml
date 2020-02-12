@@ -163,7 +163,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            minor
         JsName:          minor
@@ -188,7 +188,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            proximity
         JsName:          proximity
@@ -239,7 +239,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            rssi
         JsName:          rssi
@@ -289,7 +289,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            UUID
         JsName:          UUID
@@ -316,7 +316,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -348,7 +348,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
       - Name:            'initWithUUID:major:'
         JsName:          initWithUUIDMajor
@@ -363,7 +363,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Ushort
       - Name:            'initWithUUID:major:minor:'
@@ -379,7 +379,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Ushort
           - Type:            Ushort
@@ -408,7 +408,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            minor
         JsName:          minor
@@ -433,7 +433,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            UUID
         JsName:          UUID
@@ -458,7 +458,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -491,10 +491,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CLBeaconIdentityConstraint
+            Name:            CLBeaconIdentityConstraint
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithProximityUUID:identifier:'
         JsName:          initWithProximityUUIDIdentifier
@@ -510,10 +510,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithProximityUUID:major:identifier:'
         JsName:          initWithProximityUUIDMajorIdentifier
@@ -529,11 +529,11 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Ushort
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithProximityUUID:major:minor:identifier:'
         JsName:          initWithProximityUUIDMajorMinorIdentifier
@@ -549,12 +549,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Ushort
           - Type:            Ushort
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithUUID:identifier:'
         JsName:          initWithUUIDIdentifier
@@ -570,10 +570,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithUUID:major:identifier:'
         JsName:          initWithUUIDMajorIdentifier
@@ -589,11 +589,11 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Ushort
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithUUID:major:minor:identifier:'
         JsName:          initWithUUIDMajorMinorIdentifier
@@ -609,12 +609,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Ushort
           - Type:            Ushort
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'peripheralDataWithMeasuredPower:'
         JsName:          peripheralDataWithMeasuredPower
@@ -628,16 +628,16 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSMutableDictionary
+            Name:            NSMutableDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -666,7 +666,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLBeaconIdentityConstraint
+              Name:            CLBeaconIdentityConstraint
               WithProtocols:   
       - Name:            major
         JsName:          major
@@ -691,7 +691,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            minor
         JsName:          minor
@@ -716,7 +716,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            notifyEntryStateOnDisplay
         JsName:          notifyEntryStateOnDisplay
@@ -780,7 +780,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            UUID
         JsName:          UUID
@@ -807,7 +807,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -838,10 +838,10 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          CoreLocation.CLLocation
-            JsName:          CLLocationCoordinate2D
+            Name:            CLLocationCoordinate2D
           - Type:            Double
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1061,20 +1061,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CLPlacemark
+                    Name:            CLPlacemark
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'geocodeAddressString:completionHandler:'
         JsName:          geocodeAddressStringCompletionHandler
@@ -1089,20 +1089,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CLPlacemark
+                    Name:            CLPlacemark
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'geocodeAddressString:inRegion:completionHandler:'
         JsName:          geocodeAddressStringInRegionCompletionHandler
@@ -1117,23 +1117,23 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CLPlacemark
+                    Name:            CLPlacemark
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'geocodeAddressString:inRegion:preferredLocale:completionHandler:'
         JsName:          geocodeAddressStringInRegionPreferredLocaleCompletionHandler
@@ -1149,26 +1149,26 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSLocale
+            Name:            NSLocale
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CLPlacemark
+                    Name:            CLPlacemark
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'reverseGeocodeLocation:completionHandler:'
         JsName:          reverseGeocodeLocationCompletionHandler
@@ -1183,20 +1183,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocation
+            Name:            CLLocation
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CLPlacemark
+                    Name:            CLPlacemark
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'reverseGeocodeLocation:preferredLocale:completionHandler:'
         JsName:          reverseGeocodeLocationPreferredLocaleCompletionHandler
@@ -1212,23 +1212,23 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocation
+            Name:            CLLocation
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSLocale
+            Name:            NSLocale
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CLPlacemark
+                    Name:            CLPlacemark
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'geocodePostalAddress:completionHandler:'
         JsName:          geocodePostalAddressCompletionHandler
@@ -1244,20 +1244,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNPostalAddress
+            Name:            CNPostalAddress
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CLPlacemark
+                    Name:            CLPlacemark
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'geocodePostalAddress:preferredLocale:completionHandler:'
         JsName:          geocodePostalAddressPreferredLocaleCompletionHandler
@@ -1273,23 +1273,23 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNPostalAddress
+            Name:            CNPostalAddress
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSLocale
+            Name:            NSLocale
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CLPlacemark
+                    Name:            CLPlacemark
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1402,7 +1402,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            trueHeading
         JsName:          trueHeading
@@ -1527,7 +1527,7 @@ Items:
         Signature:       
           - Type:            Double
           - Type:            Interface
-            JsName:          CLLocation
+            Name:            CLLocation
             WithProtocols:   
       - Name:            'getDistanceFrom:'
         JsName:          getDistanceFrom
@@ -1543,7 +1543,7 @@ Items:
         Signature:       
           - Type:            Double
           - Type:            Interface
-            JsName:          CLLocation
+            Name:            CLLocation
             WithProtocols:   
       - Name:            'initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:speed:timestamp:'
         JsName:          initWithCoordinateAltitudeHorizontalAccuracyVerticalAccuracyCourseSpeedTimestamp
@@ -1560,14 +1560,14 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          CoreLocation.CLLocation
-            JsName:          CLLocationCoordinate2D
+            Name:            CLLocationCoordinate2D
           - Type:            Double
           - Type:            Double
           - Type:            Double
           - Type:            Double
           - Type:            Double
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
       - Name:            'initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:timestamp:'
         JsName:          initWithCoordinateAltitudeHorizontalAccuracyVerticalAccuracyTimestamp
@@ -1583,12 +1583,12 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          CoreLocation.CLLocation
-            JsName:          CLLocationCoordinate2D
+            Name:            CLLocationCoordinate2D
           - Type:            Double
           - Type:            Double
           - Type:            Double
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
       - Name:            'initWithLatitude:longitude:'
         JsName:          initWithLatitudeLongitude
@@ -1653,7 +1653,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreLocation.CLLocation
-              JsName:          CLLocationCoordinate2D
+              Name:            CLLocationCoordinate2D
       - Name:            course
         JsName:          course
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocation.h
@@ -1704,7 +1704,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLFloor
+              Name:            CLFloor
               WithProtocols:   
       - Name:            horizontalAccuracy
         JsName:          horizontalAccuracy
@@ -1777,7 +1777,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            verticalAccuracy
         JsName:          verticalAccuracy
@@ -1840,7 +1840,7 @@ Items:
       - Type:            Bool
       - Type:            Struct
         Module:          CoreLocation.CLLocation
-        JsName:          CLLocationCoordinate2D
+        Name:            CLLocationCoordinate2D
   - Name:            CLLocationCoordinate2DMake
     JsName:          CLLocationCoordinate2DMake
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocation.h
@@ -1855,7 +1855,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreLocation.CLLocation
-        JsName:          CLLocationCoordinate2D
+        Name:            CLLocationCoordinate2D
       - Type:            Double
       - Type:            Double
   - Name:            CLLocationDistanceMax
@@ -1964,7 +1964,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
       - Name:            requestWhenInUseAuthorization
         JsName:          requestWhenInUseAuthorization
@@ -1993,7 +1993,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
       - Name:            'startMonitoringForRegion:desiredAccuracy:'
         JsName:          startMonitoringForRegionDesiredAccuracy
@@ -2009,7 +2009,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
           - Type:            Double
       - Name:            startMonitoringSignificantLocationChanges
@@ -2039,7 +2039,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLBeaconRegion
+            Name:            CLBeaconRegion
             WithProtocols:   
       - Name:            'startRangingBeaconsSatisfyingConstraint:'
         JsName:          startRangingBeaconsSatisfyingConstraint
@@ -2055,7 +2055,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLBeaconIdentityConstraint
+            Name:            CLBeaconIdentityConstraint
             WithProtocols:   
       - Name:            startUpdatingHeading
         JsName:          startUpdatingHeading
@@ -2096,7 +2096,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
       - Name:            stopMonitoringSignificantLocationChanges
         JsName:          stopMonitoringSignificantLocationChanges
@@ -2125,7 +2125,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLBeaconRegion
+            Name:            CLBeaconRegion
             WithProtocols:   
       - Name:            'stopRangingBeaconsSatisfyingConstraint:'
         JsName:          stopRangingBeaconsSatisfyingConstraint
@@ -2141,7 +2141,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLBeaconIdentityConstraint
+            Name:            CLBeaconIdentityConstraint
             WithProtocols:   
       - Name:            stopUpdatingHeading
         JsName:          stopUpdatingHeading
@@ -2537,7 +2537,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLHeading
+              Name:            CLHeading
               WithProtocols:   
       - Name:            headingAvailable
         JsName:          headingAvailable
@@ -2669,7 +2669,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLLocation
+              Name:            CLLocation
               WithProtocols:   
       - Name:            locationServicesEnabled
         JsName:          locationServicesEnabled
@@ -2746,10 +2746,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CLRegion
+                  Name:            CLRegion
                   WithProtocols:   
               WithProtocols:   
       - Name:            pausesLocationUpdatesAutomatically
@@ -2817,7 +2817,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPurpose:'
@@ -2834,7 +2834,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            rangedBeaconConstraints
         JsName:          rangedBeaconConstraints
@@ -2861,10 +2861,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CLBeaconIdentityConstraint
+                  Name:            CLBeaconIdentityConstraint
                   WithProtocols:   
               WithProtocols:   
       - Name:            rangedRegions
@@ -2892,10 +2892,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CLRegion
+                  Name:            CLRegion
                   WithProtocols:   
               WithProtocols:   
       - Name:            showsBackgroundLocationIndicator
@@ -2966,7 +2966,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Enum
             Name:            CLAuthorizationStatus
@@ -2984,12 +2984,12 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Enum
             Name:            CLRegionState
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
       - Name:            'locationManager:didEnterRegion:'
         JsName:          locationManagerDidEnterRegion
@@ -3005,10 +3005,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
       - Name:            'locationManager:didExitRegion:'
         JsName:          locationManagerDidExitRegion
@@ -3024,10 +3024,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
       - Name:            'locationManager:didFailRangingBeaconsForConstraint:error:'
         JsName:          locationManagerDidFailRangingBeaconsForConstraintError
@@ -3043,13 +3043,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLBeaconIdentityConstraint
+            Name:            CLBeaconIdentityConstraint
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'locationManager:didFailWithError:'
         JsName:          locationManagerDidFailWithError
@@ -3064,10 +3064,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'locationManager:didFinishDeferredUpdatesWithError:'
         JsName:          locationManagerDidFinishDeferredUpdatesWithError
@@ -3083,10 +3083,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'locationManagerDidPauseLocationUpdates:'
         JsName:          locationManagerDidPauseLocationUpdates
@@ -3102,7 +3102,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
       - Name:            'locationManager:didRangeBeacons:inRegion:'
         JsName:          locationManagerDidRangeBeaconsInRegion
@@ -3118,17 +3118,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CLBeacon
+                Name:            CLBeacon
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLBeaconRegion
+            Name:            CLBeaconRegion
             WithProtocols:   
       - Name:            'locationManager:didRangeBeacons:satisfyingConstraint:'
         JsName:          locationManagerDidRangeBeaconsSatisfyingConstraint
@@ -3144,17 +3144,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CLBeacon
+                Name:            CLBeacon
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLBeaconIdentityConstraint
+            Name:            CLBeaconIdentityConstraint
             WithProtocols:   
       - Name:            'locationManagerDidResumeLocationUpdates:'
         JsName:          locationManagerDidResumeLocationUpdates
@@ -3170,7 +3170,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
       - Name:            'locationManager:didStartMonitoringForRegion:'
         JsName:          locationManagerDidStartMonitoringForRegion
@@ -3186,10 +3186,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
       - Name:            'locationManager:didUpdateHeading:'
         JsName:          locationManagerDidUpdateHeading
@@ -3205,10 +3205,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLHeading
+            Name:            CLHeading
             WithProtocols:   
       - Name:            'locationManager:didUpdateLocations:'
         JsName:          locationManagerDidUpdateLocations
@@ -3224,13 +3224,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CLLocation
+                Name:            CLLocation
                 WithProtocols:   
             WithProtocols:   
       - Name:            'locationManager:didUpdateToLocation:fromLocation:'
@@ -3247,13 +3247,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLLocation
+            Name:            CLLocation
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLLocation
+            Name:            CLLocation
             WithProtocols:   
       - Name:            'locationManager:didVisit:'
         JsName:          locationManagerDidVisit
@@ -3269,10 +3269,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLVisit
+            Name:            CLVisit
             WithProtocols:   
       - Name:            'locationManager:monitoringDidFailForRegion:withError:'
         JsName:          locationManagerMonitoringDidFailForRegionWithError
@@ -3288,13 +3288,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'locationManager:rangingBeaconsDidFailForRegion:withError:'
         JsName:          locationManagerRangingBeaconsDidFailForRegionWithError
@@ -3310,13 +3310,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLBeaconRegion
+            Name:            CLBeaconRegion
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'locationManagerShouldDisplayHeadingCalibration:'
         JsName:          locationManagerShouldDisplayHeadingCalibration
@@ -3332,7 +3332,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          CLLocationManager
+            Name:            CLLocationManager
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3364,7 +3364,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CLPlacemark
+            Name:            CLPlacemark
             WithProtocols:   
     StaticMethods:   
       - Name:            'placemarkWithLocation:name:postalAddress:'
@@ -3381,13 +3381,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CLLocation
+            Name:            CLLocation
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNPostalAddress
+            Name:            CNPostalAddress
             WithProtocols:   
     InstanceProperties: 
       - Name:            addressDictionary
@@ -3415,7 +3415,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
       - Name:            administrativeArea
         JsName:          administrativeArea
@@ -3440,7 +3440,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            areasOfInterest
         JsName:          areasOfInterest
@@ -3465,10 +3465,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            country
@@ -3494,7 +3494,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            inlandWater
         JsName:          inlandWater
@@ -3519,7 +3519,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            ISOcountryCode
         JsName:          ISOcountryCode
@@ -3544,7 +3544,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            locality
         JsName:          locality
@@ -3569,7 +3569,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            location
         JsName:          location
@@ -3594,7 +3594,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLLocation
+              Name:            CLLocation
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -3619,7 +3619,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            ocean
         JsName:          ocean
@@ -3644,7 +3644,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            postalCode
         JsName:          postalCode
@@ -3669,7 +3669,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            region
         JsName:          region
@@ -3694,7 +3694,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLRegion
+              Name:            CLRegion
               WithProtocols:   
       - Name:            subAdministrativeArea
         JsName:          subAdministrativeArea
@@ -3719,7 +3719,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subLocality
         JsName:          subLocality
@@ -3744,7 +3744,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subThoroughfare
         JsName:          subThoroughfare
@@ -3769,7 +3769,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            thoroughfare
         JsName:          thoroughfare
@@ -3794,7 +3794,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            timeZone
         JsName:          timeZone
@@ -3821,7 +3821,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSTimeZone
+              Name:            NSTimeZone
               WithProtocols:   
       - Name:            postalAddress
         JsName:          postalAddress
@@ -3848,7 +3848,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNPostalAddress
+              Name:            CNPostalAddress
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3947,7 +3947,7 @@ Items:
           - Type:            Bool
           - Type:            Struct
             Module:          CoreLocation.CLLocation
-            JsName:          CLLocationCoordinate2D
+            Name:            CLLocationCoordinate2D
       - Name:            'initCircularRegionWithCenter:radius:identifier:'
         JsName:          initCircularRegionWithCenterRadiusIdentifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLRegion.h
@@ -3963,10 +3963,10 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          CoreLocation.CLLocation
-            JsName:          CLLocationCoordinate2D
+            Name:            CLLocationCoordinate2D
           - Type:            Double
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3996,7 +3996,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreLocation.CLLocation
-              JsName:          CLLocationCoordinate2D
+              Name:            CLLocationCoordinate2D
       - Name:            identifier
         JsName:          identifier
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLRegion.h
@@ -4022,7 +4022,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            notifyOnEntry
         JsName:          notifyOnEntry
@@ -4236,7 +4236,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            coordinate
         JsName:          coordinate
@@ -4262,7 +4262,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreLocation.CLLocation
-              JsName:          CLLocationCoordinate2D
+              Name:            CLLocationCoordinate2D
       - Name:            departureDate
         JsName:          departureDate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLVisit.h
@@ -4286,7 +4286,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            horizontalAccuracy
         JsName:          horizontalAccuracy
@@ -4475,7 +4475,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCLErrorGeocodeCanceled
     JsName:          kCLErrorGeocodeCanceled
@@ -4622,7 +4622,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCLHeadingFilterNone
     JsName:          kCLHeadingFilterNone
@@ -4723,5 +4723,5 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreLocation.CLLocation
-      JsName:          CLLocationCoordinate2D
+      Name:            CLLocationCoordinate2D
 ...

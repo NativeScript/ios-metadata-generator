@@ -33,13 +33,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -68,7 +68,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            formatIdentifier
         JsName:          formatIdentifier
@@ -95,7 +95,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            formatVersion
         JsName:          formatVersion
@@ -122,7 +122,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -182,16 +182,16 @@ Items:
         Signature:       
           - Type:            ULong
           - Type:            Interface
-            JsName:          PHContentEditingInputRequestOptions
+            Name:            PHContentEditingInputRequestOptions
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PHContentEditingInput
+                Name:            PHContentEditingInput
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 WithProtocols:   
     StaticMethods:   
       - Name:            'fetchAssetsInAssetCollection:options:'
@@ -207,17 +207,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHAssetCollection
+            Name:            PHAssetCollection
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchAssetsWithALAssetURLs:options:'
         JsName:          fetchAssetsWithALAssetURLsOptions
@@ -232,21 +232,21 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchAssetsWithBurstIdentifier:options:'
         JsName:          fetchAssetsWithBurstIdentifierOptions
@@ -261,17 +261,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchAssetsWithLocalIdentifiers:options:'
         JsName:          fetchAssetsWithLocalIdentifiersOptions
@@ -286,21 +286,21 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchAssetsWithMediaType:options:'
         JsName:          fetchAssetsWithMediaTypeOptions
@@ -315,16 +315,16 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
             Name:            PHAssetMediaType
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchAssetsWithOptions:'
         JsName:          fetchAssetsWithOptions
@@ -339,14 +339,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchKeyAssetsInAssetCollection:options:'
         JsName:          fetchKeyAssetsInAssetCollectionOptions
@@ -361,17 +361,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHAssetCollection
+            Name:            PHAssetCollection
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
     InstanceProperties: 
       - Name:            burstIdentifier
@@ -399,7 +399,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            burstSelectionTypes
         JsName:          burstSelectionTypes
@@ -452,7 +452,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            duration
         JsName:          duration
@@ -554,7 +554,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLLocation
+              Name:            CLLocation
               WithProtocols:   
       - Name:            mediaSubtypes
         JsName:          mediaSubtypes
@@ -633,7 +633,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            pixelHeight
         JsName:          pixelHeight
@@ -879,7 +879,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PHAsset
+            Name:            PHAsset
             WithProtocols:   
       - Name:            'creationRequestForAssetFromImage:'
         JsName:          creationRequestForAssetFromImage
@@ -895,7 +895,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
       - Name:            'creationRequestForAssetFromImageAtFileURL:'
         JsName:          creationRequestForAssetFromImageAtFileURL
@@ -911,7 +911,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'creationRequestForAssetFromVideoAtFileURL:'
         JsName:          creationRequestForAssetFromVideoAtFileURL
@@ -927,7 +927,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'deleteAssets:'
         JsName:          deleteAssets
@@ -971,7 +971,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PHContentEditingOutput
+              Name:            PHContentEditingOutput
               WithProtocols:   
         Setter:          
           Name:            'setContentEditingOutput:'
@@ -988,7 +988,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          PHContentEditingOutput
+              Name:            PHContentEditingOutput
               WithProtocols:   
       - Name:            creationDate
         JsName:          creationDate
@@ -1015,7 +1015,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setCreationDate:'
@@ -1032,7 +1032,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            favorite
         JsName:          favorite
@@ -1139,7 +1139,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLLocation
+              Name:            CLLocation
               WithProtocols:   
         Setter:          
           Name:            'setLocation:'
@@ -1156,7 +1156,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CLLocation
+              Name:            CLLocation
               WithProtocols:   
       - Name:            placeholderForCreatedAsset
         JsName:          placeholderForCreatedAsset
@@ -1183,7 +1183,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PHObjectPlaceholder
+              Name:            PHObjectPlaceholder
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1214,19 +1214,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAssetCollection
+                Name:            PHAssetCollection
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHAsset
+            Name:            PHAsset
             WithProtocols:   
           - Type:            Enum
             Name:            PHAssetCollectionType
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchAssetCollectionsWithALAssetGroupURLs:options:'
         JsName:          fetchAssetCollectionsWithALAssetGroupURLsOptions
@@ -1241,21 +1241,21 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAssetCollection
+                Name:            PHAssetCollection
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchAssetCollectionsWithLocalIdentifiers:options:'
         JsName:          fetchAssetCollectionsWithLocalIdentifiersOptions
@@ -1270,21 +1270,21 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAssetCollection
+                Name:            PHAssetCollection
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchAssetCollectionsWithType:subtype:options:'
         JsName:          fetchAssetCollectionsWithTypeSubtypeOptions
@@ -1299,10 +1299,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAssetCollection
+                Name:            PHAssetCollection
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -1310,7 +1310,7 @@ Items:
           - Type:            Enum
             Name:            PHAssetCollectionSubtype
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchMomentsInMomentList:options:'
         JsName:          fetchMomentsInMomentListOptions
@@ -1325,17 +1325,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAssetCollection
+                Name:            PHAssetCollection
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHCollectionList
+            Name:            PHCollectionList
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchMomentsWithOptions:'
         JsName:          fetchMomentsWithOptions
@@ -1350,14 +1350,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAssetCollection
+                Name:            PHAssetCollection
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'transientAssetCollectionWithAssetFetchResult:title:'
         JsName:          transientAssetCollectionWithAssetFetchResultTitle
@@ -1372,17 +1372,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHAssetCollection
+            Name:            PHAssetCollection
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'transientAssetCollectionWithAssets:title:'
         JsName:          transientAssetCollectionWithAssetsTitle
@@ -1397,17 +1397,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHAssetCollection
+            Name:            PHAssetCollection
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            approximateLocation
@@ -1435,7 +1435,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLLocation
+              Name:            CLLocation
               WithProtocols:   
       - Name:            assetCollectionSubtype
         JsName:          assetCollectionSubtype
@@ -1514,7 +1514,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            estimatedAssetCount
         JsName:          estimatedAssetCount
@@ -1566,10 +1566,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            startDate
@@ -1597,7 +1597,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1647,7 +1647,7 @@ Items:
             WithProtocols:   
               - NSFastEnumeration
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
       - Name:            'moveAssetsAtIndexes:toIndex:'
         JsName:          moveAssetsAtIndexesToIndex
@@ -1663,7 +1663,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
           - Type:            ULong
       - Name:            'removeAssets:'
@@ -1696,7 +1696,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
       - Name:            'replaceAssetsAtIndexes:withAssets:'
         JsName:          replaceAssetsAtIndexesWithAssets
@@ -1712,7 +1712,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -1732,7 +1732,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PHAssetCollection
+            Name:            PHAssetCollection
             WithProtocols:   
       - Name:            'changeRequestForAssetCollection:assets:'
         JsName:          changeRequestForAssetCollectionAssets
@@ -1748,13 +1748,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PHAssetCollection
+            Name:            PHAssetCollection
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
       - Name:            'creationRequestForAssetCollectionWithTitle:'
@@ -1771,7 +1771,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'deleteAssetCollections:'
         JsName:          deleteAssetCollections
@@ -1815,7 +1815,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PHObjectPlaceholder
+              Name:            PHObjectPlaceholder
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -1842,7 +1842,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -1859,7 +1859,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2303,10 +2303,10 @@ Items:
           - Type:            Enum
             Name:            PHAssetResourceType
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHAssetResourceCreationOptions
+            Name:            PHAssetResourceCreationOptions
             WithProtocols:   
       - Name:            'addResourceWithType:fileURL:options:'
         JsName:          addResourceWithTypeFileURLOptions
@@ -2324,10 +2324,10 @@ Items:
           - Type:            Enum
             Name:            PHAssetResourceType
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHAssetResourceCreationOptions
+            Name:            PHAssetResourceCreationOptions
             WithProtocols:   
     StaticMethods:   
       - Name:            creationRequestForAsset
@@ -2357,10 +2357,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -2749,14 +2749,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAssetResource
+                Name:            PHAssetResource
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHAsset
+            Name:            PHAsset
             WithProtocols:   
       - Name:            'assetResourcesForLivePhoto:'
         JsName:          assetResourcesForLivePhoto
@@ -2770,14 +2770,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAssetResource
+                Name:            PHAssetResource
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHLivePhoto
+            Name:            PHLivePhoto
             WithProtocols:   
     InstanceProperties: 
       - Name:            assetLocalIdentifier
@@ -2805,7 +2805,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            originalFilename
         JsName:          originalFilename
@@ -2832,7 +2832,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -2885,7 +2885,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2929,7 +2929,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setOriginalFilename:'
@@ -2946,7 +2946,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            shouldMoveFile
         JsName:          shouldMoveFile
@@ -3013,7 +3013,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setUniformTypeIdentifier:'
@@ -3030,7 +3030,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3076,22 +3076,22 @@ Items:
         Signature:       
           - Type:            Int
           - Type:            Interface
-            JsName:          PHAssetResource
+            Name:            PHAssetResource
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHAssetResourceRequestOptions
+            Name:            PHAssetResourceRequestOptions
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeDataForAssetResource:toFile:options:completionHandler:'
         JsName:          writeDataForAssetResourceToFileOptionsCompletionHandler
@@ -3107,19 +3107,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PHAssetResource
+            Name:            PHAssetResource
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHAssetResourceRequestOptions
+            Name:            PHAssetResourceRequestOptions
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            defaultManager
@@ -3135,7 +3135,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHAssetResourceManager
+            Name:            PHAssetResourceManager
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -3584,19 +3584,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Enum
             Name:            PHImageContentMode
           - Type:            Interface
-            JsName:          PHImageRequestOptions
+            Name:            PHImageRequestOptions
             WithProtocols:   
       - Name:            stopCachingImagesForAllAssets
         JsName:          stopCachingImagesForAllAssets
@@ -3625,19 +3625,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHAsset
+                Name:            PHAsset
                 WithProtocols:   
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Enum
             Name:            PHImageContentMode
           - Type:            Interface
-            JsName:          PHImageRequestOptions
+            Name:            PHImageRequestOptions
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3709,10 +3709,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResultChangeDetails
+            Name:            PHFetchResultChangeDetails
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             WithProtocols:   
       - Name:            'changeDetailsForObject:'
         JsName:          changeDetailsForObject
@@ -3727,10 +3727,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHObjectChangeDetails
+            Name:            PHObjectChangeDetails
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHObject
+            Name:            PHObject
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3795,17 +3795,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHCollection
+                Name:            PHCollection
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHCollectionList
+            Name:            PHCollectionList
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchTopLevelUserCollectionsWithOptions:'
         JsName:          fetchTopLevelUserCollectionsWithOptions
@@ -3820,14 +3820,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHCollection
+                Name:            PHCollection
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
     InstanceProperties: 
       - Name:            canContainAssets
@@ -3905,7 +3905,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4047,17 +4047,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHCollectionList
+                Name:            PHCollectionList
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHCollection
+            Name:            PHCollection
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchCollectionListsWithLocalIdentifiers:options:'
         JsName:          fetchCollectionListsWithLocalIdentifiersOptions
@@ -4072,21 +4072,21 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHCollectionList
+                Name:            PHCollectionList
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchCollectionListsWithType:subtype:options:'
         JsName:          fetchCollectionListsWithTypeSubtypeOptions
@@ -4101,10 +4101,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHCollectionList
+                Name:            PHCollectionList
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -4112,7 +4112,7 @@ Items:
           - Type:            Enum
             Name:            PHCollectionListSubtype
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchMomentListsWithSubtype:containingMoment:options:'
         JsName:          fetchMomentListsWithSubtypeContainingMomentOptions
@@ -4127,19 +4127,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHCollectionList
+                Name:            PHCollectionList
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
             Name:            PHCollectionListSubtype
           - Type:            Interface
-            JsName:          PHAssetCollection
+            Name:            PHAssetCollection
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'fetchMomentListsWithSubtype:options:'
         JsName:          fetchMomentListsWithSubtypeOptions
@@ -4154,16 +4154,16 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHCollectionList
+                Name:            PHCollectionList
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
             Name:            PHCollectionListSubtype
           - Type:            Interface
-            JsName:          PHFetchOptions
+            Name:            PHFetchOptions
             WithProtocols:   
       - Name:            'transientCollectionListWithCollectionsFetchResult:title:'
         JsName:          transientCollectionListWithCollectionsFetchResultTitle
@@ -4178,17 +4178,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHCollectionList
+            Name:            PHCollectionList
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHCollection
+                Name:            PHCollection
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'transientCollectionListWithCollections:title:'
         JsName:          transientCollectionListWithCollectionsTitle
@@ -4203,17 +4203,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHCollectionList
+            Name:            PHCollectionList
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHCollection
+                Name:            PHCollection
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            collectionListSubtype
@@ -4293,7 +4293,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            localizedLocationNames
         JsName:          localizedLocationNames
@@ -4320,10 +4320,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            startDate
@@ -4351,7 +4351,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4401,7 +4401,7 @@ Items:
             WithProtocols:   
               - NSFastEnumeration
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
       - Name:            'moveChildCollectionsAtIndexes:toIndex:'
         JsName:          moveChildCollectionsAtIndexesToIndex
@@ -4417,7 +4417,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
           - Type:            ULong
       - Name:            'removeChildCollections:'
@@ -4450,7 +4450,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
       - Name:            'replaceChildCollectionsAtIndexes:withChildCollections:'
         JsName:          replaceChildCollectionsAtIndexesWithChildCollections
@@ -4466,7 +4466,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -4486,7 +4486,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PHCollectionList
+            Name:            PHCollectionList
             WithProtocols:   
       - Name:            'changeRequestForCollectionList:childCollections:'
         JsName:          changeRequestForCollectionListChildCollections
@@ -4502,13 +4502,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PHCollectionList
+            Name:            PHCollectionList
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          PHCollection
+                Name:            PHCollection
                 WithProtocols:   
             WithProtocols:   
       - Name:            'creationRequestForCollectionListWithTitle:'
@@ -4525,7 +4525,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'deleteCollectionLists:'
         JsName:          deleteCollectionLists
@@ -4569,7 +4569,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PHObjectPlaceholder
+              Name:            PHObjectPlaceholder
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -4596,7 +4596,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -4613,7 +4613,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4809,7 +4809,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PHAdjustmentData
+              Name:            PHAdjustmentData
               WithProtocols:   
       - Name:            audiovisualAsset
         JsName:          audiovisualAsset
@@ -4834,7 +4834,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AVAsset
+              Name:            AVAsset
               WithProtocols:   
       - Name:            avAsset
         JsName:          avAsset
@@ -4861,7 +4861,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AVAsset
+              Name:            AVAsset
               WithProtocols:   
       - Name:            creationDate
         JsName:          creationDate
@@ -4888,7 +4888,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            displaySizeImage
         JsName:          displaySizeImage
@@ -4915,7 +4915,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            fullSizeImageOrientation
         JsName:          fullSizeImageOrientation
@@ -4967,7 +4967,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            livePhoto
         JsName:          livePhoto
@@ -4992,7 +4992,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PHLivePhoto
+              Name:            PHLivePhoto
               WithProtocols:   
       - Name:            location
         JsName:          location
@@ -5019,7 +5019,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLLocation
+              Name:            CLLocation
               WithProtocols:   
       - Name:            mediaSubtypes
         JsName:          mediaSubtypes
@@ -5122,7 +5122,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5140,7 +5140,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHContentEditingInputErrorKey
     JsName:          PHContentEditingInputErrorKey
@@ -5155,7 +5155,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHContentEditingInputRequestOptions
     JsName:          PHContentEditingInputRequestOptions
@@ -5199,7 +5199,7 @@ Items:
               Signature:       
                 - Type:            Bool
                 - Type:            Interface
-                  JsName:          PHAdjustmentData
+                  Name:            PHAdjustmentData
                   WithProtocols:   
         Setter:          
           Name:            'setCanHandleAdjustmentData:'
@@ -5219,7 +5219,7 @@ Items:
               Signature:       
                 - Type:            Bool
                 - Type:            Interface
-                  JsName:          PHAdjustmentData
+                  Name:            PHAdjustmentData
                   WithProtocols:   
       - Name:            networkAccessAllowed
         JsName:          networkAccessAllowed
@@ -5329,7 +5329,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHContentEditingOutput
     JsName:          PHContentEditingOutput
@@ -5357,7 +5357,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PHContentEditingInput
+            Name:            PHContentEditingInput
             WithProtocols:   
       - Name:            'initWithPlaceholderForCreatedAsset:'
         JsName:          initWithPlaceholderForCreatedAsset
@@ -5373,7 +5373,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PHObjectPlaceholder
+            Name:            PHObjectPlaceholder
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -5402,7 +5402,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PHAdjustmentData
+              Name:            PHAdjustmentData
               WithProtocols:   
         Setter:          
           Name:            'setAdjustmentData:'
@@ -5419,7 +5419,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          PHAdjustmentData
+              Name:            PHAdjustmentData
               WithProtocols:   
       - Name:            renderedContentURL
         JsName:          renderedContentURL
@@ -5446,7 +5446,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5646,7 +5646,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
         Setter:          
           Name:            'setPredicate:'
@@ -5663,7 +5663,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
       - Name:            sortDescriptors
         JsName:          sortDescriptors
@@ -5690,10 +5690,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSSortDescriptor
+                  Name:            NSSortDescriptor
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -5711,10 +5711,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSSortDescriptor
+                  Name:            NSSortDescriptor
                   WithProtocols:   
               WithProtocols:   
       - Name:            wantsIncrementalChangeDetails
@@ -5820,7 +5820,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
           - Type:            Enum
             Name:            NSEnumerationOptions
@@ -5926,7 +5926,7 @@ Items:
               WithProtocols:   
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            'objectAtIndex:'
         JsName:          objectAtIndex
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Photos.framework/Headers/PHFetchResult.h
@@ -5976,7 +5976,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            TypeArgument
                 Name:            ObjectType
@@ -5985,7 +5985,7 @@ Items:
                   WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -6122,33 +6122,33 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            TypeArgument
                 Name:            ObjectType
                 UnderlyingType:  
                   Type:            Interface
-                  JsName:          PHObject
+                  Name:            PHObject
                   WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHFetchResult
+            Name:            PHFetchResult
             TypeParameters:  
               - Type:            TypeArgument
                 Name:            ObjectType
                 UnderlyingType:  
                   Type:            Interface
-                  JsName:          PHObject
+                  Name:            PHObject
                   WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            TypeArgument
                 Name:            ObjectType
                 UnderlyingType:  
                   Type:            Interface
-                  JsName:          PHObject
+                  Name:            PHObject
                   WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -6177,7 +6177,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSIndexSet
+              Name:            NSIndexSet
               WithProtocols:   
       - Name:            changedObjects
         JsName:          changedObjects
@@ -6204,13 +6204,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            TypeArgument
                   Name:            ObjectType
                   UnderlyingType:  
                     Type:            Interface
-                    JsName:          PHObject
+                    Name:            PHObject
                     WithProtocols:   
               WithProtocols:   
       - Name:            fetchResultAfterChanges
@@ -6238,13 +6238,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PHFetchResult
+              Name:            PHFetchResult
               TypeParameters:  
                 - Type:            TypeArgument
                   Name:            ObjectType
                   UnderlyingType:  
                     Type:            Interface
-                    JsName:          PHObject
+                    Name:            PHObject
                     WithProtocols:   
               WithProtocols:   
       - Name:            fetchResultBeforeChanges
@@ -6272,13 +6272,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PHFetchResult
+              Name:            PHFetchResult
               TypeParameters:  
                 - Type:            TypeArgument
                   Name:            ObjectType
                   UnderlyingType:  
                     Type:            Interface
-                    JsName:          PHObject
+                    Name:            PHObject
                     WithProtocols:   
               WithProtocols:   
       - Name:            hasIncrementalChanges
@@ -6356,7 +6356,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSIndexSet
+              Name:            NSIndexSet
               WithProtocols:   
       - Name:            insertedObjects
         JsName:          insertedObjects
@@ -6383,13 +6383,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            TypeArgument
                   Name:            ObjectType
                   UnderlyingType:  
                     Type:            Interface
-                    JsName:          PHObject
+                    Name:            PHObject
                     WithProtocols:   
               WithProtocols:   
       - Name:            removedIndexes
@@ -6417,7 +6417,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSIndexSet
+              Name:            NSIndexSet
               WithProtocols:   
       - Name:            removedObjects
         JsName:          removedObjects
@@ -6444,13 +6444,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            TypeArgument
                   Name:            ObjectType
                   UnderlyingType:  
                     Type:            Interface
-                    JsName:          PHObject
+                    Name:            PHObject
                     WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -6469,7 +6469,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHImageContentMode
     JsName:          PHImageContentMode
@@ -6539,7 +6539,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHImageManager
     JsName:          PHImageManager
@@ -6581,22 +6581,22 @@ Items:
         Signature:       
           - Type:            Int
           - Type:            Interface
-            JsName:          PHAsset
+            Name:            PHAsset
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHVideoRequestOptions
+            Name:            PHVideoRequestOptions
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          AVAsset
+                Name:            AVAsset
                 WithProtocols:   
               - Type:            Interface
-                JsName:          AVAudioMix
+                Name:            AVAudioMix
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 WithProtocols:   
       - Name:            'requestExportSessionForVideo:options:exportPreset:resultHandler:'
         JsName:          requestExportSessionForVideoOptionsExportPresetResultHandler
@@ -6612,22 +6612,22 @@ Items:
         Signature:       
           - Type:            Int
           - Type:            Interface
-            JsName:          PHAsset
+            Name:            PHAsset
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHVideoRequestOptions
+            Name:            PHVideoRequestOptions
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          AVAssetExportSession
+                Name:            AVAssetExportSession
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 WithProtocols:   
       - Name:            'requestImageDataAndOrientationForAsset:options:resultHandler:'
         JsName:          requestImageDataAndOrientationForAssetOptionsResultHandler
@@ -6642,24 +6642,24 @@ Items:
         Signature:       
           - Type:            Int
           - Type:            Interface
-            JsName:          PHAsset
+            Name:            PHAsset
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHImageRequestOptions
+            Name:            PHImageRequestOptions
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Enum
                 Name:            CGImagePropertyOrientation
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 WithProtocols:   
       - Name:            'requestImageDataForAsset:options:resultHandler:'
         JsName:          requestImageDataForAssetOptionsResultHandler
@@ -6675,24 +6675,24 @@ Items:
         Signature:       
           - Type:            Int
           - Type:            Interface
-            JsName:          PHAsset
+            Name:            PHAsset
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHImageRequestOptions
+            Name:            PHImageRequestOptions
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Enum
                 Name:            UIImageOrientation
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 WithProtocols:   
       - Name:            'requestImageForAsset:targetSize:contentMode:options:resultHandler:'
         JsName:          requestImageForAssetTargetSizeContentModeOptionsResultHandler
@@ -6708,24 +6708,24 @@ Items:
         Signature:       
           - Type:            Int
           - Type:            Interface
-            JsName:          PHAsset
+            Name:            PHAsset
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Enum
             Name:            PHImageContentMode
           - Type:            Interface
-            JsName:          PHImageRequestOptions
+            Name:            PHImageRequestOptions
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIImage
+                Name:            UIImage
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 WithProtocols:   
       - Name:            'requestLivePhotoForAsset:targetSize:contentMode:options:resultHandler:'
         JsName:          requestLivePhotoForAssetTargetSizeContentModeOptionsResultHandler
@@ -6740,24 +6740,24 @@ Items:
         Signature:       
           - Type:            Int
           - Type:            Interface
-            JsName:          PHAsset
+            Name:            PHAsset
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Enum
             Name:            PHImageContentMode
           - Type:            Interface
-            JsName:          PHLivePhotoRequestOptions
+            Name:            PHLivePhotoRequestOptions
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PHLivePhoto
+                Name:            PHLivePhoto
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 WithProtocols:   
       - Name:            'requestPlayerItemForVideo:options:resultHandler:'
         JsName:          requestPlayerItemForVideoOptionsResultHandler
@@ -6773,19 +6773,19 @@ Items:
         Signature:       
           - Type:            Int
           - Type:            Interface
-            JsName:          PHAsset
+            Name:            PHAsset
             WithProtocols:   
           - Type:            Interface
-            JsName:          PHVideoRequestOptions
+            Name:            PHVideoRequestOptions
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          AVPlayerItem
+                Name:            AVPlayerItem
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 WithProtocols:   
     StaticMethods:   
       - Name:            defaultManager
@@ -6801,7 +6801,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHImageManager
+            Name:            PHImageManager
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -6821,7 +6821,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreGraphics.CGGeometry
-      JsName:          CGSize
+      Name:            CGSize
   - Name:            PHImageRequestOptions
     JsName:          PHImageRequestOptions
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Photos.framework/Headers/PHImageManager.h
@@ -6944,7 +6944,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
         Setter:          
           Name:            'setNormalizedCropRect:'
           JsName:          setNormalizedCropRect
@@ -6961,7 +6961,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
       - Name:            progressHandler
         JsName:          progressHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Photos.framework/Headers/PHImageManager.h
@@ -6991,13 +6991,13 @@ Items:
                 - Type:            Void
                 - Type:            Double
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
                 - Type:            Pointer
                   PointerType:     
                     Type:            Bool
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   WithProtocols:   
         Setter:          
           Name:            'setProgressHandler:'
@@ -7018,13 +7018,13 @@ Items:
                 - Type:            Void
                 - Type:            Double
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
                 - Type:            Pointer
                   PointerType:     
                     Type:            Bool
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   WithProtocols:   
       - Name:            resizeMode
         JsName:          resizeMode
@@ -7332,7 +7332,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHImageResultIsInCloudKey
     JsName:          PHImageResultIsInCloudKey
@@ -7347,7 +7347,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHImageResultRequestIDKey
     JsName:          PHImageResultRequestIDKey
@@ -7362,7 +7362,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHInvalidAssetResourceDataRequestID
     JsName:          PHInvalidAssetResourceDataRequestID
@@ -7433,28 +7433,28 @@ Items:
         Signature:       
           - Type:            Int
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Enum
             Name:            PHImageContentMode
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PHLivePhoto
+                Name:            PHLivePhoto
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSDictionary
+                Name:            NSDictionary
                 WithProtocols:   
     InstanceProperties: 
       - Name:            size
@@ -7483,7 +7483,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
     StaticProperties: 
     Protocols:       
       - NSCopying
@@ -7528,7 +7528,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PHContentEditingInput
+            Name:            PHContentEditingInput
             WithProtocols:   
       - Name:            'prepareLivePhotoForPlaybackWithTargetSize:options:completionHandler:'
         JsName:          prepareLivePhotoForPlaybackWithTargetSizeOptionsCompletionHandler
@@ -7545,12 +7545,12 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -7559,10 +7559,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PHLivePhoto
+                Name:            PHLivePhoto
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveLivePhotoToOutput:options:completionHandler:'
         JsName:          saveLivePhotoToOutputOptionsCompletionHandler
@@ -7578,13 +7578,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PHContentEditingOutput
+            Name:            PHContentEditingOutput
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -7594,7 +7594,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -7664,7 +7664,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreMedia.CMTime
-              JsName:          CMTime
+              Name:            CMTime
       - Name:            frameProcessor
         JsName:          frameProcessor
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Photos.framework/Headers/PHLivePhotoEditingContext.h
@@ -7692,7 +7692,7 @@ Items:
             - Type:            Block
               Signature:       
                 - Type:            Interface
-                  JsName:          CIImage
+                  Name:            CIImage
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -7700,7 +7700,7 @@ Items:
                 - Type:            Pointer
                   PointerType:     
                     Type:            Interface
-                    JsName:          NSError
+                    Name:            NSError
                     WithProtocols:   
         Setter:          
           Name:            'setFrameProcessor:'
@@ -7719,7 +7719,7 @@ Items:
             - Type:            Block
               Signature:       
                 - Type:            Interface
-                  JsName:          CIImage
+                  Name:            CIImage
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -7727,7 +7727,7 @@ Items:
                 - Type:            Pointer
                   PointerType:     
                     Type:            Interface
-                    JsName:          NSError
+                    Name:            NSError
                     WithProtocols:   
       - Name:            fullSizeImage
         JsName:          fullSizeImage
@@ -7754,7 +7754,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CIImage
+              Name:            CIImage
               WithProtocols:   
       - Name:            orientation
         JsName:          orientation
@@ -7808,7 +7808,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreMedia.CMTime
-              JsName:          CMTime
+              Name:            CMTime
     StaticProperties: 
     Protocols:       
     Base:            NSObject
@@ -7864,7 +7864,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHLivePhotoFrame
     JsName:          PHLivePhotoFrame
@@ -7905,7 +7905,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CIImage
+              Name:            CIImage
               WithProtocols:   
       - Name:            renderScale
         JsName:          renderScale
@@ -7958,7 +7958,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreMedia.CMTime
-              JsName:          CMTime
+              Name:            CMTime
       - Name:            type
         JsName:          type
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Photos.framework/Headers/PHLivePhotoEditingContext.h
@@ -8041,7 +8041,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHLivePhotoInfoErrorKey
     JsName:          PHLivePhotoInfoErrorKey
@@ -8056,7 +8056,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHLivePhotoInfoIsDegradedKey
     JsName:          PHLivePhotoInfoIsDegradedKey
@@ -8071,7 +8071,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHLivePhotoRequestIDInvalid
     JsName:          PHLivePhotoRequestIDInvalid
@@ -8212,13 +8212,13 @@ Items:
                 - Type:            Void
                 - Type:            Double
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
                 - Type:            Pointer
                   PointerType:     
                     Type:            Bool
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   WithProtocols:   
         Setter:          
           Name:            'setProgressHandler:'
@@ -8239,13 +8239,13 @@ Items:
                 - Type:            Void
                 - Type:            Double
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
                 - Type:            Pointer
                   PointerType:     
                     Type:            Bool
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   WithProtocols:   
       - Name:            version
         JsName:          version
@@ -8305,7 +8305,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHObject
     JsName:          PHObject
@@ -8346,7 +8346,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -8419,7 +8419,7 @@ Items:
               Name:            ObjectType
               UnderlyingType:  
                 Type:            Interface
-                JsName:          PHObject
+                Name:            PHObject
                 WithProtocols:   
       - Name:            objectBeforeChanges
         JsName:          objectBeforeChanges
@@ -8449,7 +8449,7 @@ Items:
               Name:            ObjectType
               UnderlyingType:  
                 Type:            Interface
-                JsName:          PHObject
+                Name:            PHObject
                 WithProtocols:   
       - Name:            objectWasDeleted
         JsName:          objectWasDeleted
@@ -8527,7 +8527,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'performChanges:completionHandler:'
         JsName:          performChangesCompletionHandler
@@ -8550,7 +8550,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'registerAvailabilityObserver:'
         JsName:          registerAvailabilityObserver
@@ -8660,7 +8660,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PHPhotoLibrary
+            Name:            PHPhotoLibrary
             WithProtocols:   
     InstanceProperties: 
       - Name:            unavailabilityReason
@@ -8686,7 +8686,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -8715,7 +8715,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PHPhotoLibrary
+            Name:            PHPhotoLibrary
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8748,7 +8748,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PHChange
+            Name:            PHChange
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8768,7 +8768,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PHPhotosErrorInvalid
     JsName:          PHPhotosErrorInvalid
@@ -8955,13 +8955,13 @@ Items:
                 - Type:            Void
                 - Type:            Double
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
                 - Type:            Pointer
                   PointerType:     
                     Type:            Bool
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   WithProtocols:   
         Setter:          
           Name:            'setProgressHandler:'
@@ -8982,13 +8982,13 @@ Items:
                 - Type:            Void
                 - Type:            Double
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
                 - Type:            Pointer
                   PointerType:     
                     Type:            Bool
                 - Type:            Interface
-                  JsName:          NSDictionary
+                  Name:            NSDictionary
                   WithProtocols:   
       - Name:            version
         JsName:          version

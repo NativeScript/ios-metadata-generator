@@ -737,7 +737,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          libxslt.xsltInternals
-            JsName:          _xsltDecimalFormat
+            Name:            _xsltDecimalFormat
       - Name:            name
         Signature:       
           Type:            CString
@@ -788,7 +788,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          libxslt.xsltInternals
-            JsName:          _xsltDocument
+            Name:            _xsltDocument
       - Name:            main
         Signature:       
           Type:            Int
@@ -798,7 +798,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          libxml2.HTMLparser
-            JsName:          _xmlDoc
+            Name:            _xmlDoc
       - Name:            keys
         Signature:       
           Type:            Pointer
@@ -810,7 +810,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          libxslt.xsltInternals
-            JsName:          _xsltDocument
+            Name:            _xsltDocument
       - Name:            preproc
         Signature:       
           Type:            Int
@@ -872,14 +872,14 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          libxslt.xsltInternals
-            JsName:          _xsltKeyDef
+            Name:            _xsltKeyDef
       - Name:            inst
         Signature:       
           Type:            Pointer
           PointerType:     
             Type:            Struct
             Module:          libxml2.HTMLparser
-            JsName:          _xmlNode
+            Name:            _xmlNode
       - Name:            name
         Signature:       
           Type:            CString
@@ -910,7 +910,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          libxml2.HTMLparser
-              JsName:          _xmlNs
+              Name:            _xmlNs
       - Name:            nsNr
         Signature:       
           Type:            Int
@@ -931,7 +931,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          libxslt.xsltInternals
-            JsName:          _xsltKeyTable
+            Name:            _xsltKeyTable
       - Name:            name
         Signature:       
           Type:            CString
@@ -987,14 +987,14 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          libxml2.HTMLparser
-            JsName:          _xmlDoc
+            Name:            _xmlDoc
       - Name:            node
         Signature:       
           Type:            Pointer
           PointerType:     
             Type:            Struct
             Module:          libxml2.HTMLparser
-            JsName:          _xmlNode
+            Name:            _xmlNode
       - Name:            countPat
         Signature:       
           Type:            Pointer
@@ -1070,7 +1070,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          Darwin.C._stdio
-          JsName:          FILE
+          Name:            FILE
   - Name:            xsltDebugGetDefaultTrace
     JsName:          xsltDebugGetDefaultTrace
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/libxslt/xsltutils.h
@@ -1098,7 +1098,7 @@ Items:
       - Type:            Void
       - Type:            Enum
         Name:            xsltDebugTraceCodes
-  - Name:            ''
+  - Name:            xsltDebugStatusCodes
     JsName:          xsltDebugStatusCodes
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/libxslt/xsltutils.h
     Module:          
@@ -1120,7 +1120,7 @@ Items:
       - XSLT_DEBUG_RUN_RESTART: '8'
       - XSLT_DEBUG_QUIT: '9'
     SwiftNameFields: 
-  - Name:            ''
+  - Name:            xsltDebugTraceCodes
     JsName:          xsltDebugTraceCodes
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/libxslt/xsltutils.h
     Module:          
@@ -1168,7 +1168,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          libxml2.HTMLparser
-            JsName:          _xmlDoc
+            Name:            _xmlDoc
         - Type:            CString
         - Type:            Pointer
           PointerType:     
@@ -1195,7 +1195,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathParserContext
+          Name:            _xmlXPathParserContext
       - Type:            Int
   - Name:            xsltDocumentSortFunction
     JsName:          xsltDocumentSortFunction
@@ -1213,7 +1213,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlNodeSet
+          Name:            _xmlNodeSet
   - Name:            xsltElementAvailableFunction
     JsName:          xsltElementAvailableFunction
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/libxslt/functions.h
@@ -1230,7 +1230,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathParserContext
+          Name:            _xmlXPathParserContext
       - Type:            Int
   - Name:            xsltEngineVersion
     JsName:          xsltEngineVersion
@@ -1274,7 +1274,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          libxml2.xpath
-              JsName:          _xmlXPathParserContext
+              Name:            _xmlXPathParserContext
           - Type:            Int
       - Type:            CString
       - Type:            CString
@@ -1295,7 +1295,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxslt.xsltInternals
-          JsName:          _xsltDecimalFormat
+          Name:            _xsltDecimalFormat
       - Type:            CString
       - Type:            Double
       - Type:            Pointer
@@ -1317,7 +1317,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathParserContext
+          Name:            _xmlXPathParserContext
       - Type:            Int
   - Name:            xsltFreeAVTList
     JsName:          xsltFreeAVTList
@@ -1365,7 +1365,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxslt.xsltInternals
-          JsName:          _xsltDocument
+          Name:            _xsltDocument
   - Name:            xsltFreeLocale
     JsName:          xsltFreeLocale
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/libxslt/xsltlocale.h
@@ -1424,7 +1424,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathParserContext
+          Name:            _xmlXPathParserContext
       - Type:            Int
   - Name:            xsltFunctionNodeSet
     JsName:          xsltFunctionNodeSet
@@ -1442,7 +1442,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathParserContext
+          Name:            _xmlXPathParserContext
       - Type:            Int
   - Name:            xsltGenerateIdFunction
     JsName:          xsltGenerateIdFunction
@@ -1460,7 +1460,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathParserContext
+          Name:            _xmlXPathParserContext
       - Type:            Int
   - Name:            xsltGenericDebug
     JsName:          xsltGenericDebug
@@ -1568,7 +1568,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.HTMLparser
-          JsName:          _xmlNode
+          Name:            _xmlNode
       - Type:            CString
       - Type:            CString
   - Name:            xsltGetQNameURI
@@ -1587,7 +1587,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.HTMLparser
-          JsName:          _xmlNode
+          Name:            _xmlNode
       - Type:            Pointer
         PointerType:     
           Type:            CString
@@ -1672,7 +1672,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathParserContext
+          Name:            _xmlXPathParserContext
       - Type:            Int
   - Name:            xsltLibxmlVersion
     JsName:          xsltLibxmlVersion
@@ -1698,7 +1698,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Int
-  - Name:            ''
+  - Name:            xsltLoadType
     JsName:          xsltLoadType
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/libxslt/documents.h
     Module:          
@@ -1802,7 +1802,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            CString
-  - Name:            ''
+  - Name:            xsltOutputType
     JsName:          xsltOutputType
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/libxslt/xsltInternals.h
     Module:          
@@ -1845,7 +1845,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathContext
+          Name:            _xmlXPathContext
   - Name:            xsltRegisterExtModuleFunction
     JsName:          xsltRegisterExtModuleFunction
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/libxslt/extensions.h
@@ -1867,7 +1867,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          libxml2.xpath
-              JsName:          _xmlXPathParserContext
+              Name:            _xmlXPathParserContext
           - Type:            Int
   - Name:            xsltRegisterTestModule
     JsName:          xsltRegisterTestModule
@@ -1881,7 +1881,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Void
-  - Name:            ''
+  - Name:            xsltSecurityOption
     JsName:          xsltSecurityOption
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/libxslt/security.h
     Module:          
@@ -2004,7 +2004,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          libxml2.HTMLparser
-              JsName:          _xmlDoc
+              Name:            _xmlDoc
           - Type:            CString
           - Type:            Pointer
             PointerType:     
@@ -2063,7 +2063,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            CString
-  - Name:            ''
+  - Name:            xsltStyleType
     JsName:          xsltStyleType
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/libxslt/xsltInternals.h
     Module:          
@@ -2113,7 +2113,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathParserContext
+          Name:            _xmlXPathParserContext
       - Type:            Int
   - Name:            xsltTimestamp
     JsName:          xsltTimestamp
@@ -2127,7 +2127,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Long
-  - Name:            ''
+  - Name:            xsltTransformState
     JsName:          xsltTransformState
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/libxslt/xsltInternals.h
     Module:          
@@ -2170,7 +2170,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathParserContext
+          Name:            _xmlXPathParserContext
       - Type:            Int
   - Name:            xsltUnregisterExtModule
     JsName:          xsltUnregisterExtModule
@@ -2245,13 +2245,13 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          libxml2.xpath
-              JsName:          _xmlXPathParserContext
+              Name:            _xmlXPathParserContext
           - Type:            Int
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathContext
+          Name:            _xmlXPathContext
       - Type:            CString
       - Type:            CString
   - Name:            xsltXPathVariableLookup
@@ -2269,7 +2269,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          libxml2.xpath
-          JsName:          _xmlXPathObject
+          Name:            _xmlXPathObject
       - Type:            Pointer
         PointerType:     
           Type:            Void

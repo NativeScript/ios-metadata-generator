@@ -32,19 +32,19 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'initWithFeatureProviderArray:'
         JsName:          initWithFeatureProviderArray
@@ -59,7 +59,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -90,7 +90,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Id
                   WithProtocols:   
@@ -234,14 +234,14 @@ Items:
             WithProtocols:   
               - MTLCommandBuffer
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
                   - MTLTexture
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -250,7 +250,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'evaluateOnCPUWithInputs:outputs:error:'
         JsName:          evaluateOnCPUWithInputsOutputsError
@@ -265,23 +265,23 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MLMultiArray
+                Name:            MLMultiArray
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MLMultiArray
+                Name:            MLMultiArray
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'initWithParameterDictionary:error:'
         JsName:          initWithParameterDictionaryError
@@ -296,10 +296,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -307,7 +307,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'outputShapesForInputShapes:error:'
         JsName:          outputShapesForInputShapesError
@@ -321,31 +321,31 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSNumber
+                    Name:            NSNumber
                     WithProtocols:   
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSNumber
+                    Name:            NSNumber
                     WithProtocols:   
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'setWeightData:error:'
         JsName:          setWeightDataError
@@ -360,16 +360,16 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -400,13 +400,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MLModelDescription
+            Name:            MLModelDescription
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -414,7 +414,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'predictionFromFeatures:options:error:'
         JsName:          predictionFromFeaturesOptionsError
@@ -434,12 +434,12 @@ Items:
             WithProtocols:   
               - MLFeatureProvider
           - Type:            Interface
-            JsName:          MLPredictionOptions
+            Name:            MLPredictionOptions
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'predictionsFromBatch:options:error:'
         JsName:          predictionsFromBatchOptionsError
@@ -459,12 +459,12 @@ Items:
             WithProtocols:   
               - MLBatchProvider
           - Type:            Interface
-            JsName:          MLPredictionOptions
+            Name:            MLPredictionOptions
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -537,10 +537,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -548,7 +548,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'objectForKeyedSubscript:'
         JsName:          objectForKeyedSubscript
@@ -562,10 +562,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MLFeatureValue
+            Name:            MLFeatureValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -592,13 +592,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          MLFeatureValue
+                  Name:            MLFeatureValue
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -631,7 +631,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MLFeatureValue
+            Name:            MLFeatureValue
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -658,7 +658,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            optional
         JsName:          optional
@@ -730,7 +730,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLDictionaryConstraint
+              Name:            MLDictionaryConstraint
               WithProtocols:   
       - Name:            imageConstraint
         JsName:          imageConstraint
@@ -755,7 +755,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLImageConstraint
+              Name:            MLImageConstraint
               WithProtocols:   
       - Name:            multiArrayConstraint
         JsName:          multiArrayConstraint
@@ -780,7 +780,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLMultiArrayConstraint
+              Name:            MLMultiArrayConstraint
               WithProtocols:   
       - Name:            sequenceConstraint
         JsName:          sequenceConstraint
@@ -807,7 +807,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLSequenceConstraint
+              Name:            MLSequenceConstraint
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -838,10 +838,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MLFeatureValue
+            Name:            MLFeatureValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -868,10 +868,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -1019,7 +1019,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MLFeatureValue
+            Name:            MLFeatureValue
             WithProtocols:   
     StaticMethods:   
       - Name:            'featureValueWithDictionary:error:'
@@ -1035,18 +1035,18 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'featureValueWithDouble:'
         JsName:          featureValueWithDouble
@@ -1087,7 +1087,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MLMultiArray
+            Name:            MLMultiArray
             WithProtocols:   
       - Name:            'featureValueWithPixelBuffer:'
         JsName:          featureValueWithPixelBuffer
@@ -1118,7 +1118,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MLSequence
+            Name:            MLSequence
             WithProtocols:   
       - Name:            'featureValueWithString:'
         JsName:          featureValueWithString
@@ -1133,7 +1133,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'undefinedFeatureValueWithType:'
         JsName:          undefinedFeatureValueWithType
@@ -1165,13 +1165,13 @@ Items:
             Name:            id
             BridgedTo:       id
           - Type:            Interface
-            JsName:          MLImageConstraint
+            Name:            MLImageConstraint
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1179,7 +1179,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'featureValueWithCGImage:orientation:constraint:options:error:'
         JsName:          featureValueWithCGImageOrientationConstraintOptionsError
@@ -1199,13 +1199,13 @@ Items:
           - Type:            Enum
             Name:            CGImagePropertyOrientation
           - Type:            Interface
-            JsName:          MLImageConstraint
+            Name:            MLImageConstraint
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1213,7 +1213,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'featureValueWithCGImage:orientation:pixelsWide:pixelsHigh:pixelFormatType:options:error:'
         JsName:          featureValueWithCGImageOrientationPixelsWidePixelsHighPixelFormatTypeOptionsError
@@ -1236,10 +1236,10 @@ Items:
           - Type:            Long
           - Type:            UInt
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1247,7 +1247,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'featureValueWithCGImage:pixelsWide:pixelsHigh:pixelFormatType:options:error:'
         JsName:          featureValueWithCGImagePixelsWidePixelsHighPixelFormatTypeOptionsError
@@ -1268,10 +1268,10 @@ Items:
           - Type:            Long
           - Type:            UInt
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1279,7 +1279,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'featureValueWithImageAtURL:constraint:options:error:'
         JsName:          featureValueWithImageAtURLConstraintOptionsError
@@ -1294,16 +1294,16 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          MLImageConstraint
+            Name:            MLImageConstraint
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1311,7 +1311,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'featureValueWithImageAtURL:orientation:constraint:options:error:'
         JsName:          featureValueWithImageAtURLOrientationConstraintOptionsError
@@ -1326,18 +1326,18 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Enum
             Name:            CGImagePropertyOrientation
           - Type:            Interface
-            JsName:          MLImageConstraint
+            Name:            MLImageConstraint
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1345,7 +1345,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'featureValueWithImageAtURL:orientation:pixelsWide:pixelsHigh:pixelFormatType:options:error:'
         JsName:          featureValueWithImageAtURLOrientationPixelsWidePixelsHighPixelFormatTypeOptionsError
@@ -1360,7 +1360,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Enum
             Name:            CGImagePropertyOrientation
@@ -1368,10 +1368,10 @@ Items:
           - Type:            Long
           - Type:            UInt
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1379,7 +1379,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'featureValueWithImageAtURL:pixelsWide:pixelsHigh:pixelFormatType:options:error:'
         JsName:          featureValueWithImageAtURLPixelsWidePixelsHighPixelFormatTypeOptionsError
@@ -1394,16 +1394,16 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Long
           - Type:            Long
           - Type:            UInt
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1411,7 +1411,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
       - Name:            dictionaryValue
@@ -1437,12 +1437,12 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Id
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            doubleValue
@@ -1539,7 +1539,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLMultiArray
+              Name:            MLMultiArray
               WithProtocols:   
       - Name:            sequenceValue
         JsName:          sequenceValue
@@ -1566,7 +1566,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLSequence
+              Name:            MLSequence
               WithProtocols:   
       - Name:            stringValue
         JsName:          stringValue
@@ -1591,7 +1591,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -1657,7 +1657,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MLFeatureValueImageOptionCropRect
     JsName:          MLFeatureValueImageOptionCropRect
@@ -1672,7 +1672,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MLImageConstraint
     JsName:          MLImageConstraint
@@ -1782,7 +1782,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLImageSizeConstraint
+              Name:            MLImageSizeConstraint
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1889,10 +1889,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MLImageSize
+                  Name:            MLImageSize
                   WithProtocols:   
               WithProtocols:   
       - Name:            pixelsHighRange
@@ -1919,7 +1919,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Foundation.NSRange
-              JsName:          NSRange
+              Name:            NSRange
       - Name:            pixelsWideRange
         JsName:          pixelsWideRange
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLImageSizeConstraint.h
@@ -1944,7 +1944,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Foundation.NSRange
-              JsName:          NSRange
+              Name:            NSRange
       - Name:            type
         JsName:          type
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLImageSizeConstraint.h
@@ -2062,7 +2062,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            scope
         JsName:          scope
@@ -2087,7 +2087,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2132,7 +2132,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLMetricKey
+              Name:            MLMetricKey
               WithProtocols:   
       - Name:            lossValue
         JsName:          lossValue
@@ -2157,7 +2157,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLMetricKey
+              Name:            MLMetricKey
               WithProtocols:   
       - Name:            miniBatchIndex
         JsName:          miniBatchIndex
@@ -2182,7 +2182,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLMetricKey
+              Name:            MLMetricKey
               WithProtocols:   
     Protocols:       
     Base:            MLKey
@@ -2213,12 +2213,12 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          MLParameterKey
+            Name:            MLParameterKey
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'predictionFromFeatures:error:'
         JsName:          predictionFromFeaturesError
@@ -2240,7 +2240,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'predictionFromFeatures:options:error:'
         JsName:          predictionFromFeaturesOptionsError
@@ -2260,12 +2260,12 @@ Items:
             WithProtocols:   
               - MLFeatureProvider
           - Type:            Interface
-            JsName:          MLPredictionOptions
+            Name:            MLPredictionOptions
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'predictionsFromBatch:error:'
         JsName:          predictionsFromBatchError
@@ -2288,7 +2288,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'predictionsFromBatch:options:error:'
         JsName:          predictionsFromBatchOptionsError
@@ -2309,12 +2309,12 @@ Items:
             WithProtocols:   
               - MLBatchProvider
           - Type:            Interface
-            JsName:          MLPredictionOptions
+            Name:            MLPredictionOptions
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
       - Name:            'modelWithContentsOfURL:configuration:error:'
@@ -2331,15 +2331,15 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          MLModelConfiguration
+            Name:            MLModelConfiguration
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'modelWithContentsOfURL:error:'
         JsName:          modelWithContentsOfURLError
@@ -2354,12 +2354,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'compileModelAtURL:error:'
         JsName:          compileModelAtURLError
@@ -2374,15 +2374,15 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
       - Name:            configuration
@@ -2410,7 +2410,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLModelConfiguration
+              Name:            MLModelConfiguration
               WithProtocols:   
       - Name:            modelDescription
         JsName:          modelDescription
@@ -2435,7 +2435,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLModelDescription
+              Name:            MLModelDescription
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2453,7 +2453,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MLModelConfiguration
     JsName:          MLModelConfiguration
@@ -2609,10 +2609,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MLParameterKey
+                  Name:            MLParameterKey
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -2631,10 +2631,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MLParameterKey
+                  Name:            MLParameterKey
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -2657,7 +2657,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MLModelDescription
     JsName:          MLModelDescription
@@ -2696,13 +2696,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          MLFeatureDescription
+                  Name:            MLFeatureDescription
                   WithProtocols:   
               WithProtocols:   
       - Name:            metadata
@@ -2728,10 +2728,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -2759,13 +2759,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          MLFeatureDescription
+                  Name:            MLFeatureDescription
                   WithProtocols:   
               WithProtocols:   
       - Name:            predictedFeatureName
@@ -2791,7 +2791,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            predictedProbabilitiesName
         JsName:          predictedProbabilitiesName
@@ -2816,7 +2816,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            isUpdatable
         JsName:          isUpdatable
@@ -2864,13 +2864,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          MLFeatureDescription
+                  Name:            MLFeatureDescription
                   WithProtocols:   
               WithProtocols:   
       - Name:            parameterDescriptionsByKey
@@ -2896,13 +2896,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MLParameterKey
+                  Name:            MLParameterKey
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          MLParameterDescription
+                  Name:            MLParameterDescription
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2922,7 +2922,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MLModelError
     JsName:          MLModelError
@@ -2987,7 +2987,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MLModelErrorFeatureType
     JsName:          MLModelErrorFeatureType
@@ -3059,7 +3059,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MLModelVersionStringKey
     JsName:          MLModelVersionStringKey
@@ -3074,7 +3074,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MLMultiArray
     JsName:          MLMultiArray
@@ -3104,19 +3104,19 @@ Items:
             PointerType:     
               Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
             Name:            MLMultiArrayDataType
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
@@ -3128,7 +3128,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'initWithShape:dataType:error:'
         JsName:          initWithShapeDataTypeError
@@ -3143,10 +3143,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -3154,7 +3154,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'objectAtIndexedSubscript:'
         JsName:          objectAtIndexedSubscript
@@ -3168,7 +3168,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Long
       - Name:            'objectForKeyedSubscript:'
@@ -3183,13 +3183,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
       - Name:            'setObject:atIndexedSubscript:'
@@ -3205,7 +3205,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Long
       - Name:            'setObject:forKeyedSubscript:'
@@ -3221,13 +3221,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -3327,10 +3327,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            strides
@@ -3356,10 +3356,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -3426,10 +3426,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            shapeConstraint
@@ -3457,7 +3457,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLMultiArrayShapeConstraint
+              Name:            MLMultiArrayShapeConstraint
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3552,13 +3552,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSNumber
+                      Name:            NSNumber
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -3585,10 +3585,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSValue
+                  Name:            NSValue
                   WithProtocols:   
               WithProtocols:   
       - Name:            type
@@ -3707,10 +3707,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            maxNumber
@@ -3736,7 +3736,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            minNumber
         JsName:          minNumber
@@ -3761,7 +3761,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3828,7 +3828,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            numericConstraint
         JsName:          numericConstraint
@@ -3853,7 +3853,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLNumericConstraint
+              Name:            MLNumericConstraint
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3883,10 +3883,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MLParameterKey
+            Name:            MLParameterKey
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3914,7 +3914,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            beta2
         JsName:          beta2
@@ -3939,7 +3939,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            epochs
         JsName:          epochs
@@ -3964,7 +3964,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            eps
         JsName:          eps
@@ -3989,7 +3989,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            learningRate
         JsName:          learningRate
@@ -4014,7 +4014,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            miniBatchSize
         JsName:          miniBatchSize
@@ -4039,7 +4039,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            momentum
         JsName:          momentum
@@ -4064,7 +4064,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            numberOfNeighbors
         JsName:          numberOfNeighbors
@@ -4089,7 +4089,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            seed
         JsName:          seed
@@ -4114,7 +4114,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            shuffle
         JsName:          shuffle
@@ -4139,7 +4139,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            linkedModelFileName
         JsName:          linkedModelFileName
@@ -4164,7 +4164,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            linkedModelSearchPath
         JsName:          linkedModelSearchPath
@@ -4189,7 +4189,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            biases
         JsName:          biases
@@ -4214,7 +4214,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
       - Name:            weights
         JsName:          weights
@@ -4239,7 +4239,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLParameterKey
+              Name:            MLParameterKey
               WithProtocols:   
     Protocols:       
     Base:            MLKey
@@ -4337,10 +4337,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
       - Name:            'sequenceWithStringArray:'
@@ -4356,10 +4356,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -4386,10 +4386,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            stringValues
@@ -4415,10 +4415,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            type
@@ -4486,7 +4486,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Foundation.NSRange
-              JsName:          NSRange
+              Name:            NSRange
       - Name:            valueDescription
         JsName:          valueDescription
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLSequenceConstraint.h
@@ -4510,7 +4510,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLFeatureDescription
+              Name:            MLFeatureDescription
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4577,7 +4577,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            state
         JsName:          state
@@ -4626,7 +4626,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4769,10 +4769,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MLMetricKey
+                  Name:            MLMetricKey
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -4800,7 +4800,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLModel
+              Name:            MLModel
               WithProtocols:   
                 - MLWritable
       - Name:            parameters
@@ -4826,10 +4826,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MLParameterKey
+                  Name:            MLParameterKey
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -4857,7 +4857,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MLUpdateTask
+              Name:            MLUpdateTask
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4943,13 +4943,13 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MLUpdateContext
+                Name:            MLUpdateContext
                 WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MLUpdateContext
+                Name:            MLUpdateContext
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4981,10 +4981,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          MLParameterKey
+                Name:            MLParameterKey
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -5003,24 +5003,24 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
               - MLBatchProvider
           - Type:            Interface
-            JsName:          MLModelConfiguration
+            Name:            MLModelConfiguration
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MLUpdateContext
+                Name:            MLUpdateContext
                 WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'updateTaskForModelAtURL:trainingData:configuration:progressHandlers:error:'
         JsName:          updateTaskForModelAtURLTrainingDataConfigurationProgressHandlersError
@@ -5035,21 +5035,21 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
               - MLBatchProvider
           - Type:            Interface
-            JsName:          MLModelConfiguration
+            Name:            MLModelConfiguration
             WithProtocols:   
           - Type:            Interface
-            JsName:          MLUpdateProgressHandlers
+            Name:            MLUpdateProgressHandlers
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -5080,12 +5080,12 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
     InstanceProperties: 

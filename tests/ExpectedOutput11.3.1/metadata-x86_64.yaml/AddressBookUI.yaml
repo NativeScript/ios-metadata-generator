@@ -20,10 +20,10 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSString
+        Name:            NSString
         WithProtocols:   
       - Type:            Interface
-        JsName:          NSDictionary
+        Name:            NSDictionary
         WithProtocols:   
       - Type:            Bool
   - Name:            ABNewPersonViewController
@@ -245,7 +245,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ABNewPersonViewController
+            Name:            ABNewPersonViewController
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -333,10 +333,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -353,10 +353,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            peoplePickerDelegate
@@ -425,7 +425,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
         Setter:          
           Name:            'setPredicateForEnablingPerson:'
@@ -442,7 +442,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
       - Name:            predicateForSelectionOfPerson
         JsName:          predicateForSelectionOfPerson
@@ -469,7 +469,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
         Setter:          
           Name:            'setPredicateForSelectionOfPerson:'
@@ -486,7 +486,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
       - Name:            predicateForSelectionOfProperty
         JsName:          predicateForSelectionOfProperty
@@ -513,7 +513,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
         Setter:          
           Name:            'setPredicateForSelectionOfProperty:'
@@ -530,7 +530,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -559,7 +559,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ABPeoplePickerNavigationController
+            Name:            ABPeoplePickerNavigationController
             WithProtocols:   
       - Name:            'peoplePickerNavigationController:didSelectPerson:'
         JsName:          peoplePickerNavigationControllerDidSelectPerson
@@ -575,7 +575,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ABPeoplePickerNavigationController
+            Name:            ABPeoplePickerNavigationController
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -594,7 +594,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ABPeoplePickerNavigationController
+            Name:            ABPeoplePickerNavigationController
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -615,7 +615,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          ABPeoplePickerNavigationController
+            Name:            ABPeoplePickerNavigationController
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -634,7 +634,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          ABPeoplePickerNavigationController
+            Name:            ABPeoplePickerNavigationController
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -659,7 +659,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonDatesProperty
     JsName:          ABPersonDatesProperty
@@ -674,7 +674,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonDepartmentNameProperty
     JsName:          ABPersonDepartmentNameProperty
@@ -689,7 +689,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonEmailAddressesProperty
     JsName:          ABPersonEmailAddressesProperty
@@ -704,7 +704,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonFamilyNameProperty
     JsName:          ABPersonFamilyNameProperty
@@ -719,7 +719,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonGivenNameProperty
     JsName:          ABPersonGivenNameProperty
@@ -734,7 +734,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonInstantMessageAddressesProperty
     JsName:          ABPersonInstantMessageAddressesProperty
@@ -749,7 +749,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonJobTitleProperty
     JsName:          ABPersonJobTitleProperty
@@ -764,7 +764,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonMiddleNameProperty
     JsName:          ABPersonMiddleNameProperty
@@ -779,7 +779,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonNamePrefixProperty
     JsName:          ABPersonNamePrefixProperty
@@ -794,7 +794,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonNameSuffixProperty
     JsName:          ABPersonNameSuffixProperty
@@ -809,7 +809,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonNicknameProperty
     JsName:          ABPersonNicknameProperty
@@ -824,7 +824,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonNoteProperty
     JsName:          ABPersonNoteProperty
@@ -839,7 +839,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonOrganizationNameProperty
     JsName:          ABPersonOrganizationNameProperty
@@ -854,7 +854,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonPhoneNumbersProperty
     JsName:          ABPersonPhoneNumbersProperty
@@ -869,7 +869,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonPhoneticFamilyNameProperty
     JsName:          ABPersonPhoneticFamilyNameProperty
@@ -884,7 +884,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonPhoneticGivenNameProperty
     JsName:          ABPersonPhoneticGivenNameProperty
@@ -899,7 +899,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonPhoneticMiddleNameProperty
     JsName:          ABPersonPhoneticMiddleNameProperty
@@ -914,7 +914,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonPostalAddressesProperty
     JsName:          ABPersonPostalAddressesProperty
@@ -929,7 +929,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonPreviousFamilyNameProperty
     JsName:          ABPersonPreviousFamilyNameProperty
@@ -944,7 +944,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonRelatedNamesProperty
     JsName:          ABPersonRelatedNamesProperty
@@ -959,7 +959,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonSocialProfilesProperty
     JsName:          ABPersonSocialProfilesProperty
@@ -974,7 +974,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonUrlAddressesProperty
     JsName:          ABPersonUrlAddressesProperty
@@ -989,7 +989,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ABPersonViewController
     JsName:          ABPersonViewController
@@ -1201,10 +1201,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1221,10 +1221,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            personViewDelegate
@@ -1336,7 +1336,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          ABPersonViewController
+            Name:            ABPersonViewController
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -1500,7 +1500,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAlternateName:'
@@ -1516,7 +1516,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            displayedPerson
         JsName:          displayedPerson
@@ -1582,7 +1582,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMessage:'
@@ -1598,7 +1598,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            unknownPersonViewDelegate
         JsName:          unknownPersonViewDelegate
@@ -1668,7 +1668,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ABUnknownPersonViewController
+            Name:            ABUnknownPersonViewController
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -1687,7 +1687,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          ABUnknownPersonViewController
+            Name:            ABUnknownPersonViewController
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id

@@ -32,16 +32,16 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CPAlertAction
+                Name:            CPAlertAction
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -69,10 +69,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPAlertAction
+                  Name:            CPAlertAction
                   WithProtocols:   
               WithProtocols:   
       - Name:            message
@@ -98,7 +98,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -123,7 +123,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -153,7 +153,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            CPAlertActionStyle
@@ -161,7 +161,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CPAlertAction
+                Name:            CPAlertAction
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -191,7 +191,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          CPAlertAction
+                  Name:            CPAlertAction
                   WithProtocols:   
       - Name:            style
         JsName:          style
@@ -240,7 +240,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -323,17 +323,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CPAlertAction
+                Name:            CPAlertAction
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -361,10 +361,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPAlertAction
+                  Name:            CPAlertAction
                   WithProtocols:   
               WithProtocols:   
       - Name:            titleVariants
@@ -390,10 +390,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -424,13 +424,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UIApplication
+            Name:            UIApplication
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPInterfaceController
+            Name:            CPInterfaceController
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPWindow
+            Name:            CPWindow
             WithProtocols:   
       - Name:            'application:didDisconnectCarInterfaceController:fromWindow:'
         JsName:          applicationDidDisconnectCarInterfaceControllerFromWindow
@@ -445,13 +445,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UIApplication
+            Name:            UIApplication
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPInterfaceController
+            Name:            CPInterfaceController
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPWindow
+            Name:            CPWindow
             WithProtocols:   
       - Name:            'application:didSelectManeuver:'
         JsName:          applicationDidSelectManeuver
@@ -466,10 +466,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UIApplication
+            Name:            UIApplication
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPManeuver
+            Name:            CPManeuver
             WithProtocols:   
       - Name:            'application:didSelectNavigationAlert:'
         JsName:          applicationDidSelectNavigationAlert
@@ -484,10 +484,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UIApplication
+            Name:            UIApplication
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPNavigationAlert
+            Name:            CPNavigationAlert
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -524,7 +524,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CPBarButton
+                Name:            CPBarButton
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -612,7 +612,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
         Setter:          
           Name:            'setImage:'
@@ -628,7 +628,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -653,7 +653,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -669,7 +669,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -712,7 +712,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPBarButton
+              Name:            CPBarButton
               WithProtocols:   
         Setter:          
           Name:            'setBackButton:'
@@ -728,7 +728,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CPBarButton
+              Name:            CPBarButton
               WithProtocols:   
       - Name:            leadingNavigationBarButtons
         JsName:          leadingNavigationBarButtons
@@ -753,10 +753,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPBarButton
+                  Name:            CPBarButton
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -773,10 +773,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPBarButton
+                  Name:            CPBarButton
                   WithProtocols:   
               WithProtocols:   
       - Name:            trailingNavigationBarButtons
@@ -802,10 +802,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPBarButton
+                  Name:            CPBarButton
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -822,10 +822,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPBarButton
+                  Name:            CPBarButton
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -934,20 +934,20 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CPGridButton
+                Name:            CPGridButton
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1011,7 +1011,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            titleVariants
         JsName:          titleVariants
@@ -1036,10 +1036,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -1071,13 +1071,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CPGridButton
+                Name:            CPGridButton
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -1105,10 +1105,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPGridButton
+                  Name:            CPGridButton
                   WithProtocols:   
               WithProtocols:   
       - Name:            title
@@ -1134,7 +1134,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1165,10 +1165,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1195,7 +1195,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            lightContentImage
         JsName:          lightContentImage
@@ -1220,7 +1220,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1290,7 +1290,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplate
+            Name:            CPTemplate
             WithProtocols:   
           - Type:            Bool
       - Name:            'presentTemplate:animated:'
@@ -1306,7 +1306,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplate
+            Name:            CPTemplate
             WithProtocols:   
           - Type:            Bool
       - Name:            'pushTemplate:animated:'
@@ -1322,7 +1322,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplate
+            Name:            CPTemplate
             WithProtocols:   
           - Type:            Bool
       - Name:            'setRootTemplate:animated:'
@@ -1338,7 +1338,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplate
+            Name:            CPTemplate
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -1447,7 +1447,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPTemplate
+              Name:            CPTemplate
               WithProtocols:   
       - Name:            rootTemplate
         JsName:          rootTemplate
@@ -1472,7 +1472,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPTemplate
+              Name:            CPTemplate
               WithProtocols:   
       - Name:            templates
         JsName:          templates
@@ -1497,10 +1497,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPTemplate
+                  Name:            CPTemplate
                   WithProtocols:   
               WithProtocols:   
       - Name:            topTemplate
@@ -1526,7 +1526,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPTemplate
+              Name:            CPTemplate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1556,7 +1556,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplate
+            Name:            CPTemplate
             WithProtocols:   
           - Type:            Bool
       - Name:            'templateDidDisappear:animated:'
@@ -1572,7 +1572,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplate
+            Name:            CPTemplate
             WithProtocols:   
           - Type:            Bool
       - Name:            'templateWillAppear:animated:'
@@ -1588,7 +1588,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplate
+            Name:            CPTemplate
             WithProtocols:   
           - Type:            Bool
       - Name:            'templateWillDisappear:animated:'
@@ -1604,7 +1604,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplate
+            Name:            CPTemplate
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -1676,10 +1676,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithText:detailText:image:'
         JsName:          initWithTextDetailTextImage
@@ -1694,13 +1694,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
       - Name:            'initWithText:detailText:image:showsDisclosureIndicator:'
         JsName:          initWithTextDetailTextImageShowsDisclosureIndicator
@@ -1715,13 +1715,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -1749,7 +1749,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            image
         JsName:          image
@@ -1774,7 +1774,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            showsDisclosureIndicator
         JsName:          showsDisclosureIndicator
@@ -1822,7 +1822,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
@@ -1892,10 +1892,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CPListItem
+                Name:            CPListItem
                 WithProtocols:   
             WithProtocols:   
       - Name:            'initWithItems:header:sectionIndexTitle:'
@@ -1911,17 +1911,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CPListItem
+                Name:            CPListItem
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1948,7 +1948,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            items
         JsName:          items
@@ -1973,10 +1973,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPListItem
+                  Name:            CPListItem
                   WithProtocols:   
               WithProtocols:   
       - Name:            sectionIndexTitle
@@ -2002,7 +2002,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2033,13 +2033,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CPListSection
+                Name:            CPListSection
                 WithProtocols:   
             WithProtocols:   
       - Name:            'updateSections:'
@@ -2055,10 +2055,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CPListSection
+                Name:            CPListSection
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -2127,10 +2127,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPListSection
+                  Name:            CPListSection
                   WithProtocols:   
               WithProtocols:   
       - Name:            title
@@ -2156,7 +2156,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2187,10 +2187,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPListTemplate
+            Name:            CPListTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPListItem
+            Name:            CPListItem
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -2237,10 +2237,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSAttributedString
+                  Name:            NSAttributedString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2257,10 +2257,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSAttributedString
+                  Name:            NSAttributedString
                   WithProtocols:   
               WithProtocols:   
       - Name:            initialTravelEstimates
@@ -2286,7 +2286,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPTravelEstimates
+              Name:            CPTravelEstimates
               WithProtocols:   
         Setter:          
           Name:            'setInitialTravelEstimates:'
@@ -2302,7 +2302,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CPTravelEstimates
+              Name:            CPTravelEstimates
               WithProtocols:   
       - Name:            instructionVariants
         JsName:          instructionVariants
@@ -2327,10 +2327,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2347,10 +2347,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            junctionImage
@@ -2376,7 +2376,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
         Setter:          
           Name:            'setJunctionImage:'
@@ -2392,7 +2392,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            symbolImage
         JsName:          symbolImage
@@ -2417,7 +2417,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
         Setter:          
           Name:            'setSymbolImage:'
@@ -2433,7 +2433,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            symbolSet
         JsName:          symbolSet
@@ -2460,7 +2460,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPImageSet
+              Name:            CPImageSet
               WithProtocols:   
         Setter:          
           Name:            'setSymbolSet:'
@@ -2477,7 +2477,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CPImageSet
+              Name:            CPImageSet
               WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
@@ -2629,7 +2629,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CPMapButton
+                Name:            CPMapButton
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2693,7 +2693,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
         Setter:          
           Name:            'setFocusedImage:'
@@ -2709,7 +2709,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            hidden
         JsName:          hidden
@@ -2771,7 +2771,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
         Setter:          
           Name:            'setImage:'
@@ -2787,7 +2787,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2860,7 +2860,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPNavigationAlert
+            Name:            CPNavigationAlert
             WithProtocols:   
           - Type:            Bool
       - Name:            'showPanningInterfaceAnimated:'
@@ -2889,10 +2889,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTrip
+            Name:            CPTrip
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPTripPreviewTextConfiguration
+            Name:            CPTripPreviewTextConfiguration
             WithProtocols:   
       - Name:            'showTripPreviews:textConfiguration:'
         JsName:          showTripPreviewsTextConfiguration
@@ -2907,14 +2907,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CPTrip
+                Name:            CPTrip
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPTripPreviewTextConfiguration
+            Name:            CPTripPreviewTextConfiguration
             WithProtocols:   
       - Name:            'startNavigationSessionForTrip:'
         JsName:          startNavigationSessionForTrip
@@ -2928,10 +2928,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CPNavigationSession
+            Name:            CPNavigationSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPTrip
+            Name:            CPTrip
             WithProtocols:   
       - Name:            'updateTravelEstimates:forTrip:'
         JsName:          updateTravelEstimatesForTrip
@@ -2946,10 +2946,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTravelEstimates
+            Name:            CPTravelEstimates
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPTrip
+            Name:            CPTrip
             WithProtocols:   
       - Name:            'updateTravelEstimates:forTrip:withTimeRemainingColor:'
         JsName:          updateTravelEstimatesForTripWithTimeRemainingColor
@@ -2964,10 +2964,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTravelEstimates
+            Name:            CPTravelEstimates
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPTrip
+            Name:            CPTrip
             WithProtocols:   
           - Type:            Enum
             Name:            CPTimeRemainingColor
@@ -3033,7 +3033,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPNavigationAlert
+              Name:            CPNavigationAlert
               WithProtocols:   
       - Name:            guidanceBackgroundColor
         JsName:          guidanceBackgroundColor
@@ -3058,7 +3058,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIColor
+              Name:            UIColor
               WithProtocols:   
         Setter:          
           Name:            'setGuidanceBackgroundColor:'
@@ -3074,7 +3074,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIColor
+              Name:            UIColor
               WithProtocols:   
       - Name:            hidesButtonsWithNavigationBar
         JsName:          hidesButtonsWithNavigationBar
@@ -3136,10 +3136,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPMapButton
+                  Name:            CPMapButton
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3156,10 +3156,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPMapButton
+                  Name:            CPMapButton
                   WithProtocols:   
               WithProtocols:   
       - Name:            mapDelegate
@@ -3294,7 +3294,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
       - Name:            'mapTemplateDidCancelNavigation:'
         JsName:          mapTemplateDidCancelNavigation
@@ -3309,7 +3309,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
       - Name:            'mapTemplate:didDismissNavigationAlert:dismissalContext:'
         JsName:          mapTemplateDidDismissNavigationAlertDismissalContext
@@ -3324,10 +3324,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPNavigationAlert
+            Name:            CPNavigationAlert
             WithProtocols:   
           - Type:            Enum
             Name:            CPNavigationAlertDismissalContext
@@ -3344,7 +3344,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
       - Name:            'mapTemplate:didEndPanGestureWithVelocity:'
         JsName:          mapTemplateDidEndPanGestureWithVelocity
@@ -3359,11 +3359,11 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
       - Name:            'mapTemplate:didShowNavigationAlert:'
         JsName:          mapTemplateDidShowNavigationAlert
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3377,10 +3377,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPNavigationAlert
+            Name:            CPNavigationAlert
             WithProtocols:   
       - Name:            'mapTemplateDidShowPanningInterface:'
         JsName:          mapTemplateDidShowPanningInterface
@@ -3395,7 +3395,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
       - Name:            'mapTemplate:didUpdatePanGestureWithTranslation:velocity:'
         JsName:          mapTemplateDidUpdatePanGestureWithTranslationVelocity
@@ -3410,14 +3410,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
       - Name:            'mapTemplate:displayStyleForManeuver:'
         JsName:          mapTemplateDisplayStyleForManeuver
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPMapTemplate.h
@@ -3432,10 +3432,10 @@ Items:
           - Type:            Enum
             Name:            CPManeuverDisplayStyle
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPManeuver
+            Name:            CPManeuver
             WithProtocols:   
       - Name:            'mapTemplate:panBeganWithDirection:'
         JsName:          mapTemplatePanBeganWithDirection
@@ -3450,7 +3450,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Enum
             Name:            CPPanDirection
@@ -3467,7 +3467,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Enum
             Name:            CPPanDirection
@@ -3484,7 +3484,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Enum
             Name:            CPPanDirection
@@ -3501,13 +3501,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPTrip
+            Name:            CPTrip
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPRouteChoice
+            Name:            CPRouteChoice
             WithProtocols:   
       - Name:            'mapTemplate:shouldShowNotificationForManeuver:'
         JsName:          mapTemplateShouldShowNotificationForManeuver
@@ -3522,10 +3522,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPManeuver
+            Name:            CPManeuver
             WithProtocols:   
       - Name:            'mapTemplate:shouldShowNotificationForNavigationAlert:'
         JsName:          mapTemplateShouldShowNotificationForNavigationAlert
@@ -3540,10 +3540,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPNavigationAlert
+            Name:            CPNavigationAlert
             WithProtocols:   
       - Name:            'mapTemplate:shouldUpdateNotificationForManeuver:withTravelEstimates:'
         JsName:          mapTemplateShouldUpdateNotificationForManeuverWithTravelEstimates
@@ -3558,13 +3558,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPManeuver
+            Name:            CPManeuver
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPTravelEstimates
+            Name:            CPTravelEstimates
             WithProtocols:   
       - Name:            'mapTemplate:startedTrip:usingRouteChoice:'
         JsName:          mapTemplateStartedTripUsingRouteChoice
@@ -3579,13 +3579,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPTrip
+            Name:            CPTrip
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPRouteChoice
+            Name:            CPRouteChoice
             WithProtocols:   
       - Name:            'mapTemplate:willDismissNavigationAlert:dismissalContext:'
         JsName:          mapTemplateWillDismissNavigationAlertDismissalContext
@@ -3600,10 +3600,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPNavigationAlert
+            Name:            CPNavigationAlert
             WithProtocols:   
           - Type:            Enum
             Name:            CPNavigationAlertDismissalContext
@@ -3620,7 +3620,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
       - Name:            'mapTemplate:willShowNavigationAlert:'
         JsName:          mapTemplateWillShowNavigationAlert
@@ -3635,10 +3635,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPMapTemplate
+            Name:            CPMapTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPNavigationAlert
+            Name:            CPNavigationAlert
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3658,7 +3658,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreGraphics.CGGeometry
-      JsName:          CGSize
+      Name:            CGSize
   - Name:            CPNavigationAlert
     JsName:          CPNavigationAlert
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CarPlay.framework/Headers/CPNavigationAlert.h
@@ -3684,27 +3684,27 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPAlertAction
+            Name:            CPAlertAction
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPAlertAction
+            Name:            CPAlertAction
             WithProtocols:   
           - Type:            Double
       - Name:            'initWithTitleVariants:subtitleVariants:imageSet:primaryAction:secondaryAction:duration:'
@@ -3721,27 +3721,27 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPImageSet
+            Name:            CPImageSet
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPAlertAction
+            Name:            CPAlertAction
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPAlertAction
+            Name:            CPAlertAction
             WithProtocols:   
           - Type:            Double
       - Name:            'updateTitleVariants:subtitleVariants:'
@@ -3757,17 +3757,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -3818,7 +3818,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            imageSet
         JsName:          imageSet
@@ -3843,7 +3843,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPImageSet
+              Name:            CPImageSet
               WithProtocols:   
       - Name:            primaryAction
         JsName:          primaryAction
@@ -3868,7 +3868,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPAlertAction
+              Name:            CPAlertAction
               WithProtocols:   
       - Name:            secondaryAction
         JsName:          secondaryAction
@@ -3893,7 +3893,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPAlertAction
+              Name:            CPAlertAction
               WithProtocols:   
       - Name:            subtitleVariants
         JsName:          subtitleVariants
@@ -3918,10 +3918,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            titleVariants
@@ -3947,10 +3947,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -4073,7 +4073,7 @@ Items:
           - Type:            Enum
             Name:            CPTripPauseReason
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'updateTravelEstimates:forManeuver:'
         JsName:          updateTravelEstimatesForManeuver
@@ -4088,10 +4088,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTravelEstimates
+            Name:            CPTravelEstimates
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPManeuver
+            Name:            CPManeuver
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4118,7 +4118,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPTrip
+              Name:            CPTrip
               WithProtocols:   
       - Name:            upcomingManeuvers
         JsName:          upcomingManeuvers
@@ -4143,10 +4143,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPManeuver
+                  Name:            CPManeuver
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4163,10 +4163,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPManeuver
+                  Name:            CPManeuver
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -4275,24 +4275,24 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -4320,10 +4320,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            selectionSummaryVariants
@@ -4349,10 +4349,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            summaryVariants
@@ -4378,10 +4378,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            userInfo
@@ -4511,7 +4511,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPSearchTemplate
+            Name:            CPSearchTemplate
             WithProtocols:   
       - Name:            'searchTemplate:selectedResult:completionHandler:'
         JsName:          searchTemplateSelectedResultCompletionHandler
@@ -4526,10 +4526,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPSearchTemplate
+            Name:            CPSearchTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPListItem
+            Name:            CPListItem
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -4547,19 +4547,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPSearchTemplate
+            Name:            CPSearchTemplate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CPListItem
+                    Name:            CPListItem
                     WithProtocols:   
                 WithProtocols:   
     StaticMethods:   
@@ -4716,7 +4716,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPSessionConfiguration
+            Name:            CPSessionConfiguration
             WithProtocols:   
           - Type:            Enum
             Name:            CPContentStyle
@@ -4733,7 +4733,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPSessionConfiguration
+            Name:            CPSessionConfiguration
             WithProtocols:   
           - Type:            Enum
             Name:            CPLimitableUserInterface
@@ -4836,7 +4836,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPWindow
+              Name:            CPWindow
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -4902,7 +4902,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPInterfaceController
+              Name:            CPInterfaceController
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4932,13 +4932,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplateApplicationScene
+            Name:            CPTemplateApplicationScene
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPInterfaceController
+            Name:            CPInterfaceController
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPWindow
+            Name:            CPWindow
             WithProtocols:   
       - Name:            'templateApplicationScene:didDisconnectInterfaceController:fromWindow:'
         JsName:          templateApplicationSceneDidDisconnectInterfaceControllerFromWindow
@@ -4953,13 +4953,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplateApplicationScene
+            Name:            CPTemplateApplicationScene
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPInterfaceController
+            Name:            CPInterfaceController
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPWindow
+            Name:            CPWindow
             WithProtocols:   
       - Name:            'templateApplicationScene:didSelectManeuver:'
         JsName:          templateApplicationSceneDidSelectManeuver
@@ -4974,10 +4974,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplateApplicationScene
+            Name:            CPTemplateApplicationScene
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPManeuver
+            Name:            CPManeuver
             WithProtocols:   
       - Name:            'templateApplicationScene:didSelectNavigationAlert:'
         JsName:          templateApplicationSceneDidSelectNavigationAlert
@@ -4992,10 +4992,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CPTemplateApplicationScene
+            Name:            CPTemplateApplicationScene
             WithProtocols:   
           - Type:            Interface
-            JsName:          CPNavigationAlert
+            Name:            CPNavigationAlert
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -5015,7 +5015,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CPTimeRemainingColor
     JsName:          CPTimeRemainingColor
@@ -5107,10 +5107,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSMeasurement
+            Name:            NSMeasurement
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSUnitLength
+                Name:            NSUnitLength
                 WithProtocols:   
             WithProtocols:   
           - Type:            Double
@@ -5139,10 +5139,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSMeasurement
+              Name:            NSMeasurement
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSUnitLength
+                  Name:            NSUnitLength
                   WithProtocols:   
               WithProtocols:   
       - Name:            timeRemaining
@@ -5197,16 +5197,16 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MKMapItem
+            Name:            MKMapItem
             WithProtocols:   
           - Type:            Interface
-            JsName:          MKMapItem
+            Name:            MKMapItem
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CPRouteChoice
+                Name:            CPRouteChoice
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -5234,7 +5234,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MKMapItem
+              Name:            MKMapItem
               WithProtocols:   
       - Name:            origin
         JsName:          origin
@@ -5259,7 +5259,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MKMapItem
+              Name:            MKMapItem
               WithProtocols:   
       - Name:            routeChoices
         JsName:          routeChoices
@@ -5284,10 +5284,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPRouteChoice
+                  Name:            CPRouteChoice
                   WithProtocols:   
               WithProtocols:   
       - Name:            userInfo
@@ -5475,13 +5475,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -5508,7 +5508,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            overviewButtonTitle
         JsName:          overviewButtonTitle
@@ -5533,7 +5533,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            startButtonTitle
         JsName:          startButtonTitle
@@ -5558,7 +5558,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5589,17 +5589,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -5627,7 +5627,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            image
         JsName:          image
@@ -5652,7 +5652,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            repeats
         JsName:          repeats
@@ -5700,10 +5700,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -5735,7 +5735,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithVoiceControlStates:'
         JsName:          initWithVoiceControlStates
@@ -5750,10 +5750,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CPVoiceControlState
+                Name:            CPVoiceControlState
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -5781,7 +5781,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            voiceControlStates
         JsName:          voiceControlStates
@@ -5806,10 +5806,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CPVoiceControlState
+                  Name:            CPVoiceControlState
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -5852,7 +5852,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UILayoutGuide
+              Name:            UILayoutGuide
               WithProtocols:   
       - Name:            templateApplicationScene
         JsName:          templateApplicationScene
@@ -5877,7 +5877,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CPTemplateApplicationScene
+              Name:            CPTemplateApplicationScene
               WithProtocols:   
         Setter:          
           Name:            'setTemplateApplicationScene:'
@@ -5893,7 +5893,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CPTemplateApplicationScene
+              Name:            CPTemplateApplicationScene
               WithProtocols:   
     StaticProperties: 
     Protocols:       

@@ -75,13 +75,13 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            ULong
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioChannelLayout
+          Name:            AudioChannelLayout
       - Type:            ULong
       - Type:            Pointer
         PointerType:     
@@ -211,7 +211,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioChannelLayout
+          Name:            AudioChannelLayout
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -234,7 +234,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioFormatListItem
+          Name:            AudioFormatListItem
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -278,7 +278,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioFormatListItem
+          Name:            AudioFormatListItem
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -298,7 +298,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioFormatListItem
+          Name:            AudioFormatListItem
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -318,7 +318,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -347,12 +347,12 @@ Items:
       - Type:            Long
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -396,12 +396,12 @@ Items:
       - Type:            Long
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -433,12 +433,12 @@ Items:
       - Type:            Long
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -523,7 +523,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMBlockBuffer
-          JsName:          CMBlockBufferCustomBlockSource
+          Name:            CMBlockBufferCustomBlockSource
       - Type:            ULong
       - Type:            ULong
       - Type:            UInt
@@ -590,7 +590,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMBlockBuffer
-          JsName:          CMBlockBufferCustomBlockSource
+          Name:            CMBlockBufferCustomBlockSource
       - Type:            ULong
       - Type:            ULong
       - Type:            UInt
@@ -676,7 +676,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMBlockBuffer
-          JsName:          CMBlockBufferCustomBlockSource
+          Name:            CMBlockBufferCustomBlockSource
       - Type:            ULong
       - Type:            ULong
       - Type:            UInt
@@ -685,7 +685,7 @@ Items:
           Type:            BridgedInterface
           Name:            id
           BridgedTo:       id
-  - Name:            ''
+  - Name:            CMBlockBufferCustomBlockSource
     JsName:          CMBlockBufferCustomBlockSource
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMBlockBuffer.h
     Module:          
@@ -856,7 +856,7 @@ Items:
         BridgedTo:       id
       - Type:            ULong
       - Type:            ULong
-  - Name:            ''
+  - Name:            CMBufferCallbacks
     JsName:          CMBufferCallbacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMBufferQueue.h
     Module:          
@@ -881,7 +881,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreMedia.CMTime
-              JsName:          CMTime
+              Name:            CMTime
             - Type:            BridgedInterface
               Name:            id
               BridgedTo:       id
@@ -894,7 +894,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreMedia.CMTime
-              JsName:          CMTime
+              Name:            CMTime
             - Type:            BridgedInterface
               Name:            id
               BridgedTo:       id
@@ -907,7 +907,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreMedia.CMTime
-              JsName:          CMTime
+              Name:            CMTime
             - Type:            BridgedInterface
               Name:            id
               BridgedTo:       id
@@ -956,7 +956,7 @@ Items:
             - Type:            Pointer
               PointerType:     
                 Type:            Void
-  - Name:            ''
+  - Name:            CMBufferHandlers
     JsName:          CMBufferHandlers
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMBufferQueue.h
     Module:          
@@ -976,7 +976,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreMedia.CMTime
-              JsName:          CMTime
+              Name:            CMTime
             - Type:            BridgedInterface
               Name:            id
               BridgedTo:       id
@@ -986,7 +986,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreMedia.CMTime
-              JsName:          CMTime
+              Name:            CMTime
             - Type:            BridgedInterface
               Name:            id
               BridgedTo:       id
@@ -996,7 +996,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreMedia.CMTime
-              JsName:          CMTime
+              Name:            CMTime
             - Type:            BridgedInterface
               Name:            id
               BridgedTo:       id
@@ -1098,7 +1098,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMBufferQueue
-          JsName:          CMBufferCallbacks
+          Name:            CMBufferCallbacks
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -1125,7 +1125,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMBufferQueue
-          JsName:          CMBufferHandlers
+          Name:            CMBufferHandlers
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -1218,7 +1218,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMBufferQueue
-          JsName:          CMBufferCallbacks
+          Name:            CMBufferCallbacks
   - Name:            CMBufferQueueGetCallbacksForUnsortedSampleBuffers
     JsName:          CMBufferQueueGetCallbacksForUnsortedSampleBuffers
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMBufferQueue.h
@@ -1235,7 +1235,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMBufferQueue
-          JsName:          CMBufferCallbacks
+          Name:            CMBufferCallbacks
   - Name:            CMBufferQueueGetDuration
     JsName:          CMBufferQueueGetDuration
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMBufferQueue.h
@@ -1250,7 +1250,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -1268,7 +1268,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -1286,7 +1286,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -1304,7 +1304,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -1340,7 +1340,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -1358,7 +1358,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -1376,7 +1376,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -1440,7 +1440,7 @@ Items:
       - Type:            Int
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Pointer
         PointerType:     
           Type:            Pointer
@@ -1465,7 +1465,7 @@ Items:
       - Type:            Int
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Pointer
         PointerType:     
           Type:            Pointer
@@ -1742,7 +1742,7 @@ Items:
       - Type:            ULongLong
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMClockGetAnchorTime
     JsName:          CMClockGetAnchorTime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSync.h
@@ -1763,12 +1763,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMTime
-          JsName:          CMTime
+          Name:            CMTime
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMTime
-          JsName:          CMTime
+          Name:            CMTime
   - Name:            CMClockGetHostTimeClock
     JsName:          CMClockGetHostTimeClock
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSync.h
@@ -1798,7 +1798,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -1845,7 +1845,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            ULongLong
   - Name:            CMClockMightDrift
     JsName:          CMClockMightDrift
@@ -2861,7 +2861,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
   - Name:            CMSampleBufferCopySampleBufferForRange
     JsName:          CMSampleBufferCopySampleBufferForRange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSampleBuffer.h
@@ -2883,7 +2883,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -2930,7 +2930,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMSampleBuffer
-          JsName:          CMSampleTimingInfo
+          Name:            CMSampleTimingInfo
       - Type:            Long
       - Type:            Pointer
         PointerType:     
@@ -2988,7 +2988,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMSampleBuffer
-          JsName:          CMSampleTimingInfo
+          Name:            CMSampleTimingInfo
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -3033,7 +3033,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMSampleBuffer
-          JsName:          CMSampleTimingInfo
+          Name:            CMSampleTimingInfo
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -3066,7 +3066,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMSampleBuffer
-          JsName:          CMSampleTimingInfo
+          Name:            CMSampleTimingInfo
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -3106,7 +3106,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMSampleBuffer
-          JsName:          CMSampleTimingInfo
+          Name:            CMSampleTimingInfo
       - Type:            Long
       - Type:            Pointer
         PointerType:     
@@ -3142,7 +3142,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMSampleBuffer
-          JsName:          CMSampleTimingInfo
+          Name:            CMSampleTimingInfo
       - Type:            Pointer
         PointerType:     
           Type:            BridgedInterface
@@ -3177,7 +3177,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMSampleBuffer
-          JsName:          CMSampleTimingInfo
+          Name:            CMSampleTimingInfo
       - Type:            Long
       - Type:            Pointer
         PointerType:     
@@ -3232,7 +3232,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
       - Type:            ULong
       - Type:            BridgedInterface
         Name:            id
@@ -3267,7 +3267,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
       - Type:            Pointer
         PointerType:     
           Type:            ULong
@@ -3293,7 +3293,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          CoreAudioTypes.CoreAudioBaseTypes
-            JsName:          AudioStreamPacketDescription
+            Name:            AudioStreamPacketDescription
       - Type:            Pointer
         PointerType:     
           Type:            ULong
@@ -3329,7 +3329,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3347,7 +3347,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3417,7 +3417,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3435,7 +3435,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3453,7 +3453,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3478,7 +3478,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMSampleBuffer
-          JsName:          CMSampleTimingInfo
+          Name:            CMSampleTimingInfo
       - Type:            Pointer
         PointerType:     
           Type:            Long
@@ -3496,7 +3496,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3580,7 +3580,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMSampleBuffer
-          JsName:          CMSampleTimingInfo
+          Name:            CMSampleTimingInfo
   - Name:            CMSampleBufferGetSampleTimingInfoArray
     JsName:          CMSampleBufferGetSampleTimingInfoArray
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSampleBuffer.h
@@ -3602,7 +3602,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMSampleBuffer
-          JsName:          CMSampleTimingInfo
+          Name:            CMSampleTimingInfo
       - Type:            Pointer
         PointerType:     
           Type:            Long
@@ -3748,7 +3748,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
   - Name:            CMSampleBufferSetDataFailed
     JsName:          CMSampleBufferSetDataFailed
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSampleBuffer.h
@@ -3846,7 +3846,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMSampleBufferTrackDataReadiness
     JsName:          CMSampleBufferTrackDataReadiness
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSampleBuffer.h
@@ -3866,7 +3866,7 @@ Items:
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
-  - Name:            ''
+  - Name:            CMSampleTimingInfo
     JsName:          CMSampleTimingInfo
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSampleBuffer.h
     Module:          
@@ -3881,17 +3881,17 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreMedia.CMTime
-          JsName:          CMTime
+          Name:            CMTime
       - Name:            presentationTimeStamp
         Signature:       
           Type:            Struct
           Module:          CoreMedia.CMTime
-          JsName:          CMTime
+          Name:            CMTime
       - Name:            decodeTimeStamp
         Signature:       
           Type:            Struct
           Module:          CoreMedia.CMTime
-          JsName:          CMTime
+          Name:            CMTime
   - Name:            CMSetAttachment
     JsName:          CMSetAttachment
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMAttachment.h
@@ -4267,10 +4267,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -4322,12 +4322,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMTime
-          JsName:          CMTime
+          Name:            CMTime
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMTime
-          JsName:          CMTime
+          Name:            CMTime
   - Name:            CMSyncGetTime
     JsName:          CMSyncGetTime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSync.h
@@ -4342,7 +4342,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -4498,7 +4498,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGRect
+          Name:            CGRect
   - Name:            CMTextFormatDescriptionGetDisplayFlags
     JsName:          CMTextFormatDescriptionGetDisplayFlags
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMFormatDescription.h
@@ -4562,7 +4562,7 @@ Items:
       - Type:            Pointer
         PointerType:     
           Type:            Char
-  - Name:            ''
+  - Name:            CMTime
     JsName:          CMTime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
     Module:          
@@ -4600,10 +4600,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimeAdd
     JsName:          CMTimeAdd
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -4618,13 +4618,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimeClampToRange
     JsName:          CMTimeClampToRange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -4639,13 +4639,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeCodeFormatDescriptionCopyAsBigEndianTimeCodeDescriptionBlockBuffer
     JsName:          CMTimeCodeFormatDescriptionCopyAsBigEndianTimeCodeDescriptionBlockBuffer
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMFormatDescriptionBridge.h
@@ -4692,7 +4692,7 @@ Items:
       - Type:            UInt
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            UInt
       - Type:            UInt
       - Type:            BridgedInterface
@@ -4770,7 +4770,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -4821,10 +4821,10 @@ Items:
       - Type:            Int
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimeConvertScale
     JsName:          CMTimeConvertScale
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -4839,10 +4839,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Int
       - Type:            Enum
         Name:            CMTimeRoundingMethod
@@ -4863,7 +4863,7 @@ Items:
         BridgedTo:       NSDictionary
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -4887,7 +4887,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimeFlags
     JsName:          CMTimeFlags
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -4921,13 +4921,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeGetSeconds
     JsName:          CMTimeGetSeconds
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -4943,7 +4943,7 @@ Items:
       - Type:            Double
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimeMake
     JsName:          CMTimeMake
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -4958,7 +4958,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            LongLong
       - Type:            Int
   - Name:            CMTimeMakeFromDictionary
@@ -4975,7 +4975,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            NSDictionary
         BridgedTo:       NSDictionary
@@ -4993,7 +4993,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            LongLong
       - Type:            Int
       - Type:            LongLong
@@ -5011,7 +5011,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Double
       - Type:            Int
   - Name:            CMTimeMapDurationFromRangeToRange
@@ -5028,16 +5028,16 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeMapTimeFromRangeToRange
     JsName:          CMTimeMapTimeFromRangeToRange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5052,17 +5052,17 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
-  - Name:            ''
+        Name:            CMTimeRange
+  - Name:            CMTimeMapping
     JsName:          CMTimeMapping
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
     Module:          
@@ -5077,12 +5077,12 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreMedia.CMTimeRange
-          JsName:          CMTimeRange
+          Name:            CMTimeRange
       - Name:            target
         Signature:       
           Type:            Struct
           Module:          CoreMedia.CMTimeRange
-          JsName:          CMTimeRange
+          Name:            CMTimeRange
   - Name:            CMTimeMappingCopyAsDictionary
     JsName:          CMTimeMappingCopyAsDictionary
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5100,7 +5100,7 @@ Items:
         BridgedTo:       NSDictionary
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeMapping
+        Name:            CMTimeMapping
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -5124,7 +5124,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeMapping
+        Name:            CMTimeMapping
   - Name:            CMTimeMappingMake
     JsName:          CMTimeMappingMake
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5139,13 +5139,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeMapping
+        Name:            CMTimeMapping
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeMappingMakeEmpty
     JsName:          CMTimeMappingMakeEmpty
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5160,10 +5160,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeMapping
+        Name:            CMTimeMapping
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeMappingMakeFromDictionary
     JsName:          CMTimeMappingMakeFromDictionary
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5178,7 +5178,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeMapping
+        Name:            CMTimeMapping
       - Type:            BridgedInterface
         Name:            NSDictionary
         BridgedTo:       NSDictionary
@@ -5197,7 +5197,7 @@ Items:
       - Type:            Void
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeMapping
+        Name:            CMTimeMapping
   - Name:            CMTimeMaximum
     JsName:          CMTimeMaximum
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -5212,13 +5212,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimeMinimum
     JsName:          CMTimeMinimum
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -5233,13 +5233,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimeMultiply
     JsName:          CMTimeMultiply
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -5254,10 +5254,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Int
   - Name:            CMTimeMultiplyByFloat64
     JsName:          CMTimeMultiplyByFloat64
@@ -5273,10 +5273,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Double
   - Name:            CMTimeMultiplyByRatio
     JsName:          CMTimeMultiplyByRatio
@@ -5292,13 +5292,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Int
       - Type:            Int
-  - Name:            ''
+  - Name:            CMTimeRange
     JsName:          CMTimeRange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
     Module:          
@@ -5313,12 +5313,12 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreMedia.CMTime
-          JsName:          CMTime
+          Name:            CMTime
       - Name:            duration
         Signature:       
           Type:            Struct
           Module:          CoreMedia.CMTime
-          JsName:          CMTime
+          Name:            CMTime
   - Name:            CMTimeRangeContainsTime
     JsName:          CMTimeRangeContainsTime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5334,10 +5334,10 @@ Items:
       - Type:            Bool
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimeRangeContainsTimeRange
     JsName:          CMTimeRangeContainsTimeRange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5353,10 +5353,10 @@ Items:
       - Type:            Bool
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeRangeCopyAsDictionary
     JsName:          CMTimeRangeCopyAsDictionary
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5374,7 +5374,7 @@ Items:
         BridgedTo:       NSDictionary
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -5398,7 +5398,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeRangeEqual
     JsName:          CMTimeRangeEqual
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5414,10 +5414,10 @@ Items:
       - Type:            Bool
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeRangeFromTimeToTime
     JsName:          CMTimeRangeFromTimeToTime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5432,13 +5432,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimeRangeGetEnd
     JsName:          CMTimeRangeGetEnd
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5453,10 +5453,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeRangeGetIntersection
     JsName:          CMTimeRangeGetIntersection
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5471,13 +5471,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeRangeGetUnion
     JsName:          CMTimeRangeGetUnion
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5492,13 +5492,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeRangeMake
     JsName:          CMTimeRangeMake
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5513,13 +5513,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimeRangeMakeFromDictionary
     JsName:          CMTimeRangeMakeFromDictionary
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -5534,7 +5534,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
       - Type:            BridgedInterface
         Name:            NSDictionary
         BridgedTo:       NSDictionary
@@ -5553,7 +5553,7 @@ Items:
       - Type:            Void
       - Type:            Struct
         Module:          CoreMedia.CMTimeRange
-        JsName:          CMTimeRange
+        Name:            CMTimeRange
   - Name:            CMTimeRoundingMethod
     JsName:          CMTimeRoundingMethod
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -5589,7 +5589,7 @@ Items:
       - Type:            Void
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimeSubtract
     JsName:          CMTimeSubtract
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -5604,13 +5604,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimebaseAddTimer
     JsName:          CMTimebaseAddTimer
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSync.h
@@ -5650,7 +5650,7 @@ Items:
         Name:            id
         BridgedTo:       id
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
   - Name:            CMTimebaseCopyMaster
@@ -5873,7 +5873,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -5897,7 +5897,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMTime
-          JsName:          CMTime
+          Name:            CMTime
       - Type:            Pointer
         PointerType:     
           Type:            Double
@@ -5915,7 +5915,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -6005,7 +6005,7 @@ Items:
         Name:            id
         BridgedTo:       id
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
   - Name:            CMTimebaseSetAnchorTime
@@ -6026,10 +6026,10 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimebaseSetMasterClock
     JsName:          CMTimebaseSetMasterClock
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSync.h
@@ -6104,10 +6104,10 @@ Items:
       - Type:            Double
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimebaseSetTime
     JsName:          CMTimebaseSetTime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSync.h
@@ -6126,7 +6126,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
   - Name:            CMTimebaseSetTimerDispatchSourceNextFireTime
     JsName:          CMTimebaseSetTimerDispatchSourceNextFireTime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSync.h
@@ -6144,12 +6144,12 @@ Items:
         Name:            id
         BridgedTo:       id
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            UInt
   - Name:            CMTimebaseSetTimerDispatchSourceToFireImmediately
     JsName:          CMTimebaseSetTimerDispatchSourceToFireImmediately
@@ -6168,7 +6168,7 @@ Items:
         Name:            id
         BridgedTo:       id
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
   - Name:            CMTimebaseSetTimerNextFireTime
@@ -6192,7 +6192,7 @@ Items:
         BridgedTo:       NSTimer
       - Type:            Struct
         Module:          CoreMedia.CMTime
-        JsName:          CMTime
+        Name:            CMTime
       - Type:            UInt
   - Name:            CMTimebaseSetTimerToFireImmediately
     JsName:          CMTimebaseSetTimerToFireImmediately
@@ -6213,7 +6213,7 @@ Items:
       - Type:            BridgedInterface
         Name:            NSTimer
         BridgedTo:       NSTimer
-  - Name:            ''
+  - Name:            CMVideoDimensions
     JsName:          CMVideoDimensions
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMFormatDescription.h
     Module:          
@@ -6439,7 +6439,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGRect
+        Name:            CGRect
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -6458,7 +6458,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreMedia.CMFormatDescription
-        JsName:          CMVideoDimensions
+        Name:            CMVideoDimensions
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -6549,7 +6549,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGSize
+        Name:            CGSize
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -12941,7 +12941,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreMedia.CMTime
-      JsName:          CMTime
+      Name:            CMTime
   - Name:            kCMTimeInvalid
     JsName:          kCMTimeInvalid
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -12956,7 +12956,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreMedia.CMTime
-      JsName:          CMTime
+      Name:            CMTime
   - Name:            kCMTimeMappingInvalid
     JsName:          kCMTimeMappingInvalid
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -12971,7 +12971,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreMedia.CMTimeRange
-      JsName:          CMTimeMapping
+      Name:            CMTimeMapping
   - Name:            kCMTimeMappingSourceKey
     JsName:          kCMTimeMappingSourceKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -13016,7 +13016,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreMedia.CMTime
-      JsName:          CMTime
+      Name:            CMTime
   - Name:            kCMTimePositiveInfinity
     JsName:          kCMTimePositiveInfinity
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -13031,7 +13031,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreMedia.CMTime
-      JsName:          CMTime
+      Name:            CMTime
   - Name:            kCMTimeRangeDurationKey
     JsName:          kCMTimeRangeDurationKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -13061,7 +13061,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreMedia.CMTimeRange
-      JsName:          CMTimeRange
+      Name:            CMTimeRange
   - Name:            kCMTimeRangeStartKey
     JsName:          kCMTimeRangeStartKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTimeRange.h
@@ -13091,7 +13091,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreMedia.CMTimeRange
-      JsName:          CMTimeRange
+      Name:            CMTimeRange
   - Name:            kCMTimeRoundingMethod_Default
     JsName:          kCMTimeRoundingMethod_Default
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMTime.h
@@ -13213,7 +13213,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreMedia.CMTime
-      JsName:          CMTime
+      Name:            CMTime
   - Name:            kCMTimebaseError_AllocationFailed
     JsName:          kCMTimebaseError_AllocationFailed
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMSync.h
@@ -13328,7 +13328,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreMedia.CMSampleBuffer
-      JsName:          CMSampleTimingInfo
+      Name:            CMSampleTimingInfo
   - Name:            kCMVideoCodecType_422YpCbCr8
     JsName:          kCMVideoCodecType_422YpCbCr8
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CMFormatDescription.h

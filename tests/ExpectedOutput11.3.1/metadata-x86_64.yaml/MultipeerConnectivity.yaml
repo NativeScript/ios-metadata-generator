@@ -32,20 +32,20 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCSession
+            Name:            MCSession
             WithProtocols:   
       - Name:            start
         JsName:          start
@@ -137,13 +137,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            serviceType
@@ -169,7 +169,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            session
         JsName:          session
@@ -194,7 +194,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MCSession
+              Name:            MCSession
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -223,7 +223,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCAdvertiserAssistant
+            Name:            MCAdvertiserAssistant
             WithProtocols:   
       - Name:            'advertiserAssistantWillPresentInvitation:'
         JsName:          advertiserAssistantWillPresentInvitation
@@ -238,7 +238,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCAdvertiserAssistant
+            Name:            MCAdvertiserAssistant
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -270,10 +270,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MCNearbyServiceBrowser
+            Name:            MCNearbyServiceBrowser
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCSession
+            Name:            MCSession
             WithProtocols:   
       - Name:            'initWithServiceType:session:'
         JsName:          initWithServiceTypeSession
@@ -288,10 +288,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCSession
+            Name:            MCSession
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -318,7 +318,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MCNearbyServiceBrowser
+              Name:            MCNearbyServiceBrowser
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -458,7 +458,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MCSession
+              Name:            MCSession
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -488,7 +488,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCBrowserViewController
+            Name:            MCBrowserViewController
             WithProtocols:   
       - Name:            'browserViewController:shouldPresentNearbyPeer:withDiscoveryInfo:'
         JsName:          browserViewControllerShouldPresentNearbyPeerWithDiscoveryInfo
@@ -503,19 +503,19 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MCBrowserViewController
+            Name:            MCBrowserViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'browserViewControllerWasCancelled:'
@@ -531,7 +531,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCBrowserViewController
+            Name:            MCBrowserViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -640,7 +640,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MCErrorInvalidParameter
     JsName:          MCErrorInvalidParameter
@@ -733,20 +733,20 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            startAdvertisingPeer
         JsName:          startAdvertisingPeer
@@ -838,13 +838,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            myPeerID
@@ -870,7 +870,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MCPeerID
+              Name:            MCPeerID
               WithProtocols:   
       - Name:            serviceType
         JsName:          serviceType
@@ -895,7 +895,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -924,10 +924,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCNearbyServiceAdvertiser
+            Name:            MCNearbyServiceAdvertiser
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'advertiser:didReceiveInvitationFromPeer:withContext:invitationHandler:'
         JsName:          advertiserDidReceiveInvitationFromPeerWithContextInvitationHandler
@@ -942,20 +942,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCNearbyServiceAdvertiser
+            Name:            MCNearbyServiceAdvertiser
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          MCSession
+                Name:            MCSession
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -987,10 +987,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'invitePeer:toSession:withContext:timeout:'
         JsName:          invitePeerToSessionWithContextTimeout
@@ -1005,13 +1005,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCSession
+            Name:            MCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Double
       - Name:            startBrowsingForPeers
@@ -1104,7 +1104,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MCPeerID
+              Name:            MCPeerID
               WithProtocols:   
       - Name:            serviceType
         JsName:          serviceType
@@ -1129,7 +1129,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1158,10 +1158,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCNearbyServiceBrowser
+            Name:            MCNearbyServiceBrowser
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'browser:foundPeer:withDiscoveryInfo:'
         JsName:          browserFoundPeerWithDiscoveryInfo
@@ -1176,19 +1176,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCNearbyServiceBrowser
+            Name:            MCNearbyServiceBrowser
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'browser:lostPeer:'
@@ -1204,10 +1204,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCNearbyServiceBrowser
+            Name:            MCNearbyServiceBrowser
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1239,7 +1239,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1266,7 +1266,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1310,7 +1310,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
       - Name:            'initWithPeer:securityIdentity:encryptionPreference:'
         JsName:          initWithPeerSecurityIdentityEncryptionPreference
@@ -1325,10 +1325,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
           - Type:            Enum
             Name:            MCEncryptionPreference
@@ -1345,13 +1345,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MCPeerID
+                Name:            MCPeerID
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -1359,7 +1359,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'sendResourceAtURL:withName:toPeer:withCompletionHandler:'
         JsName:          sendResourceAtURLWithNameToPeerWithCompletionHandler
@@ -1373,22 +1373,22 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSProgress
+            Name:            NSProgress
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'startStreamWithName:toPeer:error:'
         JsName:          startStreamWithNameToPeerError
@@ -1402,18 +1402,18 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSOutputStream
+            Name:            NSOutputStream
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'cancelConnectPeer:'
         JsName:          cancelConnectPeer
@@ -1428,7 +1428,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
       - Name:            'connectPeer:withNearbyConnectionData:'
         JsName:          connectPeerWithNearbyConnectionData
@@ -1443,10 +1443,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'nearbyConnectionDataForPeer:withCompletionHandler:'
         JsName:          nearbyConnectionDataForPeerWithCompletionHandler
@@ -1461,16 +1461,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1497,10 +1497,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MCPeerID
+                  Name:            MCPeerID
                   WithProtocols:   
               WithProtocols:   
       - Name:            delegate
@@ -1591,7 +1591,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MCPeerID
+              Name:            MCPeerID
               WithProtocols:   
       - Name:            securityIdentity
         JsName:          securityIdentity
@@ -1616,7 +1616,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1645,19 +1645,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCSession
+            Name:            MCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'session:didReceiveCertificate:fromPeer:certificateHandler:'
         JsName:          sessionDidReceiveCertificateFromPeerCertificateHandler
@@ -1672,13 +1672,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCSession
+            Name:            MCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -1697,13 +1697,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCSession
+            Name:            MCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
       - Name:            'session:didReceiveStream:withName:fromPeer:'
         JsName:          sessionDidReceiveStreamWithNameFromPeer
@@ -1718,16 +1718,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCSession
+            Name:            MCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSInputStream
+            Name:            NSInputStream
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
       - Name:            'session:didStartReceivingResourceWithName:fromPeer:withProgress:'
         JsName:          sessionDidStartReceivingResourceWithNameFromPeerWithProgress
@@ -1742,16 +1742,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCSession
+            Name:            MCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSProgress
+            Name:            NSProgress
             WithProtocols:   
       - Name:            'session:peer:didChangeState:'
         JsName:          sessionPeerDidChangeState
@@ -1766,10 +1766,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MCSession
+            Name:            MCSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          MCPeerID
+            Name:            MCPeerID
             WithProtocols:   
           - Type:            Enum
             Name:            MCSessionState

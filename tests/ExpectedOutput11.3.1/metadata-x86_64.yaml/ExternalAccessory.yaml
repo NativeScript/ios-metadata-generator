@@ -140,7 +140,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            firmwareRevision
         JsName:          firmwareRevision
@@ -167,7 +167,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            hardwareRevision
         JsName:          hardwareRevision
@@ -194,7 +194,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            manufacturer
         JsName:          manufacturer
@@ -221,7 +221,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            modelNumber
         JsName:          modelNumber
@@ -248,7 +248,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -275,7 +275,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            protocolStrings
         JsName:          protocolStrings
@@ -302,10 +302,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            serialNumber
@@ -333,7 +333,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -363,7 +363,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EAAccessory
+            Name:            EAAccessory
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -383,7 +383,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            EAAccessoryDidDisconnectNotification
     JsName:          EAAccessoryDidDisconnectNotification
@@ -398,7 +398,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            EAAccessoryKey
     JsName:          EAAccessoryKey
@@ -413,7 +413,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            EAAccessoryManager
     JsName:          EAAccessoryManager
@@ -454,13 +454,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            unregisterForLocalNotifications
         JsName:          unregisterForLocalNotifications
@@ -489,7 +489,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EAAccessoryManager
+            Name:            EAAccessoryManager
             WithProtocols:   
     InstanceProperties: 
       - Name:            connectedAccessories
@@ -517,10 +517,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EAAccessory
+                  Name:            EAAccessory
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -539,7 +539,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            EABluetoothAccessoryPickerAlreadyConnected
     JsName:          EABluetoothAccessoryPickerAlreadyConnected
@@ -584,7 +584,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            EABluetoothAccessoryPickerResultCancelled
     JsName:          EABluetoothAccessoryPickerResultCancelled
@@ -656,10 +656,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          EAAccessory
+            Name:            EAAccessory
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -688,7 +688,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EAAccessory
+              Name:            EAAccessory
               WithProtocols:   
       - Name:            inputStream
         JsName:          inputStream
@@ -715,7 +715,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSInputStream
+              Name:            NSInputStream
               WithProtocols:   
       - Name:            outputStream
         JsName:          outputStream
@@ -742,7 +742,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSOutputStream
+              Name:            NSOutputStream
               WithProtocols:   
       - Name:            protocolString
         JsName:          protocolString
@@ -769,7 +769,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -811,7 +811,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            manufacturer
         JsName:          manufacturer
@@ -836,7 +836,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            model
         JsName:          model
@@ -861,7 +861,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -886,7 +886,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            properties
         JsName:          properties
@@ -935,7 +935,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -966,10 +966,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EAWiFiUnconfiguredAccessory
+            Name:            EAWiFiUnconfiguredAccessory
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIViewController
+            Name:            UIViewController
             WithProtocols:   
       - Name:            'initWithDelegate:queue:'
         JsName:          initWithDelegateQueue
@@ -988,7 +988,7 @@ Items:
             WithProtocols:   
               - EAWiFiUnconfiguredAccessoryBrowserDelegate
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
       - Name:            'startSearchingForUnconfiguredAccessoriesMatchingPredicate:'
@@ -1005,7 +1005,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
       - Name:            stopSearchingForUnconfiguredAccessories
         JsName:          stopSearchingForUnconfiguredAccessories
@@ -1086,10 +1086,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EAWiFiUnconfiguredAccessory
+                  Name:            EAWiFiUnconfiguredAccessory
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -1120,13 +1120,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EAWiFiUnconfiguredAccessoryBrowser
+            Name:            EAWiFiUnconfiguredAccessoryBrowser
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          EAWiFiUnconfiguredAccessory
+                Name:            EAWiFiUnconfiguredAccessory
                 WithProtocols:   
             WithProtocols:   
       - Name:            'accessoryBrowser:didFinishConfiguringAccessory:withStatus:'
@@ -1143,10 +1143,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EAWiFiUnconfiguredAccessoryBrowser
+            Name:            EAWiFiUnconfiguredAccessoryBrowser
             WithProtocols:   
           - Type:            Interface
-            JsName:          EAWiFiUnconfiguredAccessory
+            Name:            EAWiFiUnconfiguredAccessory
             WithProtocols:   
           - Type:            Enum
             Name:            EAWiFiUnconfiguredAccessoryConfigurationStatus
@@ -1164,13 +1164,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EAWiFiUnconfiguredAccessoryBrowser
+            Name:            EAWiFiUnconfiguredAccessoryBrowser
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          EAWiFiUnconfiguredAccessory
+                Name:            EAWiFiUnconfiguredAccessory
                 WithProtocols:   
             WithProtocols:   
       - Name:            'accessoryBrowser:didUpdateState:'
@@ -1187,7 +1187,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EAWiFiUnconfiguredAccessoryBrowser
+            Name:            EAWiFiUnconfiguredAccessoryBrowser
             WithProtocols:   
           - Type:            Enum
             Name:            EAWiFiUnconfiguredAccessoryBrowserState

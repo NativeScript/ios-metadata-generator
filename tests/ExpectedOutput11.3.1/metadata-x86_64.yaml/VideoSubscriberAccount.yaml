@@ -97,10 +97,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -111,7 +111,7 @@ Items:
               - Type:            Enum
                 Name:            VSAccountAccessStatus
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'enqueueAccountMetadataRequest:completionHandler:'
         JsName:          enqueueAccountMetadataRequestCompletionHandler
@@ -125,19 +125,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          VSAccountManagerResult
+            Name:            VSAccountManagerResult
             WithProtocols:   
           - Type:            Interface
-            JsName:          VSAccountMetadataRequest
+            Name:            VSAccountMetadataRequest
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          VSAccountMetadata
+                Name:            VSAccountMetadata
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -210,10 +210,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          VSAccountManager
+            Name:            VSAccountManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIViewController
+            Name:            UIViewController
             WithProtocols:   
       - Name:            'accountManager:presentViewController:'
         JsName:          accountManagerPresentViewController
@@ -228,10 +228,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          VSAccountManager
+            Name:            VSAccountManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIViewController
+            Name:            UIViewController
             WithProtocols:   
       - Name:            'accountManager:shouldAuthenticateAccountProviderWithIdentifier:'
         JsName:          accountManagerShouldAuthenticateAccountProviderWithIdentifier
@@ -246,10 +246,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          VSAccountManager
+            Name:            VSAccountManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -322,7 +322,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            accountProviderResponse
         JsName:          accountProviderResponse
@@ -349,7 +349,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          VSAccountProviderResponse
+              Name:            VSAccountProviderResponse
               WithProtocols:   
       - Name:            authenticationExpirationDate
         JsName:          authenticationExpirationDate
@@ -374,7 +374,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            SAMLAttributeQueryResponse
         JsName:          SAMLAttributeQueryResponse
@@ -399,7 +399,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            verificationData
         JsName:          verificationData
@@ -424,7 +424,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -468,7 +468,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAccountProviderAuthenticationToken:'
@@ -485,7 +485,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            attributeNames
         JsName:          attributeNames
@@ -510,10 +510,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -530,10 +530,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            channelIdentifier
@@ -559,7 +559,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setChannelIdentifier:'
@@ -575,7 +575,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            featuredAccountProviderIdentifiers
         JsName:          featuredAccountProviderIdentifiers
@@ -602,10 +602,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -623,10 +623,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            forceAuthentication
@@ -800,7 +800,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalizedVideoTitle:'
@@ -816,7 +816,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            supportedAccountProviderIdentifiers
         JsName:          supportedAccountProviderIdentifiers
@@ -841,10 +841,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -861,10 +861,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            supportedAuthenticationSchemes
@@ -892,10 +892,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -913,10 +913,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            verificationToken
@@ -942,7 +942,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setVerificationToken:'
@@ -958,7 +958,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -976,7 +976,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            VSAccountProviderAuthenticationSchemeSAML
     JsName:          VSAccountProviderAuthenticationSchemeSAML
@@ -991,7 +991,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            VSAccountProviderResponse
     JsName:          VSAccountProviderResponse
@@ -1030,7 +1030,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            body
         JsName:          body
@@ -1055,7 +1055,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            status
         JsName:          status
@@ -1080,7 +1080,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1098,7 +1098,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            VSErrorCode
     JsName:          VSErrorCode
@@ -1217,7 +1217,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            VSErrorInfoKeyAccountProviderResponse
     JsName:          VSErrorInfoKeyAccountProviderResponse
@@ -1232,7 +1232,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            VSErrorInfoKeySAMLResponse
     JsName:          VSErrorInfoKeySAMLResponse
@@ -1247,7 +1247,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            VSErrorInfoKeySAMLResponseStatus
     JsName:          VSErrorInfoKeySAMLResponseStatus
@@ -1262,7 +1262,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            VSErrorInfoKeyUnsupportedProviderIdentifier
     JsName:          VSErrorInfoKeyUnsupportedProviderIdentifier
@@ -1277,7 +1277,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            VSOpenTVProviderSettingsURLString
     JsName:          VSOpenTVProviderSettingsURLString
@@ -1292,7 +1292,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            VSSubscription
     JsName:          VSSubscription
@@ -1372,7 +1372,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setBillingIdentifier:'
@@ -1389,7 +1389,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            expirationDate
         JsName:          expirationDate
@@ -1414,7 +1414,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setExpirationDate:'
@@ -1430,7 +1430,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            tierIdentifiers
         JsName:          tierIdentifiers
@@ -1455,10 +1455,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1475,10 +1475,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -1561,7 +1561,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          VSSubscription
+            Name:            VSSubscription
             WithProtocols:   
     StaticMethods:   
       - Name:            defaultSubscriptionRegistrationCenter
@@ -1576,7 +1576,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          VSSubscriptionRegistrationCenter
+            Name:            VSSubscriptionRegistrationCenter
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 

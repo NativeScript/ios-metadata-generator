@@ -31,12 +31,12 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -67,7 +67,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            animation
@@ -96,7 +96,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'animationWithSCNAnimation:'
         JsName:          animationWithSCNAnimation
@@ -111,10 +111,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CAAnimation
+            Name:            CAAnimation
             WithProtocols:   
           - Type:            Interface
-            JsName:          SCNAnimation
+            Name:            SCNAnimation
             WithProtocols:   
     InstanceProperties: 
       - Name:            delegate
@@ -218,7 +218,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CAMediaTimingFunction
+              Name:            CAMediaTimingFunction
               WithProtocols:   
         Setter:          
           Name:            'setTimingFunction:'
@@ -234,7 +234,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CAMediaTimingFunction
+              Name:            CAMediaTimingFunction
               WithProtocols:   
       - Name:            animationEvents
         JsName:          animationEvents
@@ -259,10 +259,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          SCNAnimationEvent
+                  Name:            SCNAnimationEvent
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -279,10 +279,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          SCNAnimationEvent
+                  Name:            SCNAnimationEvent
                   WithProtocols:   
               WithProtocols:   
       - Name:            fadeInDuration
@@ -428,7 +428,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CAAnimation
+            Name:            CAAnimation
             WithProtocols:   
       - Name:            'animationDidStop:finished:'
         JsName:          animationDidStopFinished
@@ -443,7 +443,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CAAnimation
+            Name:            CAAnimation
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -488,10 +488,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CAAnimation
+                  Name:            CAAnimation
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -508,10 +508,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CAAnimation
+                  Name:            CAAnimation
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -705,10 +705,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSRunLoop
+            Name:            NSRunLoop
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            invalidate
         JsName:          invalidate
@@ -735,10 +735,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSRunLoop
+            Name:            NSRunLoop
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'displayLinkWithTarget:selector:'
@@ -753,7 +753,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CADisplayLink
+            Name:            CADisplayLink
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -1049,7 +1049,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'defaultValueForKey:'
@@ -1066,7 +1066,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            emitterCell
         JsName:          emitterCell
@@ -1370,7 +1370,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
         Setter:          
           Name:            'setContentsRect:'
           JsName:          setContentsRect
@@ -1386,7 +1386,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
       - Name:            contentsScale
         JsName:          contentsScale
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAEmitterCell.h
@@ -1558,10 +1558,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CAEmitterCell
+                  Name:            CAEmitterCell
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1578,10 +1578,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CAEmitterCell
+                  Name:            CAEmitterCell
                   WithProtocols:   
               WithProtocols:   
       - Name:            enabled
@@ -1792,7 +1792,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMagnificationFilter:'
@@ -1808,7 +1808,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            minificationFilter
         JsName:          minificationFilter
@@ -1833,7 +1833,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMinificationFilter:'
@@ -1849,7 +1849,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            minificationFilterBias
         JsName:          minificationFilterBias
@@ -1911,7 +1911,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -1927,7 +1927,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            redRange
         JsName:          redRange
@@ -2211,7 +2211,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
         Setter:          
           Name:            'setStyle:'
@@ -2227,7 +2227,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
       - Name:            velocity
         JsName:          velocity
@@ -2493,10 +2493,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CAEmitterCell
+                  Name:            CAEmitterCell
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2513,10 +2513,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CAEmitterCell
+                  Name:            CAEmitterCell
                   WithProtocols:   
               WithProtocols:   
       - Name:            emitterDepth
@@ -2579,7 +2579,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setEmitterMode:'
@@ -2595,7 +2595,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            emitterPosition
         JsName:          emitterPosition
@@ -2621,7 +2621,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
         Setter:          
           Name:            'setEmitterPosition:'
           JsName:          setEmitterPosition
@@ -2637,7 +2637,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
       - Name:            emitterShape
         JsName:          emitterShape
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAEmitterLayer.h
@@ -2661,7 +2661,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setEmitterShape:'
@@ -2677,7 +2677,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            emitterSize
         JsName:          emitterSize
@@ -2703,7 +2703,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
         Setter:          
           Name:            'setEmitterSize:'
           JsName:          setEmitterSize
@@ -2719,7 +2719,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
       - Name:            emitterZPosition
         JsName:          emitterZPosition
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAEmitterLayer.h
@@ -2854,7 +2854,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setRenderMode:'
@@ -2870,7 +2870,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            scale
         JsName:          scale
@@ -3060,7 +3060,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
         Setter:          
           Name:            'setColors:'
@@ -3076,7 +3076,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
       - Name:            endPoint
         JsName:          endPoint
@@ -3102,7 +3102,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
         Setter:          
           Name:            'setEndPoint:'
           JsName:          setEndPoint
@@ -3118,7 +3118,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
       - Name:            locations
         JsName:          locations
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAGradientLayer.h
@@ -3142,10 +3142,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3162,10 +3162,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            startPoint
@@ -3192,7 +3192,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
         Setter:          
           Name:            'setStartPoint:'
           JsName:          setStartPoint
@@ -3208,7 +3208,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
       - Name:            type
         JsName:          type
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAGradientLayer.h
@@ -3232,7 +3232,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setType:'
@@ -3248,7 +3248,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3290,10 +3290,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3310,10 +3310,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            calculationMode
@@ -3339,7 +3339,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCalculationMode:'
@@ -3355,7 +3355,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            continuityValues
         JsName:          continuityValues
@@ -3380,10 +3380,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3400,10 +3400,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            keyTimes
@@ -3429,10 +3429,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3449,10 +3449,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            path
@@ -3519,7 +3519,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setRotationMode:'
@@ -3535,7 +3535,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            tensionValues
         JsName:          tensionValues
@@ -3560,10 +3560,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3580,10 +3580,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            timingFunctions
@@ -3609,10 +3609,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CAMediaTimingFunction
+                  Name:            CAMediaTimingFunction
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -3629,10 +3629,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CAMediaTimingFunction
+                  Name:            CAMediaTimingFunction
                   WithProtocols:   
               WithProtocols:   
       - Name:            values
@@ -3658,7 +3658,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
         Setter:          
           Name:            'setValues:'
@@ -3674,7 +3674,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3706,7 +3706,7 @@ Items:
             WithProtocols:   
               - CAAction
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'addAnimation:forKey:'
         JsName:          addAnimationForKey
@@ -3721,10 +3721,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CAAnimation
+            Name:            CAAnimation
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'addSublayer:'
         JsName:          addSublayer
@@ -3739,7 +3739,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            affineTransform
         JsName:          affineTransform
@@ -3754,7 +3754,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGAffineTransform
-            JsName:          CGAffineTransform
+            Name:            CGAffineTransform
       - Name:            'animationForKey:'
         JsName:          animationForKey
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -3767,10 +3767,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CAAnimation
+            Name:            CAAnimation
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            animationKeys
         JsName:          animationKeys
@@ -3784,10 +3784,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'containsPoint:'
@@ -3804,7 +3804,7 @@ Items:
           - Type:            Bool
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
       - Name:            contentsAreFlipped
         JsName:          contentsAreFlipped
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -3830,12 +3830,12 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            'convertPoint:toLayer:'
         JsName:          convertPointToLayer
@@ -3850,12 +3850,12 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            'convertRect:fromLayer:'
         JsName:          convertRectFromLayer
@@ -3870,12 +3870,12 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            'convertRect:toLayer:'
         JsName:          convertRectToLayer
@@ -3890,12 +3890,12 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            'convertTime:fromLayer:'
         JsName:          convertTimeFromLayer
@@ -3911,7 +3911,7 @@ Items:
           - Type:            Double
           - Type:            Double
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            'convertTime:toLayer:'
         JsName:          convertTimeToLayer
@@ -3927,7 +3927,7 @@ Items:
           - Type:            Double
           - Type:            Double
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            display
         JsName:          display
@@ -3980,11 +3980,11 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
       - Name:            'initWithLayer:'
         JsName:          initWithLayer
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -4012,10 +4012,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            'insertSublayer:atIndex:'
         JsName:          insertSublayerAtIndex
@@ -4030,7 +4030,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
           - Type:            UInt
       - Name:            'insertSublayer:below:'
@@ -4046,10 +4046,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            layoutIfNeeded
         JsName:          layoutIfNeeded
@@ -4124,7 +4124,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
       - Name:            presentationLayer
         JsName:          presentationLayer
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -4162,7 +4162,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            removeFromSuperlayer
         JsName:          removeFromSuperlayer
@@ -4204,10 +4204,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            'setAffineTransform:'
         JsName:          setAffineTransform
@@ -4223,7 +4223,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          CoreGraphics.CGAffineTransform
-            JsName:          CGAffineTransform
+            Name:            CGAffineTransform
       - Name:            setNeedsDisplay
         JsName:          setNeedsDisplay
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -4250,7 +4250,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
       - Name:            setNeedsLayout
         JsName:          setNeedsLayout
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -4276,7 +4276,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'scrollPoint:'
         JsName:          scrollPoint
@@ -4292,7 +4292,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
       - Name:            'scrollRectToVisible:'
         JsName:          scrollRectToVisible
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAScrollLayer.h
@@ -4307,7 +4307,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
     StaticMethods:   
       - Name:            'cornerCurveExpansionFactor:'
         JsName:          cornerCurveExpansionFactor
@@ -4323,7 +4323,7 @@ Items:
         Signature:       
           - Type:            Double
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'defaultActionForKey:'
         JsName:          defaultActionForKey
@@ -4340,7 +4340,7 @@ Items:
             WithProtocols:   
               - CAAction
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'defaultValueForKey:'
         JsName:          defaultValueForKey
@@ -4356,7 +4356,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            layer
         JsName:          layer
@@ -4383,7 +4383,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            actions
@@ -4409,10 +4409,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -4432,10 +4432,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -4545,7 +4545,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
         Setter:          
           Name:            'setAnchorPoint:'
           JsName:          setAnchorPoint
@@ -4561,7 +4561,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
       - Name:            anchorPointZ
         JsName:          anchorPointZ
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -4663,7 +4663,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
         Setter:          
           Name:            'setBackgroundFilters:'
@@ -4679,7 +4679,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
       - Name:            borderColor
         JsName:          borderColor
@@ -4783,7 +4783,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
         Setter:          
           Name:            'setBounds:'
           JsName:          setBounds
@@ -4799,7 +4799,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
       - Name:            compositingFilter
         JsName:          compositingFilter
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -4902,7 +4902,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
         Setter:          
           Name:            'setContentsCenter:'
           JsName:          setContentsCenter
@@ -4918,7 +4918,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
       - Name:            contentsFormat
         JsName:          contentsFormat
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -4944,7 +4944,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setContentsFormat:'
@@ -4961,7 +4961,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            contentsGravity
         JsName:          contentsGravity
@@ -4986,7 +4986,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setContentsGravity:'
@@ -5002,7 +5002,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            contentsRect
         JsName:          contentsRect
@@ -5028,7 +5028,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
         Setter:          
           Name:            'setContentsRect:'
           JsName:          setContentsRect
@@ -5044,7 +5044,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
       - Name:            contentsScale
         JsName:          contentsScale
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -5110,7 +5110,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCornerCurve:'
@@ -5127,7 +5127,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            cornerRadius
         JsName:          cornerRadius
@@ -5346,7 +5346,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
         Setter:          
           Name:            'setFilters:'
@@ -5362,7 +5362,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
       - Name:            frame
         JsName:          frame
@@ -5388,7 +5388,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
         Setter:          
           Name:            'setFrame:'
           JsName:          setFrame
@@ -5404,7 +5404,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
       - Name:            geometryFlipped
         JsName:          geometryFlipped
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -5502,7 +5502,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMagnificationFilter:'
@@ -5518,7 +5518,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            mask
         JsName:          mask
@@ -5543,7 +5543,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CALayer
+              Name:            CALayer
               WithProtocols:   
         Setter:          
           Name:            'setMask:'
@@ -5559,7 +5559,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CALayer
+              Name:            CALayer
               WithProtocols:   
       - Name:            maskedCorners
         JsName:          maskedCorners
@@ -5663,7 +5663,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMinificationFilter:'
@@ -5679,7 +5679,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            minificationFilterBias
         JsName:          minificationFilterBias
@@ -5741,7 +5741,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -5757,7 +5757,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            needsDisplayOnBoundsChange
         JsName:          needsDisplayOnBoundsChange
@@ -5894,7 +5894,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
         Setter:          
           Name:            'setPosition:'
           JsName:          setPosition
@@ -5910,7 +5910,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
       - Name:            rasterizationScale
         JsName:          rasterizationScale
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -6013,7 +6013,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
         Setter:          
           Name:            'setShadowOffset:'
           JsName:          setShadowOffset
@@ -6029,7 +6029,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
       - Name:            shadowOpacity
         JsName:          shadowOpacity
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -6205,7 +6205,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
         Setter:          
           Name:            'setStyle:'
@@ -6221,7 +6221,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
       - Name:            sublayers
         JsName:          sublayers
@@ -6246,10 +6246,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CALayer
+                  Name:            CALayer
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6266,10 +6266,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CALayer
+                  Name:            CALayer
                   WithProtocols:   
               WithProtocols:   
       - Name:            sublayerTransform
@@ -6296,7 +6296,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          QuartzCore.CATransform3D
-              JsName:          CATransform3D
+              Name:            CATransform3D
         Setter:          
           Name:            'setSublayerTransform:'
           JsName:          setSublayerTransform
@@ -6312,7 +6312,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          QuartzCore.CATransform3D
-              JsName:          CATransform3D
+              Name:            CATransform3D
       - Name:            superlayer
         JsName:          superlayer
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -6336,7 +6336,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CALayer
+              Name:            CALayer
               WithProtocols:   
       - Name:            transform
         JsName:          transform
@@ -6362,7 +6362,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          QuartzCore.CATransform3D
-              JsName:          CATransform3D
+              Name:            CATransform3D
         Setter:          
           Name:            'setTransform:'
           JsName:          setTransform
@@ -6378,7 +6378,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          QuartzCore.CATransform3D
-              JsName:          CATransform3D
+              Name:            CATransform3D
       - Name:            zPosition
         JsName:          zPosition
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h
@@ -6440,7 +6440,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
     StaticProperties: 
     Protocols:       
       - CAMediaTiming
@@ -6472,10 +6472,10 @@ Items:
             WithProtocols:   
               - CAAction
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'displayLayer:'
         JsName:          displayLayer
@@ -6490,7 +6490,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            'drawLayer:inContext:'
         JsName:          drawLayerInContext
@@ -6505,7 +6505,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -6524,7 +6524,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
       - Name:            'layoutSublayersOfLayer:'
         JsName:          layoutSublayersOfLayer
@@ -6539,7 +6539,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CALayer
+            Name:            CALayer
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -6693,7 +6693,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setFillMode:'
@@ -6709,7 +6709,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            repeatCount
         JsName:          repeatCount
@@ -6936,7 +6936,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -6979,7 +6979,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CAMetalLayer
+              Name:            CAMetalLayer
               WithProtocols:   
       - Name:            texture
         JsName:          texture
@@ -7183,7 +7183,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
         Setter:          
           Name:            'setDrawableSize:'
           JsName:          setDrawableSize
@@ -7199,7 +7199,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
       - Name:            framebufferOnly
         JsName:          framebufferOnly
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAMetalLayer.h
@@ -7409,7 +7409,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            additive
@@ -7509,7 +7509,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setKeyPath:'
@@ -7525,7 +7525,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            valueFunction
         JsName:          valueFunction
@@ -7550,7 +7550,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CAValueFunction
+              Name:            CAValueFunction
               WithProtocols:   
         Setter:          
           Name:            'setValueFunction:'
@@ -7566,7 +7566,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CAValueFunction
+              Name:            CAValueFunction
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7872,7 +7872,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          QuartzCore.CATransform3D
-              JsName:          CATransform3D
+              Name:            CATransform3D
         Setter:          
           Name:            'setInstanceTransform:'
           JsName:          setInstanceTransform
@@ -7888,7 +7888,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          QuartzCore.CATransform3D
-              JsName:          CATransform3D
+              Name:            CATransform3D
       - Name:            preservesDepth
         JsName:          preservesDepth
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAReplicatorLayer.h
@@ -7955,7 +7955,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
       - Name:            'scrollToRect:'
         JsName:          scrollToRect
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAScrollLayer.h
@@ -7970,7 +7970,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
     StaticMethods:   
     InstanceProperties: 
       - Name:            scrollMode
@@ -7996,7 +7996,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setScrollMode:'
@@ -8012,7 +8012,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -8095,7 +8095,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setFillRule:'
@@ -8111,7 +8111,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            lineCap
         JsName:          lineCap
@@ -8136,7 +8136,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLineCap:'
@@ -8152,7 +8152,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            lineDashPattern
         JsName:          lineDashPattern
@@ -8177,10 +8177,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -8197,10 +8197,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            lineDashPhase
@@ -8263,7 +8263,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLineJoin:'
@@ -8279,7 +8279,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            lineWidth
         JsName:          lineWidth
@@ -8739,7 +8739,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAlignmentMode:'
@@ -8755,7 +8755,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            allowsFontSubpixelQuantization
         JsName:          allowsFontSubpixelQuantization
@@ -8975,7 +8975,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTruncationMode:'
@@ -8991,7 +8991,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            wrapped
         JsName:          wrapped
@@ -9157,7 +9157,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
         Setter:          
           Name:            'setTileSize:'
           JsName:          setTileSize
@@ -9173,7 +9173,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
     StaticProperties: 
     Protocols:       
     Base:            CALayer
@@ -9214,7 +9214,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CAMediaTimingFunction
+            Name:            CAMediaTimingFunction
             WithProtocols:   
       - Name:            begin
         JsName:          begin
@@ -9316,7 +9316,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CAMediaTimingFunction
+            Name:            CAMediaTimingFunction
             WithProtocols:   
       - Name:            'setCompletionBlock:'
         JsName:          setCompletionBlock
@@ -9361,7 +9361,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            unlock
         JsName:          unlock
@@ -9389,7 +9389,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -9468,13 +9468,13 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
   - Name:            CATransform3DEqualToTransform
     JsName:          CATransform3DEqualToTransform
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CATransform3D.h
@@ -9490,10 +9490,10 @@ Items:
       - Type:            Bool
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
   - Name:            CATransform3DGetAffineTransform
     JsName:          CATransform3DGetAffineTransform
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CATransform3D.h
@@ -9508,10 +9508,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGAffineTransform
-        JsName:          CGAffineTransform
+        Name:            CGAffineTransform
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
   - Name:            CATransform3DIdentity
     JsName:          CATransform3DIdentity
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CATransform3D.h
@@ -9526,7 +9526,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          QuartzCore.CATransform3D
-      JsName:          CATransform3D
+      Name:            CATransform3D
   - Name:            CATransform3DInvert
     JsName:          CATransform3DInvert
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CATransform3D.h
@@ -9541,10 +9541,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
   - Name:            CATransform3DIsAffine
     JsName:          CATransform3DIsAffine
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CATransform3D.h
@@ -9560,7 +9560,7 @@ Items:
       - Type:            Bool
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
   - Name:            CATransform3DIsIdentity
     JsName:          CATransform3DIsIdentity
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CATransform3D.h
@@ -9576,7 +9576,7 @@ Items:
       - Type:            Bool
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
   - Name:            CATransform3DMakeAffineTransform
     JsName:          CATransform3DMakeAffineTransform
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CATransform3D.h
@@ -9591,10 +9591,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Struct
         Module:          CoreGraphics.CGAffineTransform
-        JsName:          CGAffineTransform
+        Name:            CGAffineTransform
   - Name:            CATransform3DMakeRotation
     JsName:          CATransform3DMakeRotation
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CATransform3D.h
@@ -9609,7 +9609,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Double
       - Type:            Double
       - Type:            Double
@@ -9628,7 +9628,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Double
       - Type:            Double
       - Type:            Double
@@ -9646,7 +9646,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Double
       - Type:            Double
       - Type:            Double
@@ -9664,10 +9664,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Double
       - Type:            Double
       - Type:            Double
@@ -9686,10 +9686,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Double
       - Type:            Double
       - Type:            Double
@@ -9707,10 +9707,10 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Struct
         Module:          QuartzCore.CATransform3D
-        JsName:          CATransform3D
+        Name:            CATransform3D
       - Type:            Double
       - Type:            Double
       - Type:            Double
@@ -9842,7 +9842,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSubtype:'
@@ -9858,7 +9858,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -9883,7 +9883,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setType:'
@@ -9899,7 +9899,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9930,7 +9930,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            name
@@ -9956,7 +9956,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9997,7 +9997,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAAlignmentJustified
     JsName:          kCAAlignmentJustified
@@ -10012,7 +10012,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAAlignmentLeft
     JsName:          kCAAlignmentLeft
@@ -10027,7 +10027,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAAlignmentNatural
     JsName:          kCAAlignmentNatural
@@ -10042,7 +10042,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAAlignmentRight
     JsName:          kCAAlignmentRight
@@ -10057,7 +10057,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAAnimationCubic
     JsName:          kCAAnimationCubic
@@ -10072,7 +10072,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAAnimationCubicPaced
     JsName:          kCAAnimationCubicPaced
@@ -10087,7 +10087,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAAnimationDiscrete
     JsName:          kCAAnimationDiscrete
@@ -10102,7 +10102,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAAnimationLinear
     JsName:          kCAAnimationLinear
@@ -10117,7 +10117,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAAnimationPaced
     JsName:          kCAAnimationPaced
@@ -10132,7 +10132,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAAnimationRotateAuto
     JsName:          kCAAnimationRotateAuto
@@ -10147,7 +10147,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAAnimationRotateAutoReverse
     JsName:          kCAAnimationRotateAutoReverse
@@ -10162,7 +10162,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAContentsFormatGray8Uint
     JsName:          kCAContentsFormatGray8Uint
@@ -10177,7 +10177,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAContentsFormatRGBA16Float
     JsName:          kCAContentsFormatRGBA16Float
@@ -10192,7 +10192,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAContentsFormatRGBA8Uint
     JsName:          kCAContentsFormatRGBA8Uint
@@ -10207,7 +10207,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCACornerCurveCircular
     JsName:          kCACornerCurveCircular
@@ -10222,7 +10222,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCACornerCurveContinuous
     JsName:          kCACornerCurveContinuous
@@ -10237,7 +10237,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerAdditive
     JsName:          kCAEmitterLayerAdditive
@@ -10252,7 +10252,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerBackToFront
     JsName:          kCAEmitterLayerBackToFront
@@ -10267,7 +10267,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerCircle
     JsName:          kCAEmitterLayerCircle
@@ -10282,7 +10282,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerCuboid
     JsName:          kCAEmitterLayerCuboid
@@ -10297,7 +10297,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerLine
     JsName:          kCAEmitterLayerLine
@@ -10312,7 +10312,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerOldestFirst
     JsName:          kCAEmitterLayerOldestFirst
@@ -10327,7 +10327,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerOldestLast
     JsName:          kCAEmitterLayerOldestLast
@@ -10342,7 +10342,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerOutline
     JsName:          kCAEmitterLayerOutline
@@ -10357,7 +10357,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerPoint
     JsName:          kCAEmitterLayerPoint
@@ -10372,7 +10372,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerPoints
     JsName:          kCAEmitterLayerPoints
@@ -10387,7 +10387,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerRectangle
     JsName:          kCAEmitterLayerRectangle
@@ -10402,7 +10402,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerSphere
     JsName:          kCAEmitterLayerSphere
@@ -10417,7 +10417,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerSurface
     JsName:          kCAEmitterLayerSurface
@@ -10432,7 +10432,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerUnordered
     JsName:          kCAEmitterLayerUnordered
@@ -10447,7 +10447,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAEmitterLayerVolume
     JsName:          kCAEmitterLayerVolume
@@ -10462,7 +10462,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAFillModeBackwards
     JsName:          kCAFillModeBackwards
@@ -10477,7 +10477,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAFillModeBoth
     JsName:          kCAFillModeBoth
@@ -10492,7 +10492,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAFillModeForwards
     JsName:          kCAFillModeForwards
@@ -10507,7 +10507,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAFillModeRemoved
     JsName:          kCAFillModeRemoved
@@ -10522,7 +10522,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAFillRuleEvenOdd
     JsName:          kCAFillRuleEvenOdd
@@ -10537,7 +10537,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAFillRuleNonZero
     JsName:          kCAFillRuleNonZero
@@ -10552,7 +10552,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAFilterLinear
     JsName:          kCAFilterLinear
@@ -10567,7 +10567,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAFilterNearest
     JsName:          kCAFilterNearest
@@ -10582,7 +10582,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAFilterTrilinear
     JsName:          kCAFilterTrilinear
@@ -10597,7 +10597,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGradientLayerAxial
     JsName:          kCAGradientLayerAxial
@@ -10612,7 +10612,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGradientLayerConic
     JsName:          kCAGradientLayerConic
@@ -10627,7 +10627,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGradientLayerRadial
     JsName:          kCAGradientLayerRadial
@@ -10642,7 +10642,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityBottom
     JsName:          kCAGravityBottom
@@ -10657,7 +10657,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityBottomLeft
     JsName:          kCAGravityBottomLeft
@@ -10672,7 +10672,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityBottomRight
     JsName:          kCAGravityBottomRight
@@ -10687,7 +10687,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityCenter
     JsName:          kCAGravityCenter
@@ -10702,7 +10702,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityLeft
     JsName:          kCAGravityLeft
@@ -10717,7 +10717,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityResize
     JsName:          kCAGravityResize
@@ -10732,7 +10732,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityResizeAspect
     JsName:          kCAGravityResizeAspect
@@ -10747,7 +10747,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityResizeAspectFill
     JsName:          kCAGravityResizeAspectFill
@@ -10762,7 +10762,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityRight
     JsName:          kCAGravityRight
@@ -10777,7 +10777,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityTop
     JsName:          kCAGravityTop
@@ -10792,7 +10792,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityTopLeft
     JsName:          kCAGravityTopLeft
@@ -10807,7 +10807,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAGravityTopRight
     JsName:          kCAGravityTopRight
@@ -10822,7 +10822,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCALayerBottomEdge
     JsName:          kCALayerBottomEdge
@@ -10925,7 +10925,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCALineCapRound
     JsName:          kCALineCapRound
@@ -10940,7 +10940,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCALineCapSquare
     JsName:          kCALineCapSquare
@@ -10955,7 +10955,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCALineJoinBevel
     JsName:          kCALineJoinBevel
@@ -10970,7 +10970,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCALineJoinMiter
     JsName:          kCALineJoinMiter
@@ -10985,7 +10985,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCALineJoinRound
     JsName:          kCALineJoinRound
@@ -11000,7 +11000,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAMediaTimingFunctionDefault
     JsName:          kCAMediaTimingFunctionDefault
@@ -11015,7 +11015,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAMediaTimingFunctionEaseIn
     JsName:          kCAMediaTimingFunctionEaseIn
@@ -11030,7 +11030,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAMediaTimingFunctionEaseInEaseOut
     JsName:          kCAMediaTimingFunctionEaseInEaseOut
@@ -11045,7 +11045,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAMediaTimingFunctionEaseOut
     JsName:          kCAMediaTimingFunctionEaseOut
@@ -11060,7 +11060,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAMediaTimingFunctionLinear
     JsName:          kCAMediaTimingFunctionLinear
@@ -11075,7 +11075,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAOnOrderIn
     JsName:          kCAOnOrderIn
@@ -11090,7 +11090,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAOnOrderOut
     JsName:          kCAOnOrderOut
@@ -11105,7 +11105,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAScrollBoth
     JsName:          kCAScrollBoth
@@ -11120,7 +11120,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAScrollHorizontally
     JsName:          kCAScrollHorizontally
@@ -11135,7 +11135,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAScrollNone
     JsName:          kCAScrollNone
@@ -11150,7 +11150,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAScrollVertically
     JsName:          kCAScrollVertically
@@ -11165,7 +11165,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransactionAnimationDuration
     JsName:          kCATransactionAnimationDuration
@@ -11180,7 +11180,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransactionAnimationTimingFunction
     JsName:          kCATransactionAnimationTimingFunction
@@ -11195,7 +11195,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransactionCompletionBlock
     JsName:          kCATransactionCompletionBlock
@@ -11210,7 +11210,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransactionDisableActions
     JsName:          kCATransactionDisableActions
@@ -11225,7 +11225,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransition
     JsName:          kCATransition
@@ -11240,7 +11240,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransitionFade
     JsName:          kCATransitionFade
@@ -11255,7 +11255,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransitionFromBottom
     JsName:          kCATransitionFromBottom
@@ -11270,7 +11270,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransitionFromLeft
     JsName:          kCATransitionFromLeft
@@ -11285,7 +11285,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransitionFromRight
     JsName:          kCATransitionFromRight
@@ -11300,7 +11300,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransitionFromTop
     JsName:          kCATransitionFromTop
@@ -11315,7 +11315,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransitionMoveIn
     JsName:          kCATransitionMoveIn
@@ -11330,7 +11330,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransitionPush
     JsName:          kCATransitionPush
@@ -11345,7 +11345,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATransitionReveal
     JsName:          kCATransitionReveal
@@ -11360,7 +11360,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATruncationEnd
     JsName:          kCATruncationEnd
@@ -11375,7 +11375,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATruncationMiddle
     JsName:          kCATruncationMiddle
@@ -11390,7 +11390,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATruncationNone
     JsName:          kCATruncationNone
@@ -11405,7 +11405,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCATruncationStart
     JsName:          kCATruncationStart
@@ -11420,7 +11420,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAValueFunctionRotateX
     JsName:          kCAValueFunctionRotateX
@@ -11435,7 +11435,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAValueFunctionRotateY
     JsName:          kCAValueFunctionRotateY
@@ -11450,7 +11450,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAValueFunctionRotateZ
     JsName:          kCAValueFunctionRotateZ
@@ -11465,7 +11465,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAValueFunctionScale
     JsName:          kCAValueFunctionScale
@@ -11480,7 +11480,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAValueFunctionScaleX
     JsName:          kCAValueFunctionScaleX
@@ -11495,7 +11495,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAValueFunctionScaleY
     JsName:          kCAValueFunctionScaleY
@@ -11510,7 +11510,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAValueFunctionScaleZ
     JsName:          kCAValueFunctionScaleZ
@@ -11525,7 +11525,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAValueFunctionTranslate
     JsName:          kCAValueFunctionTranslate
@@ -11540,7 +11540,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAValueFunctionTranslateX
     JsName:          kCAValueFunctionTranslateX
@@ -11555,7 +11555,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAValueFunctionTranslateY
     JsName:          kCAValueFunctionTranslateY
@@ -11570,7 +11570,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kCAValueFunctionTranslateZ
     JsName:          kCAValueFunctionTranslateZ
@@ -11585,6 +11585,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

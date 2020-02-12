@@ -44,10 +44,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            frameDuration
@@ -103,7 +103,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AVAudioPCMBuffer
+            Name:            AVAudioPCMBuffer
             WithProtocols:   
       - Name:            'appendAudioSampleBuffer:'
         JsName:          appendAudioSampleBuffer
@@ -157,7 +157,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AVAudioFormat
+              Name:            AVAudioFormat
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -199,10 +199,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -219,10 +219,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            interactionIdentifier
@@ -248,7 +248,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setInteractionIdentifier:'
@@ -264,7 +264,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            requiresOnDeviceRecognition
         JsName:          requiresOnDeviceRecognition
@@ -422,7 +422,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SFTranscription
+              Name:            SFTranscription
               WithProtocols:   
       - Name:            final
         JsName:          final
@@ -470,10 +470,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          SFTranscription
+                  Name:            SFTranscription
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -565,7 +565,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            finishing
         JsName:          finishing
@@ -642,7 +642,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SFSpeechRecognitionTask
+            Name:            SFSpeechRecognitionTask
             WithProtocols:   
       - Name:            'speechRecognitionTask:didFinishRecognition:'
         JsName:          speechRecognitionTaskDidFinishRecognition
@@ -657,10 +657,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SFSpeechRecognitionTask
+            Name:            SFSpeechRecognitionTask
             WithProtocols:   
           - Type:            Interface
-            JsName:          SFSpeechRecognitionResult
+            Name:            SFSpeechRecognitionResult
             WithProtocols:   
       - Name:            'speechRecognitionTask:didFinishSuccessfully:'
         JsName:          speechRecognitionTaskDidFinishSuccessfully
@@ -675,7 +675,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SFSpeechRecognitionTask
+            Name:            SFSpeechRecognitionTask
             WithProtocols:   
           - Type:            Bool
       - Name:            'speechRecognitionTask:didHypothesizeTranscription:'
@@ -691,10 +691,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SFSpeechRecognitionTask
+            Name:            SFSpeechRecognitionTask
             WithProtocols:   
           - Type:            Interface
-            JsName:          SFTranscription
+            Name:            SFTranscription
             WithProtocols:   
       - Name:            'speechRecognitionTaskFinishedReadingAudio:'
         JsName:          speechRecognitionTaskFinishedReadingAudio
@@ -709,7 +709,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SFSpeechRecognitionTask
+            Name:            SFSpeechRecognitionTask
             WithProtocols:   
       - Name:            'speechRecognitionTaskWasCancelled:'
         JsName:          speechRecognitionTaskWasCancelled
@@ -724,7 +724,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SFSpeechRecognitionTask
+            Name:            SFSpeechRecognitionTask
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -899,7 +899,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSLocale
+            Name:            NSLocale
             WithProtocols:   
       - Name:            'recognitionTaskWithRequest:delegate:'
         JsName:          recognitionTaskWithRequestDelegate
@@ -913,10 +913,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          SFSpeechRecognitionTask
+            Name:            SFSpeechRecognitionTask
             WithProtocols:   
           - Type:            Interface
-            JsName:          SFSpeechRecognitionRequest
+            Name:            SFSpeechRecognitionRequest
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -933,19 +933,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          SFSpeechRecognitionTask
+            Name:            SFSpeechRecognitionTask
             WithProtocols:   
           - Type:            Interface
-            JsName:          SFSpeechRecognitionRequest
+            Name:            SFSpeechRecognitionRequest
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          SFSpeechRecognitionResult
+                Name:            SFSpeechRecognitionResult
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            authorizationStatus
@@ -990,10 +990,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSLocale
+                Name:            NSLocale
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -1123,7 +1123,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSLocale
+              Name:            NSLocale
               WithProtocols:   
       - Name:            queue
         JsName:          queue
@@ -1148,7 +1148,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSOperationQueue
+              Name:            NSOperationQueue
               WithProtocols:   
         Setter:          
           Name:            'setQueue:'
@@ -1164,7 +1164,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSOperationQueue
+              Name:            NSOperationQueue
               WithProtocols:   
       - Name:            supportsOnDeviceRecognition
         JsName:          supportsOnDeviceRecognition
@@ -1299,7 +1299,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SFSpeechRecognizer
+            Name:            SFSpeechRecognizer
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -1332,7 +1332,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1359,7 +1359,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1426,7 +1426,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            segments
         JsName:          segments
@@ -1451,10 +1451,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          SFTranscriptionSegment
+                  Name:            SFTranscriptionSegment
                   WithProtocols:   
               WithProtocols:   
       - Name:            speakingRate
@@ -1524,10 +1524,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            confidence
@@ -1599,7 +1599,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            substringRange
         JsName:          substringRange
@@ -1625,7 +1625,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Foundation.NSRange
-              JsName:          NSRange
+              Name:            NSRange
       - Name:            timestamp
         JsName:          timestamp
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Speech.framework/Headers/SFTranscriptionSegment.h
@@ -1674,7 +1674,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SFVoiceAnalytics
+              Name:            SFVoiceAnalytics
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1718,7 +1718,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SFAcousticFeature
+              Name:            SFAcousticFeature
               WithProtocols:   
       - Name:            pitch
         JsName:          pitch
@@ -1743,7 +1743,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SFAcousticFeature
+              Name:            SFAcousticFeature
               WithProtocols:   
       - Name:            shimmer
         JsName:          shimmer
@@ -1768,7 +1768,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SFAcousticFeature
+              Name:            SFAcousticFeature
               WithProtocols:   
       - Name:            voicing
         JsName:          voicing
@@ -1793,7 +1793,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SFAcousticFeature
+              Name:            SFAcousticFeature
               WithProtocols:   
     StaticProperties: 
     Protocols:       

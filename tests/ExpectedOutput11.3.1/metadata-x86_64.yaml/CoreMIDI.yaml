@@ -73,10 +73,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -103,7 +103,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            profileID
         JsName:          profileID
@@ -128,7 +128,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -159,17 +159,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MIDICIProfile
+                Name:            MIDICIProfile
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          MIDICIProfile
+                Name:            MIDICIProfile
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -197,10 +197,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MIDICIProfile
+                  Name:            MIDICIProfile
                   WithProtocols:   
               WithProtocols:   
       - Name:            enabledProfiles
@@ -226,10 +226,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MIDICIProfile
+                  Name:            MIDICIProfile
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -261,13 +261,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MIDICIProfile
+            Name:            MIDICIProfile
             WithProtocols:   
           - Type:            UChar
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'enableProfile:onChannel:error:'
         JsName:          enableProfileOnChannelError
@@ -282,13 +282,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MIDICIProfile
+            Name:            MIDICIProfile
             WithProtocols:   
           - Type:            UChar
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'getProperty:onChannel:responseHandler:'
         JsName:          getPropertyOnChannelResponseHandler
@@ -303,21 +303,21 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            UChar
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MIDICISession
+                Name:            MIDICISession
                 WithProtocols:   
               - Type:            UChar
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'hasProperty:onChannel:responseHandler:'
         JsName:          hasPropertyOnChannelResponseHandler
@@ -332,21 +332,21 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            UChar
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MIDICISession
+                Name:            MIDICISession
                 WithProtocols:   
               - Type:            UChar
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'initWithMIDIEntity:dataReadyHandler:'
         JsName:          initWithMIDIEntityDataReadyHandler
@@ -376,7 +376,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MIDICIProfileState
+            Name:            MIDICIProfileState
             WithProtocols:   
           - Type:            UChar
       - Name:            'setProperty:onChannel:responseHandler:'
@@ -392,21 +392,21 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            UChar
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          MIDICISession
+                Name:            MIDICISession
                 WithProtocols:   
               - Type:            UChar
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -434,7 +434,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreMIDI.MIDICapabilityInquiry
-              JsName:          MIDICIDeviceIdentification
+              Name:            MIDICIDeviceIdentification
       - Name:            entity
         JsName:          entity
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDICapabilityInquiry.h
@@ -484,11 +484,11 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          MIDICISession
+                  Name:            MIDICISession
                   WithProtocols:   
                 - Type:            UChar
                 - Type:            Interface
-                  JsName:          MIDICIProfile
+                  Name:            MIDICIProfile
                   WithProtocols:   
                 - Type:            Bool
         Setter:          
@@ -508,11 +508,11 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          MIDICISession
+                  Name:            MIDICISession
                   WithProtocols:   
                 - Type:            UChar
                 - Type:            Interface
-                  JsName:          MIDICIProfile
+                  Name:            MIDICIProfile
                   WithProtocols:   
                 - Type:            Bool
       - Name:            propertyChangedCallback
@@ -541,11 +541,11 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          MIDICISession
+                  Name:            MIDICISession
                   WithProtocols:   
                 - Type:            UChar
                 - Type:            Interface
-                  JsName:          NSData
+                  Name:            NSData
                   WithProtocols:   
         Setter:          
           Name:            'setPropertyChangedCallback:'
@@ -564,11 +564,11 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          MIDICISession
+                  Name:            MIDICISession
                   WithProtocols:   
                 - Type:            UChar
                 - Type:            Interface
-                  JsName:          NSData
+                  Name:            NSData
                   WithProtocols:   
       - Name:            supportsProfileCapability
         JsName:          supportsProfileCapability
@@ -655,7 +655,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreMIDI.MIDIServices
-              JsName:          MIDINotification
+              Name:            MIDINotification
           - Type:            Pointer
             PointerType:     
               Type:            Void
@@ -691,7 +691,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreMIDI.MIDIServices
-              JsName:          MIDINotification
+              Name:            MIDINotification
   - Name:            MIDIClientDispose
     JsName:          MIDIClientDispose
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h
@@ -759,7 +759,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreMIDI.MIDIServices
-              JsName:          MIDIPacketList
+              Name:            MIDIPacketList
           - Type:            Pointer
             PointerType:     
               Type:            Void
@@ -799,7 +799,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreMIDI.MIDIServices
-              JsName:          MIDIPacketList
+              Name:            MIDIPacketList
           - Type:            Pointer
             PointerType:     
               Type:            Void
@@ -845,7 +845,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          CoreMIDI.MIDIDriver
-            JsName:          MIDIDriverInterface
+            Name:            MIDIDriverInterface
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -1000,7 +1000,7 @@ Items:
                 Type:            Void
             - Type:            Struct
               Module:          CoreFoundation.CFUUID
-              JsName:          CFUUIDBytes
+              Name:            CFUUIDBytes
             - Type:            Pointer
               PointerType:     
                 Type:            Pointer
@@ -1033,7 +1033,7 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          CoreMIDI.MIDIDriver
-                  JsName:          MIDIDriverInterface
+                  Name:            MIDIDriverInterface
             - Type:            UInt
       - Name:            Start
         Signature:       
@@ -1046,7 +1046,7 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          CoreMIDI.MIDIDriver
-                  JsName:          MIDIDriverInterface
+                  Name:            MIDIDriverInterface
             - Type:            UInt
       - Name:            Stop
         Signature:       
@@ -1059,7 +1059,7 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          CoreMIDI.MIDIDriver
-                  JsName:          MIDIDriverInterface
+                  Name:            MIDIDriverInterface
       - Name:            Configure
         Signature:       
           Type:            FunctionPointer
@@ -1071,7 +1071,7 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          CoreMIDI.MIDIDriver
-                  JsName:          MIDIDriverInterface
+                  Name:            MIDIDriverInterface
             - Type:            UInt
       - Name:            Send
         Signature:       
@@ -1084,12 +1084,12 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          CoreMIDI.MIDIDriver
-                  JsName:          MIDIDriverInterface
+                  Name:            MIDIDriverInterface
             - Type:            Pointer
               PointerType:     
                 Type:            Struct
                 Module:          CoreMIDI.MIDIServices
-                JsName:          MIDIPacketList
+                Name:            MIDIPacketList
             - Type:            Pointer
               PointerType:     
                 Type:            Void
@@ -1107,7 +1107,7 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          CoreMIDI.MIDIDriver
-                  JsName:          MIDIDriverInterface
+                  Name:            MIDIDriverInterface
             - Type:            UInt
             - Type:            Bool
       - Name:            Flush
@@ -1121,7 +1121,7 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          CoreMIDI.MIDIDriver
-                  JsName:          MIDIDriverInterface
+                  Name:            MIDIDriverInterface
             - Type:            UInt
             - Type:            Pointer
               PointerType:     
@@ -1140,13 +1140,13 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          CoreMIDI.MIDIDriver
-                  JsName:          MIDIDriverInterface
+                  Name:            MIDIDriverInterface
             - Type:            UInt
             - Type:            Pointer
               PointerType:     
                 Type:            Struct
                 Module:          CoreMIDI.MIDIServices
-                JsName:          MIDIPacketList
+                Name:            MIDIPacketList
   - Name:            MIDIEndpointDispose
     JsName:          MIDIEndpointDispose
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h
@@ -1399,7 +1399,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          CoreMIDI.MIDIDriver
-            JsName:          MIDIDriverInterface
+            Name:            MIDIDriverInterface
   - Name:            MIDIGetDriverIORunLoop
     JsName:          MIDIGetDriverIORunLoop
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIDriver.h
@@ -1543,7 +1543,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreMIDI.MIDIServices
-              JsName:          MIDIPacketList
+              Name:            MIDIPacketList
           - Type:            Pointer
             PointerType:     
               Type:            Void
@@ -1583,7 +1583,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreMIDI.MIDIServices
-              JsName:          MIDIPacketList
+              Name:            MIDIPacketList
           - Type:            Pointer
             PointerType:     
               Type:            Void
@@ -1600,7 +1600,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MIDINetworkConnection
     JsName:          MIDINetworkConnection
@@ -1628,7 +1628,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MIDINetworkHost
+            Name:            MIDINetworkHost
             WithProtocols:   
     InstanceProperties: 
       - Name:            host
@@ -1654,7 +1654,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MIDINetworkHost
+              Name:            MIDINetworkHost
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1735,7 +1735,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MIDINetworkHost
+            Name:            MIDINetworkHost
             WithProtocols:   
     StaticMethods:   
       - Name:            'hostWithName:address:port:'
@@ -1751,10 +1751,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            ULong
       - Name:            'hostWithName:netService:'
@@ -1770,10 +1770,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSNetService
+            Name:            NSNetService
             WithProtocols:   
       - Name:            'hostWithName:netServiceName:netServiceDomain:'
         JsName:          hostWithNameNetServiceNameNetServiceDomain
@@ -1788,13 +1788,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            address
@@ -1820,7 +1820,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -1845,7 +1845,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            netServiceDomain
         JsName:          netServiceDomain
@@ -1870,7 +1870,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            netServiceName
         JsName:          netServiceName
@@ -1895,7 +1895,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            port
         JsName:          port
@@ -1936,7 +1936,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MIDINetworkNotificationSessionDidChange
     JsName:          MIDINetworkNotificationSessionDidChange
@@ -1951,7 +1951,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MIDINetworkSession
     JsName:          MIDINetworkSession
@@ -1978,7 +1978,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MIDINetworkConnection
+            Name:            MIDINetworkConnection
             WithProtocols:   
       - Name:            'addContact:'
         JsName:          addContact
@@ -1993,7 +1993,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MIDINetworkHost
+            Name:            MIDINetworkHost
             WithProtocols:   
       - Name:            connections
         JsName:          connections
@@ -2007,10 +2007,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          MIDINetworkConnection
+                Name:            MIDINetworkConnection
                 WithProtocols:   
             WithProtocols:   
       - Name:            contacts
@@ -2025,10 +2025,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          MIDINetworkHost
+                Name:            MIDINetworkHost
                 WithProtocols:   
             WithProtocols:   
       - Name:            destinationEndpoint
@@ -2056,7 +2056,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MIDINetworkConnection
+            Name:            MIDINetworkConnection
             WithProtocols:   
       - Name:            'removeContact:'
         JsName:          removeContact
@@ -2071,7 +2071,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MIDINetworkHost
+            Name:            MIDINetworkHost
             WithProtocols:   
       - Name:            sourceEndpoint
         JsName:          sourceEndpoint
@@ -2098,7 +2098,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MIDINetworkSession
+            Name:            MIDINetworkSession
             WithProtocols:   
     InstanceProperties: 
       - Name:            connectionPolicy
@@ -2200,7 +2200,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            networkName
         JsName:          networkName
@@ -2225,7 +2225,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            networkPort
         JsName:          networkPort
@@ -2658,7 +2658,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreMIDI.MIDIServices
-            JsName:          MIDIPacket
+            Name:            MIDIPacket
           Size:            1
   - Name:            MIDIPacketListAdd
     JsName:          MIDIPacketListAdd
@@ -2676,18 +2676,18 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMIDI.MIDIServices
-          JsName:          MIDIPacket
+          Name:            MIDIPacket
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreMIDI.MIDIServices
-          JsName:          MIDIPacketList
+          Name:            MIDIPacketList
       - Type:            ULong
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreMIDI.MIDIServices
-          JsName:          MIDIPacket
+          Name:            MIDIPacket
       - Type:            ULongLong
       - Type:            ULong
       - Type:            CString
@@ -2707,12 +2707,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMIDI.MIDIServices
-          JsName:          MIDIPacket
+          Name:            MIDIPacket
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreMIDI.MIDIServices
-          JsName:          MIDIPacketList
+          Name:            MIDIPacketList
   - Name:            MIDIPortConnectSource
     JsName:          MIDIPortConnectSource
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h
@@ -2778,7 +2778,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMIDI.MIDIServices
-          JsName:          MIDIPacketList
+          Name:            MIDIPacketList
   - Name:            MIDIRestart
     JsName:          MIDIRestart
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h
@@ -2811,7 +2811,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMIDI.MIDIServices
-          JsName:          MIDIPacketList
+          Name:            MIDIPacketList
   - Name:            MIDISendSysex
     JsName:          MIDISendSysex
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIServices.h
@@ -2829,7 +2829,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMIDI.MIDIServices
-          JsName:          MIDISysexSendRequest
+          Name:            MIDISysexSendRequest
   - Name:            MIDISetupAddDevice
     JsName:          MIDISetupAddDevice
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDISetup.h
@@ -2944,7 +2944,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          CoreMIDI.MIDIServices
-                JsName:          MIDISysexSendRequest
+                Name:            MIDISysexSendRequest
       - Name:            completionRefCon
         Signature:       
           Type:            Pointer
@@ -3066,7 +3066,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreMIDI.MIDIThruConnection
-            JsName:          MIDIThruConnectionEndpoint
+            Name:            MIDIThruConnectionEndpoint
           Size:            8
       - Name:            numDestinations
         Signature:       
@@ -3077,7 +3077,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreMIDI.MIDIThruConnection
-            JsName:          MIDIThruConnectionEndpoint
+            Name:            MIDIThruConnectionEndpoint
           Size:            8
       - Name:            channelMap
         Signature:       
@@ -3101,32 +3101,32 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreMIDI.MIDIThruConnection
-          JsName:          MIDITransform
+          Name:            MIDITransform
       - Name:            velocity
         Signature:       
           Type:            Struct
           Module:          CoreMIDI.MIDIThruConnection
-          JsName:          MIDITransform
+          Name:            MIDITransform
       - Name:            keyPressure
         Signature:       
           Type:            Struct
           Module:          CoreMIDI.MIDIThruConnection
-          JsName:          MIDITransform
+          Name:            MIDITransform
       - Name:            channelPressure
         Signature:       
           Type:            Struct
           Module:          CoreMIDI.MIDIThruConnection
-          JsName:          MIDITransform
+          Name:            MIDITransform
       - Name:            programChange
         Signature:       
           Type:            Struct
           Module:          CoreMIDI.MIDIThruConnection
-          JsName:          MIDITransform
+          Name:            MIDITransform
       - Name:            pitchBend
         Signature:       
           Type:            Struct
           Module:          CoreMIDI.MIDIThruConnection
-          JsName:          MIDITransform
+          Name:            MIDITransform
       - Name:            filterOutSysEx
         Signature:       
           Type:            UChar
@@ -3177,7 +3177,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMIDI.MIDIThruConnection
-          JsName:          MIDIThruConnectionParams
+          Name:            MIDIThruConnectionParams
   - Name:            MIDIThruConnectionSetParams
     JsName:          MIDIThruConnectionSetParams
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers/MIDIThruConnection.h

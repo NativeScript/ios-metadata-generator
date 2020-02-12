@@ -32,7 +32,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLSActivityItem
+            Name:            CLSActivityItem
             WithProtocols:   
       - Name:            'addProgressRangeFromStart:toEnd:'
         JsName:          addProgressRangeFromStartToEnd
@@ -97,10 +97,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CLSActivityItem
+                  Name:            CLSActivityItem
                   WithProtocols:   
               WithProtocols:   
       - Name:            duration
@@ -149,7 +149,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLSActivityItem
+              Name:            CLSActivityItem
               WithProtocols:   
         Setter:          
           Name:            'setPrimaryActivityItem:'
@@ -165,7 +165,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CLSActivityItem
+              Name:            CLSActivityItem
               WithProtocols:   
       - Name:            progress
         JsName:          progress
@@ -267,7 +267,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -292,7 +292,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -308,7 +308,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -338,10 +338,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            CLSBinaryValueType
@@ -516,10 +516,10 @@ Items:
           - Type:            Enum
             Name:            CLSContextType
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            resignActive
         JsName:          resignActive
@@ -546,7 +546,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLSContext
+            Name:            CLSContext
             WithProtocols:   
       - Name:            'descendantMatchingIdentifierPath:completion:'
         JsName:          descendantMatchingIdentifierPathCompletion
@@ -561,20 +561,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CLSContext
+                Name:            CLSContext
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            removeFromParent
         JsName:          removeFromParent
@@ -600,7 +600,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CLSActivity
+            Name:            CLSActivity
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -687,7 +687,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -712,7 +712,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -728,7 +728,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            topic
         JsName:          topic
@@ -753,7 +753,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTopic:'
@@ -769,7 +769,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -820,7 +820,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setUniversalLinkURL:'
@@ -837,7 +837,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            parent
         JsName:          parent
@@ -862,7 +862,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLSContext
+              Name:            CLSContext
               WithProtocols:   
       - Name:            currentActivity
         JsName:          currentActivity
@@ -887,7 +887,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLSActivity
+              Name:            CLSActivity
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -917,13 +917,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLSContext
+            Name:            CLSContext
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -942,7 +942,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSContextTopicComputerScienceAndEngineering
     JsName:          CLSContextTopicComputerScienceAndEngineering
@@ -957,7 +957,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSContextTopicHealthAndFitness
     JsName:          CLSContextTopicHealthAndFitness
@@ -972,7 +972,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSContextTopicLiteracyAndWriting
     JsName:          CLSContextTopicLiteracyAndWriting
@@ -987,7 +987,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSContextTopicMath
     JsName:          CLSContextTopicMath
@@ -1002,7 +1002,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSContextTopicScience
     JsName:          CLSContextTopicScience
@@ -1017,7 +1017,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSContextTopicSocialScience
     JsName:          CLSContextTopicSocialScience
@@ -1032,7 +1032,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSContextTopicWorldLanguage
     JsName:          CLSContextTopicWorldLanguage
@@ -1047,7 +1047,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSContextType
     JsName:          CLSContextType
@@ -1296,10 +1296,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'saveWithCompletion:'
@@ -1318,7 +1318,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'contextsMatchingIdentifierPath:completion:'
         JsName:          contextsMatchingIdentifierPathCompletion
@@ -1333,24 +1333,24 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CLSContext
+                    Name:            CLSContext
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'contextsMatchingPredicate:completion:'
         JsName:          contextsMatchingPredicateCompletion
@@ -1365,20 +1365,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CLSContext
+                    Name:            CLSContext
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeContext:'
         JsName:          removeContext
@@ -1393,7 +1393,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLSContext
+            Name:            CLSContext
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1420,7 +1420,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLSContext
+              Name:            CLSContext
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -1486,7 +1486,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLSContext
+              Name:            CLSContext
               WithProtocols:   
       - Name:            runningActivity
         JsName:          runningActivity
@@ -1511,7 +1511,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLSActivity
+              Name:            CLSActivity
               WithProtocols:   
     StaticProperties: 
       - Name:            shared
@@ -1537,7 +1537,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLSDataStore
+              Name:            CLSDataStore
               WithProtocols:   
     Protocols:       
     Base:            NSObject
@@ -1565,19 +1565,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CLSContext
+            Name:            CLSContext
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CLSContext
+            Name:            CLSContext
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -1664,7 +1664,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSErrorCodeInvalidArgument
     JsName:          CLSErrorCodeInvalidArgument
@@ -1756,7 +1756,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSErrorUnderlyingErrorsKey
     JsName:          CLSErrorUnderlyingErrorsKey
@@ -1771,7 +1771,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSObject
     JsName:          CLSObject
@@ -1810,7 +1810,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            dateLastModified
         JsName:          dateLastModified
@@ -1835,7 +1835,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1854,7 +1854,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSPredicateKeyPathIdentifier
     JsName:          CLSPredicateKeyPathIdentifier
@@ -1869,7 +1869,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSPredicateKeyPathParent
     JsName:          CLSPredicateKeyPathParent
@@ -1884,7 +1884,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSPredicateKeyPathTitle
     JsName:          CLSPredicateKeyPathTitle
@@ -1899,7 +1899,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSPredicateKeyPathTopic
     JsName:          CLSPredicateKeyPathTopic
@@ -1914,7 +1914,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSPredicateKeyPathUniversalLinkURL
     JsName:          CLSPredicateKeyPathUniversalLinkURL
@@ -1929,7 +1929,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CLSQuantityItem
     JsName:          CLSQuantityItem
@@ -1956,10 +1956,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2028,10 +2028,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Double
           - Type:            Double

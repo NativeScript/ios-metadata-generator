@@ -32,7 +32,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNContactPickerViewController
+            Name:            CNContactPickerViewController
             WithProtocols:   
       - Name:            'contactPicker:didSelectContact:'
         JsName:          contactPickerDidSelectContact
@@ -47,10 +47,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNContactPickerViewController
+            Name:            CNContactPickerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
       - Name:            'contactPicker:didSelectContactProperties:'
         JsName:          contactPickerDidSelectContactProperties
@@ -65,13 +65,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNContactPickerViewController
+            Name:            CNContactPickerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CNContactProperty
+                Name:            CNContactProperty
                 WithProtocols:   
             WithProtocols:   
       - Name:            'contactPicker:didSelectContactProperty:'
@@ -87,10 +87,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNContactPickerViewController
+            Name:            CNContactPickerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNContactProperty
+            Name:            CNContactProperty
             WithProtocols:   
       - Name:            'contactPicker:didSelectContacts:'
         JsName:          contactPickerDidSelectContacts
@@ -105,13 +105,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNContactPickerViewController
+            Name:            CNContactPickerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CNContact
+                Name:            CNContact
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -197,10 +197,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -217,10 +217,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            predicateForEnablingContact
@@ -246,7 +246,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
         Setter:          
           Name:            'setPredicateForEnablingContact:'
@@ -262,7 +262,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
       - Name:            predicateForSelectionOfContact
         JsName:          predicateForSelectionOfContact
@@ -287,7 +287,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
         Setter:          
           Name:            'setPredicateForSelectionOfContact:'
@@ -303,7 +303,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
       - Name:            predicateForSelectionOfProperty
         JsName:          predicateForSelectionOfProperty
@@ -328,7 +328,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
         Setter:          
           Name:            'setPredicateForSelectionOfProperty:'
@@ -344,7 +344,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -374,10 +374,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            descriptorForRequiredKeys
@@ -407,7 +407,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
       - Name:            'viewControllerForNewContact:'
         JsName:          viewControllerForNewContact
@@ -422,7 +422,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
       - Name:            'viewControllerForUnknownContact:'
         JsName:          viewControllerForUnknownContact
@@ -437,7 +437,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
     InstanceProperties: 
       - Name:            allowsActions
@@ -537,7 +537,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAlternateName:'
@@ -553,7 +553,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            contact
         JsName:          contact
@@ -578,7 +578,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNContact
+              Name:            CNContact
               WithProtocols:   
       - Name:            contactStore
         JsName:          contactStore
@@ -603,7 +603,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNContactStore
+              Name:            CNContactStore
               WithProtocols:   
         Setter:          
           Name:            'setContactStore:'
@@ -619,7 +619,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CNContactStore
+              Name:            CNContactStore
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -685,7 +685,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
         Setter:          
           Name:            'setDisplayedPropertyKeys:'
@@ -701,7 +701,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
       - Name:            message
         JsName:          message
@@ -726,7 +726,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMessage:'
@@ -742,7 +742,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            parentContainer
         JsName:          parentContainer
@@ -767,7 +767,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNContainer
+              Name:            CNContainer
               WithProtocols:   
         Setter:          
           Name:            'setParentContainer:'
@@ -783,7 +783,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CNContainer
+              Name:            CNContainer
               WithProtocols:   
       - Name:            parentGroup
         JsName:          parentGroup
@@ -808,7 +808,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNGroup
+              Name:            CNGroup
               WithProtocols:   
         Setter:          
           Name:            'setParentGroup:'
@@ -824,7 +824,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CNGroup
+              Name:            CNGroup
               WithProtocols:   
       - Name:            shouldShowLinkedContacts
         JsName:          shouldShowLinkedContacts
@@ -891,10 +891,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNContactViewController
+            Name:            CNContactViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
       - Name:            'contactViewController:shouldPerformDefaultActionForContactProperty:'
         JsName:          contactViewControllerShouldPerformDefaultActionForContactProperty
@@ -909,10 +909,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          CNContactViewController
+            Name:            CNContactViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNContactProperty
+            Name:            CNContactProperty
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 

@@ -52,8 +52,8 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          JavaScriptCore.JSObjectRef
-          JsName:          JSClassDefinition
-  - Name:            ''
+          Name:            JSClassDefinition
+  - Name:            JSClassDefinition
     JsName:          JSClassDefinition
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSObjectRef.h
     Module:          
@@ -84,14 +84,14 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          JavaScriptCore.JSObjectRef
-            JsName:          JSStaticValue
+            Name:            JSStaticValue
       - Name:            staticFunctions
         Signature:       
           Type:            Pointer
           PointerType:     
             Type:            Struct
             Module:          JavaScriptCore.JSObjectRef
-            JsName:          JSStaticFunction
+            Name:            JSStaticFunction
       - Name:            initialize
         Signature:       
           Type:            FunctionPointer
@@ -347,10 +347,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'evaluateScript:withSourceURL:'
         JsName:          evaluateScriptWithSourceURL
@@ -365,13 +365,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'initWithVirtualMachine:'
         JsName:          initWithVirtualMachine
@@ -386,7 +386,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          JSVirtualMachine
+            Name:            JSVirtualMachine
             WithProtocols:   
       - Name:            'objectForKeyedSubscript:'
         JsName:          objectForKeyedSubscript
@@ -400,7 +400,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -419,7 +419,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - NSCopying
     StaticMethods:   
@@ -435,7 +435,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
       - Name:            currentCallee
         JsName:          currentCallee
@@ -450,7 +450,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
       - Name:            currentContext
         JsName:          currentContext
@@ -464,7 +464,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            currentThis
         JsName:          currentThis
@@ -478,7 +478,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
       - Name:            'contextWithJSGlobalContextRef:'
         JsName:          contextWithJSGlobalContextRef
@@ -492,7 +492,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
@@ -521,7 +521,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          JSValue
+              Name:            JSValue
               WithProtocols:   
         Setter:          
           Name:            'setException:'
@@ -537,7 +537,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          JSValue
+              Name:            JSValue
               WithProtocols:   
       - Name:            exceptionHandler
         JsName:          exceptionHandler
@@ -565,10 +565,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          JSContext
+                  Name:            JSContext
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          JSValue
+                  Name:            JSValue
                   WithProtocols:   
         Setter:          
           Name:            'setExceptionHandler:'
@@ -587,10 +587,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          JSContext
+                  Name:            JSContext
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          JSValue
+                  Name:            JSValue
                   WithProtocols:   
       - Name:            globalObject
         JsName:          globalObject
@@ -615,7 +615,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          JSValue
+              Name:            JSValue
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -642,7 +642,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -659,7 +659,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            virtualMachine
         JsName:          virtualMachine
@@ -684,7 +684,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          JSVirtualMachine
+              Name:            JSVirtualMachine
               WithProtocols:   
       - Name:            JSGlobalContextRef
         JsName:          JSGlobalContextRef
@@ -1011,7 +1011,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
     StaticMethods:   
       - Name:            'managedValueWithValue:'
@@ -1026,10 +1026,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSManagedValue
+            Name:            JSManagedValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
       - Name:            'managedValueWithValue:andOwner:'
         JsName:          managedValueWithValueAndOwner
@@ -1044,10 +1044,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSManagedValue
+            Name:            JSManagedValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -1075,7 +1075,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          JSValue
+              Name:            JSValue
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2196,7 +2196,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            JSPropertyDescriptorEnumerableKey
     JsName:          JSPropertyDescriptorEnumerableKey
@@ -2210,7 +2210,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            JSPropertyDescriptorGetKey
     JsName:          JSPropertyDescriptorGetKey
@@ -2224,7 +2224,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            JSPropertyDescriptorSetKey
     JsName:          JSPropertyDescriptorSetKey
@@ -2238,7 +2238,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            JSPropertyDescriptorValueKey
     JsName:          JSPropertyDescriptorValueKey
@@ -2252,7 +2252,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            JSPropertyDescriptorWritableKey
     JsName:          JSPropertyDescriptorWritableKey
@@ -2266,7 +2266,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            JSPropertyNameAccumulatorAddName
     JsName:          JSPropertyNameAccumulatorAddName
@@ -2351,7 +2351,7 @@ Items:
       - Type:            Pointer
         PointerType:     
           Type:            Void
-  - Name:            ''
+  - Name:            JSStaticFunction
     JsName:          JSStaticFunction
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSObjectRef.h
     Module:          
@@ -2395,7 +2395,7 @@ Items:
       - Name:            attributes
         Signature:       
           Type:            UInt
-  - Name:            ''
+  - Name:            JSStaticValue
     JsName:          JSStaticValue
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSObjectRef.h
     Module:          
@@ -2655,7 +2655,7 @@ Items:
       - Type:            Pointer
         PointerType:     
           Type:            Void
-  - Name:            ''
+  - Name:            JSType
     JsName:          JSType
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValueRef.h
     Module:          
@@ -2674,7 +2674,7 @@ Items:
       - kJSTypeObject:   '5'
       - kJSTypeSymbol:   '6'
     SwiftNameFields: 
-  - Name:            ''
+  - Name:            JSTypedArrayType
     JsName:          JSTypedArrayType
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValueRef.h
     Module:          
@@ -2721,10 +2721,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
       - Name:            'constructWithArguments:'
         JsName:          constructWithArguments
@@ -2738,10 +2738,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
       - Name:            'invokeMethod:withArguments:'
         JsName:          invokeMethodWithArguments
@@ -2755,13 +2755,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
       - Name:            'isEqualToObject:'
         JsName:          isEqualToObject
@@ -2817,7 +2817,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
       - Name:            toBool
         JsName:          toBool
@@ -2843,7 +2843,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
       - Name:            toDictionary
         JsName:          toDictionary
@@ -2857,7 +2857,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
       - Name:            toDouble
         JsName:          toDouble
@@ -2895,7 +2895,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
       - Name:            toObject
         JsName:          toObject
@@ -2936,7 +2936,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            toUInt32
         JsName:          toUInt32
@@ -2963,7 +2963,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
       - Name:            toRange
         JsName:          toRange
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2977,7 +2977,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
       - Name:            toRect
         JsName:          toRect
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -2991,7 +2991,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
       - Name:            toSize
         JsName:          toSize
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3005,7 +3005,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
       - Name:            'defineProperty:descriptor:'
         JsName:          definePropertyDescriptor
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSValue.h
@@ -3019,7 +3019,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -3036,7 +3036,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'hasProperty:'
         JsName:          hasProperty
@@ -3051,7 +3051,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setValue:atIndex:'
         JsName:          setValueAtIndex
@@ -3083,7 +3083,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'valueAtIndex:'
         JsName:          valueAtIndex
@@ -3097,7 +3097,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            ULong
       - Name:            'valueForProperty:'
@@ -3112,10 +3112,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'objectAtIndexedSubscript:'
         JsName:          objectAtIndexedSubscript
@@ -3129,7 +3129,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            ULong
       - Name:            'objectForKeyedSubscript:'
@@ -3144,7 +3144,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -3192,11 +3192,11 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Bool
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithDouble:inContext:'
         JsName:          valueWithDoubleInContext
@@ -3210,11 +3210,11 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Double
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithInt32:inContext:'
         JsName:          valueWithInt32InContext
@@ -3228,11 +3228,11 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Int
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithNewArrayInContext:'
         JsName:          valueWithNewArrayInContext
@@ -3246,10 +3246,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithNewErrorFromMessage:inContext:'
         JsName:          valueWithNewErrorFromMessageInContext
@@ -3263,13 +3263,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithNewObjectInContext:'
         JsName:          valueWithNewObjectInContext
@@ -3283,10 +3283,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithNewPromiseInContext:fromExecutor:'
         JsName:          valueWithNewPromiseInContextFromExecutor
@@ -3301,19 +3301,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          JSValue
+                Name:            JSValue
                 WithProtocols:   
               - Type:            Interface
-                JsName:          JSValue
+                Name:            JSValue
                 WithProtocols:   
       - Name:            'valueWithNewPromiseRejectedWithReason:inContext:'
         JsName:          valueWithNewPromiseRejectedWithReasonInContext
@@ -3328,12 +3328,12 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithNewPromiseResolvedWithResult:inContext:'
         JsName:          valueWithNewPromiseResolvedWithResultInContext
@@ -3348,12 +3348,12 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithNewRegularExpressionFromPattern:flags:inContext:'
         JsName:          valueWithNewRegularExpressionFromPatternFlagsInContext
@@ -3367,16 +3367,16 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithNewSymbolFromDescription:inContext:'
         JsName:          valueWithNewSymbolFromDescriptionInContext
@@ -3391,13 +3391,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithNullInContext:'
         JsName:          valueWithNullInContext
@@ -3411,10 +3411,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithObject:inContext:'
         JsName:          valueWithObjectInContext
@@ -3428,12 +3428,12 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithUInt32:inContext:'
         JsName:          valueWithUInt32InContext
@@ -3447,11 +3447,11 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            UInt
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithUndefinedInContext:'
         JsName:          valueWithUndefinedInContext
@@ -3465,10 +3465,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithPoint:inContext:'
         JsName:          valueWithPointInContext
@@ -3482,13 +3482,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithRange:inContext:'
         JsName:          valueWithRangeInContext
@@ -3502,13 +3502,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithRect:inContext:'
         JsName:          valueWithRectInContext
@@ -3522,13 +3522,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithSize:inContext:'
         JsName:          valueWithSizeInContext
@@ -3542,13 +3542,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
       - Name:            'valueWithJSValueRef:inContext:'
         JsName:          valueWithJSValueRefInContext
@@ -3562,13 +3562,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          JSValue
+            Name:            JSValue
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Void
           - Type:            Interface
-            JsName:          JSContext
+            Name:            JSContext
             WithProtocols:   
     InstanceProperties: 
       - Name:            context
@@ -3594,7 +3594,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          JSContext
+              Name:            JSContext
               WithProtocols:   
       - Name:            isArray
         JsName:          isArray
@@ -4510,7 +4510,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          JavaScriptCore.JSObjectRef
-      JsName:          JSClassDefinition
+      Name:            JSClassDefinition
   - Name:            kJSPropertyAttributeDontDelete
     JsName:          kJSPropertyAttributeDontDelete
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers/JSObjectRef.h

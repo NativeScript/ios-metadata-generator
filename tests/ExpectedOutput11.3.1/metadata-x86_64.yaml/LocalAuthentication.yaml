@@ -197,7 +197,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'evaluateAccessControl:operation:localizedReason:reply:'
         JsName:          evaluateAccessControlOperationLocalizedReasonReply
@@ -218,14 +218,14 @@ Items:
           - Type:            Enum
             Name:            LAAccessControlOperation
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'evaluatePolicy:localizedReason:reply:'
         JsName:          evaluatePolicyLocalizedReasonReply
@@ -243,14 +243,14 @@ Items:
           - Type:            Enum
             Name:            LAPolicy
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            invalidate
         JsName:          invalidate
@@ -294,7 +294,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Enum
             Name:            LACredentialType
@@ -351,7 +351,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            interactionNotAllowed
         JsName:          interactionNotAllowed
@@ -418,7 +418,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalizedCancelTitle:'
@@ -435,7 +435,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            localizedFallbackTitle
         JsName:          localizedFallbackTitle
@@ -462,7 +462,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalizedFallbackTitle:'
@@ -479,7 +479,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            localizedReason
         JsName:          localizedReason
@@ -506,7 +506,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalizedReason:'
@@ -523,7 +523,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maxBiometryFailures
         JsName:          maxBiometryFailures
@@ -550,7 +550,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setMaxBiometryFailures:'
@@ -567,7 +567,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            touchIDAuthenticationAllowableReuseDuration
         JsName:          touchIDAuthenticationAllowableReuseDuration
@@ -753,7 +753,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            LAErrorInvalidContext
     JsName:          LAErrorInvalidContext

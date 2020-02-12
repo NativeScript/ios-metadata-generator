@@ -109,7 +109,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNContact
+              Name:            CNContact
               WithProtocols:   
       - Name:            containerIdentifier
         JsName:          containerIdentifier
@@ -134,7 +134,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -176,7 +176,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            group
         JsName:          group
@@ -201,7 +201,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNGroup
+              Name:            CNGroup
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -243,7 +243,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNGroup
+              Name:            CNGroup
               WithProtocols:   
       - Name:            member
         JsName:          member
@@ -268,7 +268,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNContact
+              Name:            CNContact
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -310,7 +310,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNGroup
+              Name:            CNGroup
               WithProtocols:   
       - Name:            subgroup
         JsName:          subgroup
@@ -335,7 +335,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNGroup
+              Name:            CNGroup
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -377,7 +377,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -419,7 +419,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -500,7 +500,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNChangeHistoryAddContactEvent
+            Name:            CNChangeHistoryAddContactEvent
             WithProtocols:   
       - Name:            'visitAddGroupEvent:'
         JsName:          visitAddGroupEvent
@@ -515,7 +515,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNChangeHistoryAddGroupEvent
+            Name:            CNChangeHistoryAddGroupEvent
             WithProtocols:   
       - Name:            'visitAddMemberToGroupEvent:'
         JsName:          visitAddMemberToGroupEvent
@@ -530,7 +530,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNChangeHistoryAddMemberToGroupEvent
+            Name:            CNChangeHistoryAddMemberToGroupEvent
             WithProtocols:   
       - Name:            'visitAddSubgroupToGroupEvent:'
         JsName:          visitAddSubgroupToGroupEvent
@@ -545,7 +545,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNChangeHistoryAddSubgroupToGroupEvent
+            Name:            CNChangeHistoryAddSubgroupToGroupEvent
             WithProtocols:   
       - Name:            'visitDeleteContactEvent:'
         JsName:          visitDeleteContactEvent
@@ -560,7 +560,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNChangeHistoryDeleteContactEvent
+            Name:            CNChangeHistoryDeleteContactEvent
             WithProtocols:   
       - Name:            'visitDeleteGroupEvent:'
         JsName:          visitDeleteGroupEvent
@@ -575,7 +575,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNChangeHistoryDeleteGroupEvent
+            Name:            CNChangeHistoryDeleteGroupEvent
             WithProtocols:   
       - Name:            'visitDropEverythingEvent:'
         JsName:          visitDropEverythingEvent
@@ -590,7 +590,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNChangeHistoryDropEverythingEvent
+            Name:            CNChangeHistoryDropEverythingEvent
             WithProtocols:   
       - Name:            'visitRemoveMemberFromGroupEvent:'
         JsName:          visitRemoveMemberFromGroupEvent
@@ -605,7 +605,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNChangeHistoryRemoveMemberFromGroupEvent
+            Name:            CNChangeHistoryRemoveMemberFromGroupEvent
             WithProtocols:   
       - Name:            'visitRemoveSubgroupFromGroupEvent:'
         JsName:          visitRemoveSubgroupFromGroupEvent
@@ -620,7 +620,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNChangeHistoryRemoveSubgroupFromGroupEvent
+            Name:            CNChangeHistoryRemoveSubgroupFromGroupEvent
             WithProtocols:   
       - Name:            'visitUpdateContactEvent:'
         JsName:          visitUpdateContactEvent
@@ -635,7 +635,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNChangeHistoryUpdateContactEvent
+            Name:            CNChangeHistoryUpdateContactEvent
             WithProtocols:   
       - Name:            'visitUpdateGroupEvent:'
         JsName:          visitUpdateGroupEvent
@@ -650,7 +650,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNChangeHistoryUpdateGroupEvent
+            Name:            CNChangeHistoryUpdateGroupEvent
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -694,7 +694,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Id
                   WithProtocols:   
@@ -714,7 +714,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Id
                   WithProtocols:   
@@ -743,10 +743,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -763,10 +763,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            includeGroupChanges
@@ -903,7 +903,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setStartingToken:'
@@ -919,7 +919,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -962,7 +962,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNGroup
+              Name:            CNGroup
               WithProtocols:   
       - Name:            member
         JsName:          member
@@ -987,7 +987,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNContact
+              Name:            CNContact
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1029,7 +1029,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNGroup
+              Name:            CNGroup
               WithProtocols:   
       - Name:            subgroup
         JsName:          subgroup
@@ -1054,7 +1054,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNGroup
+              Name:            CNGroup
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1096,7 +1096,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNContact
+              Name:            CNContact
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1138,7 +1138,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNGroup
+              Name:            CNGroup
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1168,7 +1168,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -1187,7 +1187,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'isUnifiedWithContactWithIdentifier:'
         JsName:          isUnifiedWithContactWithIdentifier
@@ -1202,7 +1202,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'comparatorForNameSortOrder:'
@@ -1252,10 +1252,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'predicateForContactsInContainerWithIdentifier:'
         JsName:          predicateForContactsInContainerWithIdentifier
@@ -1269,10 +1269,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'predicateForContactsInGroupWithIdentifier:'
         JsName:          predicateForContactsInGroupWithIdentifier
@@ -1286,10 +1286,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'predicateForContactsMatchingEmailAddress:'
         JsName:          predicateForContactsMatchingEmailAddress
@@ -1304,10 +1304,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'predicateForContactsMatchingName:'
         JsName:          predicateForContactsMatchingName
@@ -1321,10 +1321,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'predicateForContactsMatchingPhoneNumber:'
         JsName:          predicateForContactsMatchingPhoneNumber
@@ -1339,10 +1339,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNPhoneNumber
+            Name:            CNPhoneNumber
             WithProtocols:   
       - Name:            'predicateForContactsWithIdentifiers:'
         JsName:          predicateForContactsWithIdentifiers
@@ -1356,13 +1356,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -1389,7 +1389,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
       - Name:            contactRelations
         JsName:          contactRelations
@@ -1414,13 +1414,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNContactRelation
+                      Name:            CNContactRelation
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -1471,13 +1471,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSDateComponents
+                      Name:            NSDateComponents
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -1504,7 +1504,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            emailAddresses
         JsName:          emailAddresses
@@ -1529,13 +1529,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -1562,7 +1562,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            givenName
         JsName:          givenName
@@ -1587,7 +1587,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -1612,7 +1612,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            imageData
         JsName:          imageData
@@ -1637,7 +1637,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            imageDataAvailable
         JsName:          imageDataAvailable
@@ -1687,13 +1687,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNInstantMessageAddress
+                      Name:            CNInstantMessageAddress
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -1720,7 +1720,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            middleName
         JsName:          middleName
@@ -1745,7 +1745,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            namePrefix
         JsName:          namePrefix
@@ -1770,7 +1770,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            nameSuffix
         JsName:          nameSuffix
@@ -1795,7 +1795,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            nickname
         JsName:          nickname
@@ -1820,7 +1820,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            nonGregorianBirthday
         JsName:          nonGregorianBirthday
@@ -1845,7 +1845,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
       - Name:            note
         JsName:          note
@@ -1870,7 +1870,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            organizationName
         JsName:          organizationName
@@ -1895,7 +1895,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            phoneNumbers
         JsName:          phoneNumbers
@@ -1920,13 +1920,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNPhoneNumber
+                      Name:            CNPhoneNumber
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -1953,7 +1953,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            phoneticGivenName
         JsName:          phoneticGivenName
@@ -1978,7 +1978,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            phoneticMiddleName
         JsName:          phoneticMiddleName
@@ -2003,7 +2003,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            phoneticOrganizationName
         JsName:          phoneticOrganizationName
@@ -2030,7 +2030,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            postalAddresses
         JsName:          postalAddresses
@@ -2055,13 +2055,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNPostalAddress
+                      Name:            CNPostalAddress
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -2088,7 +2088,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            socialProfiles
         JsName:          socialProfiles
@@ -2113,13 +2113,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNSocialProfile
+                      Name:            CNSocialProfile
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -2146,7 +2146,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            urlAddresses
         JsName:          urlAddresses
@@ -2171,13 +2171,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -2202,7 +2202,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactDatesKey
     JsName:          CNContactDatesKey
@@ -2217,7 +2217,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactDepartmentNameKey
     JsName:          CNContactDepartmentNameKey
@@ -2232,7 +2232,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactDisplayNameOrder
     JsName:          CNContactDisplayNameOrder
@@ -2299,7 +2299,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactFamilyNameKey
     JsName:          CNContactFamilyNameKey
@@ -2314,7 +2314,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactFetchRequest
     JsName:          CNContactFetchRequest
@@ -2341,7 +2341,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -2372,7 +2372,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Id
                   WithProtocols:   
@@ -2392,7 +2392,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Id
                   WithProtocols:   
@@ -2461,7 +2461,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
         Setter:          
           Name:            'setPredicate:'
@@ -2477,7 +2477,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
       - Name:            sortOrder
         JsName:          sortOrder
@@ -2583,13 +2583,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSAttributedString
+            Name:            NSAttributedString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
       - Name:            'stringFromContact:'
         JsName:          stringFromContact
@@ -2603,10 +2603,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
     StaticMethods:   
       - Name:            'attributedStringFromContact:style:defaultAttributes:'
@@ -2621,15 +2621,15 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSAttributedString
+            Name:            NSAttributedString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
           - Type:            Enum
             Name:            CNContactFormatterStyle
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
       - Name:            'delimiterForContact:'
         JsName:          delimiterForContact
@@ -2643,10 +2643,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
       - Name:            'descriptorForRequiredKeysForStyle:'
         JsName:          descriptorForRequiredKeysForStyle
@@ -2678,7 +2678,7 @@ Items:
           - Type:            Enum
             Name:            CNContactDisplayNameOrder
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
       - Name:            'stringFromContact:style:'
         JsName:          stringFromContactStyle
@@ -2692,10 +2692,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
           - Type:            Enum
             Name:            CNContactFormatterStyle
@@ -2795,7 +2795,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactIdentifierKey
     JsName:          CNContactIdentifierKey
@@ -2810,7 +2810,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactImageDataAvailableKey
     JsName:          CNContactImageDataAvailableKey
@@ -2825,7 +2825,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactImageDataKey
     JsName:          CNContactImageDataKey
@@ -2840,7 +2840,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactInstantMessageAddressesKey
     JsName:          CNContactInstantMessageAddressesKey
@@ -2855,7 +2855,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactJobTitleKey
     JsName:          CNContactJobTitleKey
@@ -2870,7 +2870,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactMiddleNameKey
     JsName:          CNContactMiddleNameKey
@@ -2885,7 +2885,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactNamePrefixKey
     JsName:          CNContactNamePrefixKey
@@ -2900,7 +2900,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactNameSuffixKey
     JsName:          CNContactNameSuffixKey
@@ -2915,7 +2915,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactNicknameKey
     JsName:          CNContactNicknameKey
@@ -2930,7 +2930,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactNonGregorianBirthdayKey
     JsName:          CNContactNonGregorianBirthdayKey
@@ -2945,7 +2945,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactNoteKey
     JsName:          CNContactNoteKey
@@ -2960,7 +2960,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactOrganizationNameKey
     JsName:          CNContactOrganizationNameKey
@@ -2975,7 +2975,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactPhoneNumbersKey
     JsName:          CNContactPhoneNumbersKey
@@ -2990,7 +2990,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactPhoneticFamilyNameKey
     JsName:          CNContactPhoneticFamilyNameKey
@@ -3005,7 +3005,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactPhoneticGivenNameKey
     JsName:          CNContactPhoneticGivenNameKey
@@ -3020,7 +3020,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactPhoneticMiddleNameKey
     JsName:          CNContactPhoneticMiddleNameKey
@@ -3035,7 +3035,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactPhoneticOrganizationNameKey
     JsName:          CNContactPhoneticOrganizationNameKey
@@ -3050,7 +3050,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactPostalAddressesKey
     JsName:          CNContactPostalAddressesKey
@@ -3065,7 +3065,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactPreviousFamilyNameKey
     JsName:          CNContactPreviousFamilyNameKey
@@ -3080,7 +3080,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactProperty
     JsName:          CNContactProperty
@@ -3119,7 +3119,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNContact
+              Name:            CNContact
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -3144,7 +3144,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            key
         JsName:          key
@@ -3169,7 +3169,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            label
         JsName:          label
@@ -3194,7 +3194,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            value
         JsName:          value
@@ -3237,7 +3237,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactPropertyNotFetchedExceptionName
     JsName:          CNContactPropertyNotFetchedExceptionName
@@ -3251,7 +3251,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactRelation
     JsName:          CNContactRelation
@@ -3278,7 +3278,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'contactRelationWithName:'
@@ -3294,7 +3294,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            name
@@ -3320,7 +3320,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3340,7 +3340,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactSocialProfilesKey
     JsName:          CNContactSocialProfilesKey
@@ -3355,7 +3355,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactSortOrder
     JsName:          CNContactSortOrder
@@ -3446,19 +3446,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CNContainer
+                Name:            CNContainer
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            defaultContainerIdentifier
         JsName:          defaultContainerIdentifier
@@ -3472,7 +3472,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'enumerateContactsWithFetchRequest:error:usingBlock:'
         JsName:          enumerateContactsWithFetchRequestErrorUsingBlock
@@ -3487,18 +3487,18 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          CNContactFetchRequest
+            Name:            CNContactFetchRequest
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          CNContact
+                Name:            CNContact
                 WithProtocols:   
               - Type:            Pointer
                 PointerType:     
@@ -3516,23 +3516,23 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CNFetchResult
+            Name:            CNFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSEnumerator
+                Name:            NSEnumerator
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CNChangeHistoryEvent
+                    Name:            CNChangeHistoryEvent
                     WithProtocols:   
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNChangeHistoryFetchRequest
+            Name:            CNChangeHistoryFetchRequest
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'enumeratorForContactFetchRequest:error:'
         JsName:          enumeratorForContactFetchRequestError
@@ -3547,23 +3547,23 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CNFetchResult
+            Name:            CNFetchResult
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSEnumerator
+                Name:            NSEnumerator
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          CNContact
+                    Name:            CNContact
                     WithProtocols:   
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNContactFetchRequest
+            Name:            CNContactFetchRequest
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'executeSaveRequest:error:'
         JsName:          executeSaveRequestError
@@ -3578,12 +3578,12 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          CNSaveRequest
+            Name:            CNSaveRequest
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'groupsMatchingPredicate:error:'
         JsName:          groupsMatchingPredicateError
@@ -3597,19 +3597,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CNGroup
+                Name:            CNGroup
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'requestAccessForEntityType:completionHandler:'
         JsName:          requestAccessForEntityTypeCompletionHandler
@@ -3630,7 +3630,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'unifiedContactsMatchingPredicate:keysToFetch:error:'
         JsName:          unifiedContactsMatchingPredicateKeysToFetchError
@@ -3644,17 +3644,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CNContact
+                Name:            CNContact
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -3663,7 +3663,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'unifiedContactWithIdentifier:keysToFetch:error:'
         JsName:          unifiedContactWithIdentifierKeysToFetchError
@@ -3677,13 +3677,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -3692,7 +3692,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
       - Name:            'authorizationStatusForEntityType:'
@@ -3736,7 +3736,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3754,7 +3754,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactThumbnailImageDataKey
     JsName:          CNContactThumbnailImageDataKey
@@ -3769,7 +3769,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactType
     JsName:          CNContactType
@@ -3801,7 +3801,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactTypeOrganization
     JsName:          CNContactTypeOrganization
@@ -3838,7 +3838,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContactVCardSerialization
     JsName:          CNContactVCardSerialization
@@ -3865,19 +3865,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CNContact
+                Name:            CNContact
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'dataWithContacts:error:'
         JsName:          dataWithContactsError
@@ -3891,19 +3891,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CNContact
+                Name:            CNContact
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            descriptorForRequiredKeys
         JsName:          descriptorForRequiredKeys
@@ -3972,7 +3972,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sortOrder
         JsName:          sortOrder
@@ -4026,10 +4026,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'predicateForContainerOfGroupWithIdentifier:'
         JsName:          predicateForContainerOfGroupWithIdentifier
@@ -4043,10 +4043,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'predicateForContainersWithIdentifiers:'
         JsName:          predicateForContainersWithIdentifiers
@@ -4060,13 +4060,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -4093,7 +4093,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -4118,7 +4118,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -4162,7 +4162,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContainerNameKey
     JsName:          CNContainerNameKey
@@ -4177,7 +4177,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContainerType
     JsName:          CNContainerType
@@ -4235,7 +4235,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNContainerTypeLocal
     JsName:          CNContainerTypeLocal
@@ -4656,7 +4656,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNErrorUserInfoAffectedRecordIdentifiersKey
     JsName:          CNErrorUserInfoAffectedRecordIdentifiersKey
@@ -4671,7 +4671,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNErrorUserInfoAffectedRecordsKey
     JsName:          CNErrorUserInfoAffectedRecordsKey
@@ -4686,7 +4686,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNErrorUserInfoKeyPathsKey
     JsName:          CNErrorUserInfoKeyPathsKey
@@ -4701,7 +4701,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNErrorUserInfoValidationErrorsKey
     JsName:          CNErrorUserInfoValidationErrorsKey
@@ -4716,7 +4716,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNFetchRequest
     JsName:          CNFetchRequest
@@ -4772,7 +4772,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            value
         JsName:          value
@@ -4829,10 +4829,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'predicateForGroupsWithIdentifiers:'
         JsName:          predicateForGroupsWithIdentifiers
@@ -4846,13 +4846,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -4879,7 +4879,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -4904,7 +4904,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4925,7 +4925,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNGroupNameKey
     JsName:          CNGroupNameKey
@@ -4940,7 +4940,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageAddress
     JsName:          CNInstantMessageAddress
@@ -4967,10 +4967,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'localizedStringForKey:'
@@ -4985,10 +4985,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'localizedStringForService:'
         JsName:          localizedStringForService
@@ -5002,10 +5002,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            service
@@ -5031,7 +5031,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            username
         JsName:          username
@@ -5056,7 +5056,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5076,7 +5076,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageAddressUsernameKey
     JsName:          CNInstantMessageAddressUsernameKey
@@ -5091,7 +5091,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageServiceAIM
     JsName:          CNInstantMessageServiceAIM
@@ -5106,7 +5106,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageServiceFacebook
     JsName:          CNInstantMessageServiceFacebook
@@ -5121,7 +5121,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageServiceGaduGadu
     JsName:          CNInstantMessageServiceGaduGadu
@@ -5136,7 +5136,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageServiceGoogleTalk
     JsName:          CNInstantMessageServiceGoogleTalk
@@ -5151,7 +5151,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageServiceICQ
     JsName:          CNInstantMessageServiceICQ
@@ -5166,7 +5166,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageServiceJabber
     JsName:          CNInstantMessageServiceJabber
@@ -5181,7 +5181,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageServiceMSN
     JsName:          CNInstantMessageServiceMSN
@@ -5196,7 +5196,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageServiceQQ
     JsName:          CNInstantMessageServiceQQ
@@ -5211,7 +5211,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageServiceSkype
     JsName:          CNInstantMessageServiceSkype
@@ -5226,7 +5226,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNInstantMessageServiceYahoo
     JsName:          CNInstantMessageServiceYahoo
@@ -5241,7 +5241,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNKeyDescriptor
     JsName:          CNKeyDescriptor
@@ -5274,7 +5274,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAunt
     JsName:          CNLabelContactRelationAunt
@@ -5289,7 +5289,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntFathersBrothersWife
     JsName:          CNLabelContactRelationAuntFathersBrothersWife
@@ -5304,7 +5304,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntFathersElderBrothersWife
     JsName:          CNLabelContactRelationAuntFathersElderBrothersWife
@@ -5319,7 +5319,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntFathersElderSister
     JsName:          CNLabelContactRelationAuntFathersElderSister
@@ -5334,7 +5334,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntFathersSister
     JsName:          CNLabelContactRelationAuntFathersSister
@@ -5349,7 +5349,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntFathersYoungerBrothersWife
     JsName:          CNLabelContactRelationAuntFathersYoungerBrothersWife
@@ -5364,7 +5364,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntFathersYoungerSister
     JsName:          CNLabelContactRelationAuntFathersYoungerSister
@@ -5379,7 +5379,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntMothersBrothersWife
     JsName:          CNLabelContactRelationAuntMothersBrothersWife
@@ -5394,7 +5394,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntMothersElderSister
     JsName:          CNLabelContactRelationAuntMothersElderSister
@@ -5409,7 +5409,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntMothersSister
     JsName:          CNLabelContactRelationAuntMothersSister
@@ -5424,7 +5424,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntMothersYoungerSister
     JsName:          CNLabelContactRelationAuntMothersYoungerSister
@@ -5439,7 +5439,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntParentsElderSister
     JsName:          CNLabelContactRelationAuntParentsElderSister
@@ -5454,7 +5454,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntParentsSister
     JsName:          CNLabelContactRelationAuntParentsSister
@@ -5469,7 +5469,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationAuntParentsYoungerSister
     JsName:          CNLabelContactRelationAuntParentsYoungerSister
@@ -5484,7 +5484,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationBoyfriend
     JsName:          CNLabelContactRelationBoyfriend
@@ -5499,7 +5499,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationBrother
     JsName:          CNLabelContactRelationBrother
@@ -5514,7 +5514,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationBrotherInLaw
     JsName:          CNLabelContactRelationBrotherInLaw
@@ -5529,7 +5529,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationBrotherInLawElderSistersHusband
     JsName:          CNLabelContactRelationBrotherInLawElderSistersHusband
@@ -5544,7 +5544,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationBrotherInLawHusbandsBrother
     JsName:          CNLabelContactRelationBrotherInLawHusbandsBrother
@@ -5559,7 +5559,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationBrotherInLawHusbandsSistersHusband
     JsName:          CNLabelContactRelationBrotherInLawHusbandsSistersHusband
@@ -5574,7 +5574,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationBrotherInLawSistersHusband
     JsName:          CNLabelContactRelationBrotherInLawSistersHusband
@@ -5589,7 +5589,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationBrotherInLawSpousesBrother
     JsName:          CNLabelContactRelationBrotherInLawSpousesBrother
@@ -5604,7 +5604,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationBrotherInLawWifesBrother
     JsName:          CNLabelContactRelationBrotherInLawWifesBrother
@@ -5619,7 +5619,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationBrotherInLawWifesSistersHusband
     JsName:          CNLabelContactRelationBrotherInLawWifesSistersHusband
@@ -5634,7 +5634,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationBrotherInLawYoungerSistersHusband
     JsName:          CNLabelContactRelationBrotherInLawYoungerSistersHusband
@@ -5649,7 +5649,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationChild
     JsName:          CNLabelContactRelationChild
@@ -5664,7 +5664,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationChildInLaw
     JsName:          CNLabelContactRelationChildInLaw
@@ -5679,7 +5679,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCoBrotherInLaw
     JsName:          CNLabelContactRelationCoBrotherInLaw
@@ -5694,7 +5694,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCoFatherInLaw
     JsName:          CNLabelContactRelationCoFatherInLaw
@@ -5709,7 +5709,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCoMotherInLaw
     JsName:          CNLabelContactRelationCoMotherInLaw
@@ -5724,7 +5724,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCoParentInLaw
     JsName:          CNLabelContactRelationCoParentInLaw
@@ -5739,7 +5739,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCoSiblingInLaw
     JsName:          CNLabelContactRelationCoSiblingInLaw
@@ -5754,7 +5754,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCoSisterInLaw
     JsName:          CNLabelContactRelationCoSisterInLaw
@@ -5769,7 +5769,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationColleague
     JsName:          CNLabelContactRelationColleague
@@ -5784,7 +5784,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousin
     JsName:          CNLabelContactRelationCousin
@@ -5799,7 +5799,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinFathersBrothersDaughter
     JsName:          CNLabelContactRelationCousinFathersBrothersDaughter
@@ -5814,7 +5814,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinFathersBrothersSon
     JsName:          CNLabelContactRelationCousinFathersBrothersSon
@@ -5829,7 +5829,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinFathersSistersDaughter
     JsName:          CNLabelContactRelationCousinFathersSistersDaughter
@@ -5844,7 +5844,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinFathersSistersSon
     JsName:          CNLabelContactRelationCousinFathersSistersSon
@@ -5859,7 +5859,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinGrandparentsSiblingsChild
     JsName:          CNLabelContactRelationCousinGrandparentsSiblingsChild
@@ -5874,7 +5874,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinGrandparentsSiblingsDaughter
     JsName:          CNLabelContactRelationCousinGrandparentsSiblingsDaughter
@@ -5889,7 +5889,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinGrandparentsSiblingsSon
     JsName:          CNLabelContactRelationCousinGrandparentsSiblingsSon
@@ -5904,7 +5904,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinMothersBrothersDaughter
     JsName:          CNLabelContactRelationCousinMothersBrothersDaughter
@@ -5919,7 +5919,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinMothersBrothersSon
     JsName:          CNLabelContactRelationCousinMothersBrothersSon
@@ -5934,7 +5934,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinMothersSistersDaughter
     JsName:          CNLabelContactRelationCousinMothersSistersDaughter
@@ -5949,7 +5949,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinMothersSistersSon
     JsName:          CNLabelContactRelationCousinMothersSistersSon
@@ -5964,7 +5964,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinOrSiblingsChild
     JsName:          CNLabelContactRelationCousinOrSiblingsChild
@@ -5979,7 +5979,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinParentsSiblingsChild
     JsName:          CNLabelContactRelationCousinParentsSiblingsChild
@@ -5994,7 +5994,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinParentsSiblingsDaughter
     JsName:          CNLabelContactRelationCousinParentsSiblingsDaughter
@@ -6009,7 +6009,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationCousinParentsSiblingsSon
     JsName:          CNLabelContactRelationCousinParentsSiblingsSon
@@ -6024,7 +6024,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationDaughter
     JsName:          CNLabelContactRelationDaughter
@@ -6039,7 +6039,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationDaughterInLaw
     JsName:          CNLabelContactRelationDaughterInLaw
@@ -6054,7 +6054,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationDaughterInLawOrSisterInLaw
     JsName:          CNLabelContactRelationDaughterInLawOrSisterInLaw
@@ -6069,7 +6069,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationDaughterInLawOrStepdaughter
     JsName:          CNLabelContactRelationDaughterInLawOrStepdaughter
@@ -6084,7 +6084,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderBrother
     JsName:          CNLabelContactRelationElderBrother
@@ -6099,7 +6099,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderBrotherInLaw
     JsName:          CNLabelContactRelationElderBrotherInLaw
@@ -6114,7 +6114,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousin
     JsName:          CNLabelContactRelationElderCousin
@@ -6129,7 +6129,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinFathersBrothersDaughter
     JsName:          CNLabelContactRelationElderCousinFathersBrothersDaughter
@@ -6144,7 +6144,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinFathersBrothersSon
     JsName:          CNLabelContactRelationElderCousinFathersBrothersSon
@@ -6159,7 +6159,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinFathersSistersDaughter
     JsName:          CNLabelContactRelationElderCousinFathersSistersDaughter
@@ -6174,7 +6174,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinFathersSistersSon
     JsName:          CNLabelContactRelationElderCousinFathersSistersSon
@@ -6189,7 +6189,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinMothersBrothersDaughter
     JsName:          CNLabelContactRelationElderCousinMothersBrothersDaughter
@@ -6204,7 +6204,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinMothersBrothersSon
     JsName:          CNLabelContactRelationElderCousinMothersBrothersSon
@@ -6219,7 +6219,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinMothersSiblingsDaughterOrFathersSistersDaughter
     JsName:          CNLabelContactRelationElderCousinMothersSiblingsDaughterOrFathersSistersDaughter
@@ -6234,7 +6234,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinMothersSiblingsSonOrFathersSistersSon
     JsName:          CNLabelContactRelationElderCousinMothersSiblingsSonOrFathersSistersSon
@@ -6249,7 +6249,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinMothersSistersDaughter
     JsName:          CNLabelContactRelationElderCousinMothersSistersDaughter
@@ -6264,7 +6264,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinMothersSistersSon
     JsName:          CNLabelContactRelationElderCousinMothersSistersSon
@@ -6279,7 +6279,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinParentsSiblingsDaughter
     JsName:          CNLabelContactRelationElderCousinParentsSiblingsDaughter
@@ -6294,7 +6294,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderCousinParentsSiblingsSon
     JsName:          CNLabelContactRelationElderCousinParentsSiblingsSon
@@ -6309,7 +6309,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderSibling
     JsName:          CNLabelContactRelationElderSibling
@@ -6324,7 +6324,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderSiblingInLaw
     JsName:          CNLabelContactRelationElderSiblingInLaw
@@ -6339,7 +6339,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderSister
     JsName:          CNLabelContactRelationElderSister
@@ -6354,7 +6354,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationElderSisterInLaw
     JsName:          CNLabelContactRelationElderSisterInLaw
@@ -6369,7 +6369,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationEldestBrother
     JsName:          CNLabelContactRelationEldestBrother
@@ -6384,7 +6384,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationEldestSister
     JsName:          CNLabelContactRelationEldestSister
@@ -6399,7 +6399,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationFather
     JsName:          CNLabelContactRelationFather
@@ -6414,7 +6414,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationFatherInLaw
     JsName:          CNLabelContactRelationFatherInLaw
@@ -6429,7 +6429,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationFatherInLawHusbandsFather
     JsName:          CNLabelContactRelationFatherInLawHusbandsFather
@@ -6444,7 +6444,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationFatherInLawOrStepfather
     JsName:          CNLabelContactRelationFatherInLawOrStepfather
@@ -6459,7 +6459,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationFatherInLawWifesFather
     JsName:          CNLabelContactRelationFatherInLawWifesFather
@@ -6474,7 +6474,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationFemaleCousin
     JsName:          CNLabelContactRelationFemaleCousin
@@ -6489,7 +6489,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationFemaleFriend
     JsName:          CNLabelContactRelationFemaleFriend
@@ -6504,7 +6504,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationFemalePartner
     JsName:          CNLabelContactRelationFemalePartner
@@ -6519,7 +6519,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationFriend
     JsName:          CNLabelContactRelationFriend
@@ -6534,7 +6534,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGirlfriend
     JsName:          CNLabelContactRelationGirlfriend
@@ -6549,7 +6549,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGirlfriendOrBoyfriend
     JsName:          CNLabelContactRelationGirlfriendOrBoyfriend
@@ -6564,7 +6564,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandaunt
     JsName:          CNLabelContactRelationGrandaunt
@@ -6579,7 +6579,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandchild
     JsName:          CNLabelContactRelationGrandchild
@@ -6594,7 +6594,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandchildOrSiblingsChild
     JsName:          CNLabelContactRelationGrandchildOrSiblingsChild
@@ -6609,7 +6609,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGranddaughter
     JsName:          CNLabelContactRelationGranddaughter
@@ -6624,7 +6624,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGranddaughterDaughtersDaughter
     JsName:          CNLabelContactRelationGranddaughterDaughtersDaughter
@@ -6639,7 +6639,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGranddaughterSonsDaughter
     JsName:          CNLabelContactRelationGranddaughterSonsDaughter
@@ -6654,7 +6654,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandfather
     JsName:          CNLabelContactRelationGrandfather
@@ -6669,7 +6669,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandfatherFathersFather
     JsName:          CNLabelContactRelationGrandfatherFathersFather
@@ -6684,7 +6684,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandfatherMothersFather
     JsName:          CNLabelContactRelationGrandfatherMothersFather
@@ -6699,7 +6699,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandmother
     JsName:          CNLabelContactRelationGrandmother
@@ -6714,7 +6714,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandmotherFathersMother
     JsName:          CNLabelContactRelationGrandmotherFathersMother
@@ -6729,7 +6729,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandmotherMothersMother
     JsName:          CNLabelContactRelationGrandmotherMothersMother
@@ -6744,7 +6744,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandnephew
     JsName:          CNLabelContactRelationGrandnephew
@@ -6759,7 +6759,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandnephewBrothersGrandson
     JsName:          CNLabelContactRelationGrandnephewBrothersGrandson
@@ -6774,7 +6774,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandnephewSistersGrandson
     JsName:          CNLabelContactRelationGrandnephewSistersGrandson
@@ -6789,7 +6789,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandniece
     JsName:          CNLabelContactRelationGrandniece
@@ -6804,7 +6804,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandnieceBrothersGranddaughter
     JsName:          CNLabelContactRelationGrandnieceBrothersGranddaughter
@@ -6819,7 +6819,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandnieceSistersGranddaughter
     JsName:          CNLabelContactRelationGrandnieceSistersGranddaughter
@@ -6834,7 +6834,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandparent
     JsName:          CNLabelContactRelationGrandparent
@@ -6849,7 +6849,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandson
     JsName:          CNLabelContactRelationGrandson
@@ -6864,7 +6864,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandsonDaughtersSon
     JsName:          CNLabelContactRelationGrandsonDaughtersSon
@@ -6879,7 +6879,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGrandsonSonsSon
     JsName:          CNLabelContactRelationGrandsonSonsSon
@@ -6894,7 +6894,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGranduncle
     JsName:          CNLabelContactRelationGranduncle
@@ -6909,7 +6909,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGreatGrandchild
     JsName:          CNLabelContactRelationGreatGrandchild
@@ -6924,7 +6924,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGreatGrandchildOrSiblingsGrandchild
     JsName:          CNLabelContactRelationGreatGrandchildOrSiblingsGrandchild
@@ -6939,7 +6939,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGreatGranddaughter
     JsName:          CNLabelContactRelationGreatGranddaughter
@@ -6954,7 +6954,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGreatGrandfather
     JsName:          CNLabelContactRelationGreatGrandfather
@@ -6969,7 +6969,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGreatGrandmother
     JsName:          CNLabelContactRelationGreatGrandmother
@@ -6984,7 +6984,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGreatGrandparent
     JsName:          CNLabelContactRelationGreatGrandparent
@@ -6999,7 +6999,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationGreatGrandson
     JsName:          CNLabelContactRelationGreatGrandson
@@ -7014,7 +7014,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationHusband
     JsName:          CNLabelContactRelationHusband
@@ -7029,7 +7029,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationMaleCousin
     JsName:          CNLabelContactRelationMaleCousin
@@ -7044,7 +7044,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationMaleFriend
     JsName:          CNLabelContactRelationMaleFriend
@@ -7059,7 +7059,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationMalePartner
     JsName:          CNLabelContactRelationMalePartner
@@ -7074,7 +7074,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationManager
     JsName:          CNLabelContactRelationManager
@@ -7089,7 +7089,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationMother
     JsName:          CNLabelContactRelationMother
@@ -7104,7 +7104,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationMotherInLaw
     JsName:          CNLabelContactRelationMotherInLaw
@@ -7119,7 +7119,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationMotherInLawHusbandsMother
     JsName:          CNLabelContactRelationMotherInLawHusbandsMother
@@ -7134,7 +7134,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationMotherInLawOrStepmother
     JsName:          CNLabelContactRelationMotherInLawOrStepmother
@@ -7149,7 +7149,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationMotherInLawWifesMother
     JsName:          CNLabelContactRelationMotherInLawWifesMother
@@ -7164,7 +7164,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNephew
     JsName:          CNLabelContactRelationNephew
@@ -7179,7 +7179,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNephewBrothersSon
     JsName:          CNLabelContactRelationNephewBrothersSon
@@ -7194,7 +7194,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNephewBrothersSonOrHusbandsSiblingsSon
     JsName:          CNLabelContactRelationNephewBrothersSonOrHusbandsSiblingsSon
@@ -7209,7 +7209,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNephewOrCousin
     JsName:          CNLabelContactRelationNephewOrCousin
@@ -7224,7 +7224,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNephewSistersSon
     JsName:          CNLabelContactRelationNephewSistersSon
@@ -7239,7 +7239,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNephewSistersSonOrWifesSiblingsSon
     JsName:          CNLabelContactRelationNephewSistersSonOrWifesSiblingsSon
@@ -7254,7 +7254,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNiece
     JsName:          CNLabelContactRelationNiece
@@ -7269,7 +7269,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNieceBrothersDaughter
     JsName:          CNLabelContactRelationNieceBrothersDaughter
@@ -7284,7 +7284,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNieceBrothersDaughterOrHusbandsSiblingsDaughter
     JsName:          CNLabelContactRelationNieceBrothersDaughterOrHusbandsSiblingsDaughter
@@ -7299,7 +7299,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNieceOrCousin
     JsName:          CNLabelContactRelationNieceOrCousin
@@ -7314,7 +7314,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNieceSistersDaughter
     JsName:          CNLabelContactRelationNieceSistersDaughter
@@ -7329,7 +7329,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationNieceSistersDaughterOrWifesSiblingsDaughter
     JsName:          CNLabelContactRelationNieceSistersDaughterOrWifesSiblingsDaughter
@@ -7344,7 +7344,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationParent
     JsName:          CNLabelContactRelationParent
@@ -7359,7 +7359,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationParentInLaw
     JsName:          CNLabelContactRelationParentInLaw
@@ -7374,7 +7374,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationParentsElderSibling
     JsName:          CNLabelContactRelationParentsElderSibling
@@ -7389,7 +7389,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationParentsSibling
     JsName:          CNLabelContactRelationParentsSibling
@@ -7404,7 +7404,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationParentsSiblingFathersElderSibling
     JsName:          CNLabelContactRelationParentsSiblingFathersElderSibling
@@ -7419,7 +7419,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationParentsSiblingFathersSibling
     JsName:          CNLabelContactRelationParentsSiblingFathersSibling
@@ -7434,7 +7434,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationParentsSiblingFathersYoungerSibling
     JsName:          CNLabelContactRelationParentsSiblingFathersYoungerSibling
@@ -7449,7 +7449,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationParentsSiblingMothersElderSibling
     JsName:          CNLabelContactRelationParentsSiblingMothersElderSibling
@@ -7464,7 +7464,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationParentsSiblingMothersSibling
     JsName:          CNLabelContactRelationParentsSiblingMothersSibling
@@ -7479,7 +7479,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationParentsSiblingMothersYoungerSibling
     JsName:          CNLabelContactRelationParentsSiblingMothersYoungerSibling
@@ -7494,7 +7494,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationParentsYoungerSibling
     JsName:          CNLabelContactRelationParentsYoungerSibling
@@ -7509,7 +7509,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationPartner
     JsName:          CNLabelContactRelationPartner
@@ -7524,7 +7524,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSibling
     JsName:          CNLabelContactRelationSibling
@@ -7539,7 +7539,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSiblingInLaw
     JsName:          CNLabelContactRelationSiblingInLaw
@@ -7554,7 +7554,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSiblingsChild
     JsName:          CNLabelContactRelationSiblingsChild
@@ -7569,7 +7569,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSister
     JsName:          CNLabelContactRelationSister
@@ -7584,7 +7584,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSisterInLaw
     JsName:          CNLabelContactRelationSisterInLaw
@@ -7599,7 +7599,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSisterInLawBrothersWife
     JsName:          CNLabelContactRelationSisterInLawBrothersWife
@@ -7614,7 +7614,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSisterInLawElderBrothersWife
     JsName:          CNLabelContactRelationSisterInLawElderBrothersWife
@@ -7629,7 +7629,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSisterInLawHusbandsBrothersWife
     JsName:          CNLabelContactRelationSisterInLawHusbandsBrothersWife
@@ -7644,7 +7644,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSisterInLawHusbandsSister
     JsName:          CNLabelContactRelationSisterInLawHusbandsSister
@@ -7659,7 +7659,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSisterInLawSpousesSister
     JsName:          CNLabelContactRelationSisterInLawSpousesSister
@@ -7674,7 +7674,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSisterInLawWifesBrothersWife
     JsName:          CNLabelContactRelationSisterInLawWifesBrothersWife
@@ -7689,7 +7689,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSisterInLawWifesSister
     JsName:          CNLabelContactRelationSisterInLawWifesSister
@@ -7704,7 +7704,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSisterInLawYoungerBrothersWife
     JsName:          CNLabelContactRelationSisterInLawYoungerBrothersWife
@@ -7719,7 +7719,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSon
     JsName:          CNLabelContactRelationSon
@@ -7734,7 +7734,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSonInLaw
     JsName:          CNLabelContactRelationSonInLaw
@@ -7749,7 +7749,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSonInLawOrBrotherInLaw
     JsName:          CNLabelContactRelationSonInLawOrBrotherInLaw
@@ -7764,7 +7764,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSonInLawOrStepson
     JsName:          CNLabelContactRelationSonInLawOrStepson
@@ -7779,7 +7779,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationSpouse
     JsName:          CNLabelContactRelationSpouse
@@ -7794,7 +7794,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationStepbrother
     JsName:          CNLabelContactRelationStepbrother
@@ -7809,7 +7809,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationStepchild
     JsName:          CNLabelContactRelationStepchild
@@ -7824,7 +7824,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationStepdaughter
     JsName:          CNLabelContactRelationStepdaughter
@@ -7839,7 +7839,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationStepfather
     JsName:          CNLabelContactRelationStepfather
@@ -7854,7 +7854,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationStepmother
     JsName:          CNLabelContactRelationStepmother
@@ -7869,7 +7869,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationStepparent
     JsName:          CNLabelContactRelationStepparent
@@ -7884,7 +7884,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationStepsister
     JsName:          CNLabelContactRelationStepsister
@@ -7899,7 +7899,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationStepson
     JsName:          CNLabelContactRelationStepson
@@ -7914,7 +7914,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationTeacher
     JsName:          CNLabelContactRelationTeacher
@@ -7929,7 +7929,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncle
     JsName:          CNLabelContactRelationUncle
@@ -7944,7 +7944,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleFathersBrother
     JsName:          CNLabelContactRelationUncleFathersBrother
@@ -7959,7 +7959,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleFathersElderBrother
     JsName:          CNLabelContactRelationUncleFathersElderBrother
@@ -7974,7 +7974,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleFathersElderSistersHusband
     JsName:          CNLabelContactRelationUncleFathersElderSistersHusband
@@ -7989,7 +7989,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleFathersSistersHusband
     JsName:          CNLabelContactRelationUncleFathersSistersHusband
@@ -8004,7 +8004,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleFathersYoungerBrother
     JsName:          CNLabelContactRelationUncleFathersYoungerBrother
@@ -8019,7 +8019,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleFathersYoungerSistersHusband
     JsName:          CNLabelContactRelationUncleFathersYoungerSistersHusband
@@ -8034,7 +8034,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleMothersBrother
     JsName:          CNLabelContactRelationUncleMothersBrother
@@ -8049,7 +8049,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleMothersElderBrother
     JsName:          CNLabelContactRelationUncleMothersElderBrother
@@ -8064,7 +8064,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleMothersSistersHusband
     JsName:          CNLabelContactRelationUncleMothersSistersHusband
@@ -8079,7 +8079,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleMothersYoungerBrother
     JsName:          CNLabelContactRelationUncleMothersYoungerBrother
@@ -8094,7 +8094,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleParentsBrother
     JsName:          CNLabelContactRelationUncleParentsBrother
@@ -8109,7 +8109,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleParentsElderBrother
     JsName:          CNLabelContactRelationUncleParentsElderBrother
@@ -8124,7 +8124,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationUncleParentsYoungerBrother
     JsName:          CNLabelContactRelationUncleParentsYoungerBrother
@@ -8139,7 +8139,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationWife
     JsName:          CNLabelContactRelationWife
@@ -8154,7 +8154,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerBrother
     JsName:          CNLabelContactRelationYoungerBrother
@@ -8169,7 +8169,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerBrotherInLaw
     JsName:          CNLabelContactRelationYoungerBrotherInLaw
@@ -8184,7 +8184,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousin
     JsName:          CNLabelContactRelationYoungerCousin
@@ -8199,7 +8199,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinFathersBrothersDaughter
     JsName:          CNLabelContactRelationYoungerCousinFathersBrothersDaughter
@@ -8214,7 +8214,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinFathersBrothersSon
     JsName:          CNLabelContactRelationYoungerCousinFathersBrothersSon
@@ -8229,7 +8229,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinFathersSistersDaughter
     JsName:          CNLabelContactRelationYoungerCousinFathersSistersDaughter
@@ -8244,7 +8244,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinFathersSistersSon
     JsName:          CNLabelContactRelationYoungerCousinFathersSistersSon
@@ -8259,7 +8259,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinMothersBrothersDaughter
     JsName:          CNLabelContactRelationYoungerCousinMothersBrothersDaughter
@@ -8274,7 +8274,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinMothersBrothersSon
     JsName:          CNLabelContactRelationYoungerCousinMothersBrothersSon
@@ -8289,7 +8289,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinMothersSiblingsDaughterOrFathersSistersDaughter
     JsName:          CNLabelContactRelationYoungerCousinMothersSiblingsDaughterOrFathersSistersDaughter
@@ -8304,7 +8304,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinMothersSiblingsSonOrFathersSistersSon
     JsName:          CNLabelContactRelationYoungerCousinMothersSiblingsSonOrFathersSistersSon
@@ -8319,7 +8319,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinMothersSistersDaughter
     JsName:          CNLabelContactRelationYoungerCousinMothersSistersDaughter
@@ -8334,7 +8334,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinMothersSistersSon
     JsName:          CNLabelContactRelationYoungerCousinMothersSistersSon
@@ -8349,7 +8349,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinParentsSiblingsDaughter
     JsName:          CNLabelContactRelationYoungerCousinParentsSiblingsDaughter
@@ -8364,7 +8364,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerCousinParentsSiblingsSon
     JsName:          CNLabelContactRelationYoungerCousinParentsSiblingsSon
@@ -8379,7 +8379,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerSibling
     JsName:          CNLabelContactRelationYoungerSibling
@@ -8394,7 +8394,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerSiblingInLaw
     JsName:          CNLabelContactRelationYoungerSiblingInLaw
@@ -8409,7 +8409,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerSister
     JsName:          CNLabelContactRelationYoungerSister
@@ -8424,7 +8424,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungerSisterInLaw
     JsName:          CNLabelContactRelationYoungerSisterInLaw
@@ -8439,7 +8439,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungestBrother
     JsName:          CNLabelContactRelationYoungestBrother
@@ -8454,7 +8454,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelContactRelationYoungestSister
     JsName:          CNLabelContactRelationYoungestSister
@@ -8469,7 +8469,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelDateAnniversary
     JsName:          CNLabelDateAnniversary
@@ -8484,7 +8484,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelEmailiCloud
     JsName:          CNLabelEmailiCloud
@@ -8499,7 +8499,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelHome
     JsName:          CNLabelHome
@@ -8514,7 +8514,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelOther
     JsName:          CNLabelOther
@@ -8529,7 +8529,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelPhoneNumberHomeFax
     JsName:          CNLabelPhoneNumberHomeFax
@@ -8544,7 +8544,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelPhoneNumberMain
     JsName:          CNLabelPhoneNumberMain
@@ -8559,7 +8559,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelPhoneNumberMobile
     JsName:          CNLabelPhoneNumberMobile
@@ -8574,7 +8574,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelPhoneNumberOtherFax
     JsName:          CNLabelPhoneNumberOtherFax
@@ -8589,7 +8589,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelPhoneNumberPager
     JsName:          CNLabelPhoneNumberPager
@@ -8604,7 +8604,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelPhoneNumberWorkFax
     JsName:          CNLabelPhoneNumberWorkFax
@@ -8619,7 +8619,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelPhoneNumberiPhone
     JsName:          CNLabelPhoneNumberiPhone
@@ -8634,7 +8634,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelSchool
     JsName:          CNLabelSchool
@@ -8649,7 +8649,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelURLAddressHomePage
     JsName:          CNLabelURLAddressHomePage
@@ -8664,7 +8664,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabelWork
     JsName:          CNLabelWork
@@ -8679,7 +8679,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNLabeledValue
     JsName:          CNLabeledValue
@@ -8706,7 +8706,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            TypeArgument
             Name:            ValueType
@@ -8728,7 +8728,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'labeledValueBySettingLabel:value:'
         JsName:          labeledValueBySettingLabelValue
@@ -8743,7 +8743,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            TypeArgument
             Name:            ValueType
@@ -8785,7 +8785,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            TypeArgument
             Name:            ValueType
@@ -8806,10 +8806,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            identifier
@@ -8835,7 +8835,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            label
         JsName:          label
@@ -8860,7 +8860,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            value
         JsName:          value
@@ -8933,7 +8933,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
         Setter:          
           Name:            'setBirthday:'
@@ -8949,7 +8949,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
       - Name:            contactRelations
         JsName:          contactRelations
@@ -8974,13 +8974,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNContactRelation
+                      Name:            CNContactRelation
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -8998,13 +8998,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNContactRelation
+                      Name:            CNContactRelation
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -9070,13 +9070,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSDateComponents
+                      Name:            NSDateComponents
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -9094,13 +9094,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSDateComponents
+                      Name:            NSDateComponents
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -9127,7 +9127,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setDepartmentName:'
@@ -9143,7 +9143,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            emailAddresses
         JsName:          emailAddresses
@@ -9168,13 +9168,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -9192,13 +9192,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -9225,7 +9225,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setFamilyName:'
@@ -9241,7 +9241,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            givenName
         JsName:          givenName
@@ -9266,7 +9266,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setGivenName:'
@@ -9282,7 +9282,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            imageData
         JsName:          imageData
@@ -9307,7 +9307,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setImageData:'
@@ -9323,7 +9323,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            instantMessageAddresses
         JsName:          instantMessageAddresses
@@ -9348,13 +9348,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNInstantMessageAddress
+                      Name:            CNInstantMessageAddress
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -9372,13 +9372,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNInstantMessageAddress
+                      Name:            CNInstantMessageAddress
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -9405,7 +9405,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setJobTitle:'
@@ -9421,7 +9421,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            middleName
         JsName:          middleName
@@ -9446,7 +9446,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMiddleName:'
@@ -9462,7 +9462,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            namePrefix
         JsName:          namePrefix
@@ -9487,7 +9487,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setNamePrefix:'
@@ -9503,7 +9503,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            nameSuffix
         JsName:          nameSuffix
@@ -9528,7 +9528,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setNameSuffix:'
@@ -9544,7 +9544,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            nickname
         JsName:          nickname
@@ -9569,7 +9569,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setNickname:'
@@ -9585,7 +9585,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            nonGregorianBirthday
         JsName:          nonGregorianBirthday
@@ -9610,7 +9610,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
         Setter:          
           Name:            'setNonGregorianBirthday:'
@@ -9626,7 +9626,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
       - Name:            note
         JsName:          note
@@ -9651,7 +9651,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setNote:'
@@ -9667,7 +9667,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            organizationName
         JsName:          organizationName
@@ -9692,7 +9692,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setOrganizationName:'
@@ -9708,7 +9708,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            phoneNumbers
         JsName:          phoneNumbers
@@ -9733,13 +9733,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNPhoneNumber
+                      Name:            CNPhoneNumber
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -9757,13 +9757,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNPhoneNumber
+                      Name:            CNPhoneNumber
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -9790,7 +9790,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPhoneticFamilyName:'
@@ -9806,7 +9806,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            phoneticGivenName
         JsName:          phoneticGivenName
@@ -9831,7 +9831,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPhoneticGivenName:'
@@ -9847,7 +9847,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            phoneticMiddleName
         JsName:          phoneticMiddleName
@@ -9872,7 +9872,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPhoneticMiddleName:'
@@ -9888,7 +9888,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            phoneticOrganizationName
         JsName:          phoneticOrganizationName
@@ -9913,7 +9913,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPhoneticOrganizationName:'
@@ -9929,7 +9929,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            postalAddresses
         JsName:          postalAddresses
@@ -9954,13 +9954,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNPostalAddress
+                      Name:            CNPostalAddress
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -9978,13 +9978,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNPostalAddress
+                      Name:            CNPostalAddress
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -10011,7 +10011,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPreviousFamilyName:'
@@ -10027,7 +10027,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            socialProfiles
         JsName:          socialProfiles
@@ -10052,13 +10052,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNSocialProfile
+                      Name:            CNSocialProfile
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -10076,13 +10076,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          CNSocialProfile
+                      Name:            CNSocialProfile
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -10109,13 +10109,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -10133,13 +10133,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CNLabeledValue
+                  Name:            CNLabeledValue
                   TypeParameters:  
                     - Type:            Interface
-                      JsName:          NSString
+                      Name:            NSString
                       WithProtocols:   
                   WithProtocols:   
               WithProtocols:   
@@ -10183,7 +10183,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -10199,7 +10199,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10241,7 +10241,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCity:'
@@ -10257,7 +10257,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            country
         JsName:          country
@@ -10282,7 +10282,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCountry:'
@@ -10298,7 +10298,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            ISOCountryCode
         JsName:          ISOCountryCode
@@ -10323,7 +10323,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setISOCountryCode:'
@@ -10339,7 +10339,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            postalCode
         JsName:          postalCode
@@ -10364,7 +10364,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPostalCode:'
@@ -10380,7 +10380,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            state
         JsName:          state
@@ -10405,7 +10405,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setState:'
@@ -10421,7 +10421,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            street
         JsName:          street
@@ -10446,7 +10446,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setStreet:'
@@ -10462,7 +10462,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subAdministrativeArea
         JsName:          subAdministrativeArea
@@ -10489,7 +10489,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSubAdministrativeArea:'
@@ -10506,7 +10506,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subLocality
         JsName:          subLocality
@@ -10533,7 +10533,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSubLocality:'
@@ -10550,7 +10550,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10580,7 +10580,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'phoneNumberWithStringValue:'
@@ -10596,7 +10596,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            stringValue
@@ -10622,7 +10622,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10654,10 +10654,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            city
@@ -10683,7 +10683,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            country
         JsName:          country
@@ -10708,7 +10708,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            ISOCountryCode
         JsName:          ISOCountryCode
@@ -10733,7 +10733,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            postalCode
         JsName:          postalCode
@@ -10758,7 +10758,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            state
         JsName:          state
@@ -10783,7 +10783,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            street
         JsName:          street
@@ -10808,7 +10808,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subAdministrativeArea
         JsName:          subAdministrativeArea
@@ -10835,7 +10835,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subLocality
         JsName:          subLocality
@@ -10862,7 +10862,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10883,7 +10883,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNPostalAddressCountryKey
     JsName:          CNPostalAddressCountryKey
@@ -10898,7 +10898,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNPostalAddressFormatter
     JsName:          CNPostalAddressFormatter
@@ -10924,13 +10924,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSAttributedString
+            Name:            NSAttributedString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNPostalAddress
+            Name:            CNPostalAddress
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
       - Name:            'stringFromPostalAddress:'
         JsName:          stringFromPostalAddress
@@ -10944,10 +10944,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNPostalAddress
+            Name:            CNPostalAddress
             WithProtocols:   
     StaticMethods:   
       - Name:            'attributedStringFromPostalAddress:style:withDefaultAttributes:'
@@ -10962,15 +10962,15 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSAttributedString
+            Name:            NSAttributedString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNPostalAddress
+            Name:            CNPostalAddress
             WithProtocols:   
           - Type:            Enum
             Name:            CNPostalAddressFormatterStyle
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
       - Name:            'stringFromPostalAddress:style:'
         JsName:          stringFromPostalAddressStyle
@@ -10984,10 +10984,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNPostalAddress
+            Name:            CNPostalAddress
             WithProtocols:   
           - Type:            Enum
             Name:            CNPostalAddressFormatterStyle
@@ -11073,7 +11073,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNPostalAddressLocalizedPropertyNameAttribute
     JsName:          CNPostalAddressLocalizedPropertyNameAttribute
@@ -11087,7 +11087,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNPostalAddressPostalCodeKey
     JsName:          CNPostalAddressPostalCodeKey
@@ -11102,7 +11102,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNPostalAddressPropertyAttribute
     JsName:          CNPostalAddressPropertyAttribute
@@ -11116,7 +11116,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNPostalAddressStateKey
     JsName:          CNPostalAddressStateKey
@@ -11131,7 +11131,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNPostalAddressStreetKey
     JsName:          CNPostalAddressStreetKey
@@ -11146,7 +11146,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNPostalAddressSubAdministrativeAreaKey
     JsName:          CNPostalAddressSubAdministrativeAreaKey
@@ -11161,7 +11161,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNPostalAddressSubLocalityKey
     JsName:          CNPostalAddressSubLocalityKey
@@ -11176,7 +11176,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSaveRequest
     JsName:          CNSaveRequest
@@ -11203,10 +11203,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNMutableContact
+            Name:            CNMutableContact
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'addGroup:toContainerWithIdentifier:'
         JsName:          addGroupToContainerWithIdentifier
@@ -11221,10 +11221,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNMutableGroup
+            Name:            CNMutableGroup
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'addMember:toGroup:'
         JsName:          addMemberToGroup
@@ -11239,10 +11239,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNGroup
+            Name:            CNGroup
             WithProtocols:   
       - Name:            'deleteContact:'
         JsName:          deleteContact
@@ -11257,7 +11257,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNMutableContact
+            Name:            CNMutableContact
             WithProtocols:   
       - Name:            'deleteGroup:'
         JsName:          deleteGroup
@@ -11272,7 +11272,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNMutableGroup
+            Name:            CNMutableGroup
             WithProtocols:   
       - Name:            'removeMember:fromGroup:'
         JsName:          removeMemberFromGroup
@@ -11287,10 +11287,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNContact
+            Name:            CNContact
             WithProtocols:   
           - Type:            Interface
-            JsName:          CNGroup
+            Name:            CNGroup
             WithProtocols:   
       - Name:            'updateContact:'
         JsName:          updateContact
@@ -11305,7 +11305,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNMutableContact
+            Name:            CNMutableContact
             WithProtocols:   
       - Name:            'updateGroup:'
         JsName:          updateGroup
@@ -11320,7 +11320,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CNMutableGroup
+            Name:            CNMutableGroup
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -11352,16 +11352,16 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'localizedStringForKey:'
@@ -11376,10 +11376,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'localizedStringForService:'
         JsName:          localizedStringForService
@@ -11393,10 +11393,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            service
@@ -11422,7 +11422,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            urlString
         JsName:          urlString
@@ -11447,7 +11447,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            userIdentifier
         JsName:          userIdentifier
@@ -11472,7 +11472,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            username
         JsName:          username
@@ -11497,7 +11497,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -11517,7 +11517,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileServiceFlickr
     JsName:          CNSocialProfileServiceFlickr
@@ -11532,7 +11532,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileServiceGameCenter
     JsName:          CNSocialProfileServiceGameCenter
@@ -11547,7 +11547,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileServiceKey
     JsName:          CNSocialProfileServiceKey
@@ -11562,7 +11562,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileServiceLinkedIn
     JsName:          CNSocialProfileServiceLinkedIn
@@ -11577,7 +11577,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileServiceMySpace
     JsName:          CNSocialProfileServiceMySpace
@@ -11592,7 +11592,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileServiceSinaWeibo
     JsName:          CNSocialProfileServiceSinaWeibo
@@ -11607,7 +11607,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileServiceTencentWeibo
     JsName:          CNSocialProfileServiceTencentWeibo
@@ -11622,7 +11622,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileServiceTwitter
     JsName:          CNSocialProfileServiceTwitter
@@ -11637,7 +11637,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileServiceYelp
     JsName:          CNSocialProfileServiceYelp
@@ -11652,7 +11652,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileURLStringKey
     JsName:          CNSocialProfileURLStringKey
@@ -11667,7 +11667,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileUserIdentifierKey
     JsName:          CNSocialProfileUserIdentifierKey
@@ -11682,7 +11682,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CNSocialProfileUsernameKey
     JsName:          CNSocialProfileUsernameKey
@@ -11697,6 +11697,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

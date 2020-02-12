@@ -66,15 +66,15 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            UInt
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            UInt
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'registerArcadeAppWithRandomFromLib:randomFromLibLength:resultHandler:'
         JsName:          registerArcadeAppWithRandomFromLibRandomFromLibLengthResultHandler
@@ -89,22 +89,22 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            UInt
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            UInt
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            UInt
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            repairArcadeApp
         JsName:          repairArcadeApp
@@ -200,7 +200,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKCloudServiceCapability
     JsName:          SKCloudServiceCapability
@@ -299,7 +299,7 @@ Items:
               - Type:            Enum
                 Name:            SKCloudServiceCapability
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestPersonalizationTokenForClientToken:withCompletionHandler:'
         JsName:          requestPersonalizationTokenForClientTokenWithCompletionHandler
@@ -315,16 +315,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestStorefrontCountryCodeWithCompletionHandler:'
         JsName:          requestStorefrontCountryCodeWithCompletionHandler
@@ -343,10 +343,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestStorefrontIdentifierWithCompletionHandler:'
         JsName:          requestStorefrontIdentifierWithCompletionHandler
@@ -365,10 +365,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestUserTokenForDeveloperToken:completionHandler:'
         JsName:          requestUserTokenForDeveloperTokenCompletionHandler
@@ -384,16 +384,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            authorizationStatus
@@ -445,7 +445,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKCloudServiceSetupMessageIdentifierAddMusic
     JsName:          SKCloudServiceSetupMessageIdentifierAddMusic
@@ -460,7 +460,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKCloudServiceSetupMessageIdentifierConnect
     JsName:          SKCloudServiceSetupMessageIdentifierConnect
@@ -475,7 +475,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKCloudServiceSetupMessageIdentifierJoin
     JsName:          SKCloudServiceSetupMessageIdentifierJoin
@@ -490,7 +490,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKCloudServiceSetupMessageIdentifierPlayMusic
     JsName:          SKCloudServiceSetupMessageIdentifierPlayMusic
@@ -505,7 +505,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKCloudServiceSetupOptionsActionKey
     JsName:          SKCloudServiceSetupOptionsActionKey
@@ -520,7 +520,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKCloudServiceSetupOptionsAffiliateTokenKey
     JsName:          SKCloudServiceSetupOptionsAffiliateTokenKey
@@ -535,7 +535,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKCloudServiceSetupOptionsCampaignTokenKey
     JsName:          SKCloudServiceSetupOptionsCampaignTokenKey
@@ -550,7 +550,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKCloudServiceSetupOptionsITunesItemIdentifierKey
     JsName:          SKCloudServiceSetupOptionsITunesItemIdentifierKey
@@ -565,7 +565,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKCloudServiceSetupOptionsMessageIdentifierKey
     JsName:          SKCloudServiceSetupOptionsMessageIdentifierKey
@@ -580,7 +580,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKCloudServiceSetupViewController
     JsName:          SKCloudServiceSetupViewController
@@ -608,10 +608,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -621,7 +621,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -697,7 +697,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKCloudServiceSetupViewController
+            Name:            SKCloudServiceSetupViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -743,7 +743,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            contentLength
         JsName:          contentLength
@@ -795,7 +795,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            contentVersion
         JsName:          contentVersion
@@ -822,7 +822,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            downloadState
         JsName:          downloadState
@@ -875,7 +875,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            expectedContentLength
         JsName:          expectedContentLength
@@ -1003,7 +1003,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SKPaymentTransaction
+              Name:            SKPaymentTransaction
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1215,7 +1215,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKErrorInvalidOfferIdentifier
     JsName:          SKErrorInvalidOfferIdentifier
@@ -1384,7 +1384,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setApplicationUsername:'
@@ -1401,7 +1401,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            paymentDiscount
         JsName:          paymentDiscount
@@ -1428,7 +1428,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SKPaymentDiscount
+              Name:            SKPaymentDiscount
               WithProtocols:   
         Setter:          
           Name:            'setPaymentDiscount:'
@@ -1445,7 +1445,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          SKPaymentDiscount
+              Name:            SKPaymentDiscount
               WithProtocols:   
       - Name:            productIdentifier
         JsName:          productIdentifier
@@ -1472,7 +1472,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setProductIdentifier:'
@@ -1489,7 +1489,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            quantity
         JsName:          quantity
@@ -1556,7 +1556,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setRequestData:'
@@ -1573,7 +1573,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            simulatesAskToBuyInSandbox
         JsName:          simulatesAskToBuyInSandbox
@@ -1645,7 +1645,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SKProduct
+            Name:            SKProduct
             WithProtocols:   
       - Name:            'paymentWithProductIdentifier:'
         JsName:          paymentWithProductIdentifier
@@ -1662,7 +1662,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            applicationUsername
@@ -1690,7 +1690,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            paymentDiscount
         JsName:          paymentDiscount
@@ -1717,7 +1717,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SKPaymentDiscount
+              Name:            SKPaymentDiscount
               WithProtocols:   
       - Name:            productIdentifier
         JsName:          productIdentifier
@@ -1744,7 +1744,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            quantity
         JsName:          quantity
@@ -1796,7 +1796,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            simulatesAskToBuyInSandbox
         JsName:          simulatesAskToBuyInSandbox
@@ -1854,19 +1854,19 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1895,7 +1895,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            keyIdentifier
         JsName:          keyIdentifier
@@ -1922,7 +1922,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            nonce
         JsName:          nonce
@@ -1949,7 +1949,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            signature
         JsName:          signature
@@ -1976,7 +1976,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            timestamp
         JsName:          timestamp
@@ -2003,7 +2003,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2034,7 +2034,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKPayment
+            Name:            SKPayment
             WithProtocols:   
       - Name:            'addTransactionObserver:'
         JsName:          addTransactionObserver
@@ -2066,10 +2066,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          SKDownload
+                Name:            SKDownload
                 WithProtocols:   
             WithProtocols:   
       - Name:            'finishTransaction:'
@@ -2086,7 +2086,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKPaymentTransaction
+            Name:            SKPaymentTransaction
             WithProtocols:   
       - Name:            'pauseDownloads:'
         JsName:          pauseDownloads
@@ -2102,10 +2102,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          SKDownload
+                Name:            SKDownload
                 WithProtocols:   
             WithProtocols:   
       - Name:            'removeTransactionObserver:'
@@ -2151,7 +2151,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'resumeDownloads:'
         JsName:          resumeDownloads
@@ -2167,10 +2167,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          SKDownload
+                Name:            SKDownload
                 WithProtocols:   
             WithProtocols:   
       - Name:            'startDownloads:'
@@ -2187,10 +2187,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          SKDownload
+                Name:            SKDownload
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -2290,7 +2290,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SKStorefront
+              Name:            SKStorefront
               WithProtocols:   
       - Name:            transactions
         JsName:          transactions
@@ -2317,10 +2317,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          SKPaymentTransaction
+                  Name:            SKPaymentTransaction
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2351,13 +2351,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          SKPaymentQueue
+            Name:            SKPaymentQueue
             WithProtocols:   
           - Type:            Interface
-            JsName:          SKPaymentTransaction
+            Name:            SKPaymentTransaction
             WithProtocols:   
           - Type:            Interface
-            JsName:          SKStorefront
+            Name:            SKStorefront
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2403,10 +2403,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          SKDownload
+                  Name:            SKDownload
                   WithProtocols:   
               WithProtocols:   
       - Name:            error
@@ -2434,7 +2434,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            originalTransaction
         JsName:          originalTransaction
@@ -2461,7 +2461,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SKPaymentTransaction
+              Name:            SKPaymentTransaction
               WithProtocols:   
       - Name:            payment
         JsName:          payment
@@ -2488,7 +2488,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SKPayment
+              Name:            SKPayment
               WithProtocols:   
       - Name:            transactionDate
         JsName:          transactionDate
@@ -2515,7 +2515,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            transactionIdentifier
         JsName:          transactionIdentifier
@@ -2542,7 +2542,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            transactionReceipt
         JsName:          transactionReceipt
@@ -2569,7 +2569,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            transactionState
         JsName:          transactionState
@@ -2625,7 +2625,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKPaymentQueue
+            Name:            SKPaymentQueue
             WithProtocols:   
       - Name:            'paymentQueue:removedTransactions:'
         JsName:          paymentQueueRemovedTransactions
@@ -2641,13 +2641,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKPaymentQueue
+            Name:            SKPaymentQueue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          SKPaymentTransaction
+                Name:            SKPaymentTransaction
                 WithProtocols:   
             WithProtocols:   
       - Name:            'paymentQueue:restoreCompletedTransactionsFailedWithError:'
@@ -2664,10 +2664,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKPaymentQueue
+            Name:            SKPaymentQueue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'paymentQueueRestoreCompletedTransactionsFinished:'
         JsName:          paymentQueueRestoreCompletedTransactionsFinished
@@ -2683,7 +2683,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKPaymentQueue
+            Name:            SKPaymentQueue
             WithProtocols:   
       - Name:            'paymentQueue:shouldAddStorePayment:forProduct:'
         JsName:          paymentQueueShouldAddStorePaymentForProduct
@@ -2699,13 +2699,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          SKPaymentQueue
+            Name:            SKPaymentQueue
             WithProtocols:   
           - Type:            Interface
-            JsName:          SKPayment
+            Name:            SKPayment
             WithProtocols:   
           - Type:            Interface
-            JsName:          SKProduct
+            Name:            SKProduct
             WithProtocols:   
       - Name:            'paymentQueue:updatedDownloads:'
         JsName:          paymentQueueUpdatedDownloads
@@ -2721,13 +2721,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKPaymentQueue
+            Name:            SKPaymentQueue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          SKDownload
+                Name:            SKDownload
                 WithProtocols:   
             WithProtocols:   
       - Name:            'paymentQueue:updatedTransactions:'
@@ -2744,13 +2744,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKPaymentQueue
+            Name:            SKPaymentQueue
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          SKPaymentTransaction
+                Name:            SKPaymentTransaction
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -2874,7 +2874,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            discounts
         JsName:          discounts
@@ -2901,10 +2901,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          SKProductDiscount
+                  Name:            SKProductDiscount
                   WithProtocols:   
               WithProtocols:   
       - Name:            downloadContentLengths
@@ -2932,10 +2932,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            downloadContentVersion
@@ -2963,7 +2963,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            introductoryPrice
         JsName:          introductoryPrice
@@ -2990,7 +2990,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SKProductDiscount
+              Name:            SKProductDiscount
               WithProtocols:   
       - Name:            isDownloadable
         JsName:          isDownloadable
@@ -3042,7 +3042,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            localizedTitle
         JsName:          localizedTitle
@@ -3069,7 +3069,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            price
         JsName:          price
@@ -3096,7 +3096,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDecimalNumber
+              Name:            NSDecimalNumber
               WithProtocols:   
       - Name:            priceLocale
         JsName:          priceLocale
@@ -3123,7 +3123,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSLocale
+              Name:            NSLocale
               WithProtocols:   
       - Name:            productIdentifier
         JsName:          productIdentifier
@@ -3150,7 +3150,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subscriptionGroupIdentifier
         JsName:          subscriptionGroupIdentifier
@@ -3177,7 +3177,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            subscriptionPeriod
         JsName:          subscriptionPeriod
@@ -3204,7 +3204,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SKProductSubscriptionPeriod
+              Name:            SKProductSubscriptionPeriod
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3248,7 +3248,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            numberOfPeriods
         JsName:          numberOfPeriods
@@ -3326,7 +3326,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDecimalNumber
+              Name:            NSDecimalNumber
               WithProtocols:   
       - Name:            priceLocale
         JsName:          priceLocale
@@ -3353,7 +3353,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSLocale
+              Name:            NSLocale
               WithProtocols:   
       - Name:            subscriptionPeriod
         JsName:          subscriptionPeriod
@@ -3380,7 +3380,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SKProductSubscriptionPeriod
+              Name:            SKProductSubscriptionPeriod
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -3596,14 +3596,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          SKProduct
+                    Name:            SKProduct
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchStorePromotionVisibilityForProduct:completionHandler:'
         JsName:          fetchStorePromotionVisibilityForProductCompletionHandler
@@ -3619,7 +3619,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKProduct
+            Name:            SKProduct
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -3627,7 +3627,7 @@ Items:
               - Type:            Enum
                 Name:            SKProductStorePromotionVisibility
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateStorePromotionOrder:completionHandler:'
         JsName:          updateStorePromotionOrderCompletionHandler
@@ -3643,17 +3643,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          SKProduct
+                Name:            SKProduct
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateStorePromotionVisibility:forProduct:completionHandler:'
         JsName:          updateStorePromotionVisibilityForProductCompletionHandler
@@ -3671,13 +3671,13 @@ Items:
           - Type:            Enum
             Name:            SKProductStorePromotionVisibility
           - Type:            Interface
-            JsName:          SKProduct
+            Name:            SKProduct
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            defaultController
@@ -3843,10 +3843,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -3923,10 +3923,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKProductsRequest
+            Name:            SKProductsRequest
             WithProtocols:   
           - Type:            Interface
-            JsName:          SKProductsResponse
+            Name:            SKProductsResponse
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3972,10 +3972,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            products
@@ -4003,10 +4003,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          SKProduct
+                  Name:            SKProduct
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -4025,7 +4025,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKReceiptPropertyIsRevoked
     JsName:          SKReceiptPropertyIsRevoked
@@ -4040,7 +4040,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKReceiptPropertyIsVolumePurchase
     JsName:          SKReceiptPropertyIsVolumePurchase
@@ -4055,7 +4055,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKReceiptRefreshRequest
     JsName:          SKReceiptRefreshRequest
@@ -4083,10 +4083,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -4118,10 +4118,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -4241,10 +4241,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKRequest
+            Name:            SKRequest
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'requestDidFinish:'
         JsName:          requestDidFinish
@@ -4260,7 +4260,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKRequest
+            Name:            SKRequest
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4280,7 +4280,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStoreProductParameterAdNetworkCampaignIdentifier
     JsName:          SKStoreProductParameterAdNetworkCampaignIdentifier
@@ -4295,7 +4295,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStoreProductParameterAdNetworkIdentifier
     JsName:          SKStoreProductParameterAdNetworkIdentifier
@@ -4310,7 +4310,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStoreProductParameterAdNetworkNonce
     JsName:          SKStoreProductParameterAdNetworkNonce
@@ -4325,7 +4325,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStoreProductParameterAdNetworkTimestamp
     JsName:          SKStoreProductParameterAdNetworkTimestamp
@@ -4340,7 +4340,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStoreProductParameterAdvertisingPartnerToken
     JsName:          SKStoreProductParameterAdvertisingPartnerToken
@@ -4355,7 +4355,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStoreProductParameterAffiliateToken
     JsName:          SKStoreProductParameterAffiliateToken
@@ -4370,7 +4370,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStoreProductParameterCampaignToken
     JsName:          SKStoreProductParameterCampaignToken
@@ -4385,7 +4385,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStoreProductParameterITunesItemIdentifier
     JsName:          SKStoreProductParameterITunesItemIdentifier
@@ -4400,7 +4400,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStoreProductParameterProductIdentifier
     JsName:          SKStoreProductParameterProductIdentifier
@@ -4415,7 +4415,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStoreProductParameterProviderToken
     JsName:          SKStoreProductParameterProviderToken
@@ -4430,7 +4430,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStoreProductViewController
     JsName:          SKStoreProductViewController
@@ -4458,10 +4458,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -4471,7 +4471,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4547,7 +4547,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          SKStoreProductViewController
+            Name:            SKStoreProductViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4623,7 +4623,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -4650,7 +4650,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4668,7 +4668,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKStorefrontIdentifierDidChangeNotification
     JsName:          SKStorefrontIdentifierDidChangeNotification
@@ -4683,7 +4683,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SKTerminateForInvalidReceipt
     JsName:          SKTerminateForInvalidReceipt

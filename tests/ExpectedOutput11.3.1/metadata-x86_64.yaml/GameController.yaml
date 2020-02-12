@@ -7,7 +7,7 @@ Module:
     - Library:         GameController
       IsFramework:     true
 Items:           
-  - Name:            ''
+  - Name:            GCAcceleration
     JsName:          GCAcceleration
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMotion.h
     Module:          
@@ -52,7 +52,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GCController
+            Name:            GCController
             WithProtocols:   
     StaticMethods:   
       - Name:            controllers
@@ -67,10 +67,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GCController
+                Name:            GCController
                 WithProtocols:   
             WithProtocols:   
       - Name:            controllerWithExtendedGamepad
@@ -86,7 +86,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GCController
+            Name:            GCController
             WithProtocols:   
       - Name:            controllerWithMicroGamepad
         JsName:          controllerWithMicroGamepad
@@ -101,7 +101,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GCController
+            Name:            GCController
             WithProtocols:   
       - Name:            'startWirelessControllerDiscoveryWithCompletionHandler:'
         JsName:          startWirelessControllerDiscoveryWithCompletionHandler
@@ -182,7 +182,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCController
+                  Name:            GCController
                   WithProtocols:   
         Setter:          
           Name:            'setControllerPausedHandler:'
@@ -202,7 +202,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCController
+                  Name:            GCController
                   WithProtocols:   
       - Name:            extendedGamepad
         JsName:          extendedGamepad
@@ -227,7 +227,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCExtendedGamepad
+              Name:            GCExtendedGamepad
               WithProtocols:   
       - Name:            gamepad
         JsName:          gamepad
@@ -254,7 +254,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCGamepad
+              Name:            GCGamepad
               WithProtocols:   
       - Name:            handlerQueue
         JsName:          handlerQueue
@@ -279,7 +279,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - OS_dispatch_queue
         Setter:          
@@ -296,7 +296,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - OS_dispatch_queue
       - Name:            microGamepad
@@ -322,7 +322,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCMicroGamepad
+              Name:            GCMicroGamepad
               WithProtocols:   
       - Name:            motion
         JsName:          motion
@@ -349,7 +349,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCMotion
+              Name:            GCMotion
               WithProtocols:   
       - Name:            playerIndex
         JsName:          playerIndex
@@ -415,7 +415,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            snapshot
         JsName:          snapshot
@@ -465,7 +465,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -545,7 +545,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCControllerAxisInput
+                  Name:            GCControllerAxisInput
                   WithProtocols:   
                 - Type:            Float
         Setter:          
@@ -565,7 +565,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCControllerAxisInput
+                  Name:            GCControllerAxisInput
                   WithProtocols:   
                 - Type:            Float
     StaticProperties: 
@@ -649,7 +649,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCControllerButtonInput
+                  Name:            GCControllerButtonInput
                   WithProtocols:   
                 - Type:            Float
                 - Type:            Bool
@@ -671,7 +671,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCControllerButtonInput
+                  Name:            GCControllerButtonInput
                   WithProtocols:   
                 - Type:            Float
                 - Type:            Bool
@@ -724,7 +724,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCControllerButtonInput
+                  Name:            GCControllerButtonInput
                   WithProtocols:   
                 - Type:            Float
                 - Type:            Bool
@@ -745,7 +745,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCControllerButtonInput
+                  Name:            GCControllerButtonInput
                   WithProtocols:   
                 - Type:            Float
                 - Type:            Bool
@@ -764,7 +764,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GCControllerDidDisconnectNotification
     JsName:          GCControllerDidDisconnectNotification
@@ -778,7 +778,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GCControllerDirectionPad
     JsName:          GCControllerDirectionPad
@@ -831,7 +831,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            left
         JsName:          left
@@ -856,7 +856,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            right
         JsName:          right
@@ -881,7 +881,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            up
         JsName:          up
@@ -906,7 +906,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            valueChangedHandler
         JsName:          valueChangedHandler
@@ -934,7 +934,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCControllerDirectionPad
+                  Name:            GCControllerDirectionPad
                   WithProtocols:   
                 - Type:            Float
                 - Type:            Float
@@ -955,7 +955,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCControllerDirectionPad
+                  Name:            GCControllerDirectionPad
                   WithProtocols:   
                 - Type:            Float
                 - Type:            Float
@@ -982,7 +982,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerAxisInput
+              Name:            GCControllerAxisInput
               WithProtocols:   
       - Name:            yAxis
         JsName:          yAxis
@@ -1007,7 +1007,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerAxisInput
+              Name:            GCControllerAxisInput
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1072,7 +1072,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerElement
+              Name:            GCControllerElement
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1182,7 +1182,7 @@ Items:
     Signature:       
       Type:            Enum
       Name:            GCMicroGamepadSnapshotDataVersion
-  - Name:            ''
+  - Name:            GCEulerAngles
     JsName:          GCEulerAngles
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMotion.h
     Module:          
@@ -1281,7 +1281,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GCExtendedGamepadSnapshot
+            Name:            GCExtendedGamepadSnapshot
             WithProtocols:   
       - Name:            'setStateFromExtendedGamepad:'
         JsName:          setStateFromExtendedGamepad
@@ -1297,7 +1297,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GCExtendedGamepad
+            Name:            GCExtendedGamepad
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1324,7 +1324,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            buttonB
         JsName:          buttonB
@@ -1349,7 +1349,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            buttonMenu
         JsName:          buttonMenu
@@ -1376,7 +1376,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            buttonOptions
         JsName:          buttonOptions
@@ -1403,7 +1403,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            buttonX
         JsName:          buttonX
@@ -1428,7 +1428,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            buttonY
         JsName:          buttonY
@@ -1453,7 +1453,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            controller
         JsName:          controller
@@ -1478,7 +1478,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCController
+              Name:            GCController
               WithProtocols:   
       - Name:            dpad
         JsName:          dpad
@@ -1503,7 +1503,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerDirectionPad
+              Name:            GCControllerDirectionPad
               WithProtocols:   
       - Name:            leftShoulder
         JsName:          leftShoulder
@@ -1528,7 +1528,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            leftThumbstick
         JsName:          leftThumbstick
@@ -1553,7 +1553,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerDirectionPad
+              Name:            GCControllerDirectionPad
               WithProtocols:   
       - Name:            leftThumbstickButton
         JsName:          leftThumbstickButton
@@ -1580,7 +1580,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            leftTrigger
         JsName:          leftTrigger
@@ -1605,7 +1605,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            rightShoulder
         JsName:          rightShoulder
@@ -1630,7 +1630,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            rightThumbstick
         JsName:          rightThumbstick
@@ -1655,7 +1655,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerDirectionPad
+              Name:            GCControllerDirectionPad
               WithProtocols:   
       - Name:            rightThumbstickButton
         JsName:          rightThumbstickButton
@@ -1682,7 +1682,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            rightTrigger
         JsName:          rightTrigger
@@ -1707,7 +1707,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            valueChangedHandler
         JsName:          valueChangedHandler
@@ -1735,10 +1735,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCExtendedGamepad
+                  Name:            GCExtendedGamepad
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          GCControllerElement
+                  Name:            GCControllerElement
                   WithProtocols:   
         Setter:          
           Name:            'setValueChangedHandler:'
@@ -1757,15 +1757,15 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCExtendedGamepad
+                  Name:            GCExtendedGamepad
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          GCControllerElement
+                  Name:            GCControllerElement
                   WithProtocols:   
     StaticProperties: 
     Protocols:       
     Base:            NSObject
-  - Name:            ''
+  - Name:            GCExtendedGamepadSnapShotDataV100
     JsName:          GCExtendedGamepadSnapShotDataV100
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCExtendedGamepadSnapshot.h
     Module:          
@@ -1841,9 +1841,9 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          GameController.GCExtendedGamepadSnapshot
-          JsName:          GCExtendedGamepadSnapShotDataV100
+          Name:            GCExtendedGamepadSnapShotDataV100
       - Type:            Interface
-        JsName:          NSData
+        Name:            NSData
         WithProtocols:   
   - Name:            GCExtendedGamepadSnapshot
     JsName:          GCExtendedGamepadSnapshot
@@ -1870,10 +1870,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GCController
+            Name:            GCController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'initWithSnapshotData:'
         JsName:          initWithSnapshotData
@@ -1888,7 +1888,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1915,7 +1915,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setSnapshotData:'
@@ -1931,12 +1931,12 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
     Base:            GCExtendedGamepad
-  - Name:            ''
+  - Name:            GCExtendedGamepadSnapshotData
     JsName:          GCExtendedGamepadSnapshotData
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCExtendedGamepadSnapshot.h
     Module:          
@@ -2021,9 +2021,9 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          GameController.GCExtendedGamepadSnapshot
-          JsName:          GCExtendedGamepadSnapshotData
+          Name:            GCExtendedGamepadSnapshotData
       - Type:            Interface
-        JsName:          NSData
+        Name:            NSData
         WithProtocols:   
   - Name:            GCExtendedGamepadSnapshotDataVersion
     JsName:          GCExtendedGamepadSnapshotDataVersion
@@ -2088,7 +2088,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GCGamepadSnapshot
+            Name:            GCGamepadSnapshot
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2115,7 +2115,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            buttonB
         JsName:          buttonB
@@ -2140,7 +2140,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            buttonX
         JsName:          buttonX
@@ -2165,7 +2165,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            buttonY
         JsName:          buttonY
@@ -2190,7 +2190,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            controller
         JsName:          controller
@@ -2215,7 +2215,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCController
+              Name:            GCController
               WithProtocols:   
       - Name:            dpad
         JsName:          dpad
@@ -2240,7 +2240,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerDirectionPad
+              Name:            GCControllerDirectionPad
               WithProtocols:   
       - Name:            leftShoulder
         JsName:          leftShoulder
@@ -2265,7 +2265,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            rightShoulder
         JsName:          rightShoulder
@@ -2290,7 +2290,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            valueChangedHandler
         JsName:          valueChangedHandler
@@ -2318,10 +2318,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCGamepad
+                  Name:            GCGamepad
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          GCControllerElement
+                  Name:            GCControllerElement
                   WithProtocols:   
         Setter:          
           Name:            'setValueChangedHandler:'
@@ -2340,15 +2340,15 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCGamepad
+                  Name:            GCGamepad
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          GCControllerElement
+                  Name:            GCControllerElement
                   WithProtocols:   
     StaticProperties: 
     Protocols:       
     Base:            NSObject
-  - Name:            ''
+  - Name:            GCGamepadSnapShotDataV100
     JsName:          GCGamepadSnapShotDataV100
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCGamepadSnapshot.h
     Module:          
@@ -2406,9 +2406,9 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          GameController.GCGamepadSnapshot
-          JsName:          GCGamepadSnapShotDataV100
+          Name:            GCGamepadSnapShotDataV100
       - Type:            Interface
-        JsName:          NSData
+        Name:            NSData
         WithProtocols:   
   - Name:            GCGamepadSnapshot
     JsName:          GCGamepadSnapshot
@@ -2435,10 +2435,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GCController
+            Name:            GCController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'initWithSnapshotData:'
         JsName:          initWithSnapshotData
@@ -2453,7 +2453,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2480,7 +2480,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setSnapshotData:'
@@ -2496,7 +2496,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2526,7 +2526,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GCMicroGamepadSnapshot
+            Name:            GCMicroGamepadSnapshot
             WithProtocols:   
       - Name:            'setStateFromMicroGamepad:'
         JsName:          setStateFromMicroGamepad
@@ -2542,7 +2542,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GCMicroGamepad
+            Name:            GCMicroGamepad
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2606,7 +2606,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            buttonMenu
         JsName:          buttonMenu
@@ -2633,7 +2633,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            buttonX
         JsName:          buttonX
@@ -2658,7 +2658,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerButtonInput
+              Name:            GCControllerButtonInput
               WithProtocols:   
       - Name:            controller
         JsName:          controller
@@ -2683,7 +2683,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCController
+              Name:            GCController
               WithProtocols:   
       - Name:            dpad
         JsName:          dpad
@@ -2708,7 +2708,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCControllerDirectionPad
+              Name:            GCControllerDirectionPad
               WithProtocols:   
       - Name:            reportsAbsoluteDpadValues
         JsName:          reportsAbsoluteDpadValues
@@ -2773,10 +2773,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCMicroGamepad
+                  Name:            GCMicroGamepad
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          GCControllerElement
+                  Name:            GCControllerElement
                   WithProtocols:   
         Setter:          
           Name:            'setValueChangedHandler:'
@@ -2795,15 +2795,15 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCMicroGamepad
+                  Name:            GCMicroGamepad
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          GCControllerElement
+                  Name:            GCControllerElement
                   WithProtocols:   
     StaticProperties: 
     Protocols:       
     Base:            NSObject
-  - Name:            ''
+  - Name:            GCMicroGamepadSnapShotDataV100
     JsName:          GCMicroGamepadSnapShotDataV100
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMicroGamepadSnapshot.h
     Module:          
@@ -2849,9 +2849,9 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          GameController.GCMicroGamepadSnapshot
-          JsName:          GCMicroGamepadSnapShotDataV100
+          Name:            GCMicroGamepadSnapShotDataV100
       - Type:            Interface
-        JsName:          NSData
+        Name:            NSData
         WithProtocols:   
   - Name:            GCMicroGamepadSnapshot
     JsName:          GCMicroGamepadSnapshot
@@ -2878,10 +2878,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GCController
+            Name:            GCController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'initWithSnapshotData:'
         JsName:          initWithSnapshotData
@@ -2896,7 +2896,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2923,7 +2923,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setSnapshotData:'
@@ -2939,12 +2939,12 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
     Base:            GCMicroGamepad
-  - Name:            ''
+  - Name:            GCMicroGamepadSnapshotData
     JsName:          GCMicroGamepadSnapshotData
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMicroGamepadSnapshot.h
     Module:          
@@ -2990,9 +2990,9 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          GameController.GCMicroGamepadSnapshot
-          JsName:          GCMicroGamepadSnapshotData
+          Name:            GCMicroGamepadSnapshotData
       - Type:            Interface
-        JsName:          NSData
+        Name:            NSData
         WithProtocols:   
   - Name:            GCMicroGamepadSnapshotDataVersion
     JsName:          GCMicroGamepadSnapshotDataVersion
@@ -3047,7 +3047,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          GameController.GCMotion
-            JsName:          GCQuaternion
+            Name:            GCQuaternion
       - Name:            'setGravity:'
         JsName:          setGravity
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMotion.h
@@ -3063,7 +3063,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          GameController.GCMotion
-            JsName:          GCAcceleration
+            Name:            GCAcceleration
       - Name:            'setRotationRate:'
         JsName:          setRotationRate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMotion.h
@@ -3079,7 +3079,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          GameController.GCMotion
-            JsName:          GCRotationRate
+            Name:            GCRotationRate
       - Name:            'setStateFromMotion:'
         JsName:          setStateFromMotion
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMotion.h
@@ -3094,7 +3094,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GCMotion
+            Name:            GCMotion
             WithProtocols:   
       - Name:            'setUserAcceleration:'
         JsName:          setUserAcceleration
@@ -3111,7 +3111,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          GameController.GCMotion
-            JsName:          GCAcceleration
+            Name:            GCAcceleration
     StaticMethods:   
     InstanceProperties: 
       - Name:            attitude
@@ -3140,7 +3140,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          GameController.GCMotion
-              JsName:          GCQuaternion
+              Name:            GCQuaternion
       - Name:            controller
         JsName:          controller
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMotion.h
@@ -3164,7 +3164,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GCController
+              Name:            GCController
               WithProtocols:   
       - Name:            gravity
         JsName:          gravity
@@ -3190,7 +3190,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          GameController.GCMotion
-              JsName:          GCAcceleration
+              Name:            GCAcceleration
       - Name:            hasAttitudeAndRotationRate
         JsName:          hasAttitudeAndRotationRate
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMotion.h
@@ -3242,7 +3242,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          GameController.GCMotion
-              JsName:          GCRotationRate
+              Name:            GCRotationRate
       - Name:            userAcceleration
         JsName:          userAcceleration
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMotion.h
@@ -3267,7 +3267,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          GameController.GCMotion
-              JsName:          GCAcceleration
+              Name:            GCAcceleration
       - Name:            valueChangedHandler
         JsName:          valueChangedHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMotion.h
@@ -3294,7 +3294,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCMotion
+                  Name:            GCMotion
                   WithProtocols:   
         Setter:          
           Name:            'setValueChangedHandler:'
@@ -3313,7 +3313,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GCMotion
+                  Name:            GCMotion
                   WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3341,7 +3341,7 @@ Items:
       - Name:            w
         Signature:       
           Type:            Double
-  - Name:            ''
+  - Name:            GCRotationRate
     JsName:          GCRotationRate
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMotion.h
     Module:          
@@ -3374,13 +3374,13 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSData
+        Name:            NSData
         WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          GameController.GCExtendedGamepadSnapshot
-          JsName:          GCExtendedGamepadSnapShotDataV100
+          Name:            GCExtendedGamepadSnapShotDataV100
   - Name:            NSDataFromGCExtendedGamepadSnapshotData
     JsName:          NSDataFromGCExtendedGamepadSnapshotData
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCExtendedGamepadSnapshot.h
@@ -3394,13 +3394,13 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSData
+        Name:            NSData
         WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          GameController.GCExtendedGamepadSnapshot
-          JsName:          GCExtendedGamepadSnapshotData
+          Name:            GCExtendedGamepadSnapshotData
   - Name:            NSDataFromGCGamepadSnapShotDataV100
     JsName:          NSDataFromGCGamepadSnapShotDataV100
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCGamepadSnapshot.h
@@ -3414,13 +3414,13 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSData
+        Name:            NSData
         WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          GameController.GCGamepadSnapshot
-          JsName:          GCGamepadSnapShotDataV100
+          Name:            GCGamepadSnapShotDataV100
   - Name:            NSDataFromGCMicroGamepadSnapShotDataV100
     JsName:          NSDataFromGCMicroGamepadSnapShotDataV100
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMicroGamepadSnapshot.h
@@ -3434,13 +3434,13 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSData
+        Name:            NSData
         WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          GameController.GCMicroGamepadSnapshot
-          JsName:          GCMicroGamepadSnapShotDataV100
+          Name:            GCMicroGamepadSnapShotDataV100
   - Name:            NSDataFromGCMicroGamepadSnapshotData
     JsName:          NSDataFromGCMicroGamepadSnapshotData
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameController.framework/Headers/GCMicroGamepadSnapshot.h
@@ -3454,11 +3454,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSData
+        Name:            NSData
         WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          GameController.GCMicroGamepadSnapshot
-          JsName:          GCMicroGamepadSnapshotData
+          Name:            GCMicroGamepadSnapshotData
 ...

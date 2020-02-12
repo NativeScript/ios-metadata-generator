@@ -572,7 +572,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_object
   - Name:            dispatch_after
@@ -590,7 +590,7 @@ Items:
       - Type:            Void
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -611,7 +611,7 @@ Items:
       - Type:            Void
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -638,7 +638,7 @@ Items:
       - Type:            Void
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -660,7 +660,7 @@ Items:
       - Type:            Void
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -687,7 +687,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            dispatch_assert_queue_barrier
@@ -704,7 +704,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            dispatch_assert_queue_not
@@ -721,7 +721,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            dispatch_async
@@ -738,7 +738,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -758,7 +758,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -778,7 +778,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -804,7 +804,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -816,7 +816,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Void
-  - Name:            ''
+  - Name:            dispatch_autorelease_frequency_t
     JsName:          dispatch_autorelease_frequency_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/dispatch/queue.h
     Module:          
@@ -845,7 +845,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -865,7 +865,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -885,7 +885,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -911,7 +911,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -937,7 +937,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -957,7 +957,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -1028,7 +1028,7 @@ Items:
       - Type:            Block
         Signature:       
           - Type:            Void
-  - Name:            ''
+  - Name:            dispatch_block_flags_t
     JsName:          dispatch_block_flags_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/dispatch/block.h
     Module:          
@@ -1063,7 +1063,7 @@ Items:
         Signature:       
           - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -1134,14 +1134,14 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Block
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
           - Type:            ULong
@@ -1162,11 +1162,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            ULong
@@ -1186,7 +1186,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Pointer
@@ -1194,7 +1194,7 @@ Items:
           Type:            Void
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -1213,15 +1213,15 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
   - Name:            dispatch_data_create_map
@@ -1237,11 +1237,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Pointer
@@ -1265,11 +1265,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            ULong
@@ -1288,7 +1288,7 @@ Items:
     Signature:       
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
   - Name:            dispatch_get_context
@@ -1307,7 +1307,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_object
   - Name:            dispatch_get_current_queue
@@ -1323,7 +1323,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            dispatch_get_global_queue
@@ -1339,7 +1339,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue_global
       - Type:            Long
@@ -1376,11 +1376,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_group
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -1400,11 +1400,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_group
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -1429,7 +1429,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_group
   - Name:            dispatch_group_enter
@@ -1446,7 +1446,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_group
   - Name:            dispatch_group_leave
@@ -1463,7 +1463,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_group
   - Name:            dispatch_group_notify
@@ -1480,11 +1480,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_group
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -1504,11 +1504,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_group
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -1534,7 +1534,7 @@ Items:
     Signature:       
       - Type:            Long
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_group
       - Type:            ULongLong
@@ -1552,7 +1552,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
       - Type:            Block
@@ -1572,7 +1572,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
       - Type:            ULong
@@ -1589,13 +1589,13 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
       - Type:            ULong
       - Type:            Int
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -1615,16 +1615,16 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -1644,7 +1644,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
       - Type:            ULong
@@ -1652,7 +1652,7 @@ Items:
       - Type:            Int
       - Type:            Ushort
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -1673,7 +1673,7 @@ Items:
     Signature:       
       - Type:            Int
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
   - Name:            dispatch_io_read
@@ -1690,13 +1690,13 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
       - Type:            LongLong
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -1704,7 +1704,7 @@ Items:
           - Type:            Void
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
           - Type:            Int
@@ -1722,7 +1722,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
       - Type:            ULong
@@ -1740,7 +1740,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
       - Type:            ULongLong
@@ -1759,7 +1759,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
       - Type:            ULong
@@ -1777,16 +1777,16 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_io
       - Type:            LongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -1794,7 +1794,7 @@ Items:
           - Type:            Void
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
           - Type:            Int
@@ -1868,11 +1868,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue_attr
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue_attr
   - Name:            dispatch_queue_attr_make_with_autorelease_frequency
@@ -1888,11 +1888,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue_attr
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue_attr
       - Type:            Enum
@@ -1910,11 +1910,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue_attr
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue_attr
       - Type:            Enum
@@ -1933,12 +1933,12 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue_attr
   - Name:            dispatch_queue_create_with_target
@@ -1954,16 +1954,16 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue_attr
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            dispatch_queue_get_label
@@ -1980,7 +1980,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            dispatch_queue_get_qos_class
@@ -1998,7 +1998,7 @@ Items:
       - Type:            Enum
         Name:            qos_class_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -2020,7 +2020,7 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -2040,7 +2040,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -2071,14 +2071,14 @@ Items:
       - Type:            Int
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
           - Type:            Int
@@ -2096,7 +2096,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_object
   - Name:            dispatch_resume
@@ -2113,7 +2113,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_object
   - Name:            dispatch_retain
@@ -2130,7 +2130,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_object
   - Name:            dispatch_semaphore_create
@@ -2146,7 +2146,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_semaphore
       - Type:            Long
@@ -2164,7 +2164,7 @@ Items:
     Signature:       
       - Type:            Long
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_semaphore
   - Name:            dispatch_semaphore_wait
@@ -2181,7 +2181,7 @@ Items:
     Signature:       
       - Type:            Long
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_semaphore
       - Type:            ULongLong
@@ -2199,7 +2199,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_object
       - Type:            Pointer
@@ -2219,7 +2219,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_object
       - Type:            FunctionPointer
@@ -2242,7 +2242,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_object
       - Type:            Enum
@@ -2262,11 +2262,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_object
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            dispatch_source_cancel
@@ -2283,7 +2283,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
   - Name:            dispatch_source_create
@@ -2299,7 +2299,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
       - Type:            Pointer
@@ -2308,7 +2308,7 @@ Items:
       - Type:            ULong
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            dispatch_source_get_data
@@ -2325,7 +2325,7 @@ Items:
     Signature:       
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
   - Name:            dispatch_source_get_handle
@@ -2342,7 +2342,7 @@ Items:
     Signature:       
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
   - Name:            dispatch_source_get_mask
@@ -2359,7 +2359,7 @@ Items:
     Signature:       
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
   - Name:            dispatch_source_merge_data
@@ -2376,7 +2376,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
       - Type:            ULong
@@ -2394,7 +2394,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
       - Type:            Block
@@ -2414,7 +2414,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
       - Type:            FunctionPointer
@@ -2437,7 +2437,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
       - Type:            Block
@@ -2457,7 +2457,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
       - Type:            FunctionPointer
@@ -2480,7 +2480,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
       - Type:            Block
@@ -2500,7 +2500,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
       - Type:            FunctionPointer
@@ -2523,7 +2523,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
       - Type:            ULongLong
@@ -2543,7 +2543,7 @@ Items:
     Signature:       
       - Type:            Long
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_source
   - Name:            dispatch_suspend
@@ -2560,7 +2560,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_object
   - Name:            dispatch_sync
@@ -2577,7 +2577,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -2597,7 +2597,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Pointer
@@ -2641,7 +2641,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          Darwin.POSIX.sys.types._timespec
-          JsName:          timespec
+          Name:            timespec
       - Type:            LongLong
   - Name:            dispatch_workloop_create
     JsName:          dispatch_workloop_create
@@ -2656,7 +2656,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_workloop
       - Type:            CString
@@ -2673,7 +2673,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_workloop
       - Type:            CString
@@ -2691,7 +2691,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_workloop
       - Type:            Enum
@@ -2711,18 +2711,18 @@ Items:
       - Type:            Void
       - Type:            Int
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
           - Type:            Int

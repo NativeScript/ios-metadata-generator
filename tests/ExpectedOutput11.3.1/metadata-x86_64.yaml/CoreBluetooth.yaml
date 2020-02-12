@@ -89,7 +89,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBATTErrorInsufficientAuthentication
     JsName:          CBATTErrorInsufficientAuthentication
@@ -305,7 +305,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CBCentral
+              Name:            CBCentral
               WithProtocols:   
       - Name:            characteristic
         JsName:          characteristic
@@ -330,7 +330,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CBCharacteristic
+              Name:            CBCharacteristic
               WithProtocols:   
       - Name:            offset
         JsName:          offset
@@ -378,7 +378,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setValue:'
@@ -394,7 +394,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -412,7 +412,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBAdvertisementDataLocalNameKey
     JsName:          CBAdvertisementDataLocalNameKey
@@ -426,7 +426,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBAdvertisementDataManufacturerDataKey
     JsName:          CBAdvertisementDataManufacturerDataKey
@@ -440,7 +440,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBAdvertisementDataOverflowServiceUUIDsKey
     JsName:          CBAdvertisementDataOverflowServiceUUIDsKey
@@ -455,7 +455,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBAdvertisementDataServiceDataKey
     JsName:          CBAdvertisementDataServiceDataKey
@@ -469,7 +469,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBAdvertisementDataServiceUUIDsKey
     JsName:          CBAdvertisementDataServiceUUIDsKey
@@ -483,7 +483,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBAdvertisementDataSolicitedServiceUUIDsKey
     JsName:          CBAdvertisementDataSolicitedServiceUUIDsKey
@@ -498,7 +498,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBAdvertisementDataTxPowerLevelKey
     JsName:          CBAdvertisementDataTxPowerLevelKey
@@ -512,7 +512,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBAttribute
     JsName:          CBAttribute
@@ -551,7 +551,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CBUUID
+              Name:            CBUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -686,7 +686,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
       - Name:            'connectPeripheral:options:'
         JsName:          connectPeripheralOptions
@@ -701,13 +701,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -728,7 +728,7 @@ Items:
             WithProtocols:   
               - CBCentralManagerDelegate
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
       - Name:            'initWithDelegate:queue:options:'
@@ -748,14 +748,14 @@ Items:
             WithProtocols:   
               - CBCentralManagerDelegate
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -774,10 +774,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -795,17 +795,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CBPeripheral
+                Name:            CBPeripheral
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CBUUID
+                Name:            CBUUID
                 WithProtocols:   
             WithProtocols:   
       - Name:            'retrievePeripheralsWithIdentifiers:'
@@ -821,17 +821,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CBPeripheral
+                Name:            CBPeripheral
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSUUID
+                Name:            NSUUID
                 WithProtocols:   
             WithProtocols:   
       - Name:            'scanForPeripheralsWithServices:options:'
@@ -847,17 +847,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CBUUID
+                Name:            CBUUID
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -985,12 +985,12 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBCentralManager
+            Name:            CBCentralManager
             WithProtocols:   
           - Type:            Enum
             Name:            CBConnectionEvent
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
       - Name:            'centralManager:didConnectPeripheral:'
         JsName:          centralManagerDidConnectPeripheral
@@ -1005,10 +1005,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBCentralManager
+            Name:            CBCentralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
       - Name:            'centralManager:didDisconnectPeripheral:error:'
         JsName:          centralManagerDidDisconnectPeripheralError
@@ -1023,13 +1023,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBCentralManager
+            Name:            CBCentralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'centralManager:didDiscoverPeripheral:advertisementData:RSSI:'
         JsName:          centralManagerDidDiscoverPeripheralAdvertisementDataRSSI
@@ -1044,22 +1044,22 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBCentralManager
+            Name:            CBCentralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
       - Name:            'centralManager:didFailToConnectPeripheral:error:'
         JsName:          centralManagerDidFailToConnectPeripheralError
@@ -1074,13 +1074,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBCentralManager
+            Name:            CBCentralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'centralManager:didUpdateANCSAuthorizationForPeripheral:'
         JsName:          centralManagerDidUpdateANCSAuthorizationForPeripheral
@@ -1096,10 +1096,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBCentralManager
+            Name:            CBCentralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
       - Name:            'centralManagerDidUpdateState:'
         JsName:          centralManagerDidUpdateState
@@ -1114,7 +1114,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBCentralManager
+            Name:            CBCentralManager
             WithProtocols:   
       - Name:            'centralManager:willRestoreState:'
         JsName:          centralManagerWillRestoreState
@@ -1129,13 +1129,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBCentralManager
+            Name:            CBCentralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1184,7 +1184,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBCentralManagerOptionShowPowerAlertKey
     JsName:          CBCentralManagerOptionShowPowerAlertKey
@@ -1199,7 +1199,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBCentralManagerRestoredStatePeripheralsKey
     JsName:          CBCentralManagerRestoredStatePeripheralsKey
@@ -1214,7 +1214,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBCentralManagerRestoredStateScanOptionsKey
     JsName:          CBCentralManagerRestoredStateScanOptionsKey
@@ -1229,7 +1229,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBCentralManagerRestoredStateScanServicesKey
     JsName:          CBCentralManagerRestoredStateScanServicesKey
@@ -1244,7 +1244,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBCentralManagerScanOptionAllowDuplicatesKey
     JsName:          CBCentralManagerScanOptionAllowDuplicatesKey
@@ -1258,7 +1258,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBCentralManagerScanOptionSolicitedServiceUUIDsKey
     JsName:          CBCentralManagerScanOptionSolicitedServiceUUIDsKey
@@ -1273,7 +1273,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBCentralManagerState
     JsName:          CBCentralManagerState
@@ -1403,10 +1403,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CBDescriptor
+                  Name:            CBDescriptor
                   WithProtocols:   
               WithProtocols:   
       - Name:            isBroadcasted
@@ -1504,7 +1504,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CBService
+              Name:            CBService
               WithProtocols:   
       - Name:            value
         JsName:          value
@@ -1529,7 +1529,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1729,7 +1729,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBConnectPeripheralOptionNotifyOnConnectionKey
     JsName:          CBConnectPeripheralOptionNotifyOnConnectionKey
@@ -1744,7 +1744,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBConnectPeripheralOptionNotifyOnDisconnectionKey
     JsName:          CBConnectPeripheralOptionNotifyOnDisconnectionKey
@@ -1758,7 +1758,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBConnectPeripheralOptionNotifyOnNotificationKey
     JsName:          CBConnectPeripheralOptionNotifyOnNotificationKey
@@ -1773,7 +1773,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBConnectPeripheralOptionRequiresANCS
     JsName:          CBConnectPeripheralOptionRequiresANCS
@@ -1788,7 +1788,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBConnectPeripheralOptionStartDelayKey
     JsName:          CBConnectPeripheralOptionStartDelayKey
@@ -1803,7 +1803,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBConnectionEvent
     JsName:          CBConnectionEvent
@@ -1834,7 +1834,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBConnectionEventMatchingOptionServiceUUIDs
     JsName:          CBConnectionEventMatchingOptionServiceUUIDs
@@ -1849,7 +1849,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBConnectionEventPeerConnected
     JsName:          CBConnectionEventPeerConnected
@@ -1910,7 +1910,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CBCharacteristic
+              Name:            CBCharacteristic
               WithProtocols:   
       - Name:            value
         JsName:          value
@@ -2041,7 +2041,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBErrorInvalidHandle
     JsName:          CBErrorInvalidHandle
@@ -2211,7 +2211,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSInputStream
+              Name:            NSInputStream
               WithProtocols:   
       - Name:            outputStream
         JsName:          outputStream
@@ -2236,7 +2236,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSOutputStream
+              Name:            NSOutputStream
               WithProtocols:   
       - Name:            peer
         JsName:          peer
@@ -2261,7 +2261,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CBPeer
+              Name:            CBPeer
               WithProtocols:   
       - Name:            PSM
         JsName:          PSM
@@ -2563,12 +2563,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CBUUID
+            Name:            CBUUID
             WithProtocols:   
           - Type:            Enum
             Name:            CBCharacteristicProperties
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Enum
             Name:            CBAttributePermissions
@@ -2597,10 +2597,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CBDescriptor
+                  Name:            CBDescriptor
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2617,10 +2617,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CBDescriptor
+                  Name:            CBDescriptor
                   WithProtocols:   
               WithProtocols:   
       - Name:            permissions
@@ -2726,10 +2726,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CBCentral
+                  Name:            CBCentral
                   WithProtocols:   
               WithProtocols:   
       - Name:            value
@@ -2755,7 +2755,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setValue:'
@@ -2771,7 +2771,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2801,7 +2801,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CBUUID
+            Name:            CBUUID
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -2835,7 +2835,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CBUUID
+            Name:            CBUUID
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -2863,10 +2863,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CBCharacteristic
+                  Name:            CBCharacteristic
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2883,10 +2883,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CBCharacteristic
+                  Name:            CBCharacteristic
                   WithProtocols:   
               WithProtocols:   
       - Name:            includedServices
@@ -2912,10 +2912,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CBService
+                  Name:            CBService
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2932,10 +2932,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CBService
+                  Name:            CBService
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2980,7 +2980,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3011,14 +3011,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CBUUID
+                Name:            CBUUID
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBService
+            Name:            CBService
             WithProtocols:   
       - Name:            'discoverDescriptorsForCharacteristic:'
         JsName:          discoverDescriptorsForCharacteristic
@@ -3033,7 +3033,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBCharacteristic
+            Name:            CBCharacteristic
             WithProtocols:   
       - Name:            'discoverIncludedServices:forService:'
         JsName:          discoverIncludedServicesForService
@@ -3048,14 +3048,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CBUUID
+                Name:            CBUUID
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBService
+            Name:            CBService
             WithProtocols:   
       - Name:            'discoverServices:'
         JsName:          discoverServices
@@ -3070,10 +3070,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CBUUID
+                Name:            CBUUID
                 WithProtocols:   
             WithProtocols:   
       - Name:            'maximumWriteValueLengthForType:'
@@ -3130,7 +3130,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBCharacteristic
+            Name:            CBCharacteristic
             WithProtocols:   
       - Name:            'readValueForDescriptor:'
         JsName:          readValueForDescriptor
@@ -3145,7 +3145,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBDescriptor
+            Name:            CBDescriptor
             WithProtocols:   
       - Name:            'setNotifyValue:forCharacteristic:'
         JsName:          setNotifyValueForCharacteristic
@@ -3161,7 +3161,7 @@ Items:
           - Type:            Void
           - Type:            Bool
           - Type:            Interface
-            JsName:          CBCharacteristic
+            Name:            CBCharacteristic
             WithProtocols:   
       - Name:            'writeValue:forCharacteristic:type:'
         JsName:          writeValueForCharacteristicType
@@ -3176,10 +3176,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBCharacteristic
+            Name:            CBCharacteristic
             WithProtocols:   
           - Type:            Enum
             Name:            CBCharacteristicWriteType
@@ -3196,10 +3196,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBDescriptor
+            Name:            CBDescriptor
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3317,7 +3317,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            RSSI
         JsName:          RSSI
@@ -3344,7 +3344,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            services
         JsName:          services
@@ -3369,10 +3369,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CBService
+                  Name:            CBService
                   WithProtocols:   
               WithProtocols:   
       - Name:            state
@@ -3426,13 +3426,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBService
+            Name:            CBService
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheral:didDiscoverDescriptorsForCharacteristic:error:'
         JsName:          peripheralDidDiscoverDescriptorsForCharacteristicError
@@ -3447,13 +3447,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBCharacteristic
+            Name:            CBCharacteristic
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheral:didDiscoverIncludedServicesForService:error:'
         JsName:          peripheralDidDiscoverIncludedServicesForServiceError
@@ -3468,13 +3468,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBService
+            Name:            CBService
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheral:didDiscoverServices:'
         JsName:          peripheralDidDiscoverServices
@@ -3489,10 +3489,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheral:didModifyServices:'
         JsName:          peripheralDidModifyServices
@@ -3508,13 +3508,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CBService
+                Name:            CBService
                 WithProtocols:   
             WithProtocols:   
       - Name:            'peripheral:didOpenL2CAPChannel:error:'
@@ -3530,13 +3530,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBL2CAPChannel
+            Name:            CBL2CAPChannel
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheral:didReadRSSI:error:'
         JsName:          peripheralDidReadRSSIError
@@ -3552,13 +3552,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheralDidUpdateName:'
         JsName:          peripheralDidUpdateName
@@ -3574,7 +3574,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
       - Name:            'peripheral:didUpdateNotificationStateForCharacteristic:error:'
         JsName:          peripheralDidUpdateNotificationStateForCharacteristicError
@@ -3589,13 +3589,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBCharacteristic
+            Name:            CBCharacteristic
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheralDidUpdateRSSI:error:'
         JsName:          peripheralDidUpdateRSSIError
@@ -3611,10 +3611,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheral:didUpdateValueForCharacteristic:error:'
         JsName:          peripheralDidUpdateValueForCharacteristicError
@@ -3629,13 +3629,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBCharacteristic
+            Name:            CBCharacteristic
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheral:didUpdateValueForDescriptor:error:'
         JsName:          peripheralDidUpdateValueForDescriptorError
@@ -3650,13 +3650,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBDescriptor
+            Name:            CBDescriptor
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheral:didWriteValueForCharacteristic:error:'
         JsName:          peripheralDidWriteValueForCharacteristicError
@@ -3671,13 +3671,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBCharacteristic
+            Name:            CBCharacteristic
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheral:didWriteValueForDescriptor:error:'
         JsName:          peripheralDidWriteValueForDescriptorError
@@ -3692,13 +3692,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBDescriptor
+            Name:            CBDescriptor
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheralIsReadyToSendWriteWithoutResponse:'
         JsName:          peripheralIsReadyToSendWriteWithoutResponse
@@ -3713,7 +3713,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheral
+            Name:            CBPeripheral
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3745,7 +3745,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBMutableService
+            Name:            CBMutableService
             WithProtocols:   
       - Name:            'initWithDelegate:queue:'
         JsName:          initWithDelegateQueue
@@ -3763,7 +3763,7 @@ Items:
             WithProtocols:   
               - CBPeripheralManagerDelegate
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
       - Name:            'initWithDelegate:queue:options:'
@@ -3783,14 +3783,14 @@ Items:
             WithProtocols:   
               - CBPeripheralManagerDelegate
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -3834,7 +3834,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBMutableService
+            Name:            CBMutableService
             WithProtocols:   
       - Name:            'respondToRequest:withResult:'
         JsName:          respondToRequestWithResult
@@ -3849,7 +3849,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBATTRequest
+            Name:            CBATTRequest
             WithProtocols:   
           - Type:            Enum
             Name:            CBATTError
@@ -3868,7 +3868,7 @@ Items:
           - Type:            Enum
             Name:            CBPeripheralManagerConnectionLatency
           - Type:            Interface
-            JsName:          CBCentral
+            Name:            CBCentral
             WithProtocols:   
       - Name:            'startAdvertising:'
         JsName:          startAdvertising
@@ -3883,10 +3883,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -3930,16 +3930,16 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBMutableCharacteristic
+            Name:            CBMutableCharacteristic
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CBCentral
+                Name:            CBCentral
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -4166,13 +4166,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBCentral
+            Name:            CBCentral
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBCharacteristic
+            Name:            CBCharacteristic
             WithProtocols:   
       - Name:            'peripheralManager:central:didUnsubscribeFromCharacteristic:'
         JsName:          peripheralManagerCentralDidUnsubscribeFromCharacteristic
@@ -4187,13 +4187,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBCentral
+            Name:            CBCentral
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBCharacteristic
+            Name:            CBCharacteristic
             WithProtocols:   
       - Name:            'peripheralManager:didAddService:error:'
         JsName:          peripheralManagerDidAddServiceError
@@ -4208,13 +4208,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBService
+            Name:            CBService
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheralManager:didOpenL2CAPChannel:error:'
         JsName:          peripheralManagerDidOpenL2CAPChannelError
@@ -4229,13 +4229,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBL2CAPChannel
+            Name:            CBL2CAPChannel
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheralManager:didPublishL2CAPChannel:error:'
         JsName:          peripheralManagerDidPublishL2CAPChannelError
@@ -4250,11 +4250,11 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
           - Type:            Ushort
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheralManager:didReceiveReadRequest:'
         JsName:          peripheralManagerDidReceiveReadRequest
@@ -4269,10 +4269,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          CBATTRequest
+            Name:            CBATTRequest
             WithProtocols:   
       - Name:            'peripheralManager:didReceiveWriteRequests:'
         JsName:          peripheralManagerDidReceiveWriteRequests
@@ -4287,13 +4287,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          CBATTRequest
+                Name:            CBATTRequest
                 WithProtocols:   
             WithProtocols:   
       - Name:            'peripheralManagerDidStartAdvertising:error:'
@@ -4309,10 +4309,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheralManager:didUnpublishL2CAPChannel:error:'
         JsName:          peripheralManagerDidUnpublishL2CAPChannelError
@@ -4327,11 +4327,11 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
           - Type:            Ushort
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'peripheralManagerDidUpdateState:'
         JsName:          peripheralManagerDidUpdateState
@@ -4346,7 +4346,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
       - Name:            'peripheralManagerIsReadyToUpdateSubscribers:'
         JsName:          peripheralManagerIsReadyToUpdateSubscribers
@@ -4361,7 +4361,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
       - Name:            'peripheralManager:willRestoreState:'
         JsName:          peripheralManagerWillRestoreState
@@ -4376,13 +4376,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CBPeripheralManager
+            Name:            CBPeripheralManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -4405,7 +4405,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBPeripheralManagerOptionShowPowerAlertKey
     JsName:          CBPeripheralManagerOptionShowPowerAlertKey
@@ -4420,7 +4420,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBPeripheralManagerRestoredStateAdvertisementDataKey
     JsName:          CBPeripheralManagerRestoredStateAdvertisementDataKey
@@ -4435,7 +4435,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBPeripheralManagerRestoredStateServicesKey
     JsName:          CBPeripheralManagerRestoredStateServicesKey
@@ -4450,7 +4450,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBPeripheralManagerState
     JsName:          CBPeripheralManagerState
@@ -4646,10 +4646,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CBCharacteristic
+                  Name:            CBCharacteristic
                   WithProtocols:   
               WithProtocols:   
       - Name:            includedServices
@@ -4675,10 +4675,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          CBService
+                  Name:            CBService
                   WithProtocols:   
               WithProtocols:   
       - Name:            isPrimary
@@ -4727,7 +4727,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CBPeripheral
+              Name:            CBPeripheral
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4758,7 +4758,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CBUUID
+            Name:            CBUUID
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -4775,10 +4775,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CBUUID
+            Name:            CBUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'UUIDWithNSUUID:'
         JsName:          UUIDWithNSUUID
@@ -4793,10 +4793,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CBUUID
+            Name:            CBUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
       - Name:            'UUIDWithString:'
         JsName:          UUIDWithString
@@ -4810,10 +4810,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          CBUUID
+            Name:            CBUUID
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            data
@@ -4839,7 +4839,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            UUIDString
         JsName:          UUIDString
@@ -4866,7 +4866,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4884,7 +4884,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBUUIDCharacteristicExtendedPropertiesString
     JsName:          CBUUIDCharacteristicExtendedPropertiesString
@@ -4898,7 +4898,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBUUIDCharacteristicFormatString
     JsName:          CBUUIDCharacteristicFormatString
@@ -4912,7 +4912,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBUUIDCharacteristicUserDescriptionString
     JsName:          CBUUIDCharacteristicUserDescriptionString
@@ -4926,7 +4926,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBUUIDCharacteristicValidRangeString
     JsName:          CBUUIDCharacteristicValidRangeString
@@ -4940,7 +4940,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBUUIDClientCharacteristicConfigurationString
     JsName:          CBUUIDClientCharacteristicConfigurationString
@@ -4954,7 +4954,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBUUIDL2CAPPSMCharacteristicString
     JsName:          CBUUIDL2CAPPSMCharacteristicString
@@ -4969,7 +4969,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            CBUUIDServerCharacteristicConfigurationString
     JsName:          CBUUIDServerCharacteristicConfigurationString
@@ -4983,6 +4983,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

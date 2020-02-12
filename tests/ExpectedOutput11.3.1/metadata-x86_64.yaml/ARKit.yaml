@@ -33,11 +33,11 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
       - Name:            'initWithTransform:'
         JsName:          initWithTransform
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARAnchor.h
@@ -52,7 +52,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
     StaticMethods:   
     InstanceProperties: 
       - Name:            identifier
@@ -78,7 +78,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -105,7 +105,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sessionIdentifier
         JsName:          sessionIdentifier
@@ -132,7 +132,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            transform
         JsName:          transform
@@ -158,7 +158,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
     StaticProperties: 
     Protocols:       
       - ARAnchorCopying
@@ -189,7 +189,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -209,7 +209,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationBrowDownRight
     JsName:          ARBlendShapeLocationBrowDownRight
@@ -224,7 +224,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationBrowInnerUp
     JsName:          ARBlendShapeLocationBrowInnerUp
@@ -239,7 +239,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationBrowOuterUpLeft
     JsName:          ARBlendShapeLocationBrowOuterUpLeft
@@ -254,7 +254,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationBrowOuterUpRight
     JsName:          ARBlendShapeLocationBrowOuterUpRight
@@ -269,7 +269,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationCheekPuff
     JsName:          ARBlendShapeLocationCheekPuff
@@ -284,7 +284,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationCheekSquintLeft
     JsName:          ARBlendShapeLocationCheekSquintLeft
@@ -299,7 +299,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationCheekSquintRight
     JsName:          ARBlendShapeLocationCheekSquintRight
@@ -314,7 +314,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeBlinkLeft
     JsName:          ARBlendShapeLocationEyeBlinkLeft
@@ -329,7 +329,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeBlinkRight
     JsName:          ARBlendShapeLocationEyeBlinkRight
@@ -344,7 +344,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeLookDownLeft
     JsName:          ARBlendShapeLocationEyeLookDownLeft
@@ -359,7 +359,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeLookDownRight
     JsName:          ARBlendShapeLocationEyeLookDownRight
@@ -374,7 +374,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeLookInLeft
     JsName:          ARBlendShapeLocationEyeLookInLeft
@@ -389,7 +389,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeLookInRight
     JsName:          ARBlendShapeLocationEyeLookInRight
@@ -404,7 +404,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeLookOutLeft
     JsName:          ARBlendShapeLocationEyeLookOutLeft
@@ -419,7 +419,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeLookOutRight
     JsName:          ARBlendShapeLocationEyeLookOutRight
@@ -434,7 +434,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeLookUpLeft
     JsName:          ARBlendShapeLocationEyeLookUpLeft
@@ -449,7 +449,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeLookUpRight
     JsName:          ARBlendShapeLocationEyeLookUpRight
@@ -464,7 +464,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeSquintLeft
     JsName:          ARBlendShapeLocationEyeSquintLeft
@@ -479,7 +479,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeSquintRight
     JsName:          ARBlendShapeLocationEyeSquintRight
@@ -494,7 +494,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeWideLeft
     JsName:          ARBlendShapeLocationEyeWideLeft
@@ -509,7 +509,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationEyeWideRight
     JsName:          ARBlendShapeLocationEyeWideRight
@@ -524,7 +524,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationJawForward
     JsName:          ARBlendShapeLocationJawForward
@@ -539,7 +539,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationJawLeft
     JsName:          ARBlendShapeLocationJawLeft
@@ -554,7 +554,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationJawOpen
     JsName:          ARBlendShapeLocationJawOpen
@@ -569,7 +569,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationJawRight
     JsName:          ARBlendShapeLocationJawRight
@@ -584,7 +584,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthClose
     JsName:          ARBlendShapeLocationMouthClose
@@ -599,7 +599,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthDimpleLeft
     JsName:          ARBlendShapeLocationMouthDimpleLeft
@@ -614,7 +614,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthDimpleRight
     JsName:          ARBlendShapeLocationMouthDimpleRight
@@ -629,7 +629,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthFrownLeft
     JsName:          ARBlendShapeLocationMouthFrownLeft
@@ -644,7 +644,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthFrownRight
     JsName:          ARBlendShapeLocationMouthFrownRight
@@ -659,7 +659,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthFunnel
     JsName:          ARBlendShapeLocationMouthFunnel
@@ -674,7 +674,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthLeft
     JsName:          ARBlendShapeLocationMouthLeft
@@ -689,7 +689,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthLowerDownLeft
     JsName:          ARBlendShapeLocationMouthLowerDownLeft
@@ -704,7 +704,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthLowerDownRight
     JsName:          ARBlendShapeLocationMouthLowerDownRight
@@ -719,7 +719,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthPressLeft
     JsName:          ARBlendShapeLocationMouthPressLeft
@@ -734,7 +734,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthPressRight
     JsName:          ARBlendShapeLocationMouthPressRight
@@ -749,7 +749,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthPucker
     JsName:          ARBlendShapeLocationMouthPucker
@@ -764,7 +764,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthRight
     JsName:          ARBlendShapeLocationMouthRight
@@ -779,7 +779,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthRollLower
     JsName:          ARBlendShapeLocationMouthRollLower
@@ -794,7 +794,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthRollUpper
     JsName:          ARBlendShapeLocationMouthRollUpper
@@ -809,7 +809,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthShrugLower
     JsName:          ARBlendShapeLocationMouthShrugLower
@@ -824,7 +824,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthShrugUpper
     JsName:          ARBlendShapeLocationMouthShrugUpper
@@ -839,7 +839,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthSmileLeft
     JsName:          ARBlendShapeLocationMouthSmileLeft
@@ -854,7 +854,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthSmileRight
     JsName:          ARBlendShapeLocationMouthSmileRight
@@ -869,7 +869,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthStretchLeft
     JsName:          ARBlendShapeLocationMouthStretchLeft
@@ -884,7 +884,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthStretchRight
     JsName:          ARBlendShapeLocationMouthStretchRight
@@ -899,7 +899,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthUpperUpLeft
     JsName:          ARBlendShapeLocationMouthUpperUpLeft
@@ -914,7 +914,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationMouthUpperUpRight
     JsName:          ARBlendShapeLocationMouthUpperUpRight
@@ -929,7 +929,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationNoseSneerLeft
     JsName:          ARBlendShapeLocationNoseSneerLeft
@@ -944,7 +944,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationNoseSneerRight
     JsName:          ARBlendShapeLocationNoseSneerRight
@@ -959,7 +959,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBlendShapeLocationTongueOut
     JsName:          ARBlendShapeLocationTongueOut
@@ -974,7 +974,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARBody2D
     JsName:          ARBody2D
@@ -1013,7 +1013,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARSkeleton2D
+              Name:            ARSkeleton2D
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1078,7 +1078,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARSkeleton3D
+              Name:            ARSkeleton3D
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1232,10 +1232,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARReferenceImage
+                  Name:            ARReferenceImage
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1252,10 +1252,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARReferenceImage
+                  Name:            ARReferenceImage
                   WithProtocols:   
               WithProtocols:   
       - Name:            environmentTexturing
@@ -1320,7 +1320,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARWorldMap
+              Name:            ARWorldMap
               WithProtocols:   
         Setter:          
           Name:            'setInitialWorldMap:'
@@ -1336,7 +1336,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          ARWorldMap
+              Name:            ARWorldMap
               WithProtocols:   
       - Name:            maximumNumberOfTrackedImages
         JsName:          maximumNumberOfTrackedImages
@@ -1479,12 +1479,12 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Enum
             Name:            UIInterfaceOrientation
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Double
           - Type:            Double
       - Name:            'projectPoint:orientation:viewportSize:'
@@ -1500,13 +1500,13 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            
           - Type:            Enum
             Name:            UIInterfaceOrientation
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
       - Name:            'unprojectPoint:ontoPlaneWithTransform:orientation:viewportSize:'
         JsName:          unprojectPointOntoPlaneWithTransformOrientationViewportSize
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARCamera.h
@@ -1522,15 +1522,15 @@ Items:
           - Type:            
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Enum
             Name:            UIInterfaceOrientation
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
       - Name:            'viewMatrixForOrientation:'
         JsName:          viewMatrixForOrientation
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARCamera.h
@@ -1544,7 +1544,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Enum
             Name:            UIInterfaceOrientation
     StaticMethods:   
@@ -1646,7 +1646,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
       - Name:            intrinsics
         JsName:          intrinsics
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARCamera.h
@@ -1671,7 +1671,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float3x3
+              Name:            simd_float3x3
       - Name:            projectionMatrix
         JsName:          projectionMatrix
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARCamera.h
@@ -1696,7 +1696,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
       - Name:            trackingState
         JsName:          trackingState
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARCamera.h
@@ -1769,7 +1769,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
     StaticProperties: 
     Protocols:       
       - NSCopying
@@ -2029,7 +2029,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARSession
+              Name:            ARSession
               WithProtocols:   
         Setter:          
           Name:            'setSession:'
@@ -2045,7 +2045,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          ARSession
+              Name:            ARSession
               WithProtocols:   
       - Name:            sessionProvider
         JsName:          sessionProvider
@@ -2070,7 +2070,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - ARSessionProviding
         Setter:          
@@ -2087,7 +2087,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - ARSessionProviding
     StaticProperties: 
@@ -2118,7 +2118,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARCoachingOverlayView
+            Name:            ARCoachingOverlayView
             WithProtocols:   
       - Name:            'coachingOverlayViewDidRequestSessionReset:'
         JsName:          coachingOverlayViewDidRequestSessionReset
@@ -2133,7 +2133,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARCoachingOverlayView
+            Name:            ARCoachingOverlayView
             WithProtocols:   
       - Name:            'coachingOverlayViewWillActivate:'
         JsName:          coachingOverlayViewWillActivate
@@ -2148,7 +2148,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARCoachingOverlayView
+            Name:            ARCoachingOverlayView
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2405,7 +2405,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARVideoFormat
+              Name:            ARVideoFormat
               WithProtocols:   
         Setter:          
           Name:            'setVideoFormat:'
@@ -2422,7 +2422,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          ARVideoFormat
+              Name:            ARVideoFormat
               WithProtocols:   
       - Name:            worldAlignment
         JsName:          worldAlignment
@@ -2512,10 +2512,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARVideoFormat
+                  Name:            ARVideoFormat
                   WithProtocols:   
               WithProtocols:   
     Protocols:       
@@ -2604,7 +2604,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2634,11 +2634,11 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            
       - Name:            'initWithTransform:extent:'
         JsName:          initWithTransformExtent
@@ -2654,7 +2654,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            StaticMethods:   
     InstanceProperties: 
       - Name:            environmentTexture
@@ -2987,7 +2987,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARFaceAnchor
     JsName:          ARFaceAnchor
@@ -3026,13 +3026,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            geometry
@@ -3058,7 +3058,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARFaceGeometry
+              Name:            ARFaceGeometry
               WithProtocols:   
       - Name:            leftEyeTransform
         JsName:          leftEyeTransform
@@ -3086,7 +3086,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
       - Name:            lookAtPoint
         JsName:          lookAtPoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARFaceAnchor.h
@@ -3138,7 +3138,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
     StaticProperties: 
     Protocols:       
       - ARTrackable
@@ -3168,13 +3168,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -3499,12 +3499,12 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGAffineTransform
-            JsName:          CGAffineTransform
+            Name:            CGAffineTransform
           - Type:            Enum
             Name:            UIInterfaceOrientation
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
       - Name:            'hitTest:types:'
         JsName:          hitTestTypes
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARFrame.h
@@ -3517,15 +3517,15 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ARHitTestResult
+                Name:            ARHitTestResult
                 WithProtocols:   
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Enum
             Name:            ARHitTestResultType
       - Name:            'raycastQueryFromPoint:allowingTarget:alignment:'
@@ -3541,11 +3541,11 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ARRaycastQuery
+            Name:            ARRaycastQuery
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Enum
             Name:            ARRaycastTarget
           - Type:            Enum
@@ -3575,10 +3575,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARAnchor
+                  Name:            ARAnchor
                   WithProtocols:   
               WithProtocols:   
       - Name:            camera
@@ -3604,7 +3604,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARCamera
+              Name:            ARCamera
               WithProtocols:   
       - Name:            cameraGrainIntensity
         JsName:          cameraGrainIntensity
@@ -3681,7 +3681,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AVDepthData
+              Name:            AVDepthData
               WithProtocols:   
       - Name:            capturedDepthDataTimestamp
         JsName:          capturedDepthDataTimestamp
@@ -3756,7 +3756,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARBody2D
+              Name:            ARBody2D
               WithProtocols:   
       - Name:            estimatedDepthData
         JsName:          estimatedDepthData
@@ -3808,7 +3808,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARLightEstimate
+              Name:            ARLightEstimate
               WithProtocols:   
       - Name:            rawFeaturePoints
         JsName:          rawFeaturePoints
@@ -3833,7 +3833,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARPointCloud
+              Name:            ARPointCloud
               WithProtocols:   
       - Name:            segmentationBuffer
         JsName:          segmentationBuffer
@@ -4016,7 +4016,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARAnchor
+              Name:            ARAnchor
               WithProtocols:   
       - Name:            distance
         JsName:          distance
@@ -4065,7 +4065,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
       - Name:            type
         JsName:          type
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARHitTestResult.h
@@ -4114,7 +4114,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
     StaticProperties: 
     Protocols:       
     Base:            NSObject
@@ -4272,7 +4272,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARReferenceImage
+              Name:            ARReferenceImage
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4389,10 +4389,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARReferenceImage
+                  Name:            ARReferenceImage
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4409,10 +4409,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARReferenceImage
+                  Name:            ARReferenceImage
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -4508,7 +4508,7 @@ Items:
             WithProtocols:   
               - MTLTexture
           - Type:            Interface
-            JsName:          ARFrame
+            Name:            ARFrame
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -4528,7 +4528,7 @@ Items:
             WithProtocols:   
               - MTLTexture
           - Type:            Interface
-            JsName:          ARFrame
+            Name:            ARFrame
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -4630,7 +4630,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARReferenceObject
+              Name:            ARReferenceObject
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4963,7 +4963,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARPlaneGeometry
+              Name:            ARPlaneGeometry
               WithProtocols:   
     StaticProperties: 
       - Name:            classificationSupported
@@ -5600,7 +5600,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARWorldMap
+              Name:            ARWorldMap
               WithProtocols:   
         Setter:          
           Name:            'setInitialWorldMap:'
@@ -5616,7 +5616,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          ARWorldMap
+              Name:            ARWorldMap
               WithProtocols:   
       - Name:            planeDetection
         JsName:          planeDetection
@@ -5685,7 +5685,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -5749,7 +5749,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setCanonicalWebPageURL:'
@@ -5765,7 +5765,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5937,7 +5937,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARAnchor
+              Name:            ARAnchor
               WithProtocols:   
       - Name:            target
         JsName:          target
@@ -6011,7 +6011,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float4x4
+              Name:            simd_float4x4
     StaticProperties: 
     Protocols:       
     Base:            NSObject
@@ -6182,7 +6182,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'referenceImagesInGroupNamed:bundle:'
@@ -6197,17 +6197,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          ARReferenceImage
+                Name:            ARReferenceImage
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSBundle
+            Name:            NSBundle
             WithProtocols:   
     InstanceProperties: 
       - Name:            name
@@ -6233,7 +6233,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -6249,7 +6249,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            physicalSize
         JsName:          physicalSize
@@ -6275,7 +6275,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
       - Name:            resourceGroupName
         JsName:          resourceGroupName
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARReferenceImage.h
@@ -6301,7 +6301,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -6331,15 +6331,15 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'initWithArchiveURL:error:'
         JsName:          initWithArchiveURLError
@@ -6354,12 +6354,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'referenceObjectByApplyingTransform:'
         JsName:          referenceObjectByApplyingTransform
@@ -6373,11 +6373,11 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ARReferenceObject
+            Name:            ARReferenceObject
             WithProtocols:   
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
       - Name:            'referenceObjectByMergingObject:error:'
         JsName:          referenceObjectByMergingObjectError
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARReferenceObject.h
@@ -6390,15 +6390,15 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ARReferenceObject
+            Name:            ARReferenceObject
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARReferenceObject
+            Name:            ARReferenceObject
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
       - Name:            'referenceObjectsInGroupNamed:bundle:'
@@ -6413,17 +6413,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          ARReferenceObject
+                Name:            ARReferenceObject
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSBundle
+            Name:            NSBundle
             WithProtocols:   
     InstanceProperties: 
       - Name:            center
@@ -6495,7 +6495,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -6511,7 +6511,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            rawFeaturePoints
         JsName:          rawFeaturePoints
@@ -6536,7 +6536,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARPointCloud
+              Name:            ARPointCloud
               WithProtocols:   
       - Name:            resourceGroupName
         JsName:          resourceGroupName
@@ -6563,7 +6563,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            scale
         JsName:          scale
@@ -6604,7 +6604,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARSCNDebugOptionShowFeaturePoints
     JsName:          ARSCNDebugOptionShowFeaturePoints
@@ -6659,7 +6659,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARFaceGeometry
+            Name:            ARFaceGeometry
             WithProtocols:   
     StaticMethods:   
       - Name:            'faceGeometryWithDevice:'
@@ -6722,7 +6722,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARPlaneGeometry
+            Name:            ARPlaneGeometry
             WithProtocols:   
     StaticMethods:   
       - Name:            'planeGeometryWithDevice:'
@@ -6768,10 +6768,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
           - Type:            Interface
-            JsName:          SCNNode
+            Name:            SCNNode
             WithProtocols:   
       - Name:            'hitTest:types:'
         JsName:          hitTestTypes
@@ -6785,15 +6785,15 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ARHitTestResult
+                Name:            ARHitTestResult
                 WithProtocols:   
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Enum
             Name:            ARHitTestResultType
       - Name:            'nodeForAnchor:'
@@ -6808,10 +6808,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          SCNNode
+            Name:            SCNNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
       - Name:            'raycastQueryFromPoint:allowingTarget:alignment:'
         JsName:          raycastQueryFromPointAllowingTargetAlignment
@@ -6826,11 +6826,11 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ARRaycastQuery
+            Name:            ARRaycastQuery
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Enum
             Name:            ARRaycastTarget
           - Type:            Enum
@@ -6850,10 +6850,10 @@ Items:
           - Type:            
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
     StaticMethods:   
     InstanceProperties: 
       - Name:            automaticallyUpdatesLighting
@@ -7037,7 +7037,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARSession
+              Name:            ARSession
               WithProtocols:   
         Setter:          
           Name:            'setSession:'
@@ -7053,7 +7053,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          ARSession
+              Name:            ARSession
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7087,10 +7087,10 @@ Items:
             WithProtocols:   
               - SCNSceneRenderer
           - Type:            Interface
-            JsName:          SCNNode
+            Name:            SCNNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
       - Name:            'renderer:didRemoveNode:forAnchor:'
         JsName:          rendererDidRemoveNodeForAnchor
@@ -7108,10 +7108,10 @@ Items:
             WithProtocols:   
               - SCNSceneRenderer
           - Type:            Interface
-            JsName:          SCNNode
+            Name:            SCNNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
       - Name:            'renderer:didUpdateNode:forAnchor:'
         JsName:          rendererDidUpdateNodeForAnchor
@@ -7129,10 +7129,10 @@ Items:
             WithProtocols:   
               - SCNSceneRenderer
           - Type:            Interface
-            JsName:          SCNNode
+            Name:            SCNNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
       - Name:            'renderer:nodeForAnchor:'
         JsName:          rendererNodeForAnchor
@@ -7146,13 +7146,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          SCNNode
+            Name:            SCNNode
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
               - SCNSceneRenderer
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
       - Name:            'renderer:willUpdateNode:forAnchor:'
         JsName:          rendererWillUpdateNodeForAnchor
@@ -7170,10 +7170,10 @@ Items:
             WithProtocols:   
               - SCNSceneRenderer
           - Type:            Interface
-            JsName:          SCNNode
+            Name:            SCNNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -7205,10 +7205,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
           - Type:            Interface
-            JsName:          SKNode
+            Name:            SKNode
             WithProtocols:   
       - Name:            'hitTest:types:'
         JsName:          hitTestTypes
@@ -7222,15 +7222,15 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ARHitTestResult
+                Name:            ARHitTestResult
                 WithProtocols:   
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Enum
             Name:            ARHitTestResultType
       - Name:            'nodeForAnchor:'
@@ -7245,10 +7245,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          SKNode
+            Name:            SKNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -7275,7 +7275,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - ARSKViewDelegate
         Setter:          
@@ -7292,7 +7292,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - ARSKViewDelegate
       - Name:            session
@@ -7318,7 +7318,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARSession
+              Name:            ARSession
               WithProtocols:   
         Setter:          
           Name:            'setSession:'
@@ -7334,7 +7334,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          ARSession
+              Name:            ARSession
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7365,13 +7365,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSKView
+            Name:            ARSKView
             WithProtocols:   
           - Type:            Interface
-            JsName:          SKNode
+            Name:            SKNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
       - Name:            'view:didRemoveNode:forAnchor:'
         JsName:          viewDidRemoveNodeForAnchor
@@ -7386,13 +7386,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSKView
+            Name:            ARSKView
             WithProtocols:   
           - Type:            Interface
-            JsName:          SKNode
+            Name:            SKNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
       - Name:            'view:didUpdateNode:forAnchor:'
         JsName:          viewDidUpdateNodeForAnchor
@@ -7407,13 +7407,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSKView
+            Name:            ARSKView
             WithProtocols:   
           - Type:            Interface
-            JsName:          SKNode
+            Name:            SKNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
       - Name:            'view:nodeForAnchor:'
         JsName:          viewNodeForAnchor
@@ -7427,13 +7427,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          SKNode
+            Name:            SKNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARSKView
+            Name:            ARSKView
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
       - Name:            'view:willUpdateNode:forAnchor:'
         JsName:          viewWillUpdateNodeForAnchor
@@ -7448,13 +7448,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSKView
+            Name:            ARSKView
             WithProtocols:   
           - Type:            Interface
-            JsName:          SKNode
+            Name:            SKNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -7525,7 +7525,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
       - Name:            'createReferenceObjectWithTransform:center:extent:completionHandler:'
         JsName:          createReferenceObjectWithTransformCenterExtentCompletionHandler
@@ -7542,17 +7542,17 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            
           - Type:            
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          ARReferenceObject
+                Name:            ARReferenceObject
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'getCurrentWorldMapWithCompletionHandler:'
         JsName:          getCurrentWorldMapWithCompletionHandler
@@ -7571,10 +7571,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          ARWorldMap
+                Name:            ARWorldMap
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            pause
         JsName:          pause
@@ -7601,14 +7601,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ARRaycastResult
+                Name:            ARRaycastResult
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARRaycastQuery
+            Name:            ARRaycastQuery
             WithProtocols:   
       - Name:            'removeAnchor:'
         JsName:          removeAnchor
@@ -7623,7 +7623,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARAnchor
+            Name:            ARAnchor
             WithProtocols:   
       - Name:            'runWithConfiguration:'
         JsName:          runWithConfiguration
@@ -7638,7 +7638,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARConfiguration
+            Name:            ARConfiguration
             WithProtocols:   
       - Name:            'runWithConfiguration:options:'
         JsName:          runWithConfigurationOptions
@@ -7653,7 +7653,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARConfiguration
+            Name:            ARConfiguration
             WithProtocols:   
           - Type:            Enum
             Name:            ARSessionRunOptions
@@ -7672,7 +7672,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
       - Name:            'trackedRaycast:updateHandler:'
         JsName:          trackedRaycastUpdateHandler
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARSession.h
@@ -7686,19 +7686,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ARTrackedRaycast
+            Name:            ARTrackedRaycast
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARRaycastQuery
+            Name:            ARRaycastQuery
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          ARRaycastResult
+                    Name:            ARRaycastResult
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'updateWithCollaborationData:'
@@ -7715,7 +7715,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARCollaborationData
+            Name:            ARCollaborationData
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -7742,7 +7742,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARConfiguration
+              Name:            ARConfiguration
               WithProtocols:   
       - Name:            currentFrame
         JsName:          currentFrame
@@ -7767,7 +7767,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARFrame
+              Name:            ARFrame
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -7833,7 +7833,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - OS_dispatch_queue
         Setter:          
@@ -7850,7 +7850,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - OS_dispatch_queue
       - Name:            identifier
@@ -7878,7 +7878,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7908,13 +7908,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSession
+            Name:            ARSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ARAnchor
+                Name:            ARAnchor
                 WithProtocols:   
             WithProtocols:   
       - Name:            'session:didRemoveAnchors:'
@@ -7930,13 +7930,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSession
+            Name:            ARSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ARAnchor
+                Name:            ARAnchor
                 WithProtocols:   
             WithProtocols:   
       - Name:            'session:didUpdateAnchors:'
@@ -7952,13 +7952,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSession
+            Name:            ARSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ARAnchor
+                Name:            ARAnchor
                 WithProtocols:   
             WithProtocols:   
       - Name:            'session:didUpdateFrame:'
@@ -7974,10 +7974,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSession
+            Name:            ARSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARFrame
+            Name:            ARFrame
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8009,10 +8009,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSession
+            Name:            ARSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARCamera
+            Name:            ARCamera
             WithProtocols:   
       - Name:            'session:didFailWithError:'
         JsName:          sessionDidFailWithError
@@ -8027,10 +8027,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSession
+            Name:            ARSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'session:didOutputAudioSampleBuffer:'
         JsName:          sessionDidOutputAudioSampleBuffer
@@ -8045,7 +8045,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSession
+            Name:            ARSession
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -8064,10 +8064,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSession
+            Name:            ARSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          ARCollaborationData
+            Name:            ARCollaborationData
             WithProtocols:   
       - Name:            'sessionInterruptionEnded:'
         JsName:          sessionInterruptionEnded
@@ -8082,7 +8082,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSession
+            Name:            ARSession
             WithProtocols:   
       - Name:            'sessionShouldAttemptRelocalization:'
         JsName:          sessionShouldAttemptRelocalization
@@ -8098,7 +8098,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          ARSession
+            Name:            ARSession
             WithProtocols:   
       - Name:            'sessionWasInterrupted:'
         JsName:          sessionWasInterrupted
@@ -8113,7 +8113,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ARSession
+            Name:            ARSession
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8156,7 +8156,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARSession
+              Name:            ARSession
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -8262,7 +8262,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARSkeletonDefinition
+              Name:            ARSkeletonDefinition
               WithProtocols:   
       - Name:            jointCount
         JsName:          jointCount
@@ -8315,7 +8315,7 @@ Items:
         Signature:       
           - Type:            
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8371,9 +8371,9 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'modelTransformForJointName:'
         JsName:          modelTransformForJointName
@@ -8388,9 +8388,9 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          simd.types
-            JsName:          simd_float4x4
+            Name:            simd_float4x4
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8420,7 +8420,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          simd.types
-                JsName:          simd_float4x4
+                Name:            simd_float4x4
       - Name:            jointModelTransforms
         JsName:          jointModelTransforms
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ARKit.framework/Headers/ARSkeleton.h
@@ -8447,7 +8447,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          simd.types
-                JsName:          simd_float4x4
+                Name:            simd_float4x4
     StaticProperties: 
     Protocols:       
     Base:            ARSkeleton
@@ -8476,7 +8476,7 @@ Items:
         Signature:       
           - Type:            ULong
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8526,10 +8526,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            neutralBodySkeleton3D
@@ -8555,7 +8555,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARSkeleton3D
+              Name:            ARSkeleton3D
               WithProtocols:   
       - Name:            parentIndices
         JsName:          parentIndices
@@ -8580,10 +8580,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -8610,7 +8610,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARSkeletonDefinition
+              Name:            ARSkeletonDefinition
               WithProtocols:   
       - Name:            defaultBody3DSkeletonDefinition
         JsName:          defaultBody3DSkeletonDefinition
@@ -8635,7 +8635,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARSkeletonDefinition
+              Name:            ARSkeletonDefinition
               WithProtocols:   
     Protocols:       
     Base:            NSObject
@@ -8652,7 +8652,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARSkeletonJointNameLeftFoot
     JsName:          ARSkeletonJointNameLeftFoot
@@ -8667,7 +8667,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARSkeletonJointNameLeftHand
     JsName:          ARSkeletonJointNameLeftHand
@@ -8682,7 +8682,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARSkeletonJointNameLeftShoulder
     JsName:          ARSkeletonJointNameLeftShoulder
@@ -8697,7 +8697,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARSkeletonJointNameRightFoot
     JsName:          ARSkeletonJointNameRightFoot
@@ -8712,7 +8712,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARSkeletonJointNameRightHand
     JsName:          ARSkeletonJointNameRightHand
@@ -8727,7 +8727,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARSkeletonJointNameRightShoulder
     JsName:          ARSkeletonJointNameRightShoulder
@@ -8742,7 +8742,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARSkeletonJointNameRoot
     JsName:          ARSkeletonJointNameRoot
@@ -8757,7 +8757,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ARTrackable
     JsName:          ARTrackable
@@ -9044,7 +9044,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGSize
+              Name:            CGSize
     StaticProperties: 
     Protocols:       
       - NSCopying
@@ -9137,10 +9137,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARAnchor
+                  Name:            ARAnchor
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -9157,10 +9157,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARAnchor
+                  Name:            ARAnchor
                   WithProtocols:   
               WithProtocols:   
       - Name:            center
@@ -9232,7 +9232,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARPointCloud
+              Name:            ARPointCloud
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9462,10 +9462,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARReferenceImage
+                  Name:            ARReferenceImage
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -9483,10 +9483,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARReferenceImage
+                  Name:            ARReferenceImage
                   WithProtocols:   
               WithProtocols:   
       - Name:            detectionObjects
@@ -9514,10 +9514,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARReferenceObject
+                  Name:            ARReferenceObject
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -9535,10 +9535,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ARReferenceObject
+                  Name:            ARReferenceObject
                   WithProtocols:   
               WithProtocols:   
       - Name:            environmentTexturing
@@ -9608,7 +9608,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ARWorldMap
+              Name:            ARWorldMap
               WithProtocols:   
         Setter:          
           Name:            'setInitialWorldMap:'
@@ -9625,7 +9625,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          ARWorldMap
+              Name:            ARWorldMap
               WithProtocols:   
       - Name:            maximumNumberOfTrackedImages
         JsName:          maximumNumberOfTrackedImages

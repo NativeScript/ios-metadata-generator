@@ -105,7 +105,7 @@ Items:
       - Type:            BridgedInterface
         Name:            NSError
         BridgedTo:       NSError
-  - Name:            ''
+  - Name:            SCDynamicStoreContext
     JsName:          SCDynamicStoreContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SCDynamicStore.h
     Module:          
@@ -183,7 +183,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Int
-  - Name:            ''
+  - Name:            SCNetworkConnectionContext
     JsName:          SCNetworkConnectionContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SCNetworkConnection.h
     Module:          
@@ -273,7 +273,7 @@ Items:
       - kSCNetworkConnectionConnected: '2'
       - kSCNetworkConnectionDisconnecting: '3'
     SwiftNameFields: 
-  - Name:            ''
+  - Name:            SCNetworkReachabilityContext
     JsName:          SCNetworkReachabilityContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SCNetworkReachability.h
     Module:          
@@ -342,7 +342,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          Darwin.POSIX.sys.socket
-          JsName:          sockaddr
+          Name:            sockaddr
   - Name:            SCNetworkReachabilityCreateWithAddressPair
     JsName:          SCNetworkReachabilityCreateWithAddressPair
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SCNetworkReachability.h
@@ -365,12 +365,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          Darwin.POSIX.sys.socket
-          JsName:          sockaddr
+          Name:            sockaddr
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          Darwin.POSIX.sys.socket
-          JsName:          sockaddr
+          Name:            sockaddr
   - Name:            SCNetworkReachabilityCreateWithName
     JsName:          SCNetworkReachabilityCreateWithName
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SCNetworkReachability.h
@@ -498,7 +498,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          SystemConfiguration.SCNetworkReachability
-          JsName:          SCNetworkReachabilityContext
+          Name:            SCNetworkReachabilityContext
   - Name:            SCNetworkReachabilitySetDispatchQueue
     JsName:          SCNetworkReachabilitySetDispatchQueue
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SCNetworkReachability.h
@@ -516,7 +516,7 @@ Items:
         Name:            id
         BridgedTo:       id
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            SCNetworkReachabilityUnscheduleFromRunLoop
@@ -541,7 +541,7 @@ Items:
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
-  - Name:            ''
+  - Name:            SCPreferencesContext
     JsName:          SCPreferencesContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SCPreferences.h
     Module:          

@@ -475,7 +475,7 @@ Items:
       Signature:       
         - Type:            Void
         - Type:            Interface
-          JsName:          NSObject
+          Name:            NSObject
           WithProtocols:   
             - OS_nw_error
   - Name:            _nw_content_context_default_message
@@ -493,7 +493,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSObject
+      Name:            NSObject
       WithProtocols:   
         - OS_nw_content_context
   - Name:            _nw_content_context_default_stream
@@ -511,7 +511,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSObject
+      Name:            NSObject
       WithProtocols:   
         - OS_nw_content_context
   - Name:            _nw_content_context_final_send
@@ -529,7 +529,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSObject
+      Name:            NSObject
       WithProtocols:   
         - OS_nw_content_context
   - Name:            _nw_data_transfer_report_all_paths
@@ -564,7 +564,7 @@ Items:
       Signature:       
         - Type:            Void
         - Type:            Interface
-          JsName:          NSObject
+          Name:            NSObject
           WithProtocols:   
             - OS_nw_protocol_options
   - Name:            _nw_parameters_configure_protocol_disable
@@ -585,7 +585,7 @@ Items:
       Signature:       
         - Type:            Void
         - Type:            Interface
-          JsName:          NSObject
+          Name:            NSObject
           WithProtocols:   
             - OS_nw_protocol_options
   - Name:            kNWErrorDomainDNS
@@ -654,11 +654,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_advertise_descriptor
   - Name:            nw_advertise_descriptor_create_bonjour_service
@@ -676,7 +676,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_advertise_descriptor
       - Type:            CString
@@ -698,7 +698,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_advertise_descriptor
   - Name:            nw_advertise_descriptor_set_no_auto_rename
@@ -717,7 +717,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_advertise_descriptor
       - Type:            Bool
@@ -737,7 +737,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_advertise_descriptor
       - Type:            Pointer
@@ -760,11 +760,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_advertise_descriptor
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
   - Name:            nw_browse_descriptor_create_bonjour_service
@@ -782,7 +782,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_descriptor
       - Type:            CString
@@ -803,7 +803,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_descriptor
   - Name:            nw_browse_descriptor_get_bonjour_service_type
@@ -822,7 +822,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_descriptor
   - Name:            nw_browse_descriptor_get_include_txt_record
@@ -841,7 +841,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_descriptor
   - Name:            nw_browse_descriptor_set_include_txt_record
@@ -860,7 +860,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_descriptor
       - Type:            Bool
@@ -970,11 +970,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_result
   - Name:            nw_browse_result_copy_txt_record_object
@@ -992,11 +992,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_result
   - Name:            nw_browse_result_enumerate_interfaces
@@ -1015,14 +1015,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_result
       - Type:            Block
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_interface
   - Name:            nw_browse_result_get_changes
@@ -1041,11 +1041,11 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_result
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_result
   - Name:            nw_browse_result_get_interfaces_count
@@ -1064,7 +1064,7 @@ Items:
     Signature:       
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_result
   - Name:            nw_browser_cancel
@@ -1083,7 +1083,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browser
   - Name:            nw_browser_copy_browse_descriptor
@@ -1101,11 +1101,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_descriptor
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browser
   - Name:            nw_browser_copy_parameters
@@ -1123,11 +1123,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browser
   - Name:            nw_browser_create
@@ -1145,15 +1145,15 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browser
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browse_descriptor
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_browser_set_browse_results_changed_handler
@@ -1172,18 +1172,18 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browser
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_browse_result
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_browse_result
           - Type:            Bool
@@ -1203,11 +1203,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browser
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            nw_browser_set_state_changed_handler
@@ -1226,7 +1226,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browser
       - Type:            Block
@@ -1235,7 +1235,7 @@ Items:
           - Type:            Enum
             Name:            nw_browser_state_t
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_error
   - Name:            nw_browser_start
@@ -1254,7 +1254,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_browser
   - Name:            nw_browser_state_cancelled
@@ -1309,7 +1309,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
-  - Name:            ''
+  - Name:            nw_browser_state_t
     JsName:          nw_browser_state_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/browser.h
     Module:          
@@ -1343,18 +1343,18 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_establishment_report
   - Name:            nw_connection_batch
@@ -1373,7 +1373,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Block
@@ -1395,7 +1395,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
   - Name:            nw_connection_cancel_current_endpoint
@@ -1414,7 +1414,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
   - Name:            nw_connection_copy_current_path
@@ -1432,11 +1432,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
   - Name:            nw_connection_copy_description
@@ -1455,7 +1455,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
   - Name:            nw_connection_copy_endpoint
@@ -1473,11 +1473,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
   - Name:            nw_connection_copy_parameters
@@ -1495,11 +1495,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
   - Name:            nw_connection_copy_protocol_metadata
@@ -1517,15 +1517,15 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
   - Name:            nw_connection_create
@@ -1543,15 +1543,15 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_connection_create_new_data_transfer_report
@@ -1569,11 +1569,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
   - Name:            nw_connection_force_cancel
@@ -1592,7 +1592,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
   - Name:            nw_connection_get_maximum_datagram_size
@@ -1611,7 +1611,7 @@ Items:
     Signature:       
       - Type:            UInt
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
   - Name:            nw_connection_receive
@@ -1630,7 +1630,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            UInt
@@ -1639,16 +1639,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_content_context
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_error
   - Name:            nw_connection_receive_message
@@ -1667,23 +1667,23 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_content_context
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_error
   - Name:            nw_connection_restart
@@ -1702,7 +1702,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
   - Name:            nw_connection_send
@@ -1721,15 +1721,15 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
       - Type:            Bool
@@ -1737,7 +1737,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_error
   - Name:            nw_connection_set_better_path_available_handler
@@ -1756,7 +1756,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Block
@@ -1779,14 +1779,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_path
   - Name:            nw_connection_set_queue
@@ -1805,11 +1805,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            nw_connection_set_state_changed_handler
@@ -1828,7 +1828,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Block
@@ -1837,7 +1837,7 @@ Items:
           - Type:            Enum
             Name:            nw_connection_state_t
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_error
   - Name:            nw_connection_set_viability_changed_handler
@@ -1856,7 +1856,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Block
@@ -1879,7 +1879,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
   - Name:            nw_connection_state_cancelled
@@ -1947,7 +1947,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
-  - Name:            ''
+  - Name:            nw_connection_state_t
     JsName:          nw_connection_state_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/connection.h
     Module:          
@@ -1995,11 +1995,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
   - Name:            nw_content_context_copy_protocol_metadata
@@ -2017,15 +2017,15 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
   - Name:            nw_content_context_create
@@ -2043,7 +2043,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
       - Type:            CString
@@ -2063,18 +2063,18 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_protocol_definition
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_protocol_metadata
   - Name:            nw_content_context_get_expiration_milliseconds
@@ -2093,7 +2093,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
   - Name:            nw_content_context_get_identifier
@@ -2112,7 +2112,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
   - Name:            nw_content_context_get_is_final
@@ -2131,7 +2131,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
   - Name:            nw_content_context_get_relative_priority
@@ -2150,7 +2150,7 @@ Items:
     Signature:       
       - Type:            Double
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
   - Name:            nw_content_context_set_antecedent
@@ -2169,11 +2169,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
   - Name:            nw_content_context_set_expiration_milliseconds
@@ -2192,7 +2192,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
       - Type:            ULongLong
@@ -2212,7 +2212,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
       - Type:            Bool
@@ -2232,11 +2232,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_content_context_set_relative_priority
@@ -2255,7 +2255,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_content_context
       - Type:            Double
@@ -2275,18 +2275,18 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_data_transfer_report
   - Name:            nw_data_transfer_report_copy_path_interface
@@ -2304,11 +2304,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_interface
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2328,7 +2328,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
   - Name:            nw_data_transfer_report_get_path_count
@@ -2347,7 +2347,7 @@ Items:
     Signature:       
       - Type:            UInt
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
   - Name:            nw_data_transfer_report_get_received_application_byte_count
@@ -2366,7 +2366,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2386,7 +2386,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2406,7 +2406,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2426,7 +2426,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2446,7 +2446,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2466,7 +2466,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2486,7 +2486,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2506,7 +2506,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2526,7 +2526,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2547,7 +2547,7 @@ Items:
       - Type:            Enum
         Name:            nw_data_transfer_report_state_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
   - Name:            nw_data_transfer_report_get_transport_minimum_rtt_milliseconds
@@ -2566,7 +2566,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2586,7 +2586,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2606,7 +2606,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_data_transfer_report
       - Type:            UInt
@@ -2636,7 +2636,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
-  - Name:            ''
+  - Name:            nw_data_transfer_report_state_t
     JsName:          nw_data_transfer_report_state_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/connection_report.h
     Module:          
@@ -2668,7 +2668,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
   - Name:            nw_endpoint_copy_port_string
@@ -2687,7 +2687,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
   - Name:            nw_endpoint_create_address
@@ -2705,14 +2705,14 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          Darwin.POSIX.sys.socket
-          JsName:          sockaddr
+          Name:            sockaddr
   - Name:            nw_endpoint_create_bonjour_service
     JsName:          nw_endpoint_create_bonjour_service
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/endpoint.h
@@ -2728,7 +2728,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            CString
@@ -2749,7 +2749,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            CString
@@ -2769,7 +2769,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            CString
@@ -2791,9 +2791,9 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          Darwin.POSIX.sys.socket
-          JsName:          sockaddr
+          Name:            sockaddr
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
   - Name:            nw_endpoint_get_bonjour_service_domain
@@ -2812,7 +2812,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
   - Name:            nw_endpoint_get_bonjour_service_name
@@ -2831,7 +2831,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
   - Name:            nw_endpoint_get_bonjour_service_type
@@ -2850,7 +2850,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
   - Name:            nw_endpoint_get_hostname
@@ -2869,7 +2869,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
   - Name:            nw_endpoint_get_port
@@ -2888,7 +2888,7 @@ Items:
     Signature:       
       - Type:            Ushort
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
   - Name:            nw_endpoint_get_type
@@ -2908,7 +2908,7 @@ Items:
       - Type:            Enum
         Name:            nw_endpoint_type_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
   - Name:            nw_endpoint_get_url
@@ -2927,7 +2927,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
   - Name:            nw_endpoint_type_address
@@ -2982,7 +2982,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
-  - Name:            ''
+  - Name:            nw_endpoint_type_t
     JsName:          nw_endpoint_type_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/endpoint.h
     Module:          
@@ -3032,7 +3032,7 @@ Items:
         Name:            NSError
         BridgedTo:       NSError
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_error
   - Name:            nw_error_domain_dns
@@ -3074,7 +3074,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
-  - Name:            ''
+  - Name:            nw_error_domain_t
     JsName:          nw_error_domain_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/error.h
     Module:          
@@ -3121,7 +3121,7 @@ Items:
     Signature:       
       - Type:            Int
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_error
   - Name:            nw_error_get_error_domain
@@ -3141,7 +3141,7 @@ Items:
       - Type:            Enum
         Name:            nw_error_domain_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_error
   - Name:            nw_establishment_report_copy_proxy_endpoint
@@ -3159,11 +3159,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_establishment_report
   - Name:            nw_establishment_report_enumerate_protocols
@@ -3182,14 +3182,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_establishment_report
       - Type:            Block
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_protocol_definition
           - Type:            ULongLong
@@ -3210,7 +3210,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_establishment_report
       - Type:            Block
@@ -3221,11 +3221,11 @@ Items:
           - Type:            ULongLong
           - Type:            UInt
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_endpoint
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_endpoint
   - Name:            nw_establishment_report_get_attempt_started_after_milliseconds
@@ -3244,7 +3244,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_establishment_report
   - Name:            nw_establishment_report_get_duration_milliseconds
@@ -3263,7 +3263,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_establishment_report
   - Name:            nw_establishment_report_get_previous_attempt_count
@@ -3282,7 +3282,7 @@ Items:
     Signature:       
       - Type:            UInt
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_establishment_report
   - Name:            nw_establishment_report_get_proxy_configured
@@ -3301,7 +3301,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_establishment_report
   - Name:            nw_establishment_report_get_used_proxy
@@ -3320,7 +3320,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_establishment_report
   - Name:            nw_ethernet_channel_state_cancelled
@@ -3388,7 +3388,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '3'
-  - Name:            ''
+  - Name:            nw_ethernet_channel_state_t
     JsName:          nw_ethernet_channel_state_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/ethernet_channel.h
     Module:          
@@ -3437,7 +3437,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            Block
@@ -3458,11 +3458,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
   - Name:            nw_framer_copy_parameters
@@ -3480,11 +3480,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
   - Name:            nw_framer_copy_remote_endpoint
@@ -3502,11 +3502,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
   - Name:            nw_framer_create_definition
@@ -3524,7 +3524,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
       - Type:            CString
@@ -3534,7 +3534,7 @@ Items:
           - Type:            Enum
             Name:            nw_framer_start_result_t
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_framer
   - Name:            nw_framer_create_options
@@ -3552,11 +3552,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
   - Name:            nw_framer_deliver_input
@@ -3575,13 +3575,13 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            CString
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            Bool
@@ -3601,12 +3601,12 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            Bool
@@ -3626,7 +3626,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            Int
@@ -3646,7 +3646,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
   - Name:            nw_framer_message_access_value
@@ -3665,7 +3665,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            CString
@@ -3692,7 +3692,7 @@ Items:
       - Type:            Id
         WithProtocols:   
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            CString
@@ -3711,11 +3711,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
   - Name:            nw_framer_message_set_object_value
@@ -3734,7 +3734,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            CString
@@ -3756,7 +3756,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            CString
@@ -3785,7 +3785,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            ULong
@@ -3813,7 +3813,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            ULong
@@ -3841,7 +3841,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
   - Name:            nw_framer_pass_through_output
@@ -3860,7 +3860,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
   - Name:            nw_framer_prepend_application_protocol
@@ -3879,11 +3879,11 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
   - Name:            nw_framer_protocol_create_message
@@ -3901,11 +3901,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
   - Name:            nw_framer_schedule_wakeup
@@ -3924,7 +3924,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            ULongLong
@@ -3944,14 +3944,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_framer
   - Name:            nw_framer_set_input_handler
@@ -3970,14 +3970,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            Block
         Signature:       
           - Type:            ULong
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_framer
   - Name:            nw_framer_set_output_handler
@@ -3996,18 +3996,18 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_framer
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_protocol_metadata
           - Type:            ULong
@@ -4028,14 +4028,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            Block
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_framer
   - Name:            nw_framer_set_wakeup_handler
@@ -4054,14 +4054,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_framer
   - Name:            nw_framer_start_result_ready
@@ -4077,7 +4077,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
-  - Name:            ''
+  - Name:            nw_framer_start_result_t
     JsName:          nw_framer_start_result_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/framer_options.h
     Module:          
@@ -4122,7 +4122,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            CString
@@ -4143,11 +4143,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
   - Name:            nw_framer_write_output_no_copy
@@ -4166,7 +4166,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_framer
       - Type:            ULong
@@ -4186,7 +4186,7 @@ Items:
     Signature:       
       - Type:            UInt
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_interface
   - Name:            nw_interface_get_name
@@ -4205,7 +4205,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_interface
   - Name:            nw_interface_get_type
@@ -4225,7 +4225,7 @@ Items:
       - Type:            Enum
         Name:            nw_interface_type_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_interface
   - Name:            nw_interface_type_cellular
@@ -4267,7 +4267,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
-  - Name:            ''
+  - Name:            nw_interface_type_t
     JsName:          nw_interface_type_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/interface.h
     Module:          
@@ -4327,7 +4327,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_ip_ecn_flag_ce
@@ -4382,7 +4382,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
-  - Name:            ''
+  - Name:            nw_ip_ecn_flag_t
     JsName:          nw_ip_ecn_flag_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/ip_options.h
     Module:          
@@ -4426,7 +4426,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
-  - Name:            ''
+  - Name:            nw_ip_local_address_preference_t
     JsName:          nw_ip_local_address_preference_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/ip_options.h
     Module:          
@@ -4473,7 +4473,7 @@ Items:
       - Type:            Enum
         Name:            nw_ip_ecn_flag_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_ip_metadata_get_receive_time
@@ -4492,7 +4492,7 @@ Items:
     Signature:       
       - Type:            ULongLong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_ip_metadata_get_service_class
@@ -4512,7 +4512,7 @@ Items:
       - Type:            Enum
         Name:            nw_service_class_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_ip_metadata_set_ecn_flag
@@ -4531,7 +4531,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            Enum
@@ -4552,7 +4552,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            Enum
@@ -4573,7 +4573,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -4593,7 +4593,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -4613,7 +4613,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            UChar
@@ -4633,7 +4633,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Enum
@@ -4654,7 +4654,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -4674,7 +4674,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Enum
@@ -4718,7 +4718,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
-  - Name:            ''
+  - Name:            nw_ip_version_t
     JsName:          nw_ip_version_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/ip_options.h
     Module:          
@@ -4751,7 +4751,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
   - Name:            nw_listener_create
@@ -4769,11 +4769,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_listener_create_with_connection
@@ -4791,15 +4791,15 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_connection
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_listener_create_with_port
@@ -4817,12 +4817,12 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_listener_get_new_connection_limit
@@ -4841,7 +4841,7 @@ Items:
     Signature:       
       - Type:            UInt
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
   - Name:            nw_listener_get_port
@@ -4860,7 +4860,7 @@ Items:
     Signature:       
       - Type:            Ushort
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
   - Name:            nw_listener_set_advertise_descriptor
@@ -4879,11 +4879,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_advertise_descriptor
   - Name:            nw_listener_set_advertised_endpoint_changed_handler
@@ -4902,14 +4902,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_endpoint
           - Type:            Bool
@@ -4929,14 +4929,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_connection
   - Name:            nw_listener_set_new_connection_limit
@@ -4955,7 +4955,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
       - Type:            UInt
@@ -4975,11 +4975,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            nw_listener_set_state_changed_handler
@@ -4998,7 +4998,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
       - Type:            Block
@@ -5007,7 +5007,7 @@ Items:
           - Type:            Enum
             Name:            nw_listener_state_t
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_error
   - Name:            nw_listener_start
@@ -5026,7 +5026,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_listener
   - Name:            nw_listener_state_cancelled
@@ -5081,7 +5081,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
-  - Name:            ''
+  - Name:            nw_listener_state_t
     JsName:          nw_listener_state_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/listener.h
     Module:          
@@ -5165,7 +5165,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
-  - Name:            ''
+  - Name:            nw_multipath_service_t
     JsName:          nw_multipath_service_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/parameters.h
     Module:          
@@ -5199,7 +5199,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_clear_prohibited_interfaces
@@ -5218,7 +5218,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_copy
@@ -5236,11 +5236,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_copy_default_protocol_stack
@@ -5258,11 +5258,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_stack
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_copy_local_endpoint
@@ -5280,11 +5280,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_copy_required_interface
@@ -5302,11 +5302,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_interface
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_create
@@ -5324,7 +5324,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_create_secure_tcp
@@ -5342,21 +5342,21 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_protocol_options
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_protocol_options
   - Name:            nw_parameters_create_secure_udp
@@ -5374,21 +5374,21 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_protocol_options
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_protocol_options
   - Name:            nw_parameters_expired_dns_behavior_allow
@@ -5430,7 +5430,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
-  - Name:            ''
+  - Name:            nw_parameters_expired_dns_behavior_t
     JsName:          nw_parameters_expired_dns_behavior_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/parameters.h
     Module:          
@@ -5464,7 +5464,7 @@ Items:
       - Type:            Enum
         Name:            nw_parameters_expired_dns_behavior_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_get_fast_open_enabled
@@ -5483,7 +5483,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_get_include_peer_to_peer
@@ -5502,7 +5502,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_get_local_only
@@ -5521,7 +5521,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_get_multipath_service
@@ -5541,7 +5541,7 @@ Items:
       - Type:            Enum
         Name:            nw_multipath_service_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_get_prefer_no_proxy
@@ -5560,7 +5560,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_get_prohibit_constrained
@@ -5579,7 +5579,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_get_prohibit_expensive
@@ -5598,7 +5598,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_get_required_interface_type
@@ -5618,7 +5618,7 @@ Items:
       - Type:            Enum
         Name:            nw_interface_type_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_get_reuse_local_address
@@ -5637,7 +5637,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_get_service_class
@@ -5657,7 +5657,7 @@ Items:
       - Type:            Enum
         Name:            nw_service_class_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
   - Name:            nw_parameters_iterate_prohibited_interface_types
@@ -5676,7 +5676,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Block
@@ -5700,14 +5700,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Block
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_interface
   - Name:            nw_parameters_prohibit_interface
@@ -5726,11 +5726,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_interface
   - Name:            nw_parameters_prohibit_interface_type
@@ -5749,7 +5749,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Enum
@@ -5770,11 +5770,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_interface
   - Name:            nw_parameters_set_expired_dns_behavior
@@ -5793,7 +5793,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Enum
@@ -5814,7 +5814,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Bool
@@ -5834,7 +5834,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Bool
@@ -5854,11 +5854,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
   - Name:            nw_parameters_set_local_only
@@ -5877,7 +5877,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Bool
@@ -5897,7 +5897,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Enum
@@ -5918,7 +5918,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Bool
@@ -5938,7 +5938,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Bool
@@ -5958,7 +5958,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Bool
@@ -5978,7 +5978,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Enum
@@ -5999,7 +5999,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Bool
@@ -6019,7 +6019,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_parameters
       - Type:            Enum
@@ -6039,11 +6039,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
   - Name:            nw_path_copy_effective_remote_endpoint
@@ -6061,11 +6061,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_endpoint
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
   - Name:            nw_path_enumerate_gateways
@@ -6084,14 +6084,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
       - Type:            Block
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_endpoint
   - Name:            nw_path_enumerate_interfaces
@@ -6110,14 +6110,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
       - Type:            Block
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_interface
   - Name:            nw_path_get_status
@@ -6137,7 +6137,7 @@ Items:
       - Type:            Enum
         Name:            nw_path_status_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
   - Name:            nw_path_has_dns
@@ -6156,7 +6156,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
   - Name:            nw_path_has_ipv4
@@ -6175,7 +6175,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
   - Name:            nw_path_has_ipv6
@@ -6194,7 +6194,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
   - Name:            nw_path_is_constrained
@@ -6213,7 +6213,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
   - Name:            nw_path_is_equal
@@ -6232,11 +6232,11 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
   - Name:            nw_path_is_expensive
@@ -6255,7 +6255,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
   - Name:            nw_path_monitor_cancel
@@ -6274,7 +6274,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path_monitor
   - Name:            nw_path_monitor_create
@@ -6292,7 +6292,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path_monitor
   - Name:            nw_path_monitor_create_with_type
@@ -6310,7 +6310,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path_monitor
       - Type:            Enum
@@ -6331,7 +6331,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path_monitor
       - Type:            Block
@@ -6353,11 +6353,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path_monitor
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            nw_path_monitor_set_update_handler
@@ -6376,14 +6376,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path_monitor
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_path
   - Name:            nw_path_monitor_start
@@ -6402,7 +6402,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path_monitor
   - Name:            nw_path_status_invalid
@@ -6444,7 +6444,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
-  - Name:            ''
+  - Name:            nw_path_status_t
     JsName:          nw_path_status_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/path.h
     Module:          
@@ -6491,7 +6491,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_path
       - Type:            Enum
@@ -6511,7 +6511,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
   - Name:            nw_protocol_copy_tcp_definition
@@ -6529,7 +6529,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
   - Name:            nw_protocol_copy_tls_definition
@@ -6547,7 +6547,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
   - Name:            nw_protocol_copy_udp_definition
@@ -6565,7 +6565,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
   - Name:            nw_protocol_copy_ws_definition
@@ -6583,7 +6583,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
   - Name:            nw_protocol_definition_is_equal
@@ -6602,11 +6602,11 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
   - Name:            nw_protocol_metadata_copy_definition
@@ -6624,11 +6624,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_protocol_metadata_is_framer_message
@@ -6647,7 +6647,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_protocol_metadata_is_ip
@@ -6666,7 +6666,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_protocol_metadata_is_tcp
@@ -6685,7 +6685,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_protocol_metadata_is_tls
@@ -6704,7 +6704,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_protocol_metadata_is_udp
@@ -6723,7 +6723,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_protocol_metadata_is_ws
@@ -6742,7 +6742,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_protocol_options_copy_definition
@@ -6760,11 +6760,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_definition
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
   - Name:            nw_protocol_stack_clear_application_protocols
@@ -6783,7 +6783,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_stack
   - Name:            nw_protocol_stack_copy_internet_protocol
@@ -6801,11 +6801,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_stack
   - Name:            nw_protocol_stack_copy_transport_protocol
@@ -6823,11 +6823,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_stack
   - Name:            nw_protocol_stack_iterate_application_protocols
@@ -6846,14 +6846,14 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_stack
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_protocol_options
   - Name:            nw_protocol_stack_prepend_application_protocol
@@ -6872,11 +6872,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_stack
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
   - Name:            nw_protocol_stack_set_transport_protocol
@@ -6895,11 +6895,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_stack
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
   - Name:            nw_release
@@ -6959,7 +6959,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
-  - Name:            ''
+  - Name:            nw_report_resolution_source_t
     JsName:          nw_report_resolution_source_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/connection_report.h
     Module:          
@@ -7074,7 +7074,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '5'
-  - Name:            ''
+  - Name:            nw_service_class_t
     JsName:          nw_service_class_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/parameters.h
     Module:          
@@ -7109,7 +7109,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
   - Name:            nw_tcp_get_available_receive_buffer
@@ -7128,7 +7128,7 @@ Items:
     Signature:       
       - Type:            UInt
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_tcp_get_available_send_buffer
@@ -7147,7 +7147,7 @@ Items:
     Signature:       
       - Type:            UInt
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_tcp_options_set_connection_timeout
@@ -7166,7 +7166,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            UInt
@@ -7186,7 +7186,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -7206,7 +7206,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -7226,7 +7226,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -7246,7 +7246,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -7266,7 +7266,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            UInt
@@ -7286,7 +7286,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            UInt
@@ -7306,7 +7306,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            UInt
@@ -7326,7 +7326,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            UInt
@@ -7346,7 +7346,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -7366,7 +7366,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -7386,7 +7386,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -7406,7 +7406,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            UInt
@@ -7426,7 +7426,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            UInt
@@ -7446,7 +7446,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -7465,11 +7465,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_tls_copy_sec_protocol_options
@@ -7487,11 +7487,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
   - Name:            nw_tls_create_options
@@ -7509,7 +7509,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
   - Name:            nw_txt_record_access_bytes
@@ -7528,7 +7528,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
       - Type:            Block
@@ -7552,7 +7552,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
       - Type:            CString
@@ -7580,7 +7580,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
       - Type:            Block
@@ -7606,11 +7606,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
   - Name:            nw_txt_record_create_dictionary
@@ -7628,7 +7628,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
   - Name:            nw_txt_record_create_with_bytes
@@ -7646,7 +7646,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
       - Type:            CString
@@ -7668,7 +7668,7 @@ Items:
       - Type:            Enum
         Name:            nw_txt_record_find_key_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
       - Type:            CString
@@ -7737,7 +7737,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1'
-  - Name:            ''
+  - Name:            nw_txt_record_find_key_t
     JsName:          nw_txt_record_find_key_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/txt_record.h
     Module:          
@@ -7772,7 +7772,7 @@ Items:
     Signature:       
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
   - Name:            nw_txt_record_is_dictionary
@@ -7791,7 +7791,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
   - Name:            nw_txt_record_is_equal
@@ -7810,11 +7810,11 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
   - Name:            nw_txt_record_remove_key
@@ -7833,7 +7833,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
       - Type:            CString
@@ -7853,7 +7853,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_txt_record
       - Type:            CString
@@ -7874,7 +7874,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_udp_create_options
@@ -7892,7 +7892,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
   - Name:            nw_udp_options_set_prefer_no_checksum
@@ -7911,7 +7911,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -8045,7 +8045,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '1002'
-  - Name:            ''
+  - Name:            nw_ws_close_code_t
     JsName:          nw_ws_close_code_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/ws_options.h
     Module:          
@@ -8112,7 +8112,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            Enum
@@ -8132,7 +8132,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Enum
@@ -8152,11 +8152,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_ws_response
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_ws_metadata_get_close_code
@@ -8176,7 +8176,7 @@ Items:
       - Type:            Enum
         Name:            nw_ws_close_code_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_ws_metadata_get_opcode
@@ -8196,7 +8196,7 @@ Items:
       - Type:            Enum
         Name:            nw_ws_opcode_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
   - Name:            nw_ws_metadata_set_close_code
@@ -8215,7 +8215,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            Enum
@@ -8236,18 +8236,18 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_metadata
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_error
   - Name:            nw_ws_opcode_binary
@@ -8328,7 +8328,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '10'
-  - Name:            ''
+  - Name:            nw_ws_opcode_t
     JsName:          nw_ws_opcode_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/ws_options.h
     Module:          
@@ -8378,7 +8378,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            CString
@@ -8399,7 +8399,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            CString
@@ -8419,7 +8419,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -8439,21 +8439,21 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
         Signature:       
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_ws_response
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_nw_ws_request
   - Name:            nw_ws_options_set_maximum_message_size
@@ -8472,7 +8472,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            ULong
@@ -8492,7 +8492,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_protocol_options
       - Type:            Bool
@@ -8512,7 +8512,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_ws_request
       - Type:            Block
@@ -8536,7 +8536,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_ws_request
       - Type:            Block
@@ -8559,7 +8559,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_ws_response
       - Type:            CString
@@ -8579,7 +8579,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_ws_response
       - Type:            Enum
@@ -8601,7 +8601,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_ws_response
       - Type:            Block
@@ -8625,7 +8625,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_ws_response
   - Name:            nw_ws_response_get_status
@@ -8645,7 +8645,7 @@ Items:
       - Type:            Enum
         Name:            nw_ws_response_status_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_nw_ws_response
   - Name:            nw_ws_response_status_accept
@@ -8687,7 +8687,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
-  - Name:            ''
+  - Name:            nw_ws_response_status_t
     JsName:          nw_ws_response_status_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/ws_options.h
     Module:          
@@ -8730,7 +8730,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
-  - Name:            ''
+  - Name:            nw_ws_version_t
     JsName:          nw_ws_version_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Network.framework/Headers/ws_options.h
     Module:          

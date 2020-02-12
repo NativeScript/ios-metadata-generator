@@ -66,7 +66,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NFCFeliCaTag
     JsName:          NFCFeliCaTag
@@ -98,7 +98,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Enum
             Name:            PollingRequestCode
@@ -108,13 +108,13 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'readWithoutEncryptionWithServiceCodeList:blockList:completionHandler:'
         JsName:          readWithoutEncryptionWithServiceCodeListBlockListCompletionHandler
@@ -132,17 +132,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
@@ -151,14 +151,14 @@ Items:
               - Type:            Long
               - Type:            Long
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSData
+                    Name:            NSData
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestResponseWithCompletionHandler:'
         JsName:          requestResponseWithCompletionHandler
@@ -180,7 +180,7 @@ Items:
               - Type:            Void
               - Type:            Long
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestServiceV2WithNodeCodeList:completionHandler:'
         JsName:          requestServiceV2WithNodeCodeListCompletionHandler
@@ -198,10 +198,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
@@ -212,21 +212,21 @@ Items:
               - Type:            Enum
                 Name:            EncryptionId
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSData
+                    Name:            NSData
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSData
+                    Name:            NSData
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestServiceWithNodeCodeList:completionHandler:'
         JsName:          requestServiceWithNodeCodeListCompletionHandler
@@ -244,24 +244,24 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSData
+                    Name:            NSData
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestSpecificationVersionWithCompletionHandler:'
         JsName:          requestSpecificationVersionWithCompletionHandler
@@ -284,13 +284,13 @@ Items:
               - Type:            Long
               - Type:            Long
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'requestSystemCodeWithCompletionHandler:'
         JsName:          requestSystemCodeWithCompletionHandler
@@ -311,14 +311,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSData
+                    Name:            NSData
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'resetModeWithCompletionHandler:'
         JsName:          resetModeWithCompletionHandler
@@ -341,7 +341,7 @@ Items:
               - Type:            Long
               - Type:            Long
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendFeliCaCommandPacket:completionHandler:'
         JsName:          sendFeliCaCommandPacketCompletionHandler
@@ -359,16 +359,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeWithoutEncryptionWithServiceCodeList:blockList:blockData:completionHandler:'
         JsName:          writeWithoutEncryptionWithServiceCodeListBlockListBlockDataCompletionHandler
@@ -386,24 +386,24 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
@@ -412,7 +412,7 @@ Items:
               - Type:            Long
               - Type:            Long
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -445,7 +445,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            currentSystemCode
         JsName:          currentSystemCode
@@ -476,7 +476,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -513,7 +513,7 @@ Items:
           - Type:            ULong
           - Type:            ULong
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'initWithManufacturerCode:customCommandCode:requestParameters:maximumRetries:retryInterval:'
         JsName:          initWithManufacturerCodeCustomCommandCodeRequestParametersMaximumRetriesRetryInterval
@@ -532,7 +532,7 @@ Items:
           - Type:            ULong
           - Type:            ULong
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            ULong
           - Type:            Double
@@ -651,7 +651,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setRequestParameters:'
@@ -669,7 +669,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -704,7 +704,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            ULong
       - Name:            'initWithRange:chunkSize:maximumRetries:retryInterval:'
         JsName:          initWithRangeChunkSizeMaximumRetriesRetryInterval
@@ -722,7 +722,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            ULong
           - Type:            ULong
           - Type:            Double
@@ -799,7 +799,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Foundation.NSRange
-              JsName:          NSRange
+              Name:            NSRange
         Setter:          
           Name:            'setRange:'
           JsName:          setRange
@@ -817,7 +817,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          Foundation.NSRange
-              JsName:          NSRange
+              Name:            NSRange
     StaticProperties: 
     Protocols:       
     Base:            NFCTagCommandConfiguration
@@ -853,7 +853,7 @@ Items:
             WithProtocols:   
               - NFCReaderSessionDelegate
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
       - Name:            restartPolling
@@ -908,16 +908,16 @@ Items:
             Name:            RequestFlag
           - Type:            Long
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'extendedLockBlockWithRequestFlags:blockNumber:completionHandler:'
         JsName:          extendedLockBlockWithRequestFlagsBlockNumberCompletionHandler
@@ -941,7 +941,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'extendedReadMultipleBlocksWithRequestFlags:blockRange:completionHandler:'
         JsName:          extendedReadMultipleBlocksWithRequestFlagsBlockRangeCompletionHandler
@@ -962,19 +962,19 @@ Items:
             Name:            RequestFlag
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSData
+                    Name:            NSData
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'extendedReadSingleBlockWithRequestFlags:blockNumber:completionHandler:'
         JsName:          extendedReadSingleBlockWithRequestFlagsBlockNumberCompletionHandler
@@ -998,10 +998,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'extendedWriteSingleBlockWithRequestFlags:blockNumber:dataBlock:completionHandler:'
         JsName:          extendedWriteSingleBlockWithRequestFlagsBlockNumberDataBlockCompletionHandler
@@ -1022,13 +1022,13 @@ Items:
             Name:            RequestFlag
           - Type:            Long
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'getMultipleBlockSecurityStatusWithRequestFlag:blockRange:completionHandler:'
         JsName:          getMultipleBlockSecurityStatusWithRequestFlagBlockRangeCompletionHandler
@@ -1049,19 +1049,19 @@ Items:
             Name:            RequestFlag
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSNumber
+                    Name:            NSNumber
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'getSystemInfoWithRequestFlag:completionHandler:'
         JsName:          getSystemInfoWithRequestFlagCompletionHandler
@@ -1089,7 +1089,7 @@ Items:
               - Type:            Long
               - Type:            Long
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'lockAFIWithRequestFlag:completionHandler:'
         JsName:          lockAFIWithRequestFlagCompletionHandler
@@ -1112,7 +1112,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'lockBlockWithRequestFlags:blockNumber:completionHandler:'
         JsName:          lockBlockWithRequestFlagsBlockNumberCompletionHandler
@@ -1136,7 +1136,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'lockDFSIDWithRequestFlag:completionHandler:'
         JsName:          lockDFSIDWithRequestFlagCompletionHandler
@@ -1159,7 +1159,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'readMultipleBlocksWithConfiguration:completionHandler:'
         JsName:          readMultipleBlocksWithConfigurationCompletionHandler
@@ -1177,16 +1177,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCISO15693ReadMultipleBlocksConfiguration
+            Name:            NFCISO15693ReadMultipleBlocksConfiguration
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'readMultipleBlocksWithRequestFlags:blockRange:completionHandler:'
         JsName:          readMultipleBlocksWithRequestFlagsBlockRangeCompletionHandler
@@ -1207,19 +1207,19 @@ Items:
             Name:            RequestFlag
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSData
+                    Name:            NSData
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'readSingleBlockWithRequestFlags:blockNumber:completionHandler:'
         JsName:          readSingleBlockWithRequestFlagsBlockNumberCompletionHandler
@@ -1243,10 +1243,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'resetToReadyWithRequestFlags:completionHandler:'
         JsName:          resetToReadyWithRequestFlagsCompletionHandler
@@ -1269,7 +1269,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'selectWithRequestFlags:completionHandler:'
         JsName:          selectWithRequestFlagsCompletionHandler
@@ -1292,7 +1292,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendCustomCommandWithConfiguration:completionHandler:'
         JsName:          sendCustomCommandWithConfigurationCompletionHandler
@@ -1310,16 +1310,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCISO15693CustomCommandConfiguration
+            Name:            NFCISO15693CustomCommandConfiguration
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'stayQuietWithCompletionHandler:'
         JsName:          stayQuietWithCompletionHandler
@@ -1340,7 +1340,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeAFIWithRequestFlag:afi:completionHandler:'
         JsName:          writeAFIWithRequestFlagAfiCompletionHandler
@@ -1364,7 +1364,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeDSFIDWithRequestFlag:dsfid:completionHandler:'
         JsName:          writeDSFIDWithRequestFlagDsfidCompletionHandler
@@ -1388,7 +1388,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeMultipleBlocksWithRequestFlags:blockRange:dataBlocks:completionHandler:'
         JsName:          writeMultipleBlocksWithRequestFlagsBlockRangeDataBlocksCompletionHandler
@@ -1409,19 +1409,19 @@ Items:
             Name:            RequestFlag
           - Type:            Struct
             Module:          Foundation.NSRange
-            JsName:          NSRange
+            Name:            NSRange
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeSingleBlockWithRequestFlags:blockNumber:dataBlock:completionHandler:'
         JsName:          writeSingleBlockWithRequestFlagsBlockNumberDataBlockCompletionHandler
@@ -1442,13 +1442,13 @@ Items:
             Name:            RequestFlag
           - Type:            UChar
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1506,7 +1506,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -1535,7 +1535,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1556,7 +1556,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NFCISO7816APDU
     JsName:          NFCISO7816APDU
@@ -1587,7 +1587,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'initWithInstructionClass:instructionCode:p1Parameter:p2Parameter:data:expectedResponseLength:'
         JsName:          initWithInstructionClassInstructionCodeP1ParameterP2ParameterDataExpectedResponseLength
@@ -1608,7 +1608,7 @@ Items:
           - Type:            UChar
           - Type:            UChar
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Long
     StaticMethods:   
@@ -1640,7 +1640,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            expectedResponseLength
         JsName:          expectedResponseLength
@@ -1811,18 +1811,18 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCISO7816APDU
+            Name:            NFCISO7816APDU
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            UChar
               - Type:            UChar
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1853,7 +1853,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            historicalBytes
         JsName:          historicalBytes
@@ -1882,7 +1882,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -1911,7 +1911,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            initialSelectedAID
         JsName:          initialSelectedAID
@@ -1942,7 +1942,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            proprietaryApplicationDataCoding
         JsName:          proprietaryApplicationDataCoding
@@ -2053,16 +2053,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendMiFareISO7816Command:completionHandler:'
         JsName:          sendMiFareISO7816CommandCompletionHandler
@@ -2080,18 +2080,18 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCISO7816APDU
+            Name:            NFCISO7816APDU
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            UChar
               - Type:            UChar
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2122,7 +2122,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -2151,7 +2151,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            mifareFamily
         JsName:          mifareFamily
@@ -2243,10 +2243,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NFCNDEFPayload
+                Name:            NFCNDEFPayload
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -2266,7 +2266,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
     InstanceProperties: 
       - Name:            length
@@ -2327,10 +2327,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NFCNDEFPayload
+                  Name:            NFCNDEFPayload
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2350,10 +2350,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NFCNDEFPayload
+                  Name:            NFCNDEFPayload
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2392,13 +2392,13 @@ Items:
           - Type:            Enum
             Name:            NFCTypeNameFormat
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'initWithFormat:type:identifier:payload:chunkSize:'
         JsName:          initWithFormatTypeIdentifierPayloadChunkSize
@@ -2418,13 +2418,13 @@ Items:
           - Type:            Enum
             Name:            NFCTypeNameFormat
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            ULong
       - Name:            'wellKnownTypeTextPayloadWithLocale:'
@@ -2442,12 +2442,12 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSLocale
+              Name:            NSLocale
               WithProtocols:   
       - Name:            wellKnownTypeURIPayload
         JsName:          wellKnownTypeURIPayload
@@ -2464,7 +2464,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
     StaticMethods:   
       - Name:            'wellKnownTypeTextPayloadWithString:locale:'
@@ -2483,10 +2483,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSLocale
+            Name:            NSLocale
             WithProtocols:   
       - Name:            'wellKnownTypeURIPayloadWithString:'
         JsName:          wellKnownTypeURIPayloadWithString
@@ -2504,7 +2504,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'wellKnownTypeURIPayloadWithURL:'
         JsName:          wellKnownTypeURIPayloadWithURL
@@ -2522,7 +2522,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'wellKnowTypeTextPayloadWithString:locale:'
         JsName:          wellKnowTypeTextPayloadWithStringLocale
@@ -2540,10 +2540,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSLocale
+            Name:            NSLocale
             WithProtocols:   
     InstanceProperties: 
       - Name:            identifier
@@ -2573,7 +2573,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setIdentifier:'
@@ -2591,7 +2591,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            payload
         JsName:          payload
@@ -2620,7 +2620,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setPayload:'
@@ -2638,7 +2638,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -2667,7 +2667,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setType:'
@@ -2685,7 +2685,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            typeNameFormat
         JsName:          typeNameFormat
@@ -2772,7 +2772,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'initWithDelegate:queue:invalidateAfterFirstRead:'
         JsName:          initWithDelegateQueueInvalidateAfterFirstRead
@@ -2793,7 +2793,7 @@ Items:
             WithProtocols:   
               - NFCNDEFReaderSessionDelegate
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Bool
@@ -2847,7 +2847,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCNDEFReaderSession
+            Name:            NFCNDEFReaderSession
             WithProtocols:   
       - Name:            'readerSession:didDetectNDEFs:'
         JsName:          readerSessionDidDetectNDEFs
@@ -2865,13 +2865,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCNDEFReaderSession
+            Name:            NFCNDEFReaderSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NFCNDEFMessage
+                Name:            NFCNDEFMessage
                 WithProtocols:   
             WithProtocols:   
       - Name:            'readerSession:didDetectTags:'
@@ -2890,10 +2890,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCNDEFReaderSession
+            Name:            NFCNDEFReaderSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -2915,10 +2915,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCNDEFReaderSession
+            Name:            NFCNDEFReaderSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3020,7 +3020,7 @@ Items:
                 Name:            NFCNDEFStatus
               - Type:            ULong
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'readNDEFWithCompletionHandler:'
         JsName:          readNDEFWithCompletionHandler
@@ -3041,10 +3041,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NFCNDEFMessage
+                Name:            NFCNDEFMessage
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeLockWithCompletionHandler:'
         JsName:          writeLockWithCompletionHandler
@@ -3065,7 +3065,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeNDEF:completionHandler:'
         JsName:          writeNDEFCompletionHandler
@@ -3083,13 +3083,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCNDEFMessage
+            Name:            NFCNDEFMessage
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3433,7 +3433,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - OS_dispatch_queue
     StaticProperties: 
@@ -3496,7 +3496,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCReaderSession
+            Name:            NFCReaderSession
             WithProtocols:   
       - Name:            'readerSession:didDetectTags:'
         JsName:          readerSessionDidDetectTags
@@ -3513,10 +3513,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCReaderSession
+            Name:            NFCReaderSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -3537,10 +3537,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCReaderSession
+            Name:            NFCReaderSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3670,7 +3670,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3701,7 +3701,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAlertMessage:'
@@ -3719,7 +3719,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            ready
         JsName:          ready
@@ -4146,7 +4146,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'initWithPollingOption:delegate:queue:'
         JsName:          initWithPollingOptionDelegateQueue
@@ -4169,7 +4169,7 @@ Items:
             WithProtocols:   
               - NFCTagReaderSessionDelegate
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
       - Name:            restartPolling
@@ -4253,7 +4253,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCTagReaderSession
+            Name:            NFCTagReaderSession
             WithProtocols:   
       - Name:            'tagReaderSession:didDetectTags:'
         JsName:          tagReaderSessionDidDetectTags
@@ -4271,10 +4271,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCTagReaderSession
+            Name:            NFCTagReaderSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -4296,10 +4296,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCTagReaderSession
+            Name:            NFCTagReaderSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4321,7 +4321,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NFCTagType
     JsName:          NFCTagType
@@ -4550,10 +4550,10 @@ Items:
           - Type:            Enum
             Name:            VASMode
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4629,7 +4629,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPassTypeIdentifier:'
@@ -4647,7 +4647,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            url
         JsName:          url
@@ -4676,7 +4676,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setUrl:'
@@ -4694,7 +4694,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4730,17 +4730,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NFCVASCommandConfiguration
+                Name:            NFCVASCommandConfiguration
                 WithProtocols:   
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
               - NFCVASReaderSessionDelegate
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
     StaticMethods:   
@@ -4778,7 +4778,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCVASReaderSession
+            Name:            NFCVASReaderSession
             WithProtocols:   
       - Name:            'readerSession:didInvalidateWithError:'
         JsName:          readerSessionDidInvalidateWithError
@@ -4796,10 +4796,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCVASReaderSession
+            Name:            NFCVASReaderSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'readerSession:didReceiveVASResponses:'
         JsName:          readerSessionDidReceiveVASResponses
@@ -4817,13 +4817,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NFCVASReaderSession
+            Name:            NFCVASReaderSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NFCVASResponse
+                Name:            NFCVASResponse
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -4874,7 +4874,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            status
         JsName:          status
@@ -4931,7 +4931,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       

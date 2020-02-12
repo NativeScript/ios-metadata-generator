@@ -52,7 +52,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateName:completionHandler:'
         JsName:          updateNameCompletionHandler
@@ -67,13 +67,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -148,7 +148,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMAccessoryCategory
+              Name:            HMAccessoryCategory
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -216,7 +216,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -243,7 +243,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            identifiersForBridgedAccessories
         JsName:          identifiersForBridgedAccessories
@@ -270,10 +270,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSUUID
+                  Name:            NSUUID
                   WithProtocols:   
               WithProtocols:   
       - Name:            manufacturer
@@ -301,7 +301,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            model
         JsName:          model
@@ -328,7 +328,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -353,7 +353,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            profiles
         JsName:          profiles
@@ -380,10 +380,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMAccessoryProfile
+                  Name:            HMAccessoryProfile
                   WithProtocols:   
               WithProtocols:   
       - Name:            reachable
@@ -432,7 +432,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMRoom
+              Name:            HMRoom
               WithProtocols:   
       - Name:            services
         JsName:          services
@@ -457,10 +457,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMService
+                  Name:            HMService
                   WithProtocols:   
               WithProtocols:   
       - Name:            supportsIdentify
@@ -513,7 +513,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            uniqueIdentifiersForBridgedAccessories
         JsName:          uniqueIdentifiersForBridgedAccessories
@@ -540,10 +540,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSUUID
+                  Name:            NSUUID
                   WithProtocols:   
               WithProtocols:   
       - Name:            cameraProfiles
@@ -571,10 +571,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMCameraProfile
+                  Name:            HMCameraProfile
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -682,10 +682,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMAccessory
+                  Name:            HMAccessory
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -716,10 +716,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessoryBrowser
+            Name:            HMAccessoryBrowser
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
       - Name:            'accessoryBrowser:didRemoveNewAccessory:'
         JsName:          accessoryBrowserDidRemoveNewAccessory
@@ -734,10 +734,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessoryBrowser
+            Name:            HMAccessoryBrowser
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -781,7 +781,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            localizedDescription
         JsName:          localizedDescription
@@ -806,7 +806,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -824,7 +824,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeAirDehumidifier
     JsName:          HMAccessoryCategoryTypeAirDehumidifier
@@ -839,7 +839,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeAirHeater
     JsName:          HMAccessoryCategoryTypeAirHeater
@@ -854,7 +854,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeAirHumidifier
     JsName:          HMAccessoryCategoryTypeAirHumidifier
@@ -869,7 +869,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeAirPurifier
     JsName:          HMAccessoryCategoryTypeAirPurifier
@@ -884,7 +884,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeBridge
     JsName:          HMAccessoryCategoryTypeBridge
@@ -899,7 +899,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeDoor
     JsName:          HMAccessoryCategoryTypeDoor
@@ -914,7 +914,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeDoorLock
     JsName:          HMAccessoryCategoryTypeDoorLock
@@ -929,7 +929,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeFan
     JsName:          HMAccessoryCategoryTypeFan
@@ -944,7 +944,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeFaucet
     JsName:          HMAccessoryCategoryTypeFaucet
@@ -959,7 +959,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeGarageDoorOpener
     JsName:          HMAccessoryCategoryTypeGarageDoorOpener
@@ -974,7 +974,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeIPCamera
     JsName:          HMAccessoryCategoryTypeIPCamera
@@ -989,7 +989,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeLightbulb
     JsName:          HMAccessoryCategoryTypeLightbulb
@@ -1004,7 +1004,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeOther
     JsName:          HMAccessoryCategoryTypeOther
@@ -1019,7 +1019,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeOutlet
     JsName:          HMAccessoryCategoryTypeOutlet
@@ -1034,7 +1034,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeProgrammableSwitch
     JsName:          HMAccessoryCategoryTypeProgrammableSwitch
@@ -1049,7 +1049,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeRangeExtender
     JsName:          HMAccessoryCategoryTypeRangeExtender
@@ -1064,7 +1064,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeSecuritySystem
     JsName:          HMAccessoryCategoryTypeSecuritySystem
@@ -1079,7 +1079,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeSensor
     JsName:          HMAccessoryCategoryTypeSensor
@@ -1094,7 +1094,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeShowerHead
     JsName:          HMAccessoryCategoryTypeShowerHead
@@ -1109,7 +1109,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeSprinkler
     JsName:          HMAccessoryCategoryTypeSprinkler
@@ -1124,7 +1124,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeSwitch
     JsName:          HMAccessoryCategoryTypeSwitch
@@ -1139,7 +1139,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeThermostat
     JsName:          HMAccessoryCategoryTypeThermostat
@@ -1154,7 +1154,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeVideoDoorbell
     JsName:          HMAccessoryCategoryTypeVideoDoorbell
@@ -1169,7 +1169,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeWindow
     JsName:          HMAccessoryCategoryTypeWindow
@@ -1184,7 +1184,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryCategoryTypeWindowCovering
     JsName:          HMAccessoryCategoryTypeWindowCovering
@@ -1199,7 +1199,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAccessoryDelegate
     JsName:          HMAccessoryDelegate
@@ -1227,10 +1227,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessoryProfile
+            Name:            HMAccessoryProfile
             WithProtocols:   
       - Name:            'accessory:didRemoveProfile:'
         JsName:          accessoryDidRemoveProfile
@@ -1246,10 +1246,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessoryProfile
+            Name:            HMAccessoryProfile
             WithProtocols:   
       - Name:            'accessory:didUpdateAssociatedServiceTypeForService:'
         JsName:          accessoryDidUpdateAssociatedServiceTypeForService
@@ -1264,10 +1264,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMService
+            Name:            HMService
             WithProtocols:   
       - Name:            'accessory:didUpdateFirmwareVersion:'
         JsName:          accessoryDidUpdateFirmwareVersion
@@ -1283,10 +1283,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'accessoryDidUpdateName:'
         JsName:          accessoryDidUpdateName
@@ -1301,7 +1301,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
       - Name:            'accessory:didUpdateNameForService:'
         JsName:          accessoryDidUpdateNameForService
@@ -1316,10 +1316,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMService
+            Name:            HMService
             WithProtocols:   
       - Name:            'accessoryDidUpdateReachability:'
         JsName:          accessoryDidUpdateReachability
@@ -1334,7 +1334,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
       - Name:            'accessoryDidUpdateServices:'
         JsName:          accessoryDidUpdateServices
@@ -1349,7 +1349,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
       - Name:            'accessory:service:didUpdateValueForCharacteristic:'
         JsName:          accessoryServiceDidUpdateValueForCharacteristic
@@ -1364,13 +1364,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMService
+            Name:            HMService
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMCharacteristic
+            Name:            HMCharacteristic
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1402,7 +1402,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1446,7 +1446,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMAccessory
+              Name:            HMAccessory
               WithProtocols:   
       - Name:            services
         JsName:          services
@@ -1471,10 +1471,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMService
+                  Name:            HMService
                   WithProtocols:   
               WithProtocols:   
       - Name:            uniqueIdentifier
@@ -1500,7 +1500,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1530,7 +1530,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'initWithURL:ownershipToken:'
         JsName:          initWithURLOwnershipToken
@@ -1546,10 +1546,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessoryOwnershipToken
+            Name:            HMAccessoryOwnershipToken
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1595,7 +1595,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1625,13 +1625,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAction
+            Name:            HMAction
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeAction:completionHandler:'
         JsName:          removeActionCompletionHandler
@@ -1646,13 +1646,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAction
+            Name:            HMAction
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateName:completionHandler:'
         JsName:          updateNameCompletionHandler
@@ -1667,13 +1667,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1700,10 +1700,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMAction
+                  Name:            HMAction
                   WithProtocols:   
               WithProtocols:   
       - Name:            actionSetType
@@ -1731,7 +1731,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            executing
         JsName:          executing
@@ -1781,7 +1781,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -1806,7 +1806,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            uniqueIdentifier
         JsName:          uniqueIdentifier
@@ -1833,7 +1833,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1851,7 +1851,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMActionSetTypeHomeDeparture
     JsName:          HMActionSetTypeHomeDeparture
@@ -1866,7 +1866,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMActionSetTypeSleep
     JsName:          HMActionSetTypeSleep
@@ -1881,7 +1881,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMActionSetTypeTriggerOwned
     JsName:          HMActionSetTypeTriggerOwned
@@ -1896,7 +1896,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMActionSetTypeUserDefined
     JsName:          HMActionSetTypeUserDefined
@@ -1911,7 +1911,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMActionSetTypeWakeUp
     JsName:          HMActionSetTypeWakeUp
@@ -1926,7 +1926,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMAddAccessoryRequest
     JsName:          HMAddAccessoryRequest
@@ -1952,10 +1952,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          HMAccessorySetupPayload
+            Name:            HMAccessorySetupPayload
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessoryOwnershipToken
+            Name:            HMAccessoryOwnershipToken
             WithProtocols:   
       - Name:            'payloadWithURL:ownershipToken:'
         JsName:          payloadWithURLOwnershipToken
@@ -1969,13 +1969,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          HMAccessorySetupPayload
+            Name:            HMAccessorySetupPayload
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessoryOwnershipToken
+            Name:            HMAccessoryOwnershipToken
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2002,7 +2002,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMAccessoryCategory
+              Name:            HMAccessoryCategory
               WithProtocols:   
       - Name:            accessoryName
         JsName:          accessoryName
@@ -2027,7 +2027,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            home
         JsName:          home
@@ -2052,7 +2052,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMHome
+              Name:            HMHome
               WithProtocols:   
       - Name:            requiresOwnershipToken
         JsName:          requiresOwnershipToken
@@ -2130,7 +2130,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2157,7 +2157,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2201,7 +2201,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            volume
         JsName:          volume
@@ -2226,7 +2226,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2336,7 +2336,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCameraAudioControl
+              Name:            HMCameraAudioControl
               WithProtocols:   
       - Name:            settingsControl
         JsName:          settingsControl
@@ -2361,7 +2361,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCameraSettingsControl
+              Name:            HMCameraSettingsControl
               WithProtocols:   
       - Name:            snapshotControl
         JsName:          snapshotControl
@@ -2386,7 +2386,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCameraSnapshotControl
+              Name:            HMCameraSnapshotControl
               WithProtocols:   
       - Name:            speakerControl
         JsName:          speakerControl
@@ -2411,7 +2411,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCameraAudioControl
+              Name:            HMCameraAudioControl
               WithProtocols:   
       - Name:            streamControl
         JsName:          streamControl
@@ -2436,7 +2436,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCameraStreamControl
+              Name:            HMCameraStreamControl
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2478,7 +2478,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            currentVerticalTilt
         JsName:          currentVerticalTilt
@@ -2503,7 +2503,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            digitalZoom
         JsName:          digitalZoom
@@ -2528,7 +2528,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            imageMirroring
         JsName:          imageMirroring
@@ -2553,7 +2553,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            imageRotation
         JsName:          imageRotation
@@ -2578,7 +2578,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            nightVision
         JsName:          nightVision
@@ -2603,7 +2603,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            opticalZoom
         JsName:          opticalZoom
@@ -2628,7 +2628,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            targetHorizontalTilt
         JsName:          targetHorizontalTilt
@@ -2653,7 +2653,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            targetVerticalTilt
         JsName:          targetVerticalTilt
@@ -2678,7 +2678,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2720,7 +2720,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2815,7 +2815,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCameraSnapshot
+              Name:            HMCameraSnapshot
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2845,13 +2845,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMCameraSnapshotControl
+            Name:            HMCameraSnapshotControl
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMCameraSnapshot
+            Name:            HMCameraSnapshot
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'cameraSnapshotControlDidUpdateMostRecentSnapshot:'
         JsName:          cameraSnapshotControlDidUpdateMostRecentSnapshot
@@ -2866,7 +2866,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMCameraSnapshotControl
+            Name:            HMCameraSnapshotControl
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2935,7 +2935,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3027,7 +3027,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCameraStream
+              Name:            HMCameraStream
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -3122,7 +3122,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMCameraStreamControl
+            Name:            HMCameraStreamControl
             WithProtocols:   
       - Name:            'cameraStreamControl:didStopStreamWithError:'
         JsName:          cameraStreamControlDidStopStreamWithError
@@ -3137,10 +3137,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMCameraStreamControl
+            Name:            HMCameraStreamControl
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3248,7 +3248,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCameraSource
+              Name:            HMCameraSource
               WithProtocols:   
         Setter:          
           Name:            'setCameraSource:'
@@ -3264,7 +3264,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          HMCameraSource
+              Name:            HMCameraSource
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3298,7 +3298,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'readValueWithCompletionHandler:'
         JsName:          readValueWithCompletionHandler
@@ -3316,7 +3316,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateAuthorizationData:completionHandler:'
         JsName:          updateAuthorizationDataCompletionHandler
@@ -3331,13 +3331,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeValue:completionHandler:'
         JsName:          writeValueCompletionHandler
@@ -3357,7 +3357,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3384,7 +3384,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            localizedDescription
         JsName:          localizedDescription
@@ -3411,7 +3411,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            metadata
         JsName:          metadata
@@ -3436,7 +3436,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristicMetadata
+              Name:            HMCharacteristicMetadata
               WithProtocols:   
       - Name:            notificationEnabled
         JsName:          notificationEnabled
@@ -3484,10 +3484,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            service
@@ -3513,7 +3513,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMService
+              Name:            HMService
               WithProtocols:   
       - Name:            uniqueIdentifier
         JsName:          uniqueIdentifier
@@ -3540,7 +3540,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            value
         JsName:          value
@@ -3594,7 +3594,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          HMCharacteristic
+            Name:            HMCharacteristic
             WithProtocols:   
           - Type:            TypeArgument
             Name:            TriggerValueType
@@ -3625,7 +3625,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3652,7 +3652,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            triggerValue
         JsName:          triggerValue
@@ -3700,7 +3700,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadata
     JsName:          HMCharacteristicMetadata
@@ -3739,7 +3739,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            manufacturerDescription
         JsName:          manufacturerDescription
@@ -3764,7 +3764,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maximumValue
         JsName:          maximumValue
@@ -3789,7 +3789,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            maxLength
         JsName:          maxLength
@@ -3814,7 +3814,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            minimumValue
         JsName:          minimumValue
@@ -3839,7 +3839,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            stepValue
         JsName:          stepValue
@@ -3864,7 +3864,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            units
         JsName:          units
@@ -3889,7 +3889,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            validValues
         JsName:          validValues
@@ -3916,10 +3916,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -3938,7 +3938,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataFormatBool
     JsName:          HMCharacteristicMetadataFormatBool
@@ -3953,7 +3953,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataFormatData
     JsName:          HMCharacteristicMetadataFormatData
@@ -3968,7 +3968,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataFormatDictionary
     JsName:          HMCharacteristicMetadataFormatDictionary
@@ -3983,7 +3983,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataFormatFloat
     JsName:          HMCharacteristicMetadataFormatFloat
@@ -3998,7 +3998,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataFormatInt
     JsName:          HMCharacteristicMetadataFormatInt
@@ -4013,7 +4013,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataFormatString
     JsName:          HMCharacteristicMetadataFormatString
@@ -4028,7 +4028,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataFormatTLV8
     JsName:          HMCharacteristicMetadataFormatTLV8
@@ -4043,7 +4043,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataFormatUInt16
     JsName:          HMCharacteristicMetadataFormatUInt16
@@ -4058,7 +4058,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataFormatUInt32
     JsName:          HMCharacteristicMetadataFormatUInt32
@@ -4073,7 +4073,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataFormatUInt64
     JsName:          HMCharacteristicMetadataFormatUInt64
@@ -4088,7 +4088,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataFormatUInt8
     JsName:          HMCharacteristicMetadataFormatUInt8
@@ -4103,7 +4103,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataUnitsArcDegree
     JsName:          HMCharacteristicMetadataUnitsArcDegree
@@ -4118,7 +4118,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataUnitsCelsius
     JsName:          HMCharacteristicMetadataUnitsCelsius
@@ -4133,7 +4133,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataUnitsFahrenheit
     JsName:          HMCharacteristicMetadataUnitsFahrenheit
@@ -4148,7 +4148,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataUnitsLux
     JsName:          HMCharacteristicMetadataUnitsLux
@@ -4163,7 +4163,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataUnitsMicrogramsPerCubicMeter
     JsName:          HMCharacteristicMetadataUnitsMicrogramsPerCubicMeter
@@ -4178,7 +4178,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataUnitsPartsPerMillion
     JsName:          HMCharacteristicMetadataUnitsPartsPerMillion
@@ -4193,7 +4193,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataUnitsPercentage
     JsName:          HMCharacteristicMetadataUnitsPercentage
@@ -4208,7 +4208,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicMetadataUnitsSeconds
     JsName:          HMCharacteristicMetadataUnitsSeconds
@@ -4223,7 +4223,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicPropertyHidden
     JsName:          HMCharacteristicPropertyHidden
@@ -4238,7 +4238,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicPropertyReadable
     JsName:          HMCharacteristicPropertyReadable
@@ -4253,7 +4253,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicPropertySupportsEventNotification
     JsName:          HMCharacteristicPropertySupportsEventNotification
@@ -4268,7 +4268,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicPropertyWritable
     JsName:          HMCharacteristicPropertyWritable
@@ -4283,7 +4283,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicThresholdRangeEvent
     JsName:          HMCharacteristicThresholdRangeEvent
@@ -4310,10 +4310,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          HMCharacteristic
+            Name:            HMCharacteristic
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMNumberRange
+            Name:            HMNumberRange
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4340,7 +4340,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            thresholdRange
         JsName:          thresholdRange
@@ -4365,7 +4365,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMNumberRange
+              Name:            HMNumberRange
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4385,7 +4385,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeAdminOnlyAccess
     JsName:          HMCharacteristicTypeAdminOnlyAccess
@@ -4400,7 +4400,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeAirParticulateDensity
     JsName:          HMCharacteristicTypeAirParticulateDensity
@@ -4415,7 +4415,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeAirParticulateSize
     JsName:          HMCharacteristicTypeAirParticulateSize
@@ -4430,7 +4430,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeAirQuality
     JsName:          HMCharacteristicTypeAirQuality
@@ -4445,7 +4445,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeAudioFeedback
     JsName:          HMCharacteristicTypeAudioFeedback
@@ -4460,7 +4460,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeBatteryLevel
     JsName:          HMCharacteristicTypeBatteryLevel
@@ -4475,7 +4475,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeBrightness
     JsName:          HMCharacteristicTypeBrightness
@@ -4490,7 +4490,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCarbonDioxideDetected
     JsName:          HMCharacteristicTypeCarbonDioxideDetected
@@ -4505,7 +4505,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCarbonDioxideLevel
     JsName:          HMCharacteristicTypeCarbonDioxideLevel
@@ -4520,7 +4520,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCarbonDioxidePeakLevel
     JsName:          HMCharacteristicTypeCarbonDioxidePeakLevel
@@ -4535,7 +4535,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCarbonMonoxideDetected
     JsName:          HMCharacteristicTypeCarbonMonoxideDetected
@@ -4550,7 +4550,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCarbonMonoxideLevel
     JsName:          HMCharacteristicTypeCarbonMonoxideLevel
@@ -4565,7 +4565,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCarbonMonoxidePeakLevel
     JsName:          HMCharacteristicTypeCarbonMonoxidePeakLevel
@@ -4580,7 +4580,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeChargingState
     JsName:          HMCharacteristicTypeChargingState
@@ -4595,7 +4595,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeColorTemperature
     JsName:          HMCharacteristicTypeColorTemperature
@@ -4610,7 +4610,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeContactState
     JsName:          HMCharacteristicTypeContactState
@@ -4625,7 +4625,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCoolingThreshold
     JsName:          HMCharacteristicTypeCoolingThreshold
@@ -4640,7 +4640,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentAirPurifierState
     JsName:          HMCharacteristicTypeCurrentAirPurifierState
@@ -4655,7 +4655,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentDoorState
     JsName:          HMCharacteristicTypeCurrentDoorState
@@ -4670,7 +4670,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentFanState
     JsName:          HMCharacteristicTypeCurrentFanState
@@ -4685,7 +4685,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentHeaterCoolerState
     JsName:          HMCharacteristicTypeCurrentHeaterCoolerState
@@ -4700,7 +4700,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentHeatingCooling
     JsName:          HMCharacteristicTypeCurrentHeatingCooling
@@ -4715,7 +4715,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentHorizontalTilt
     JsName:          HMCharacteristicTypeCurrentHorizontalTilt
@@ -4730,7 +4730,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentHumidifierDehumidifierState
     JsName:          HMCharacteristicTypeCurrentHumidifierDehumidifierState
@@ -4745,7 +4745,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentLightLevel
     JsName:          HMCharacteristicTypeCurrentLightLevel
@@ -4760,7 +4760,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentLockMechanismState
     JsName:          HMCharacteristicTypeCurrentLockMechanismState
@@ -4775,7 +4775,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentPosition
     JsName:          HMCharacteristicTypeCurrentPosition
@@ -4790,7 +4790,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentRelativeHumidity
     JsName:          HMCharacteristicTypeCurrentRelativeHumidity
@@ -4805,7 +4805,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentSecuritySystemState
     JsName:          HMCharacteristicTypeCurrentSecuritySystemState
@@ -4820,7 +4820,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentSlatState
     JsName:          HMCharacteristicTypeCurrentSlatState
@@ -4835,7 +4835,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentTemperature
     JsName:          HMCharacteristicTypeCurrentTemperature
@@ -4850,7 +4850,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentTilt
     JsName:          HMCharacteristicTypeCurrentTilt
@@ -4865,7 +4865,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeCurrentVerticalTilt
     JsName:          HMCharacteristicTypeCurrentVerticalTilt
@@ -4880,7 +4880,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeDehumidifierThreshold
     JsName:          HMCharacteristicTypeDehumidifierThreshold
@@ -4895,7 +4895,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeDigitalZoom
     JsName:          HMCharacteristicTypeDigitalZoom
@@ -4910,7 +4910,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeFilterChangeIndication
     JsName:          HMCharacteristicTypeFilterChangeIndication
@@ -4925,7 +4925,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeFilterLifeLevel
     JsName:          HMCharacteristicTypeFilterLifeLevel
@@ -4940,7 +4940,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeFilterResetChangeIndication
     JsName:          HMCharacteristicTypeFilterResetChangeIndication
@@ -4955,7 +4955,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeFirmwareVersion
     JsName:          HMCharacteristicTypeFirmwareVersion
@@ -4970,7 +4970,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeHardwareVersion
     JsName:          HMCharacteristicTypeHardwareVersion
@@ -4985,7 +4985,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeHeatingThreshold
     JsName:          HMCharacteristicTypeHeatingThreshold
@@ -5000,7 +5000,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeHoldPosition
     JsName:          HMCharacteristicTypeHoldPosition
@@ -5015,7 +5015,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeHue
     JsName:          HMCharacteristicTypeHue
@@ -5030,7 +5030,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeHumidifierThreshold
     JsName:          HMCharacteristicTypeHumidifierThreshold
@@ -5045,7 +5045,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeIdentify
     JsName:          HMCharacteristicTypeIdentify
@@ -5060,7 +5060,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeImageMirroring
     JsName:          HMCharacteristicTypeImageMirroring
@@ -5075,7 +5075,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeImageRotation
     JsName:          HMCharacteristicTypeImageRotation
@@ -5090,7 +5090,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeInUse
     JsName:          HMCharacteristicTypeInUse
@@ -5105,7 +5105,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeInputEvent
     JsName:          HMCharacteristicTypeInputEvent
@@ -5120,7 +5120,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeIsConfigured
     JsName:          HMCharacteristicTypeIsConfigured
@@ -5135,7 +5135,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeLabelIndex
     JsName:          HMCharacteristicTypeLabelIndex
@@ -5150,7 +5150,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeLabelNamespace
     JsName:          HMCharacteristicTypeLabelNamespace
@@ -5165,7 +5165,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeLeakDetected
     JsName:          HMCharacteristicTypeLeakDetected
@@ -5180,7 +5180,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeLockManagementAutoSecureTimeout
     JsName:          HMCharacteristicTypeLockManagementAutoSecureTimeout
@@ -5195,7 +5195,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeLockManagementControlPoint
     JsName:          HMCharacteristicTypeLockManagementControlPoint
@@ -5210,7 +5210,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeLockMechanismLastKnownAction
     JsName:          HMCharacteristicTypeLockMechanismLastKnownAction
@@ -5225,7 +5225,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeLockPhysicalControls
     JsName:          HMCharacteristicTypeLockPhysicalControls
@@ -5240,7 +5240,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeLogs
     JsName:          HMCharacteristicTypeLogs
@@ -5255,7 +5255,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeManufacturer
     JsName:          HMCharacteristicTypeManufacturer
@@ -5270,7 +5270,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeModel
     JsName:          HMCharacteristicTypeModel
@@ -5285,7 +5285,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeMotionDetected
     JsName:          HMCharacteristicTypeMotionDetected
@@ -5300,7 +5300,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeMute
     JsName:          HMCharacteristicTypeMute
@@ -5315,7 +5315,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeName
     JsName:          HMCharacteristicTypeName
@@ -5330,7 +5330,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeNightVision
     JsName:          HMCharacteristicTypeNightVision
@@ -5345,7 +5345,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeNitrogenDioxideDensity
     JsName:          HMCharacteristicTypeNitrogenDioxideDensity
@@ -5360,7 +5360,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeObstructionDetected
     JsName:          HMCharacteristicTypeObstructionDetected
@@ -5375,7 +5375,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeOccupancyDetected
     JsName:          HMCharacteristicTypeOccupancyDetected
@@ -5390,7 +5390,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeOpticalZoom
     JsName:          HMCharacteristicTypeOpticalZoom
@@ -5405,7 +5405,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeOutletInUse
     JsName:          HMCharacteristicTypeOutletInUse
@@ -5420,7 +5420,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeOutputState
     JsName:          HMCharacteristicTypeOutputState
@@ -5435,7 +5435,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeOzoneDensity
     JsName:          HMCharacteristicTypeOzoneDensity
@@ -5450,7 +5450,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypePM10Density
     JsName:          HMCharacteristicTypePM10Density
@@ -5465,7 +5465,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypePM2_5Density
     JsName:          HMCharacteristicTypePM2_5Density
@@ -5480,7 +5480,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypePositionState
     JsName:          HMCharacteristicTypePositionState
@@ -5495,7 +5495,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypePowerState
     JsName:          HMCharacteristicTypePowerState
@@ -5510,7 +5510,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeProgramMode
     JsName:          HMCharacteristicTypeProgramMode
@@ -5525,7 +5525,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeRemainingDuration
     JsName:          HMCharacteristicTypeRemainingDuration
@@ -5540,7 +5540,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeRotationDirection
     JsName:          HMCharacteristicTypeRotationDirection
@@ -5555,7 +5555,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeRotationSpeed
     JsName:          HMCharacteristicTypeRotationSpeed
@@ -5570,7 +5570,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSaturation
     JsName:          HMCharacteristicTypeSaturation
@@ -5585,7 +5585,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSecuritySystemAlarmType
     JsName:          HMCharacteristicTypeSecuritySystemAlarmType
@@ -5600,7 +5600,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSelectedStreamConfiguration
     JsName:          HMCharacteristicTypeSelectedStreamConfiguration
@@ -5615,7 +5615,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSerialNumber
     JsName:          HMCharacteristicTypeSerialNumber
@@ -5630,7 +5630,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSetDuration
     JsName:          HMCharacteristicTypeSetDuration
@@ -5645,7 +5645,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSetupStreamEndpoint
     JsName:          HMCharacteristicTypeSetupStreamEndpoint
@@ -5660,7 +5660,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSlatType
     JsName:          HMCharacteristicTypeSlatType
@@ -5675,7 +5675,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSmokeDetected
     JsName:          HMCharacteristicTypeSmokeDetected
@@ -5690,7 +5690,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSoftwareVersion
     JsName:          HMCharacteristicTypeSoftwareVersion
@@ -5705,7 +5705,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeStatusActive
     JsName:          HMCharacteristicTypeStatusActive
@@ -5720,7 +5720,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeStatusFault
     JsName:          HMCharacteristicTypeStatusFault
@@ -5735,7 +5735,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeStatusJammed
     JsName:          HMCharacteristicTypeStatusJammed
@@ -5750,7 +5750,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeStatusLowBattery
     JsName:          HMCharacteristicTypeStatusLowBattery
@@ -5765,7 +5765,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeStatusTampered
     JsName:          HMCharacteristicTypeStatusTampered
@@ -5780,7 +5780,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeStreamingStatus
     JsName:          HMCharacteristicTypeStreamingStatus
@@ -5795,7 +5795,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSulphurDioxideDensity
     JsName:          HMCharacteristicTypeSulphurDioxideDensity
@@ -5810,7 +5810,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSupportedAudioStreamConfiguration
     JsName:          HMCharacteristicTypeSupportedAudioStreamConfiguration
@@ -5825,7 +5825,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSupportedRTPConfiguration
     JsName:          HMCharacteristicTypeSupportedRTPConfiguration
@@ -5840,7 +5840,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSupportedVideoStreamConfiguration
     JsName:          HMCharacteristicTypeSupportedVideoStreamConfiguration
@@ -5855,7 +5855,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeSwingMode
     JsName:          HMCharacteristicTypeSwingMode
@@ -5870,7 +5870,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetAirPurifierState
     JsName:          HMCharacteristicTypeTargetAirPurifierState
@@ -5885,7 +5885,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetDoorState
     JsName:          HMCharacteristicTypeTargetDoorState
@@ -5900,7 +5900,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetFanState
     JsName:          HMCharacteristicTypeTargetFanState
@@ -5915,7 +5915,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetHeaterCoolerState
     JsName:          HMCharacteristicTypeTargetHeaterCoolerState
@@ -5930,7 +5930,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetHeatingCooling
     JsName:          HMCharacteristicTypeTargetHeatingCooling
@@ -5945,7 +5945,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetHorizontalTilt
     JsName:          HMCharacteristicTypeTargetHorizontalTilt
@@ -5960,7 +5960,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetHumidifierDehumidifierState
     JsName:          HMCharacteristicTypeTargetHumidifierDehumidifierState
@@ -5975,7 +5975,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetLockMechanismState
     JsName:          HMCharacteristicTypeTargetLockMechanismState
@@ -5990,7 +5990,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetPosition
     JsName:          HMCharacteristicTypeTargetPosition
@@ -6005,7 +6005,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetRelativeHumidity
     JsName:          HMCharacteristicTypeTargetRelativeHumidity
@@ -6020,7 +6020,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetSecuritySystemState
     JsName:          HMCharacteristicTypeTargetSecuritySystemState
@@ -6035,7 +6035,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetTemperature
     JsName:          HMCharacteristicTypeTargetTemperature
@@ -6050,7 +6050,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetTilt
     JsName:          HMCharacteristicTypeTargetTilt
@@ -6065,7 +6065,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTargetVerticalTilt
     JsName:          HMCharacteristicTypeTargetVerticalTilt
@@ -6080,7 +6080,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeTemperatureUnits
     JsName:          HMCharacteristicTypeTemperatureUnits
@@ -6095,7 +6095,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeValveType
     JsName:          HMCharacteristicTypeValveType
@@ -6110,7 +6110,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeVersion
     JsName:          HMCharacteristicTypeVersion
@@ -6125,7 +6125,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeVolatileOrganicCompoundDensity
     JsName:          HMCharacteristicTypeVolatileOrganicCompoundDensity
@@ -6140,7 +6140,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeVolume
     JsName:          HMCharacteristicTypeVolume
@@ -6155,7 +6155,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicTypeWaterLevel
     JsName:          HMCharacteristicTypeWaterLevel
@@ -6170,7 +6170,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicValueActivationState
     JsName:          HMCharacteristicValueActivationState
@@ -7239,7 +7239,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMCharacteristicValueLabelNamespace
     JsName:          HMCharacteristicValueLabelNamespace
@@ -8410,7 +8410,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          HMCharacteristic
+            Name:            HMCharacteristic
             WithProtocols:   
           - Type:            TypeArgument
             Name:            TargetValueType
@@ -8440,7 +8440,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8467,7 +8467,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            targetValue
         JsName:          targetValue
@@ -9885,7 +9885,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMEvent
     JsName:          HMEvent
@@ -9914,7 +9914,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
     InstanceProperties: 
       - Name:            uniqueIdentifier
@@ -9940,7 +9940,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9971,13 +9971,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMEvent
+            Name:            HMEvent
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'initWithName:events:endEvents:recurrences:predicate:'
         JsName:          initWithNameEventsEndEventsRecurrencesPredicate
@@ -9993,31 +9993,31 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          HMEvent
+                Name:            HMEvent
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          HMEvent
+                Name:            HMEvent
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSDateComponents
+                Name:            NSDateComponents
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
       - Name:            'initWithName:events:predicate:'
         JsName:          initWithNameEventsPredicate
@@ -10032,17 +10032,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          HMEvent
+                Name:            HMEvent
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
       - Name:            'removeEvent:completionHandler:'
         JsName:          removeEventCompletionHandler
@@ -10058,13 +10058,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMEvent
+            Name:            HMEvent
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateEndEvents:completionHandler:'
         JsName:          updateEndEventsCompletionHandler
@@ -10080,17 +10080,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          HMEvent
+                Name:            HMEvent
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateEvents:completionHandler:'
         JsName:          updateEventsCompletionHandler
@@ -10106,17 +10106,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          HMEvent
+                Name:            HMEvent
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateExecuteOnce:completionHandler:'
         JsName:          updateExecuteOnceCompletionHandler
@@ -10136,7 +10136,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updatePredicate:completionHandler:'
         JsName:          updatePredicateCompletionHandler
@@ -10151,13 +10151,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateRecurrences:completionHandler:'
         JsName:          updateRecurrencesCompletionHandler
@@ -10173,17 +10173,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSDateComponents
+                Name:            NSDateComponents
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'predicateForEvaluatingTriggerOccurringAfterDateWithComponents:'
@@ -10198,10 +10198,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
       - Name:            'predicateForEvaluatingTriggerOccurringAfterSignificantEvent:'
         JsName:          predicateForEvaluatingTriggerOccurringAfterSignificantEvent
@@ -10216,10 +10216,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMSignificantTimeEvent
+            Name:            HMSignificantTimeEvent
             WithProtocols:   
       - Name:            'predicateForEvaluatingTriggerOccurringAfterSignificantEvent:applyingOffset:'
         JsName:          predicateForEvaluatingTriggerOccurringAfterSignificantEventApplyingOffset
@@ -10234,13 +10234,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
       - Name:            'predicateForEvaluatingTriggerOccurringBeforeDateWithComponents:'
         JsName:          predicateForEvaluatingTriggerOccurringBeforeDateWithComponents
@@ -10254,10 +10254,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
       - Name:            'predicateForEvaluatingTriggerOccurringBeforeSignificantEvent:'
         JsName:          predicateForEvaluatingTriggerOccurringBeforeSignificantEvent
@@ -10272,10 +10272,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMSignificantTimeEvent
+            Name:            HMSignificantTimeEvent
             WithProtocols:   
       - Name:            'predicateForEvaluatingTriggerOccurringBeforeSignificantEvent:applyingOffset:'
         JsName:          predicateForEvaluatingTriggerOccurringBeforeSignificantEventApplyingOffset
@@ -10290,13 +10290,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
       - Name:            'predicateForEvaluatingTriggerOccurringBetweenDateWithComponents:secondDateWithComponents:'
         JsName:          predicateForEvaluatingTriggerOccurringBetweenDateWithComponentsSecondDateWithComponents
@@ -10311,13 +10311,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
       - Name:            'predicateForEvaluatingTriggerOccurringBetweenSignificantEvent:secondSignificantEvent:'
         JsName:          predicateForEvaluatingTriggerOccurringBetweenSignificantEventSecondSignificantEvent
@@ -10332,13 +10332,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMSignificantTimeEvent
+            Name:            HMSignificantTimeEvent
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMSignificantTimeEvent
+            Name:            HMSignificantTimeEvent
             WithProtocols:   
       - Name:            'predicateForEvaluatingTriggerOccurringOnDateWithComponents:'
         JsName:          predicateForEvaluatingTriggerOccurringOnDateWithComponents
@@ -10352,10 +10352,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
       - Name:            'predicateForEvaluatingTriggerWithCharacteristic:relatedBy:toValue:'
         JsName:          predicateForEvaluatingTriggerWithCharacteristicRelatedByToValue
@@ -10369,10 +10369,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMCharacteristic
+            Name:            HMCharacteristic
             WithProtocols:   
           - Type:            Enum
             Name:            NSPredicateOperatorType
@@ -10391,10 +10391,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMPresenceEvent
+            Name:            HMPresenceEvent
             WithProtocols:   
     InstanceProperties: 
       - Name:            endEvents
@@ -10422,10 +10422,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMEvent
+                  Name:            HMEvent
                   WithProtocols:   
               WithProtocols:   
       - Name:            events
@@ -10451,10 +10451,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMEvent
+                  Name:            HMEvent
                   WithProtocols:   
               WithProtocols:   
       - Name:            executeOnce
@@ -10505,7 +10505,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
       - Name:            recurrences
         JsName:          recurrences
@@ -10532,10 +10532,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSDateComponents
+                  Name:            NSDateComponents
                   WithProtocols:   
               WithProtocols:   
       - Name:            triggerActivationState
@@ -10669,13 +10669,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'addAccessory:completionHandler:'
         JsName:          addAccessoryCompletionHandler
@@ -10690,13 +10690,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'addAndSetupAccessoriesWithCompletionHandler:'
         JsName:          addAndSetupAccessoriesWithCompletionHandler
@@ -10715,7 +10715,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'addAndSetupAccessoriesWithPayload:completionHandler:'
         JsName:          addAndSetupAccessoriesWithPayloadCompletionHandler
@@ -10731,20 +10731,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessorySetupPayload
+            Name:            HMAccessorySetupPayload
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          HMAccessory
+                    Name:            HMAccessory
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'assignAccessory:toRoom:completionHandler:'
         JsName:          assignAccessoryToRoomCompletionHandler
@@ -10759,16 +10759,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMRoom
+            Name:            HMRoom
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeAccessory:completionHandler:'
         JsName:          removeAccessoryCompletionHandler
@@ -10783,13 +10783,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'servicesWithTypes:'
         JsName:          servicesWithTypes
@@ -10803,17 +10803,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          HMService
+                Name:            HMService
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'unblockAccessory:completionHandler:'
@@ -10829,13 +10829,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'addUserWithCompletionHandler:'
         JsName:          addUserWithCompletionHandler
@@ -10854,10 +10854,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          HMUser
+                Name:            HMUser
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'homeAccessControlForUser:'
         JsName:          homeAccessControlForUser
@@ -10872,10 +10872,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          HMHomeAccessControl
+            Name:            HMHomeAccessControl
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMUser
+            Name:            HMUser
             WithProtocols:   
       - Name:            'manageUsersWithCompletionHandler:'
         JsName:          manageUsersWithCompletionHandler
@@ -10894,7 +10894,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeUser:completionHandler:'
         JsName:          removeUserCompletionHandler
@@ -10910,13 +10910,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMUser
+            Name:            HMUser
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'addRoomWithName:completionHandler:'
         JsName:          addRoomWithNameCompletionHandler
@@ -10931,16 +10931,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          HMRoom
+                Name:            HMRoom
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeRoom:completionHandler:'
         JsName:          removeRoomCompletionHandler
@@ -10955,13 +10955,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMRoom
+            Name:            HMRoom
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            roomForEntireHome
         JsName:          roomForEntireHome
@@ -10975,7 +10975,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          HMRoom
+            Name:            HMRoom
             WithProtocols:   
       - Name:            'addZoneWithName:completionHandler:'
         JsName:          addZoneWithNameCompletionHandler
@@ -10990,16 +10990,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          HMZone
+                Name:            HMZone
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeZone:completionHandler:'
         JsName:          removeZoneCompletionHandler
@@ -11014,13 +11014,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMZone
+            Name:            HMZone
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'addServiceGroupWithName:completionHandler:'
         JsName:          addServiceGroupWithNameCompletionHandler
@@ -11035,16 +11035,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          HMServiceGroup
+                Name:            HMServiceGroup
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeServiceGroup:completionHandler:'
         JsName:          removeServiceGroupCompletionHandler
@@ -11059,13 +11059,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMServiceGroup
+            Name:            HMServiceGroup
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'addActionSetWithName:completionHandler:'
         JsName:          addActionSetWithNameCompletionHandler
@@ -11080,16 +11080,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          HMActionSet
+                Name:            HMActionSet
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'builtinActionSetOfType:'
         JsName:          builtinActionSetOfType
@@ -11104,10 +11104,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          HMActionSet
+            Name:            HMActionSet
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'executeActionSet:completionHandler:'
         JsName:          executeActionSetCompletionHandler
@@ -11122,13 +11122,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMActionSet
+            Name:            HMActionSet
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeActionSet:completionHandler:'
         JsName:          removeActionSetCompletionHandler
@@ -11143,13 +11143,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMActionSet
+            Name:            HMActionSet
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'addTrigger:completionHandler:'
         JsName:          addTriggerCompletionHandler
@@ -11164,13 +11164,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMTrigger
+            Name:            HMTrigger
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeTrigger:completionHandler:'
         JsName:          removeTriggerCompletionHandler
@@ -11185,13 +11185,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMTrigger
+            Name:            HMTrigger
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -11285,7 +11285,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            primary
         JsName:          primary
@@ -11335,7 +11335,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            accessories
         JsName:          accessories
@@ -11360,10 +11360,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMAccessory
+                  Name:            HMAccessory
                   WithProtocols:   
               WithProtocols:   
       - Name:            supportsAddingNetworkRouter
@@ -11416,7 +11416,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMUser
+              Name:            HMUser
               WithProtocols:   
       - Name:            users
         JsName:          users
@@ -11443,10 +11443,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMUser
+                  Name:            HMUser
                   WithProtocols:   
               WithProtocols:   
       - Name:            rooms
@@ -11472,10 +11472,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMRoom
+                  Name:            HMRoom
                   WithProtocols:   
               WithProtocols:   
       - Name:            zones
@@ -11501,10 +11501,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMZone
+                  Name:            HMZone
                   WithProtocols:   
               WithProtocols:   
       - Name:            serviceGroups
@@ -11530,10 +11530,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMServiceGroup
+                  Name:            HMServiceGroup
                   WithProtocols:   
               WithProtocols:   
       - Name:            actionSets
@@ -11559,10 +11559,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMActionSet
+                  Name:            HMActionSet
                   WithProtocols:   
               WithProtocols:   
       - Name:            triggers
@@ -11588,10 +11588,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMTrigger
+                  Name:            HMTrigger
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -11662,10 +11662,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
       - Name:            'home:didAddActionSet:'
         JsName:          homeDidAddActionSet
@@ -11680,10 +11680,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMActionSet
+            Name:            HMActionSet
             WithProtocols:   
       - Name:            'home:didAddRoom:'
         JsName:          homeDidAddRoom
@@ -11698,10 +11698,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMRoom
+            Name:            HMRoom
             WithProtocols:   
       - Name:            'home:didAddRoom:toZone:'
         JsName:          homeDidAddRoomToZone
@@ -11716,13 +11716,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMRoom
+            Name:            HMRoom
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMZone
+            Name:            HMZone
             WithProtocols:   
       - Name:            'home:didAddServiceGroup:'
         JsName:          homeDidAddServiceGroup
@@ -11737,10 +11737,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMServiceGroup
+            Name:            HMServiceGroup
             WithProtocols:   
       - Name:            'home:didAddService:toServiceGroup:'
         JsName:          homeDidAddServiceToServiceGroup
@@ -11755,13 +11755,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMService
+            Name:            HMService
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMServiceGroup
+            Name:            HMServiceGroup
             WithProtocols:   
       - Name:            'home:didAddTrigger:'
         JsName:          homeDidAddTrigger
@@ -11776,10 +11776,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMTrigger
+            Name:            HMTrigger
             WithProtocols:   
       - Name:            'home:didAddUser:'
         JsName:          homeDidAddUser
@@ -11794,10 +11794,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMUser
+            Name:            HMUser
             WithProtocols:   
       - Name:            'home:didAddZone:'
         JsName:          homeDidAddZone
@@ -11812,10 +11812,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMZone
+            Name:            HMZone
             WithProtocols:   
       - Name:            'home:didEncounterError:forAccessory:'
         JsName:          homeDidEncounterErrorForAccessory
@@ -11830,13 +11830,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
       - Name:            'home:didRemoveAccessory:'
         JsName:          homeDidRemoveAccessory
@@ -11851,10 +11851,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
       - Name:            'home:didRemoveActionSet:'
         JsName:          homeDidRemoveActionSet
@@ -11869,10 +11869,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMActionSet
+            Name:            HMActionSet
             WithProtocols:   
       - Name:            'home:didRemoveRoom:'
         JsName:          homeDidRemoveRoom
@@ -11887,10 +11887,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMRoom
+            Name:            HMRoom
             WithProtocols:   
       - Name:            'home:didRemoveRoom:fromZone:'
         JsName:          homeDidRemoveRoomFromZone
@@ -11905,13 +11905,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMRoom
+            Name:            HMRoom
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMZone
+            Name:            HMZone
             WithProtocols:   
       - Name:            'home:didRemoveService:fromServiceGroup:'
         JsName:          homeDidRemoveServiceFromServiceGroup
@@ -11926,13 +11926,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMService
+            Name:            HMService
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMServiceGroup
+            Name:            HMServiceGroup
             WithProtocols:   
       - Name:            'home:didRemoveServiceGroup:'
         JsName:          homeDidRemoveServiceGroup
@@ -11947,10 +11947,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMServiceGroup
+            Name:            HMServiceGroup
             WithProtocols:   
       - Name:            'home:didRemoveTrigger:'
         JsName:          homeDidRemoveTrigger
@@ -11965,10 +11965,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMTrigger
+            Name:            HMTrigger
             WithProtocols:   
       - Name:            'home:didRemoveUser:'
         JsName:          homeDidRemoveUser
@@ -11983,10 +11983,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMUser
+            Name:            HMUser
             WithProtocols:   
       - Name:            'home:didRemoveZone:'
         JsName:          homeDidRemoveZone
@@ -12001,10 +12001,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMZone
+            Name:            HMZone
             WithProtocols:   
       - Name:            'home:didUnblockAccessory:'
         JsName:          homeDidUnblockAccessory
@@ -12019,10 +12019,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
       - Name:            'homeDidUpdateAccessControlForCurrentUser:'
         JsName:          homeDidUpdateAccessControlForCurrentUser
@@ -12038,7 +12038,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
       - Name:            'home:didUpdateActionsForActionSet:'
         JsName:          homeDidUpdateActionsForActionSet
@@ -12053,10 +12053,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMActionSet
+            Name:            HMActionSet
             WithProtocols:   
       - Name:            'home:didUpdateHomeHubState:'
         JsName:          homeDidUpdateHomeHubState
@@ -12072,7 +12072,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Enum
             Name:            HMHomeHubState
@@ -12089,7 +12089,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
       - Name:            'home:didUpdateNameForActionSet:'
         JsName:          homeDidUpdateNameForActionSet
@@ -12104,10 +12104,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMActionSet
+            Name:            HMActionSet
             WithProtocols:   
       - Name:            'home:didUpdateNameForRoom:'
         JsName:          homeDidUpdateNameForRoom
@@ -12122,10 +12122,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMRoom
+            Name:            HMRoom
             WithProtocols:   
       - Name:            'home:didUpdateNameForServiceGroup:'
         JsName:          homeDidUpdateNameForServiceGroup
@@ -12140,10 +12140,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMServiceGroup
+            Name:            HMServiceGroup
             WithProtocols:   
       - Name:            'home:didUpdateNameForTrigger:'
         JsName:          homeDidUpdateNameForTrigger
@@ -12158,10 +12158,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMTrigger
+            Name:            HMTrigger
             WithProtocols:   
       - Name:            'home:didUpdateNameForZone:'
         JsName:          homeDidUpdateNameForZone
@@ -12176,10 +12176,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMZone
+            Name:            HMZone
             WithProtocols:   
       - Name:            'home:didUpdateRoom:forAccessory:'
         JsName:          homeDidUpdateRoomForAccessory
@@ -12194,13 +12194,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMRoom
+            Name:            HMRoom
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAccessory
+            Name:            HMAccessory
             WithProtocols:   
       - Name:            'homeDidUpdateSupportedFeatures:'
         JsName:          homeDidUpdateSupportedFeatures
@@ -12216,7 +12216,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
       - Name:            'home:didUpdateTrigger:'
         JsName:          homeDidUpdateTrigger
@@ -12231,10 +12231,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMTrigger
+            Name:            HMTrigger
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -12318,16 +12318,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          HMHome
+                Name:            HMHome
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeHome:completionHandler:'
         JsName:          removeHomeCompletionHandler
@@ -12342,13 +12342,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updatePrimaryHome:completionHandler:'
         JsName:          updatePrimaryHomeCompletionHandler
@@ -12363,13 +12363,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -12463,10 +12463,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMHome
+                  Name:            HMHome
                   WithProtocols:   
               WithProtocols:   
       - Name:            primaryHome
@@ -12492,7 +12492,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMHome
+              Name:            HMHome
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -12574,10 +12574,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHomeManager
+            Name:            HMHomeManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
       - Name:            'homeManager:didReceiveAddAccessoryRequest:'
         JsName:          homeManagerDidReceiveAddAccessoryRequest
@@ -12593,10 +12593,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHomeManager
+            Name:            HMHomeManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMAddAccessoryRequest
+            Name:            HMAddAccessoryRequest
             WithProtocols:   
       - Name:            'homeManager:didRemoveHome:'
         JsName:          homeManagerDidRemoveHome
@@ -12611,10 +12611,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHomeManager
+            Name:            HMHomeManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          HMHome
+            Name:            HMHome
             WithProtocols:   
       - Name:            'homeManager:didUpdateAuthorizationStatus:'
         JsName:          homeManagerDidUpdateAuthorizationStatus
@@ -12630,7 +12630,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHomeManager
+            Name:            HMHomeManager
             WithProtocols:   
           - Type:            Enum
             Name:            HMHomeManagerAuthorizationStatus
@@ -12647,7 +12647,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHomeManager
+            Name:            HMHomeManager
             WithProtocols:   
       - Name:            'homeManagerDidUpdatePrimaryHome:'
         JsName:          homeManagerDidUpdatePrimaryHome
@@ -12662,7 +12662,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMHomeManager
+            Name:            HMHomeManager
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -12694,7 +12694,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
       - Name:            'updateRegion:completionHandler:'
         JsName:          updateRegionCompletionHandler
@@ -12710,13 +12710,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          CLRegion
+            Name:            CLRegion
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -12743,7 +12743,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLRegion
+              Name:            CLRegion
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -12787,7 +12787,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
         Setter:          
           Name:            'setFireDateComponents:'
@@ -12803,7 +12803,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -12845,7 +12845,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
         Setter:          
           Name:            'setCharacteristic:'
@@ -12861,7 +12861,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            triggerValue
         JsName:          triggerValue
@@ -12950,7 +12950,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
         Setter:          
           Name:            'setCharacteristic:'
@@ -12966,7 +12966,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          HMCharacteristic
+              Name:            HMCharacteristic
               WithProtocols:   
       - Name:            thresholdRange
         JsName:          thresholdRange
@@ -12991,7 +12991,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMNumberRange
+              Name:            HMNumberRange
               WithProtocols:   
         Setter:          
           Name:            'setThresholdRange:'
@@ -13007,7 +13007,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          HMNumberRange
+              Name:            HMNumberRange
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -13103,7 +13103,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLRegion
+              Name:            CLRegion
               WithProtocols:   
         Setter:          
           Name:            'setRegion:'
@@ -13119,7 +13119,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CLRegion
+              Name:            CLRegion
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -13256,7 +13256,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
         Setter:          
           Name:            'setOffset:'
@@ -13272,7 +13272,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
       - Name:            significantEvent
         JsName:          significantEvent
@@ -13297,7 +13297,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSignificantEvent:'
@@ -13313,7 +13313,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -13424,7 +13424,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMNetworkConfigurationProfile
+            Name:            HMNetworkConfigurationProfile
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -13457,7 +13457,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
       - Name:            'numberRangeWithMinValue:'
         JsName:          numberRangeWithMinValue
@@ -13472,7 +13472,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
       - Name:            'numberRangeWithMinValue:maxValue:'
         JsName:          numberRangeWithMinValueMaxValue
@@ -13487,10 +13487,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
     InstanceProperties: 
       - Name:            maxValue
@@ -13516,7 +13516,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            minValue
         JsName:          minValue
@@ -13541,7 +13541,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -13783,7 +13783,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMRoom
     JsName:          HMRoom
@@ -13810,13 +13810,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -13843,10 +13843,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMAccessory
+                  Name:            HMAccessory
                   WithProtocols:   
               WithProtocols:   
       - Name:            name
@@ -13872,7 +13872,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            uniqueIdentifier
         JsName:          uniqueIdentifier
@@ -13899,7 +13899,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -13929,13 +13929,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateName:completionHandler:'
         JsName:          updateNameCompletionHandler
@@ -13950,13 +13950,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -13983,7 +13983,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          HMAccessory
+              Name:            HMAccessory
               WithProtocols:   
       - Name:            associatedServiceType
         JsName:          associatedServiceType
@@ -14008,7 +14008,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            characteristics
         JsName:          characteristics
@@ -14033,10 +14033,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMCharacteristic
+                  Name:            HMCharacteristic
                   WithProtocols:   
               WithProtocols:   
       - Name:            linkedServices
@@ -14064,10 +14064,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMService
+                  Name:            HMService
                   WithProtocols:   
               WithProtocols:   
       - Name:            localizedDescription
@@ -14095,7 +14095,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -14120,7 +14120,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            primaryService
         JsName:          primaryService
@@ -14170,7 +14170,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            uniqueIdentifier
         JsName:          uniqueIdentifier
@@ -14197,7 +14197,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            userInteractive
         JsName:          userInteractive
@@ -14252,13 +14252,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMService
+            Name:            HMService
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeService:completionHandler:'
         JsName:          removeServiceCompletionHandler
@@ -14273,13 +14273,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMService
+            Name:            HMService
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateName:completionHandler:'
         JsName:          updateNameCompletionHandler
@@ -14294,13 +14294,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -14327,7 +14327,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            services
         JsName:          services
@@ -14352,10 +14352,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMService
+                  Name:            HMService
                   WithProtocols:   
               WithProtocols:   
       - Name:            uniqueIdentifier
@@ -14383,7 +14383,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -14401,7 +14401,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeAirPurifier
     JsName:          HMServiceTypeAirPurifier
@@ -14416,7 +14416,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeAirQualitySensor
     JsName:          HMServiceTypeAirQualitySensor
@@ -14431,7 +14431,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeBattery
     JsName:          HMServiceTypeBattery
@@ -14446,7 +14446,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeCameraControl
     JsName:          HMServiceTypeCameraControl
@@ -14461,7 +14461,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeCameraRTPStreamManagement
     JsName:          HMServiceTypeCameraRTPStreamManagement
@@ -14476,7 +14476,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeCarbonDioxideSensor
     JsName:          HMServiceTypeCarbonDioxideSensor
@@ -14491,7 +14491,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeCarbonMonoxideSensor
     JsName:          HMServiceTypeCarbonMonoxideSensor
@@ -14506,7 +14506,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeContactSensor
     JsName:          HMServiceTypeContactSensor
@@ -14521,7 +14521,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeDoor
     JsName:          HMServiceTypeDoor
@@ -14536,7 +14536,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeDoorbell
     JsName:          HMServiceTypeDoorbell
@@ -14551,7 +14551,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeFan
     JsName:          HMServiceTypeFan
@@ -14566,7 +14566,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeFaucet
     JsName:          HMServiceTypeFaucet
@@ -14581,7 +14581,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeFilterMaintenance
     JsName:          HMServiceTypeFilterMaintenance
@@ -14596,7 +14596,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeGarageDoorOpener
     JsName:          HMServiceTypeGarageDoorOpener
@@ -14611,7 +14611,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeHeaterCooler
     JsName:          HMServiceTypeHeaterCooler
@@ -14626,7 +14626,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeHumidifierDehumidifier
     JsName:          HMServiceTypeHumidifierDehumidifier
@@ -14641,7 +14641,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeHumiditySensor
     JsName:          HMServiceTypeHumiditySensor
@@ -14656,7 +14656,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeIrrigationSystem
     JsName:          HMServiceTypeIrrigationSystem
@@ -14671,7 +14671,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeLabel
     JsName:          HMServiceTypeLabel
@@ -14686,7 +14686,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeLeakSensor
     JsName:          HMServiceTypeLeakSensor
@@ -14701,7 +14701,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeLightSensor
     JsName:          HMServiceTypeLightSensor
@@ -14716,7 +14716,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeLightbulb
     JsName:          HMServiceTypeLightbulb
@@ -14731,7 +14731,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeLockManagement
     JsName:          HMServiceTypeLockManagement
@@ -14746,7 +14746,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeLockMechanism
     JsName:          HMServiceTypeLockMechanism
@@ -14761,7 +14761,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeMicrophone
     JsName:          HMServiceTypeMicrophone
@@ -14776,7 +14776,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeMotionSensor
     JsName:          HMServiceTypeMotionSensor
@@ -14791,7 +14791,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeOccupancySensor
     JsName:          HMServiceTypeOccupancySensor
@@ -14806,7 +14806,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeOutlet
     JsName:          HMServiceTypeOutlet
@@ -14821,7 +14821,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeSecuritySystem
     JsName:          HMServiceTypeSecuritySystem
@@ -14836,7 +14836,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeSlats
     JsName:          HMServiceTypeSlats
@@ -14851,7 +14851,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeSmokeSensor
     JsName:          HMServiceTypeSmokeSensor
@@ -14866,7 +14866,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeSpeaker
     JsName:          HMServiceTypeSpeaker
@@ -14881,7 +14881,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeStatefulProgrammableSwitch
     JsName:          HMServiceTypeStatefulProgrammableSwitch
@@ -14896,7 +14896,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeStatelessProgrammableSwitch
     JsName:          HMServiceTypeStatelessProgrammableSwitch
@@ -14911,7 +14911,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeSwitch
     JsName:          HMServiceTypeSwitch
@@ -14926,7 +14926,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeTemperatureSensor
     JsName:          HMServiceTypeTemperatureSensor
@@ -14941,7 +14941,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeThermostat
     JsName:          HMServiceTypeThermostat
@@ -14956,7 +14956,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeValve
     JsName:          HMServiceTypeValve
@@ -14971,7 +14971,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeVentilationFan
     JsName:          HMServiceTypeVentilationFan
@@ -14986,7 +14986,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeWindow
     JsName:          HMServiceTypeWindow
@@ -15001,7 +15001,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMServiceTypeWindowCovering
     JsName:          HMServiceTypeWindowCovering
@@ -15016,7 +15016,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMSignificantEventSunrise
     JsName:          HMSignificantEventSunrise
@@ -15031,7 +15031,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMSignificantEventSunset
     JsName:          HMSignificantEventSunset
@@ -15046,7 +15046,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMSignificantTimeEvent
     JsName:          HMSignificantTimeEvent
@@ -15073,10 +15073,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -15103,7 +15103,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
       - Name:            significantEvent
         JsName:          significantEvent
@@ -15128,7 +15128,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -15177,19 +15177,19 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSTimeZone
+            Name:            NSTimeZone
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSCalendar
+            Name:            NSCalendar
             WithProtocols:   
       - Name:            'updateFireDate:completionHandler:'
         JsName:          updateFireDateCompletionHandler
@@ -15204,13 +15204,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateRecurrence:completionHandler:'
         JsName:          updateRecurrenceCompletionHandler
@@ -15225,13 +15225,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDateComponents
+            Name:            NSDateComponents
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateTimeZone:completionHandler:'
         JsName:          updateTimeZoneCompletionHandler
@@ -15246,13 +15246,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSTimeZone
+            Name:            NSTimeZone
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -15279,7 +15279,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            recurrence
         JsName:          recurrence
@@ -15304,7 +15304,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
       - Name:            recurrenceCalendar
         JsName:          recurrenceCalendar
@@ -15329,7 +15329,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSCalendar
+              Name:            NSCalendar
               WithProtocols:   
       - Name:            timeZone
         JsName:          timeZone
@@ -15354,7 +15354,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSTimeZone
+              Name:            NSTimeZone
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -15384,13 +15384,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMActionSet
+            Name:            HMActionSet
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'enable:completionHandler:'
         JsName:          enableCompletionHandler
@@ -15409,7 +15409,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeActionSet:completionHandler:'
         JsName:          removeActionSetCompletionHandler
@@ -15424,13 +15424,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMActionSet
+            Name:            HMActionSet
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateName:completionHandler:'
         JsName:          updateNameCompletionHandler
@@ -15445,13 +15445,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -15478,10 +15478,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMActionSet
+                  Name:            HMActionSet
                   WithProtocols:   
               WithProtocols:   
       - Name:            enabled
@@ -15530,7 +15530,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -15555,7 +15555,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            uniqueIdentifier
         JsName:          uniqueIdentifier
@@ -15582,7 +15582,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -15624,7 +15624,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            uniqueIdentifier
         JsName:          uniqueIdentifier
@@ -15651,7 +15651,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -15669,7 +15669,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            HMZone
     JsName:          HMZone
@@ -15696,13 +15696,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMRoom
+            Name:            HMRoom
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeRoom:completionHandler:'
         JsName:          removeRoomCompletionHandler
@@ -15717,13 +15717,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          HMRoom
+            Name:            HMRoom
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'updateName:completionHandler:'
         JsName:          updateNameCompletionHandler
@@ -15738,13 +15738,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -15771,7 +15771,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            rooms
         JsName:          rooms
@@ -15796,10 +15796,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          HMRoom
+                  Name:            HMRoom
                   WithProtocols:   
               WithProtocols:   
       - Name:            uniqueIdentifier
@@ -15827,7 +15827,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
     StaticProperties: 
     Protocols:       

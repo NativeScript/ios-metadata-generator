@@ -45,7 +45,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -72,7 +72,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setSeed:'
@@ -88,7 +88,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -130,7 +130,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKBehavior
+              Name:            GKBehavior
               WithProtocols:   
         Setter:          
           Name:            'setBehavior:'
@@ -146,7 +146,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          GKBehavior
+              Name:            GKBehavior
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -602,7 +602,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float3x3
+              Name:            simd_float3x3
         Setter:          
           Name:            'setRotation:'
           JsName:          setRotation
@@ -618,7 +618,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          simd.types
-              JsName:          simd_float3x3
+              Name:            simd_float3x3
       - Name:            velocity
         JsName:          velocity
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GKAgent.h
@@ -668,7 +668,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKAgent
+            Name:            GKAgent
             WithProtocols:   
       - Name:            'agentWillUpdate:'
         JsName:          agentWillUpdate
@@ -683,7 +683,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKAgent
+            Name:            GKAgent
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -714,7 +714,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKGoal
+            Name:            GKGoal
             WithProtocols:   
           - Type:            ULong
       - Name:            'objectForKeyedSubscript:'
@@ -729,10 +729,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKGoal
+            Name:            GKGoal
             WithProtocols:   
       - Name:            removeAllGoals
         JsName:          removeAllGoals
@@ -759,7 +759,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKGoal
+            Name:            GKGoal
             WithProtocols:   
       - Name:            'setObject:forKeyedSubscript:'
         JsName:          setObjectForKeyedSubscript
@@ -774,10 +774,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKGoal
+            Name:            GKGoal
             WithProtocols:   
       - Name:            'setWeight:forGoal:'
         JsName:          setWeightForGoal
@@ -793,7 +793,7 @@ Items:
           - Type:            Void
           - Type:            Float
           - Type:            Interface
-            JsName:          GKGoal
+            Name:            GKGoal
             WithProtocols:   
       - Name:            'weightForGoal:'
         JsName:          weightForGoal
@@ -808,7 +808,7 @@ Items:
         Signature:       
           - Type:            Float
           - Type:            Interface
-            JsName:          GKGoal
+            Name:            GKGoal
             WithProtocols:   
     StaticMethods:   
       - Name:            'behaviorWithGoals:'
@@ -824,10 +824,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGoal
+                Name:            GKGoal
                 WithProtocols:   
             WithProtocols:   
       - Name:            'behaviorWithGoals:andWeights:'
@@ -843,17 +843,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGoal
+                Name:            GKGoal
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
       - Name:            'behaviorWithGoal:weight:'
@@ -869,7 +869,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKGoal
+            Name:            GKGoal
             WithProtocols:   
           - Type:            Float
       - Name:            'behaviorWithWeightedGoals:'
@@ -885,13 +885,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGoal
+                Name:            GKGoal
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -1463,7 +1463,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKEntity
+              Name:            GKEntity
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1498,7 +1498,7 @@ Items:
             Name:            ComponentType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKComponent
+              Name:            GKComponent
               WithProtocols:   
       - Name:            'addComponentWithEntity:'
         JsName:          addComponentWithEntity
@@ -1513,7 +1513,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKEntity
+            Name:            GKEntity
             WithProtocols:   
       - Name:            'classForGenericArgumentAtIndex:'
         JsName:          classForGenericArgumentAtIndex
@@ -1556,7 +1556,7 @@ Items:
             Name:            ComponentType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKComponent
+              Name:            GKComponent
               WithProtocols:   
           - Type:            ULong
       - Name:            'removeComponent:'
@@ -1575,7 +1575,7 @@ Items:
             Name:            ComponentType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKComponent
+              Name:            GKComponent
               WithProtocols:   
       - Name:            'removeComponentWithEntity:'
         JsName:          removeComponentWithEntity
@@ -1590,7 +1590,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKEntity
+            Name:            GKEntity
             WithProtocols:   
       - Name:            'updateWithDeltaTime:'
         JsName:          updateWithDeltaTime
@@ -1653,13 +1653,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            TypeArgument
                   Name:            ComponentType
                   UnderlyingType:  
                     Type:            Interface
-                    JsName:          GKComponent
+                    Name:            GKComponent
                     WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -1689,7 +1689,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKBehavior
+            Name:            GKBehavior
             WithProtocols:   
           - Type:            ULong
       - Name:            'objectForKeyedSubscript:'
@@ -1704,10 +1704,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKBehavior
+            Name:            GKBehavior
             WithProtocols:   
       - Name:            removeAllBehaviors
         JsName:          removeAllBehaviors
@@ -1734,7 +1734,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKBehavior
+            Name:            GKBehavior
             WithProtocols:   
       - Name:            'setObject:forKeyedSubscript:'
         JsName:          setObjectForKeyedSubscript
@@ -1749,10 +1749,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKBehavior
+            Name:            GKBehavior
             WithProtocols:   
       - Name:            'setWeight:forBehavior:'
         JsName:          setWeightForBehavior
@@ -1768,7 +1768,7 @@ Items:
           - Type:            Void
           - Type:            Float
           - Type:            Interface
-            JsName:          GKBehavior
+            Name:            GKBehavior
             WithProtocols:   
       - Name:            'weightForBehavior:'
         JsName:          weightForBehavior
@@ -1783,7 +1783,7 @@ Items:
         Signature:       
           - Type:            Float
           - Type:            Interface
-            JsName:          GKBehavior
+            Name:            GKBehavior
             WithProtocols:   
     StaticMethods:   
       - Name:            'behaviorWithBehaviors:'
@@ -1799,10 +1799,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKBehavior
+                Name:            GKBehavior
                 WithProtocols:   
             WithProtocols:   
       - Name:            'behaviorWithBehaviors:andWeights:'
@@ -1818,17 +1818,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKBehavior
+                Name:            GKBehavior
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -2043,7 +2043,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -2061,7 +2061,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -2112,10 +2112,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'findActionForAnswers:'
         JsName:          findActionForAnswers
@@ -2132,7 +2132,7 @@ Items:
             WithProtocols:   
               - NSObjectProtocol
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -2169,10 +2169,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Id
                     WithProtocols:   
@@ -2180,14 +2180,14 @@ Items:
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
                   - NSObjectProtocol
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -2206,10 +2206,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2236,7 +2236,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKRandomSource
+              Name:            GKRandomSource
               WithProtocols:   
         Setter:          
           Name:            'setRandomSource:'
@@ -2252,7 +2252,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          GKRandomSource
+              Name:            GKRandomSource
               WithProtocols:   
       - Name:            rootNode
         JsName:          rootNode
@@ -2277,7 +2277,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKDecisionNode
+              Name:            GKDecisionNode
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2308,7 +2308,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKComponent
+            Name:            GKComponent
             WithProtocols:   
       - Name:            'componentForClass:'
         JsName:          componentForClass
@@ -2322,7 +2322,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKComponent
+            Name:            GKComponent
             WithProtocols:   
           - Type:            Class
       - Name:            'removeComponentForClass:'
@@ -2388,10 +2388,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKComponent
+                  Name:            GKComponent
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2437,7 +2437,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -2571,7 +2571,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Id
                   WithProtocols:   
@@ -2805,10 +2805,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKAgent
+                Name:            GKAgent
                 WithProtocols:   
             WithProtocols:   
           - Type:            Float
@@ -2826,10 +2826,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKAgent
+                Name:            GKAgent
                 WithProtocols:   
             WithProtocols:   
           - Type:            Double
@@ -2846,10 +2846,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKObstacle
+                Name:            GKObstacle
                 WithProtocols:   
             WithProtocols:   
           - Type:            Double
@@ -2866,10 +2866,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKAgent
+                Name:            GKAgent
                 WithProtocols:   
             WithProtocols:   
           - Type:            Float
@@ -2887,7 +2887,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKAgent
+            Name:            GKAgent
             WithProtocols:   
       - Name:            'goalToFollowPath:maxPredictionTime:forward:'
         JsName:          goalToFollowPathMaxPredictionTimeForward
@@ -2902,7 +2902,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKPath
+            Name:            GKPath
             WithProtocols:   
           - Type:            Double
           - Type:            Bool
@@ -2919,7 +2919,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKAgent
+            Name:            GKAgent
             WithProtocols:   
           - Type:            Double
       - Name:            'goalToReachTargetSpeed:'
@@ -2948,7 +2948,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKAgent
+            Name:            GKAgent
             WithProtocols:   
       - Name:            'goalToSeparateFromAgents:maxDistance:maxAngle:'
         JsName:          goalToSeparateFromAgentsMaxDistanceMaxAngle
@@ -2963,10 +2963,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKAgent
+                Name:            GKAgent
                 WithProtocols:   
             WithProtocols:   
           - Type:            Float
@@ -2984,7 +2984,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKPath
+            Name:            GKPath
             WithProtocols:   
           - Type:            Double
       - Name:            'goalToWander:'
@@ -3030,10 +3030,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGraphNode
+                Name:            GKGraphNode
                 WithProtocols:   
             WithProtocols:   
       - Name:            'connectNodeToLowestCostNode:bidirectional:'
@@ -3049,7 +3049,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKGraphNode
+            Name:            GKGraphNode
             WithProtocols:   
           - Type:            Bool
       - Name:            'findPathFromNode:toNode:'
@@ -3064,17 +3064,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGraphNode
+                Name:            GKGraphNode
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKGraphNode
+            Name:            GKGraphNode
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKGraphNode
+            Name:            GKGraphNode
             WithProtocols:   
       - Name:            'initWithNodes:'
         JsName:          initWithNodes
@@ -3089,10 +3089,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGraphNode
+                Name:            GKGraphNode
                 WithProtocols:   
             WithProtocols:   
       - Name:            'removeNodes:'
@@ -3108,10 +3108,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGraphNode
+                Name:            GKGraphNode
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -3128,10 +3128,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGraphNode
+                Name:            GKGraphNode
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -3158,10 +3158,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKGraphNode
+                  Name:            GKGraphNode
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -3194,10 +3194,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGraphNode
+                Name:            GKGraphNode
                 WithProtocols:   
             WithProtocols:   
           - Type:            Bool
@@ -3214,7 +3214,7 @@ Items:
         Signature:       
           - Type:            Float
           - Type:            Interface
-            JsName:          GKGraphNode
+            Name:            GKGraphNode
             WithProtocols:   
       - Name:            'estimatedCostToNode:'
         JsName:          estimatedCostToNode
@@ -3229,7 +3229,7 @@ Items:
         Signature:       
           - Type:            Float
           - Type:            Interface
-            JsName:          GKGraphNode
+            Name:            GKGraphNode
             WithProtocols:   
       - Name:            'findPathFromNode:'
         JsName:          findPathFromNode
@@ -3243,14 +3243,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGraphNode
+                Name:            GKGraphNode
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKGraphNode
+            Name:            GKGraphNode
             WithProtocols:   
       - Name:            'findPathToNode:'
         JsName:          findPathToNode
@@ -3264,14 +3264,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGraphNode
+                Name:            GKGraphNode
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKGraphNode
+            Name:            GKGraphNode
             WithProtocols:   
       - Name:            'removeConnectionsToNodes:bidirectional:'
         JsName:          removeConnectionsToNodesBidirectional
@@ -3286,10 +3286,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGraphNode
+                Name:            GKGraphNode
                 WithProtocols:   
             WithProtocols:   
           - Type:            Bool
@@ -3318,10 +3318,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKGraphNode
+                  Name:            GKGraphNode
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -3518,7 +3518,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKGridGraphNode
+            Name:            GKGridGraphNode
             WithProtocols:   
       - Name:            'initFromGridStartingAt:width:height:diagonalsAllowed:'
         JsName:          initFromGridStartingAtWidthHeightDiagonalsAllowed
@@ -3568,7 +3568,7 @@ Items:
             Name:            NodeType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKGridGraphNode
+              Name:            GKGridGraphNode
               WithProtocols:   
           - Type:            StaticMethods:   
       - Name:            'graphFromGridStartingAt:width:height:diagonalsAllowed:'
@@ -3922,10 +3922,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPolygonObstacle
+                Name:            GKPolygonObstacle
                 WithProtocols:   
             WithProtocols:   
       - Name:            'classForGenericArgumentAtIndex:'
@@ -3957,7 +3957,7 @@ Items:
             Name:            NodeType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKGraphNode2D
+              Name:            GKGraphNode2D
               WithProtocols:   
       - Name:            'initWithBufferRadius:minCoordinate:maxCoordinate:'
         JsName:          initWithBufferRadiusMinCoordinateMaxCoordinate
@@ -4003,10 +4003,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPolygonObstacle
+                Name:            GKPolygonObstacle
                 WithProtocols:   
             WithProtocols:   
       - Name:            'triangleAtIndex:'
@@ -4022,7 +4022,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          GameplayKit.GKPrimitives
-            JsName:          GKTriangle
+            Name:            GKTriangle
           - Type:            ULong
       - Name:            triangulate
         JsName:          triangulate
@@ -4115,10 +4115,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKPolygonObstacle
+                  Name:            GKPolygonObstacle
                   WithProtocols:   
               WithProtocols:   
       - Name:            triangleCount
@@ -4444,7 +4444,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4471,7 +4471,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4501,7 +4501,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
       - Name:            applyAbsoluteValue
         JsName:          applyAbsoluteValue
@@ -4558,13 +4558,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
       - Name:            'initWithNoiseSource:'
         JsName:          initWithNoiseSource
@@ -4579,7 +4579,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKNoiseSource
+            Name:            GKNoiseSource
             WithProtocols:   
       - Name:            'initWithNoiseSource:gradientColors:'
         JsName:          initWithNoiseSourceGradientColors
@@ -4594,16 +4594,16 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKNoiseSource
+            Name:            GKNoiseSource
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
               - Type:            Interface
-                JsName:          UIColor
+                Name:            UIColor
                 WithProtocols:   
             WithProtocols:   
       - Name:            invert
@@ -4631,7 +4631,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
       - Name:            'minimumWithNoise:'
         JsName:          minimumWithNoise
@@ -4646,7 +4646,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
       - Name:            'moveBy:'
         JsName:          moveBy
@@ -4674,7 +4674,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
       - Name:            'raiseToPower:'
         JsName:          raiseToPower
@@ -4702,7 +4702,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
       - Name:            'remapValuesToCurveWithControlPoints:'
         JsName:          remapValuesToCurveWithControlPoints
@@ -4717,13 +4717,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
       - Name:            'remapValuesToTerracesWithPeaks:terracesInverted:'
@@ -4739,10 +4739,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Bool
@@ -4798,14 +4798,14 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKNoise
+                Name:            GKNoise
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
       - Name:            'noiseWithComponentNoises:selectionNoise:componentBoundaries:boundaryBlendDistances:'
         JsName:          noiseWithComponentNoisesSelectionNoiseComponentBoundariesBoundaryBlendDistances
@@ -4820,27 +4820,27 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKNoise
+                Name:            GKNoise
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
       - Name:            'noiseWithNoiseSource:'
@@ -4856,7 +4856,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKNoiseSource
+            Name:            GKNoiseSource
             WithProtocols:   
       - Name:            'noiseWithNoiseSource:gradientColors:'
         JsName:          noiseWithNoiseSourceGradientColors
@@ -4871,16 +4871,16 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKNoiseSource
+            Name:            GKNoiseSource
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
               - Type:            Interface
-                JsName:          UIColor
+                Name:            UIColor
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -4907,13 +4907,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          UIColor
+                  Name:            UIColor
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4930,13 +4930,13 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          UIColor
+                  Name:            UIColor
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -4967,7 +4967,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
       - Name:            'initWithNoise:size:origin:sampleCount:seamless:'
         JsName:          initWithNoiseSizeOriginSampleCountSeamless
@@ -4982,7 +4982,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
           - Type:            
           - Type:            
@@ -5041,7 +5041,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
       - Name:            'noiseMapWithNoise:size:origin:sampleCount:seamless:'
         JsName:          noiseMapWithNoiseSizeOriginSampleCountSeamless
@@ -5056,7 +5056,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKNoise
+            Name:            GKNoise
             WithProtocols:   
           - Type:            
           - Type:            
@@ -5216,10 +5216,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPolygonObstacle
+                Name:            GKPolygonObstacle
                 WithProtocols:   
             WithProtocols:   
       - Name:            'classForGenericArgumentAtIndex:'
@@ -5251,7 +5251,7 @@ Items:
             Name:            NodeType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKGraphNode2D
+              Name:            GKGraphNode2D
               WithProtocols:   
       - Name:            'connectNodeUsingObstacles:ignoringBufferRadiusOfObstacles:'
         JsName:          connectNodeUsingObstaclesIgnoringBufferRadiusOfObstacles
@@ -5269,13 +5269,13 @@ Items:
             Name:            NodeType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKGraphNode2D
+              Name:            GKGraphNode2D
               WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPolygonObstacle
+                Name:            GKPolygonObstacle
                 WithProtocols:   
             WithProtocols:   
       - Name:            'connectNodeUsingObstacles:ignoringObstacles:'
@@ -5294,13 +5294,13 @@ Items:
             Name:            NodeType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKGraphNode2D
+              Name:            GKGraphNode2D
               WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPolygonObstacle
+                Name:            GKPolygonObstacle
                 WithProtocols:   
             WithProtocols:   
       - Name:            'initWithObstacles:bufferRadius:'
@@ -5316,10 +5316,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPolygonObstacle
+                Name:            GKPolygonObstacle
                 WithProtocols:   
             WithProtocols:   
           - Type:            Float
@@ -5336,10 +5336,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPolygonObstacle
+                Name:            GKPolygonObstacle
                 WithProtocols:   
             WithProtocols:   
           - Type:            Float
@@ -5360,13 +5360,13 @@ Items:
             Name:            NodeType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKGraphNode2D
+              Name:            GKGraphNode2D
               WithProtocols:   
           - Type:            TypeArgument
             Name:            NodeType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKGraphNode2D
+              Name:            GKGraphNode2D
               WithProtocols:   
       - Name:            'lockConnectionFromNode:toNode:'
         JsName:          lockConnectionFromNodeToNode
@@ -5384,13 +5384,13 @@ Items:
             Name:            NodeType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKGraphNode2D
+              Name:            GKGraphNode2D
               WithProtocols:   
           - Type:            TypeArgument
             Name:            NodeType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKGraphNode2D
+              Name:            GKGraphNode2D
               WithProtocols:   
       - Name:            'nodesForObstacle:'
         JsName:          nodesForObstacle
@@ -5404,17 +5404,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            TypeArgument
                 Name:            NodeType
                 UnderlyingType:  
                   Type:            Interface
-                  JsName:          GKGraphNode2D
+                  Name:            GKGraphNode2D
                   WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPolygonObstacle
+            Name:            GKPolygonObstacle
             WithProtocols:   
       - Name:            removeAllObstacles
         JsName:          removeAllObstacles
@@ -5441,10 +5441,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPolygonObstacle
+                Name:            GKPolygonObstacle
                 WithProtocols:   
             WithProtocols:   
       - Name:            'unlockConnectionFromNode:toNode:'
@@ -5463,13 +5463,13 @@ Items:
             Name:            NodeType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKGraphNode2D
+              Name:            GKGraphNode2D
               WithProtocols:   
           - Type:            TypeArgument
             Name:            NodeType
             UnderlyingType:  
               Type:            Interface
-              JsName:          GKGraphNode2D
+              Name:            GKGraphNode2D
               WithProtocols:   
     StaticMethods:   
       - Name:            'graphWithObstacles:bufferRadius:'
@@ -5485,10 +5485,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPolygonObstacle
+                Name:            GKPolygonObstacle
                 WithProtocols:   
             WithProtocols:   
           - Type:            Float
@@ -5505,10 +5505,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPolygonObstacle
+                Name:            GKPolygonObstacle
                 WithProtocols:   
             WithProtocols:   
           - Type:            Float
@@ -5560,10 +5560,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKPolygonObstacle
+                  Name:            GKPolygonObstacle
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -5593,17 +5593,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKOctreeNode
+            Name:            GKOctreeNode
             WithProtocols:   
           - Type:            TypeArgument
             Name:            ElementType
             UnderlyingType:  
               Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
           - Type:            Struct
             Module:          GameplayKit.GKPrimitives
-            JsName:          GKBox
+            Name:            GKBox
       - Name:            'addElement:withPoint:'
         JsName:          addElementWithPoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GKOctree.h
@@ -5616,13 +5616,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKOctreeNode
+            Name:            GKOctreeNode
             WithProtocols:   
           - Type:            TypeArgument
             Name:            ElementType
             UnderlyingType:  
               Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
           - Type:            
       - Name:            'elementsAtPoint:'
@@ -5637,13 +5637,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            TypeArgument
                 Name:            ElementType
                 UnderlyingType:  
                   Type:            Interface
-                  JsName:          NSObject
+                  Name:            NSObject
                   WithProtocols:   
             WithProtocols:   
           - Type:            
@@ -5659,18 +5659,18 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            TypeArgument
                 Name:            ElementType
                 UnderlyingType:  
                   Type:            Interface
-                  JsName:          NSObject
+                  Name:            NSObject
                   WithProtocols:   
             WithProtocols:   
           - Type:            Struct
             Module:          GameplayKit.GKPrimitives
-            JsName:          GKBox
+            Name:            GKBox
       - Name:            'initWithBoundingBox:minimumCellSize:'
         JsName:          initWithBoundingBoxMinimumCellSize
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GKOctree.h
@@ -5685,7 +5685,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          GameplayKit.GKPrimitives
-            JsName:          GKBox
+            Name:            GKBox
           - Type:            Float
       - Name:            'removeElement:'
         JsName:          removeElement
@@ -5703,7 +5703,7 @@ Items:
             Name:            ElementType
             UnderlyingType:  
               Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
       - Name:            'removeElement:withNode:'
         JsName:          removeElementWithNode
@@ -5721,10 +5721,10 @@ Items:
             Name:            ElementType
             UnderlyingType:  
               Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
           - Type:            Interface
-            JsName:          GKOctreeNode
+            Name:            GKOctreeNode
             WithProtocols:   
     StaticMethods:   
       - Name:            'octreeWithBoundingBox:minimumCellSize:'
@@ -5741,7 +5741,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          GameplayKit.GKPrimitives
-            JsName:          GKBox
+            Name:            GKBox
           - Type:            Float
     InstanceProperties: 
     StaticProperties: 
@@ -5785,7 +5785,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          GameplayKit.GKPrimitives
-              JsName:          GKBox
+              Name:            GKBox
     StaticProperties: 
     Protocols:       
     Base:            NSObject
@@ -5861,10 +5861,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGraphNode
+                Name:            GKGraphNode
                 WithProtocols:   
             WithProtocols:   
           - Type:            Float
@@ -5933,10 +5933,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKGraphNode
+                Name:            GKGraphNode
                 WithProtocols:   
             WithProtocols:   
           - Type:            Float
@@ -6274,13 +6274,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKQuadtreeNode
+            Name:            GKQuadtreeNode
             WithProtocols:   
           - Type:            TypeArgument
             Name:            ElementType
             UnderlyingType:  
               Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
           - Type:            
       - Name:            'addElement:withQuad:'
@@ -6295,17 +6295,17 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKQuadtreeNode
+            Name:            GKQuadtreeNode
             WithProtocols:   
           - Type:            TypeArgument
             Name:            ElementType
             UnderlyingType:  
               Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
           - Type:            Struct
             Module:          GameplayKit.GKPrimitives
-            JsName:          GKQuad
+            Name:            GKQuad
       - Name:            'elementsAtPoint:'
         JsName:          elementsAtPoint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GKQuadtree.h
@@ -6318,13 +6318,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            TypeArgument
                 Name:            ElementType
                 UnderlyingType:  
                   Type:            Interface
-                  JsName:          NSObject
+                  Name:            NSObject
                   WithProtocols:   
             WithProtocols:   
           - Type:            
@@ -6340,18 +6340,18 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            TypeArgument
                 Name:            ElementType
                 UnderlyingType:  
                   Type:            Interface
-                  JsName:          NSObject
+                  Name:            NSObject
                   WithProtocols:   
             WithProtocols:   
           - Type:            Struct
             Module:          GameplayKit.GKPrimitives
-            JsName:          GKQuad
+            Name:            GKQuad
       - Name:            'initWithBoundingQuad:minimumCellSize:'
         JsName:          initWithBoundingQuadMinimumCellSize
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameplayKit.framework/Headers/GKQuadtree.h
@@ -6366,7 +6366,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          GameplayKit.GKPrimitives
-            JsName:          GKQuad
+            Name:            GKQuad
           - Type:            Float
       - Name:            'removeElement:'
         JsName:          removeElement
@@ -6384,7 +6384,7 @@ Items:
             Name:            ElementType
             UnderlyingType:  
               Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
       - Name:            'removeElement:withNode:'
         JsName:          removeElementWithNode
@@ -6402,10 +6402,10 @@ Items:
             Name:            ElementType
             UnderlyingType:  
               Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
           - Type:            Interface
-            JsName:          GKQuadtreeNode
+            Name:            GKQuadtreeNode
             WithProtocols:   
     StaticMethods:   
       - Name:            'quadtreeWithBoundingQuad:minimumCellSize:'
@@ -6422,7 +6422,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          GameplayKit.GKPrimitives
-            JsName:          GKQuad
+            Name:            GKQuad
           - Type:            Float
     InstanceProperties: 
     StaticProperties: 
@@ -6466,7 +6466,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          GameplayKit.GKPrimitives
-              JsName:          GKQuad
+              Name:            GKQuad
     StaticProperties: 
     Protocols:       
     Base:            NSObject
@@ -6498,7 +6498,7 @@ Items:
             Name:            ElementType
             UnderlyingType:  
               Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
           - Type:            
           - Type:            
@@ -6516,13 +6516,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            TypeArgument
                 Name:            ElementType
                 UnderlyingType:  
                   Type:            Interface
-                  JsName:          NSObject
+                  Name:            NSObject
                   WithProtocols:   
             WithProtocols:   
           - Type:            
@@ -6556,7 +6556,7 @@ Items:
             Name:            ElementType
             UnderlyingType:  
               Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
           - Type:            
           - Type:            StaticMethods:   
@@ -6921,10 +6921,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
     StaticMethods:   
       - Name:            sharedRandom
@@ -6939,7 +6939,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKRandomSource
+            Name:            GKRandomSource
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -7022,7 +7022,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          GKRuleSystem
+            Name:            GKRuleSystem
             WithProtocols:   
       - Name:            'performActionWithSystem:'
         JsName:          performActionWithSystem
@@ -7037,7 +7037,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKRuleSystem
+            Name:            GKRuleSystem
             WithProtocols:   
     StaticMethods:   
       - Name:            'ruleWithBlockPredicate:action:'
@@ -7056,13 +7056,13 @@ Items:
             Signature:       
               - Type:            Bool
               - Type:            Interface
-                JsName:          GKRuleSystem
+                Name:            GKRuleSystem
                 WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKRuleSystem
+                Name:            GKRuleSystem
                 WithProtocols:   
       - Name:            'ruleWithPredicate:assertingFact:grade:'
         JsName:          ruleWithPredicateAssertingFactGrade
@@ -7077,7 +7077,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -7096,7 +7096,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -7168,7 +7168,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKRule
+            Name:            GKRule
             WithProtocols:   
       - Name:            'addRulesFromArray:'
         JsName:          addRulesFromArray
@@ -7183,10 +7183,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKRule
+                Name:            GKRule
                 WithProtocols:   
             WithProtocols:   
       - Name:            'assertFact:'
@@ -7260,7 +7260,7 @@ Items:
         Signature:       
           - Type:            Float
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
       - Name:            'minimumGradeForFacts:'
         JsName:          minimumGradeForFacts
@@ -7275,7 +7275,7 @@ Items:
         Signature:       
           - Type:            Float
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
       - Name:            removeAllRules
         JsName:          removeAllRules
@@ -7357,10 +7357,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKRule
+                  Name:            GKRule
                   WithProtocols:   
               WithProtocols:   
       - Name:            executed
@@ -7386,10 +7386,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKRule
+                  Name:            GKRule
                   WithProtocols:   
               WithProtocols:   
       - Name:            facts
@@ -7415,7 +7415,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
       - Name:            rules
         JsName:          rules
@@ -7440,10 +7440,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKRule
+                  Name:            GKRule
                   WithProtocols:   
               WithProtocols:   
       - Name:            state
@@ -7469,7 +7469,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSMutableDictionary
+              Name:            NSMutableDictionary
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7499,7 +7499,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNNode
+            Name:            SCNNode
             WithProtocols:   
     StaticMethods:   
       - Name:            'componentWithNode:'
@@ -7515,7 +7515,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SCNNode
+            Name:            SCNNode
             WithProtocols:   
     InstanceProperties: 
       - Name:            node
@@ -7541,7 +7541,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SCNNode
+              Name:            SCNNode
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7572,7 +7572,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SKNode
+            Name:            SKNode
             WithProtocols:   
     StaticMethods:   
       - Name:            'componentWithNode:'
@@ -7588,7 +7588,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          SKNode
+            Name:            SKNode
             WithProtocols:   
     InstanceProperties: 
       - Name:            node
@@ -7614,7 +7614,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          SKNode
+              Name:            SKNode
               WithProtocols:   
         Setter:          
           Name:            'setNode:'
@@ -7630,7 +7630,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          SKNode
+              Name:            SKNode
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7661,7 +7661,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKEntity
+            Name:            GKEntity
             WithProtocols:   
       - Name:            'addGraph:name:'
         JsName:          addGraphName
@@ -7676,10 +7676,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKGraph
+            Name:            GKGraph
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'removeEntity:'
         JsName:          removeEntity
@@ -7694,7 +7694,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKEntity
+            Name:            GKEntity
             WithProtocols:   
       - Name:            'removeGraph:'
         JsName:          removeGraph
@@ -7709,7 +7709,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'sceneWithFileNamed:'
@@ -7725,7 +7725,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'sceneWithFileNamed:rootNode:'
         JsName:          sceneWithFileNamedRootNode
@@ -7740,7 +7740,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -7769,10 +7769,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKEntity
+                  Name:            GKEntity
                   WithProtocols:   
               WithProtocols:   
       - Name:            graphs
@@ -7798,13 +7798,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          GKGraph
+                  Name:            GKGraph
                   WithProtocols:   
               WithProtocols:   
       - Name:            rootNode
@@ -8107,7 +8107,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKState
+            Name:            GKState
             WithProtocols:   
       - Name:            'isValidNextState:'
         JsName:          isValidNextState
@@ -8148,7 +8148,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKState
+            Name:            GKState
             WithProtocols:   
     StaticMethods:   
       - Name:            state
@@ -8187,7 +8187,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKStateMachine
+              Name:            GKStateMachine
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -8243,10 +8243,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKState
+                Name:            GKState
                 WithProtocols:   
             WithProtocols:   
       - Name:            'stateForClass:'
@@ -8261,7 +8261,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKState
+            Name:            GKState
             WithProtocols:   
           - Type:            Class
       - Name:            'updateWithDeltaTime:'
@@ -8291,10 +8291,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKState
+                Name:            GKState
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -8321,7 +8321,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKState
+              Name:            GKState
               WithProtocols:   
     StaticProperties: 
     Protocols:       

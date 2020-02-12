@@ -32,10 +32,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKAlarm
+            Name:            EKAlarm
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
       - Name:            'alarmWithRelativeOffset:'
         JsName:          alarmWithRelativeOffset
@@ -49,7 +49,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKAlarm
+            Name:            EKAlarm
             WithProtocols:   
           - Type:            Double
     InstanceProperties: 
@@ -76,7 +76,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setAbsoluteDate:'
@@ -92,7 +92,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            proximity
         JsName:          proximity
@@ -193,7 +193,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EKStructuredLocation
+              Name:            EKStructuredLocation
               WithProtocols:   
         Setter:          
           Name:            'setStructuredLocation:'
@@ -209,7 +209,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          EKStructuredLocation
+              Name:            EKStructuredLocation
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -421,12 +421,12 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKCalendar
+            Name:            EKCalendar
             WithProtocols:   
           - Type:            Enum
             Name:            EKEntityType
           - Type:            Interface
-            JsName:          EKEventStore
+            Name:            EKEventStore
             WithProtocols:   
       - Name:            'calendarWithEventStore:'
         JsName:          calendarWithEventStore
@@ -441,10 +441,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKCalendar
+            Name:            EKCalendar
             WithProtocols:   
           - Type:            Interface
-            JsName:          EKEventStore
+            Name:            EKEventStore
             WithProtocols:   
     InstanceProperties: 
       - Name:            allowedEntityTypes
@@ -521,7 +521,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            CGColor
         JsName:          CGColor
@@ -615,7 +615,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EKSource
+              Name:            EKSource
               WithProtocols:   
         Setter:          
           Name:            'setSource:'
@@ -631,7 +631,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          EKSource
+              Name:            EKSource
               WithProtocols:   
       - Name:            subscribed
         JsName:          subscribed
@@ -705,7 +705,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -721,7 +721,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -852,7 +852,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EKAlarm
+            Name:            EKAlarm
             WithProtocols:   
       - Name:            'addRecurrenceRule:'
         JsName:          addRecurrenceRule
@@ -867,7 +867,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EKRecurrenceRule
+            Name:            EKRecurrenceRule
             WithProtocols:   
       - Name:            'removeAlarm:'
         JsName:          removeAlarm
@@ -882,7 +882,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EKAlarm
+            Name:            EKAlarm
             WithProtocols:   
       - Name:            'removeRecurrenceRule:'
         JsName:          removeRecurrenceRule
@@ -897,7 +897,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          EKRecurrenceRule
+            Name:            EKRecurrenceRule
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -924,10 +924,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKAlarm
+                  Name:            EKAlarm
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -944,10 +944,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKAlarm
+                  Name:            EKAlarm
                   WithProtocols:   
               WithProtocols:   
       - Name:            attendees
@@ -973,10 +973,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKParticipant
+                  Name:            EKParticipant
                   WithProtocols:   
               WithProtocols:   
       - Name:            calendar
@@ -1002,7 +1002,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EKCalendar
+              Name:            EKCalendar
               WithProtocols:   
         Setter:          
           Name:            'setCalendar:'
@@ -1018,7 +1018,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          EKCalendar
+              Name:            EKCalendar
               WithProtocols:   
       - Name:            calendarItemExternalIdentifier
         JsName:          calendarItemExternalIdentifier
@@ -1045,7 +1045,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            calendarItemIdentifier
         JsName:          calendarItemIdentifier
@@ -1072,7 +1072,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            creationDate
         JsName:          creationDate
@@ -1099,7 +1099,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            hasAlarms
         JsName:          hasAlarms
@@ -1224,7 +1224,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            location
         JsName:          location
@@ -1249,7 +1249,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocation:'
@@ -1265,7 +1265,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            notes
         JsName:          notes
@@ -1290,7 +1290,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setNotes:'
@@ -1306,7 +1306,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            recurrenceRules
         JsName:          recurrenceRules
@@ -1333,10 +1333,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKRecurrenceRule
+                  Name:            EKRecurrenceRule
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1354,10 +1354,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKRecurrenceRule
+                  Name:            EKRecurrenceRule
                   WithProtocols:   
               WithProtocols:   
       - Name:            timeZone
@@ -1385,7 +1385,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSTimeZone
+              Name:            NSTimeZone
               WithProtocols:   
         Setter:          
           Name:            'setTimeZone:'
@@ -1402,7 +1402,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSTimeZone
+              Name:            NSTimeZone
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -1427,7 +1427,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -1443,7 +1443,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            URL
         JsName:          URL
@@ -1470,7 +1470,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setURL:'
@@ -1487,7 +1487,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            UUID
         JsName:          UUID
@@ -1514,7 +1514,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1870,7 +1870,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            EKErrorDurationGreaterThanRecurrence
     JsName:          EKErrorDurationGreaterThanRecurrence
@@ -2206,7 +2206,7 @@ Items:
           - Type:            Enum
             Name:            NSComparisonResult
           - Type:            Interface
-            JsName:          EKEvent
+            Name:            EKEvent
             WithProtocols:   
     StaticMethods:   
       - Name:            'eventWithEventStore:'
@@ -2221,10 +2221,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKEvent
+            Name:            EKEvent
             WithProtocols:   
           - Type:            Interface
-            JsName:          EKEventStore
+            Name:            EKEventStore
             WithProtocols:   
     InstanceProperties: 
       - Name:            allDay
@@ -2328,7 +2328,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            birthdayPersonID
         JsName:          birthdayPersonID
@@ -2378,7 +2378,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setEndDate:'
@@ -2394,7 +2394,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            eventIdentifier
         JsName:          eventIdentifier
@@ -2419,7 +2419,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            isDetached
         JsName:          isDetached
@@ -2469,7 +2469,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            organizer
         JsName:          organizer
@@ -2494,7 +2494,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EKParticipant
+              Name:            EKParticipant
               WithProtocols:   
       - Name:            startDate
         JsName:          startDate
@@ -2519,7 +2519,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setStartDate:'
@@ -2535,7 +2535,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            status
         JsName:          status
@@ -2586,7 +2586,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EKStructuredLocation
+              Name:            EKStructuredLocation
               WithProtocols:   
         Setter:          
           Name:            'setStructuredLocation:'
@@ -2603,7 +2603,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          EKStructuredLocation
+              Name:            EKStructuredLocation
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2774,14 +2774,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          EKCalendarItem
+                Name:            EKCalendarItem
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'calendarItemWithIdentifier:'
         JsName:          calendarItemWithIdentifier
@@ -2796,10 +2796,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKCalendarItem
+            Name:            EKCalendarItem
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'calendarsForEntityType:'
         JsName:          calendarsForEntityType
@@ -2814,10 +2814,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          EKCalendar
+                Name:            EKCalendar
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -2835,10 +2835,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKCalendar
+            Name:            EKCalendar
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'cancelFetchRequest:'
         JsName:          cancelFetchRequest
@@ -2871,7 +2871,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            defaultCalendarForNewReminders
         JsName:          defaultCalendarForNewReminders
@@ -2886,7 +2886,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKCalendar
+            Name:            EKCalendar
             WithProtocols:   
       - Name:            'enumerateEventsMatchingPredicate:usingBlock:'
         JsName:          enumerateEventsMatchingPredicateUsingBlock
@@ -2901,13 +2901,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          EKEvent
+                Name:            EKEvent
                 WithProtocols:   
               - Type:            Pointer
                 PointerType:     
@@ -2924,14 +2924,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          EKEvent
+                Name:            EKEvent
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
       - Name:            'eventWithIdentifier:'
         JsName:          eventWithIdentifier
@@ -2945,10 +2945,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKEvent
+            Name:            EKEvent
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'fetchRemindersMatchingPredicate:completion:'
         JsName:          fetchRemindersMatchingPredicateCompletion
@@ -2965,16 +2965,16 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          EKReminder
+                    Name:            EKReminder
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'predicateForCompletedRemindersWithCompletionDateStarting:ending:calendars:'
@@ -2990,19 +2990,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          EKCalendar
+                Name:            EKCalendar
                 WithProtocols:   
             WithProtocols:   
       - Name:            'predicateForEventsWithStartDate:endDate:calendars:'
@@ -3017,19 +3017,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          EKCalendar
+                Name:            EKCalendar
                 WithProtocols:   
             WithProtocols:   
       - Name:            'predicateForIncompleteRemindersWithDueDateStarting:ending:calendars:'
@@ -3045,19 +3045,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          EKCalendar
+                Name:            EKCalendar
                 WithProtocols:   
             WithProtocols:   
       - Name:            'predicateForRemindersInCalendars:'
@@ -3073,13 +3073,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSPredicate
+            Name:            NSPredicate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          EKCalendar
+                Name:            EKCalendar
                 WithProtocols:   
             WithProtocols:   
       - Name:            refreshSourcesIfNecessary
@@ -3109,13 +3109,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          EKCalendar
+            Name:            EKCalendar
             WithProtocols:   
           - Type:            Bool
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'removeEvent:span:commit:error:'
         JsName:          removeEventSpanCommitError
@@ -3131,7 +3131,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          EKEvent
+            Name:            EKEvent
             WithProtocols:   
           - Type:            Enum
             Name:            EKSpan
@@ -3139,7 +3139,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'removeEvent:span:error:'
         JsName:          removeEventSpanError
@@ -3155,14 +3155,14 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          EKEvent
+            Name:            EKEvent
             WithProtocols:   
           - Type:            Enum
             Name:            EKSpan
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'removeReminder:commit:error:'
         JsName:          removeReminderCommitError
@@ -3178,13 +3178,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          EKReminder
+            Name:            EKReminder
             WithProtocols:   
           - Type:            Bool
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'requestAccessToEntityType:completion:'
         JsName:          requestAccessToEntityTypeCompletion
@@ -3206,7 +3206,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            reset
         JsName:          reset
@@ -3235,13 +3235,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          EKCalendar
+            Name:            EKCalendar
             WithProtocols:   
           - Type:            Bool
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'saveEvent:span:commit:error:'
         JsName:          saveEventSpanCommitError
@@ -3257,7 +3257,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          EKEvent
+            Name:            EKEvent
             WithProtocols:   
           - Type:            Enum
             Name:            EKSpan
@@ -3265,7 +3265,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'saveEvent:span:error:'
         JsName:          saveEventSpanError
@@ -3281,14 +3281,14 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          EKEvent
+            Name:            EKEvent
             WithProtocols:   
           - Type:            Enum
             Name:            EKSpan
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'saveReminder:commit:error:'
         JsName:          saveReminderCommitError
@@ -3304,13 +3304,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          EKReminder
+            Name:            EKReminder
             WithProtocols:   
           - Type:            Bool
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'sourceWithIdentifier:'
         JsName:          sourceWithIdentifier
@@ -3325,10 +3325,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKSource
+            Name:            EKSource
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'authorizationStatusForEntityType:'
@@ -3373,10 +3373,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKCalendar
+                  Name:            EKCalendar
                   WithProtocols:   
               WithProtocols:   
       - Name:            defaultCalendarForNewEvents
@@ -3402,7 +3402,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EKCalendar
+              Name:            EKCalendar
               WithProtocols:   
       - Name:            delegateSources
         JsName:          delegateSources
@@ -3429,10 +3429,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKSource
+                  Name:            EKSource
                   WithProtocols:   
               WithProtocols:   
       - Name:            eventStoreIdentifier
@@ -3458,7 +3458,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sources
         JsName:          sources
@@ -3485,10 +3485,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKSource
+                  Name:            EKSource
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -3507,7 +3507,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            EKFriday
     JsName:          EKFriday
@@ -3688,7 +3688,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPredicate
+              Name:            NSPredicate
               WithProtocols:   
       - Name:            currentUser
         JsName:          currentUser
@@ -3738,7 +3738,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            participantRole
         JsName:          participantRole
@@ -3835,7 +3835,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4376,7 +4376,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
       - Name:            'recurrenceEndWithOccurrenceCount:'
         JsName:          recurrenceEndWithOccurrenceCount
@@ -4415,7 +4415,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            occurrenceCount
         JsName:          occurrenceCount
@@ -4537,49 +4537,49 @@ Items:
             Name:            EKRecurrenceFrequency
           - Type:            Long
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          EKRecurrenceDayOfWeek
+                Name:            EKRecurrenceDayOfWeek
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          EKRecurrenceEnd
+            Name:            EKRecurrenceEnd
             WithProtocols:   
       - Name:            'initRecurrenceWithFrequency:interval:end:'
         JsName:          initRecurrenceWithFrequencyIntervalEnd
@@ -4597,7 +4597,7 @@ Items:
             Name:            EKRecurrenceFrequency
           - Type:            Long
           - Type:            Interface
-            JsName:          EKRecurrenceEnd
+            Name:            EKRecurrenceEnd
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4624,7 +4624,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            daysOfTheMonth
         JsName:          daysOfTheMonth
@@ -4649,10 +4649,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            daysOfTheWeek
@@ -4678,10 +4678,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKRecurrenceDayOfWeek
+                  Name:            EKRecurrenceDayOfWeek
                   WithProtocols:   
               WithProtocols:   
       - Name:            daysOfTheYear
@@ -4707,10 +4707,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            firstDayOfTheWeek
@@ -4806,10 +4806,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            recurrenceEnd
@@ -4835,7 +4835,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EKRecurrenceEnd
+              Name:            EKRecurrenceEnd
               WithProtocols:   
         Setter:          
           Name:            'setRecurrenceEnd:'
@@ -4851,7 +4851,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          EKRecurrenceEnd
+              Name:            EKRecurrenceEnd
               WithProtocols:   
       - Name:            setPositions
         JsName:          setPositions
@@ -4876,10 +4876,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            weeksOfTheYear
@@ -4905,10 +4905,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -4940,10 +4940,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          EKReminder
+            Name:            EKReminder
             WithProtocols:   
           - Type:            Interface
-            JsName:          EKEventStore
+            Name:            EKEventStore
             WithProtocols:   
     InstanceProperties: 
       - Name:            completed
@@ -5006,7 +5006,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
         Setter:          
           Name:            'setCompletionDate:'
@@ -5022,7 +5022,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            dueDateComponents
         JsName:          dueDateComponents
@@ -5047,7 +5047,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
         Setter:          
           Name:            'setDueDateComponents:'
@@ -5063,7 +5063,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
       - Name:            priority
         JsName:          priority
@@ -5125,7 +5125,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
         Setter:          
           Name:            'setStartDateComponents:'
@@ -5141,7 +5141,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDateComponents
+              Name:            NSDateComponents
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5247,10 +5247,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          EKCalendar
+                Name:            EKCalendar
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -5282,10 +5282,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          EKCalendar
+                  Name:            EKCalendar
                   WithProtocols:   
               WithProtocols:   
       - Name:            sourceIdentifier
@@ -5311,7 +5311,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sourceType
         JsName:          sourceType
@@ -5360,7 +5360,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5520,7 +5520,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MKMapItem
+            Name:            MKMapItem
             WithProtocols:   
       - Name:            'locationWithTitle:'
         JsName:          locationWithTitle
@@ -5535,7 +5535,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            geoLocation
@@ -5561,7 +5561,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CLLocation
+              Name:            CLLocation
               WithProtocols:   
         Setter:          
           Name:            'setGeoLocation:'
@@ -5577,7 +5577,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CLLocation
+              Name:            CLLocation
               WithProtocols:   
       - Name:            radius
         JsName:          radius
@@ -5639,7 +5639,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -5655,7 +5655,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       

@@ -95,7 +95,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSInvocation
+            Name:            NSInvocation
             WithProtocols:   
       - Name:            init
         JsName:          init
@@ -136,7 +136,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSMethodSignature
+            Name:            NSMethodSignature
             WithProtocols:   
           - Type:            Selector
       - Name:            mutableCopy
@@ -166,7 +166,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSCoder
+            Name:            NSCoder
             WithProtocols:   
       - Name:            'replacementObjectForCoder:'
         JsName:          replacementObjectForCoder
@@ -182,7 +182,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSCoder
+            Name:            NSCoder
             WithProtocols:   
       - Name:            'attemptRecoveryFromError:optionIndex:'
         JsName:          attemptRecoveryFromErrorOptionIndex
@@ -197,7 +197,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
           - Type:            ULong
       - Name:            'attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:'
@@ -213,7 +213,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
           - Type:            ULong
           - Type:            Id
@@ -255,10 +255,10 @@ Items:
             WithProtocols:   
           - Type:            Double
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'fileManager:shouldProceedAfterError:'
@@ -275,10 +275,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSFileManager
+            Name:            NSFileManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
       - Name:            'fileManager:willProcessPath:'
         JsName:          fileManagerWillProcessPath
@@ -294,10 +294,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSFileManager
+            Name:            NSFileManager
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'dictionaryWithValuesForKeys:'
         JsName:          dictionaryWithValuesForKeys
@@ -311,19 +311,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'mutableArrayValueForKey:'
@@ -338,10 +338,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSMutableArray
+            Name:            NSMutableArray
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'mutableArrayValueForKeyPath:'
         JsName:          mutableArrayValueForKeyPath
@@ -355,10 +355,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSMutableArray
+            Name:            NSMutableArray
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'mutableOrderedSetValueForKey:'
         JsName:          mutableOrderedSetValueForKey
@@ -373,10 +373,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSMutableOrderedSet
+            Name:            NSMutableOrderedSet
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'mutableOrderedSetValueForKeyPath:'
         JsName:          mutableOrderedSetValueForKeyPath
@@ -391,10 +391,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSMutableOrderedSet
+            Name:            NSMutableOrderedSet
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'mutableSetValueForKey:'
         JsName:          mutableSetValueForKey
@@ -408,10 +408,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSMutableSet
+            Name:            NSMutableSet
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'mutableSetValueForKeyPath:'
         JsName:          mutableSetValueForKeyPath
@@ -425,10 +425,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSMutableSet
+            Name:            NSMutableSet
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setNilValueForKey:'
         JsName:          setNilValueForKey
@@ -443,7 +443,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setValue:forKey:'
         JsName:          setValueForKey
@@ -460,7 +460,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setValue:forKeyPath:'
         JsName:          setValueForKeyPath
@@ -477,7 +477,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setValue:forUndefinedKey:'
         JsName:          setValueForUndefinedKey
@@ -494,7 +494,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setValuesForKeysWithDictionary:'
         JsName:          setValuesForKeysWithDictionary
@@ -509,10 +509,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -534,12 +534,12 @@ Items:
               Type:            Id
               WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'validateValue:forKeyPath:error:'
         JsName:          validateValueForKeyPathError
@@ -558,12 +558,12 @@ Items:
               Type:            Id
               WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'valueForKey:'
         JsName:          valueForKey
@@ -579,7 +579,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'valueForKeyPath:'
         JsName:          valueForKeyPath
@@ -595,7 +595,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'valueForUndefinedKey:'
         JsName:          valueForUndefinedKey
@@ -611,7 +611,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'observeValueForKeyPath:ofObject:change:context:'
         JsName:          observeValueForKeyPathOfObjectChangeContext
@@ -626,15 +626,15 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -655,10 +655,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            NSKeyValueObservingOptions
@@ -678,10 +678,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'removeObserver:forKeyPath:context:'
         JsName:          removeObserverForKeyPathContext
@@ -697,10 +697,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
@@ -718,7 +718,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'didChangeValueForKey:withSetMutation:usingObjects:'
         JsName:          didChangeValueForKeyWithSetMutationUsingObjects
@@ -733,12 +733,12 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            NSKeyValueSetMutationKind
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             WithProtocols:   
       - Name:            'didChange:valuesAtIndexes:forKey:'
         JsName:          didChangeValuesAtIndexesForKey
@@ -755,10 +755,10 @@ Items:
           - Type:            Enum
             Name:            NSKeyValueChange
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'willChangeValueForKey:'
         JsName:          willChangeValueForKey
@@ -773,7 +773,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'willChangeValueForKey:withSetMutation:usingObjects:'
         JsName:          willChangeValueForKeyWithSetMutationUsingObjects
@@ -788,12 +788,12 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            NSKeyValueSetMutationKind
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             WithProtocols:   
       - Name:            'willChange:valuesAtIndexes:forKey:'
         JsName:          willChangeValuesAtIndexesForKey
@@ -810,10 +810,10 @@ Items:
           - Type:            Enum
             Name:            NSKeyValueChange
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'replacementObjectForKeyedArchiver:'
         JsName:          replacementObjectForKeyedArchiver
@@ -829,7 +829,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSKeyedArchiver
+            Name:            NSKeyedArchiver
             WithProtocols:   
       - Name:            'performSelectorInBackground:withObject:'
         JsName:          performSelectorInBackgroundWithObject
@@ -880,10 +880,10 @@ Items:
             WithProtocols:   
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'performSelector:onThread:withObject:waitUntilDone:'
@@ -901,7 +901,7 @@ Items:
           - Type:            Void
           - Type:            Selector
           - Type:            Interface
-            JsName:          NSThread
+            Name:            NSThread
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -921,16 +921,16 @@ Items:
           - Type:            Void
           - Type:            Selector
           - Type:            Interface
-            JsName:          NSThread
+            Name:            NSThread
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'provideImageData:bytesPerRow:origin::size::userInfo:'
@@ -1008,10 +1008,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            accessibilityElementDidBecomeFocused
@@ -1239,7 +1239,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            description
         JsName:          description
@@ -1253,7 +1253,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            hash
         JsName:          hash
@@ -1306,7 +1306,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSMethodSignature
+            Name:            NSMethodSignature
             WithProtocols:   
           - Type:            Selector
       - Name:            'instancesRespondToSelector:'
@@ -1484,7 +1484,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'keyPathsForValuesAffectingValueForKey:'
         JsName:          keyPathsForValuesAffectingValueForKey
@@ -1499,14 +1499,14 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            classFallbacksForKeyedArchiver
         JsName:          classFallbacksForKeyedArchiver
@@ -1520,10 +1520,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            classForKeyedUnarchiver
@@ -1719,7 +1719,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
         Setter:          
           Name:            'setAccessibilityElements:'
@@ -1736,7 +1736,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
       - Name:            accessibilityCustomRotors
         JsName:          accessibilityCustomRotors
@@ -1763,10 +1763,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UIAccessibilityCustomRotor
+                  Name:            UIAccessibilityCustomRotor
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1784,10 +1784,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UIAccessibilityCustomRotor
+                  Name:            UIAccessibilityCustomRotor
                   WithProtocols:   
               WithProtocols:   
       - Name:            accessibilityActivationPoint
@@ -1816,7 +1816,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
         Setter:          
           Name:            'setAccessibilityActivationPoint:'
           JsName:          setAccessibilityActivationPoint
@@ -1833,7 +1833,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
       - Name:            accessibilityAttributedHint
         JsName:          accessibilityAttributedHint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -1859,7 +1859,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSAttributedString
+              Name:            NSAttributedString
               WithProtocols:   
         Setter:          
           Name:            'setAccessibilityAttributedHint:'
@@ -1876,7 +1876,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSAttributedString
+              Name:            NSAttributedString
               WithProtocols:   
       - Name:            accessibilityAttributedLabel
         JsName:          accessibilityAttributedLabel
@@ -1903,7 +1903,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSAttributedString
+              Name:            NSAttributedString
               WithProtocols:   
         Setter:          
           Name:            'setAccessibilityAttributedLabel:'
@@ -1920,7 +1920,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSAttributedString
+              Name:            NSAttributedString
               WithProtocols:   
       - Name:            accessibilityAttributedUserInputLabels
         JsName:          accessibilityAttributedUserInputLabels
@@ -1947,10 +1947,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSAttributedString
+                  Name:            NSAttributedString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1968,10 +1968,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSAttributedString
+                  Name:            NSAttributedString
                   WithProtocols:   
               WithProtocols:   
       - Name:            accessibilityAttributedValue
@@ -1999,7 +1999,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSAttributedString
+              Name:            NSAttributedString
               WithProtocols:   
         Setter:          
           Name:            'setAccessibilityAttributedValue:'
@@ -2016,7 +2016,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSAttributedString
+              Name:            NSAttributedString
               WithProtocols:   
       - Name:            accessibilityElementsHidden
         JsName:          accessibilityElementsHidden
@@ -2082,7 +2082,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
         Setter:          
           Name:            'setAccessibilityFrame:'
           JsName:          setAccessibilityFrame
@@ -2098,7 +2098,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
       - Name:            accessibilityHint
         JsName:          accessibilityHint
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibility.h
@@ -2122,7 +2122,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAccessibilityHint:'
@@ -2138,7 +2138,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            accessibilityLabel
         JsName:          accessibilityLabel
@@ -2163,7 +2163,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAccessibilityLabel:'
@@ -2179,7 +2179,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            accessibilityLanguage
         JsName:          accessibilityLanguage
@@ -2204,7 +2204,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAccessibilityLanguage:'
@@ -2220,7 +2220,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            accessibilityNavigationStyle
         JsName:          accessibilityNavigationStyle
@@ -2289,7 +2289,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIBezierPath
+              Name:            UIBezierPath
               WithProtocols:   
         Setter:          
           Name:            'setAccessibilityPath:'
@@ -2306,7 +2306,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIBezierPath
+              Name:            UIBezierPath
               WithProtocols:   
       - Name:            accessibilityRespondsToUserInteraction
         JsName:          accessibilityRespondsToUserInteraction
@@ -2373,7 +2373,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAccessibilityTextualContext:'
@@ -2390,7 +2390,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            accessibilityTraits
         JsName:          accessibilityTraits
@@ -2454,10 +2454,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2475,10 +2475,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            accessibilityValue
@@ -2504,7 +2504,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setAccessibilityValue:'
@@ -2520,7 +2520,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            accessibilityViewIsModal
         JsName:          accessibilityViewIsModal
@@ -2664,10 +2664,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UIAccessibilityCustomAction
+                  Name:            UIAccessibilityCustomAction
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2685,10 +2685,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UIAccessibilityCustomAction
+                  Name:            UIAccessibilityCustomAction
                   WithProtocols:   
               WithProtocols:   
       - Name:            accessibilityDragSourceDescriptors
@@ -2716,10 +2716,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UIAccessibilityLocationDescriptor
+                  Name:            UIAccessibilityLocationDescriptor
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2737,10 +2737,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UIAccessibilityLocationDescriptor
+                  Name:            UIAccessibilityLocationDescriptor
                   WithProtocols:   
               WithProtocols:   
       - Name:            accessibilityDropPointDescriptors
@@ -2768,10 +2768,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UIAccessibilityLocationDescriptor
+                  Name:            UIAccessibilityLocationDescriptor
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2789,10 +2789,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          UIAccessibilityLocationDescriptor
+                  Name:            UIAccessibilityLocationDescriptor
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -3043,7 +3043,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            description
         JsName:          description
@@ -3068,7 +3068,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            hash
         JsName:          hash
@@ -3450,7 +3450,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          ObjectiveC.runtime
-          JsName:          objc_property_attribute_t
+          Name:            objc_property_attribute_t
       - Type:            UInt
   - Name:            class_addProtocol
     JsName:          class_addProtocol
@@ -3884,7 +3884,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          ObjectiveC.runtime
-          JsName:          objc_property_attribute_t
+          Name:            objc_property_attribute_t
       - Type:            UInt
   - Name:            class_respondsToMethod
     JsName:          class_respondsToMethod
@@ -4161,7 +4161,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          ObjectiveC.runtime
-          JsName:          objc_method_description
+          Name:            objc_method_description
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -4333,7 +4333,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          MachO.loader
-              JsName:          mach_header
+              Name:            mach_header
   - Name:            objc_allocateClassPair
     JsName:          objc_allocateClassPair
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
@@ -4824,7 +4824,7 @@ Items:
       - Name:            isa
         Signature:       
           Type:            Class
-  - Name:            ''
+  - Name:            objc_property_attribute_t
     JsName:          objc_property_attribute_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/objc/runtime.h
     Module:          
@@ -5442,7 +5442,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          ObjectiveC.runtime
-          JsName:          objc_property_attribute_t
+          Name:            objc_property_attribute_t
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -5535,7 +5535,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          ObjectiveC.runtime
-          JsName:          objc_property_attribute_t
+          Name:            objc_property_attribute_t
       - Type:            UInt
       - Type:            Bool
       - Type:            Bool
@@ -5585,7 +5585,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          ObjectiveC.runtime
-          JsName:          objc_method_description
+          Name:            objc_method_description
       - Type:            Protocol
       - Type:            Bool
       - Type:            Bool
@@ -5669,7 +5669,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          ObjectiveC.runtime
-        JsName:          objc_method_description
+        Name:            objc_method_description
       - Type:            Protocol
       - Type:            Selector
       - Type:            Bool

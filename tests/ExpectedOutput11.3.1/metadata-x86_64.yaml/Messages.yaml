@@ -32,16 +32,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'insertMessage:completionHandler:'
         JsName:          insertMessageCompletionHandler
@@ -56,13 +56,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSMessage
+            Name:            MSMessage
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'insertSticker:completionHandler:'
         JsName:          insertStickerCompletionHandler
@@ -77,13 +77,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSSticker
+            Name:            MSSticker
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'insertText:completionHandler:'
         JsName:          insertTextCompletionHandler
@@ -98,13 +98,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendAttachment:withAlternateFilename:completionHandler:'
         JsName:          sendAttachmentWithAlternateFilenameCompletionHandler
@@ -120,16 +120,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendMessage:completionHandler:'
         JsName:          sendMessageCompletionHandler
@@ -145,13 +145,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSMessage
+            Name:            MSMessage
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendSticker:completionHandler:'
         JsName:          sendStickerCompletionHandler
@@ -167,13 +167,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSSticker
+            Name:            MSSticker
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendText:completionHandler:'
         JsName:          sendTextCompletionHandler
@@ -189,13 +189,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -222,7 +222,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            remoteParticipantIdentifiers
         JsName:          remoteParticipantIdentifiers
@@ -247,10 +247,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSUUID
+                  Name:            NSUUID
                   WithProtocols:   
               WithProtocols:   
       - Name:            selectedMessage
@@ -276,7 +276,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MSMessage
+              Name:            MSMessage
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -306,7 +306,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MSSession
+            Name:            MSSession
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -333,7 +333,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
         Setter:          
           Name:            'setError:'
@@ -349,7 +349,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            layout
         JsName:          layout
@@ -374,7 +374,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MSMessageLayout
+              Name:            MSMessageLayout
               WithProtocols:   
         Setter:          
           Name:            'setLayout:'
@@ -390,7 +390,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MSMessageLayout
+              Name:            MSMessageLayout
               WithProtocols:   
       - Name:            pending
         JsName:          pending
@@ -440,7 +440,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSUUID
+              Name:            NSUUID
               WithProtocols:   
       - Name:            session
         JsName:          session
@@ -465,7 +465,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MSSession
+              Name:            MSSession
               WithProtocols:   
       - Name:            shouldExpire
         JsName:          shouldExpire
@@ -527,7 +527,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSummaryText:'
@@ -543,7 +543,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            URL
         JsName:          URL
@@ -568,7 +568,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setURL:'
@@ -584,7 +584,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -807,7 +807,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MSMessageTemplateLayout
+            Name:            MSMessageTemplateLayout
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -834,7 +834,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MSMessageTemplateLayout
+              Name:            MSMessageTemplateLayout
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -876,7 +876,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCaption:'
@@ -892,7 +892,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            image
         JsName:          image
@@ -917,7 +917,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
         Setter:          
           Name:            'setImage:'
@@ -933,7 +933,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            imageSubtitle
         JsName:          imageSubtitle
@@ -958,7 +958,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setImageSubtitle:'
@@ -974,7 +974,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            imageTitle
         JsName:          imageTitle
@@ -999,7 +999,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setImageTitle:'
@@ -1015,7 +1015,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            mediaFileURL
         JsName:          mediaFileURL
@@ -1040,7 +1040,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
         Setter:          
           Name:            'setMediaFileURL:'
@@ -1056,7 +1056,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            subcaption
         JsName:          subcaption
@@ -1081,7 +1081,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSubcaption:'
@@ -1097,7 +1097,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            trailingCaption
         JsName:          trailingCaption
@@ -1122,7 +1122,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTrailingCaption:'
@@ -1138,7 +1138,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            trailingSubcaption
         JsName:          trailingSubcaption
@@ -1163,7 +1163,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTrailingSubcaption:'
@@ -1179,7 +1179,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1302,10 +1302,10 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
     StaticMethods:   
     InstanceProperties: 
     StaticProperties: 
@@ -1335,7 +1335,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSConversation
+            Name:            MSConversation
             WithProtocols:   
       - Name:            'didResignActiveWithConversation:'
         JsName:          didResignActiveWithConversation
@@ -1350,7 +1350,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSConversation
+            Name:            MSConversation
             WithProtocols:   
       - Name:            'requestPresentationStyle:'
         JsName:          requestPresentationStyle
@@ -1379,7 +1379,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSConversation
+            Name:            MSConversation
             WithProtocols:   
       - Name:            'willResignActiveWithConversation:'
         JsName:          willResignActiveWithConversation
@@ -1394,7 +1394,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSConversation
+            Name:            MSConversation
             WithProtocols:   
       - Name:            'didCancelSendingMessage:conversation:'
         JsName:          didCancelSendingMessageConversation
@@ -1410,10 +1410,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSMessage
+            Name:            MSMessage
             WithProtocols:   
           - Type:            Interface
-            JsName:          MSConversation
+            Name:            MSConversation
             WithProtocols:   
       - Name:            'didReceiveMessage:conversation:'
         JsName:          didReceiveMessageConversation
@@ -1429,10 +1429,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSMessage
+            Name:            MSMessage
             WithProtocols:   
           - Type:            Interface
-            JsName:          MSConversation
+            Name:            MSConversation
             WithProtocols:   
       - Name:            'didSelectMessage:conversation:'
         JsName:          didSelectMessageConversation
@@ -1448,10 +1448,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSMessage
+            Name:            MSMessage
             WithProtocols:   
           - Type:            Interface
-            JsName:          MSConversation
+            Name:            MSConversation
             WithProtocols:   
       - Name:            'didStartSendingMessage:conversation:'
         JsName:          didStartSendingMessageConversation
@@ -1467,10 +1467,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSMessage
+            Name:            MSMessage
             WithProtocols:   
           - Type:            Interface
-            JsName:          MSConversation
+            Name:            MSConversation
             WithProtocols:   
       - Name:            'didTransitionToPresentationStyle:'
         JsName:          didTransitionToPresentationStyle
@@ -1514,10 +1514,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          MSMessage
+            Name:            MSMessage
             WithProtocols:   
           - Type:            Interface
-            JsName:          MSConversation
+            Name:            MSConversation
             WithProtocols:   
       - Name:            'willTransitionToPresentationStyle:'
         JsName:          willTransitionToPresentationStyle
@@ -1559,7 +1559,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MSConversation
+              Name:            MSConversation
               WithProtocols:   
       - Name:            presentationContext
         JsName:          presentationContext
@@ -1628,7 +1628,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            MSSession
     JsName:          MSSession
@@ -1673,15 +1673,15 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1708,7 +1708,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            localizedDescription
         JsName:          localizedDescription
@@ -1733,7 +1733,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1764,7 +1764,7 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Enum
             Name:            MSStickerSize
       - Name:            reloadData
@@ -1793,7 +1793,7 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGPoint
+            Name:            CGPoint
           - Type:            Bool
     StaticMethods:   
     InstanceProperties: 
@@ -1821,7 +1821,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          UIKit.UIGeometry
-              JsName:          UIEdgeInsets
+              Name:            UIEdgeInsets
         Setter:          
           Name:            'setContentInset:'
           JsName:          setContentInset
@@ -1837,7 +1837,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          UIKit.UIGeometry
-              JsName:          UIEdgeInsets
+              Name:            UIEdgeInsets
       - Name:            contentOffset
         JsName:          contentOffset
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Messages.framework/Headers/MSStickerBrowserView.h
@@ -1862,7 +1862,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
         Setter:          
           Name:            'setContentOffset:'
           JsName:          setContentOffset
@@ -1878,7 +1878,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGPoint
+              Name:            CGPoint
       - Name:            dataSource
         JsName:          dataSource
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Messages.framework/Headers/MSStickerBrowserView.h
@@ -1998,7 +1998,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MSStickerBrowserView
+              Name:            MSStickerBrowserView
               WithProtocols:   
       - Name:            stickerSize
         JsName:          stickerSize
@@ -2053,7 +2053,7 @@ Items:
         Signature:       
           - Type:            Long
           - Type:            Interface
-            JsName:          MSStickerBrowserView
+            Name:            MSStickerBrowserView
             WithProtocols:   
       - Name:            'stickerBrowserView:stickerAtIndex:'
         JsName:          stickerBrowserViewStickerAtIndex
@@ -2067,10 +2067,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MSSticker
+            Name:            MSSticker
             WithProtocols:   
           - Type:            Interface
-            JsName:          MSStickerBrowserView
+            Name:            MSStickerBrowserView
             WithProtocols:   
           - Type:            Long
     StaticMethods:   
@@ -2156,9 +2156,9 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Interface
-            JsName:          MSSticker
+            Name:            MSSticker
             WithProtocols:   
       - Name:            isAnimating
         JsName:          isAnimating
@@ -2244,7 +2244,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MSSticker
+              Name:            MSSticker
               WithProtocols:   
         Setter:          
           Name:            'setSticker:'
@@ -2260,7 +2260,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          MSSticker
+              Name:            MSSticker
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2278,6 +2278,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

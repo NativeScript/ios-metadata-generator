@@ -315,7 +315,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            authorizedScopes
         JsName:          authorizedScopes
@@ -340,10 +340,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            email
@@ -369,7 +369,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            fullName
         JsName:          fullName
@@ -394,7 +394,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPersonNameComponents
+              Name:            NSPersonNameComponents
               WithProtocols:   
       - Name:            identityToken
         JsName:          identityToken
@@ -419,7 +419,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            realUserStatus
         JsName:          realUserStatus
@@ -468,7 +468,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            user
         JsName:          user
@@ -493,7 +493,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -523,7 +523,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ASAuthorizationAppleIDRequest
+            Name:            ASAuthorizationAppleIDRequest
             WithProtocols:   
       - Name:            'getCredentialStateForUserID:completion:'
         JsName:          getCredentialStateForUserIDCompletion
@@ -538,7 +538,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -546,7 +546,7 @@ Items:
               - Type:            Enum
                 Name:            ASAuthorizationAppleIDProviderCredentialState
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -600,7 +600,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ASAuthorizationAppleIDProviderCredentialState
     JsName:          ASAuthorizationAppleIDProviderCredentialState
@@ -671,7 +671,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setUser:'
@@ -687,7 +687,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -717,10 +717,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ASAuthorizationRequest
+                Name:            ASAuthorizationRequest
                 WithProtocols:   
             WithProtocols:   
       - Name:            performRequests
@@ -760,10 +760,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          ASAuthorizationRequest
+                  Name:            ASAuthorizationRequest
                   WithProtocols:   
               WithProtocols:   
       - Name:            delegate
@@ -876,10 +876,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ASAuthorizationController
+            Name:            ASAuthorizationController
             WithProtocols:   
           - Type:            Interface
-            JsName:          ASAuthorization
+            Name:            ASAuthorization
             WithProtocols:   
       - Name:            'authorizationController:didCompleteWithError:'
         JsName:          authorizationControllerDidCompleteWithError
@@ -894,10 +894,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ASAuthorizationController
+            Name:            ASAuthorizationController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -928,10 +928,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIWindow
+            Name:            UIWindow
             WithProtocols:   
           - Type:            Interface
-            JsName:          ASAuthorizationController
+            Name:            ASAuthorizationController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1004,7 +1004,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ASAuthorizationErrorFailed
     JsName:          ASAuthorizationErrorFailed
@@ -1087,7 +1087,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setNonce:'
@@ -1103,7 +1103,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            requestedOperation
         JsName:          requestedOperation
@@ -1128,7 +1128,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setRequestedOperation:'
@@ -1144,7 +1144,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            requestedScopes
         JsName:          requestedScopes
@@ -1169,10 +1169,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1189,10 +1189,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            state
@@ -1218,7 +1218,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setState:'
@@ -1234,7 +1234,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1252,7 +1252,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ASAuthorizationOperationLogin
     JsName:          ASAuthorizationOperationLogin
@@ -1267,7 +1267,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ASAuthorizationOperationLogout
     JsName:          ASAuthorizationOperationLogout
@@ -1282,7 +1282,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ASAuthorizationOperationRefresh
     JsName:          ASAuthorizationOperationRefresh
@@ -1297,7 +1297,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ASAuthorizationPasswordProvider
     JsName:          ASAuthorizationPasswordProvider
@@ -1323,7 +1323,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ASAuthorizationPasswordRequest
+            Name:            ASAuthorizationPasswordRequest
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1414,7 +1414,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'completeWithHTTPAuthorizationHeaders:'
         JsName:          completeWithHTTPAuthorizationHeaders
@@ -1429,13 +1429,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'completeWithHTTPResponse:httpBody:'
@@ -1451,10 +1451,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSHTTPURLResponse
+            Name:            NSHTTPURLResponse
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            doNotHandle
         JsName:          doNotHandle
@@ -1485,7 +1485,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1512,7 +1512,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
       - Name:            callerBundleIdentifier
         JsName:          callerBundleIdentifier
@@ -1537,7 +1537,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            extensionData
         JsName:          extensionData
@@ -1562,7 +1562,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
       - Name:            httpBody
         JsName:          httpBody
@@ -1587,7 +1587,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            httpHeaders
         JsName:          httpHeaders
@@ -1612,13 +1612,13 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            realm
@@ -1644,7 +1644,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            requestedOperation
         JsName:          requestedOperation
@@ -1669,7 +1669,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            url
         JsName:          url
@@ -1694,7 +1694,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1724,7 +1724,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ASAuthorizationProviderExtensionAuthorizationRequest
+            Name:            ASAuthorizationProviderExtensionAuthorizationRequest
             WithProtocols:   
       - Name:            'cancelAuthorizationWithRequest:'
         JsName:          cancelAuthorizationWithRequest
@@ -1739,7 +1739,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ASAuthorizationProviderExtensionAuthorizationRequest
+            Name:            ASAuthorizationProviderExtensionAuthorizationRequest
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1803,7 +1803,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ASAuthorizationScopeFullName
     JsName:          ASAuthorizationScopeFullName
@@ -1818,7 +1818,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ASAuthorizationSingleSignOnCredential
     JsName:          ASAuthorizationSingleSignOnCredential
@@ -1857,7 +1857,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            authenticatedResponse
         JsName:          authenticatedResponse
@@ -1882,7 +1882,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSHTTPURLResponse
+              Name:            NSHTTPURLResponse
               WithProtocols:   
       - Name:            authorizedScopes
         JsName:          authorizedScopes
@@ -1907,10 +1907,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            identityToken
@@ -1936,7 +1936,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            state
         JsName:          state
@@ -1961,7 +1961,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1991,7 +1991,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ASAuthorizationSingleSignOnRequest
+            Name:            ASAuthorizationSingleSignOnRequest
             WithProtocols:   
     StaticMethods:   
       - Name:            'authorizationProviderWithIdentityProviderURL:'
@@ -2007,7 +2007,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
     InstanceProperties: 
       - Name:            canPerformAuthorization
@@ -2056,7 +2056,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2099,10 +2099,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSURLQueryItem
+                  Name:            NSURLQueryItem
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2119,10 +2119,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSURLQueryItem
+                  Name:            NSURLQueryItem
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2156,7 +2156,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          ASCredentialIdentityStoreState
+                Name:            ASCredentialIdentityStoreState
                 WithProtocols:   
       - Name:            'removeAllCredentialIdentitiesWithCompletion:'
         JsName:          removeAllCredentialIdentitiesWithCompletion
@@ -2175,7 +2175,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeCredentialIdentities:completion:'
         JsName:          removeCredentialIdentitiesCompletion
@@ -2190,10 +2190,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ASPasswordCredentialIdentity
+                Name:            ASPasswordCredentialIdentity
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
@@ -2201,7 +2201,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'replaceCredentialIdentitiesWithIdentities:completion:'
         JsName:          replaceCredentialIdentitiesWithIdentitiesCompletion
@@ -2216,10 +2216,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ASPasswordCredentialIdentity
+                Name:            ASPasswordCredentialIdentity
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
@@ -2227,7 +2227,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveCredentialIdentities:completion:'
         JsName:          saveCredentialIdentitiesCompletion
@@ -2242,10 +2242,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ASPasswordCredentialIdentity
+                Name:            ASPasswordCredentialIdentity
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
@@ -2253,7 +2253,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2281,7 +2281,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ASCredentialIdentityStore
+              Name:            ASCredentialIdentityStore
               WithProtocols:   
     Protocols:       
     Base:            NSObject
@@ -2350,7 +2350,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ASCredentialIdentityStoreState
     JsName:          ASCredentialIdentityStoreState
@@ -2452,7 +2452,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ASPasswordCredential
+            Name:            ASPasswordCredential
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -2488,10 +2488,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          ASCredentialServiceIdentifier
+                Name:            ASCredentialServiceIdentifier
                 WithProtocols:   
             WithProtocols:   
       - Name:            prepareInterfaceForExtensionConfiguration
@@ -2519,7 +2519,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ASPasswordCredentialIdentity
+            Name:            ASPasswordCredentialIdentity
             WithProtocols:   
       - Name:            'provideCredentialWithoutUserInteractionForIdentity:'
         JsName:          provideCredentialWithoutUserInteractionForIdentity
@@ -2534,7 +2534,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ASPasswordCredentialIdentity
+            Name:            ASPasswordCredentialIdentity
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2561,7 +2561,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ASCredentialProviderExtensionContext
+              Name:            ASCredentialProviderExtensionContext
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2591,7 +2591,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            ASCredentialServiceIdentifierType
@@ -2620,7 +2620,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -2768,7 +2768,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ASPasswordCredential
     JsName:          ASPasswordCredential
@@ -2795,10 +2795,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'credentialWithUser:password:'
@@ -2814,10 +2814,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            password
@@ -2843,7 +2843,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            user
         JsName:          user
@@ -2868,7 +2868,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2899,13 +2899,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          ASCredentialServiceIdentifier
+            Name:            ASCredentialServiceIdentifier
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'identityWithServiceIdentifier:user:recordIdentifier:'
@@ -2921,13 +2921,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          ASCredentialServiceIdentifier
+            Name:            ASCredentialServiceIdentifier
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            rank
@@ -2990,7 +2990,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            serviceIdentifier
         JsName:          serviceIdentifier
@@ -3015,7 +3015,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ASCredentialServiceIdentifier
+              Name:            ASCredentialServiceIdentifier
               WithProtocols:   
       - Name:            user
         JsName:          user
@@ -3040,7 +3040,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3122,10 +3122,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIWindow
+            Name:            UIWindow
             WithProtocols:   
           - Type:            Interface
-            JsName:          ASWebAuthenticationSession
+            Name:            ASWebAuthenticationSession
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3169,19 +3169,19 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            start
         JsName:          start
@@ -3351,6 +3351,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

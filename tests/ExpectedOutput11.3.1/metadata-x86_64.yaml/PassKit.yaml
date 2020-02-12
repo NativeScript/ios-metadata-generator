@@ -155,7 +155,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PKPass
+            Name:            PKPass
             WithProtocols:   
       - Name:            'initWithPasses:'
         JsName:          initWithPasses
@@ -171,10 +171,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PKPass
+                Name:            PKPass
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -260,7 +260,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKAddPassesViewController
+            Name:            PKAddPassesViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -356,7 +356,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setActivationData:'
@@ -372,7 +372,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            encryptedPassData
         JsName:          encryptedPassData
@@ -397,7 +397,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setEncryptedPassData:'
@@ -413,7 +413,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            ephemeralPublicKey
         JsName:          ephemeralPublicKey
@@ -438,7 +438,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setEphemeralPublicKey:'
@@ -454,7 +454,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            wrappedKey
         JsName:          wrappedKey
@@ -479,7 +479,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setWrappedKey:'
@@ -495,7 +495,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -525,7 +525,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -554,10 +554,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKLabeledValue
+                  Name:            PKLabeledValue
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -575,10 +575,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKLabeledValue
+                  Name:            PKLabeledValue
                   WithProtocols:   
               WithProtocols:   
       - Name:            cardholderName
@@ -604,7 +604,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCardholderName:'
@@ -620,7 +620,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            encryptionScheme
         JsName:          encryptionScheme
@@ -645,7 +645,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            localizedDescription
         JsName:          localizedDescription
@@ -670,7 +670,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLocalizedDescription:'
@@ -686,7 +686,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            paymentNetwork
         JsName:          paymentNetwork
@@ -711,7 +711,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPaymentNetwork:'
@@ -727,7 +727,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            primaryAccountIdentifier
         JsName:          primaryAccountIdentifier
@@ -752,7 +752,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPrimaryAccountIdentifier:'
@@ -768,7 +768,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            primaryAccountSuffix
         JsName:          primaryAccountSuffix
@@ -793,7 +793,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPrimaryAccountSuffix:'
@@ -809,7 +809,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            productIdentifiers
         JsName:          productIdentifiers
@@ -836,10 +836,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -857,10 +857,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            requiresFelicaSecureElement
@@ -1012,7 +1012,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PKAddPaymentPassRequestConfiguration
+            Name:            PKAddPaymentPassRequestConfiguration
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -1099,13 +1099,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKAddPaymentPassViewController
+            Name:            PKAddPaymentPassViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPaymentPass
+            Name:            PKPaymentPass
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'addPaymentPassViewController:generateRequestWithCertificateChain:nonce:nonceSignature:completionHandler:'
         JsName:          addPaymentPassViewControllerGenerateRequestWithCertificateChainNonceNonceSignatureCompletionHandler
@@ -1120,26 +1120,26 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKAddPaymentPassViewController
+            Name:            PKAddPaymentPassViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PKAddPaymentPassRequest
+                Name:            PKAddPaymentPassRequest
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1353,7 +1353,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setEmailAddress:'
@@ -1369,7 +1369,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -1394,7 +1394,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPersonNameComponents
+              Name:            NSPersonNameComponents
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -1410,7 +1410,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSPersonNameComponents
+              Name:            NSPersonNameComponents
               WithProtocols:   
       - Name:            phoneNumber
         JsName:          phoneNumber
@@ -1435,7 +1435,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNPhoneNumber
+              Name:            CNPhoneNumber
               WithProtocols:   
         Setter:          
           Name:            'setPhoneNumber:'
@@ -1451,7 +1451,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CNPhoneNumber
+              Name:            CNPhoneNumber
               WithProtocols:   
       - Name:            postalAddress
         JsName:          postalAddress
@@ -1476,7 +1476,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNPostalAddress
+              Name:            CNPostalAddress
               WithProtocols:   
         Setter:          
           Name:            'setPostalAddress:'
@@ -1492,7 +1492,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          CNPostalAddress
+              Name:            CNPostalAddress
               WithProtocols:   
       - Name:            supplementarySubLocality
         JsName:          supplementarySubLocality
@@ -1519,7 +1519,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setSupplementarySubLocality:'
@@ -1536,7 +1536,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1554,7 +1554,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKContactFieldName
     JsName:          PKContactFieldName
@@ -1569,7 +1569,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKContactFieldPhoneNumber
     JsName:          PKContactFieldPhoneNumber
@@ -1584,7 +1584,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKContactFieldPhoneticName
     JsName:          PKContactFieldPhoneticName
@@ -1599,7 +1599,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKContactFieldPostalAddress
     JsName:          PKContactFieldPostalAddress
@@ -1614,7 +1614,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKDisbursementAuthorizationController
     JsName:          PKDisbursementAuthorizationController
@@ -1645,7 +1645,7 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'initWithDisbursementRequest:delegate:'
         JsName:          initWithDisbursementRequestDelegate
@@ -1661,7 +1661,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PKDisbursementRequest
+            Name:            PKDisbursementRequest
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -1736,10 +1736,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKDisbursementAuthorizationController
+            Name:            PKDisbursementAuthorizationController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKDisbursementVoucher
+            Name:            PKDisbursementVoucher
             WithProtocols:   
       - Name:            'disbursementAuthorizationControllerDidFinish:'
         JsName:          disbursementAuthorizationControllerDidFinish
@@ -1755,7 +1755,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKDisbursementAuthorizationController
+            Name:            PKDisbursementAuthorizationController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1800,7 +1800,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDecimalNumber
+              Name:            NSDecimalNumber
               WithProtocols:   
         Setter:          
           Name:            'setAmount:'
@@ -1817,7 +1817,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDecimalNumber
+              Name:            NSDecimalNumber
               WithProtocols:   
       - Name:            countryCode
         JsName:          countryCode
@@ -1844,7 +1844,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCountryCode:'
@@ -1861,7 +1861,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            currencyCode
         JsName:          currencyCode
@@ -1888,7 +1888,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCurrencyCode:'
@@ -1905,7 +1905,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            requestSchedule
         JsName:          requestSchedule
@@ -1974,10 +1974,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKPaymentSummaryItem
+                  Name:            PKPaymentSummaryItem
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -1995,10 +1995,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKPaymentSummaryItem
+                  Name:            PKPaymentSummaryItem
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2080,7 +2080,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            redemptionURL
         JsName:          redemptionURL
@@ -2107,7 +2107,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2125,7 +2125,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKEncryptionSchemeRSA_V2
     JsName:          PKEncryptionSchemeRSA_V2
@@ -2140,7 +2140,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKInvalidDataError
     JsName:          PKInvalidDataError
@@ -2189,10 +2189,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2219,7 +2219,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            value
         JsName:          value
@@ -2244,7 +2244,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2367,12 +2367,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'localizedValueForFieldKey:'
         JsName:          localizedValueForFieldKey
@@ -2388,7 +2388,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2415,7 +2415,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            deviceName
         JsName:          deviceName
@@ -2442,7 +2442,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            icon
         JsName:          icon
@@ -2467,7 +2467,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
       - Name:            localizedDescription
         JsName:          localizedDescription
@@ -2492,7 +2492,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            localizedName
         JsName:          localizedName
@@ -2517,7 +2517,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            organizationName
         JsName:          organizationName
@@ -2542,7 +2542,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            passType
         JsName:          passType
@@ -2593,7 +2593,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            passURL
         JsName:          passURL
@@ -2618,7 +2618,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            paymentPass
         JsName:          paymentPass
@@ -2645,7 +2645,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PKPaymentPass
+              Name:            PKPaymentPass
               WithProtocols:   
       - Name:            relevantDate
         JsName:          relevantDate
@@ -2670,7 +2670,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            remotePass
         JsName:          remotePass
@@ -2720,7 +2720,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
@@ -2747,7 +2747,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
       - Name:            webServiceURL
         JsName:          webServiceURL
@@ -2772,7 +2772,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2813,7 +2813,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPassLibrary
     JsName:          PKPassLibrary
@@ -2841,17 +2841,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentPass
+            Name:            PKPaymentPass
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'activatePaymentPass:withActivationData:completion:'
         JsName:          activatePaymentPassWithActivationDataCompletion
@@ -2867,17 +2867,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentPass
+            Name:            PKPaymentPass
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'addPasses:withCompletionHandler:'
         JsName:          addPassesWithCompletionHandler
@@ -2893,10 +2893,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PKPass
+                Name:            PKPass
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
@@ -2931,7 +2931,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'containsPass:'
         JsName:          containsPass
@@ -2946,7 +2946,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          PKPass
+            Name:            PKPass
             WithProtocols:   
       - Name:            isPaymentPassActivationAvailable
         JsName:          isPaymentPassActivationAvailable
@@ -2986,10 +2986,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PKPass
+                Name:            PKPass
                 WithProtocols:   
             WithProtocols:   
       - Name:            'passesOfType:'
@@ -3005,10 +3005,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PKPass
+                Name:            PKPass
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -3025,13 +3025,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          PKPass
+            Name:            PKPass
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'presentPaymentPass:'
         JsName:          presentPaymentPass
@@ -3047,7 +3047,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentPass
+            Name:            PKPaymentPass
             WithProtocols:   
       - Name:            remotePaymentPasses
         JsName:          remotePaymentPasses
@@ -3062,10 +3062,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PKPaymentPass
+                Name:            PKPaymentPass
                 WithProtocols:   
             WithProtocols:   
       - Name:            'removePass:'
@@ -3081,7 +3081,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPass
+            Name:            PKPass
             WithProtocols:   
       - Name:            'replacePassWithPass:'
         JsName:          replacePassWithPass
@@ -3096,7 +3096,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          PKPass
+            Name:            PKPass
             WithProtocols:   
     StaticMethods:   
       - Name:            'endAutomaticPassPresentationSuppressionWithRequestToken:'
@@ -3206,7 +3206,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPassLibraryDidAddPasses
     JsName:          PKPassLibraryDidAddPasses
@@ -3243,7 +3243,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPassLibraryPassTypeIdentifierUserInfoKey
     JsName:          PKPassLibraryPassTypeIdentifierUserInfoKey
@@ -3258,7 +3258,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPassLibraryRemotePaymentPassesDidChangeNotification
     JsName:          PKPassLibraryRemotePaymentPassesDidChangeNotification
@@ -3273,7 +3273,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPassLibraryRemovedPassInfosUserInfoKey
     JsName:          PKPassLibraryRemovedPassInfosUserInfoKey
@@ -3288,7 +3288,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPassLibraryReplacementPassesUserInfoKey
     JsName:          PKPassLibraryReplacementPassesUserInfoKey
@@ -3303,7 +3303,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPassLibrarySerialNumberUserInfoKey
     JsName:          PKPassLibrarySerialNumberUserInfoKey
@@ -3318,7 +3318,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPassLibraryShouldReviewPasses
     JsName:          PKPassLibraryShouldReviewPasses
@@ -3449,7 +3449,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PKContact
+              Name:            PKContact
               WithProtocols:   
       - Name:            shippingAddress
         JsName:          shippingAddress
@@ -3503,7 +3503,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PKContact
+              Name:            PKContact
               WithProtocols:   
       - Name:            shippingMethod
         JsName:          shippingMethod
@@ -3528,7 +3528,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PKShippingMethod
+              Name:            PKShippingMethod
               WithProtocols:   
       - Name:            token
         JsName:          token
@@ -3553,7 +3553,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PKPaymentToken
+              Name:            PKPaymentToken
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3598,7 +3598,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PKPaymentRequest
+            Name:            PKPaymentRequest
             WithProtocols:   
       - Name:            'presentWithCompletion:'
         JsName:          presentWithCompletion
@@ -3642,10 +3642,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'canMakePaymentsUsingNetworks:capabilities:'
@@ -3661,10 +3661,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -3739,10 +3739,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationController
+            Name:            PKPaymentAuthorizationController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPayment
+            Name:            PKPayment
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -3763,16 +3763,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationController
+            Name:            PKPaymentAuthorizationController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPayment
+            Name:            PKPayment
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PKPaymentAuthorizationResult
+                Name:            PKPaymentAuthorizationResult
                 WithProtocols:   
       - Name:            'paymentAuthorizationControllerDidFinish:'
         JsName:          paymentAuthorizationControllerDidFinish
@@ -3787,7 +3787,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationController
+            Name:            PKPaymentAuthorizationController
             WithProtocols:   
       - Name:            'paymentAuthorizationController:didSelectPaymentMethod:completion:'
         JsName:          paymentAuthorizationControllerDidSelectPaymentMethodCompletion
@@ -3803,19 +3803,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationController
+            Name:            PKPaymentAuthorizationController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPaymentMethod
+            Name:            PKPaymentMethod
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          PKPaymentSummaryItem
+                    Name:            PKPaymentSummaryItem
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'paymentAuthorizationController:didSelectPaymentMethod:handler:'
@@ -3832,16 +3832,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationController
+            Name:            PKPaymentAuthorizationController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPaymentMethod
+            Name:            PKPaymentMethod
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PKPaymentRequestPaymentMethodUpdate
+                Name:            PKPaymentRequestPaymentMethodUpdate
                 WithProtocols:   
       - Name:            'paymentAuthorizationController:didSelectShippingContact:completion:'
         JsName:          paymentAuthorizationControllerDidSelectShippingContactCompletion
@@ -3857,10 +3857,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationController
+            Name:            PKPaymentAuthorizationController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKContact
+            Name:            PKContact
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -3868,17 +3868,17 @@ Items:
               - Type:            Enum
                 Name:            PKPaymentAuthorizationStatus
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          PKShippingMethod
+                    Name:            PKShippingMethod
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          PKPaymentSummaryItem
+                    Name:            PKPaymentSummaryItem
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'paymentAuthorizationController:didSelectShippingContact:handler:'
@@ -3895,16 +3895,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationController
+            Name:            PKPaymentAuthorizationController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKContact
+            Name:            PKContact
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PKPaymentRequestShippingContactUpdate
+                Name:            PKPaymentRequestShippingContactUpdate
                 WithProtocols:   
       - Name:            'paymentAuthorizationController:didSelectShippingMethod:completion:'
         JsName:          paymentAuthorizationControllerDidSelectShippingMethodCompletion
@@ -3920,10 +3920,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationController
+            Name:            PKPaymentAuthorizationController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKShippingMethod
+            Name:            PKShippingMethod
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -3931,10 +3931,10 @@ Items:
               - Type:            Enum
                 Name:            PKPaymentAuthorizationStatus
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          PKPaymentSummaryItem
+                    Name:            PKPaymentSummaryItem
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'paymentAuthorizationController:didSelectShippingMethod:handler:'
@@ -3951,16 +3951,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationController
+            Name:            PKPaymentAuthorizationController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKShippingMethod
+            Name:            PKShippingMethod
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PKPaymentRequestShippingMethodUpdate
+                Name:            PKPaymentRequestShippingMethodUpdate
                 WithProtocols:   
       - Name:            'paymentAuthorizationControllerWillAuthorizePayment:'
         JsName:          paymentAuthorizationControllerWillAuthorizePayment
@@ -3975,7 +3975,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationController
+            Name:            PKPaymentAuthorizationController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4009,10 +4009,10 @@ Items:
           - Type:            Enum
             Name:            PKPaymentAuthorizationStatus
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -4040,10 +4040,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -4060,10 +4060,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
               WithProtocols:   
       - Name:            status
@@ -4256,7 +4256,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PKPaymentRequest
+            Name:            PKPaymentRequest
             WithProtocols:   
     StaticMethods:   
       - Name:            canMakePayments
@@ -4284,10 +4284,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'canMakePaymentsUsingNetworks:capabilities:'
@@ -4304,10 +4304,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -4382,10 +4382,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationViewController
+            Name:            PKPaymentAuthorizationViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPayment
+            Name:            PKPayment
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -4406,16 +4406,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationViewController
+            Name:            PKPaymentAuthorizationViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPayment
+            Name:            PKPayment
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PKPaymentAuthorizationResult
+                Name:            PKPaymentAuthorizationResult
                 WithProtocols:   
       - Name:            'paymentAuthorizationViewControllerDidFinish:'
         JsName:          paymentAuthorizationViewControllerDidFinish
@@ -4430,7 +4430,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationViewController
+            Name:            PKPaymentAuthorizationViewController
             WithProtocols:   
       - Name:            'paymentAuthorizationViewController:didSelectPaymentMethod:completion:'
         JsName:          paymentAuthorizationViewControllerDidSelectPaymentMethodCompletion
@@ -4446,19 +4446,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationViewController
+            Name:            PKPaymentAuthorizationViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPaymentMethod
+            Name:            PKPaymentMethod
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          PKPaymentSummaryItem
+                    Name:            PKPaymentSummaryItem
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'paymentAuthorizationViewController:didSelectPaymentMethod:handler:'
@@ -4475,16 +4475,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationViewController
+            Name:            PKPaymentAuthorizationViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKPaymentMethod
+            Name:            PKPaymentMethod
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PKPaymentRequestPaymentMethodUpdate
+                Name:            PKPaymentRequestPaymentMethodUpdate
                 WithProtocols:   
       - Name:            'paymentAuthorizationViewController:didSelectShippingAddress:completion:'
         JsName:          paymentAuthorizationViewControllerDidSelectShippingAddressCompletion
@@ -4500,7 +4500,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationViewController
+            Name:            PKPaymentAuthorizationViewController
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
@@ -4511,17 +4511,17 @@ Items:
               - Type:            Enum
                 Name:            PKPaymentAuthorizationStatus
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          PKShippingMethod
+                    Name:            PKShippingMethod
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          PKPaymentSummaryItem
+                    Name:            PKPaymentSummaryItem
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'paymentAuthorizationViewController:didSelectShippingContact:completion:'
@@ -4538,10 +4538,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationViewController
+            Name:            PKPaymentAuthorizationViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKContact
+            Name:            PKContact
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -4549,17 +4549,17 @@ Items:
               - Type:            Enum
                 Name:            PKPaymentAuthorizationStatus
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          PKShippingMethod
+                    Name:            PKShippingMethod
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          PKPaymentSummaryItem
+                    Name:            PKPaymentSummaryItem
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'paymentAuthorizationViewController:didSelectShippingContact:handler:'
@@ -4576,16 +4576,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationViewController
+            Name:            PKPaymentAuthorizationViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKContact
+            Name:            PKContact
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PKPaymentRequestShippingContactUpdate
+                Name:            PKPaymentRequestShippingContactUpdate
                 WithProtocols:   
       - Name:            'paymentAuthorizationViewController:didSelectShippingMethod:completion:'
         JsName:          paymentAuthorizationViewControllerDidSelectShippingMethodCompletion
@@ -4601,10 +4601,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationViewController
+            Name:            PKPaymentAuthorizationViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKShippingMethod
+            Name:            PKShippingMethod
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -4612,10 +4612,10 @@ Items:
               - Type:            Enum
                 Name:            PKPaymentAuthorizationStatus
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          PKPaymentSummaryItem
+                    Name:            PKPaymentSummaryItem
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'paymentAuthorizationViewController:didSelectShippingMethod:handler:'
@@ -4632,16 +4632,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationViewController
+            Name:            PKPaymentAuthorizationViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          PKShippingMethod
+            Name:            PKShippingMethod
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          PKPaymentRequestShippingMethodUpdate
+                Name:            PKPaymentRequestShippingMethodUpdate
                 WithProtocols:   
       - Name:            'paymentAuthorizationViewControllerWillAuthorizePayment:'
         JsName:          paymentAuthorizationViewControllerWillAuthorizePayment
@@ -4657,7 +4657,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          PKPaymentAuthorizationViewController
+            Name:            PKPaymentAuthorizationViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4974,7 +4974,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentErrorDomain
     JsName:          PKPaymentErrorDomain
@@ -4989,7 +4989,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentErrorPostalAddressUserInfoKey
     JsName:          PKPaymentErrorPostalAddressUserInfoKey
@@ -5004,7 +5004,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentMethod
     JsName:          PKPaymentMethod
@@ -5045,7 +5045,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          CNContact
+              Name:            CNContact
               WithProtocols:   
       - Name:            displayName
         JsName:          displayName
@@ -5070,7 +5070,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            network
         JsName:          network
@@ -5095,7 +5095,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            paymentPass
         JsName:          paymentPass
@@ -5120,7 +5120,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PKPaymentPass
+              Name:            PKPaymentPass
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -5240,7 +5240,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkCarteBancaire
     JsName:          PKPaymentNetworkCarteBancaire
@@ -5255,7 +5255,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkCarteBancaires
     JsName:          PKPaymentNetworkCarteBancaires
@@ -5270,7 +5270,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkCartesBancaires
     JsName:          PKPaymentNetworkCartesBancaires
@@ -5285,7 +5285,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkChinaUnionPay
     JsName:          PKPaymentNetworkChinaUnionPay
@@ -5300,7 +5300,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkDiscover
     JsName:          PKPaymentNetworkDiscover
@@ -5315,7 +5315,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkEftpos
     JsName:          PKPaymentNetworkEftpos
@@ -5330,7 +5330,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkElectron
     JsName:          PKPaymentNetworkElectron
@@ -5345,7 +5345,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkElo
     JsName:          PKPaymentNetworkElo
@@ -5360,7 +5360,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkIDCredit
     JsName:          PKPaymentNetworkIDCredit
@@ -5375,7 +5375,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkInterac
     JsName:          PKPaymentNetworkInterac
@@ -5390,7 +5390,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkJCB
     JsName:          PKPaymentNetworkJCB
@@ -5405,7 +5405,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkMada
     JsName:          PKPaymentNetworkMada
@@ -5420,7 +5420,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkMaestro
     JsName:          PKPaymentNetworkMaestro
@@ -5435,7 +5435,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkMasterCard
     JsName:          PKPaymentNetworkMasterCard
@@ -5450,7 +5450,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkPrivateLabel
     JsName:          PKPaymentNetworkPrivateLabel
@@ -5465,7 +5465,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkQuicPay
     JsName:          PKPaymentNetworkQuicPay
@@ -5480,7 +5480,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkSuica
     JsName:          PKPaymentNetworkSuica
@@ -5495,7 +5495,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkVPay
     JsName:          PKPaymentNetworkVPay
@@ -5510,7 +5510,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentNetworkVisa
     JsName:          PKPaymentNetworkVisa
@@ -5525,7 +5525,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            PKPaymentPass
     JsName:          PKPaymentPass
@@ -5588,7 +5588,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            deviceAccountNumberSuffix
         JsName:          deviceAccountNumberSuffix
@@ -5613,7 +5613,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            primaryAccountIdentifier
         JsName:          primaryAccountIdentifier
@@ -5638,7 +5638,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            primaryAccountNumberSuffix
         JsName:          primaryAccountNumberSuffix
@@ -5663,7 +5663,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5772,10 +5772,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'paymentBillingAddressInvalidErrorWithKey:localizedDescription:'
@@ -5791,13 +5791,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'paymentContactInvalidErrorWithContactField:localizedDescription:'
         JsName:          paymentContactInvalidErrorWithContactFieldLocalizedDescription
@@ -5812,13 +5812,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'paymentShippingAddressInvalidErrorWithKey:localizedDescription:'
         JsName:          paymentShippingAddressInvalidErrorWithKeyLocalizedDescription
@@ -5833,13 +5833,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'paymentShippingAddressUnserviceableErrorWithLocalizedDescription:'
         JsName:          paymentShippingAddressUnserviceableErrorWithLocalizedDescription
@@ -5854,10 +5854,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            applicationData
@@ -5883,7 +5883,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
         Setter:          
           Name:            'setApplicationData:'
@@ -5899,7 +5899,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            billingAddress
         JsName:          billingAddress
@@ -5970,7 +5970,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PKContact
+              Name:            PKContact
               WithProtocols:   
         Setter:          
           Name:            'setBillingContact:'
@@ -5987,7 +5987,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          PKContact
+              Name:            PKContact
               WithProtocols:   
       - Name:            countryCode
         JsName:          countryCode
@@ -6012,7 +6012,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCountryCode:'
@@ -6028,7 +6028,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            currencyCode
         JsName:          currencyCode
@@ -6053,7 +6053,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCurrencyCode:'
@@ -6069,7 +6069,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            merchantCapabilities
         JsName:          merchantCapabilities
@@ -6133,7 +6133,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMerchantIdentifier:'
@@ -6149,7 +6149,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            paymentSummaryItems
         JsName:          paymentSummaryItems
@@ -6174,10 +6174,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKPaymentSummaryItem
+                  Name:            PKPaymentSummaryItem
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6194,10 +6194,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKPaymentSummaryItem
+                  Name:            PKPaymentSummaryItem
                   WithProtocols:   
               WithProtocols:   
       - Name:            requiredBillingAddressFields
@@ -6267,10 +6267,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6288,10 +6288,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            requiredShippingAddressFields
@@ -6361,10 +6361,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6382,10 +6382,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            shippingAddress
@@ -6457,7 +6457,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PKContact
+              Name:            PKContact
               WithProtocols:   
         Setter:          
           Name:            'setShippingContact:'
@@ -6474,7 +6474,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          PKContact
+              Name:            PKContact
               WithProtocols:   
       - Name:            shippingMethods
         JsName:          shippingMethods
@@ -6499,10 +6499,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKShippingMethod
+                  Name:            PKShippingMethod
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6519,10 +6519,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKShippingMethod
+                  Name:            PKShippingMethod
                   WithProtocols:   
               WithProtocols:   
       - Name:            shippingType
@@ -6592,10 +6592,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6613,10 +6613,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            supportedNetworks
@@ -6642,10 +6642,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6662,10 +6662,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -6696,17 +6696,17 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PKPaymentSummaryItem
+                Name:            PKPaymentSummaryItem
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -6734,10 +6734,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6754,10 +6754,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -6788,24 +6788,24 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PKPaymentSummaryItem
+                Name:            PKPaymentSummaryItem
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PKShippingMethod
+                Name:            PKShippingMethod
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -6833,10 +6833,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6853,10 +6853,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
               WithProtocols:   
       - Name:            shippingMethods
@@ -6882,10 +6882,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKShippingMethod
+                  Name:            PKShippingMethod
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6902,10 +6902,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKShippingMethod
+                  Name:            PKShippingMethod
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -6953,10 +6953,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          PKPaymentSummaryItem
+                Name:            PKPaymentSummaryItem
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -6984,10 +6984,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKPaymentSummaryItem
+                  Name:            PKPaymentSummaryItem
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -7004,10 +7004,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          PKPaymentSummaryItem
+                  Name:            PKPaymentSummaryItem
                   WithProtocols:   
               WithProtocols:   
       - Name:            status
@@ -7100,10 +7100,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDecimalNumber
+            Name:            NSDecimalNumber
             WithProtocols:   
       - Name:            'summaryItemWithLabel:amount:type:'
         JsName:          summaryItemWithLabelAmountType
@@ -7119,10 +7119,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDecimalNumber
+            Name:            NSDecimalNumber
             WithProtocols:   
           - Type:            Enum
             Name:            PKPaymentSummaryItemType
@@ -7150,7 +7150,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDecimalNumber
+              Name:            NSDecimalNumber
               WithProtocols:   
         Setter:          
           Name:            'setAmount:'
@@ -7166,7 +7166,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDecimalNumber
+              Name:            NSDecimalNumber
               WithProtocols:   
       - Name:            label
         JsName:          label
@@ -7191,7 +7191,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -7207,7 +7207,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -7330,7 +7330,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            paymentInstrumentName
         JsName:          paymentInstrumentName
@@ -7357,7 +7357,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            paymentMethod
         JsName:          paymentMethod
@@ -7384,7 +7384,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          PKPaymentMethod
+              Name:            PKPaymentMethod
               WithProtocols:   
       - Name:            paymentNetwork
         JsName:          paymentNetwork
@@ -7411,7 +7411,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            transactionIdentifier
         JsName:          transactionIdentifier
@@ -7436,7 +7436,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7489,7 +7489,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setDetail:'
@@ -7505,7 +7505,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -7530,7 +7530,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setIdentifier:'
@@ -7546,7 +7546,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7755,7 +7755,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          PKPass
+            Name:            PKPass
             WithProtocols:   
     InstanceProperties: 
       - Name:            blacklisted
@@ -7804,7 +7804,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            inStation
         JsName:          inStation
@@ -7852,7 +7852,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDecimalNumber
+              Name:            NSDecimalNumber
               WithProtocols:   
       - Name:            transitBalanceCurrencyCode
         JsName:          transitBalanceCurrencyCode
@@ -7877,7 +7877,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       

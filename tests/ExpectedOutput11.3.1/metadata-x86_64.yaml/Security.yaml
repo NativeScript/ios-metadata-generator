@@ -2897,7 +2897,7 @@ Items:
         Name:            id
         BridgedTo:       id
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -2925,7 +2925,7 @@ Items:
         Name:            id
         BridgedTo:       id
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -14631,7 +14631,7 @@ Items:
         Name:            id
         BridgedTo:       id
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_certificate
   - Name:            sec_certificate_create
@@ -14647,7 +14647,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_certificate
       - Type:            BridgedInterface
@@ -14667,14 +14667,14 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_identity
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_sec_certificate
   - Name:            sec_identity_copy_certificates_ref
@@ -14693,7 +14693,7 @@ Items:
         Name:            NSArray
         BridgedTo:       NSArray
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_identity
   - Name:            sec_identity_copy_ref
@@ -14712,7 +14712,7 @@ Items:
         Name:            id
         BridgedTo:       id
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_identity
   - Name:            sec_identity_create
@@ -14728,7 +14728,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_identity
       - Type:            BridgedInterface
@@ -14747,7 +14747,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_identity
       - Type:            BridgedInterface
@@ -14770,14 +14770,14 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
   - Name:            sec_protocol_metadata_access_ocsp_response
@@ -14794,14 +14794,14 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
   - Name:            sec_protocol_metadata_access_peer_certificate_chain
@@ -14818,14 +14818,14 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_sec_certificate
   - Name:            sec_protocol_metadata_access_pre_shared_keys
@@ -14842,18 +14842,18 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
   - Name:            sec_protocol_metadata_access_supported_signature_algorithms
@@ -14870,7 +14870,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
       - Type:            Block
@@ -14891,11 +14891,11 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
   - Name:            sec_protocol_metadata_copy_peer_public_key
@@ -14911,11 +14911,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
   - Name:            sec_protocol_metadata_create_secret
@@ -14931,11 +14931,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
       - Type:            ULong
@@ -14954,11 +14954,11 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
       - Type:            ULong
@@ -14980,7 +14980,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
   - Name:            sec_protocol_metadata_get_negotiated_ciphersuite
@@ -14997,7 +14997,7 @@ Items:
     Signature:       
       - Type:            Ushort
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
   - Name:            sec_protocol_metadata_get_negotiated_protocol
@@ -15014,7 +15014,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
   - Name:            sec_protocol_metadata_get_negotiated_protocol_version
@@ -15032,7 +15032,7 @@ Items:
       - Type:            Enum
         Name:            SSLProtocol
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
   - Name:            sec_protocol_metadata_get_negotiated_tls_ciphersuite
@@ -15050,7 +15050,7 @@ Items:
       - Type:            Enum
         Name:            tls_ciphersuite_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
   - Name:            sec_protocol_metadata_get_negotiated_tls_protocol_version
@@ -15068,7 +15068,7 @@ Items:
       - Type:            Enum
         Name:            tls_protocol_version_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
   - Name:            sec_protocol_metadata_get_server_name
@@ -15085,7 +15085,7 @@ Items:
     Signature:       
       - Type:            CString
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
   - Name:            sec_protocol_metadata_peers_are_equal
@@ -15102,11 +15102,11 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_metadata
   - Name:            sec_protocol_options_add_pre_shared_key
@@ -15123,15 +15123,15 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
   - Name:            sec_protocol_options_add_tls_application_protocol
@@ -15148,7 +15148,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            CString
@@ -15166,7 +15166,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Ushort
@@ -15184,7 +15184,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Enum
@@ -15203,7 +15203,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Enum
@@ -15222,7 +15222,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Enum
@@ -15241,11 +15241,11 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
   - Name:            sec_protocol_options_get_default_max_dtls_protocol_version
@@ -15318,25 +15318,25 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_sec_protocol_metadata
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSObject
+                Name:            NSObject
                 WithProtocols:   
                   - OS_sec_identity
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            sec_protocol_options_set_key_update_block
@@ -15353,21 +15353,21 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_sec_protocol_metadata
           - Type:            Block
             Signature:       
               - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            sec_protocol_options_set_local_identity
@@ -15384,11 +15384,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_identity
   - Name:            sec_protocol_options_set_max_tls_protocol_version
@@ -15405,7 +15405,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Enum
@@ -15424,7 +15424,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Enum
@@ -15443,7 +15443,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Bool
@@ -15461,29 +15461,29 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_sec_protocol_metadata
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_data
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSObject
+                Name:            NSObject
                 WithProtocols:   
                   - OS_dispatch_data
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            sec_protocol_options_set_tls_diffie_hellman_parameters
@@ -15500,11 +15500,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
   - Name:            sec_protocol_options_set_tls_false_start_enabled
@@ -15521,7 +15521,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Bool
@@ -15539,7 +15539,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Bool
@@ -15557,7 +15557,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Enum
@@ -15576,7 +15576,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Enum
@@ -15595,7 +15595,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Bool
@@ -15613,11 +15613,11 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_data
   - Name:            sec_protocol_options_set_tls_renegotiation_enabled
@@ -15634,7 +15634,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Bool
@@ -15652,7 +15652,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Bool
@@ -15670,7 +15670,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Bool
@@ -15688,7 +15688,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            CString
@@ -15706,7 +15706,7 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Bool
@@ -15724,18 +15724,18 @@ Items:
     Signature:       
       - Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_protocol_options
       - Type:            Block
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_sec_protocol_metadata
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_sec_trust
           - Type:            Block
@@ -15743,7 +15743,7 @@ Items:
               - Type:            Void
               - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
   - Name:            sec_release
@@ -15794,7 +15794,7 @@ Items:
         Name:            id
         BridgedTo:       id
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_trust
   - Name:            sec_trust_create
@@ -15810,7 +15810,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_sec_trust
       - Type:            BridgedInterface

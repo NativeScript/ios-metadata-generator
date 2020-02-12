@@ -31,10 +31,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'didUpdateItems:'
@@ -50,7 +50,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -69,7 +69,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Bool
       - Name:            'finishEnumeratingWithError:'
@@ -85,7 +85,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -139,13 +139,13 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -172,7 +172,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -197,7 +197,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            pathRelativeToDocumentStorage
         JsName:          pathRelativeToDocumentStorage
@@ -222,7 +222,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -284,7 +284,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -303,7 +303,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'finishEnumeratingWithError:'
         JsName:          finishEnumeratingWithError
@@ -318,7 +318,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -352,7 +352,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
       - Name:            'enumerateChangesForObserver:fromSyncAnchor:'
         JsName:          enumerateChangesForObserverFromSyncAnchor
@@ -370,7 +370,7 @@ Items:
             WithProtocols:   
               - NSFileProviderChangeObserver
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'enumerateItemsForObserver:startingAtPage:'
         JsName:          enumerateItemsForObserverStartingAtPage
@@ -388,7 +388,7 @@ Items:
             WithProtocols:   
               - NSFileProviderEnumerationObserver
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            invalidate
         JsName:          invalidate
@@ -451,7 +451,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NSFileProviderErrorDomain
     JsName:          NSFileProviderErrorDomain
@@ -466,7 +466,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NSFileProviderErrorFilenameCollision
     JsName:          NSFileProviderErrorFilenameCollision
@@ -514,7 +514,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NSFileProviderErrorNotAuthenticated
     JsName:          NSFileProviderErrorNotAuthenticated
@@ -588,12 +588,12 @@ Items:
             WithProtocols:   
               - NSFileProviderItem
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'itemChangedAtURL:'
         JsName:          itemChangedAtURL
@@ -609,7 +609,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'persistentIdentifierForItemAtURL:'
         JsName:          persistentIdentifierForItemAtURL
@@ -624,10 +624,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'providePlaceholderAtURL:completionHandler:'
         JsName:          providePlaceholderAtURLCompletionHandler
@@ -643,13 +643,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'startProvidingItemAtURL:completionHandler:'
         JsName:          startProvidingItemAtURLCompletionHandler
@@ -665,13 +665,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'stopProvidingItemAtURL:'
         JsName:          stopProvidingItemAtURL
@@ -687,7 +687,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'URLForItemWithPersistentIdentifier:'
         JsName:          URLForItemWithPersistentIdentifier
@@ -702,10 +702,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'enumeratorForContainerItemIdentifier:error:'
         JsName:          enumeratorForContainerItemIdentifierError
@@ -722,12 +722,12 @@ Items:
             WithProtocols:   
               - NSFileProviderEnumerator
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'createDirectoryWithName:inParentItemIdentifier:completionHandler:'
         JsName:          createDirectoryWithNameInParentItemIdentifierCompletionHandler
@@ -743,10 +743,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -755,7 +755,7 @@ Items:
                 WithProtocols:   
                   - NSFileProviderItem
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'deleteItemWithIdentifier:completionHandler:'
         JsName:          deleteItemWithIdentifierCompletionHandler
@@ -771,13 +771,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'importDocumentAtURL:toParentItemIdentifier:completionHandler:'
         JsName:          importDocumentAtURLToParentItemIdentifierCompletionHandler
@@ -793,10 +793,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -805,7 +805,7 @@ Items:
                 WithProtocols:   
                   - NSFileProviderItem
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'renameItemWithIdentifier:toName:completionHandler:'
         JsName:          renameItemWithIdentifierToNameCompletionHandler
@@ -821,10 +821,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -833,7 +833,7 @@ Items:
                 WithProtocols:   
                   - NSFileProviderItem
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'reparentItemWithIdentifier:toParentItemWithIdentifier:newName:completionHandler:'
         JsName:          reparentItemWithIdentifierToParentItemWithIdentifierNewNameCompletionHandler
@@ -849,13 +849,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -864,7 +864,7 @@ Items:
                 WithProtocols:   
                   - NSFileProviderItem
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'setFavoriteRank:forItemIdentifier:completionHandler:'
         JsName:          setFavoriteRankForItemIdentifierCompletionHandler
@@ -880,10 +880,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSNumber
+            Name:            NSNumber
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -892,7 +892,7 @@ Items:
                 WithProtocols:   
                   - NSFileProviderItem
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'setLastUsedDate:forItemIdentifier:completionHandler:'
         JsName:          setLastUsedDateForItemIdentifierCompletionHandler
@@ -908,10 +908,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -920,7 +920,7 @@ Items:
                 WithProtocols:   
                   - NSFileProviderItem
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'setTagData:forItemIdentifier:completionHandler:'
         JsName:          setTagDataForItemIdentifierCompletionHandler
@@ -936,10 +936,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -948,7 +948,7 @@ Items:
                 WithProtocols:   
                   - NSFileProviderItem
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'trashItemWithIdentifier:completionHandler:'
         JsName:          trashItemWithIdentifierCompletionHandler
@@ -964,7 +964,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -973,7 +973,7 @@ Items:
                 WithProtocols:   
                   - NSFileProviderItem
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'untrashItemWithIdentifier:toParentItemIdentifier:completionHandler:'
         JsName:          untrashItemWithIdentifierToParentItemIdentifierCompletionHandler
@@ -989,10 +989,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -1001,7 +1001,7 @@ Items:
                 WithProtocols:   
                   - NSFileProviderItem
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'supportedServiceSourcesForItemIdentifier:error:'
         JsName:          supportedServiceSourcesForItemIdentifierError
@@ -1016,19 +1016,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
                   - NSFileProviderServiceSource
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'fetchThumbnailsForItemIdentifiers:requestedSize:perThumbnailCompletionHandler:completionHandler:'
         JsName:          fetchThumbnailsForItemIdentifiersRequestedSizePerThumbnailCompletionHandlerCompletionHandler
@@ -1043,35 +1043,35 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSProgress
+            Name:            NSProgress
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'placeholderURLForURL:'
@@ -1087,10 +1087,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'writePlaceholderAtURL:withMetadata:error:'
         JsName:          writePlaceholderAtURLWithMetadataError
@@ -1106,13 +1106,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
@@ -1120,7 +1120,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
       - Name:            documentStorageURL
@@ -1148,7 +1148,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            providerIdentifier
         JsName:          providerIdentifier
@@ -1175,7 +1175,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            domain
         JsName:          domain
@@ -1200,7 +1200,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSFileProviderDomain
+              Name:            NSFileProviderDomain
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1231,7 +1231,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSData
+      Name:            NSData
       WithProtocols:   
   - Name:            NSFileProviderInitialPageSortedByName
     JsName:          NSFileProviderInitialPageSortedByName
@@ -1246,7 +1246,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSData
+      Name:            NSData
       WithProtocols:   
   - Name:            NSFileProviderItem
     JsName:          NSFileProviderItem
@@ -1308,7 +1308,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            contentModificationDate
         JsName:          contentModificationDate
@@ -1333,7 +1333,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            creationDate
         JsName:          creationDate
@@ -1358,7 +1358,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            documentSize
         JsName:          documentSize
@@ -1383,7 +1383,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            downloaded
         JsName:          downloaded
@@ -1454,7 +1454,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            favoriteRank
         JsName:          favoriteRank
@@ -1479,7 +1479,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            filename
         JsName:          filename
@@ -1504,7 +1504,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            itemIdentifier
         JsName:          itemIdentifier
@@ -1529,7 +1529,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            lastUsedDate
         JsName:          lastUsedDate
@@ -1554,7 +1554,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            mostRecentEditorNameComponents
         JsName:          mostRecentEditorNameComponents
@@ -1579,7 +1579,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPersonNameComponents
+              Name:            NSPersonNameComponents
               WithProtocols:   
       - Name:            mostRecentVersionDownloaded
         JsName:          mostRecentVersionDownloaded
@@ -1627,7 +1627,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSPersonNameComponents
+              Name:            NSPersonNameComponents
               WithProtocols:   
       - Name:            parentItemIdentifier
         JsName:          parentItemIdentifier
@@ -1652,7 +1652,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            shared
         JsName:          shared
@@ -1723,7 +1723,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            trashed
         JsName:          trashed
@@ -1771,7 +1771,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            uploaded
         JsName:          uploaded
@@ -1842,7 +1842,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            userInfo
         JsName:          userInfo
@@ -1867,7 +1867,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
       - Name:            versionIdentifier
         JsName:          versionIdentifier
@@ -1894,7 +1894,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2321,16 +2321,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURLSessionTask
+            Name:            NSURLSessionTask
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'signalEnumeratorForContainerItemIdentifier:completionHandler:'
         JsName:          signalEnumeratorForContainerItemIdentifierCompletionHandler
@@ -2345,13 +2345,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'addDomain:completionHandler:'
@@ -2367,13 +2367,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSFileProviderDomain
+            Name:            NSFileProviderDomain
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'getDomainsWithCompletionHandler:'
         JsName:          getDomainsWithCompletionHandler
@@ -2391,14 +2391,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSFileProviderDomain
+                    Name:            NSFileProviderDomain
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'managerForDomain:'
         JsName:          managerForDomain
@@ -2413,7 +2413,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSFileProviderDomain
+            Name:            NSFileProviderDomain
             WithProtocols:   
       - Name:            'placeholderURLForURL:'
         JsName:          placeholderURLForURL
@@ -2427,10 +2427,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'removeAllDomainsWithCompletionHandler:'
         JsName:          removeAllDomainsWithCompletionHandler
@@ -2448,7 +2448,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeDomain:completionHandler:'
         JsName:          removeDomainCompletionHandler
@@ -2463,13 +2463,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSFileProviderDomain
+            Name:            NSFileProviderDomain
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writePlaceholderAtURL:withMetadata:error:'
         JsName:          writePlaceholderAtURLWithMetadataError
@@ -2484,7 +2484,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -2492,7 +2492,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
       - Name:            documentStorageURL
@@ -2518,7 +2518,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            providerIdentifier
         JsName:          providerIdentifier
@@ -2543,7 +2543,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
       - Name:            defaultManager
@@ -2569,7 +2569,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSFileProviderManager
+              Name:            NSFileProviderManager
               WithProtocols:   
     Protocols:       
     Base:            NSObject
@@ -2586,7 +2586,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            NSFileProviderServiceSource
     JsName:          NSFileProviderServiceSource
@@ -2612,12 +2612,12 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSXPCListenerEndpoint
+            Name:            NSXPCListenerEndpoint
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2644,7 +2644,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2661,6 +2661,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

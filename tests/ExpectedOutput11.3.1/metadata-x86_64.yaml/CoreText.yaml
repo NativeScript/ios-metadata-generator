@@ -70,7 +70,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTLayoutTypes
-            JsName:          AnchorPoint
+            Name:            AnchorPoint
           Size:            1
   - Name:            AnkrTable
     JsName:          AnkrTable
@@ -712,7 +712,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGAffineTransform
-          JsName:          CGAffineTransform
+          Name:            CGAffineTransform
       - Type:            BridgedInterface
         Name:            UIFontDescriptor
         BridgedTo:       UIFontDescriptor
@@ -739,7 +739,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGAffineTransform
-          JsName:          CGAffineTransform
+          Name:            CGAffineTransform
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -766,7 +766,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGAffineTransform
-          JsName:          CGAffineTransform
+          Name:            CGAffineTransform
       - Type:            Enum
         Name:            CTFontSymbolicTraits
       - Type:            Enum
@@ -794,7 +794,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CTFontCreateForStringWithLanguage
     JsName:          CTFontCreateForStringWithLanguage
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFont.h
@@ -818,7 +818,7 @@ Items:
         BridgedTo:       NSString
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -845,7 +845,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGAffineTransform
-          JsName:          CGAffineTransform
+          Name:            CGAffineTransform
   - Name:            CTFontCreateUIFontForLanguage
     JsName:          CTFontCreateUIFontForLanguage
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFont.h
@@ -890,7 +890,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGAffineTransform
-          JsName:          CGAffineTransform
+          Name:            CGAffineTransform
   - Name:            CTFontCreateWithFontDescriptorAndOptions
     JsName:          CTFontCreateWithFontDescriptorAndOptions
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFont.h
@@ -914,7 +914,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGAffineTransform
-          JsName:          CGAffineTransform
+          Name:            CGAffineTransform
       - Type:            Enum
         Name:            CTFontOptions
   - Name:            CTFontCreateWithGraphicsFont
@@ -940,7 +940,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGAffineTransform
-          JsName:          CGAffineTransform
+          Name:            CGAffineTransform
       - Type:            BridgedInterface
         Name:            UIFontDescriptor
         BridgedTo:       UIFontDescriptor
@@ -967,7 +967,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGAffineTransform
-          JsName:          CGAffineTransform
+          Name:            CGAffineTransform
   - Name:            CTFontCreateWithNameAndOptions
     JsName:          CTFontCreateWithNameAndOptions
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFont.h
@@ -991,7 +991,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGAffineTransform
-          JsName:          CGAffineTransform
+          Name:            CGAffineTransform
       - Type:            Enum
         Name:            CTFontOptions
   - Name:            CTFontDescriptorCopyAttribute
@@ -1332,7 +1332,7 @@ Items:
         ArrayType:       
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGPoint
+          Name:            CGPoint
       - Type:            ULong
       - Type:            BridgedInterface
         Name:            id
@@ -1380,7 +1380,7 @@ Items:
         ArrayType:       
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGSize
+          Name:            CGSize
       - Type:            Long
   - Name:            CTFontGetAscent
     JsName:          CTFontGetAscent
@@ -1412,7 +1412,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGRect
+        Name:            CGRect
       - Type:            BridgedInterface
         Name:            UIFont
         BridgedTo:       UIFont
@@ -1430,7 +1430,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGRect
+        Name:            CGRect
       - Type:            BridgedInterface
         Name:            UIFont
         BridgedTo:       UIFont
@@ -1443,7 +1443,7 @@ Items:
         ArrayType:       
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGRect
+          Name:            CGRect
       - Type:            Long
   - Name:            CTFontGetCapHeight
     JsName:          CTFontGetCapHeight
@@ -1586,7 +1586,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGAffineTransform
-        JsName:          CGAffineTransform
+        Name:            CGAffineTransform
       - Type:            BridgedInterface
         Name:            UIFont
         BridgedTo:       UIFont
@@ -1604,7 +1604,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGRect
+        Name:            CGRect
       - Type:            BridgedInterface
         Name:            UIFont
         BridgedTo:       UIFont
@@ -1615,7 +1615,7 @@ Items:
         ArrayType:       
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGRect
+          Name:            CGRect
       - Type:            Long
       - Type:            ULong
   - Name:            CTFontGetSize
@@ -1767,7 +1767,7 @@ Items:
         ArrayType:       
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGSize
+          Name:            CGSize
       - Type:            Long
   - Name:            CTFontGetXHeight
     JsName:          CTFontGetXHeight
@@ -2470,12 +2470,12 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            IncompleteArray
         ArrayType:       
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGPoint
+          Name:            CGPoint
   - Name:            CTFrameGetLines
     JsName:          CTFrameGetLines
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFrame.h
@@ -2526,7 +2526,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -2557,7 +2557,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -2610,7 +2610,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -2698,24 +2698,24 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGSize
+        Name:            CGSize
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            NSDictionary
         BridgedTo:       NSDictionary
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGSize
+        Name:            CGSize
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreFoundation.CFBase
-          JsName:          CFRange
+          Name:            CFRange
   - Name:            CTGetCoreTextVersion
     JsName:          CTGetCoreTextVersion
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.h
@@ -3034,7 +3034,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGRect
+        Name:            CGRect
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3088,7 +3088,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGRect
+        Name:            CGRect
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3151,7 +3151,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGPoint
+        Name:            CGPoint
   - Name:            CTLineGetStringRange
     JsName:          CTLineGetStringRange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTLine.h
@@ -3166,7 +3166,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3258,7 +3258,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreText.CTParagraphStyle
-          JsName:          CTParagraphStyleSetting
+          Name:            CTParagraphStyleSetting
       - Type:            ULong
   - Name:            CTParagraphStyleCreateCopy
     JsName:          CTParagraphStyleCreateCopy
@@ -3578,7 +3578,7 @@ Items:
       - kCTRubyPositionInline: '3'
       - kCTRubyPositionCount: '4'
     SwiftNameFields: 
-  - Name:            ''
+  - Name:            CTRunDelegateCallbacks
     JsName:          CTRunDelegateCallbacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRunDelegate.h
     Module:          
@@ -3643,7 +3643,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreText.CTRunDelegate
-          JsName:          CTRunDelegateCallbacks
+          Name:            CTRunDelegateCallbacks
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -3699,7 +3699,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CTRunGetAdvances
     JsName:          CTRunGetAdvances
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRun.h
@@ -3718,12 +3718,12 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            IncompleteArray
         ArrayType:       
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGSize
+          Name:            CGSize
   - Name:            CTRunGetAdvancesPtr
     JsName:          CTRunGetAdvancesPtr
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRun.h
@@ -3740,7 +3740,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGSize
+          Name:            CGSize
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3780,17 +3780,17 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            IncompleteArray
         ArrayType:       
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGSize
+          Name:            CGSize
       - Type:            IncompleteArray
         ArrayType:       
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGPoint
+          Name:            CGPoint
   - Name:            CTRunGetGlyphCount
     JsName:          CTRunGetGlyphCount
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRun.h
@@ -3825,7 +3825,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            IncompleteArray
         ArrayType:       
           Type:            Ushort
@@ -3861,7 +3861,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGRect
+        Name:            CGRect
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3870,7 +3870,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CTRunGetPositions
     JsName:          CTRunGetPositions
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRun.h
@@ -3889,12 +3889,12 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            IncompleteArray
         ArrayType:       
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGPoint
+          Name:            CGPoint
   - Name:            CTRunGetPositionsPtr
     JsName:          CTRunGetPositionsPtr
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRun.h
@@ -3911,7 +3911,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreGraphics.CGGeometry
-          JsName:          CGPoint
+          Name:            CGPoint
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -3950,7 +3950,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            IncompleteArray
         ArrayType:       
           Type:            Long
@@ -3986,7 +3986,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -4004,7 +4004,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGAffineTransform
-        JsName:          CGAffineTransform
+        Name:            CGAffineTransform
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -4039,7 +4039,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Pointer
         PointerType:     
           Type:            Double
@@ -4192,7 +4192,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
   - Name:            CTTypesetterCreateLineWithOffset
     JsName:          CTTypesetterCreateLineWithOffset
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTTypesetter.h
@@ -4213,7 +4213,7 @@ Items:
         BridgedTo:       id
       - Type:            Struct
         Module:          CoreFoundation.CFBase
-        JsName:          CFRange
+        Name:            CFRange
       - Type:            Double
   - Name:            CTTypesetterCreateWithAttributedString
     JsName:          CTTypesetterCreateWithAttributedString
@@ -4426,7 +4426,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTLayoutTypes
-            JsName:          JustPCActionSubrecord
+            Name:            JustPCActionSubrecord
           Size:            1
   - Name:            JustPCActionSubrecord
     JsName:          JustPCActionSubrecord
@@ -4615,7 +4615,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTLayoutTypes
-            JsName:          JustWidthDeltaEntry
+            Name:            JustWidthDeltaEntry
           Size:            1
   - Name:            KernIndexArrayHeader
     JsName:          KernIndexArrayHeader
@@ -4722,7 +4722,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          KernKerningPair
+          Name:            KernKerningPair
       - Name:            value
         Signature:       
           Type:            Short
@@ -4816,7 +4816,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          STHeader
+          Name:            STHeader
       - Name:            valueTable
         Signature:       
           Type:            Ushort
@@ -4941,7 +4941,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          STXHeader
+          Name:            STXHeader
       - Name:            flags
         Signature:       
           Type:            UInt
@@ -5038,7 +5038,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          KerxKerningPair
+          Name:            KerxKerningPair
       - Name:            value
         Signature:       
           Type:            Short
@@ -5135,7 +5135,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          STXHeader
+          Name:            STXHeader
       - Name:            valueTable
         Signature:       
           Type:            UInt
@@ -5231,7 +5231,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTLayoutTypes
-            JsName:          LtagStringRange
+            Name:            LtagStringRange
           Size:            1
   - Name:            MortChain
     JsName:          MortChain
@@ -5262,7 +5262,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTLayoutTypes
-            JsName:          MortFeatureEntry
+            Name:            MortFeatureEntry
           Size:            1
   - Name:            MortContextualSubtable
     JsName:          MortContextualSubtable
@@ -5279,7 +5279,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          STHeader
+          Name:            STHeader
       - Name:            substitutionTableOffset
         Signature:       
           Type:            Ushort
@@ -5321,7 +5321,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          STHeader
+          Name:            STHeader
   - Name:            MortLigatureSubtable
     JsName:          MortLigatureSubtable
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/SFNTLayoutTypes.h
@@ -5337,7 +5337,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          STHeader
+          Name:            STHeader
       - Name:            ligatureActionTableOffset
         Signature:       
           Type:            Ushort
@@ -5362,7 +5362,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          STHeader
+          Name:            STHeader
   - Name:            MortTable
     JsName:          MortTable
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/SFNTLayoutTypes.h
@@ -5386,7 +5386,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTLayoutTypes
-            JsName:          MortChain
+            Name:            MortChain
           Size:            1
   - Name:            MorxChain
     JsName:          MorxChain
@@ -5417,7 +5417,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTLayoutTypes
-            JsName:          MortFeatureEntry
+            Name:            MortFeatureEntry
           Size:            1
   - Name:            MorxContextualSubtable
     JsName:          MorxContextualSubtable
@@ -5434,7 +5434,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          STXHeader
+          Name:            STXHeader
       - Name:            substitutionTableOffset
         Signature:       
           Type:            UInt
@@ -5453,7 +5453,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          STXHeader
+          Name:            STXHeader
       - Name:            insertionGlyphTableOffset
         Signature:       
           Type:            UInt
@@ -5472,7 +5472,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          STXHeader
+          Name:            STXHeader
       - Name:            ligatureActionTableOffset
         Signature:       
           Type:            UInt
@@ -5497,7 +5497,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          STXHeader
+          Name:            STXHeader
   - Name:            MorxTable
     JsName:          MorxTable
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreText.framework/Headers/SFNTLayoutTypes.h
@@ -5521,7 +5521,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTLayoutTypes
-            JsName:          MorxChain
+            Name:            MorxChain
           Size:            1
   - Name:            OpbdSideValues
     JsName:          OpbdSideValues
@@ -5684,14 +5684,14 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          SFNTLookupBinarySearchHeader
+          Name:            SFNTLookupBinarySearchHeader
       - Name:            segments
         Signature:       
           Type:            ConstantArray
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTLayoutTypes
-            JsName:          SFNTLookupSegment
+            Name:            SFNTLookupSegment
           Size:            1
   - Name:            SFNTLookupSingle
     JsName:          SFNTLookupSingle
@@ -5728,14 +5728,14 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreText.SFNTLayoutTypes
-          JsName:          SFNTLookupBinarySearchHeader
+          Name:            SFNTLookupBinarySearchHeader
       - Name:            entries
         Signature:       
           Type:            ConstantArray
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTLayoutTypes
-            JsName:          SFNTLookupSingle
+            Name:            SFNTLookupSingle
           Size:            1
   - Name:            SFNTLookupTrimmedArrayHeader
     JsName:          SFNTLookupTrimmedArrayHeader
@@ -6027,7 +6027,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTLayoutTypes
-            JsName:          TrakTableEntry
+            Name:            TrakTableEntry
           Size:            1
   - Name:            TrakTableEntry
     JsName:          TrakTableEntry
@@ -19192,7 +19192,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTTypes
-            JsName:          sfntCMapEncoding
+            Name:            sfntCMapEncoding
           Size:            1
   - Name:            sfntCMapSubHeader
     JsName:          sfntCMapSubHeader
@@ -19237,7 +19237,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTTypes
-            JsName:          sfntFontDescriptor
+            Name:            sfntFontDescriptor
           Size:            1
   - Name:            sfntDirectory
     JsName:          sfntDirectory
@@ -19271,7 +19271,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTTypes
-            JsName:          sfntDirectoryEntry
+            Name:            sfntDirectoryEntry
           Size:            1
   - Name:            sfntDirectoryEntry
     JsName:          sfntDirectoryEntry
@@ -19325,7 +19325,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTTypes
-            JsName:          sfntFeatureName
+            Name:            sfntFeatureName
           Size:            1
       - Name:            settings
         Signature:       
@@ -19333,7 +19333,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTTypes
-            JsName:          sfntFontFeatureSetting
+            Name:            sfntFontFeatureSetting
           Size:            1
       - Name:            runs
         Signature:       
@@ -19341,7 +19341,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTTypes
-            JsName:          sfntFontRunFeature
+            Name:            sfntFontRunFeature
           Size:            1
   - Name:            sfntFeatureName
     JsName:          sfntFeatureName
@@ -19469,7 +19469,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTTypes
-            JsName:          sfntNameRecord
+            Name:            sfntNameRecord
           Size:            1
   - Name:            sfntNameRecord
     JsName:          sfntNameRecord
@@ -19567,7 +19567,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTTypes
-            JsName:          sfntVariationAxis
+            Name:            sfntVariationAxis
           Size:            1
       - Name:            instance
         Signature:       
@@ -19575,7 +19575,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreText.SFNTTypes
-            JsName:          sfntInstance
+            Name:            sfntInstance
           Size:            1
   - Name:            sizeof_sfntCMapEncoding
     JsName:          sizeof_sfntCMapEncoding

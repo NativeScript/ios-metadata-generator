@@ -47,7 +47,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ALAssetRepresentation
+            Name:            ALAssetRepresentation
             WithProtocols:   
       - Name:            'representationForUTI:'
         JsName:          representationForUTI
@@ -62,10 +62,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ALAssetRepresentation
+            Name:            ALAssetRepresentation
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'setImageData:metadata:completionBlock:'
         JsName:          setImageDataMetadataCompletionBlock
@@ -81,19 +81,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'setVideoAtPath:completionBlock:'
         JsName:          setVideoAtPathCompletionBlock
@@ -109,16 +109,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            thumbnail
         JsName:          thumbnail
@@ -150,7 +150,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'writeModifiedImageDataToSavedPhotosAlbum:metadata:completionBlock:'
         JsName:          writeModifiedImageDataToSavedPhotosAlbumMetadataCompletionBlock
@@ -166,19 +166,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeModifiedVideoAtPathToSavedPhotosAlbum:completionBlock:'
         JsName:          writeModifiedVideoAtPathToSavedPhotosAlbumCompletionBlock
@@ -194,16 +194,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -257,7 +257,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ALAsset
+              Name:            ALAsset
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -275,7 +275,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetLibraryInsertedAssetGroupsKey
     JsName:          ALAssetLibraryInsertedAssetGroupsKey
@@ -290,7 +290,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetLibraryUpdatedAssetGroupsKey
     JsName:          ALAssetLibraryUpdatedAssetGroupsKey
@@ -305,7 +305,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetLibraryUpdatedAssetsKey
     JsName:          ALAssetLibraryUpdatedAssetsKey
@@ -320,7 +320,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetOrientation
     JsName:          ALAssetOrientation
@@ -460,7 +460,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetPropertyDate
     JsName:          ALAssetPropertyDate
@@ -475,7 +475,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetPropertyDuration
     JsName:          ALAssetPropertyDuration
@@ -490,7 +490,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetPropertyLocation
     JsName:          ALAssetPropertyLocation
@@ -505,7 +505,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetPropertyOrientation
     JsName:          ALAssetPropertyOrientation
@@ -520,7 +520,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetPropertyRepresentations
     JsName:          ALAssetPropertyRepresentations
@@ -535,7 +535,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetPropertyType
     JsName:          ALAssetPropertyType
@@ -550,7 +550,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetPropertyURLs
     JsName:          ALAssetPropertyURLs
@@ -565,7 +565,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetRepresentation
     JsName:          ALAssetRepresentation
@@ -595,7 +595,7 @@ Items:
             Name:            id
             BridgedTo:       id
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
       - Name:            dimensions
         JsName:          dimensions
@@ -611,7 +611,7 @@ Items:
         Signature:       
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGSize
+            Name:            CGSize
       - Name:            filename
         JsName:          filename
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AssetsLibrary.framework/Headers/ALAssetRepresentation.h
@@ -625,7 +625,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            fullResolutionImage
         JsName:          fullResolutionImage
@@ -676,7 +676,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            metadata
         JsName:          metadata
@@ -691,7 +691,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
       - Name:            orientation
         JsName:          orientation
@@ -746,7 +746,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            UTI
         JsName:          UTI
@@ -761,7 +761,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -781,7 +781,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetTypeUnknown
     JsName:          ALAssetTypeUnknown
@@ -796,7 +796,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetTypeVideo
     JsName:          ALAssetTypeVideo
@@ -811,7 +811,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetsFilter
     JsName:          ALAssetsFilter
@@ -838,7 +838,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ALAssetsFilter
+            Name:            ALAssetsFilter
             WithProtocols:   
       - Name:            allPhotos
         JsName:          allPhotos
@@ -852,7 +852,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ALAssetsFilter
+            Name:            ALAssetsFilter
             WithProtocols:   
       - Name:            allVideos
         JsName:          allVideos
@@ -866,7 +866,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          ALAssetsFilter
+            Name:            ALAssetsFilter
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -898,7 +898,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          ALAsset
+            Name:            ALAsset
             WithProtocols:   
       - Name:            'enumerateAssetsAtIndexes:options:usingBlock:'
         JsName:          enumerateAssetsAtIndexesOptionsUsingBlock
@@ -914,7 +914,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
           - Type:            Enum
             Name:            NSEnumerationOptions
@@ -922,7 +922,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          ALAsset
+                Name:            ALAsset
                 WithProtocols:   
               - Type:            ULong
               - Type:            Pointer
@@ -945,7 +945,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          ALAsset
+                Name:            ALAsset
                 WithProtocols:   
               - Type:            ULong
               - Type:            Pointer
@@ -970,7 +970,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          ALAsset
+                Name:            ALAsset
                 WithProtocols:   
               - Type:            ULong
               - Type:            Pointer
@@ -1018,7 +1018,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          ALAssetsFilter
+            Name:            ALAssetsFilter
             WithProtocols:   
       - Name:            'valueForProperty:'
         JsName:          valueForProperty
@@ -1035,7 +1035,7 @@ Items:
           - Type:            Id
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1152,7 +1152,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetsGroupPropertyPersistentID
     JsName:          ALAssetsGroupPropertyPersistentID
@@ -1167,7 +1167,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetsGroupPropertyType
     JsName:          ALAssetsGroupPropertyType
@@ -1182,7 +1182,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetsGroupPropertyURL
     JsName:          ALAssetsGroupPropertyURL
@@ -1197,7 +1197,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetsGroupSavedPhotos
     JsName:          ALAssetsGroupSavedPhotos
@@ -1237,19 +1237,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          ALAssetsGroup
+                Name:            ALAssetsGroup
                 WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'assetForURL:resultBlock:failureBlock:'
         JsName:          assetForURLResultBlockFailureBlock
@@ -1265,19 +1265,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          ALAsset
+                Name:            ALAsset
                 WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'enumerateGroupsWithTypes:usingBlock:failureBlock:'
         JsName:          enumerateGroupsWithTypesUsingBlockFailureBlock
@@ -1297,7 +1297,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          ALAssetsGroup
+                Name:            ALAssetsGroup
                 WithProtocols:   
               - Type:            Pointer
                 PointerType:     
@@ -1306,7 +1306,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'groupForURL:resultBlock:failureBlock:'
         JsName:          groupForURLResultBlockFailureBlock
@@ -1322,19 +1322,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          ALAssetsGroup
+                Name:            ALAssetsGroup
                 WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'videoAtPathIsCompatibleWithSavedPhotosAlbum:'
         JsName:          videoAtPathIsCompatibleWithSavedPhotosAlbum
@@ -1350,7 +1350,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'writeImageDataToSavedPhotosAlbum:metadata:completionBlock:'
         JsName:          writeImageDataToSavedPhotosAlbumMetadataCompletionBlock
@@ -1366,19 +1366,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeImageToSavedPhotosAlbum:metadata:completionBlock:'
         JsName:          writeImageToSavedPhotosAlbumMetadataCompletionBlock
@@ -1397,16 +1397,16 @@ Items:
             Name:            id
             BridgedTo:       id
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeImageToSavedPhotosAlbum:orientation:completionBlock:'
         JsName:          writeImageToSavedPhotosAlbumOrientationCompletionBlock
@@ -1430,10 +1430,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'writeVideoAtPathToSavedPhotosAlbum:completionBlock:'
         JsName:          writeVideoAtPathToSavedPhotosAlbumCompletionBlock
@@ -1449,16 +1449,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            authorizationStatus
@@ -1527,7 +1527,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetsLibraryDataUnavailableError
     JsName:          ALAssetsLibraryDataUnavailableError
@@ -1553,7 +1553,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            ALAssetsLibraryUnknownError
     JsName:          ALAssetsLibraryUnknownError
@@ -1714,6 +1714,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

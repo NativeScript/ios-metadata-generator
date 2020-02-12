@@ -43,7 +43,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
       - Name:            didSelectCancel
         JsName:          didSelectCancel
@@ -93,7 +93,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIView
+            Name:            UIView
             WithProtocols:   
       - Name:            popConfigurationViewController
         JsName:          popConfigurationViewController
@@ -132,7 +132,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          UIViewController
+            Name:            UIViewController
             WithProtocols:   
       - Name:            reloadConfigurationItems
         JsName:          reloadConfigurationItems
@@ -183,7 +183,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIViewController
+              Name:            UIViewController
               WithProtocols:   
         Setter:          
           Name:            'setAutoCompletionViewController:'
@@ -199,7 +199,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          UIViewController
+              Name:            UIViewController
               WithProtocols:   
       - Name:            charactersRemaining
         JsName:          charactersRemaining
@@ -224,7 +224,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setCharactersRemaining:'
@@ -240,7 +240,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            contentText
         JsName:          contentText
@@ -265,7 +265,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            placeholder
         JsName:          placeholder
@@ -290,7 +290,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setPlaceholder:'
@@ -306,7 +306,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            textView
         JsName:          textView
@@ -331,7 +331,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UITextView
+              Name:            UITextView
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -415,7 +415,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setTitle:'
@@ -431,7 +431,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            value
         JsName:          value
@@ -456,7 +456,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setValue:'
@@ -472,7 +472,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            valuePending
         JsName:          valuePending
@@ -539,7 +539,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
       - Name:            'addURL:'
         JsName:          addURL
@@ -554,7 +554,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            removeAllImages
         JsName:          removeAllImages
@@ -593,7 +593,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'composeViewControllerForServiceType:'
@@ -608,10 +608,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          SLComposeViewController
+            Name:            SLComposeViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'isAvailableForServiceType:'
         JsName:          isAvailableForServiceType
@@ -626,7 +626,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            completionHandler
@@ -697,7 +697,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -765,16 +765,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'performRequestWithHandler:'
         JsName:          performRequestWithHandler
@@ -792,13 +792,13 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSHTTPURLResponse
+                Name:            NSHTTPURLResponse
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            preparedURLRequest
         JsName:          preparedURLRequest
@@ -812,7 +812,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSURLRequest
+            Name:            NSURLRequest
             WithProtocols:   
     StaticMethods:   
       - Name:            'requestForServiceType:requestMethod:URL:parameters:'
@@ -827,18 +827,18 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          SLRequest
+            Name:            SLRequest
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            SLRequestMethod
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             WithProtocols:   
     InstanceProperties: 
       - Name:            account
@@ -864,7 +864,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          ACAccount
+              Name:            ACAccount
               WithProtocols:   
         Setter:          
           Name:            'setAccount:'
@@ -880,7 +880,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          ACAccount
+              Name:            ACAccount
               WithProtocols:   
       - Name:            parameters
         JsName:          parameters
@@ -905,7 +905,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               WithProtocols:   
       - Name:            requestMethod
         JsName:          requestMethod
@@ -954,7 +954,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1036,7 +1036,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SLServiceTypeLinkedIn
     JsName:          SLServiceTypeLinkedIn
@@ -1051,7 +1051,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SLServiceTypeSinaWeibo
     JsName:          SLServiceTypeSinaWeibo
@@ -1066,7 +1066,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SLServiceTypeTencentWeibo
     JsName:          SLServiceTypeTencentWeibo
@@ -1081,7 +1081,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            SLServiceTypeTwitter
     JsName:          SLServiceTypeTwitter
@@ -1096,6 +1096,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

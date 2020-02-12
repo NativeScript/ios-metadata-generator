@@ -188,7 +188,7 @@ Items:
                   PointerType:     
                     Type:            Struct
                     Module:          SQLite3
-                    JsName:          Fts5ExtensionApi
+                    Name:            Fts5ExtensionApi
                 - Type:            Pointer
                   PointerType:     
                     Type:            Void
@@ -236,7 +236,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          Fts5PhraseIter
+                Name:            Fts5PhraseIter
             - Type:            Pointer
               PointerType:     
                 Type:            Int
@@ -255,7 +255,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          Fts5PhraseIter
+                Name:            Fts5PhraseIter
             - Type:            Pointer
               PointerType:     
                 Type:            Int
@@ -275,7 +275,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          Fts5PhraseIter
+                Name:            Fts5PhraseIter
             - Type:            Pointer
               PointerType:     
                 Type:            Int
@@ -291,7 +291,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          Fts5PhraseIter
+                Name:            Fts5PhraseIter
             - Type:            Pointer
               PointerType:     
                 Type:            Int
@@ -339,7 +339,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          fts5_api
+                Name:            fts5_api
             - Type:            CString
             - Type:            Pointer
               PointerType:     
@@ -348,7 +348,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          fts5_tokenizer
+                Name:            fts5_tokenizer
             - Type:            FunctionPointer
               Signature:       
                 - Type:            Void
@@ -364,7 +364,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          fts5_api
+                Name:            fts5_api
             - Type:            CString
             - Type:            Pointer
               PointerType:     
@@ -375,7 +375,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          fts5_tokenizer
+                Name:            fts5_tokenizer
       - Name:            xCreateFunction
         Signature:       
           Type:            FunctionPointer
@@ -385,7 +385,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          fts5_api
+                Name:            fts5_api
             - Type:            CString
             - Type:            Pointer
               PointerType:     
@@ -397,7 +397,7 @@ Items:
                   PointerType:     
                     Type:            Struct
                     Module:          SQLite3
-                    JsName:          Fts5ExtensionApi
+                    Name:            Fts5ExtensionApi
                 - Type:            Pointer
                   PointerType:     
                     Type:            Void
@@ -2112,7 +2112,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          SQLite3
-          JsName:          sqlite3_module
+          Name:            sqlite3_module
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -2138,7 +2138,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          SQLite3
-          JsName:          sqlite3_module
+          Name:            sqlite3_module
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -2635,7 +2635,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          SQLite3
-            JsName:          sqlite3_io_methods
+            Name:            sqlite3_io_methods
   - Name:            sqlite3_file_control
     JsName:          sqlite3_file_control
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/sqlite3.h
@@ -2859,7 +2859,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          SQLite3
-            JsName:          sqlite3_index_constraint
+            Name:            sqlite3_index_constraint
       - Name:            nOrderBy
         Signature:       
           Type:            Int
@@ -2869,14 +2869,14 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          SQLite3
-            JsName:          sqlite3_index_orderby
+            Name:            sqlite3_index_orderby
       - Name:            aConstraintUsage
         Signature:       
           Type:            Pointer
           PointerType:     
             Type:            Struct
             Module:          SQLite3
-            JsName:          sqlite3_index_constraint_usage
+            Name:            sqlite3_index_constraint_usage
       - Name:            idxNum
         Signature:       
           Type:            Int
@@ -2976,7 +2976,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
       - Name:            xRead
         Signature:       
           Type:            FunctionPointer
@@ -2986,7 +2986,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Pointer
               PointerType:     
                 Type:            Void
@@ -3001,7 +3001,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Pointer
               PointerType:     
                 Type:            Void
@@ -3016,7 +3016,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            LongLong
       - Name:            xSync
         Signature:       
@@ -3027,7 +3027,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Int
       - Name:            xFileSize
         Signature:       
@@ -3038,7 +3038,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Pointer
               PointerType:     
                 Type:            LongLong
@@ -3051,7 +3051,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Int
       - Name:            xUnlock
         Signature:       
@@ -3062,7 +3062,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Int
       - Name:            xCheckReservedLock
         Signature:       
@@ -3073,7 +3073,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Pointer
               PointerType:     
                 Type:            Int
@@ -3086,7 +3086,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Int
             - Type:            Pointer
               PointerType:     
@@ -3100,7 +3100,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
       - Name:            xDeviceCharacteristics
         Signature:       
           Type:            FunctionPointer
@@ -3110,7 +3110,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
       - Name:            xShmMap
         Signature:       
           Type:            FunctionPointer
@@ -3120,7 +3120,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Int
             - Type:            Int
             - Type:            Int
@@ -3138,7 +3138,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Int
             - Type:            Int
             - Type:            Int
@@ -3151,7 +3151,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
       - Name:            xShmUnmap
         Signature:       
           Type:            FunctionPointer
@@ -3161,7 +3161,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Int
       - Name:            xFetch
         Signature:       
@@ -3172,7 +3172,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            LongLong
             - Type:            Int
             - Type:            Pointer
@@ -3189,7 +3189,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            LongLong
             - Type:            Pointer
               PointerType:     
@@ -3515,7 +3515,7 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          SQLite3
-                  JsName:          sqlite3_vtab
+                  Name:            sqlite3_vtab
             - Type:            Pointer
               PointerType:     
                 Type:            CString
@@ -3540,7 +3540,7 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          SQLite3
-                  JsName:          sqlite3_vtab
+                  Name:            sqlite3_vtab
             - Type:            Pointer
               PointerType:     
                 Type:            CString
@@ -3553,12 +3553,12 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
             - Type:            Pointer
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_index_info
+                Name:            sqlite3_index_info
       - Name:            xDisconnect
         Signature:       
           Type:            FunctionPointer
@@ -3568,7 +3568,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
       - Name:            xDestroy
         Signature:       
           Type:            FunctionPointer
@@ -3578,7 +3578,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
       - Name:            xOpen
         Signature:       
           Type:            FunctionPointer
@@ -3588,14 +3588,14 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
             - Type:            Pointer
               PointerType:     
                 Type:            Pointer
                 PointerType:     
                   Type:            Struct
                   Module:          SQLite3
-                  JsName:          sqlite3_vtab_cursor
+                  Name:            sqlite3_vtab_cursor
       - Name:            xClose
         Signature:       
           Type:            FunctionPointer
@@ -3605,7 +3605,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab_cursor
+                Name:            sqlite3_vtab_cursor
       - Name:            xFilter
         Signature:       
           Type:            FunctionPointer
@@ -3615,7 +3615,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab_cursor
+                Name:            sqlite3_vtab_cursor
             - Type:            Int
             - Type:            CString
             - Type:            Int
@@ -3633,7 +3633,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab_cursor
+                Name:            sqlite3_vtab_cursor
       - Name:            xEof
         Signature:       
           Type:            FunctionPointer
@@ -3643,7 +3643,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab_cursor
+                Name:            sqlite3_vtab_cursor
       - Name:            xColumn
         Signature:       
           Type:            FunctionPointer
@@ -3653,7 +3653,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab_cursor
+                Name:            sqlite3_vtab_cursor
             - Type:            Pointer
               PointerType:     
                 Type:            Void
@@ -3667,7 +3667,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab_cursor
+                Name:            sqlite3_vtab_cursor
             - Type:            Pointer
               PointerType:     
                 Type:            LongLong
@@ -3680,7 +3680,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
             - Type:            Int
             - Type:            Pointer
               PointerType:     
@@ -3699,7 +3699,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
       - Name:            xSync
         Signature:       
           Type:            FunctionPointer
@@ -3709,7 +3709,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
       - Name:            xCommit
         Signature:       
           Type:            FunctionPointer
@@ -3719,7 +3719,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
       - Name:            xRollback
         Signature:       
           Type:            FunctionPointer
@@ -3729,7 +3729,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
       - Name:            xFindFunction
         Signature:       
           Type:            FunctionPointer
@@ -3739,7 +3739,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
             - Type:            Int
             - Type:            CString
             - Type:            Pointer
@@ -3770,7 +3770,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
             - Type:            CString
       - Name:            xSavepoint
         Signature:       
@@ -3781,7 +3781,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
             - Type:            Int
       - Name:            xRelease
         Signature:       
@@ -3792,7 +3792,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
             - Type:            Int
       - Name:            xRollbackTo
         Signature:       
@@ -3803,7 +3803,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vtab
+                Name:            sqlite3_vtab
             - Type:            Int
       - Name:            xShadowName
         Signature:       
@@ -4312,7 +4312,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_pcache_page
+                Name:            sqlite3_pcache_page
             - Type:            Pointer
               PointerType:     
                 Type:            Void
@@ -4330,7 +4330,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_pcache_page
+                Name:            sqlite3_pcache_page
             - Type:            Int
       - Name:            xRekey
         Signature:       
@@ -4344,7 +4344,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_pcache_page
+                Name:            sqlite3_pcache_page
             - Type:            UInt
             - Type:            UInt
       - Name:            xTruncate
@@ -5284,7 +5284,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          SQLite3
-              JsName:          sqlite3_rtree_geometry
+              Name:            sqlite3_rtree_geometry
           - Type:            Int
           - Type:            Pointer
             PointerType:     
@@ -5321,7 +5321,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          SQLite3
-              JsName:          sqlite3_rtree_query_info
+              Name:            sqlite3_rtree_query_info
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -6649,7 +6649,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          SQLite3
-            JsName:          sqlite3_vfs
+            Name:            sqlite3_vfs
       - Name:            zName
         Signature:       
           Type:            CString
@@ -6667,13 +6667,13 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            CString
             - Type:            Pointer
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_file
+                Name:            sqlite3_file
             - Type:            Int
             - Type:            Pointer
               PointerType:     
@@ -6687,7 +6687,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            CString
             - Type:            Int
       - Name:            xAccess
@@ -6699,7 +6699,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            CString
             - Type:            Int
             - Type:            Pointer
@@ -6714,7 +6714,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            CString
             - Type:            Int
             - Type:            CString
@@ -6729,7 +6729,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            CString
       - Name:            xDlError
         Signature:       
@@ -6740,7 +6740,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            Int
             - Type:            CString
       - Name:            xDlSym
@@ -6754,7 +6754,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            Pointer
               PointerType:     
                 Type:            Void
@@ -6768,7 +6768,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            Pointer
               PointerType:     
                 Type:            Void
@@ -6781,7 +6781,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            Int
             - Type:            CString
       - Name:            xSleep
@@ -6793,7 +6793,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            Int
       - Name:            xCurrentTime
         Signature:       
@@ -6804,7 +6804,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            Pointer
               PointerType:     
                 Type:            Double
@@ -6817,7 +6817,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            Int
             - Type:            CString
       - Name:            xCurrentTimeInt64
@@ -6829,7 +6829,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            Pointer
               PointerType:     
                 Type:            LongLong
@@ -6842,7 +6842,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            CString
             - Type:            FunctionPointer
               Signature:       
@@ -6858,7 +6858,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            CString
       - Name:            xNextSystemCall
         Signature:       
@@ -6869,7 +6869,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          SQLite3
-                JsName:          sqlite3_vfs
+                Name:            sqlite3_vfs
             - Type:            CString
   - Name:            sqlite3_vfs_find
     JsName:          sqlite3_vfs_find
@@ -6888,7 +6888,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          SQLite3
-          JsName:          sqlite3_vfs
+          Name:            sqlite3_vfs
       - Type:            CString
   - Name:            sqlite3_vfs_register
     JsName:          sqlite3_vfs_register
@@ -6908,7 +6908,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          SQLite3
-          JsName:          sqlite3_vfs
+          Name:            sqlite3_vfs
       - Type:            Int
   - Name:            sqlite3_vfs_unregister
     JsName:          sqlite3_vfs_unregister
@@ -6928,7 +6928,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          SQLite3
-          JsName:          sqlite3_vfs
+          Name:            sqlite3_vfs
   - Name:            sqlite3_vtab
     JsName:          sqlite3_vtab
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/sqlite3.h
@@ -6948,7 +6948,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          SQLite3
-            JsName:          sqlite3_module
+            Name:            sqlite3_module
       - Name:            nRef
         Signature:       
           Type:            Int
@@ -6974,7 +6974,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          SQLite3
-            JsName:          sqlite3_vtab
+            Name:            sqlite3_vtab
   - Name:            sqlite3_vtab_nochange
     JsName:          sqlite3_vtab_nochange
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/sqlite3.h

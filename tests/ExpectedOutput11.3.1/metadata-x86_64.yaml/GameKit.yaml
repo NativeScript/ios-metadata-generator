@@ -32,7 +32,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithIdentifier:player:'
         JsName:          initWithIdentifierPlayer
@@ -48,10 +48,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
       - Name:            'initWithIdentifier:forPlayer:'
         JsName:          initWithIdentifierForPlayer
@@ -67,10 +67,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'reportAchievementWithCompletionHandler:'
         JsName:          reportAchievementWithCompletionHandler
@@ -89,7 +89,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'challengeComposeControllerWithMessage:players:completionHandler:'
         JsName:          challengeComposeControllerWithMessagePlayersCompletionHandler
@@ -104,30 +104,30 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIViewController
+            Name:            UIViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPlayer
+                Name:            GKPlayer
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIViewController
+                Name:            UIViewController
                 WithProtocols:   
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'issueChallengeToPlayers:message:'
@@ -144,14 +144,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'selectChallengeablePlayers:withCompletionHandler:'
         JsName:          selectChallengeablePlayersWithCompletionHandler
@@ -167,24 +167,24 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPlayer
+                Name:            GKPlayer
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKPlayer
+                    Name:            GKPlayer
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'challengeComposeControllerWithPlayers:message:completionHandler:'
         JsName:          challengeComposeControllerWithPlayersMessageCompletionHandler
@@ -199,30 +199,30 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIViewController
+            Name:            UIViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIViewController
+                Name:            UIViewController
                 WithProtocols:   
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'issueChallengeToPlayers:message:'
@@ -239,14 +239,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'selectChallengeablePlayerIDs:withCompletionHandler:'
         JsName:          selectChallengeablePlayerIDsWithCompletionHandler
@@ -262,24 +262,24 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'loadAchievementsWithCompletionHandler:'
@@ -298,14 +298,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKAchievement
+                    Name:            GKAchievement
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'reportAchievements:withCompletionHandler:'
         JsName:          reportAchievementsWithCompletionHandler
@@ -321,17 +321,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKAchievement
+                Name:            GKAchievement
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'resetAchievementsWithCompletionHandler:'
         JsName:          resetAchievementsWithCompletionHandler
@@ -349,7 +349,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'reportAchievements:withEligibleChallenges:withCompletionHandler:'
         JsName:          reportAchievementsWithEligibleChallengesWithCompletionHandler
@@ -365,24 +365,24 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKAchievement
+                Name:            GKAchievement
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKChallenge
+                Name:            GKChallenge
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
       - Name:            completed
@@ -431,7 +431,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setIdentifier:'
@@ -447,7 +447,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            lastReportedDate
         JsName:          lastReportedDate
@@ -472,7 +472,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            percentComplete
         JsName:          percentComplete
@@ -536,7 +536,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKPlayer
+              Name:            GKPlayer
               WithProtocols:   
       - Name:            showsCompletionBanner
         JsName:          showsCompletionBanner
@@ -628,7 +628,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -672,7 +672,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKAchievement
+              Name:            GKAchievement
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -705,10 +705,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIImage
+                Name:            UIImage
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'loadAchievementDescriptionsWithCompletionHandler:'
@@ -727,14 +727,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKAchievementDescription
+                    Name:            GKAchievementDescription
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            incompleteAchievementImage
         JsName:          incompleteAchievementImage
@@ -748,7 +748,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
       - Name:            placeholderCompletedAchievementImage
         JsName:          placeholderCompletedAchievementImage
@@ -762,7 +762,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIImage
+            Name:            UIImage
             WithProtocols:   
     InstanceProperties: 
       - Name:            achievedDescription
@@ -788,7 +788,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            groupIdentifier
         JsName:          groupIdentifier
@@ -815,7 +815,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            hidden
         JsName:          hidden
@@ -863,7 +863,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maximumPoints
         JsName:          maximumPoints
@@ -936,7 +936,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            unachievedDescription
         JsName:          unachievedDescription
@@ -961,7 +961,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            image
         JsName:          image
@@ -988,7 +988,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1078,7 +1078,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKAchievementViewController
+            Name:            GKAchievementViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1173,7 +1173,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            playerID
         JsName:          playerID
@@ -1198,7 +1198,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1244,14 +1244,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKChallenge
+                    Name:            GKChallenge
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
       - Name:            completionDate
@@ -1277,7 +1277,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            issueDate
         JsName:          issueDate
@@ -1302,7 +1302,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            issuingPlayer
         JsName:          issuingPlayer
@@ -1329,7 +1329,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKPlayer
+              Name:            GKPlayer
               WithProtocols:   
       - Name:            issuingPlayerID
         JsName:          issuingPlayerID
@@ -1356,7 +1356,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            message
         JsName:          message
@@ -1381,7 +1381,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            receivingPlayer
         JsName:          receivingPlayer
@@ -1408,7 +1408,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKPlayer
+              Name:            GKPlayer
               WithProtocols:   
       - Name:            receivingPlayerID
         JsName:          receivingPlayerID
@@ -1435,7 +1435,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            state
         JsName:          state
@@ -1492,7 +1492,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKChallengeEventHandler
+            Name:            GKChallengeEventHandler
             WithProtocols:   
     InstanceProperties: 
       - Name:            delegate
@@ -1567,7 +1567,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKChallenge
+            Name:            GKChallenge
             WithProtocols:   
       - Name:            'localPlayerDidReceiveChallenge:'
         JsName:          localPlayerDidReceiveChallenge
@@ -1582,7 +1582,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKChallenge
+            Name:            GKChallenge
             WithProtocols:   
       - Name:            'localPlayerDidSelectChallenge:'
         JsName:          localPlayerDidSelectChallenge
@@ -1597,7 +1597,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKChallenge
+            Name:            GKChallenge
             WithProtocols:   
       - Name:            'remotePlayerDidCompleteChallenge:'
         JsName:          remotePlayerDidCompleteChallenge
@@ -1612,7 +1612,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKChallenge
+            Name:            GKChallenge
             WithProtocols:   
       - Name:            'shouldShowBannerForLocallyCompletedChallenge:'
         JsName:          shouldShowBannerForLocallyCompletedChallenge
@@ -1627,7 +1627,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          GKChallenge
+            Name:            GKChallenge
             WithProtocols:   
       - Name:            'shouldShowBannerForLocallyReceivedChallenge:'
         JsName:          shouldShowBannerForLocallyReceivedChallenge
@@ -1642,7 +1642,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          GKChallenge
+            Name:            GKChallenge
             WithProtocols:   
       - Name:            'shouldShowBannerForRemotelyCompletedChallenge:'
         JsName:          shouldShowBannerForRemotelyCompletedChallenge
@@ -1657,7 +1657,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          GKChallenge
+            Name:            GKChallenge
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1689,13 +1689,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKChallenge
+            Name:            GKChallenge
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
       - Name:            'player:didReceiveChallenge:'
         JsName:          playerDidReceiveChallenge
@@ -1711,10 +1711,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKChallenge
+            Name:            GKChallenge
             WithProtocols:   
       - Name:            'player:issuedChallengeWasCompleted:byFriend:'
         JsName:          playerIssuedChallengeWasCompletedByFriend
@@ -1730,13 +1730,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKChallenge
+            Name:            GKChallenge
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
       - Name:            'player:wantsToPlayChallenge:'
         JsName:          playerWantsToPlayChallenge
@@ -1752,10 +1752,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKChallenge
+            Name:            GKChallenge
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1852,16 +1852,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKCloudPlayer
+                Name:            GKCloudPlayer
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -2046,7 +2046,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GKErrorGameSessionRequestInvalid
     JsName:          GKErrorGameSessionRequestInvalid
@@ -2386,10 +2386,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPlayer
+                Name:            GKPlayer
                 WithProtocols:   
             WithProtocols:   
       - Name:            'addRecipientsWithEmailAddresses:'
@@ -2405,10 +2405,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'addRecipientsWithPlayerIDs:'
@@ -2425,10 +2425,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'setMessage:'
@@ -2444,7 +2444,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            maxNumberOfRecipients
@@ -2533,7 +2533,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKFriendRequestComposeViewController
+            Name:            GKFriendRequestComposeViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2564,7 +2564,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKGameCenterViewController
+            Name:            GKGameCenterViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2690,7 +2690,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLeaderboardCategory:'
@@ -2707,7 +2707,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            leaderboardIdentifier
         JsName:          leaderboardIdentifier
@@ -2734,7 +2734,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLeaderboardIdentifier:'
@@ -2751,7 +2751,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            leaderboardTimeScope
         JsName:          leaderboardTimeScope
@@ -2887,17 +2887,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKCloudPlayer
+                Name:            GKCloudPlayer
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'getShareURLWithCompletionHandler:'
         JsName:          getShareURLWithCompletionHandler
@@ -2915,10 +2915,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadDataWithCompletionHandler:'
         JsName:          loadDataWithCompletionHandler
@@ -2936,10 +2936,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'playersWithConnectionState:'
         JsName:          playersWithConnectionState
@@ -2953,10 +2953,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKCloudPlayer
+                Name:            GKCloudPlayer
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -2974,16 +2974,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendData:withTransportType:completionHandler:'
         JsName:          sendDataWithTransportTypeCompletionHandler
@@ -2998,7 +2998,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Enum
             Name:            GKTransportType
@@ -3006,7 +3006,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendMessageWithLocalizedFormatKey:arguments:data:toPlayers:badgePlayers:completionHandler:'
         JsName:          sendMessageWithLocalizedFormatKeyArgumentsDataToPlayersBadgePlayersCompletionHandler
@@ -3021,23 +3021,23 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKCloudPlayer
+                Name:            GKCloudPlayer
                 WithProtocols:   
             WithProtocols:   
           - Type:            Bool
@@ -3045,7 +3045,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'setConnectionState:completionHandler:'
         JsName:          setConnectionStateCompletionHandler
@@ -3065,7 +3065,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'createSessionInContainer:withTitle:maxConnectedPlayers:completionHandler:'
@@ -3081,20 +3081,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Long
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKGameSession
+                Name:            GKGameSession
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadSessionsInContainer:completionHandler:'
         JsName:          loadSessionsInContainerCompletionHandler
@@ -3109,20 +3109,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKGameSession
+                    Name:            GKGameSession
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadSessionWithIdentifier:completionHandler:'
         JsName:          loadSessionWithIdentifierCompletionHandler
@@ -3137,16 +3137,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKGameSession
+                Name:            GKGameSession
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeSessionWithIdentifier:completionHandler:'
         JsName:          removeSessionWithIdentifierCompletionHandler
@@ -3161,13 +3161,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'addEventListener:'
         JsName:          addEventListener
@@ -3183,7 +3183,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - GKGameSessionEventListener
       - Name:            'removeEventListener:'
@@ -3200,7 +3200,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - GKGameSessionEventListener
     InstanceProperties: 
@@ -3227,10 +3227,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKCloudPlayer
+                  Name:            GKCloudPlayer
                   WithProtocols:   
               WithProtocols:   
       - Name:            identifier
@@ -3256,7 +3256,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            lastModifiedDate
         JsName:          lastModifiedDate
@@ -3281,7 +3281,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            lastModifiedPlayer
         JsName:          lastModifiedPlayer
@@ -3306,7 +3306,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKCloudPlayer
+              Name:            GKCloudPlayer
               WithProtocols:   
       - Name:            maxNumberOfConnectedPlayers
         JsName:          maxNumberOfConnectedPlayers
@@ -3354,7 +3354,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKCloudPlayer
+              Name:            GKCloudPlayer
               WithProtocols:   
       - Name:            players
         JsName:          players
@@ -3379,10 +3379,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKCloudPlayer
+                  Name:            GKCloudPlayer
                   WithProtocols:   
               WithProtocols:   
       - Name:            title
@@ -3408,7 +3408,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3526,7 +3526,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GKGameSessionErrorInvalidSession
     JsName:          GKGameSessionErrorInvalidSession
@@ -3674,10 +3674,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKGameSession
+            Name:            GKGameSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKCloudPlayer
+            Name:            GKCloudPlayer
             WithProtocols:   
       - Name:            'session:didReceiveData:fromPlayer:'
         JsName:          sessionDidReceiveDataFromPlayer
@@ -3692,13 +3692,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKGameSession
+            Name:            GKGameSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKCloudPlayer
+            Name:            GKCloudPlayer
             WithProtocols:   
       - Name:            'session:didReceiveMessage:withData:fromPlayer:'
         JsName:          sessionDidReceiveMessageWithDataFromPlayer
@@ -3713,16 +3713,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKGameSession
+            Name:            GKGameSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKCloudPlayer
+            Name:            GKCloudPlayer
             WithProtocols:   
       - Name:            'session:didRemovePlayer:'
         JsName:          sessionDidRemovePlayer
@@ -3737,10 +3737,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKGameSession
+            Name:            GKGameSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKCloudPlayer
+            Name:            GKCloudPlayer
             WithProtocols:   
       - Name:            'session:player:didChangeConnectionState:'
         JsName:          sessionPlayerDidChangeConnectionState
@@ -3755,10 +3755,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKGameSession
+            Name:            GKGameSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKCloudPlayer
+            Name:            GKCloudPlayer
             WithProtocols:   
           - Type:            Enum
             Name:            GKConnectionState
@@ -3775,13 +3775,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKGameSession
+            Name:            GKGameSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKCloudPlayer
+            Name:            GKCloudPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3850,7 +3850,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            playerAttributes
         JsName:          playerAttributes
@@ -3927,7 +3927,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKPlayer
+              Name:            GKPlayer
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3957,10 +3957,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKInvite
+            Name:            GKInvite
             WithProtocols:   
       - Name:            'player:didRequestMatchWithPlayers:'
         JsName:          playerDidRequestMatchWithPlayers
@@ -3976,13 +3976,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'player:didRequestMatchWithRecipients:'
@@ -3999,13 +3999,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPlayer
+                Name:            GKPlayer
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -4206,10 +4206,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPlayer
+                Name:            GKPlayer
                 WithProtocols:   
             WithProtocols:   
       - Name:            'loadScoresWithCompletionHandler:'
@@ -4228,14 +4228,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKScore
+                    Name:            GKScore
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'initWithPlayerIDs:'
         JsName:          initWithPlayerIDs
@@ -4251,10 +4251,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'loadImageWithCompletionHandler:'
@@ -4274,10 +4274,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIImage
+                Name:            UIImage
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'loadLeaderboardsWithCompletionHandler:'
@@ -4297,14 +4297,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKLeaderboard
+                    Name:            GKLeaderboard
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadCategoriesWithCompletionHandler:'
         JsName:          loadCategoriesWithCompletionHandler
@@ -4323,21 +4323,21 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'setDefaultLeaderboard:withCompletionHandler:'
         JsName:          setDefaultLeaderboardWithCompletionHandler
@@ -4353,13 +4353,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
       - Name:            groupIdentifier
@@ -4387,7 +4387,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -4414,7 +4414,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setIdentifier:'
@@ -4431,7 +4431,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            loading
         JsName:          loading
@@ -4479,7 +4479,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKScore
+              Name:            GKScore
               WithProtocols:   
       - Name:            maxRange
         JsName:          maxRange
@@ -4567,7 +4567,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          Foundation.NSRange
-              JsName:          NSRange
+              Name:            NSRange
         Setter:          
           Name:            'setRange:'
           JsName:          setRange
@@ -4583,7 +4583,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          Foundation.NSRange
-              JsName:          NSRange
+              Name:            NSRange
       - Name:            scores
         JsName:          scores
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/GameKit.framework/Headers/GKLeaderboard.h
@@ -4607,10 +4607,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKScore
+                  Name:            GKScore
                   WithProtocols:   
               WithProtocols:   
       - Name:            timeScope
@@ -4675,7 +4675,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            category
         JsName:          category
@@ -4702,7 +4702,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCategory:'
@@ -4719,7 +4719,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4791,14 +4791,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKLeaderboard
+                    Name:            GKLeaderboard
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadImageWithCompletionHandler:'
         JsName:          loadImageWithCompletionHandler
@@ -4816,10 +4816,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIImage
+                Name:            UIImage
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'loadLeaderboardSetsWithCompletionHandler:'
@@ -4839,14 +4839,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKLeaderboardSet
+                    Name:            GKLeaderboardSet
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
       - Name:            groupIdentifier
@@ -4872,7 +4872,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -4897,7 +4897,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setIdentifier:'
@@ -4913,7 +4913,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -4938,7 +4938,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5033,7 +5033,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCategory:'
@@ -5049,7 +5049,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            leaderboardDelegate
         JsName:          leaderboardDelegate
@@ -5159,7 +5159,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKLeaderboardViewController
+            Name:            GKLeaderboardViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -5195,17 +5195,17 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSURL
+                Name:            NSURL
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            ULongLong
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadChallengableFriendsWithCompletionHandler:'
         JsName:          loadChallengableFriendsWithCompletionHandler
@@ -5223,14 +5223,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKPlayer
+                    Name:            GKPlayer
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadDefaultLeaderboardIdentifierWithCompletionHandler:'
         JsName:          loadDefaultLeaderboardIdentifierWithCompletionHandler
@@ -5249,10 +5249,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadRecentPlayersWithCompletionHandler:'
         JsName:          loadRecentPlayersWithCompletionHandler
@@ -5271,14 +5271,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKPlayer
+                    Name:            GKPlayer
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'setDefaultLeaderboardIdentifier:completionHandler:'
         JsName:          setDefaultLeaderboardIdentifierCompletionHandler
@@ -5294,13 +5294,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'registerListener:'
         JsName:          registerListener
@@ -5364,7 +5364,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadDefaultLeaderboardCategoryIDWithCompletionHandler:'
         JsName:          loadDefaultLeaderboardCategoryIDWithCompletionHandler
@@ -5383,10 +5383,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadFriendPlayersWithCompletionHandler:'
         JsName:          loadFriendPlayersWithCompletionHandler
@@ -5405,14 +5405,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKPlayer
+                    Name:            GKPlayer
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadFriendsWithCompletionHandler:'
         JsName:          loadFriendsWithCompletionHandler
@@ -5431,14 +5431,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'setDefaultLeaderboardCategoryID:completionHandler:'
         JsName:          setDefaultLeaderboardCategoryIDCompletionHandler
@@ -5454,13 +5454,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'deleteSavedGamesWithName:completionHandler:'
         JsName:          deleteSavedGamesWithNameCompletionHandler
@@ -5476,13 +5476,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'fetchSavedGamesWithCompletionHandler:'
         JsName:          fetchSavedGamesWithCompletionHandler
@@ -5501,14 +5501,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKSavedGame
+                    Name:            GKSavedGame
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'resolveConflictingSavedGames:withData:completionHandler:'
         JsName:          resolveConflictingSavedGamesWithDataCompletionHandler
@@ -5524,27 +5524,27 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKSavedGame
+                Name:            GKSavedGame
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKSavedGame
+                    Name:            GKSavedGame
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveGameData:withName:completionHandler:'
         JsName:          saveGameDataWithNameCompletionHandler
@@ -5560,19 +5560,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKSavedGame
+                Name:            GKSavedGame
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -5627,10 +5627,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          UIViewController
+                  Name:            UIViewController
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
         Setter:          
           Name:            'setAuthenticateHandler:'
@@ -5650,10 +5650,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          UIViewController
+                  Name:            UIViewController
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSError
+                  Name:            NSError
                   WithProtocols:   
       - Name:            multiplayerGamingRestricted
         JsName:          multiplayerGamingRestricted
@@ -5728,10 +5728,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -5760,7 +5760,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKLocalPlayer
+              Name:            GKLocalPlayer
               WithProtocols:   
       - Name:            localPlayer
         JsName:          localPlayer
@@ -5785,7 +5785,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKLocalPlayer
+              Name:            GKLocalPlayer
               WithProtocols:   
     Protocols:       
       - GKSavedGameListener
@@ -5838,7 +5838,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKPlayer
+                Name:            GKPlayer
                 WithProtocols:   
       - Name:            disconnect
         JsName:          disconnect
@@ -5869,10 +5869,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKMatch
+                Name:            GKMatch
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendDataToAllPlayers:withDataMode:error:'
         JsName:          sendDataToAllPlayersWithDataModeError
@@ -5887,14 +5887,14 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Enum
             Name:            GKMatchSendDataMode
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'sendData:toPlayers:dataMode:error:'
         JsName:          sendDataToPlayersDataModeError
@@ -5910,13 +5910,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPlayer
+                Name:            GKPlayer
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -5924,7 +5924,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'voiceChatWithName:'
         JsName:          voiceChatWithName
@@ -5938,10 +5938,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKVoiceChat
+            Name:            GKVoiceChat
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'chooseBestHostPlayerWithCompletionHandler:'
         JsName:          chooseBestHostPlayerWithCompletionHandler
@@ -5960,7 +5960,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
       - Name:            'sendData:toPlayers:withDataMode:error:'
         JsName:          sendDataToPlayersWithDataModeError
@@ -5976,13 +5976,13 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Enum
@@ -5990,7 +5990,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -6083,10 +6083,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKPlayer
+                  Name:            GKPlayer
                   WithProtocols:   
               WithProtocols:   
       - Name:            playerIDs
@@ -6114,10 +6114,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -6148,10 +6148,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'match:didReceiveData:forRecipient:fromRemotePlayer:'
         JsName:          matchDidReceiveDataForRecipientFromRemotePlayer
@@ -6167,16 +6167,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
       - Name:            'match:didReceiveData:fromPlayer:'
         JsName:          matchDidReceiveDataFromPlayer
@@ -6192,13 +6192,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'match:didReceiveData:fromRemotePlayer:'
         JsName:          matchDidReceiveDataFromRemotePlayer
@@ -6214,13 +6214,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
       - Name:            'match:player:didChangeConnectionState:'
         JsName:          matchPlayerDidChangeConnectionState
@@ -6236,10 +6236,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Enum
             Name:            GKPlayerConnectionState
@@ -6257,10 +6257,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            GKPlayerConnectionState
@@ -6278,10 +6278,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
       - Name:            'match:shouldReinvitePlayer:'
         JsName:          matchShouldReinvitePlayer
@@ -6297,10 +6297,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -6404,7 +6404,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Enum
                   Name:            GKInviteRecipientResponse
@@ -6426,7 +6426,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Enum
                   Name:            GKInviteRecipientResponse
@@ -6455,7 +6455,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setInviteMessage:'
@@ -6472,7 +6472,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maxPlayers
         JsName:          maxPlayers
@@ -6647,10 +6647,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6668,10 +6668,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            recipientResponseHandler
@@ -6702,7 +6702,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GKPlayer
+                  Name:            GKPlayer
                   WithProtocols:   
                 - Type:            Enum
                   Name:            GKInviteRecipientResponse
@@ -6724,7 +6724,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GKPlayer
+                  Name:            GKPlayer
                   WithProtocols:   
                 - Type:            Enum
                   Name:            GKInviteRecipientResponse
@@ -6753,10 +6753,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKPlayer
+                  Name:            GKPlayer
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -6774,10 +6774,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKPlayer
+                  Name:            GKPlayer
                   WithProtocols:   
               WithProtocols:   
       - Name:            restrictToAutomatch
@@ -6937,16 +6937,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKMatchRequest
+            Name:            GKMatchRequest
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            cancel
         JsName:          cancel
@@ -6974,7 +6974,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
       - Name:            'findMatchForRequest:withCompletionHandler:'
         JsName:          findMatchForRequestWithCompletionHandler
@@ -6989,16 +6989,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatchRequest
+            Name:            GKMatchRequest
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKMatch
+                Name:            GKMatch
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'findPlayersForHostedRequest:withCompletionHandler:'
         JsName:          findPlayersForHostedRequestWithCompletionHandler
@@ -7014,20 +7014,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatchRequest
+            Name:            GKMatchRequest
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKPlayer
+                    Name:            GKPlayer
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'finishMatchmakingForMatch:'
         JsName:          finishMatchmakingForMatch
@@ -7043,7 +7043,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
       - Name:            'matchForInvite:completionHandler:'
         JsName:          matchForInviteCompletionHandler
@@ -7059,16 +7059,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKInvite
+            Name:            GKInvite
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKMatch
+                Name:            GKMatch
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'queryActivityWithCompletionHandler:'
         JsName:          queryActivityWithCompletionHandler
@@ -7087,7 +7087,7 @@ Items:
               - Type:            Void
               - Type:            Long
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'queryPlayerGroupActivity:withCompletionHandler:'
         JsName:          queryPlayerGroupActivityWithCompletionHandler
@@ -7107,7 +7107,7 @@ Items:
               - Type:            Void
               - Type:            Long
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'startBrowsingForNearbyPlayersWithHandler:'
         JsName:          startBrowsingForNearbyPlayersWithHandler
@@ -7126,7 +7126,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKPlayer
+                Name:            GKPlayer
                 WithProtocols:   
               - Type:            Bool
       - Name:            stopBrowsingForNearbyPlayers
@@ -7156,7 +7156,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'findPlayersForHostedMatchRequest:withCompletionHandler:'
         JsName:          findPlayersForHostedMatchRequestWithCompletionHandler
@@ -7172,20 +7172,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatchRequest
+            Name:            GKMatchRequest
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'startBrowsingForNearbyPlayersWithReachableHandler:'
         JsName:          startBrowsingForNearbyPlayersWithReachableHandler
@@ -7204,7 +7204,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Bool
     StaticMethods:   
@@ -7220,7 +7220,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKMatchmaker
+            Name:            GKMatchmaker
             WithProtocols:   
     InstanceProperties: 
       - Name:            inviteHandler
@@ -7251,10 +7251,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GKInvite
+                  Name:            GKInvite
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   WithProtocols:   
         Setter:          
           Name:            'setInviteHandler:'
@@ -7274,10 +7274,10 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GKInvite
+                  Name:            GKInvite
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSArray
+                  Name:            NSArray
                   WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7308,7 +7308,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
       - Name:            'initWithInvite:'
         JsName:          initWithInvite
@@ -7323,7 +7323,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKInvite
+            Name:            GKInvite
             WithProtocols:   
       - Name:            'initWithMatchRequest:'
         JsName:          initWithMatchRequest
@@ -7338,7 +7338,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKMatchRequest
+            Name:            GKMatchRequest
             WithProtocols:   
       - Name:            'setHostedPlayer:connected:'
         JsName:          setHostedPlayerConnected
@@ -7354,7 +7354,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Bool
       - Name:            'setHostedPlayer:didConnect:'
@@ -7371,7 +7371,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Bool
       - Name:            'setHostedPlayerReady:'
@@ -7388,7 +7388,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -7417,7 +7417,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setDefaultInvitationMessage:'
@@ -7434,7 +7434,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            hosted
         JsName:          hosted
@@ -7537,7 +7537,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKMatchRequest
+              Name:            GKMatchRequest
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -7567,10 +7567,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatchmakerViewController
+            Name:            GKMatchmakerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'matchmakerViewController:didFindHostedPlayers:'
         JsName:          matchmakerViewControllerDidFindHostedPlayers
@@ -7586,13 +7586,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatchmakerViewController
+            Name:            GKMatchmakerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPlayer
+                Name:            GKPlayer
                 WithProtocols:   
             WithProtocols:   
       - Name:            'matchmakerViewController:didFindMatch:'
@@ -7609,10 +7609,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatchmakerViewController
+            Name:            GKMatchmakerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKMatch
+            Name:            GKMatch
             WithProtocols:   
       - Name:            'matchmakerViewController:didFindPlayers:'
         JsName:          matchmakerViewControllerDidFindPlayers
@@ -7628,13 +7628,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatchmakerViewController
+            Name:            GKMatchmakerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'matchmakerViewController:didReceiveAcceptFromHostedPlayer:'
@@ -7651,10 +7651,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatchmakerViewController
+            Name:            GKMatchmakerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'matchmakerViewController:hostedPlayerDidAccept:'
         JsName:          matchmakerViewControllerHostedPlayerDidAccept
@@ -7670,10 +7670,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatchmakerViewController
+            Name:            GKMatchmakerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
       - Name:            'matchmakerViewControllerWasCancelled:'
         JsName:          matchmakerViewControllerWasCancelled
@@ -7689,7 +7689,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatchmakerViewController
+            Name:            GKMatchmakerViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -7723,10 +7723,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -7745,10 +7745,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Double
           - Type:            Block
@@ -7992,7 +7992,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPeerPickerController
+            Name:            GKPeerPickerController
             WithProtocols:   
       - Name:            'peerPickerController:didConnectPeer:toSession:'
         JsName:          peerPickerControllerDidConnectPeerToSession
@@ -8007,13 +8007,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPeerPickerController
+            Name:            GKPeerPickerController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKSession
+            Name:            GKSession
             WithProtocols:   
       - Name:            'peerPickerController:didSelectConnectionType:'
         JsName:          peerPickerControllerDidSelectConnectionType
@@ -8028,7 +8028,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPeerPickerController
+            Name:            GKPeerPickerController
             WithProtocols:   
           - Type:            Enum
             Name:            GKPeerPickerConnectionType
@@ -8044,10 +8044,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKSession
+            Name:            GKSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPeerPickerController
+            Name:            GKPeerPickerController
             WithProtocols:   
           - Type:            Enum
             Name:            GKPeerPickerConnectionType
@@ -8193,10 +8193,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIImage
+                Name:            UIImage
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'anonymousGuestPlayerWithIdentifier:'
@@ -8213,7 +8213,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'loadPlayersForIdentifiers:withCompletionHandler:'
         JsName:          loadPlayersForIdentifiersWithCompletionHandler
@@ -8228,24 +8228,24 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKPlayer
+                    Name:            GKPlayer
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
       - Name:            alias
@@ -8271,7 +8271,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            gamePlayerID
         JsName:          gamePlayerID
@@ -8298,7 +8298,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            guestIdentifier
         JsName:          guestIdentifier
@@ -8325,7 +8325,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            teamPlayerID
         JsName:          teamPlayerID
@@ -8352,7 +8352,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            isFriend
         JsName:          isFriend
@@ -8395,7 +8395,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GKPlayerConnectionState
     JsName:          GKPlayerConnectionState
@@ -8427,7 +8427,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GKPlayerStateConnected
     JsName:          GKPlayerStateConnected
@@ -8491,10 +8491,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -8523,7 +8523,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            modificationDate
         JsName:          modificationDate
@@ -8550,7 +8550,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -8577,7 +8577,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -8609,10 +8609,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKSavedGame
+            Name:            GKSavedGame
             WithProtocols:   
       - Name:            'player:hasConflictingSavedGames:'
         JsName:          playerHasConflictingSavedGames
@@ -8628,13 +8628,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKSavedGame
+                Name:            GKSavedGame
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -8667,7 +8667,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithLeaderboardIdentifier:player:'
         JsName:          initWithLeaderboardIdentifierPlayer
@@ -8683,10 +8683,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
       - Name:            'initWithCategory:'
         JsName:          initWithCategory
@@ -8702,7 +8702,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithLeaderboardIdentifier:forPlayer:'
         JsName:          initWithLeaderboardIdentifierForPlayer
@@ -8718,10 +8718,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'reportScoreWithCompletionHandler:'
         JsName:          reportScoreWithCompletionHandler
@@ -8740,7 +8740,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'challengeComposeControllerWithMessage:players:completionHandler:'
         JsName:          challengeComposeControllerWithMessagePlayersCompletionHandler
@@ -8755,30 +8755,30 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIViewController
+            Name:            UIViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPlayer
+                Name:            GKPlayer
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIViewController
+                Name:            UIViewController
                 WithProtocols:   
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'issueChallengeToPlayers:message:'
@@ -8795,14 +8795,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'challengeComposeControllerWithPlayers:message:completionHandler:'
         JsName:          challengeComposeControllerWithPlayersMessageCompletionHandler
@@ -8817,30 +8817,30 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIViewController
+            Name:            UIViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIViewController
+                Name:            UIViewController
                 WithProtocols:   
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'issueChallengeToPlayers:message:'
@@ -8857,14 +8857,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            'reportScores:withCompletionHandler:'
@@ -8881,17 +8881,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKScore
+                Name:            GKScore
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'reportScores:withEligibleChallenges:withCompletionHandler:'
         JsName:          reportScoresWithEligibleChallengesWithCompletionHandler
@@ -8907,24 +8907,24 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKScore
+                Name:            GKScore
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKChallenge
+                Name:            GKChallenge
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
       - Name:            context
@@ -8990,7 +8990,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            formattedValue
         JsName:          formattedValue
@@ -9015,7 +9015,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            leaderboardIdentifier
         JsName:          leaderboardIdentifier
@@ -9042,7 +9042,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLeaderboardIdentifier:'
@@ -9059,7 +9059,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            player
         JsName:          player
@@ -9086,7 +9086,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKPlayer
+              Name:            GKPlayer
               WithProtocols:   
       - Name:            rank
         JsName:          rank
@@ -9213,7 +9213,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCategory:'
@@ -9230,7 +9230,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            playerID
         JsName:          playerID
@@ -9257,7 +9257,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9301,7 +9301,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKScore
+              Name:            GKScore
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -9370,12 +9370,12 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'cancelConnectToPeer:'
         JsName:          cancelConnectToPeer
@@ -9390,7 +9390,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'connectToPeer:withTimeout:'
         JsName:          connectToPeerWithTimeout
@@ -9405,7 +9405,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Double
       - Name:            'denyConnectionFromPeer:'
@@ -9421,7 +9421,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            disconnectFromAllPeers
         JsName:          disconnectFromAllPeers
@@ -9448,7 +9448,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'displayNameForPeer:'
         JsName:          displayNameForPeer
@@ -9462,10 +9462,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'initWithSessionID:displayName:sessionMode:'
         JsName:          initWithSessionIDDisplayNameSessionMode
@@ -9481,10 +9481,10 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            GKSessionMode
@@ -9501,7 +9501,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
           - Type:            Enum
             Name:            GKPeerConnectionState
@@ -9519,14 +9519,14 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Enum
             Name:            GKSendDataMode
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'sendData:toPeers:withDataMode:error:'
         JsName:          sendDataToPeersWithDataModeError
@@ -9542,17 +9542,17 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             WithProtocols:   
           - Type:            Enum
             Name:            GKSendDataMode
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'setDataReceiveHandler:withContext:'
         JsName:          setDataReceiveHandlerWithContext
@@ -9714,7 +9714,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            peerID
         JsName:          peerID
@@ -9739,7 +9739,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sessionID
         JsName:          sessionID
@@ -9764,7 +9764,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            sessionMode
         JsName:          sessionMode
@@ -9897,13 +9897,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKSession
+            Name:            GKSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'session:didFailWithError:'
         JsName:          sessionDidFailWithError
@@ -9918,10 +9918,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKSession
+            Name:            GKSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'session:didReceiveConnectionRequestFromPeer:'
         JsName:          sessionDidReceiveConnectionRequestFromPeer
@@ -9936,10 +9936,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKSession
+            Name:            GKSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'session:peer:didChangeState:'
         JsName:          sessionPeerDidChangeState
@@ -9954,10 +9954,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKSession
+            Name:            GKSession
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            GKPeerConnectionState
@@ -10023,7 +10023,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GKSessionInProgressError
     JsName:          GKSessionInProgressError
@@ -10240,7 +10240,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKTurnBasedEventHandler
+            Name:            GKTurnBasedEventHandler
             WithProtocols:   
     InstanceProperties: 
       - Name:            delegate
@@ -10268,7 +10268,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - GKTurnBasedEventHandlerDelegate
         Setter:          
@@ -10286,7 +10286,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSObject
+              Name:            NSObject
               WithProtocols:   
                 - GKTurnBasedEventHandlerDelegate
     StaticProperties: 
@@ -10318,10 +10318,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'handleMatchEnded:'
@@ -10338,7 +10338,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKTurnBasedMatch
+            Name:            GKTurnBasedMatch
             WithProtocols:   
       - Name:            'handleTurnEventForMatch:'
         JsName:          handleTurnEventForMatch
@@ -10354,7 +10354,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKTurnBasedMatch
+            Name:            GKTurnBasedMatch
             WithProtocols:   
       - Name:            'handleTurnEventForMatch:didBecomeActive:'
         JsName:          handleTurnEventForMatchDidBecomeActive
@@ -10370,7 +10370,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKTurnBasedMatch
+            Name:            GKTurnBasedMatch
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -10402,13 +10402,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKPlayer
+                Name:            GKPlayer
                 WithProtocols:   
             WithProtocols:   
       - Name:            'player:didRequestMatchWithPlayers:'
@@ -10425,13 +10425,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            'player:matchEnded:'
@@ -10447,10 +10447,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKTurnBasedMatch
+            Name:            GKTurnBasedMatch
             WithProtocols:   
       - Name:            'player:receivedExchangeCancellation:forMatch:'
         JsName:          playerReceivedExchangeCancellationForMatch
@@ -10466,13 +10466,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKTurnBasedExchange
+            Name:            GKTurnBasedExchange
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKTurnBasedMatch
+            Name:            GKTurnBasedMatch
             WithProtocols:   
       - Name:            'player:receivedExchangeReplies:forCompletedExchange:forMatch:'
         JsName:          playerReceivedExchangeRepliesForCompletedExchangeForMatch
@@ -10488,20 +10488,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKTurnBasedExchangeReply
+                Name:            GKTurnBasedExchangeReply
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKTurnBasedExchange
+            Name:            GKTurnBasedExchange
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKTurnBasedMatch
+            Name:            GKTurnBasedMatch
             WithProtocols:   
       - Name:            'player:receivedExchangeRequest:forMatch:'
         JsName:          playerReceivedExchangeRequestForMatch
@@ -10517,13 +10517,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKTurnBasedExchange
+            Name:            GKTurnBasedExchange
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKTurnBasedMatch
+            Name:            GKTurnBasedMatch
             WithProtocols:   
       - Name:            'player:receivedTurnEventForMatch:didBecomeActive:'
         JsName:          playerReceivedTurnEventForMatchDidBecomeActive
@@ -10539,10 +10539,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKTurnBasedMatch
+            Name:            GKTurnBasedMatch
             WithProtocols:   
           - Type:            Bool
       - Name:            'player:wantsToQuitMatch:'
@@ -10559,10 +10559,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKTurnBasedMatch
+            Name:            GKTurnBasedMatch
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -10594,20 +10594,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'replyWithLocalizableMessageKey:arguments:data:completionHandler:'
         JsName:          replyWithLocalizableMessageKeyArgumentsDataCompletionHandler
@@ -10623,23 +10623,23 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -10666,7 +10666,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            data
         JsName:          data
@@ -10691,7 +10691,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            exchangeID
         JsName:          exchangeID
@@ -10716,7 +10716,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            message
         JsName:          message
@@ -10741,7 +10741,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            recipients
         JsName:          recipients
@@ -10766,10 +10766,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKTurnBasedParticipant
+                  Name:            GKTurnBasedParticipant
                   WithProtocols:   
               WithProtocols:   
       - Name:            replies
@@ -10795,10 +10795,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKTurnBasedExchangeReply
+                  Name:            GKTurnBasedExchangeReply
                   WithProtocols:   
               WithProtocols:   
       - Name:            sendDate
@@ -10824,7 +10824,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            sender
         JsName:          sender
@@ -10849,7 +10849,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKTurnBasedParticipant
+              Name:            GKTurnBasedParticipant
               WithProtocols:   
       - Name:            status
         JsName:          status
@@ -10898,7 +10898,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -10940,7 +10940,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            message
         JsName:          message
@@ -10965,7 +10965,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            recipient
         JsName:          recipient
@@ -10990,7 +10990,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKTurnBasedParticipant
+              Name:            GKTurnBasedParticipant
               WithProtocols:   
       - Name:            replyDate
         JsName:          replyDate
@@ -11017,7 +11017,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -11129,10 +11129,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKTurnBasedMatch
+                Name:            GKTurnBasedMatch
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'declineInviteWithCompletionHandler:'
         JsName:          declineInviteWithCompletionHandler
@@ -11151,7 +11151,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'endMatchInTurnWithMatchData:completionHandler:'
         JsName:          endMatchInTurnWithMatchDataCompletionHandler
@@ -11166,13 +11166,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'endMatchInTurnWithMatchData:scores:achievements:completionHandler:'
         JsName:          endMatchInTurnWithMatchDataScoresAchievementsCompletionHandler
@@ -11188,27 +11188,27 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKScore
+                Name:            GKScore
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKAchievement
+                Name:            GKAchievement
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'endTurnWithNextParticipant:matchData:completionHandler:'
         JsName:          endTurnWithNextParticipantMatchDataCompletionHandler
@@ -11224,16 +11224,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKTurnBasedParticipant
+            Name:            GKTurnBasedParticipant
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'endTurnWithNextParticipants:turnTimeout:matchData:completionHandler:'
         JsName:          endTurnWithNextParticipantsTurnTimeoutMatchDataCompletionHandler
@@ -11249,21 +11249,21 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKTurnBasedParticipant
+                Name:            GKTurnBasedParticipant
                 WithProtocols:   
             WithProtocols:   
           - Type:            Double
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadMatchDataWithCompletionHandler:'
         JsName:          loadMatchDataWithCompletionHandler
@@ -11281,10 +11281,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSData
+                Name:            NSData
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'participantQuitInTurnWithOutcome:nextParticipant:matchData:completionHandler:'
         JsName:          participantQuitInTurnWithOutcomeNextParticipantMatchDataCompletionHandler
@@ -11302,16 +11302,16 @@ Items:
           - Type:            Enum
             Name:            GKTurnBasedMatchOutcome
           - Type:            Interface
-            JsName:          GKTurnBasedParticipant
+            Name:            GKTurnBasedParticipant
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'participantQuitInTurnWithOutcome:nextParticipants:turnTimeout:matchData:completionHandler:'
         JsName:          participantQuitInTurnWithOutcomeNextParticipantsTurnTimeoutMatchDataCompletionHandler
@@ -11329,21 +11329,21 @@ Items:
           - Type:            Enum
             Name:            GKTurnBasedMatchOutcome
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKTurnBasedParticipant
+                Name:            GKTurnBasedParticipant
                 WithProtocols:   
             WithProtocols:   
           - Type:            Double
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'participantQuitOutOfTurnWithOutcome:withCompletionHandler:'
         JsName:          participantQuitOutOfTurnWithOutcomeWithCompletionHandler
@@ -11363,7 +11363,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'rematchWithCompletionHandler:'
         JsName:          rematchWithCompletionHandler
@@ -11382,10 +11382,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKTurnBasedMatch
+                Name:            GKTurnBasedMatch
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeWithCompletionHandler:'
         JsName:          removeWithCompletionHandler
@@ -11403,7 +11403,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveCurrentTurnWithMatchData:completionHandler:'
         JsName:          saveCurrentTurnWithMatchDataCompletionHandler
@@ -11419,13 +11419,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'saveMergedMatchData:withResolvedExchanges:completionHandler:'
         JsName:          saveMergedMatchDataWithResolvedExchangesCompletionHandler
@@ -11441,20 +11441,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKTurnBasedExchange
+                Name:            GKTurnBasedExchange
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendExchangeToParticipants:data:localizableMessageKey:arguments:timeout:completionHandler:'
         JsName:          sendExchangeToParticipantsDataLocalizableMessageKeyArgumentsTimeoutCompletionHandler
@@ -11470,23 +11470,23 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKTurnBasedParticipant
+                Name:            GKTurnBasedParticipant
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Double
@@ -11494,10 +11494,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKTurnBasedExchange
+                Name:            GKTurnBasedExchange
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'sendReminderToParticipants:localizableMessageKey:arguments:completionHandler:'
         JsName:          sendReminderToParticipantsLocalizableMessageKeyArgumentsCompletionHandler
@@ -11513,27 +11513,27 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GKTurnBasedParticipant
+                Name:            GKTurnBasedParticipant
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'setLocalizableMessageWithKey:arguments:'
         JsName:          setLocalizableMessageWithKeyArguments
@@ -11549,13 +11549,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -11572,16 +11572,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKMatchRequest
+            Name:            GKMatchRequest
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKTurnBasedMatch
+                Name:            GKTurnBasedMatch
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadMatchesWithCompletionHandler:'
         JsName:          loadMatchesWithCompletionHandler
@@ -11599,14 +11599,14 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          GKTurnBasedMatch
+                    Name:            GKTurnBasedMatch
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'loadMatchWithID:withCompletionHandler:'
         JsName:          loadMatchWithIDWithCompletionHandler
@@ -11622,16 +11622,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GKTurnBasedMatch
+                Name:            GKTurnBasedMatch
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     InstanceProperties: 
       - Name:            activeExchanges
@@ -11659,10 +11659,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKTurnBasedExchange
+                  Name:            GKTurnBasedExchange
                   WithProtocols:   
               WithProtocols:   
       - Name:            completedExchanges
@@ -11690,10 +11690,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKTurnBasedExchange
+                  Name:            GKTurnBasedExchange
                   WithProtocols:   
               WithProtocols:   
       - Name:            creationDate
@@ -11719,7 +11719,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            currentParticipant
         JsName:          currentParticipant
@@ -11744,7 +11744,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKTurnBasedParticipant
+              Name:            GKTurnBasedParticipant
               WithProtocols:   
       - Name:            exchangeDataMaximumSize
         JsName:          exchangeDataMaximumSize
@@ -11821,10 +11821,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKTurnBasedExchange
+                  Name:            GKTurnBasedExchange
                   WithProtocols:   
               WithProtocols:   
       - Name:            matchData
@@ -11850,7 +11850,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSData
+              Name:            NSData
               WithProtocols:   
       - Name:            matchDataMaximumSize
         JsName:          matchDataMaximumSize
@@ -11900,7 +11900,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            message
         JsName:          message
@@ -11925,7 +11925,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setMessage:'
@@ -11941,7 +11941,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            participants
         JsName:          participants
@@ -11966,10 +11966,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKTurnBasedParticipant
+                  Name:            GKTurnBasedParticipant
                   WithProtocols:   
               WithProtocols:   
       - Name:            status
@@ -12243,7 +12243,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          GKMatchRequest
+            Name:            GKMatchRequest
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -12353,10 +12353,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKTurnBasedMatchmakerViewController
+            Name:            GKTurnBasedMatchmakerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'turnBasedMatchmakerViewController:didFindMatch:'
         JsName:          turnBasedMatchmakerViewControllerDidFindMatch
@@ -12372,10 +12372,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKTurnBasedMatchmakerViewController
+            Name:            GKTurnBasedMatchmakerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKTurnBasedMatch
+            Name:            GKTurnBasedMatch
             WithProtocols:   
       - Name:            'turnBasedMatchmakerViewController:playerQuitForMatch:'
         JsName:          turnBasedMatchmakerViewControllerPlayerQuitForMatch
@@ -12391,10 +12391,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKTurnBasedMatchmakerViewController
+            Name:            GKTurnBasedMatchmakerViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          GKTurnBasedMatch
+            Name:            GKTurnBasedMatch
             WithProtocols:   
       - Name:            'turnBasedMatchmakerViewControllerWasCancelled:'
         JsName:          turnBasedMatchmakerViewControllerWasCancelled
@@ -12410,7 +12410,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKTurnBasedMatchmakerViewController
+            Name:            GKTurnBasedMatchmakerViewController
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -12454,7 +12454,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
       - Name:            matchOutcome
         JsName:          matchOutcome
@@ -12520,7 +12520,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GKPlayer
+              Name:            GKPlayer
               WithProtocols:   
       - Name:            playerID
         JsName:          playerID
@@ -12547,7 +12547,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            status
         JsName:          status
@@ -12598,7 +12598,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDate
+              Name:            NSDate
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -12745,7 +12745,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKPlayer
+            Name:            GKPlayer
             WithProtocols:   
           - Type:            Bool
       - Name:            start
@@ -12787,7 +12787,7 @@ Items:
           - Type:            Void
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            isVoIPAllowed
@@ -12863,7 +12863,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            players
         JsName:          players
@@ -12890,10 +12890,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GKPlayer
+                  Name:            GKPlayer
                   WithProtocols:   
               WithProtocols:   
       - Name:            playerVoiceChatStateDidChangeHandler
@@ -12924,7 +12924,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GKPlayer
+                  Name:            GKPlayer
                   WithProtocols:   
                 - Type:            Enum
                   Name:            GKVoiceChatPlayerState
@@ -12946,7 +12946,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          GKPlayer
+                  Name:            GKPlayer
                   WithProtocols:   
                 - Type:            Enum
                   Name:            GKVoiceChatPlayerState
@@ -13012,10 +13012,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            playerStateUpdateHandler
@@ -13046,7 +13046,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Enum
                   Name:            GKVoiceChatPlayerState
@@ -13068,7 +13068,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Enum
                   Name:            GKVoiceChatPlayerState
@@ -13099,7 +13099,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'voiceChatService:didNotStartWithParticipantID:error:'
         JsName:          voiceChatServiceDidNotStartWithParticipantIDError
@@ -13114,13 +13114,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKVoiceChatService
+            Name:            GKVoiceChatService
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'voiceChatService:didReceiveInvitationFromParticipantID:callID:'
         JsName:          voiceChatServiceDidReceiveInvitationFromParticipantIDCallID
@@ -13135,10 +13135,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKVoiceChatService
+            Name:            GKVoiceChatService
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Long
       - Name:            'voiceChatService:didStartWithParticipantID:'
@@ -13154,10 +13154,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKVoiceChatService
+            Name:            GKVoiceChatService
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'voiceChatService:didStopWithParticipantID:error:'
         JsName:          voiceChatServiceDidStopWithParticipantIDError
@@ -13172,13 +13172,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKVoiceChatService
+            Name:            GKVoiceChatService
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'voiceChatService:sendData:toParticipantID:'
         JsName:          voiceChatServiceSendDataToParticipantID
@@ -13193,13 +13193,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKVoiceChatService
+            Name:            GKVoiceChatService
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'voiceChatService:sendRealTimeData:toParticipantID:'
         JsName:          voiceChatServiceSendRealTimeDataToParticipantID
@@ -13214,13 +13214,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GKVoiceChatService
+            Name:            GKVoiceChatService
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -13332,7 +13332,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'denyCallID:'
         JsName:          denyCallID
@@ -13360,10 +13360,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'receivedRealTimeData:fromParticipantID:'
         JsName:          receivedRealTimeDataFromParticipantID
@@ -13378,10 +13378,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'startVoiceChatWithParticipantID:error:'
         JsName:          startVoiceChatWithParticipantIDError
@@ -13396,12 +13396,12 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'stopVoiceChatWithParticipantID:'
         JsName:          stopVoiceChatWithParticipantID
@@ -13416,7 +13416,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
       - Name:            defaultVoiceChatService
@@ -13431,7 +13431,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GKVoiceChatService
+            Name:            GKVoiceChatService
             WithProtocols:   
       - Name:            isVoIPAllowed
         JsName:          isVoIPAllowed
@@ -13768,7 +13768,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GKVoiceChatServiceInternalError
     JsName:          GKVoiceChatServiceInternalError

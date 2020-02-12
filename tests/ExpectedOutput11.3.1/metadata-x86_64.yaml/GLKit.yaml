@@ -81,7 +81,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyFog
+              Name:            GLKEffectPropertyFog
               WithProtocols:   
       - Name:            label
         JsName:          label
@@ -106,7 +106,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -122,7 +122,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            light0
         JsName:          light0
@@ -147,7 +147,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyLight
+              Name:            GLKEffectPropertyLight
               WithProtocols:   
       - Name:            light1
         JsName:          light1
@@ -172,7 +172,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyLight
+              Name:            GLKEffectPropertyLight
               WithProtocols:   
       - Name:            light2
         JsName:          light2
@@ -197,7 +197,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyLight
+              Name:            GLKEffectPropertyLight
               WithProtocols:   
       - Name:            lightingType
         JsName:          lightingType
@@ -298,7 +298,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyMaterial
+              Name:            GLKEffectPropertyMaterial
               WithProtocols:   
       - Name:            texture2d0
         JsName:          texture2d0
@@ -323,7 +323,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyTexture
+              Name:            GLKEffectPropertyTexture
               WithProtocols:   
       - Name:            texture2d1
         JsName:          texture2d1
@@ -348,7 +348,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyTexture
+              Name:            GLKEffectPropertyTexture
               WithProtocols:   
       - Name:            textureOrder
         JsName:          textureOrder
@@ -373,10 +373,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GLKEffectPropertyTexture
+                  Name:            GLKEffectPropertyTexture
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -393,10 +393,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GLKEffectPropertyTexture
+                  Name:            GLKEffectPropertyTexture
                   WithProtocols:   
               WithProtocols:   
       - Name:            transform
@@ -422,7 +422,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyTransform
+              Name:            GLKEffectPropertyTransform
               WithProtocols:   
       - Name:            useConstantColor
         JsName:          useConstantColor
@@ -943,7 +943,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyTransform
+              Name:            GLKEffectPropertyTransform
               WithProtocols:   
         Setter:          
           Name:            'setTransform:'
@@ -959,7 +959,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          GLKEffectPropertyTransform
+              Name:            GLKEffectPropertyTransform
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1515,12 +1515,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          MDLMesh
+            Name:            MDLMesh
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
       - Name:            'newMeshesFromAsset:sourceMeshes:error:'
@@ -1535,28 +1535,28 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          GLKMesh
+                Name:            GLKMesh
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          MDLAsset
+            Name:            MDLAsset
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          MDLMesh
+                  Name:            MDLMesh
                   WithProtocols:   
               WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
       - Name:            name
@@ -1582,7 +1582,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            submeshes
         JsName:          submeshes
@@ -1607,10 +1607,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GLKSubmesh
+                  Name:            GLKSubmesh
                   WithProtocols:   
               WithProtocols:   
       - Name:            vertexBuffers
@@ -1636,10 +1636,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          GLKMeshBuffer
+                  Name:            GLKMeshBuffer
                   WithProtocols:   
               WithProtocols:   
       - Name:            vertexCount
@@ -1688,7 +1688,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          MDLVertexDescriptor
+              Name:            MDLVertexDescriptor
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1730,7 +1730,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKMeshBufferAllocator
+              Name:            GLKMeshBufferAllocator
               WithProtocols:   
       - Name:            glBufferName
         JsName:          glBufferName
@@ -1864,7 +1864,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyTexture
+              Name:            GLKEffectPropertyTexture
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1919,7 +1919,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setLabel:'
@@ -1935,7 +1935,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            textureCubeMap
         JsName:          textureCubeMap
@@ -1960,7 +1960,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyTexture
+              Name:            GLKEffectPropertyTexture
               WithProtocols:   
       - Name:            transform
         JsName:          transform
@@ -1985,7 +1985,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKEffectPropertyTransform
+              Name:            GLKEffectPropertyTransform
               WithProtocols:   
       - Name:            xSize
         JsName:          xSize
@@ -2139,7 +2139,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKMeshBuffer
+              Name:            GLKMeshBuffer
               WithProtocols:   
       - Name:            elementCount
         JsName:          elementCount
@@ -2187,7 +2187,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          GLKMesh
+              Name:            GLKMesh
               WithProtocols:   
       - Name:            mode
         JsName:          mode
@@ -2235,7 +2235,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            type
         JsName:          type
@@ -2694,30 +2694,30 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GLKTextureInfo
+                Name:            GLKTextureInfo
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'cubeMapWithContentsOfFiles:options:queue:completionHandler:'
         JsName:          cubeMapWithContentsOfFilesOptionsQueueCompletionHandler
@@ -2732,33 +2732,33 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GLKTextureInfo
+                Name:            GLKTextureInfo
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'cubeMapWithContentsOfURL:options:queue:completionHandler:'
         JsName:          cubeMapWithContentsOfURLOptionsQueueCompletionHandler
@@ -2773,30 +2773,30 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GLKTextureInfo
+                Name:            GLKTextureInfo
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'initWithSharegroup:'
         JsName:          initWithSharegroup
@@ -2811,7 +2811,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          EAGLSharegroup
+            Name:            EAGLSharegroup
             WithProtocols:   
       - Name:            'textureWithCGImage:options:queue:completionHandler:'
         JsName:          textureWithCGImageOptionsQueueCompletionHandler
@@ -2829,27 +2829,27 @@ Items:
             Name:            id
             BridgedTo:       id
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GLKTextureInfo
+                Name:            GLKTextureInfo
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'textureWithContentsOfData:options:queue:completionHandler:'
         JsName:          textureWithContentsOfDataOptionsQueueCompletionHandler
@@ -2864,30 +2864,30 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GLKTextureInfo
+                Name:            GLKTextureInfo
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'textureWithContentsOfFile:options:queue:completionHandler:'
         JsName:          textureWithContentsOfFileOptionsQueueCompletionHandler
@@ -2902,30 +2902,30 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GLKTextureInfo
+                Name:            GLKTextureInfo
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'textureWithContentsOfURL:options:queue:completionHandler:'
         JsName:          textureWithContentsOfURLOptionsQueueCompletionHandler
@@ -2940,30 +2940,30 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GLKTextureInfo
+                Name:            GLKTextureInfo
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'textureWithName:scaleFactor:bundle:options:queue:completionHandler:'
         JsName:          textureWithNameScaleFactorBundleOptionsQueueCompletionHandler
@@ -2978,34 +2978,34 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Double
           - Type:            Interface
-            JsName:          NSBundle
+            Name:            NSBundle
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
               - OS_dispatch_queue
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          GLKTextureInfo
+                Name:            GLKTextureInfo
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'cubeMapWithContentsOfFile:options:error:'
@@ -3020,25 +3020,25 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GLKTextureInfo
+            Name:            GLKTextureInfo
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'cubeMapWithContentsOfFiles:options:error:'
         JsName:          cubeMapWithContentsOfFilesOptionsError
@@ -3052,28 +3052,28 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GLKTextureInfo
+            Name:            GLKTextureInfo
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'cubeMapWithContentsOfURL:options:error:'
         JsName:          cubeMapWithContentsOfURLOptionsError
@@ -3087,25 +3087,25 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GLKTextureInfo
+            Name:            GLKTextureInfo
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'textureWithCGImage:options:error:'
         JsName:          textureWithCGImageOptionsError
@@ -3119,25 +3119,25 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GLKTextureInfo
+            Name:            GLKTextureInfo
             WithProtocols:   
           - Type:            BridgedInterface
             Name:            id
             BridgedTo:       id
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'textureWithContentsOfData:options:error:'
         JsName:          textureWithContentsOfDataOptionsError
@@ -3151,25 +3151,25 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GLKTextureInfo
+            Name:            GLKTextureInfo
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'textureWithContentsOfFile:options:error:'
         JsName:          textureWithContentsOfFileOptionsError
@@ -3183,25 +3183,25 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GLKTextureInfo
+            Name:            GLKTextureInfo
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'textureWithContentsOfURL:options:error:'
         JsName:          textureWithContentsOfURLOptionsError
@@ -3215,25 +3215,25 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GLKTextureInfo
+            Name:            GLKTextureInfo
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'textureWithName:scaleFactor:bundle:options:error:'
         JsName:          textureWithNameScaleFactorBundleOptionsError
@@ -3247,29 +3247,29 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          GLKTextureInfo
+            Name:            GLKTextureInfo
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Double
           - Type:            Interface
-            JsName:          NSBundle
+            Name:            NSBundle
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -3288,7 +3288,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GLKTextureLoaderError
     JsName:          GLKTextureLoaderError
@@ -3400,7 +3400,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GLKTextureLoaderErrorFileOrURLNotFound
     JsName:          GLKTextureLoaderErrorFileOrURLNotFound
@@ -3470,7 +3470,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GLKTextureLoaderErrorMipmapUnsupported
     JsName:          GLKTextureLoaderErrorMipmapUnsupported
@@ -3606,7 +3606,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GLKTextureLoaderGenerateMipmaps
     JsName:          GLKTextureLoaderGenerateMipmaps
@@ -3621,7 +3621,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GLKTextureLoaderGrayscaleAsAlpha
     JsName:          GLKTextureLoaderGrayscaleAsAlpha
@@ -3635,7 +3635,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GLKTextureLoaderOriginBottomLeft
     JsName:          GLKTextureLoaderOriginBottomLeft
@@ -3650,7 +3650,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GLKTextureLoaderSRGB
     JsName:          GLKTextureLoaderSRGB
@@ -3665,7 +3665,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            GLKTextureTarget
     JsName:          GLKTextureTarget
@@ -3810,7 +3810,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          GLKit.GLKModel
-        JsName:          _GLKVertexAttributeParameters
+        Name:            _GLKVertexAttributeParameters
       - Type:            Enum
         Name:            MDLVertexFormat
   - Name:            GLKView
@@ -3875,9 +3875,9 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Interface
-            JsName:          EAGLContext
+            Name:            EAGLContext
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3904,7 +3904,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          EAGLContext
+              Name:            EAGLContext
               WithProtocols:   
         Setter:          
           Name:            'setContext:'
@@ -3920,7 +3920,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          EAGLContext
+              Name:            EAGLContext
               WithProtocols:   
       - Name:            delegate
         JsName:          delegate
@@ -4225,7 +4225,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIImage
+              Name:            UIImage
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4601,7 +4601,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GLKViewController
+            Name:            GLKViewController
             WithProtocols:   
       - Name:            'glkViewController:willPause:'
         JsName:          glkViewControllerWillPause
@@ -4616,7 +4616,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GLKViewController
+            Name:            GLKViewController
             WithProtocols:   
           - Type:            Bool
     StaticMethods:   
@@ -4648,11 +4648,11 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          GLKView
+            Name:            GLKView
             WithProtocols:   
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
     StaticMethods:   
     InstanceProperties: 
     StaticProperties: 
@@ -4873,7 +4873,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            kGLKModelErrorKey
     JsName:          kGLKModelErrorKey
@@ -4888,6 +4888,6 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
 ...

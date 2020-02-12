@@ -231,7 +231,7 @@ Items:
         Name:            NSString
         BridgedTo:       NSString
       - Type:            Int
-  - Name:            ''
+  - Name:            CVFillExtendedPixelsCallBackData
     JsName:          CVFillExtendedPixelsCallBackData
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVPixelFormatDescription.h
     Module:          
@@ -332,7 +332,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGRect
+        Name:            CGRect
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -350,7 +350,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGSize
+        Name:            CGSize
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -368,7 +368,7 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          CoreGraphics.CGGeometry
-        JsName:          CGSize
+        Name:            CGSize
       - Type:            BridgedInterface
         Name:            id
         BridgedTo:       id
@@ -582,7 +582,7 @@ Items:
         Name:            NSDictionary
         BridgedTo:       NSDictionary
       - Type:            Interface
-        JsName:          EAGLContext
+        Name:            EAGLContext
         WithProtocols:   
       - Type:            BridgedInterface
         Name:            NSDictionary
@@ -1575,7 +1575,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          CoreVideo.CVPixelBuffer
-            JsName:          CVPlanarComponentInfo
+            Name:            CVPlanarComponentInfo
           Size:            1
   - Name:            CVPlanarPixelBufferInfo_YCbCrBiPlanar
     JsName:          CVPlanarPixelBufferInfo_YCbCrBiPlanar
@@ -1592,12 +1592,12 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreVideo.CVPixelBuffer
-          JsName:          CVPlanarComponentInfo
+          Name:            CVPlanarComponentInfo
       - Name:            componentInfoCbCr
         Signature:       
           Type:            Struct
           Module:          CoreVideo.CVPixelBuffer
-          JsName:          CVPlanarComponentInfo
+          Name:            CVPlanarComponentInfo
   - Name:            CVPlanarPixelBufferInfo_YCbCrPlanar
     JsName:          CVPlanarPixelBufferInfo_YCbCrPlanar
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVPixelBuffer.h
@@ -1613,17 +1613,17 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreVideo.CVPixelBuffer
-          JsName:          CVPlanarComponentInfo
+          Name:            CVPlanarComponentInfo
       - Name:            componentInfoCb
         Signature:       
           Type:            Struct
           Module:          CoreVideo.CVPixelBuffer
-          JsName:          CVPlanarComponentInfo
+          Name:            CVPlanarComponentInfo
       - Name:            componentInfoCr
         Signature:       
           Type:            Struct
           Module:          CoreVideo.CVPixelBuffer
-          JsName:          CVPlanarComponentInfo
+          Name:            CVPlanarComponentInfo
   - Name:            CVSMPTETime
     JsName:          CVSMPTETime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVBase.h
@@ -1696,7 +1696,7 @@ Items:
       - kCVSMPTETimeType60: '6'
       - kCVSMPTETimeType5994: '7'
     SwiftNameFields: 
-  - Name:            ''
+  - Name:            CVTime
     JsName:          CVTime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVBase.h
     Module:          
@@ -1729,7 +1729,7 @@ Items:
     FullNameFields:  
       - kCVTimeIsIndefinite: '1'
     SwiftNameFields: 
-  - Name:            ''
+  - Name:            CVTimeStamp
     JsName:          CVTimeStamp
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVBase.h
     Module:          
@@ -1762,7 +1762,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreVideo.CVBase
-          JsName:          CVSMPTETime
+          Name:            CVSMPTETime
       - Name:            flags
         Signature:       
           Type:            ULongLong
@@ -2939,7 +2939,7 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreVideo.CVBase
-      JsName:          CVTime
+      Name:            CVTime
   - Name:            kCVMetalTextureCacheMaximumTextureAgeKey
     JsName:          kCVMetalTextureCacheMaximumTextureAgeKey
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVMetalTextureCache.h
@@ -5015,5 +5015,5 @@ Items:
     Signature:       
       Type:            Struct
       Module:          CoreVideo.CVBase
-      JsName:          CVTime
+      Name:            CVTime
 ...

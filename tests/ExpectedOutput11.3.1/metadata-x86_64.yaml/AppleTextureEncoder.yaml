@@ -81,7 +81,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '2'
-  - Name:            ''
+  - Name:            at_alpha_t
     JsName:          at_alpha_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/AppleTextureEncoder.h
     Module:          
@@ -682,7 +682,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
-  - Name:            ''
+  - Name:            at_block_format_t
     JsName:          at_block_format_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/AppleTextureEncoder.h
     Module:          
@@ -768,19 +768,19 @@ Items:
     Signature:       
       - Type:            Float
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          AppleTextureEncoder
-          JsName:          at_texel_region_t
+          Name:            at_texel_region_t
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          AppleTextureEncoder
-          JsName:          at_block_buffer_t
+          Name:            at_block_buffer_t
       - Type:            Float
       - Type:            Enum
         Name:            at_flags_t
@@ -799,7 +799,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
       - Type:            Enum
@@ -830,19 +830,19 @@ Items:
       - Type:            Enum
         Name:            at_error_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          AppleTextureEncoder
-          JsName:          at_block_buffer_t
+          Name:            at_block_buffer_t
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          AppleTextureEncoder
-          JsName:          at_texel_region_t
+          Name:            at_texel_region_t
       - Type:            Enum
         Name:            at_flags_t
   - Name:            at_encoder_get_block_address
@@ -863,20 +863,20 @@ Items:
         PointerType:     
           Type:            Void
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
       - Type:            Struct
         Module:          AppleTextureEncoder
-        JsName:          at_size_t
+        Name:            at_size_t
       - Type:            Struct
         Module:          AppleTextureEncoder
-        JsName:          at_size_t
+        Name:            at_size_t
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          AppleTextureEncoder
-          JsName:          at_block_buffer_t
+          Name:            at_block_buffer_t
   - Name:            at_encoder_get_block_alpha
     JsName:          at_encoder_get_block_alpha
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/AppleTextureEncoder.h
@@ -894,7 +894,7 @@ Items:
       - Type:            Enum
         Name:            at_alpha_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
   - Name:            at_encoder_get_block_counts
@@ -913,14 +913,14 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          AppleTextureEncoder
-        JsName:          at_size_t
+        Name:            at_size_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
       - Type:            Struct
         Module:          AppleTextureEncoder
-        JsName:          at_size_t
+        Name:            at_size_t
   - Name:            at_encoder_get_block_dimensions
     JsName:          at_encoder_get_block_dimensions
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/AppleTextureEncoder.h
@@ -937,9 +937,9 @@ Items:
     Signature:       
       - Type:            Struct
         Module:          AppleTextureEncoder
-        JsName:          at_size_t
+        Name:            at_size_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
   - Name:            at_encoder_get_block_format
@@ -959,7 +959,7 @@ Items:
       - Type:            Enum
         Name:            at_block_format_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
   - Name:            at_encoder_get_block_size
@@ -978,7 +978,7 @@ Items:
     Signature:       
       - Type:            ULong
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
   - Name:            at_encoder_get_texel_alpha
@@ -998,7 +998,7 @@ Items:
       - Type:            Enum
         Name:            at_alpha_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
   - Name:            at_encoder_get_texel_format
@@ -1018,7 +1018,7 @@ Items:
       - Type:            Enum
         Name:            at_texel_format_t
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
   - Name:            at_encoder_get_version
@@ -1052,7 +1052,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
       - Type:            Enum
@@ -1073,7 +1073,7 @@ Items:
     Signature:       
       - Type:            Bool
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_at_encoder
       - Type:            Enum
@@ -1162,7 +1162,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '0'
-  - Name:            ''
+  - Name:            at_error_t
     JsName:          at_error_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/AppleTextureEncoder.h
     Module:          
@@ -1280,7 +1280,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '32'
-  - Name:            ''
+  - Name:            at_flags_t
     JsName:          at_flags_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/AppleTextureEncoder.h
     Module:          
@@ -1506,7 +1506,7 @@ Items:
     Flags:           [ IsIosAppExtensionAvailable ]
     Type:            EnumConstant
     Value:           '5'
-  - Name:            ''
+  - Name:            at_texel_format_t
     JsName:          at_texel_format_t
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/AppleTextureEncoder.h
     Module:          
@@ -1570,7 +1570,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          AppleTextureEncoder
-          JsName:          at_size_t
+          Name:            at_size_t
       - Name:            rowBytes
         Signature:       
           Type:            ULong

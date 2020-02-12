@@ -284,7 +284,7 @@ Items:
       - Type:            Pointer
         PointerType:     
           Type:            Void
-  - Name:            ''
+  - Name:            CCHmacContext
     JsName:          CCHmacContext
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonHMAC.h
     Module:          
@@ -318,7 +318,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonHMAC
-          JsName:          CCHmacContext
+          Name:            CCHmacContext
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -339,7 +339,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonHMAC
-          JsName:          CCHmacContext
+          Name:            CCHmacContext
       - Type:            UInt
       - Type:            Pointer
         PointerType:     
@@ -362,7 +362,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonHMAC
-          JsName:          CCHmacContext
+          Name:            CCHmacContext
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -502,7 +502,7 @@ Items:
           Type:            Void
       - Type:            UInt
       - Type:            CString
-  - Name:            CC_MD2state_st
+  - Name:            CC_MD2_CTX
     JsName:          CC_MD2_CTX
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
     Module:          
@@ -552,7 +552,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_MD2_CTX
+          Name:            CC_MD2_CTX
   - Name:            CC_MD2_Init
     JsName:          CC_MD2_Init
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -570,7 +570,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_MD2_CTX
+          Name:            CC_MD2_CTX
   - Name:            CC_MD2_Update
     JsName:          CC_MD2_Update
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -588,7 +588,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_MD2_CTX
+          Name:            CC_MD2_CTX
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -611,7 +611,7 @@ Items:
           Type:            Void
       - Type:            UInt
       - Type:            CString
-  - Name:            CC_MD4state_st
+  - Name:            CC_MD4_CTX
     JsName:          CC_MD4_CTX
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
     Module:          
@@ -667,7 +667,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_MD4_CTX
+          Name:            CC_MD4_CTX
   - Name:            CC_MD4_Init
     JsName:          CC_MD4_Init
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -685,7 +685,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_MD4_CTX
+          Name:            CC_MD4_CTX
   - Name:            CC_MD4_Update
     JsName:          CC_MD4_Update
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -703,7 +703,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_MD4_CTX
+          Name:            CC_MD4_CTX
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -726,7 +726,7 @@ Items:
           Type:            Void
       - Type:            UInt
       - Type:            CString
-  - Name:            CC_MD5state_st
+  - Name:            CC_MD5_CTX
     JsName:          CC_MD5_CTX
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
     Module:          
@@ -782,7 +782,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_MD5_CTX
+          Name:            CC_MD5_CTX
   - Name:            CC_MD5_Init
     JsName:          CC_MD5_Init
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -800,7 +800,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_MD5_CTX
+          Name:            CC_MD5_CTX
   - Name:            CC_MD5_Update
     JsName:          CC_MD5_Update
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -818,7 +818,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_MD5_CTX
+          Name:            CC_MD5_CTX
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -840,7 +840,7 @@ Items:
           Type:            Void
       - Type:            UInt
       - Type:            CString
-  - Name:            CC_SHA1state_st
+  - Name:            CC_SHA1_CTX
     JsName:          CC_SHA1_CTX
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
     Module:          
@@ -898,7 +898,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA1_CTX
+          Name:            CC_SHA1_CTX
   - Name:            CC_SHA1_Init
     JsName:          CC_SHA1_Init
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -915,7 +915,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA1_CTX
+          Name:            CC_SHA1_CTX
   - Name:            CC_SHA1_Update
     JsName:          CC_SHA1_Update
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -932,7 +932,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA1_CTX
+          Name:            CC_SHA1_CTX
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -973,7 +973,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA256_CTX
+          Name:            CC_SHA256_CTX
   - Name:            CC_SHA224_Init
     JsName:          CC_SHA224_Init
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -991,7 +991,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA256_CTX
+          Name:            CC_SHA256_CTX
   - Name:            CC_SHA224_Update
     JsName:          CC_SHA224_Update
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -1009,7 +1009,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA256_CTX
+          Name:            CC_SHA256_CTX
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -1032,7 +1032,7 @@ Items:
           Type:            Void
       - Type:            UInt
       - Type:            CString
-  - Name:            CC_SHA256state_st
+  - Name:            CC_SHA256_CTX
     JsName:          CC_SHA256_CTX
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
     Module:          
@@ -1079,7 +1079,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA256_CTX
+          Name:            CC_SHA256_CTX
   - Name:            CC_SHA256_Init
     JsName:          CC_SHA256_Init
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -1097,7 +1097,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA256_CTX
+          Name:            CC_SHA256_CTX
   - Name:            CC_SHA256_Update
     JsName:          CC_SHA256_Update
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -1115,7 +1115,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA256_CTX
+          Name:            CC_SHA256_CTX
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -1156,7 +1156,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA512_CTX
+          Name:            CC_SHA512_CTX
   - Name:            CC_SHA384_Init
     JsName:          CC_SHA384_Init
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -1174,7 +1174,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA512_CTX
+          Name:            CC_SHA512_CTX
   - Name:            CC_SHA384_Update
     JsName:          CC_SHA384_Update
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -1192,7 +1192,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA512_CTX
+          Name:            CC_SHA512_CTX
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -1215,7 +1215,7 @@ Items:
           Type:            Void
       - Type:            UInt
       - Type:            CString
-  - Name:            CC_SHA512state_st
+  - Name:            CC_SHA512_CTX
     JsName:          CC_SHA512_CTX
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
     Module:          
@@ -1262,7 +1262,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA512_CTX
+          Name:            CC_SHA512_CTX
   - Name:            CC_SHA512_Init
     JsName:          CC_SHA512_Init
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -1280,7 +1280,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA512_CTX
+          Name:            CC_SHA512_CTX
   - Name:            CC_SHA512_Update
     JsName:          CC_SHA512_Update
     Filename:        /.../SDKs/iPhoneSimulator.sdk/usr/include/CommonCrypto/CommonDigest.h
@@ -1298,7 +1298,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CommonCrypto.CommonDigest
-          JsName:          CC_SHA512_CTX
+          Name:            CC_SHA512_CTX
       - Type:            Pointer
         PointerType:     
           Type:            Void

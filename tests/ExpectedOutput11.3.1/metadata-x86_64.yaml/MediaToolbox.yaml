@@ -7,7 +7,7 @@ Module:
     - Library:         MediaToolbox
       IsFramework:     true
 Items:           
-  - Name:            ''
+  - Name:            MTAudioProcessingTapCallbacks
     JsName:          MTAudioProcessingTapCallbacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MTAudioProcessingTap.h
     Module:          
@@ -63,7 +63,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          CoreAudioTypes.CoreAudioBaseTypes
-                JsName:          AudioStreamBasicDescription
+                Name:            AudioStreamBasicDescription
       - Name:            unprepare
         Signature:       
           Type:            FunctionPointer
@@ -86,7 +86,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          CoreAudioTypes.CoreAudioBaseTypes
-                JsName:          AudioBufferList
+                Name:            AudioBufferList
             - Type:            Pointer
               PointerType:     
                 Type:            Long
@@ -113,7 +113,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          MediaToolbox.MTAudioProcessingTap
-          JsName:          MTAudioProcessingTapCallbacks
+          Name:            MTAudioProcessingTapCallbacks
       - Type:            UInt
       - Type:            Pointer
         PointerType:     
@@ -141,7 +141,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
       - Type:            Pointer
         PointerType:     
           Type:            UInt
@@ -149,7 +149,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreMedia.CMTimeRange
-          JsName:          CMTimeRange
+          Name:            CMTimeRange
       - Type:            Pointer
         PointerType:     
           Type:            Long

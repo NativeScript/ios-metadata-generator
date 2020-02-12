@@ -69,7 +69,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            deallocateRenderResources
         JsName:          deallocateRenderResources
@@ -97,12 +97,12 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          AUAudioUnitPreset
+            Name:            AUAudioUnitPreset
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'disableProfile:cable:onChannel:error:'
         JsName:          disableProfileCableOnChannelError
@@ -118,14 +118,14 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MIDICIProfile
+            Name:            MIDICIProfile
             WithProtocols:   
           - Type:            UChar
           - Type:            UChar
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'enableProfile:cable:onChannel:error:'
         JsName:          enableProfileCableOnChannelError
@@ -141,14 +141,14 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          MIDICIProfile
+            Name:            MIDICIProfile
             WithProtocols:   
           - Type:            UChar
           - Type:            UChar
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'initWithComponentDescription:error:'
         JsName:          initWithComponentDescriptionError
@@ -164,11 +164,11 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          AudioToolbox.AudioComponent
-            JsName:          AudioComponentDescription
+            Name:            AudioComponentDescription
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'initWithComponentDescription:options:error:'
         JsName:          initWithComponentDescriptionOptionsError
@@ -184,13 +184,13 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          AudioToolbox.AudioComponent
-            JsName:          AudioComponentDescription
+            Name:            AudioComponentDescription
           - Type:            Enum
             Name:            AudioComponentInstantiationOptions
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'parametersForOverviewWithCount:'
         JsName:          parametersForOverviewWithCount
@@ -204,10 +204,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
           - Type:            Long
@@ -224,21 +224,21 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSDictionary
+            Name:            NSDictionary
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
               - Type:            Id
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          AUAudioUnitPreset
+            Name:            AUAudioUnitPreset
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'profileStateForCable:channel:'
         JsName:          profileStateForCableChannel
@@ -253,7 +253,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          MIDICIProfileState
+            Name:            MIDICIProfileState
             WithProtocols:   
           - Type:            UChar
           - Type:            UChar
@@ -296,12 +296,12 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          AUAudioUnitPreset
+            Name:            AUAudioUnitPreset
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'tokenByAddingRenderObserver:'
         JsName:          tokenByAddingRenderObserver
@@ -324,7 +324,7 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          CoreAudioTypes.CoreAudioBaseTypes
-                  JsName:          AudioTimeStamp
+                  Name:            AudioTimeStamp
               - Type:            UInt
               - Type:            Long
       - Name:            'startHardwareAndReturnError:'
@@ -342,7 +342,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            stopHardware
         JsName:          stopHardware
@@ -382,10 +382,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          AVAudioFormat
+            Name:            AVAudioFormat
             WithProtocols:   
           - Type:            Interface
-            JsName:          AUAudioUnitBus
+            Name:            AUAudioUnitBus
             WithProtocols:   
       - Name:            'requestViewControllerWithCompletionHandler:'
         JsName:          requestViewControllerWithCompletionHandler
@@ -403,7 +403,7 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIViewController
+                Name:            UIViewController
                 WithProtocols:   
       - Name:            'selectViewConfiguration:'
         JsName:          selectViewConfiguration
@@ -419,7 +419,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          AUAudioUnitViewConfiguration
+            Name:            AUAudioUnitViewConfiguration
             WithProtocols:   
       - Name:            'supportedViewConfigurations:'
         JsName:          supportedViewConfigurations
@@ -434,13 +434,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSIndexSet
+            Name:            NSIndexSet
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          AUAudioUnitViewConfiguration
+                Name:            AUAudioUnitViewConfiguration
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -458,17 +458,17 @@ Items:
           - Type:            Void
           - Type:            Struct
             Module:          AudioToolbox.AudioComponent
-            JsName:          AudioComponentDescription
+            Name:            AudioComponentDescription
           - Type:            Enum
             Name:            AudioComponentInstantiationOptions
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          AUAudioUnit
+                Name:            AUAudioUnit
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'registerSubclass:asComponentDescription:name:version:'
         JsName:          registerSubclassAsComponentDescriptionNameVersion
@@ -485,9 +485,9 @@ Items:
           - Type:            Class
           - Type:            Struct
             Module:          AudioToolbox.AudioComponent
-            JsName:          AudioComponentDescription
+            Name:            AudioComponentDescription
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            UInt
     InstanceProperties: 
@@ -537,7 +537,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            audioUnitShortName
         JsName:          audioUnitShortName
@@ -564,7 +564,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            canProcessInPlace
         JsName:          canProcessInPlace
@@ -612,10 +612,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            channelMap
@@ -643,10 +643,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -664,10 +664,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            component
@@ -719,7 +719,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          AudioToolbox.AudioComponent
-              JsName:          AudioComponentDescription
+              Name:            AudioComponentDescription
       - Name:            componentName
         JsName:          componentName
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUAudioUnit.h
@@ -743,7 +743,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            componentVersion
         JsName:          componentVersion
@@ -791,7 +791,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setContextName:'
@@ -807,7 +807,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            currentPreset
         JsName:          currentPreset
@@ -832,7 +832,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AUAudioUnitPreset
+              Name:            AUAudioUnitPreset
               WithProtocols:   
         Setter:          
           Name:            'setCurrentPreset:'
@@ -848,7 +848,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          AUAudioUnitPreset
+              Name:            AUAudioUnitPreset
               WithProtocols:   
       - Name:            factoryPresets
         JsName:          factoryPresets
@@ -873,10 +873,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          AUAudioUnitPreset
+                  Name:            AUAudioUnitPreset
                   WithProtocols:   
               WithProtocols:   
       - Name:            fullState
@@ -902,10 +902,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -924,10 +924,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -955,10 +955,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -977,10 +977,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSDictionary
+              Name:            NSDictionary
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Id
                   WithProtocols:   
@@ -1008,7 +1008,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AUAudioUnitBusArray
+              Name:            AUAudioUnitBusArray
               WithProtocols:   
       - Name:            latency
         JsName:          latency
@@ -1056,7 +1056,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            maximumFramesToRender
         JsName:          maximumFramesToRender
@@ -1172,10 +1172,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            musicalContextBlock
@@ -1301,7 +1301,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AUAudioUnitBusArray
+              Name:            AUAudioUnitBusArray
               WithProtocols:   
       - Name:            parameterTree
         JsName:          parameterTree
@@ -1326,7 +1326,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AUParameterTree
+              Name:            AUParameterTree
               WithProtocols:   
         Setter:          
           Name:            'setParameterTree:'
@@ -1342,7 +1342,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          AUParameterTree
+              Name:            AUParameterTree
               WithProtocols:   
       - Name:            profileChangedBlock
         JsName:          profileChangedBlock
@@ -1374,7 +1374,7 @@ Items:
                 - Type:            UChar
                 - Type:            UChar
                 - Type:            Interface
-                  JsName:          MIDICIProfile
+                  Name:            MIDICIProfile
                   WithProtocols:   
                 - Type:            Bool
         Setter:          
@@ -1397,7 +1397,7 @@ Items:
                 - Type:            UChar
                 - Type:            UChar
                 - Type:            Interface
-                  JsName:          MIDICIProfile
+                  Name:            MIDICIProfile
                   WithProtocols:   
                 - Type:            Bool
       - Name:            providesUserInterface
@@ -1458,14 +1458,14 @@ Items:
                   PointerType:     
                     Type:            Struct
                     Module:          CoreAudioTypes.CoreAudioBaseTypes
-                    JsName:          AudioTimeStamp
+                    Name:            AudioTimeStamp
                 - Type:            UInt
                 - Type:            Long
                 - Type:            Pointer
                   PointerType:     
                     Type:            Struct
                     Module:          CoreAudioTypes.CoreAudioBaseTypes
-                    JsName:          AudioBufferList
+                    Name:            AudioBufferList
                 - Type:            Block
                   Signature:       
                     - Type:            Int
@@ -1477,14 +1477,14 @@ Items:
                       PointerType:     
                         Type:            Struct
                         Module:          CoreAudioTypes.CoreAudioBaseTypes
-                        JsName:          AudioTimeStamp
+                        Name:            AudioTimeStamp
                     - Type:            UInt
                     - Type:            Long
                     - Type:            Pointer
                       PointerType:     
                         Type:            Struct
                         Module:          CoreAudioTypes.CoreAudioBaseTypes
-                        JsName:          AudioBufferList
+                        Name:            AudioBufferList
       - Name:            renderingOffline
         JsName:          renderingOffline
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUAudioUnit.h
@@ -1842,10 +1842,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          AUAudioUnitPreset
+                  Name:            AUAudioUnitPreset
                   WithProtocols:   
               WithProtocols:   
       - Name:            virtualMIDICableCount
@@ -1987,7 +1987,7 @@ Items:
                   PointerType:     
                     Type:            Struct
                     Module:          CoreAudioTypes.CoreAudioBaseTypes
-                    JsName:          AudioTimeStamp
+                    Name:            AudioTimeStamp
                 - Type:            UInt
                 - Type:            Long
         Setter:          
@@ -2014,7 +2014,7 @@ Items:
                   PointerType:     
                     Type:            Struct
                     Module:          CoreAudioTypes.CoreAudioBaseTypes
-                    JsName:          AudioTimeStamp
+                    Name:            AudioTimeStamp
                 - Type:            UInt
                 - Type:            Long
       - Name:            outputEnabled
@@ -2087,14 +2087,14 @@ Items:
                   PointerType:     
                     Type:            Struct
                     Module:          CoreAudioTypes.CoreAudioBaseTypes
-                    JsName:          AudioTimeStamp
+                    Name:            AudioTimeStamp
                 - Type:            UInt
                 - Type:            Long
                 - Type:            Pointer
                   PointerType:     
                     Type:            Struct
                     Module:          CoreAudioTypes.CoreAudioBaseTypes
-                    JsName:          AudioBufferList
+                    Name:            AudioBufferList
         Setter:          
           Name:            'setOutputProvider:'
           JsName:          setOutputProvider
@@ -2119,14 +2119,14 @@ Items:
                   PointerType:     
                     Type:            Struct
                     Module:          CoreAudioTypes.CoreAudioBaseTypes
-                    JsName:          AudioTimeStamp
+                    Name:            AudioTimeStamp
                 - Type:            UInt
                 - Type:            Long
                 - Type:            Pointer
                   PointerType:     
                     Type:            Struct
                     Module:          CoreAudioTypes.CoreAudioBaseTypes
-                    JsName:          AudioBufferList
+                    Name:            AudioBufferList
       - Name:            running
         JsName:          running
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUAudioUnit.h
@@ -2220,12 +2220,12 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          AVAudioFormat
+            Name:            AVAudioFormat
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'initWithFormat:error:'
         JsName:          initWithFormatError
@@ -2240,12 +2240,12 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          AVAudioFormat
+            Name:            AVAudioFormat
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2370,7 +2370,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AVAudioFormat
+              Name:            AVAudioFormat
               WithProtocols:   
       - Name:            index
         JsName:          index
@@ -2418,7 +2418,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -2434,7 +2434,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            ownerAudioUnit
         JsName:          ownerAudioUnit
@@ -2459,7 +2459,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AUAudioUnit
+              Name:            AUAudioUnit
               WithProtocols:   
       - Name:            shouldAllocateBuffer
         JsName:          shouldAllocateBuffer
@@ -2524,10 +2524,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            maximumChannelCount
@@ -2590,10 +2590,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
         Setter:          
@@ -2610,10 +2610,10 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -2644,10 +2644,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            NSKeyValueObservingOptions
@@ -2667,7 +2667,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          AUAudioUnit
+            Name:            AUAudioUnit
             WithProtocols:   
           - Type:            Enum
             Name:            AUAudioUnitBusType
@@ -2684,15 +2684,15 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          AUAudioUnit
+            Name:            AUAudioUnit
             WithProtocols:   
           - Type:            Enum
             Name:            AUAudioUnitBusType
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          AUAudioUnitBus
+                Name:            AUAudioUnitBus
                 WithProtocols:   
             WithProtocols:   
       - Name:            'objectAtIndexedSubscript:'
@@ -2707,7 +2707,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          AUAudioUnitBus
+            Name:            AUAudioUnitBus
             WithProtocols:   
           - Type:            ULong
       - Name:            'removeObserverFromAllBusses:forKeyPath:context:'
@@ -2723,10 +2723,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSObject
+            Name:            NSObject
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
@@ -2747,7 +2747,7 @@ Items:
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
       - Name:            'replaceBusses:'
         JsName:          replaceBusses
@@ -2762,10 +2762,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          AUAudioUnitBus
+                Name:            AUAudioUnitBus
                 WithProtocols:   
             WithProtocols:   
     StaticMethods:   
@@ -2863,7 +2863,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          AUAudioUnit
+              Name:            AUAudioUnit
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2930,15 +2930,15 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          AUAudioUnit
+            Name:            AUAudioUnit
             WithProtocols:   
           - Type:            Struct
             Module:          AudioToolbox.AudioComponent
-            JsName:          AudioComponentDescription
+            Name:            AudioComponentDescription
           - Type:            Pointer
             PointerType:     
               Type:            Interface
-              JsName:          NSError
+              Name:            NSError
               WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2982,7 +2982,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setName:'
@@ -2998,7 +2998,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            number
         JsName:          number
@@ -3123,7 +3123,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioComponent
-          JsName:          AudioComponentDescription
+          Name:            AudioComponentDescription
       - Type:            Pointer
         PointerType:     
           Type:            Int
@@ -3157,14 +3157,14 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioTimeStamp
+              Name:            AudioTimeStamp
           - Type:            UInt
           - Type:            UInt
           - Type:            Pointer
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioBufferList
+              Name:            AudioBufferList
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -3442,7 +3442,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioComponent
-          JsName:          AudioComponentDescription
+          Name:            AudioComponentDescription
       - Type:            Pointer
         PointerType:     
           Type:            Pointer
@@ -3511,14 +3511,14 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioTimeStamp
+              Name:            AudioTimeStamp
           - Type:            UInt
           - Type:            UInt
           - Type:            Pointer
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioBufferList
+              Name:            AudioBufferList
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -3544,7 +3544,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioUnitProperties
-          JsName:          AURenderCallbackStruct
+          Name:            AURenderCallbackStruct
   - Name:            AUGraphStart
     JsName:          AUGraphStart
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUGraph.h
@@ -3697,7 +3697,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          CoreAudioTypes.CoreAudioBaseTypes
-                JsName:          AudioTimeStamp
+                Name:            AudioTimeStamp
             - Type:            Double
             - Type:            Double
       - Name:            userData
@@ -3728,13 +3728,13 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          CoreAudioTypes.CoreAudioBaseTypes
-                JsName:          AudioTimeStamp
+                Name:            AudioTimeStamp
             - Type:            UInt
             - Type:            Pointer
               PointerType:     
                 Type:            Struct
                 Module:          CoreMIDI.MIDIServices
-                JsName:          MIDIPacketList
+                Name:            MIDIPacketList
       - Name:            userData
         Signature:       
           Type:            Pointer
@@ -3761,7 +3761,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          AudioToolbox.AudioUnitProperties
-          JsName:          AURenderCallbackStruct
+          Name:            AURenderCallbackStruct
   - Name:            AUParameter
     JsName:          AUParameter
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUParameters.h
@@ -3839,7 +3839,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Pointer
             PointerType:     
@@ -3857,7 +3857,7 @@ Items:
         Signature:       
           - Type:            Float
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3907,10 +3907,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSNumber
+                  Name:            NSNumber
                   WithProtocols:   
               WithProtocols:   
       - Name:            flags
@@ -4030,7 +4030,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            value
         JsName:          value
@@ -4092,10 +4092,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -4231,10 +4231,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          AUParameter
+                  Name:            AUParameter
                   WithProtocols:   
               WithProtocols:   
       - Name:            children
@@ -4260,10 +4260,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          AUParameterNode
+                  Name:            AUParameterNode
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -4294,7 +4294,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Long
       - Name:            'removeParameterObserver:'
@@ -4335,7 +4335,7 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          AudioToolbox.AUParameters
-                  JsName:          AUParameterAutomationEvent
+                  Name:            AUParameterAutomationEvent
       - Name:            'tokenByAddingParameterObserver:'
         JsName:          tokenByAddingParameterObserver
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUParameters.h
@@ -4377,7 +4377,7 @@ Items:
                 PointerType:     
                   Type:            Struct
                   Module:          AudioToolbox.AUParameters
-                  JsName:          AURecordedParameterEvent
+                  Name:            AURecordedParameterEvent
     StaticMethods:   
     InstanceProperties: 
       - Name:            displayName
@@ -4403,7 +4403,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            identifier
         JsName:          identifier
@@ -4428,7 +4428,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            keyPath
         JsName:          keyPath
@@ -4453,7 +4453,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            implementorDisplayNameWithLengthCallback
         JsName:          implementorDisplayNameWithLengthCallback
@@ -4480,10 +4480,10 @@ Items:
             - Type:            Block
               Signature:       
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          AUParameterNode
+                  Name:            AUParameterNode
                   WithProtocols:   
                 - Type:            Long
         Setter:          
@@ -4502,10 +4502,10 @@ Items:
             - Type:            Block
               Signature:       
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          AUParameterNode
+                  Name:            AUParameterNode
                   WithProtocols:   
                 - Type:            Long
       - Name:            implementorStringFromValueCallback
@@ -4533,10 +4533,10 @@ Items:
             - Type:            Block
               Signature:       
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          AUParameter
+                  Name:            AUParameter
                   WithProtocols:   
                 - Type:            Pointer
                   PointerType:     
@@ -4557,10 +4557,10 @@ Items:
             - Type:            Block
               Signature:       
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          AUParameter
+                  Name:            AUParameter
                   WithProtocols:   
                 - Type:            Pointer
                   PointerType:     
@@ -4591,10 +4591,10 @@ Items:
               Signature:       
                 - Type:            Float
                 - Type:            Interface
-                  JsName:          AUParameter
+                  Name:            AUParameter
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
         Setter:          
           Name:            'setImplementorValueFromStringCallback:'
@@ -4613,10 +4613,10 @@ Items:
               Signature:       
                 - Type:            Float
                 - Type:            Interface
-                  JsName:          AUParameter
+                  Name:            AUParameter
                   WithProtocols:   
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
       - Name:            implementorValueObserver
         JsName:          implementorValueObserver
@@ -4644,7 +4644,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          AUParameter
+                  Name:            AUParameter
                   WithProtocols:   
                 - Type:            Float
         Setter:          
@@ -4664,7 +4664,7 @@ Items:
               Signature:       
                 - Type:            Void
                 - Type:            Interface
-                  JsName:          AUParameter
+                  Name:            AUParameter
                   WithProtocols:   
                 - Type:            Float
       - Name:            implementorValueProvider
@@ -4693,7 +4693,7 @@ Items:
               Signature:       
                 - Type:            Float
                 - Type:            Interface
-                  JsName:          AUParameter
+                  Name:            AUParameter
                   WithProtocols:   
         Setter:          
           Name:            'setImplementorValueProvider:'
@@ -4712,7 +4712,7 @@ Items:
               Signature:       
                 - Type:            Float
                 - Type:            Interface
-                  JsName:          AUParameter
+                  Name:            AUParameter
                   WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4741,7 +4741,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          AUParameter
+            Name:            AUParameter
             WithProtocols:   
           - Type:            ULongLong
       - Name:            'parameterWithID:scope:element:'
@@ -4756,7 +4756,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          AUParameter
+            Name:            AUParameter
             WithProtocols:   
           - Type:            UInt
           - Type:            UInt
@@ -4774,16 +4774,16 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          AUParameterGroup
+            Name:            AUParameterGroup
             WithProtocols:   
           - Type:            Interface
-            JsName:          AUParameterGroup
+            Name:            AUParameterGroup
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            ULongLong
       - Name:            'createGroupTemplate:'
@@ -4798,13 +4798,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          AUParameterGroup
+            Name:            AUParameterGroup
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          AUParameterNode
+                Name:            AUParameterNode
                 WithProtocols:   
             WithProtocols:   
       - Name:            'createGroupWithIdentifier:name:children:'
@@ -4819,19 +4819,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          AUParameterGroup
+            Name:            AUParameterGroup
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          AUParameterNode
+                Name:            AUParameterNode
                 WithProtocols:   
             WithProtocols:   
       - Name:            'createParameterWithIdentifier:name:address:min:max:unit:unitName:flags:valueStrings:dependentParameters:'
@@ -4846,13 +4846,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          AUParameter
+            Name:            AUParameter
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            ULongLong
           - Type:            Float
@@ -4860,22 +4860,22 @@ Items:
           - Type:            Enum
             Name:            AudioUnitParameterUnit
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            AudioUnitParameterOptions
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSNumber
+                Name:            NSNumber
                 WithProtocols:   
             WithProtocols:   
       - Name:            'createTreeWithChildren:'
@@ -4890,13 +4890,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          AUParameterTree
+            Name:            AUParameterTree
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          AUParameterNode
+                Name:            AUParameterNode
                 WithProtocols:   
             WithProtocols:   
     InstanceProperties: 
@@ -4992,14 +4992,14 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          CoreAudioTypes.CoreAudioBaseTypes
-                JsName:          AudioTimeStamp
+                Name:            AudioTimeStamp
             - Type:            UInt
             - Type:            UInt
             - Type:            Pointer
               PointerType:     
                 Type:            Struct
                 Module:          CoreAudioTypes.CoreAudioBaseTypes
-                JsName:          AudioBufferList
+                Name:            AudioBufferList
       - Name:            inputProcRefCon
         Signature:       
           Type:            Pointer
@@ -5244,7 +5244,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          CoreAudioTypes.CoreAudioBaseTypes
-            JsName:          AudioChannelLayout
+            Name:            AudioChannelLayout
   - Name:            AudioBalanceFadeType
     JsName:          AudioBalanceFadeType
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioFormat.h
@@ -5316,7 +5316,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
       - Type:            Pointer
         PointerType:     
           Type:            UInt
@@ -5324,7 +5324,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
       - Type:            Pointer
         PointerType:     
           Type:            UInt
@@ -5357,7 +5357,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
   - Name:            AudioCodecGetProperty
     JsName:          AudioCodecGetProperty
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioCodec.h
@@ -5422,12 +5422,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -5488,7 +5488,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
       - Type:            Pointer
         PointerType:     
           Type:            UInt
@@ -5496,7 +5496,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
       - Type:            Pointer
         PointerType:     
           Type:            UInt
@@ -5529,7 +5529,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
       - Type:            Pointer
         PointerType:     
           Type:            UInt
@@ -5624,7 +5624,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioComponent
-          JsName:          AudioComponentDescription
+          Name:            AudioComponentDescription
   - Name:            AudioComponentDescription
     JsName:          AudioComponentDescription
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioComponent.h
@@ -5673,7 +5673,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioComponent
-          JsName:          AudioComponentDescription
+          Name:            AudioComponentDescription
   - Name:            AudioComponentFlags
     JsName:          AudioComponentFlags
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioComponent.h
@@ -5711,7 +5711,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioComponent
-          JsName:          AudioComponentDescription
+          Name:            AudioComponentDescription
   - Name:            AudioComponentGetIcon
     JsName:          AudioComponentGetIcon
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUComponent.h
@@ -5725,7 +5725,7 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          UIImage
+        Name:            UIImage
         WithProtocols:   
       - Type:            Pointer
         PointerType:     
@@ -5942,7 +5942,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioComponent
-          JsName:          AudioComponentDescription
+          Name:            AudioComponentDescription
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -5953,12 +5953,12 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          AudioToolbox.AudioComponent
-              JsName:          AudioComponentPlugInInterface
+              Name:            AudioComponentPlugInInterface
           - Type:            Pointer
             PointerType:     
               Type:            Struct
               Module:          AudioToolbox.AudioComponent
-              JsName:          AudioComponentDescription
+              Name:            AudioComponentDescription
   - Name:            AudioComponentValidationResult
     JsName:          AudioComponentValidationResult
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioComponent.h
@@ -6024,12 +6024,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
   - Name:            AudioConverterDispose
     JsName:          AudioConverterDispose
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioConverter.h
@@ -6075,14 +6075,14 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioBufferList
+              Name:            AudioBufferList
           - Type:            Pointer
             PointerType:     
               Type:            Pointer
               PointerType:     
                 Type:            Struct
                 Module:          CoreAudioTypes.CoreAudioBaseTypes
-                JsName:          AudioStreamPacketDescription
+                Name:            AudioStreamPacketDescription
           - Type:            Pointer
             PointerType:     
               Type:            Void
@@ -6096,12 +6096,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
   - Name:            AudioConverterGetProperty
     JsName:          AudioConverterGetProperty
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioConverter.h
@@ -6163,12 +6163,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            Pointer
         PointerType:     
           Type:            Pointer
@@ -6191,18 +6191,18 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            UInt
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioClassDescription
+          Name:            AudioClassDescription
       - Type:            Pointer
         PointerType:     
           Type:            Pointer
@@ -6319,7 +6319,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            Enum
         Name:            AudioFileFlags
       - Type:            Pointer
@@ -6539,7 +6539,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            Enum
         Name:            AudioFileFlags
       - Type:            Pointer
@@ -6573,7 +6573,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          AudioToolbox.AudioFile
-          JsName:          AudioFile_SMPTE_Time
+          Name:            AudioFile_SMPTE_Time
       - Name:            mType
         Signature:       
           Type:            UInt
@@ -6606,7 +6606,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          AudioToolbox.AudioFile
-            JsName:          AudioFileMarker
+            Name:            AudioFileMarker
           Size:            1
   - Name:            AudioFileOpenURL
     JsName:          AudioFileOpenURL
@@ -6794,7 +6794,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
       - Type:            LongLong
       - Type:            Pointer
         PointerType:     
@@ -6826,7 +6826,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
       - Type:            LongLong
       - Type:            Pointer
         PointerType:     
@@ -6866,7 +6866,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          AudioToolbox.AudioFile
-            JsName:          AudioFileMarker
+            Name:            AudioFileMarker
           Size:            1
   - Name:            AudioFileRegionFlags
     JsName:          AudioFileRegionFlags
@@ -6906,7 +6906,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          AudioToolbox.AudioFile
-            JsName:          AudioFileRegion
+            Name:            AudioFileRegion
           Size:            1
   - Name:            AudioFileRemoveUserData
     JsName:          AudioFileRemoveUserData
@@ -7074,7 +7074,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioStreamPacketDescription
+              Name:            AudioStreamPacketDescription
       - Type:            UInt
       - Type:            Pointer
         PointerType:     
@@ -7251,7 +7251,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
       - Type:            LongLong
       - Type:            Pointer
         PointerType:     
@@ -7345,7 +7345,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Name:            mMagicCookie
         Signature:       
           Type:            Pointer
@@ -7404,13 +7404,13 @@ Items:
     Type:            Function
     Signature:       
       - Type:            Interface
-        JsName:          UIImage
+        Name:            UIImage
         WithProtocols:   
       - Type:            Pointer
         PointerType:     
           Type:            Void
       - Type:            Float
-  - Name:            ''
+  - Name:            AudioOutputUnitMIDICallbacks
     JsName:          AudioOutputUnitMIDICallbacks
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioUnitProperties.h
     Module:          
@@ -7465,7 +7465,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioComponent
-          JsName:          AudioComponentDescription
+          Name:            AudioComponentDescription
       - Type:            BridgedInterface
         Name:            NSString
         BridgedTo:       NSString
@@ -7504,7 +7504,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Name:            mFlags
         Signature:       
           Type:            UInt
@@ -7614,7 +7614,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          CoreAudioTypes.CoreAudioBaseTypes
-            JsName:          AudioChannelLayout
+            Name:            AudioChannelLayout
   - Name:            AudioPanningMode
     JsName:          AudioPanningMode
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioFormat.h
@@ -7682,7 +7682,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          AudioToolbox.AudioQueue
-            JsName:          AudioQueueBuffer
+            Name:            AudioQueueBuffer
   - Name:            AudioQueueAllocateBufferWithPacketDescriptions
     JsName:          AudioQueueAllocateBufferWithPacketDescriptions
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -7707,7 +7707,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          AudioToolbox.AudioQueue
-            JsName:          AudioQueueBuffer
+            Name:            AudioQueueBuffer
   - Name:            AudioQueueBuffer
     JsName:          AudioQueueBuffer
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -7744,7 +7744,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          CoreAudioTypes.CoreAudioBaseTypes
-            JsName:          AudioStreamPacketDescription
+            Name:            AudioStreamPacketDescription
       - Name:            mPacketDescriptionCount
         Signature:       
           Type:            UInt
@@ -7808,7 +7808,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
   - Name:            AudioQueueDeviceGetNearestStartTime
     JsName:          AudioQueueDeviceGetNearestStartTime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -7829,7 +7829,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Type:            UInt
   - Name:            AudioQueueDeviceTranslateTime
     JsName:          AudioQueueDeviceTranslateTime
@@ -7851,12 +7851,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
   - Name:            AudioQueueDispose
     JsName:          AudioQueueDispose
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -7913,13 +7913,13 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioQueue
-          JsName:          AudioQueueBuffer
+          Name:            AudioQueueBuffer
       - Type:            UInt
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
   - Name:            AudioQueueEnqueueBufferWithParameters
     JsName:          AudioQueueEnqueueBufferWithParameters
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -7940,13 +7940,13 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioQueue
-          JsName:          AudioQueueBuffer
+          Name:            AudioQueueBuffer
       - Type:            UInt
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamPacketDescription
+          Name:            AudioStreamPacketDescription
       - Type:            UInt
       - Type:            UInt
       - Type:            UInt
@@ -7954,17 +7954,17 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioQueue
-          JsName:          AudioQueueParameterEvent
+          Name:            AudioQueueParameterEvent
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
   - Name:            AudioQueueFlush
     JsName:          AudioQueueFlush
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -8001,7 +8001,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioQueue
-          JsName:          AudioQueueBuffer
+          Name:            AudioQueueBuffer
   - Name:            AudioQueueGetCurrentTime
     JsName:          AudioQueueGetCurrentTime
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -8025,7 +8025,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Type:            CString
   - Name:            AudioQueueGetParameter
     JsName:          AudioQueueGetParameter
@@ -8124,7 +8124,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            FunctionPointer
         Signature:       
           - Type:            Void
@@ -8138,18 +8138,18 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          AudioToolbox.AudioQueue
-              JsName:          AudioQueueBuffer
+              Name:            AudioQueueBuffer
           - Type:            Pointer
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioTimeStamp
+              Name:            AudioTimeStamp
           - Type:            UInt
           - Type:            Pointer
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioStreamPacketDescription
+              Name:            AudioStreamPacketDescription
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -8187,10 +8187,10 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            UInt
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -8203,18 +8203,18 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          AudioToolbox.AudioQueue
-              JsName:          AudioQueueBuffer
+              Name:            AudioQueueBuffer
           - Type:            Pointer
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioTimeStamp
+              Name:            AudioTimeStamp
           - Type:            UInt
           - Type:            Pointer
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioStreamPacketDescription
+              Name:            AudioStreamPacketDescription
   - Name:            AudioQueueNewOutput
     JsName:          AudioQueueNewOutput
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -8232,7 +8232,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            FunctionPointer
         Signature:       
           - Type:            Void
@@ -8246,7 +8246,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          AudioToolbox.AudioQueue
-              JsName:          AudioQueueBuffer
+              Name:            AudioQueueBuffer
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -8284,10 +8284,10 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            UInt
       - Type:            Interface
-        JsName:          NSObject
+        Name:            NSObject
         WithProtocols:   
           - OS_dispatch_queue
       - Type:            Block
@@ -8300,7 +8300,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          AudioToolbox.AudioQueue
-              JsName:          AudioQueueBuffer
+              Name:            AudioQueueBuffer
   - Name:            AudioQueueOfflineRender
     JsName:          AudioQueueOfflineRender
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -8321,12 +8321,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.AudioQueue
-          JsName:          AudioQueueBuffer
+          Name:            AudioQueueBuffer
       - Type:            UInt
   - Name:            AudioQueueParameterEvent
     JsName:          AudioQueueParameterEvent
@@ -8457,7 +8457,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Type:            Pointer
         PointerType:     
           Type:            Enum
@@ -8469,7 +8469,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
   - Name:            AudioQueueProcessingTapNew
     JsName:          AudioQueueProcessingTapNew
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -8500,7 +8500,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioTimeStamp
+              Name:            AudioTimeStamp
           - Type:            Pointer
             PointerType:     
               Type:            Enum
@@ -8512,7 +8512,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioBufferList
+              Name:            AudioBufferList
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -8525,7 +8525,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            Pointer
         PointerType:     
           Type:            Pointer
@@ -8597,12 +8597,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioChannelLayout
+          Name:            AudioChannelLayout
   - Name:            AudioQueueSetParameter
     JsName:          AudioQueueSetParameter
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -8662,7 +8662,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
   - Name:            AudioQueueStop
     JsName:          AudioQueueStop
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioQueue.h
@@ -9148,14 +9148,14 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioTimeStamp
+              Name:            AudioTimeStamp
           - Type:            UInt
           - Type:            UInt
           - Type:            Pointer
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioBufferList
+              Name:            AudioBufferList
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -9423,7 +9423,7 @@ Items:
       - Name:            historyDurationInSeconds
         Signature:       
           Type:            Float
-  - Name:            AudioUnitParameterNameInfo
+  - Name:            AudioUnitParameterIDName
     JsName:          AudioUnitParameterIDName
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioUnitProperties.h
     Module:          
@@ -9635,13 +9635,13 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Type:            UInt
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
   - Name:            AudioUnitProcessMultiple
     JsName:          AudioUnitProcessMultiple
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUComponent.h
@@ -9666,7 +9666,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Type:            UInt
       - Type:            UInt
       - Type:            Pointer
@@ -9675,7 +9675,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          CoreAudioTypes.CoreAudioBaseTypes
-            JsName:          AudioBufferList
+            Name:            AudioBufferList
       - Type:            UInt
       - Type:            Pointer
         PointerType:     
@@ -9683,7 +9683,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          CoreAudioTypes.CoreAudioBaseTypes
-            JsName:          AudioBufferList
+            Name:            AudioBufferList
   - Name:            AudioUnitProperty
     JsName:          AudioUnitProperty
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUComponent.h
@@ -9786,14 +9786,14 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioTimeStamp
+              Name:            AudioTimeStamp
           - Type:            UInt
           - Type:            UInt
           - Type:            Pointer
             PointerType:     
               Type:            Struct
               Module:          CoreAudioTypes.CoreAudioBaseTypes
-              JsName:          AudioBufferList
+              Name:            AudioBufferList
       - Type:            Pointer
         PointerType:     
           Type:            Void
@@ -9821,14 +9821,14 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Type:            UInt
       - Type:            UInt
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
   - Name:            AudioUnitRenderActionFlags
     JsName:          AudioUnitRenderActionFlags
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUComponent.h
@@ -10001,7 +10001,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          AudioToolbox.CAFFile
-          JsName:          CAFAudioDescription
+          Name:            CAFAudioDescription
       - Name:            mChannelLayoutTag
         Signature:       
           Type:            UInt
@@ -10155,7 +10155,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          AudioToolbox.CAFFile
-          JsName:          CAF_SMPTE_Time
+          Name:            CAF_SMPTE_Time
       - Name:            mChannel
         Signature:       
           Type:            UInt
@@ -10182,7 +10182,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          AudioToolbox.CAFFile
-            JsName:          CAFMarker
+            Name:            CAFMarker
           Size:            1
   - Name:            CAFOverviewChunk
     JsName:          CAFOverviewChunk
@@ -10207,7 +10207,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          AudioToolbox.CAFFile
-            JsName:          CAFOverviewSample
+            Name:            CAFOverviewSample
           Size:            1
   - Name:            CAFOverviewSample
     JsName:          CAFOverviewSample
@@ -10275,7 +10275,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          AudioToolbox.CAFFile
-            JsName:          CAFPositionPeak
+            Name:            CAFPositionPeak
           Size:            1
   - Name:            CAFPositionPeak
     JsName:          CAFPositionPeak
@@ -10321,7 +10321,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          AudioToolbox.CAFFile
-            JsName:          CAFMarker
+            Name:            CAFMarker
           Size:            1
   - Name:            CAFRegionChunk
     JsName:          CAFRegionChunk
@@ -10346,7 +10346,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          AudioToolbox.CAFFile
-            JsName:          CAFRegion
+            Name:            CAFRegion
           Size:            1
   - Name:            CAFRegionFlags
     JsName:          CAFRegionFlags
@@ -10400,7 +10400,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          AudioToolbox.CAFFile
-            JsName:          CAFStringID
+            Name:            CAFStringID
           Size:            1
   - Name:            CAFUMIDChunk
     JsName:          CAFUMIDChunk
@@ -10460,7 +10460,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          AudioToolbox.CAFFile
-          JsName:          CAFChunkHeader
+          Name:            CAFChunkHeader
       - Name:            mUUID
         Signature:       
           Type:            ConstantArray
@@ -10503,7 +10503,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          Darwin.C._stdio
-          JsName:          FILE
+          Name:            FILE
   - Name:            CopyInstrumentInfoFromSoundBank
     JsName:          CopyInstrumentInfoFromSoundBank
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.h
@@ -10635,12 +10635,12 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Type:            Pointer
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioChannelLayout
+          Name:            AudioChannelLayout
       - Type:            UInt
       - Type:            Pointer
         PointerType:     
@@ -10751,7 +10751,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
   - Name:            ExtAudioFileSeek
     JsName:          ExtAudioFileSeek
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/ExtendedAudioFile.h
@@ -10852,7 +10852,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
   - Name:            ExtAudioFileWriteAsync
     JsName:          ExtAudioFileWriteAsync
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/ExtendedAudioFile.h
@@ -10874,7 +10874,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioBufferList
+          Name:            AudioBufferList
   - Name:            ExtendedAudioFormatInfo
     JsName:          ExtendedAudioFormatInfo
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioFormat.h
@@ -10890,7 +10890,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioStreamBasicDescription
+          Name:            AudioStreamBasicDescription
       - Name:            mMagicCookie
         Signature:       
           Type:            Pointer
@@ -10903,7 +10903,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioClassDescription
+          Name:            AudioClassDescription
   - Name:            ExtendedNoteOnEvent
     JsName:          ExtendedNoteOnEvent
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicPlayer.h
@@ -10928,7 +10928,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          AudioToolbox.MusicDevice
-          JsName:          MusicDeviceNoteParams
+          Name:            MusicDeviceNoteParams
   - Name:            ExtendedTempoEvent
     JsName:          ExtendedTempoEvent
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicPlayer.h
@@ -11201,7 +11201,7 @@ Items:
           ArrayType:       
             Type:            Struct
             Module:          AudioToolbox.MusicDevice
-            JsName:          NoteParamsControlValue
+            Name:            NoteParamsControlValue
           Size:            1
   - Name:            MusicDeviceStartNote
     JsName:          MusicDeviceStartNote
@@ -11229,7 +11229,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.MusicDevice
-          JsName:          MusicDeviceNoteParams
+          Name:            MusicDeviceNoteParams
   - Name:            MusicDeviceStdNoteParams
     JsName:          MusicDeviceStdNoteParams
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicDevice.h
@@ -11727,7 +11727,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.MusicPlayer
-          JsName:          CABarBeatTime
+          Name:            CABarBeatTime
       - Type:            Pointer
         PointerType:     
           Type:            Double
@@ -11753,7 +11753,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.MusicPlayer
-          JsName:          CABarBeatTime
+          Name:            CABarBeatTime
   - Name:            MusicSequenceDisposeTrack
     JsName:          MusicSequenceDisposeTrack
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicPlayer.h
@@ -12219,7 +12219,7 @@ Items:
             PointerType:     
               Type:            Struct
               Module:          AudioToolbox.MusicPlayer
-              JsName:          MusicEventUserData
+              Name:            MusicEventUserData
           - Type:            Double
           - Type:            Double
       - Type:            Pointer
@@ -12459,7 +12459,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.MusicPlayer
-          JsName:          AUPresetEvent
+          Name:            AUPresetEvent
   - Name:            MusicTrackNewExtendedNoteEvent
     JsName:          MusicTrackNewExtendedNoteEvent
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicPlayer.h
@@ -12481,7 +12481,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.MusicPlayer
-          JsName:          ExtendedNoteOnEvent
+          Name:            ExtendedNoteOnEvent
   - Name:            MusicTrackNewExtendedTempoEvent
     JsName:          MusicTrackNewExtendedTempoEvent
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicPlayer.h
@@ -12521,7 +12521,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.MusicPlayer
-          JsName:          MIDIChannelMessage
+          Name:            MIDIChannelMessage
   - Name:            MusicTrackNewMIDINoteEvent
     JsName:          MusicTrackNewMIDINoteEvent
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicPlayer.h
@@ -12543,7 +12543,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.MusicPlayer
-          JsName:          MIDINoteMessage
+          Name:            MIDINoteMessage
   - Name:            MusicTrackNewMIDIRawDataEvent
     JsName:          MusicTrackNewMIDIRawDataEvent
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicPlayer.h
@@ -12565,7 +12565,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.MusicPlayer
-          JsName:          MIDIRawData
+          Name:            MIDIRawData
   - Name:            MusicTrackNewMetaEvent
     JsName:          MusicTrackNewMetaEvent
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicPlayer.h
@@ -12587,7 +12587,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.MusicPlayer
-          JsName:          MIDIMetaEvent
+          Name:            MIDIMetaEvent
   - Name:            MusicTrackNewParameterEvent
     JsName:          MusicTrackNewParameterEvent
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicPlayer.h
@@ -12609,7 +12609,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.MusicPlayer
-          JsName:          ParameterEvent
+          Name:            ParameterEvent
   - Name:            MusicTrackNewUserEvent
     JsName:          MusicTrackNewUserEvent
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicPlayer.h
@@ -12631,7 +12631,7 @@ Items:
         PointerType:     
           Type:            Struct
           Module:          AudioToolbox.MusicPlayer
-          JsName:          MusicEventUserData
+          Name:            MusicEventUserData
   - Name:            MusicTrackSetDestMIDIEndpoint
     JsName:          MusicTrackSetDestMIDIEndpoint
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/MusicPlayer.h
@@ -12817,7 +12817,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Name:            mCompletionProc
         Signature:       
           Type:            FunctionPointer
@@ -12830,7 +12830,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          AudioToolbox.AudioUnitProperties
-                JsName:          ScheduledAudioFileRegion
+                Name:            ScheduledAudioFileRegion
             - Type:            Int
       - Name:            mCompletionProcUserData
         Signature:       
@@ -12866,7 +12866,7 @@ Items:
         Signature:       
           Type:            Struct
           Module:          CoreAudioTypes.CoreAudioBaseTypes
-          JsName:          AudioTimeStamp
+          Name:            AudioTimeStamp
       - Name:            mCompletionProc
         Signature:       
           Type:            FunctionPointer
@@ -12879,7 +12879,7 @@ Items:
               PointerType:     
                 Type:            Struct
                 Module:          AudioToolbox.AudioUnitProperties
-                JsName:          ScheduledAudioSlice
+                Name:            ScheduledAudioSlice
       - Name:            mCompletionProcUserData
         Signature:       
           Type:            Pointer
@@ -12906,7 +12906,7 @@ Items:
           PointerType:     
             Type:            Struct
             Module:          CoreAudioTypes.CoreAudioBaseTypes
-            JsName:          AudioBufferList
+            Name:            AudioBufferList
   - Name:            k3DMixerAttenuationCurve_Exponential
     JsName:          k3DMixerAttenuationCurve_Exponential
     Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioUnitProperties.h

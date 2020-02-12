@@ -154,7 +154,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          INShortcut
+              Name:            INShortcut
               WithProtocols:   
         Setter:          
           Name:            'setShortcut:'
@@ -170,7 +170,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          INShortcut
+              Name:            INShortcut
               WithProtocols:   
       - Name:            style
         JsName:          style
@@ -224,10 +224,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          INUIAddVoiceShortcutViewController
+            Name:            INUIAddVoiceShortcutViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          INUIAddVoiceShortcutButton
+            Name:            INUIAddVoiceShortcutButton
             WithProtocols:   
       - Name:            'presentEditVoiceShortcutViewController:forAddVoiceShortcutButton:'
         JsName:          presentEditVoiceShortcutViewControllerForAddVoiceShortcutButton
@@ -242,10 +242,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          INUIEditVoiceShortcutViewController
+            Name:            INUIEditVoiceShortcutViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          INUIAddVoiceShortcutButton
+            Name:            INUIAddVoiceShortcutButton
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -370,7 +370,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          INShortcut
+            Name:            INShortcut
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -443,7 +443,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          INUIAddVoiceShortcutViewController
+            Name:            INUIAddVoiceShortcutViewController
             WithProtocols:   
       - Name:            'addVoiceShortcutViewController:didFinishWithVoiceShortcut:error:'
         JsName:          addVoiceShortcutViewControllerDidFinishWithVoiceShortcutError
@@ -458,13 +458,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          INUIAddVoiceShortcutViewController
+            Name:            INUIAddVoiceShortcutViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          INVoiceShortcut
+            Name:            INVoiceShortcut
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -496,7 +496,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          INVoiceShortcut
+            Name:            INVoiceShortcut
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -569,7 +569,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          INUIEditVoiceShortcutViewController
+            Name:            INUIEditVoiceShortcutViewController
             WithProtocols:   
       - Name:            'editVoiceShortcutViewController:didDeleteVoiceShortcutWithIdentifier:'
         JsName:          editVoiceShortcutViewControllerDidDeleteVoiceShortcutWithIdentifier
@@ -584,10 +584,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          INUIEditVoiceShortcutViewController
+            Name:            INUIEditVoiceShortcutViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSUUID
+            Name:            NSUUID
             WithProtocols:   
       - Name:            'editVoiceShortcutViewController:didUpdateVoiceShortcut:error:'
         JsName:          editVoiceShortcutViewControllerDidUpdateVoiceShortcutError
@@ -602,13 +602,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          INUIEditVoiceShortcutViewController
+            Name:            INUIEditVoiceShortcutViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          INVoiceShortcut
+            Name:            INVoiceShortcut
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -680,14 +680,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          INParameter
+                Name:            INParameter
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          INInteraction
+            Name:            INInteraction
             WithProtocols:   
           - Type:            Enum
             Name:            INUIInteractiveBehavior
@@ -698,15 +698,15 @@ Items:
               - Type:            Void
               - Type:            Bool
               - Type:            Interface
-                JsName:          NSSet
+                Name:            NSSet
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          INParameter
+                    Name:            INParameter
                     WithProtocols:   
                 WithProtocols:   
               - Type:            Struct
                 Module:          CoreGraphics.CGGeometry
-                JsName:          CGSize
+                Name:            CGSize
       - Name:            'configureWithInteraction:context:completion:'
         JsName:          configureWithInteractionContextCompletion
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/IntentsUI.framework/Headers/INUIHostedViewControlling.h
@@ -720,7 +720,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          INInteraction
+            Name:            INInteraction
             WithProtocols:   
           - Type:            Enum
             Name:            INUIHostedViewContext
@@ -729,7 +729,7 @@ Items:
               - Type:            Void
               - Type:            Struct
                 Module:          CoreGraphics.CGGeometry
-                JsName:          CGSize
+                Name:            CGSize
     StaticMethods:   
     InstanceProperties: 
     StaticProperties: 

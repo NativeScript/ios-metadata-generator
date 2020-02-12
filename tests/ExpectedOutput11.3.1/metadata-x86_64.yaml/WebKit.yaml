@@ -20,7 +20,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKAudiovisualMediaTypeAll
     JsName:          WKAudiovisualMediaTypeAll
@@ -111,7 +111,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKBackForwardListItem
+            Name:            WKBackForwardListItem
             WithProtocols:   
           - Type:            Long
     StaticMethods:   
@@ -139,7 +139,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKBackForwardListItem
+              Name:            WKBackForwardListItem
               WithProtocols:   
       - Name:            backList
         JsName:          backList
@@ -164,10 +164,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          WKBackForwardListItem
+                  Name:            WKBackForwardListItem
                   WithProtocols:   
               WithProtocols:   
       - Name:            currentItem
@@ -193,7 +193,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKBackForwardListItem
+              Name:            WKBackForwardListItem
               WithProtocols:   
       - Name:            forwardItem
         JsName:          forwardItem
@@ -218,7 +218,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKBackForwardListItem
+              Name:            WKBackForwardListItem
               WithProtocols:   
       - Name:            forwardList
         JsName:          forwardList
@@ -243,10 +243,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          WKBackForwardListItem
+                  Name:            WKBackForwardListItem
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -289,7 +289,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            title
         JsName:          title
@@ -314,7 +314,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            URL
         JsName:          URL
@@ -339,7 +339,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -433,7 +433,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -463,19 +463,19 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          WKContentRuleList
+                Name:            WKContentRuleList
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'getAvailableContentRuleListIdentifiers:'
         JsName:          getAvailableContentRuleListIdentifiers
@@ -493,10 +493,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSString
+                    Name:            NSString
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'lookUpContentRuleListForIdentifier:completionHandler:'
@@ -512,16 +512,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          WKContentRuleList
+                Name:            WKContentRuleList
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            'removeContentRuleListForIdentifier:completionHandler:'
         JsName:          removeContentRuleListForIdentifierCompletionHandler
@@ -536,13 +536,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            defaultStore
@@ -570,7 +570,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
     InstanceProperties: 
     StaticProperties: 
@@ -613,7 +613,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -882,7 +882,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKErrorJavaScriptExceptionOccurred
     JsName:          WKErrorJavaScriptExceptionOccurred
@@ -1000,7 +1000,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURLRequest
+              Name:            NSURLRequest
               WithProtocols:   
       - Name:            securityOrigin
         JsName:          securityOrigin
@@ -1027,7 +1027,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKSecurityOrigin
+              Name:            WKSecurityOrigin
               WithProtocols:   
       - Name:            webView
         JsName:          webView
@@ -1054,7 +1054,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKWebView
+              Name:            WKWebView
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1100,7 +1100,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSHTTPCookie
+            Name:            NSHTTPCookie
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -1121,10 +1121,10 @@ Items:
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          NSHTTPCookie
+                    Name:            NSHTTPCookie
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'removeObserver:'
@@ -1155,7 +1155,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSHTTPCookie
+            Name:            NSHTTPCookie
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -1190,7 +1190,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKHTTPCookieStore
+            Name:            WKHTTPCookieStore
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1301,7 +1301,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURLRequest
+              Name:            NSURLRequest
               WithProtocols:   
       - Name:            sourceFrame
         JsName:          sourceFrame
@@ -1326,7 +1326,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKFrameInfo
+              Name:            WKFrameInfo
               WithProtocols:   
       - Name:            targetFrame
         JsName:          targetFrame
@@ -1351,7 +1351,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKFrameInfo
+              Name:            WKFrameInfo
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -1419,10 +1419,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKNavigationAction
+            Name:            WKNavigationAction
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -1443,13 +1443,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKNavigationAction
+            Name:            WKNavigationAction
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKWebpagePreferences
+            Name:            WKWebpagePreferences
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -1457,7 +1457,7 @@ Items:
               - Type:            Enum
                 Name:            WKNavigationActionPolicy
               - Type:            Interface
-                JsName:          WKWebpagePreferences
+                Name:            WKWebpagePreferences
                 WithProtocols:   
       - Name:            'webView:decidePolicyForNavigationResponse:decisionHandler:'
         JsName:          webViewDecidePolicyForNavigationResponseDecisionHandler
@@ -1472,10 +1472,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKNavigationResponse
+            Name:            WKNavigationResponse
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -1495,10 +1495,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
       - Name:            'webView:didFailNavigation:withError:'
         JsName:          webViewDidFailNavigationWithError
@@ -1513,13 +1513,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'webView:didFailProvisionalNavigation:withError:'
         JsName:          webViewDidFailProvisionalNavigationWithError
@@ -1534,13 +1534,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            'webView:didFinishNavigation:'
         JsName:          webViewDidFinishNavigation
@@ -1555,10 +1555,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
       - Name:            'webView:didReceiveAuthenticationChallenge:completionHandler:'
         JsName:          webViewDidReceiveAuthenticationChallengeCompletionHandler
@@ -1573,10 +1573,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURLAuthenticationChallenge
+            Name:            NSURLAuthenticationChallenge
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -1584,7 +1584,7 @@ Items:
               - Type:            Enum
                 Name:            NSURLSessionAuthChallengeDisposition
               - Type:            Interface
-                JsName:          NSURLCredential
+                Name:            NSURLCredential
                 WithProtocols:   
       - Name:            'webView:didReceiveServerRedirectForProvisionalNavigation:'
         JsName:          webViewDidReceiveServerRedirectForProvisionalNavigation
@@ -1599,10 +1599,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
       - Name:            'webView:didStartProvisionalNavigation:'
         JsName:          webViewDidStartProvisionalNavigation
@@ -1617,10 +1617,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
       - Name:            'webViewWebContentProcessDidTerminate:'
         JsName:          webViewWebContentProcessDidTerminate
@@ -1636,7 +1636,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -1726,7 +1726,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURLResponse
+              Name:            NSURLResponse
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2141,7 +2141,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2159,7 +2159,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKPreviewActionItemIdentifierCopy
     JsName:          WKPreviewActionItemIdentifierCopy
@@ -2174,7 +2174,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKPreviewActionItemIdentifierOpen
     JsName:          WKPreviewActionItemIdentifierOpen
@@ -2189,7 +2189,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKPreviewActionItemIdentifierShare
     JsName:          WKPreviewActionItemIdentifierShare
@@ -2204,7 +2204,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKPreviewElementInfo
     JsName:          WKPreviewElementInfo
@@ -2243,7 +2243,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2328,7 +2328,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKFrameInfo
+              Name:            WKFrameInfo
               WithProtocols:   
       - Name:            name
         JsName:          name
@@ -2353,7 +2353,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            webView
         JsName:          webView
@@ -2378,7 +2378,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKWebView
+              Name:            WKWebView
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2407,10 +2407,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKUserContentController
+            Name:            WKUserContentController
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKScriptMessage
+            Name:            WKScriptMessage
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2454,7 +2454,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            port
         JsName:          port
@@ -2502,7 +2502,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2624,7 +2624,7 @@ Items:
           Signature:       
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
         Setter:          
           Name:            'setRect:'
           JsName:          setRect
@@ -2640,7 +2640,7 @@ Items:
             - Type:            Void
             - Type:            Struct
               Module:          CoreGraphics.CGGeometry
-              JsName:          CGRect
+              Name:            CGRect
       - Name:            snapshotWidth
         JsName:          snapshotWidth
         Filename:        /.../SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/WebKit.framework/Headers/WKSnapshotConfiguration.h
@@ -2664,7 +2664,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
         Setter:          
           Name:            'setSnapshotWidth:'
@@ -2680,7 +2680,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -2711,10 +2711,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          UIViewController
+            Name:            UIViewController
             WithProtocols:   
       - Name:            'webView:contextMenuConfigurationForElement:completionHandler:'
         JsName:          webViewContextMenuConfigurationForElementCompletionHandler
@@ -2730,16 +2730,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKContextMenuElementInfo
+            Name:            WKContextMenuElementInfo
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIContextMenuConfiguration
+                Name:            UIContextMenuConfiguration
                 WithProtocols:   
       - Name:            'webView:contextMenuDidEndForElement:'
         JsName:          webViewContextMenuDidEndForElement
@@ -2755,10 +2755,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKContextMenuElementInfo
+            Name:            WKContextMenuElementInfo
             WithProtocols:   
       - Name:            'webView:contextMenuForElement:willCommitWithAnimator:'
         JsName:          webViewContextMenuForElementWillCommitWithAnimator
@@ -2774,10 +2774,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKContextMenuElementInfo
+            Name:            WKContextMenuElementInfo
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -2796,10 +2796,10 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKContextMenuElementInfo
+            Name:            WKContextMenuElementInfo
             WithProtocols:   
       - Name:            'webView:createWebViewWithConfiguration:forNavigationAction:windowFeatures:'
         JsName:          webViewCreateWebViewWithConfigurationForNavigationActionWindowFeatures
@@ -2813,19 +2813,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKWebViewConfiguration
+            Name:            WKWebViewConfiguration
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKNavigationAction
+            Name:            WKNavigationAction
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKWindowFeatures
+            Name:            WKWindowFeatures
             WithProtocols:   
       - Name:            'webViewDidClose:'
         JsName:          webViewDidClose
@@ -2841,7 +2841,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
       - Name:            'webView:previewingViewControllerForElement:defaultActions:'
         JsName:          webViewPreviewingViewControllerForElementDefaultActions
@@ -2856,16 +2856,16 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          UIViewController
+            Name:            UIViewController
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKPreviewElementInfo
+            Name:            WKPreviewElementInfo
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Id
                 WithProtocols:   
@@ -2884,13 +2884,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKFrameInfo
+            Name:            WKFrameInfo
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -2908,13 +2908,13 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKFrameInfo
+            Name:            WKFrameInfo
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -2933,22 +2933,22 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKFrameInfo
+            Name:            WKFrameInfo
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
       - Name:            'webView:shouldPreviewElement:'
         JsName:          webViewShouldPreviewElement
@@ -2964,10 +2964,10 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKPreviewElementInfo
+            Name:            WKPreviewElementInfo
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -2999,7 +2999,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -3017,7 +3017,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKWebView
+            Name:            WKWebView
             WithProtocols:   
           - Type:            Id
             WithProtocols:   
@@ -3052,7 +3052,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSError
+            Name:            NSError
             WithProtocols:   
       - Name:            didFinish
         JsName:          didFinish
@@ -3079,7 +3079,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
       - Name:            'didReceiveResponse:'
         JsName:          didReceiveResponse
@@ -3094,7 +3094,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSURLResponse
+            Name:            NSURLResponse
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3121,7 +3121,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURLRequest
+              Name:            NSURLRequest
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3152,7 +3152,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKContentRuleList
+            Name:            WKContentRuleList
             WithProtocols:   
       - Name:            'addScriptMessageHandler:name:'
         JsName:          addScriptMessageHandlerName
@@ -3170,7 +3170,7 @@ Items:
             WithProtocols:   
               - WKScriptMessageHandler
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'addUserScript:'
         JsName:          addUserScript
@@ -3185,7 +3185,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKUserScript
+            Name:            WKUserScript
             WithProtocols:   
       - Name:            removeAllContentRuleLists
         JsName:          removeAllContentRuleLists
@@ -3226,7 +3226,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKContentRuleList
+            Name:            WKContentRuleList
             WithProtocols:   
       - Name:            'removeScriptMessageHandlerForName:'
         JsName:          removeScriptMessageHandlerForName
@@ -3241,7 +3241,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -3268,10 +3268,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          WKUserScript
+                  Name:            WKUserScript
                   WithProtocols:   
               WithProtocols:   
     StaticProperties: 
@@ -3303,7 +3303,7 @@ Items:
         Signature:       
           - Type:            Instancetype
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Enum
             Name:            WKUserScriptInjectionTime
@@ -3380,7 +3380,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -3450,7 +3450,7 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -3458,7 +3458,7 @@ Items:
               - Type:            Id
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
       - Name:            goBack
         JsName:          goBack
@@ -3472,7 +3472,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
       - Name:            goForward
         JsName:          goForward
@@ -3486,7 +3486,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
       - Name:            'goToBackForwardListItem:'
         JsName:          goToBackForwardListItem
@@ -3500,10 +3500,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
           - Type:            Interface
-            JsName:          WKBackForwardListItem
+            Name:            WKBackForwardListItem
             WithProtocols:   
       - Name:            'initWithFrame:configuration:'
         JsName:          initWithFrameConfiguration
@@ -3519,9 +3519,9 @@ Items:
           - Type:            Instancetype
           - Type:            Struct
             Module:          CoreGraphics.CGGeometry
-            JsName:          CGRect
+            Name:            CGRect
           - Type:            Interface
-            JsName:          WKWebViewConfiguration
+            Name:            WKWebViewConfiguration
             WithProtocols:   
       - Name:            'loadData:MIMEType:characterEncodingName:baseURL:'
         JsName:          loadDataMIMETypeCharacterEncodingNameBaseURL
@@ -3536,19 +3536,19 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSData
+            Name:            NSData
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'loadFileURL:allowingReadAccessToURL:'
         JsName:          loadFileURLAllowingReadAccessToURL
@@ -3563,13 +3563,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'loadHTMLString:baseURL:'
         JsName:          loadHTMLStringBaseURL
@@ -3583,13 +3583,13 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURL
+            Name:            NSURL
             WithProtocols:   
       - Name:            'loadRequest:'
         JsName:          loadRequest
@@ -3603,10 +3603,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSURLRequest
+            Name:            NSURLRequest
             WithProtocols:   
       - Name:            reload
         JsName:          reload
@@ -3620,7 +3620,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
       - Name:            reloadFromOrigin
         JsName:          reloadFromOrigin
@@ -3634,7 +3634,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKNavigation
+            Name:            WKNavigation
             WithProtocols:   
       - Name:            stopLoading
         JsName:          stopLoading
@@ -3662,16 +3662,16 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          WKSnapshotConfiguration
+            Name:            WKSnapshotConfiguration
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          UIImage
+                Name:            UIImage
                 WithProtocols:   
               - Type:            Interface
-                JsName:          NSError
+                Name:            NSError
                 WithProtocols:   
     StaticMethods:   
       - Name:            'handlesURLScheme:'
@@ -3688,7 +3688,7 @@ Items:
         Signature:       
           - Type:            Bool
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     InstanceProperties: 
       - Name:            allowsBackForwardNavigationGestures
@@ -3791,7 +3791,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKBackForwardList
+              Name:            WKBackForwardList
               WithProtocols:   
       - Name:            canGoBack
         JsName:          canGoBack
@@ -3862,7 +3862,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKWebViewConfiguration
+              Name:            WKWebViewConfiguration
               WithProtocols:   
       - Name:            customUserAgent
         JsName:          customUserAgent
@@ -3889,7 +3889,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setCustomUserAgent:'
@@ -3906,7 +3906,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            estimatedProgress
         JsName:          estimatedProgress
@@ -4041,7 +4041,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          UIScrollView
+              Name:            UIScrollView
               WithProtocols:   
       - Name:            serverTrust
         JsName:          serverTrust
@@ -4093,7 +4093,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            UIDelegate
         JsName:          UIDelegate
@@ -4159,7 +4159,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSURL
+              Name:            NSURL
               WithProtocols:   
       - Name:            certificateChain
         JsName:          certificateChain
@@ -4186,7 +4186,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSArray
+              Name:            NSArray
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -4220,7 +4220,7 @@ Items:
             WithProtocols:   
               - WKURLSchemeHandler
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
       - Name:            'urlSchemeHandlerForURLScheme:'
         JsName:          urlSchemeHandlerForURLScheme
@@ -4238,7 +4238,7 @@ Items:
             WithProtocols:   
               - WKURLSchemeHandler
           - Type:            Interface
-            JsName:          NSString
+            Name:            NSString
             WithProtocols:   
     StaticMethods:   
     InstanceProperties: 
@@ -4384,7 +4384,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
         Setter:          
           Name:            'setApplicationNameForUserAgent:'
@@ -4401,7 +4401,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
       - Name:            dataDetectorTypes
         JsName:          dataDetectorTypes
@@ -4470,7 +4470,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKWebpagePreferences
+              Name:            WKWebpagePreferences
               WithProtocols:   
         Setter:          
           Name:            'setDefaultWebpagePreferences:'
@@ -4487,7 +4487,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          WKWebpagePreferences
+              Name:            WKWebpagePreferences
               WithProtocols:   
       - Name:            ignoresViewportScaleLimits
         JsName:          ignoresViewportScaleLimits
@@ -4594,7 +4594,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKPreferences
+              Name:            WKPreferences
               WithProtocols:   
         Setter:          
           Name:            'setPreferences:'
@@ -4610,7 +4610,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          WKPreferences
+              Name:            WKPreferences
               WithProtocols:   
       - Name:            processPool
         JsName:          processPool
@@ -4635,7 +4635,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKProcessPool
+              Name:            WKProcessPool
               WithProtocols:   
         Setter:          
           Name:            'setProcessPool:'
@@ -4651,7 +4651,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          WKProcessPool
+              Name:            WKProcessPool
               WithProtocols:   
       - Name:            selectionGranularity
         JsName:          selectionGranularity
@@ -4752,7 +4752,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKUserContentController
+              Name:            WKUserContentController
               WithProtocols:   
         Setter:          
           Name:            'setUserContentController:'
@@ -4768,7 +4768,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          WKUserContentController
+              Name:            WKUserContentController
               WithProtocols:   
       - Name:            websiteDataStore
         JsName:          websiteDataStore
@@ -4795,7 +4795,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKWebsiteDataStore
+              Name:            WKWebsiteDataStore
               WithProtocols:   
         Setter:          
           Name:            'setWebsiteDataStore:'
@@ -4812,7 +4812,7 @@ Items:
           Signature:       
             - Type:            Void
             - Type:            Interface
-              JsName:          WKWebsiteDataStore
+              Name:            WKWebsiteDataStore
               WithProtocols:   
       - Name:            mediaPlaybackAllowsAirPlay
         JsName:          mediaPlaybackAllowsAirPlay
@@ -5035,10 +5035,10 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSSet
+              Name:            NSSet
               TypeParameters:  
                 - Type:            Interface
-                  JsName:          NSString
+                  Name:            NSString
                   WithProtocols:   
               WithProtocols:   
       - Name:            displayName
@@ -5064,7 +5064,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSString
+              Name:            NSString
               WithProtocols:   
     StaticProperties: 
     Protocols:       
@@ -5094,20 +5094,20 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
             Signature:       
               - Type:            Void
               - Type:            Interface
-                JsName:          NSArray
+                Name:            NSArray
                 TypeParameters:  
                   - Type:            Interface
-                    JsName:          WKWebsiteDataRecord
+                    Name:            WKWebsiteDataRecord
                     WithProtocols:   
                 WithProtocols:   
       - Name:            'removeDataOfTypes:forDataRecords:completionHandler:'
@@ -5123,17 +5123,17 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSArray
+            Name:            NSArray
             TypeParameters:  
               - Type:            Interface
-                JsName:          WKWebsiteDataRecord
+                Name:            WKWebsiteDataRecord
                 WithProtocols:   
             WithProtocols:   
           - Type:            Block
@@ -5152,14 +5152,14 @@ Items:
         Signature:       
           - Type:            Void
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
           - Type:            Interface
-            JsName:          NSDate
+            Name:            NSDate
             WithProtocols:   
           - Type:            Block
             Signature:       
@@ -5177,10 +5177,10 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          NSSet
+            Name:            NSSet
             TypeParameters:  
               - Type:            Interface
-                JsName:          NSString
+                Name:            NSString
                 WithProtocols:   
             WithProtocols:   
       - Name:            defaultDataStore
@@ -5195,7 +5195,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKWebsiteDataStore
+            Name:            WKWebsiteDataStore
             WithProtocols:   
       - Name:            nonPersistentDataStore
         JsName:          nonPersistentDataStore
@@ -5209,7 +5209,7 @@ Items:
         Type:            Method
         Signature:       
           - Type:            Interface
-            JsName:          WKWebsiteDataStore
+            Name:            WKWebsiteDataStore
             WithProtocols:   
     InstanceProperties: 
       - Name:            httpCookieStore
@@ -5237,7 +5237,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          WKHTTPCookieStore
+              Name:            WKHTTPCookieStore
               WithProtocols:   
       - Name:            persistent
         JsName:          persistent
@@ -5279,7 +5279,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKWebsiteDataTypeDiskCache
     JsName:          WKWebsiteDataTypeDiskCache
@@ -5294,7 +5294,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKWebsiteDataTypeFetchCache
     JsName:          WKWebsiteDataTypeFetchCache
@@ -5309,7 +5309,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKWebsiteDataTypeIndexedDBDatabases
     JsName:          WKWebsiteDataTypeIndexedDBDatabases
@@ -5324,7 +5324,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKWebsiteDataTypeLocalStorage
     JsName:          WKWebsiteDataTypeLocalStorage
@@ -5339,7 +5339,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKWebsiteDataTypeMemoryCache
     JsName:          WKWebsiteDataTypeMemoryCache
@@ -5354,7 +5354,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKWebsiteDataTypeOfflineWebApplicationCache
     JsName:          WKWebsiteDataTypeOfflineWebApplicationCache
@@ -5369,7 +5369,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKWebsiteDataTypeServiceWorkerRegistrations
     JsName:          WKWebsiteDataTypeServiceWorkerRegistrations
@@ -5384,7 +5384,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKWebsiteDataTypeSessionStorage
     JsName:          WKWebsiteDataTypeSessionStorage
@@ -5399,7 +5399,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKWebsiteDataTypeWebSQLDatabases
     JsName:          WKWebsiteDataTypeWebSQLDatabases
@@ -5414,7 +5414,7 @@ Items:
     Type:            Var
     Signature:       
       Type:            Interface
-      JsName:          NSString
+      Name:            NSString
       WithProtocols:   
   - Name:            WKWindowFeatures
     JsName:          WKWindowFeatures
@@ -5453,7 +5453,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            height
         JsName:          height
@@ -5478,7 +5478,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            menuBarVisibility
         JsName:          menuBarVisibility
@@ -5503,7 +5503,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            statusBarVisibility
         JsName:          statusBarVisibility
@@ -5528,7 +5528,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            toolbarsVisibility
         JsName:          toolbarsVisibility
@@ -5553,7 +5553,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            width
         JsName:          width
@@ -5578,7 +5578,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            x
         JsName:          x
@@ -5603,7 +5603,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
       - Name:            y
         JsName:          y
@@ -5628,7 +5628,7 @@ Items:
           Type:            Method
           Signature:       
             - Type:            Interface
-              JsName:          NSNumber
+              Name:            NSNumber
               WithProtocols:   
     StaticProperties: 
     Protocols:       
