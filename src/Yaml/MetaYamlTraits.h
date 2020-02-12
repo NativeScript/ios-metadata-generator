@@ -323,6 +323,9 @@ namespace yaml {
     {
         io.mapRequired("Name", meta->name);
         io.mapRequired("JsName", meta->jsName);
+        if (!meta->demangledName.empty()) {
+            io.mapRequired("DemangledName", meta->demangledName);
+        }
         io.mapRequired("Filename", meta->fileName);
         io.mapRequired("Module", meta->module);
         io.mapOptional("IntroducedIn", meta->introducedIn, UNKNOWN_VERSION);
