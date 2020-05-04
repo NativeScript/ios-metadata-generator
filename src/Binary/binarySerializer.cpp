@@ -261,7 +261,12 @@ static llvm::ErrorOr<bool> isStaticFramework(clang::Module* framework)
         uint32_t filetype = (machObjectFile->is64Bit() ? machObjectFile->getHeader64().filetype : machObjectFile->getHeader().filetype);
         return (filetype == MachO::MH_DYLIB || filetype == MachO::MH_DYLIB_STUB || filetype == MachO::MH_DYLINKER);
     };
-    
+
+    auto isObjFile = [](MachOObjectFile* machObjectFile) -> bool {
+        uint32_t filetype = (machObjectFile->is64Bit() ? machObjectFile->getHeader64().filetype : machObjectFile->getHeader().filetype);
+        return (filetype == MachO::MH_OBJECT);
+    };
+
     if (Expected<OwningBinary<Binary> > binaryOrErr = createBinary(path.get())) {
         Binary& binary = *binaryOrErr.get().getBinary();
 
@@ -271,6 +276,8 @@ static llvm::ErrorOr<bool> isStaticFramework(clang::Module* framework)
                     if (MachOObjectFile* machObjectFile = dyn_cast<MachOObjectFile>(objectFile.get().get())) {
                         if (isDylib(machObjectFile)) {
                             return false;
+                        } else if (isObjFile(machObjectFile)) {
+                            return true;
                         }
                     }
                 } else if (Expected<std::unique_ptr<Archive> > archive = object.getAsArchive()) {
